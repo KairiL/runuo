@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/856/devel/Scripts/Items/Aquarium
+END
+AquariumFishingNet.cs
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/823/devel/Scripts/Items/Aquarium/AquariumFishingNet.cs
+END
+BaseFish.cs
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/788/devel/Scripts/Items/Aquarium/BaseFish.cs
+END
+Aquarium.cs
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/856/devel/Scripts/Items/Aquarium/Aquarium.cs
+END
+AquariumState.cs
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/788/devel/Scripts/Items/Aquarium/AquariumState.cs
+END
+VacationWafer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/788/devel/Scripts/Items/Aquarium/VacationWafer.cs
+END
+AquariumFood.cs
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/775/devel/Scripts/Items/Aquarium/AquariumFood.cs
+END
+AquariumGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/788/devel/Scripts/Items/Aquarium/AquariumGump.cs
+END
+FishBowl.cs
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/823/devel/Scripts/Items/Aquarium/FishBowl.cs
+END

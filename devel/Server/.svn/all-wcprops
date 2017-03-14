@@ -1,0 +1,317 @@
+K 25
+svn:wc:ra_dav:version-url
+V 31
+/svn/!svn/ver/1083/devel/Server
+END
+IEntity.cs
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/149/devel/Server/IEntity.cs
+END
+World.cs
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/844/devel/Server/World.cs
+END
+Movement.cs
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/644/devel/Server/Movement.cs
+END
+VirtueInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/4/devel/Server/VirtueInfo.cs
+END
+Geometry.cs
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/4/devel/Server/Geometry.cs
+END
+Item.cs
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/1065/devel/Server/Item.cs
+END
+Party.cs
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/4/devel/Server/Party.cs
+END
+Insensitive.cs
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/567/devel/Server/Insensitive.cs
+END
+Server.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/1083/devel/Server/Server.csproj
+END
+Skills.cs
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/841/devel/Server/Skills.cs
+END
+TileMatrixPatch.cs
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/621/devel/Server/TileMatrixPatch.cs
+END
+Utility.cs
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/1065/devel/Server/Utility.cs
+END
+Guild.cs
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/644/devel/Server/Guild.cs
+END
+IAccount.cs
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/856/devel/Server/IAccount.cs
+END
+Poison.cs
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/511/devel/Server/Poison.cs
+END
+ObjectPropertyList.cs
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/653/devel/Server/ObjectPropertyList.cs
+END
+Mobile.cs
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/1081/devel/Server/Mobile.cs
+END
+NativeReader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/644/devel/Server/NativeReader.cs
+END
+Race.cs
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/644/devel/Server/Race.cs
+END
+Map.cs
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/871/devel/Server/Map.cs
+END
+Serialization.cs
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/1003/devel/Server/Serialization.cs
+END
+KeywordList.cs
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/4/devel/Server/KeywordList.cs
+END
+EventLog.cs
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/644/devel/Server/EventLog.cs
+END
+MultiData.cs
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/644/devel/Server/MultiData.cs
+END
+Attributes.cs
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/274/devel/Server/Attributes.cs
+END
+TileData.cs
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/644/devel/Server/TileData.cs
+END
+BaseVendor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/511/devel/Server/BaseVendor.cs
+END
+TileList.cs
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/591/devel/Server/TileList.cs
+END
+AssemblyInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/805/devel/Server/AssemblyInfo.cs
+END
+Notoriety.cs
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/644/devel/Server/Notoriety.cs
+END
+Body.cs
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/844/devel/Server/Body.cs
+END
+Sector.cs
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/24/devel/Server/Sector.cs
+END
+ScriptCompiler.cs
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/856/devel/Server/ScriptCompiler.cs
+END
+Commands.cs
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/644/devel/Server/Commands.cs
+END
+EventSink.cs
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/644/devel/Server/EventSink.cs
+END
+SecureTrade.cs
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/521/devel/Server/SecureTrade.cs
+END
+AggressorInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/4/devel/Server/AggressorInfo.cs
+END
+ItemBounds.cs
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/804/devel/Server/ItemBounds.cs
+END
+QuestArrow.cs
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/619/devel/Server/QuestArrow.cs
+END
+Point3DList.cs
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/4/devel/Server/Point3DList.cs
+END
+runuo.ico
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/4/devel/Server/runuo.ico
+END
+Effects.cs
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/644/devel/Server/Effects.cs
+END
+HuePicker.cs
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/4/devel/Server/HuePicker.cs
+END
+Serial.cs
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/4/devel/Server/Serial.cs
+END
+Timer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/816/devel/Server/Timer.cs
+END
+ExpansionInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/1081/devel/Server/ExpansionInfo.cs
+END
+Prompt.cs
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/644/devel/Server/Prompt.cs
+END
+TileMatrix.cs
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/895/devel/Server/TileMatrix.cs
+END
+Interfaces.cs
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/649/devel/Server/Interfaces.cs
+END
+Region.cs
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/1067/devel/Server/Region.cs
+END
+ClientVersion.cs
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/521/devel/Server/ClientVersion.cs
+END
+Main.cs
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/1075/devel/Server/Main.cs
+END

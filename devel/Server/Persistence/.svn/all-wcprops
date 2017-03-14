@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/844/devel/Server/Persistence
+END
+BinaryMemoryWriter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/37/devel/Server/Persistence/BinaryMemoryWriter.cs
+END
+ParallelSaveStrategy.cs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/641/devel/Server/Persistence/ParallelSaveStrategy.cs
+END
+QueuedMemoryWriter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/645/devel/Server/Persistence/QueuedMemoryWriter.cs
+END
+SaveStrategy.cs
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/844/devel/Server/Persistence/SaveStrategy.cs
+END
+StandardSaveStrategy.cs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/828/devel/Server/Persistence/StandardSaveStrategy.cs
+END
+FileOperations.cs
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/4/devel/Server/Persistence/FileOperations.cs
+END
+FileQueue.cs
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/devel/Server/Persistence/FileQueue.cs
+END
+SaveMetrics.cs
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/632/devel/Server/Persistence/SaveMetrics.cs
+END
+DynamicSaveStrategy.cs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/844/devel/Server/Persistence/DynamicSaveStrategy.cs
+END
+DualSaveStrategy.cs
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/642/devel/Server/Persistence/DualSaveStrategy.cs
+END
+SequentialFileWriter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/4/devel/Server/Persistence/SequentialFileWriter.cs
+END

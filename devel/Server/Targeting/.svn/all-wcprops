@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/1070/devel/Server/Targeting
+END
+StaticTarget.cs
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/591/devel/Server/Targeting/StaticTarget.cs
+END
+TargetCancelType.cs
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/4/devel/Server/Targeting/TargetCancelType.cs
+END
+MultiTarget.cs
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/644/devel/Server/Targeting/MultiTarget.cs
+END
+TargetFlags.cs
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/devel/Server/Targeting/TargetFlags.cs
+END
+LandTarget.cs
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/591/devel/Server/Targeting/LandTarget.cs
+END
+Target.cs
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/1070/devel/Server/Targeting/Target.cs
+END

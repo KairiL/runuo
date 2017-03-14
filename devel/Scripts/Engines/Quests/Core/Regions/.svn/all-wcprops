@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/2/devel/Scripts/Engines/Quests/Core/Regions
+END
+QuestNoEntryRegion.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/2/devel/Scripts/Engines/Quests/Core/Regions/QuestNoEntryRegion.cs
+END
+QuestOfferRegion.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/2/devel/Scripts/Engines/Quests/Core/Regions/QuestOfferRegion.cs
+END
+QuestCompleteObjectiveRegion.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/2/devel/Scripts/Engines/Quests/Core/Regions/QuestCompleteObjectiveRegion.cs
+END
+CancelQuestRegion.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/2/devel/Scripts/Engines/Quests/Core/Regions/CancelQuestRegion.cs
+END

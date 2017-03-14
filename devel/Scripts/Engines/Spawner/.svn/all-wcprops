@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/1040/devel/Scripts/Engines/Spawner
+END
+SpawnerGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/877/devel/Scripts/Engines/Spawner/SpawnerGump.cs
+END
+Spawner.cs
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/1040/devel/Scripts/Engines/Spawner/Spawner.cs
+END
+SpawnerType.cs
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/2/devel/Scripts/Engines/Spawner/SpawnerType.cs
+END
+ProximitySpawner.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/848/devel/Scripts/Engines/Spawner/ProximitySpawner.cs
+END

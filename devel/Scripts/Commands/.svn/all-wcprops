@@ -1,0 +1,155 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/1038/devel/Scripts/Commands
+END
+Wipe.cs
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/149/devel/Scripts/Commands/Wipe.cs
+END
+HelpInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/853/devel/Scripts/Commands/HelpInfo.cs
+END
+Statics.cs
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/591/devel/Scripts/Commands/Statics.cs
+END
+DecorateMag.cs
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/940/devel/Scripts/Commands/DecorateMag.cs
+END
+BoundingBoxPicker.cs
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/2/devel/Scripts/Commands/BoundingBoxPicker.cs
+END
+GenCategorization.cs
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/591/devel/Scripts/Commands/GenCategorization.cs
+END
+SignParser.cs
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/149/devel/Scripts/Commands/SignParser.cs
+END
+DragEffects.cs
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/1038/devel/Scripts/Commands/DragEffects.cs
+END
+GenTeleporter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/1023/devel/Scripts/Commands/GenTeleporter.cs
+END
+ShardTime.cs
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/960/devel/Scripts/Commands/ShardTime.cs
+END
+ConvertPlayers.cs
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/364/devel/Scripts/Commands/ConvertPlayers.cs
+END
+Batch.cs
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/148/devel/Scripts/Commands/Batch.cs
+END
+VisibilityList.cs
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/521/devel/Scripts/Commands/VisibilityList.cs
+END
+Logging.cs
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/357/devel/Scripts/Commands/Logging.cs
+END
+Attributes.cs
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2/devel/Scripts/Commands/Attributes.cs
+END
+Decorate.cs
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/940/devel/Scripts/Commands/Decorate.cs
+END
+SkillsMenu.cs
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2/devel/Scripts/Commands/SkillsMenu.cs
+END
+Add.cs
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/829/devel/Scripts/Commands/Add.cs
+END
+Docs.cs
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/905/devel/Scripts/Commands/Docs.cs
+END
+Profiling.cs
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/798/devel/Scripts/Commands/Profiling.cs
+END
+Properties.cs
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/846/devel/Scripts/Commands/Properties.cs
+END
+Dupe.cs
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/306/devel/Scripts/Commands/Dupe.cs
+END
+ExportWSC.cs
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2/devel/Scripts/Commands/ExportWSC.cs
+END
+Handlers.cs
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/649/devel/Scripts/Commands/Handlers.cs
+END
+Skills.cs
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/844/devel/Scripts/Commands/Skills.cs
+END

@@ -1,0 +1,123 @@
+10
+
+dir
+1083
+http://runuo.googlecode.com/svn/devel/Scripts/Mobiles
+http://runuo.googlecode.com/svn
+
+
+
+2013-09-04T23:07:39.861382Z
+1075
+mark@runuo.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a9ff2418-eebe-19e0-0898-3207744d8c45
+
+Townfolk
+dir
+
+Healers
+dir
+
+Animals
+dir
+
+Guards
+dir
+
+Familiars
+dir
+
+PlayerMobile.cs
+file
+
+
+
+
+2016-03-22T01:46:28.068422Z
+a006378291e8376aa7bd788ee8e120fa
+2013-08-20T16:17:01.566659Z
+1074
+eos@runuo.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+131056
+
+AI
+dir
+
+BaseCreature.cs
+file
+
+
+
+
+2016-03-22T01:46:28.068422Z
+645705e37078549236ac8a90359b40f5
+2013-09-04T23:07:39.861382Z
+1075
+mark@runuo.com
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+146015
+
+Monsters
+dir
+
+Special
+dir
+
+Vendors
+dir
+

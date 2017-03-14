@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/644/devel/Server/Diagnostics
+END
+TargetProfile.cs
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/169/devel/Server/Diagnostics/TargetProfile.cs
+END
+PacketProfile.cs
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/644/devel/Server/Diagnostics/PacketProfile.cs
+END
+GumpProfile.cs
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/169/devel/Server/Diagnostics/GumpProfile.cs
+END
+BaseProfile.cs
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/644/devel/Server/Diagnostics/BaseProfile.cs
+END
+TimerProfile.cs
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/169/devel/Server/Diagnostics/TimerProfile.cs
+END

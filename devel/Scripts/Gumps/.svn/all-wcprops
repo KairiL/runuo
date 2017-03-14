@@ -1,0 +1,239 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/1068/devel/Scripts/Gumps
+END
+ConfirmReleaseGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/2/devel/Scripts/Gumps/ConfirmReleaseGump.cs
+END
+ViewHousesGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/591/devel/Scripts/Gumps/ViewHousesGump.cs
+END
+SkillsGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/829/devel/Scripts/Gumps/SkillsGump.cs
+END
+ConfirmBreakCrystalGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/729/devel/Scripts/Gumps/ConfirmBreakCrystalGump.cs
+END
+TithingGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2/devel/Scripts/Gumps/TithingGump.cs
+END
+ConfirmHeritageGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/689/devel/Scripts/Gumps/ConfirmHeritageGump.cs
+END
+HouseDemolishGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/332/devel/Scripts/Gumps/HouseDemolishGump.cs
+END
+CategorizedAddGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/112/devel/Scripts/Gumps/CategorizedAddGump.cs
+END
+AddDoorGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2/devel/Scripts/Gumps/AddDoorGump.cs
+END
+ClientGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/877/devel/Scripts/Gumps/ClientGump.cs
+END
+BaseGridGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2/devel/Scripts/Gumps/BaseGridGump.cs
+END
+NoticeGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/2/devel/Scripts/Gumps/NoticeGump.cs
+END
+RunebookGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/529/devel/Scripts/Gumps/RunebookGump.cs
+END
+HouseGumpAOS.cs
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/867/devel/Scripts/Gumps/HouseGumpAOS.cs
+END
+DawnsMusicBoxGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/689/devel/Scripts/Gumps/DawnsMusicBoxGump.cs
+END
+PetResurrectGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/497/devel/Scripts/Gumps/PetResurrectGump.cs
+END
+AddGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/2/devel/Scripts/Gumps/AddGump.cs
+END
+AdminGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/877/devel/Scripts/Gumps/AdminGump.cs
+END
+HeritageTokenGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/689/devel/Scripts/Gumps/HeritageTokenGump.cs
+END
+PolymorphGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/311/devel/Scripts/Gumps/PolymorphGump.cs
+END
+ConfirmHouseResize.cs
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/863/devel/Scripts/Gumps/ConfirmHouseResize.cs
+END
+ReclaimVendorGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2/devel/Scripts/Gumps/ReclaimVendorGump.cs
+END
+WhoGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/875/devel/Scripts/Gumps/WhoGump.cs
+END
+PlayerVendorGumps.cs
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/890/devel/Scripts/Gumps/PlayerVendorGumps.cs
+END
+WarningGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/214/devel/Scripts/Gumps/WarningGump.cs
+END
+BanDurationGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/200/devel/Scripts/Gumps/BanDurationGump.cs
+END
+HonorSelf.cs
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/934/devel/Scripts/Gumps/HonorSelf.cs
+END
+BaseImageTileButtonsGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/2/devel/Scripts/Gumps/BaseImageTileButtonsGump.cs
+END
+VendorInventoryGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/149/devel/Scripts/Gumps/VendorInventoryGump.cs
+END
+ResurrectGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/311/devel/Scripts/Gumps/ResurrectGump.cs
+END
+ToTAdminGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/503/devel/Scripts/Gumps/ToTAdminGump.cs
+END
+HouseGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/2/devel/Scripts/Gumps/HouseGump.cs
+END
+YoungGumps.cs
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/2/devel/Scripts/Gumps/YoungGumps.cs
+END
+RewardGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/965/devel/Scripts/Gumps/RewardGump.cs
+END
+VendorRentalGumps.cs
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/612/devel/Scripts/Gumps/VendorRentalGumps.cs
+END
+HouseTransferGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2/devel/Scripts/Gumps/HouseTransferGump.cs
+END
+BaseConfirmGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/720/devel/Scripts/Gumps/BaseConfirmGump.cs
+END
+ReportMurderer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/940/devel/Scripts/Gumps/ReportMurderer.cs
+END
+SetSecureLevelGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/940/devel/Scripts/Gumps/SetSecureLevelGump.cs
+END

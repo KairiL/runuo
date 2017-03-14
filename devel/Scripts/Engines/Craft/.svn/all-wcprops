@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/1046/devel/Scripts/Engines/Craft
+END
+DefAlchemy.cs
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/514/devel/Scripts/Engines/Craft/DefAlchemy.cs
+END
+DefCartography.cs
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/2/devel/Scripts/Engines/Craft/DefCartography.cs
+END
+DefCarpentry.cs
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/1046/devel/Scripts/Engines/Craft/DefCarpentry.cs
+END
+DefMasonry.cs
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/940/devel/Scripts/Engines/Craft/DefMasonry.cs
+END
+DefTailoring.cs
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/1003/devel/Scripts/Engines/Craft/DefTailoring.cs
+END
+DefCooking.cs
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/904/devel/Scripts/Engines/Craft/DefCooking.cs
+END
+DefTinkering.cs
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/1003/devel/Scripts/Engines/Craft/DefTinkering.cs
+END
+DefBlacksmithy.cs
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/1046/devel/Scripts/Engines/Craft/DefBlacksmithy.cs
+END
+DefBowFletching.cs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/1003/devel/Scripts/Engines/Craft/DefBowFletching.cs
+END
+DefGlassblowing.cs
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/940/devel/Scripts/Engines/Craft/DefGlassblowing.cs
+END
+DefInscription.cs
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/1003/devel/Scripts/Engines/Craft/DefInscription.cs
+END

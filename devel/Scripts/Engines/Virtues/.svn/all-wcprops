@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/1003/devel/Scripts/Engines/Virtues
+END
+VirtueInfoGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/672/devel/Scripts/Engines/Virtues/VirtueInfoGump.cs
+END
+Valor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/684/devel/Scripts/Engines/Virtues/Valor.cs
+END
+Honor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/672/devel/Scripts/Engines/Virtues/Honor.cs
+END
+Justice.cs
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/311/devel/Scripts/Engines/Virtues/Justice.cs
+END
+VirtueGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/672/devel/Scripts/Engines/Virtues/VirtueGump.cs
+END
+Sacrifice.cs
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/429/devel/Scripts/Engines/Virtues/Sacrifice.cs
+END
+Compassion.cs
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/2/devel/Scripts/Engines/Virtues/Compassion.cs
+END
+VirtueStatusGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/2/devel/Scripts/Engines/Virtues/VirtueStatusGump.cs
+END
+VirtueHelper.cs
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/1003/devel/Scripts/Engines/Virtues/VirtueHelper.cs
+END

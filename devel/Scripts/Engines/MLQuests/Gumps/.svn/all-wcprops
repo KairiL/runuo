@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/1037/devel/Scripts/Engines/MLQuests/Gumps
+END
+QuestLogGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/1003/devel/Scripts/Engines/MLQuests/Gumps/QuestLogGump.cs
+END
+QuestOfferGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/1037/devel/Scripts/Engines/MLQuests/Gumps/QuestOfferGump.cs
+END
+QuestCancelConfirmGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/1003/devel/Scripts/Engines/MLQuests/Gumps/QuestCancelConfirmGump.cs
+END
+QuestRewardGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/1003/devel/Scripts/Engines/MLQuests/Gumps/QuestRewardGump.cs
+END
+QuestConversationGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/1003/devel/Scripts/Engines/MLQuests/Gumps/QuestConversationGump.cs
+END
+BaseQuestGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/1003/devel/Scripts/Engines/MLQuests/Gumps/BaseQuestGump.cs
+END
+InfoNPCGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/1003/devel/Scripts/Engines/MLQuests/Gumps/InfoNPCGump.cs
+END
+QuestReportBackGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/1015/devel/Scripts/Engines/MLQuests/Gumps/QuestReportBackGump.cs
+END
+QuestLogDetailedGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/1003/devel/Scripts/Engines/MLQuests/Gumps/QuestLogDetailedGump.cs
+END
+RaceChangeGump.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/1003/devel/Scripts/Engines/MLQuests/Gumps/RaceChangeGump.cs
+END

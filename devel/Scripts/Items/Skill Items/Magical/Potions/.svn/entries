@@ -1,0 +1,225 @@
+10
+
+dir
+1083
+http://runuo.googlecode.com/svn/devel/Scripts/Items/Skill%20Items/Magical/Potions
+http://runuo.googlecode.com/svn
+
+
+
+2012-09-08T23:42:45.694415Z
+905
+eos
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a9ff2418-eebe-19e0-0898-3207744d8c45
+
+Heal Potions
+dir
+
+Confusion Blast Potions
+dir
+
+DarkglowPotion.cs
+file
+
+
+
+
+2016-03-22T01:46:13.996498Z
+9ed81d50eeef9641ccd7314fb2ce39d6
+2011-10-23T03:38:07.419416Z
+775
+xavier
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+919
+
+BasePotion.cs
+file
+
+
+
+
+2016-03-22T01:46:13.996498Z
+46fcfae8e22847e856c8645418a6c47e
+2012-04-22T05:37:16.147377Z
+867
+mark
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5873
+
+Refresh Potions
+dir
+
+Strength Potions
+dir
+
+Cure Potions
+dir
+
+InvisibilityPotion.cs
+file
+
+
+
+
+2016-03-22T01:46:13.996498Z
+e64f53ea71d5199b7f1cbc84f336121e
+2011-10-23T03:38:07.419416Z
+775
+xavier
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2598
+
+Explosion Potions
+dir
+
+ParasiticPotion.cs
+file
+
+
+
+
+2016-03-22T01:46:13.996498Z
+c88e44a2b80ffa56f306f2f07f42dfc2
+2011-10-23T03:38:07.419416Z
+775
+xavier
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+991
+
+NightSight.cs
+file
+
+
+
+
+2016-03-22T01:46:13.996498Z
+f084753f69b31d9c2b660d8a6819e2cf
+2012-04-22T05:37:16.147377Z
+867
+mark
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1102
+
+Agility Potions
+dir
+
+Conflagration Potions
+dir
+
+Poison Potions
+dir
+

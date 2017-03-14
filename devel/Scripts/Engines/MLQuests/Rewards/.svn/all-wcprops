@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/1003/devel/Scripts/Engines/MLQuests/Rewards
+END
+BaseReward.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/1003/devel/Scripts/Engines/MLQuests/Rewards/BaseReward.cs
+END
+DummyReward.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/1003/devel/Scripts/Engines/MLQuests/Rewards/DummyReward.cs
+END
+ItemReward.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/1003/devel/Scripts/Engines/MLQuests/Rewards/ItemReward.cs
+END

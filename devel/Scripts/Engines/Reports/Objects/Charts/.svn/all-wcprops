@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/2/devel/Scripts/Engines/Reports/Objects/Charts
+END
+ChartItemCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/2/devel/Scripts/Engines/Reports/Objects/Charts/ChartItemCollection.cs
+END
+PieChart.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/2/devel/Scripts/Engines/Reports/Objects/Charts/PieChart.cs
+END
+ChartItem.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/2/devel/Scripts/Engines/Reports/Objects/Charts/ChartItem.cs
+END
+Chart.cs
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/2/devel/Scripts/Engines/Reports/Objects/Charts/Chart.cs
+END
+BarGraph.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/2/devel/Scripts/Engines/Reports/Objects/Charts/BarGraph.cs
+END

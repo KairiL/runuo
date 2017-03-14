@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/1061/devel/Scripts/Items/Maps
+END
+CityMap.cs
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2/devel/Scripts/Items/Maps/CityMap.cs
+END
+TreasureMap.cs
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/940/devel/Scripts/Items/Maps/TreasureMap.cs
+END
+LocalMap.cs
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2/devel/Scripts/Items/Maps/LocalMap.cs
+END
+SeaChart.cs
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2/devel/Scripts/Items/Maps/SeaChart.cs
+END
+MapItem.cs
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/1061/devel/Scripts/Items/Maps/MapItem.cs
+END
+IndecipherableMap.cs
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/2/devel/Scripts/Items/Maps/IndecipherableMap.cs
+END
+PresetMap.cs
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/2/devel/Scripts/Items/Maps/PresetMap.cs
+END
+WorldMap.cs
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2/devel/Scripts/Items/Maps/WorldMap.cs
+END
+BlankMap.cs
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2/devel/Scripts/Items/Maps/BlankMap.cs
+END

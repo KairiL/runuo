@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/2/devel/Scripts/Engines/Factions/Mobiles/Guards/Types
+END
+FactionWizard.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/2/devel/Scripts/Engines/Factions/Mobiles/Guards/Types/FactionWizard.cs
+END
+FactionHenchman.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/2/devel/Scripts/Engines/Factions/Mobiles/Guards/Types/FactionHenchman.cs
+END
+FactionBerserker.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/2/devel/Scripts/Engines/Factions/Mobiles/Guards/Types/FactionBerserker.cs
+END
+FactionKnight.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/2/devel/Scripts/Engines/Factions/Mobiles/Guards/Types/FactionKnight.cs
+END
+FactionMercenary.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/2/devel/Scripts/Engines/Factions/Mobiles/Guards/Types/FactionMercenary.cs
+END
+FactionPaladin.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/2/devel/Scripts/Engines/Factions/Mobiles/Guards/Types/FactionPaladin.cs
+END
+FactionSorceress.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/2/devel/Scripts/Engines/Factions/Mobiles/Guards/Types/FactionSorceress.cs
+END
+FactionDragoon.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/2/devel/Scripts/Engines/Factions/Mobiles/Guards/Types/FactionDragoon.cs
+END
+FactionDeathKnight.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/2/devel/Scripts/Engines/Factions/Mobiles/Guards/Types/FactionDeathKnight.cs
+END
+FactionNecromancer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/2/devel/Scripts/Engines/Factions/Mobiles/Guards/Types/FactionNecromancer.cs
+END
