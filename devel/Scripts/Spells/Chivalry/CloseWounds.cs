@@ -80,8 +80,11 @@ namespace Server.Spells.Chivalry
 				else if ( toHeal > 39 )
 					toHeal = 39;
 
+        toHeal += Caster.Skills.Healing.Fixed/15.0
+        
 				if ( (m.Hits + toHeal) > m.HitsMax )
 					toHeal = m.HitsMax - m.Hits;
+					
 
 				//m.Hits += toHeal;	//Was previosuly due to the message
 				//m.Heal( toHeal, Caster, false );

@@ -187,8 +187,8 @@ namespace Server.SkillHandlers
 
 						if ( min > max )
 							min = max;
-
-						Caster.Hits += Utility.RandomMinMax( min, max );
+            
+						Caster.Hits += Caster.Skills[SkillName.Healing]/15.0 + Utility.RandomMinMax( min, max );
 
 						Caster.FixedParticles( 0x375A, 1, 15, 9501, 2100, 4, EffectLayer.Waist );
 					}

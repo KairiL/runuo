@@ -31,6 +31,7 @@ namespace Server.Items
 		public ShepherdsCrook() : base( 0xE81 )
 		{
 			Weight = 4.0;
+			FollowersBonus = 1;
 		}
 
 		public ShepherdsCrook( Serial serial ) : base( serial )
@@ -53,7 +54,13 @@ namespace Server.Items
 			if ( Weight == 2.0 )
 				Weight = 4.0;
 		}
-
+		
+    public override voide OnEquip( Mobile from )
+    {
+      base.OnEquip( from )
+      from.FollowersMax += from.Skills[SkillName.Herding]*/100
+    }
+    
 		public override void OnDoubleClick( Mobile from )
 		{
 			from.SendLocalizedMessage( 502464 ); // Target the animal you wish to herd.

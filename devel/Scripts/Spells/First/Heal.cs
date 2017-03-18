@@ -80,7 +80,7 @@ namespace Server.Spells.First
 					toHeal = (int)(Caster.Skills[SkillName.Magery].Value * 0.1);
 					toHeal += Utility.Random( 1, 5 );
 				}
-
+        toHeal += Caster.Skills[SkillName.Healing].Value/24.0
 				//m.Heal( toHeal, Caster );
 				SpellHelper.Heal( toHeal, m, Caster );
 

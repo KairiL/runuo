@@ -19,7 +19,7 @@ namespace Server.Items
 
 		public override int AosStrengthReq{ get{ return 0; } }
 		public override int AosMinDamage{ get{ return 1; } }
-		public override int AosMaxDamage{ get{ return 4; } }
+		public override int AosMaxDamage{ get{ return 7; } }
 		public override int AosSpeed{ get{ return 50; } }
 		public override float MlSpeed{ get{ return 2.50f; } }
 

@@ -54,6 +54,11 @@ namespace Server.Spells.Third
 				m.PlaySound( 0x1EA );
 
 				int percentage = (int)(SpellHelper.GetOffsetScalar(Caster, m, false) * 100);
+				int bardic = Caster.Skills[SkillName.Musicianship].Fixed;
+				bardic += Caster.Skills[SkillName.Provocation].Fixed;
+				bardic += Caster.Skills[SkillName.Peacemaking].Fixed;
+				percentage += bardic/24;
+				
 				TimeSpan length = SpellHelper.GetDuration(Caster, m);
 
 				string args = String.Format("{0}\t{1}\t{2}", percentage, percentage, percentage);

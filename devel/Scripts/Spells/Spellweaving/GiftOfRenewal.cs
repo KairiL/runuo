@@ -135,7 +135,7 @@ namespace Server.Spells.Spellweaving
 					return;
 
 				int toHeal = m_Info.m_HitsPerRound;
-
+        toHeal += Caster.Skills[SkillName.Healing].Value/40.0;
 				SpellHelper.Heal( toHeal, m, m_Info.m_Caster );
 				m.FixedParticles( 0x376A, 9, 32, 5005, EffectLayer.Waist );
 			}

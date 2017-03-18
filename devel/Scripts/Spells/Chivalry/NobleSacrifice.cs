@@ -106,6 +106,7 @@ namespace Server.Spells.Chivalry
 							else if ( toHeal > 24 )
 								toHeal = 24;
 
+              toHeal += Caster.Skills[SkillName.Healing].Value/6.0
 							Caster.DoBeneficial( m );
 							m.Heal( toHeal, Caster );
 							sendEffect = true;

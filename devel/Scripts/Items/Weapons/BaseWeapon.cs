@@ -92,6 +92,8 @@ namespace Server.Items
 		private AosWeaponAttributes m_AosWeaponAttributes;
 		private AosSkillBonuses m_AosSkillBonuses;
 		private AosElementAttributes m_AosElementDamages;
+		
+		private int m_FollowersBonus;
 
 		// Overridable values. These values are provided to override the defaults which get defined in the individual weapon scripts.
 		private int m_StrReq, m_DexReq, m_IntReq;
@@ -199,6 +201,13 @@ namespace Server.Items
 			set{ m_Consecrated = value; }
 		}
 
+    [CommandProperty( AccessLevel.GameMaster )]
+    public int FollowersBonus
+    {
+      get{ return m_FollowersBonus; }
+      set{ m_FollowersBonus = value; }
+    }
+    
 		[CommandProperty( AccessLevel.GameMaster )]
 		public bool Identified
 		{
@@ -619,6 +628,8 @@ namespace Server.Items
 			int strBonus = m_AosAttributes.BonusStr;
 			int dexBonus = m_AosAttributes.BonusDex;
 			int intBonus = m_AosAttributes.BonusInt;
+			
+			int followBonus = m_FollowersBonus;
 
 			if ( (strBonus != 0 || dexBonus != 0 || intBonus != 0) )
 			{
@@ -637,6 +648,8 @@ namespace Server.Items
 			}
 
 			from.NextCombatTime = DateTime.Now + GetDelay( from );
+
+      m.FollowersMax = 5 + FollowersBonus*m.Skills[SkillName.Herding]/100;
 
 			if ( UseSkillMod && m_AccuracyLevel != WeaponAccuracyLevel.Regular )
 			{
@@ -689,6 +702,7 @@ namespace Server.Items
 				m.RemoveStatMod( modName + "Int" );
 
 				if ( weapon != null )
+				  m.FollowersMax = 5;
 					m.NextCombatTime = DateTime.Now + weapon.GetDelay( m );
 
 				if ( UseSkillMod && m_SkillMod != null )
@@ -790,7 +804,7 @@ namespace Server.Items
 				bonus += AosAttributes.GetValue( attacker, AosAttribute.AttackChance );
 
 				if ( Spells.Chivalry.DivineFurySpell.UnderEffect( attacker ) )
-					bonus += 10; // attacker gets 10% bonus when they're under divine fury
+					bonus += attacker.Skills[SkillName.Chivalry]^2/1000.0; // attacker gets up 14% bonus when they're under divine fury
 
 				if ( CheckAnimal( attacker, typeof( GreyWolf ) ) || CheckAnimal( attacker, typeof( BakeKitsune ) ) )
 					bonus += 20; // attacker gets 20% bonus when under Wolf or Bake Kitsune form
@@ -809,9 +823,10 @@ namespace Server.Items
 					bonus += move.GetAccuracyBonus( attacker );
 
 				// Max Hit Chance Increase = 45%
-				if ( bonus > 45 )
+				if ( bonus > 45)
 					bonus = 45;
-
+        bonus += attacker.Skills[SkillName[Wrestling].value/12.0
+        
 				ourValue = (atkValue + 20.0) * (100 + bonus);
 
 				bonus = AosAttributes.GetValue( defender, AosAttribute.DefendChance );
@@ -841,6 +856,7 @@ namespace Server.Items
 				// Defense Chance Increase = 45%
 				if ( bonus > 45 )
 					bonus = 45;
+				bonus+= attacker.Skills[SkillName[Wrestling].value/12.0
 
 				theirValue = (defValue + 20.0) * (100 + bonus);
 
@@ -1105,7 +1121,7 @@ namespace Server.Items
 
 			if ( shield != null )
 			{
-				double chance = (parry - bushidoNonRacial) / 400.0;	// As per OSI, no negitive effect from the Racial stuffs, ie, 120 parry and '0' bushido with humans
+				double chance = (parry) / 400.0;	// As per OSI, no negitive effect from the Racial stuffs, ie, 120 parry and '0' bushido with humans
 
 				if ( chance < 0 ) // chance shouldn't go below 0
 					chance = 0;				
@@ -1124,7 +1140,7 @@ namespace Server.Items
 
 				return defender.CheckSkill( SkillName.Parry, chance );
 			}
-			else if ( !(defender.Weapon is Fists) && !(defender.Weapon is BaseRanged) )
+			else
 			{
 				BaseWeapon weapon = defender.Weapon as BaseWeapon;
 
@@ -1152,7 +1168,10 @@ namespace Server.Items
 				// Low dexterity lowers the chance.
 				if( defender.Dex < 80 )
 					chance = chance * (20 + defender.Dex) / 100;
-
+				
+        if ( (defender.Weapon is Fists) || (defender.Weapon is BaseRanged) )
+          chance = chance/2;
+        
 				if ( chance > aosChance )
 					return defender.CheckSkill( SkillName.Parry, chance );
 				else
@@ -1297,8 +1316,8 @@ namespace Server.Items
 
 		public virtual int GetPackInstinctBonus( Mobile attacker, Mobile defender )
 		{
-			if ( attacker.Player || defender.Player )
-				return 0;
+			//if ( attacker.Player || defender.Player )
+			//	return 0;
 
 			BaseCreature bc = attacker as BaseCreature;
 
@@ -1334,14 +1353,8 @@ namespace Server.Items
 				}
 			}
 
-			if ( inPack >= 5 )
-				return 100;
-			else if ( inPack >= 4 )
-				return 75;
-			else if ( inPack >= 3 )
-				return 50;
-			else if ( inPack >= 2 )
-				return 25;
+     if ( inPack >= 2 )
+				return inPack*25;
 
 			return 0;
 		}
@@ -1499,8 +1512,10 @@ namespace Server.Items
 			if ( talisman != null && talisman.Killer != null )
 				percentageBonus += talisman.Killer.DamageBonus( defender );
 
-			percentageBonus = Math.Min( percentageBonus, 300 );
-
+      if !attacker.Weapon is Fists
+			  percentageBonus = Math.Min( percentageBonus, 300 );
+      
+      
 			damage = AOS.Scale( damage, 100 + percentageBonus );
 			#endregion
 
@@ -2634,7 +2649,8 @@ namespace Server.Items
 			SkillBonuses			= 0x08000000,
 			Slayer2					= 0x10000000,
 			ElementalDamages		= 0x20000000,
-			EngravedText			= 0x40000000
+			EngravedText			= 0x40000000,
+			FollowersBonus     = 0x80000000
 		}
 
 		public override void Deserialize( GenericReader reader )

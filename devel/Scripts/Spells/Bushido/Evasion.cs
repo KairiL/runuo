@@ -118,7 +118,7 @@ namespace Server.Spells.Bushido
 				BeginEvasion( Caster );
 
 				Caster.BeginAction( typeof( Evasion ) );
-				Timer.DelayCall( TimeSpan.FromSeconds( 20.0 ), delegate { Caster.EndAction( typeof( Evasion ) ); } );
+				Timer.DelayCall( TimeSpan.FromSeconds( 12.0 ), delegate { Caster.EndAction( typeof( Evasion ) ); } );
 			}
 
 			FinishSequence();

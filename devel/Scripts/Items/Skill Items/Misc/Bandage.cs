@@ -376,7 +376,9 @@ namespace Server.Items
 					}
 
 					double toHeal = min + (Utility.RandomDouble() * (max - min));
-
+          
+          toHeal += (m_Healer.Skills[SkillName.Veterinary].Value + m_Healer.Skills[SkillName.Healing].Value - healing)/8.0;
+          
 					if ( m_Patient.Body.IsMonster || m_Patient.Body.IsAnimal )
 						toHeal += m_Patient.HitsMax / 100;
 
@@ -384,6 +386,7 @@ namespace Server.Items
 						toHeal -= toHeal * m_Slips * 0.35; // TODO: Verify algorithm
 					else
 						toHeal -= m_Slips * 4;
+						
 
 					if ( toHeal < 1 )
 					{
@@ -465,25 +468,34 @@ namespace Server.Items
 				if ( onSelf )
 				{
 					if ( Core.AOS )
-						seconds = 5.0 + (0.5 * ((double)(120 - dex) / 10)); // TODO: Verify algorithm
+						seconds = 5.0 + (0.05 * (double)(120 - dex)); // TODO: Verify algorithm
 					else
-						seconds = 9.4 + (0.6 * ((double)(120 - dex) / 10));
+						seconds = 9.4 + (0.06 * (double)(120 - dex));
 				}
 				else
 				{
 					if ( Core.AOS && GetPrimarySkill( patient ) == SkillName.Veterinary )
 					{
-							seconds = 2.0;
-					}
-					else if ( Core.AOS )
-					{
-						if (dex < 204)
+						if (dex < 210)
 						{		
-							seconds = 3.2-(Math.Sin((double)dex/130)*2.5) + resDelay;
+							seconds = 1.5+(0.05*(120.0-dex/4.0-healer.Skills[SkillName.Veterinary]*3.0/4.-)) + resDelay;
 						}
 						else
 						{
-							seconds = 0.7 + resDelay;
+							seconds = 0.5 + resDelay;
+						}
+							seconds = = 2.5 + (0.025 * (double)(120 - dex/3+healer.Skills[SkillName.Veterinary])) + resDelay;
+							2.0 - healer.Skills[SkillName.Veterinary] + dex;
+					}
+					else if ( Core.AOS )
+					{
+						if (dex < 210)
+						{		
+							seconds = 2.5 + (0.025 * (double)(120 - dex)) + resDelay;
+						}
+						else
+						{
+							seconds = 0.5 + resDelay;
 						}
 					}
 					else
