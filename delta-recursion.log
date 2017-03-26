@@ -1,0 +1,11 @@
+# 3/23/2017 4:35:38 AM
+   at Server.Mobile.Delta(MobileDelta flag)
+   at Server.Mobiles.PlayerMobile.Delta(MobileDelta flag)
+   at Server.Mobile.GetStatOffset(StatType type)
+   at Server.Mobiles.PlayerMobile.get_HitsMax()
+   at Server.Network.MobileStatusExtended..ctor(Mobile m, NetState ns)
+   at Server.Mobile.ProcessDelta()
+   at Server.Mobile.ProcessDeltaQueue()
+   at Server.Core.Main(String[] args)
+
+
