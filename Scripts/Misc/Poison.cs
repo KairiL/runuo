@@ -21,6 +21,7 @@ namespace Server
 				Register( new PoisonImpl( "Greater",	2, 12, 20, 15.0, 3.0, 4.25, 10, 2 ) );
 				Register( new PoisonImpl( "Deadly",		3, 16, 30, 30.0, 3.0, 5.25, 15, 2 ) );
 				Register( new PoisonImpl( "Lethal",		4, 20, 50, 35.0, 3.0, 5.25, 20, 2 ) );
+                Register( new PoisonImpl( "Godly",      5, 20, 50, 35.0, 3.0, 3.25, 20, 2 ) );
 			}
 			else
 			{

@@ -56,24 +56,28 @@ namespace Server.SkillHandlers
 
 					bool startTimer = false;
 
-					if ( targeted is Food || targeted is FukiyaDarts || targeted is Shuriken )
-					{
-						startTimer = true;
-					}
-					else if ( targeted is BaseWeapon )
-					{
-						BaseWeapon weapon = (BaseWeapon)targeted;
+                    if (targeted is Food || targeted is FukiyaDarts || targeted is Shuriken)
+                    {
+                        startTimer = true;
+                    }
+                    else if (targeted is BaseWeapon)
+                    {
+                        BaseWeapon weapon = (BaseWeapon)targeted;
 
-						if ( Core.AOS )
-						{
-							startTimer = ( weapon.PrimaryAbility == WeaponAbility.InfectiousStrike || weapon.SecondaryAbility == WeaponAbility.InfectiousStrike );
-						}
-						else if ( weapon.Layer == Layer.OneHanded )
-						{
-							// Only Bladed or Piercing weapon can be poisoned
-							startTimer = ( weapon.Type == WeaponType.Slashing || weapon.Type == WeaponType.Piercing );
-						}
-					}
+                        if (Core.AOS)
+                        {
+                            startTimer = (weapon.PrimaryAbility == WeaponAbility.InfectiousStrike || weapon.SecondaryAbility == WeaponAbility.InfectiousStrike);
+                        }
+                        else if (weapon.Layer == Layer.OneHanded)
+                        {
+                            // Only Bladed or Piercing weapon can be poisoned
+                            startTimer = (weapon.Type == WeaponType.Slashing || weapon.Type == WeaponType.Piercing);
+                        }
+                    }
+                    else if (targeted is BasePotion)
+                    {
+                        startTimer = true;
+                    }
 
 					if ( startTimer )
 					{
@@ -117,25 +121,73 @@ namespace Server.SkillHandlers
 					{
 						if ( m_From.CheckTargetSkill( SkillName.Poisoning, m_Target, m_MinSkill, m_MaxSkill ) )
 						{
-							if ( m_Target is Food )
-							{
-								((Food)m_Target).Poison = m_Poison;
-							}
-							else if ( m_Target is BaseWeapon )
-							{
-								((BaseWeapon)m_Target).Poison = m_Poison;
-								((BaseWeapon)m_Target).PoisonCharges = 18 - (m_Poison.Level * 2);
-							}
-							else if ( m_Target is FukiyaDarts )
-							{
-								((FukiyaDarts)m_Target).Poison = m_Poison;
-								((FukiyaDarts)m_Target).PoisonCharges = Math.Min( 18 - (m_Poison.Level * 2), ((FukiyaDarts)m_Target).UsesRemaining );
-							}
-							else if ( m_Target is Shuriken )
-							{
-								((Shuriken)m_Target).Poison = m_Poison;
-								((Shuriken)m_Target).PoisonCharges = Math.Min( 18 - (m_Poison.Level * 2), ((Shuriken)m_Target).UsesRemaining );
-							}
+                            if (m_Target is Food)
+                            {
+                                ((Food)m_Target).Poison = m_Poison;
+                            }
+                            else if (m_Target is BaseWeapon)
+                            {
+                                ((BaseWeapon)m_Target).Poison = m_Poison;
+                                ((BaseWeapon)m_Target).PoisonCharges = 18 - (m_Poison.Level * 2);
+                            }
+                            else if (m_Target is FukiyaDarts)
+                            {
+                                ((FukiyaDarts)m_Target).Poison = m_Poison;
+                                ((FukiyaDarts)m_Target).PoisonCharges = Math.Min(18 - (m_Poison.Level * 2), ((FukiyaDarts)m_Target).UsesRemaining);
+                            }
+                            else if (m_Target is Shuriken)
+                            {
+                                ((Shuriken)m_Target).Poison = m_Poison;
+                                ((Shuriken)m_Target).PoisonCharges = Math.Min(18 - (m_Poison.Level * 2), ((Shuriken)m_Target).UsesRemaining);
+                            }
+                            else if (m_Target is BasePotion)
+                            {
+                                int TargetPoisonLevel = ((BasePotion)m_Target).GetRandomPoisoned();
+                                if (TargetPoisonLevel < m_Poison.Level)
+                                {
+                                    switch (TargetPoisonLevel)
+                                    {
+                                        case -1:
+                                            break;
+                                        case 0:
+                                            --((BasePotion)m_Target).LessPoisoned;
+                                            break;
+                                        case 1:
+                                            --((BasePotion)m_Target).RegPoisoned;
+                                            break;
+                                        case 2:
+                                            --((BasePotion)m_Target).GreatPoisoned;
+                                            break;
+                                        case 3:
+                                            --((BasePotion)m_Target).DeadlyPoisoned;
+                                            break;
+                                        case 4:
+                                            --((BasePotion)m_Target).LethalPoisoned;
+                                            break;
+                                    }
+                                    switch (m_Poison.Level)
+                                    {
+                                        case -1:
+                                            break;
+                                        case 0:
+                                            ++((BasePotion)m_Target).LessPoisoned;
+                                            break;
+                                        case 1:
+                                            ++((BasePotion)m_Target).RegPoisoned;
+                                            break;
+                                        case 2:
+                                            ++((BasePotion)m_Target).GreatPoisoned;
+                                            break;
+                                        case 3:
+                                            ++((BasePotion)m_Target).DeadlyPoisoned;
+                                            break;
+                                        case 4:
+                                            ++((BasePotion)m_Target).LethalPoisoned;
+                                            break;
+                                    }
+                                }
+                                
+                            }
 
 							m_From.SendLocalizedMessage( 1010517 ); // You apply the poison
 

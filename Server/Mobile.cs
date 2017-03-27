@@ -4446,11 +4446,20 @@ namespace Server
 
 			item.Amount = oldItem.Amount - amount;
 			item.Map = oldItem.Map;
-
+            
 			oldItem.Amount = amount;
 			oldItem.OnAfterDuped( item );
-
-			if( oldItem.Parent is Mobile )
+            SendMessage("Is item BasePotion?");
+            if (item is BasePotion)
+            {
+                SendMessage("item is BasePotion");
+                if ((BasePotion)item.TotalPoisoned != 0)//TODO: FIX DupePoisoned
+                {
+                    SendMessage("attempting to ender DupePoisoned");
+                    (BasePotion)oldItem.DupePoisoned((BasePotion)oldIitem, (BasePotion)item);//splits poisoned potion counts up randomly
+                }
+            }
+            if ( oldItem.Parent is Mobile )
 			{
 				((Mobile)oldItem.Parent).AddItem( item );
 			}
