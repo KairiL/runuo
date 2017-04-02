@@ -44,64 +44,41 @@ namespace Server.Items
 		{
 			if ( from.Hits < from.HitsMax )
 			{
-                if (from.Poisoned || MortalStrike.IsWounded(from))
-                {
-                    from.LocalOverheadMessage(MessageType.Regular, 0x22, 1005000); // You can not heal yourself in your current state.
-                }
-                else if (TotalPoisoned > 0  )
+				if ( from.Poisoned || MortalStrike.IsWounded( from ) )
+				{
+					from.LocalOverheadMessage( MessageType.Regular, 0x22, 1005000 ); // You can not heal yourself in your current state.
+				}
+				else if (Poison != null)
                 {
                     if (from.BeginAction(typeof(BaseHealPotion)))
                     {
-                        int PoisonLevel = GetRandomPoisoned();
-                        Poison newPoison = Poison.GetPoison(PoisonLevel);
-                        from.ApplyPoison(Poisoner, newPoison);
+                        from.ApplyPoison(Poisoner, Poison);
                         from.SendMessage("You don't feel very healed.");
-
-                        switch (PoisonLevel)
-                        {
-                            case 0:
-                                ++LessPoisoned;
-                                break;
-                            case 1:
-                                ++RegPoisoned;
-                                break;
-                            case 2:
-                                ++GreatPoisoned;
-                                break;
-                            case 3:
-                                ++DeadlyPoisoned;
-                                break;
-                            case 4:
-                                ++LethalPoisoned;
-                                break;
-                        }
-                        BasePotion.PlayDrinkEffect(from);
-
                         if (!Engines.ConPVP.DuelContext.IsFreeConsume(from))
                             this.Consume();
-
                         Timer.DelayCall(TimeSpan.FromSeconds(Delay), new TimerStateCallback(ReleaseHealLock), from);
-
                     }
                     else
                         from.LocalOverheadMessage(MessageType.Regular, 0x22, 500235); // You must wait 10 seconds before using another healing potion.
                 }
                 else
                 {
-                    if (from.BeginAction(typeof(BaseHealPotion)))
-                    {
-                        DoHeal(from);
+					if ( from.BeginAction( typeof( BaseHealPotion ) ) )
+					{
+						DoHeal( from );
 
-                        BasePotion.PlayDrinkEffect(from);
+						BasePotion.PlayDrinkEffect( from );
 
-                        if (!Engines.ConPVP.DuelContext.IsFreeConsume(from))
-                            this.Consume();
+						if ( !Engines.ConPVP.DuelContext.IsFreeConsume( from ) )
+							this.Consume();
 
-                        Timer.DelayCall(TimeSpan.FromSeconds(Delay), new TimerStateCallback(ReleaseHealLock), from);
-                    }
-                    else
-                        from.LocalOverheadMessage(MessageType.Regular, 0x22, 500235); // You must wait 10 seconds before using another healing potion.
-                }
+						Timer.DelayCall( TimeSpan.FromSeconds( Delay ), new TimerStateCallback( ReleaseHealLock ), from );
+					}
+					else
+					{
+						from.LocalOverheadMessage( MessageType.Regular, 0x22, 500235 ); // You must wait 10 seconds before using another healing potion.
+					}
+				}
 			}
 			else
 			{

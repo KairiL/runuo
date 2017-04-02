@@ -4328,9 +4328,9 @@ namespace Server
 								amount = item.Amount;
 
 							int oldAmount = item.Amount;
-							//item.Amount = amount; //Set in LiftItemDupe
+                            //item.Amount = amount; //Set in LiftItemDupe
 
-							if( amount < oldAmount )
+                            if (amount < oldAmount)
 								LiftItemDupe( item, amount );
 							//item.Dupe( oldAmount - amount );
 
@@ -4449,16 +4449,7 @@ namespace Server
             
 			oldItem.Amount = amount;
 			oldItem.OnAfterDuped( item );
-            SendMessage("Is item BasePotion?");
-            if (item is BasePotion)
-            {
-                SendMessage("item is BasePotion");
-                if ((BasePotion)item.TotalPoisoned != 0)//TODO: FIX DupePoisoned
-                {
-                    SendMessage("attempting to ender DupePoisoned");
-                    (BasePotion)oldItem.DupePoisoned((BasePotion)oldIitem, (BasePotion)item);//splits poisoned potion counts up randomly
-                }
-            }
+            
             if ( oldItem.Parent is Mobile )
 			{
 				((Mobile)oldItem.Parent).AddItem( item );

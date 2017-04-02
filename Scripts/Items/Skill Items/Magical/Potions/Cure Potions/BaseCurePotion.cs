@@ -88,7 +88,14 @@ namespace Server.Items
 			{
 				from.SendLocalizedMessage( 1061652 ); // The garlic in the potion would surely kill you.
 			}
-			else if ( from.Poisoned )
+            else if (Poison != null)
+            {
+                from.ApplyPoison(Poisoner, Poison);
+                from.SendMessage("You don't feel very cured.");
+                if (!Engines.ConPVP.DuelContext.IsFreeConsume(from))
+                    this.Consume();
+            }
+            else if ( from.Poisoned )
 			{
 				DoCure( from );
 

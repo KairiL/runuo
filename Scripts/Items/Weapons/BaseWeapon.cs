@@ -1333,29 +1333,32 @@ namespace Server.Items
 				{
 					BaseCreature tc = (BaseCreature)m;
 
-					if ( (tc.PackInstinct & bc.PackInstinct) == 0 || (!tc.Controlled && !tc.Summoned) )
-						continue;
+                    if (tc.Player && tc.Combatant == defender)
+                    {
+                        if ((tc.PackInstinct & bc.PackInstinct) == 0)
+                            continue;
+                        ++inPack;
+                    }
+                    else
+                    {
+                        if ((tc.PackInstinct & bc.PackInstinct) == 0 || (!tc.Controlled && !tc.Summoned))
+                            continue;
 
-					Mobile theirMaster = tc.ControlMaster;
+                        Mobile theirMaster = tc.ControlMaster;
 
-					if ( theirMaster == null )
-						theirMaster = tc.SummonMaster;
+                        if (theirMaster == null)
+                            theirMaster = tc.SummonMaster;
 
-					if ( master == theirMaster && tc.Combatant == defender )
-						++inPack;
+                        if (master == theirMaster && tc.Combatant == defender)
+                            ++inPack;
+                    }
 				}
 			}
 			eable.Free();
-
-			if ( inPack >= 5 )
-				return 100;
-			else if ( inPack >= 4 )
-				return 75;
-			else if ( inPack >= 3 )
-				return 50;
-			else if ( inPack >= 2 )
-				return 25;
-
+            if (inPack >= 8)
+                return 175;
+            else
+                return ((inPack - 1) * 25);
 			return 0;
 		}
 

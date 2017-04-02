@@ -5,6 +5,7 @@ using Server;
 using Server.Network;
 using Server.Targeting;
 using Server.Spells;
+using Server.Mobiles;
 
 namespace Server.Items
 {
@@ -15,10 +16,10 @@ namespace Server.Items
 
 		public override bool RequireFreeHand{ get{ return false; } }
 
-		private static bool LeveledExplosion = false; // Should explosion potions explode other nearby potions?
+		private static bool LeveledExplosion = true; // Should explosion potions explode other nearby potions?
 		private static bool InstantExplosion = false; // Should explosion potions explode on impact?
 		private static bool RelativeLocation = false; // Is the explosion target location relative for mobiles?
-		private const int ExplosionRange = 2; // How long is the blast radius?
+		private const int ExplosionRange = 3; // How long is the blast radius?
 
 		public BaseExplosionPotion( PotionEffect effect ) : base( 0xF0D, effect )
 		{
@@ -225,13 +226,13 @@ namespace Server.Items
 			}
 		}
 
-		public void Explode( Mobile from, bool direct, Point3D loc, Map map )
+		public void Explode( Mobile from, bool direct, Point3D loc, Map map)
 		{
 			if ( Deleted )
 				return;
 
 			Consume();
-
+            double PoisonChance = 0;
 			for ( int i = 0; m_Users != null && i < m_Users.Count; ++i )
 			{
 				Mobile m = m_Users[i];
@@ -294,8 +295,17 @@ namespace Server.Items
 						damage = 40;
 					else if ( Core.AOS && toDamage > 2 )
 						damage /= toDamage - 1;
-
-					AOS.Damage( m, from, damage, 0, 100, 0, 0, 0 );
+                    if(!(m is PlayerMobile))
+                        damage *= 4;
+                       
+                    if (((BasePotion)this).Poison != null)
+                    {
+                        PoisonChance = .1;
+                        PoisonChance += ((from.Skills[SkillName.Poisoning].Value + from.Skills[SkillName.Alchemy].Value + from.Skills[SkillName.TasteID].Value) / 333);
+                        if (PoisonChance > Utility.RandomDouble())
+                            m.ApplyPoison(from, Poison);
+                    }
+                    AOS.Damage( m, from, damage, 0, 100, 0, 0, 0 );
 				}
 				else if ( o is BaseExplosionPotion )
 				{

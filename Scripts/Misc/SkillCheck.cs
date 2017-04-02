@@ -125,12 +125,12 @@ namespace Server.Misc
 			bool success = ( chance >= Utility.RandomDouble() );
 			double gc = (double)(from.Skills.Cap - from.Skills.Total) / from.Skills.Cap;
 			gc += ( skill.Cap - skill.Base ) / skill.Cap;
-			gc /= 2;
+			//gc /= 2;//this line makes total skill amount half as important, and gains harder
 
 			gc += ( 1.0 - chance ) * ( success ? 0.5 : (Core.AOS ? 0.0 : 0.2) );
-			gc /= 2;
+            //gc /= 2;//this line makes individual skill amount half as important, and gains twice as hard
 
-			gc *= skill.Info.GainFactor;
+            gc *= skill.Info.GainFactor;
 
 			if ( gc < 0.01 )
 				gc = 0.01;

@@ -79,7 +79,8 @@ namespace Server.Items
 
 		public virtual void Explode( Mobile from, Point3D loc, Map map )
 		{
-			if ( Deleted || map == null )
+            double PoisonChance = .1;
+            if ( Deleted || map == null )
 				return;
 
 			Consume();
@@ -110,7 +111,14 @@ namespace Server.Items
 						continue;
 
 					mon.Pacify( from, DateTime.UtcNow + TimeSpan.FromSeconds( 5.0 ) ); // TODO check
-				}
+                    if (Poison != null)
+                    {
+                        PoisonChance = 10;
+                        PoisonChance += ((from.Skills[SkillName.Poisoning].Value + from.Skills[SkillName.Alchemy].Value + from.Skills[SkillName.TasteID].Value) / 333);
+                        if (PoisonChance > Utility.RandomDouble())
+                            mon.ApplyPoison(Poisoner, Poison);
+                    }
+                }
 			}
 		}
 

@@ -41,89 +41,8 @@ namespace Server.Items
 	public abstract class BasePotion : Item, ICraftable, ICommodity
 	{
 		private PotionEffect m_PotionEffect;
-        private int m_LessPoisoned;
-        private int m_RegPoisoned;
-        private int m_GreatPoisoned;
-        private int m_DeadlyPoisoned;
-        private int m_LethalPoisoned;
         private Mobile m_Poisoner;
-
-        [CommandProperty(AccessLevel.GameMaster)]
-        public int LessPoisoned
-        {
-            get { return m_LessPoisoned; }
-            set { m_LessPoisoned = value; InvalidateProperties(); }
-        }
-        [CommandProperty(AccessLevel.GameMaster)]
-        public int RegPoisoned
-        {
-            get { return m_RegPoisoned; }
-            set { m_RegPoisoned = value; InvalidateProperties(); }
-        }
-        [CommandProperty(AccessLevel.GameMaster)]
-        public int GreatPoisoned
-        {
-            get { return m_GreatPoisoned; }
-            set { m_GreatPoisoned = value; InvalidateProperties(); }
-        }
-        [CommandProperty(AccessLevel.GameMaster)]
-        public int DeadlyPoisoned
-        {
-            get { return m_DeadlyPoisoned; }
-            set { m_DeadlyPoisoned = value; InvalidateProperties(); }
-        }
-        [CommandProperty(AccessLevel.GameMaster)]
-        public int LethalPoisoned
-        {
-            get { return m_LethalPoisoned; }
-            set { m_LethalPoisoned = value; InvalidateProperties(); }
-        }
-
-        [CommandProperty(AccessLevel.GameMaster)]
-        public Mobile Poisoner
-        {
-            get { return m_Poisoner; }
-            set { m_Poisoner = value; }
-        }
-        [CommandProperty(AccessLevel.GameMaster)]
-        public int TotalPoisoned
-        {
-            get { return LethalPoisoned + DeadlyPoisoned + GreatPoisoned + RegPoisoned + LessPoisoned; }
-        }
-        public int GetRandomPoisoned( )
-        {
-            int potnum = Utility.Random(1, Amount);
-            if (potnum<LessPoisoned)//Target potion is lesser poisoned
-            {
-                return 0;
-            }
-            else
-            {
-                potnum -= LessPoisoned;
-                if (potnum < RegPoisoned)//target potion is regular poisoned
-                    return 1;
-                else
-                {
-                    potnum -= RegPoisoned;
-                    if (potnum < GreatPoisoned)//target potion is greater poisoned
-                        return 2;
-                    else
-                    {
-                        potnum -= GreatPoisoned;
-                        if (potnum < DeadlyPoisoned)//target potion is deadly poisoned
-                            return 3;
-                        else
-                        {
-                            potnum -= DeadlyPoisoned;
-                            if (potnum < LethalPoisoned)//target potion is lethal poisoned
-                                return 4;
-                            else
-                                return -1;
-                        }
-                    }
-                }
-            }
-        }
+        private Poison m_Poison;
 
         public PotionEffect PotionEffect
 		{
@@ -138,7 +57,20 @@ namespace Server.Items
 			}
 		}
 
-		int ICommodity.DescriptionNumber { get { return LabelNumber; } }
+        [CommandProperty(AccessLevel.GameMaster)]
+        public Mobile Poisoner
+        {
+            get { return m_Poisoner; }
+            set { m_Poisoner = value; }
+        }
+
+        [CommandProperty(AccessLevel.GameMaster)]
+        public Poison Poison
+        {
+            get { return m_Poison; }
+            set { m_Poison = value; }
+        }
+        int ICommodity.DescriptionNumber { get { return LabelNumber; } }
 		bool ICommodity.IsDeedable { get { return (Core.ML); } }
 
 		public override int LabelNumber{ get{ return 1041314 + (int)m_PotionEffect; } }
@@ -147,7 +79,7 @@ namespace Server.Items
 		{
 			m_PotionEffect = effect;
 
-			Stackable = Core.ML;
+			Stackable = false;
 			Weight = 1.0;
 		}
 
@@ -223,17 +155,12 @@ namespace Server.Items
 		{
 			base.Serialize( writer );
 
-			writer.Write( (int) 2 ); // version
+			writer.Write( (int) 1 ); // version
+
 			writer.Write( (int) m_PotionEffect );
-            writer.Write( (int) LessPoisoned );
-            writer.Write( (int) RegPoisoned );
-            writer.Write( (int) GreatPoisoned );
-            writer.Write( (int) DeadlyPoisoned );
-            writer.Write( (int) LethalPoisoned );
-        //Poison.Serialize(m_Poison, writer);
-        //writer.Write((int)m_PoisonCharges);
-        //writer.Write((Mobile)m_Poisoner);
-    }
+            writer.Write(m_Poisoner);
+            Poison.Serialize(m_Poison, writer);
+        }
 
 		public override void Deserialize( GenericReader reader )
 		{
@@ -243,28 +170,18 @@ namespace Server.Items
 
 			switch ( version )
 			{
-                case 2:
-                {
-                    m_PotionEffect = (PotionEffect)reader.ReadInt();
-                        LessPoisoned = reader.ReadInt();
-                        RegPoisoned = reader.ReadInt();
-                        GreatPoisoned = reader.ReadInt();
-                        DeadlyPoisoned = reader.ReadInt();
-                        LethalPoisoned = reader.ReadInt();
-                    //m_PoisonCharges = null;
-                    //m_Poisoner = null;
-                    break;
-                }
 				case 1:
-                case 0:
+				case 0:
 				{
 					m_PotionEffect = (PotionEffect)reader.ReadInt();
-					break;
+                    m_Poisoner = reader.ReadMobile();
+                    m_Poison = Poison.Deserialize(reader);
+                    break;
 				}
 			}
 
 			if( version ==  0 )
-				Stackable = Core.ML;
+				Stackable = false;
 		}
 
 		public abstract void Drink( Mobile from );
@@ -323,77 +240,11 @@ namespace Server.Items
 			return AOS.Scale( v, 100 + EnhancePotions( m ) );
 		}
 
-        public static void DupePoisoned(BasePotion newItem, BasePotion oldItem)
-        {
-            int LessTotal = oldItem.LessPoisoned + newItem.LessPoisoned;
-            int RegTotal = oldItem.RegPoisoned + newItem.RegPoisoned; 
-            int GreatTotal = oldItem.GreatPoisoned + newItem.GreatPoisoned;
-            int DeadlyTotal = oldItem.DeadlyPoisoned + newItem.DeadlyPoisoned;
-            int LethalTotal = oldItem.LethalPoisoned + newItem.LethalPoisoned;
-            int AmountTotal = oldItem.Amount + newItem.Amount;
-
-            oldItem.LessPoisoned = (int)(1.0 * LessTotal * oldItem.Amount/AmountTotal);
-            oldItem.RegPoisoned = (int)(1.0 * RegTotal * oldItem.Amount / AmountTotal);
-            oldItem.GreatPoisoned = (int)(1.0 * GreatTotal * oldItem.Amount / AmountTotal);
-            oldItem.DeadlyPoisoned = (int)(1.0 * DeadlyTotal * oldItem.Amount / AmountTotal);
-            oldItem.LethalPoisoned = (int)(1.0 * LethalTotal * oldItem.Amount / AmountTotal);
-
-            newItem.LessPoisoned = (int)(1.0 * LessTotal * newItem.Amount / AmountTotal);
-            newItem.RegPoisoned = (int)(1.0 * RegTotal * newItem.Amount / AmountTotal);
-            newItem.GreatPoisoned = (int)(1.0 * GreatTotal * newItem.Amount / AmountTotal);
-            newItem.DeadlyPoisoned = (int)(1.0 * DeadlyTotal * newItem.Amount / AmountTotal);
-            newItem.LethalPoisoned = (int)(1.0 * LethalTotal * newItem.Amount / AmountTotal);
-
-            LessTotal -= oldItem.LessPoisoned + newItem.LessPoisoned;
-            RegTotal -= oldItem.RegPoisoned + newItem.RegPoisoned;
-            GreatTotal -= oldItem.GreatPoisoned + newItem.GreatPoisoned;
-            DeadlyTotal -= oldItem.DeadlyPoisoned + newItem.DeadlyPoisoned;
-            LethalTotal -= oldItem.LethalPoisoned + newItem.LethalPoisoned;
-            for (int i = 0; i < LessTotal; i++)
-                if (oldItem.TotalPoisoned < oldItem.Amount)
-                    ++oldItem.LessPoisoned;
-                else
-                    ++newItem.LessPoisoned;
-            for (int i = 0; i < RegTotal; i++)
-                if (oldItem.TotalPoisoned < oldItem.Amount)
-                    ++oldItem.RegPoisoned;
-                else
-                    ++newItem.RegPoisoned;
-            for (int i = 0; i < GreatTotal; i++)
-                if (oldItem.TotalPoisoned < oldItem.Amount)
-                    ++oldItem.GreatPoisoned;
-                else
-                    ++newItem.GreatPoisoned;
-            for (int i = 0; i < DeadlyTotal; i++)
-                if (oldItem.TotalPoisoned < oldItem.Amount)
-                    ++oldItem.DeadlyPoisoned;
-                else
-                    ++newItem.DeadlyPoisoned;
-            for (int i = 0; i < LethalTotal; i++)
-                if (oldItem.TotalPoisoned < oldItem.Amount)
-                    ++oldItem.LethalPoisoned;
-                else
-                    ++newItem.LethalPoisoned;
-
-        }
-
-        public override bool StackWith( Mobile from, Item dropped, bool playSound )
+		public override bool StackWith( Mobile from, Item dropped, bool playSound )
 		{
-            bool Stacks = false;
-            if (dropped is BasePotion && ((BasePotion)dropped).m_PotionEffect == m_PotionEffect)
-            {
-                Stacks = base.StackWith(from, dropped, playSound);
-                if (Stacks)
-                {
-                    LethalPoisoned += ((BasePotion)dropped).LethalPoisoned;
-                    DeadlyPoisoned += ((BasePotion)dropped).DeadlyPoisoned;
-                    GreatPoisoned += ((BasePotion)dropped).GreatPoisoned;
-                    RegPoisoned += ((BasePotion)dropped).RegPoisoned;
-                    LessPoisoned += ((BasePotion)dropped).LessPoisoned;
-                }
-                return Stacks;
-                
-            }
+			if( dropped is BasePotion && ((BasePotion)dropped).m_PotionEffect == m_PotionEffect )
+				return base.StackWith( from, dropped, playSound );
+
 			return false;
 		}
 

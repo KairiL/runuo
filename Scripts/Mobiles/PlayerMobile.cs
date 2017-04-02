@@ -1451,7 +1451,7 @@ namespace Server.Mobiles
 			get
 			{
 				if( Core.ML && this.AccessLevel == AccessLevel.Player )
-					return Math.Min( base.Str, 150 );
+					return Math.Min( base.Str, 210 );
 
 				return base.Str;
 			}
@@ -1467,7 +1467,7 @@ namespace Server.Mobiles
 			get
 			{
 				if( Core.ML && this.AccessLevel == AccessLevel.Player )
-					return Math.Min( base.Int, 150 );
+					return Math.Min( base.Int, 210 );
 
 				return base.Int;
 			}
@@ -1483,7 +1483,7 @@ namespace Server.Mobiles
 			get
 			{
 				if( Core.ML && this.AccessLevel == AccessLevel.Player )
-					return Math.Min( base.Dex, 150 );
+					return Math.Min( base.Dex, 210 );
 
 				return base.Dex;
 			}

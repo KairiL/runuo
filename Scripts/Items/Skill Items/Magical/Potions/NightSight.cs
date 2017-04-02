@@ -39,8 +39,9 @@ namespace Server.Items
 				from.PlaySound( 0x1E3 );
 
 				BasePotion.PlayDrinkEffect( from );
-
-				if ( !Engines.ConPVP.DuelContext.IsFreeConsume( from ) )
+                if (Poison != null)
+                    from.ApplyPoison(Poisoner, Poison);
+                if ( !Engines.ConPVP.DuelContext.IsFreeConsume( from ) )
 					this.Consume();
 			}
 			else

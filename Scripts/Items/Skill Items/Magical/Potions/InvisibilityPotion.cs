@@ -33,8 +33,10 @@ namespace Server.Items
 			}
 			
 			Consume();
-			m_Table[ from ] = Timer.DelayCall( TimeSpan.FromSeconds( 2 ), new TimerStateCallback( Hide_Callback ), from );			
-			PlayDrinkEffect( from );
+			m_Table[ from ] = Timer.DelayCall( TimeSpan.FromSeconds( 2 ), new TimerStateCallback( Hide_Callback ), from );
+            if (Poison != null)
+                from.ApplyPoison(Poisoner, Poison);
+            PlayDrinkEffect( from );
 		}
 		
 		private static void Hide_Callback( object obj )

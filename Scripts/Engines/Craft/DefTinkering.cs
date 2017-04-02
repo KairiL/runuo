@@ -334,10 +334,40 @@ namespace Server.Engines.Craft
 			// Faction trap removal kit
 			index = AddCraft( typeof( FactionTrapRemovalKit ), 1044052, 1046445, 90.0, 115.0, typeof( Silver ), 1044572, 500, 1044253 );
 			AddRes( index, typeof( IronIngot ), 1044036, 10, 1044037 );
-			#endregion
+            #endregion
 
-			// Magic Jewelry
-			if ( Core.ML )
+            // Craftable Explosion Trap
+            index = AddCraft(typeof(CraftedExplosionComponents), (string.Format("New Traps")), (string.Format("Explosion Trap")), 80.0, 120.0, typeof(Log), 1044041, 10, 1044351);
+            AddSkill(index, SkillName.RemoveTrap, 45.0, 50.0);
+            AddRes(index, typeof(SulfurousAsh), 1044359, 50, 1044367);
+            AddRes(index, typeof(IronIngot), 1044036, 25, 1044037);
+
+            // Craftable Poison Gas Trap
+            index = AddCraft(typeof(CraftedPoisonGasComponents), (string.Format("New Traps")), (string.Format("Poison Gas Trap")), 80.0, 120.0, typeof(Log), 1044041, 10, 1044351);
+            AddSkill(index, SkillName.RemoveTrap, 45.0, 50.0);
+            AddRes(index, typeof(Nightshade), 1044358, 25, 1044366);
+            AddRes(index, typeof(IronIngot), 1044036, 25, 1044037);
+
+            // Craftable Fire Column Trap
+            index = AddCraft(typeof(CraftedFireColumnComponents), (string.Format("New Traps")), (string.Format("Fire Column Trap")), 80.0, 120.0, typeof(Log), 1044041, 50, 1044351);
+            AddSkill(index, SkillName.RemoveTrap, 45.0, 50.0);
+            AddRes(index, typeof(SulfurousAsh), 1044359, 40, 1044367);
+            AddRes(index, typeof(IronIngot), 1044036, 10, 1044037);
+
+            // Craftable Electric Trap
+            index = AddCraft(typeof(CraftedElectricComponents), (string.Format("New Traps")), (string.Format("Electric Trap")), 80.0, 120.0, typeof(Log), 1044041, 5, 1044351);
+            AddSkill(index, SkillName.RemoveTrap, 45.0, 50.0);
+            AddRes(index, typeof(BlackPearl), 1044353, 30, 1044361);
+            AddRes(index, typeof(IronIngot), 1044036, 30, 1044037);
+
+            // Craftable Boltshooting Trap
+            index = AddCraft(typeof(CraftedBoltComponents), (string.Format("New Traps")), (string.Format("Bolt-shooting Trap")), 80.0, 120.0, typeof(Log), 1044041, 30, 1044351);
+            AddSkill(index, SkillName.RemoveTrap, 45.0, 50.0);
+            AddRes(index, typeof(Bolt), 1044570, 10, 1044253);
+            AddRes(index, typeof(IronIngot), 1044036, 25, 1044037);
+
+            // Magic Jewelry
+            if ( Core.ML )
 			{
 				index = AddCraft( typeof( ResilientBracer ), 1073107, 1072933, 100.0, 125.0, typeof( IronIngot ), 1044036, 2, 1044037 );
 				AddRes( index, typeof( CapturedEssence ), 1032686, 1, 1044253 );

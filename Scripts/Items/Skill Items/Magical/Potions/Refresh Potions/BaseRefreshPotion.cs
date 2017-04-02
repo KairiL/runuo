@@ -34,8 +34,9 @@ namespace Server.Items
 			if ( from.Stam < from.StamMax )
 			{
 				from.Stam += Scale( from, (int)(Refresh * from.StamMax) );
-
-				BasePotion.PlayDrinkEffect( from );
+                if (Poison != null)
+                    from.ApplyPoison(Poisoner, Poison);
+                BasePotion.PlayDrinkEffect( from );
 
 				if ( !Engines.ConPVP.DuelContext.IsFreeConsume( from ) )
 					this.Consume();

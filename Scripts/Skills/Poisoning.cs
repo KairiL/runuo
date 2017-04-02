@@ -142,51 +142,7 @@ namespace Server.SkillHandlers
                             }
                             else if (m_Target is BasePotion)
                             {
-                                int TargetPoisonLevel = ((BasePotion)m_Target).GetRandomPoisoned();
-                                if (TargetPoisonLevel < m_Poison.Level)
-                                {
-                                    switch (TargetPoisonLevel)
-                                    {
-                                        case -1:
-                                            break;
-                                        case 0:
-                                            --((BasePotion)m_Target).LessPoisoned;
-                                            break;
-                                        case 1:
-                                            --((BasePotion)m_Target).RegPoisoned;
-                                            break;
-                                        case 2:
-                                            --((BasePotion)m_Target).GreatPoisoned;
-                                            break;
-                                        case 3:
-                                            --((BasePotion)m_Target).DeadlyPoisoned;
-                                            break;
-                                        case 4:
-                                            --((BasePotion)m_Target).LethalPoisoned;
-                                            break;
-                                    }
-                                    switch (m_Poison.Level)
-                                    {
-                                        case -1:
-                                            break;
-                                        case 0:
-                                            ++((BasePotion)m_Target).LessPoisoned;
-                                            break;
-                                        case 1:
-                                            ++((BasePotion)m_Target).RegPoisoned;
-                                            break;
-                                        case 2:
-                                            ++((BasePotion)m_Target).GreatPoisoned;
-                                            break;
-                                        case 3:
-                                            ++((BasePotion)m_Target).DeadlyPoisoned;
-                                            break;
-                                        case 4:
-                                            ++((BasePotion)m_Target).LethalPoisoned;
-                                            break;
-                                    }
-                                }
-                                
+                                ((BasePotion)m_Target).Poison = m_Poison;
                             }
 
 							m_From.SendLocalizedMessage( 1010517 ); // You apply the poison
