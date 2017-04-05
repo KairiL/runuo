@@ -38,7 +38,7 @@ namespace Server.Misc
 		 * firewalls) or specific IP adddresses you can do so by modifying the file SocketOptions.cs found in this directory.
 		 */
 
-		public static readonly string Address = "75.72.151.168";//Change me to ACM's server DNS
+		public static readonly string Address = "160.94.179.129";//Change me to ACM's server DNS
 
         public static readonly string ServerName = "ACM UMN";
 
