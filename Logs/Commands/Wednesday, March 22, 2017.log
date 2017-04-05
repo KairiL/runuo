@@ -1,0 +1,52 @@
+##############################
+Log started on 3/22/2017 8:02:35 AM
+
+3/22/2017 8:05:02 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'save '
+##############################
+Log started on 3/22/2017 8:59:30 AM
+
+##############################
+Log started on 3/22/2017 9:26:58 AM
+
+##############################
+Log started on 3/22/2017 9:45:55 AM
+
+##############################
+Log started on 3/22/2017 9:46:05 AM
+
+3/22/2017 9:46:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add shepherdscrook'
+3/22/2017 9:46:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (3500, 2573, 14) in Trammel: "shepherdscrook"
+3/22/2017 9:46:32 AM: 127.0.0.1: Serials: 0x4000050D; 
+3/22/2017 9:46:42 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setskill herding 100'
+3/22/2017 9:46:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Herding.Base' of 0xF1 "Kai" ('kairi') to '100'
+3/22/2017 9:48:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setskill wrestling 120'
+3/22/2017 9:48:09 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Wrestling.Base' of 0xF1 "Kai" ('kairi') to '120'
+##############################
+Log started on 3/22/2017 11:47:33 PM
+
+3/22/2017 11:49:22 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add shepherdscrook'
+3/22/2017 11:49:24 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (3500, 2577, 14) in Trammel: "shepherdscrook"
+3/22/2017 11:49:24 PM: 127.0.0.1: Serials: 0x40000519; 
+3/22/2017 11:49:40 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+##############################
+Log started on 3/22/2017 11:49:45 PM
+
+3/22/2017 11:50:01 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+##############################
+Log started on 3/22/2017 11:50:11 PM
+
+##############################
+Log started on 3/22/2017 11:51:20 PM
+
+3/22/2017 11:51:27 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+##############################
+Log started on 3/22/2017 11:51:32 PM
+
+##############################
+Log started on 3/22/2017 11:53:29 PM
+
+3/22/2017 11:53:48 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+##############################
+Log started on 3/22/2017 11:55:28 PM
+
+3/22/2017 11:55:37 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '

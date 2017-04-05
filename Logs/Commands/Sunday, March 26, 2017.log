@@ -1,0 +1,159 @@
+##############################
+Log started on 3/26/2017 5:29:46 AM
+
+##############################
+Log started on 3/26/2017 5:42:20 AM
+
+##############################
+Log started on 3/26/2017 6:11:18 AM
+
+3/26/2017 6:18:53 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/26/2017 6:18:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 3/26/2017 6:21:21 AM
+
+3/26/2017 6:26:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/26/2017 6:26:27 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 3/26/2017 6:27:19 AM
+
+##############################
+Log started on 3/26/2017 6:31:20 AM
+
+##############################
+Log started on 3/26/2017 6:37:42 AM
+
+##############################
+Log started on 3/26/2017 6:45:13 AM
+
+##############################
+Log started on 3/26/2017 6:48:55 AM
+
+##############################
+Log started on 3/26/2017 6:51:11 AM
+
+##############################
+Log started on 3/26/2017 7:08:27 AM
+
+##############################
+Log started on 3/26/2017 7:10:43 AM
+
+##############################
+Log started on 3/26/2017 7:17:44 AM
+
+##############################
+Log started on 3/26/2017 4:42:38 PM
+
+3/26/2017 4:43:35 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/26/2017 4:43:42 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+3/26/2017 5:18:31 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 3/26/2017 5:18:39 PM
+
+3/26/2017 5:18:46 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+##############################
+Log started on 3/26/2017 5:24:19 PM
+
+3/26/2017 5:33:20 PM: 75.72.151.168: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/26/2017 5:34:54 PM: 75.72.151.168: Owner 0xF1 "Kai" ('kairi') used command 'setskill herding 120'
+3/26/2017 5:34:56 PM: 75.72.151.168: Owner 0xF1 "Kai" ('kairi') set property 'Herding.Base' of 0xF1 "Kai" ('kairi') to '120'
+3/26/2017 5:56:54 PM: 75.72.151.168: Owner 0xF1 "Kai" ('kairi') used command 'add healingpotion'
+3/26/2017 5:57:14 PM: 75.72.151.168: Owner 0xF1 "Kai" ('kairi') building at (1436, 1691, 20) in Felucca: "GreaterHealPotion"
+3/26/2017 5:57:14 PM: 75.72.151.168: Serials: 0x400019D3; 
+3/26/2017 5:57:20 PM: 75.72.151.168: Owner 0xF1 "Kai" ('kairi') used command 'props '
+3/26/2017 6:05:14 PM: 75.72.151.168: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/26/2017 6:05:34 PM: 75.72.151.168: Owner 0xF1 "Kai" ('kairi') used command 'admin '
+3/26/2017 6:05:44 PM: 75.72.151.168: Owner 0xF1 "Kai" ('kairi') used command 'admin '
+3/26/2017 6:08:30 PM: 75.72.151.168: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 3/26/2017 6:08:49 PM
+
+3/26/2017 6:15:21 PM: 75.72.151.168: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/26/2017 6:15:22 PM: 75.72.151.168: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 3/26/2017 6:15:30 PM
+
+3/26/2017 6:17:48 PM: 75.72.151.168: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/26/2017 6:51:11 PM: 75.72.151.168: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 3/26/2017 6:51:21 PM
+
+3/26/2017 6:51:32 PM: 75.72.151.168: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/26/2017 7:16:28 PM: 75.72.151.168: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 3/26/2017 7:16:53 PM
+
+3/26/2017 7:18:29 PM: 75.72.151.168: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+##############################
+Log started on 3/26/2017 7:20:50 PM
+
+3/26/2017 7:50:11 PM: 75.72.151.168: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/26/2017 7:50:19 PM: 75.72.151.168: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+3/26/2017 8:11:38 PM: 75.72.151.168: Owner 0xF1 "Kai" ('kairi') used command 'props '
+3/26/2017 8:11:50 PM: 75.72.151.168: Owner 0xF1 "Kai" ('kairi') used command 'set followersbonus 10'
+3/26/2017 8:11:53 PM: 75.72.151.168: Owner 0xF1 "Kai" ('kairi') set property 'followersbonus' of 0x400004D3 (ShepherdsCrook) to '10'
+3/26/2017 8:12:07 PM: 75.72.151.168: Owner 0xF1 "Kai" ('kairi') set property 'LowerManaCost' of ... to '100'
+3/26/2017 8:29:27 PM: 75.72.151.168: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/26/2017 8:29:29 PM: 75.72.151.168: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 3/26/2017 8:29:39 PM
+
+3/26/2017 8:29:53 PM: 75.72.151.168: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/26/2017 8:53:24 PM: 75.72.151.168: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+##############################
+Log started on 3/26/2017 9:53:07 PM
+
+3/26/2017 9:53:19 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/26/2017 9:53:27 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add greaterhealingpotion'
+3/26/2017 9:53:34 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1428, 1689, 20) in Felucca: "GreaterHealPotion"
+3/26/2017 9:53:34 PM: 127.0.0.1: Serials: 0x40000737; 
+3/26/2017 9:53:39 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'dupe '
+3/26/2017 9:53:40 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duping 0x40000737 (GreaterHealPotion) (inBag=False; amount=1)
+3/26/2017 9:53:40 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duped 0x40000737 (GreaterHealPotion) creating 0x40000738 (GreaterHealPotion)
+3/26/2017 9:53:42 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'dupe '
+3/26/2017 9:53:45 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duping 0x40000737 (GreaterHealPotion) (inBag=False; amount=1)
+3/26/2017 9:53:45 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duped 0x40000737 (GreaterHealPotion) creating 0x4000073C (GreaterHealPotion)
+3/26/2017 10:39:55 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'unhide '
+3/26/2017 10:39:57 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') unhiding 0xF1 "Kai" ('kairi')
+3/26/2017 10:40:03 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') hiding 0xF1 "Kai" ('kairi')
+3/26/2017 10:40:03 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'self hide'
+3/26/2017 11:08:01 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add maskofdeath'
+3/26/2017 11:08:13 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1431, 1687, 20) in Felucca: "BlazeOfDeath"
+3/26/2017 11:08:13 PM: 127.0.0.1: Serials: 0x40002389; 
+3/26/2017 11:08:22 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+3/26/2017 11:08:24 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40002389 (BlazeOfDeath)
+3/26/2017 11:18:52 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 3/26/2017 11:20:29 PM
+
+3/26/2017 11:21:33 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/26/2017 11:21:40 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 3/26/2017 11:21:47 PM
+
+3/26/2017 11:21:56 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/26/2017 11:22:01 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get poisoncharges'
+3/26/2017 11:38:29 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add explosionpot'
+3/26/2017 11:38:32 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1436, 1690, 20) in Felucca: "GreaterExplosionPotion"
+3/26/2017 11:38:32 PM: 127.0.0.1: Serials: 0x40001055; 
+3/26/2017 11:38:35 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1436, 1690, 21) in Felucca: "GreaterExplosionPotion"
+3/26/2017 11:38:35 PM: 127.0.0.1: Serials: 0x40001058; 
+3/26/2017 11:40:52 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+3/26/2017 11:41:05 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'HitPoints' of 0x400004D3 (ShepherdsCrook) to '60000'
+3/26/2017 11:41:26 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'EnhancePotions' of ... to '2000'
+3/26/2017 11:41:41 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'LowerRegCost' of ... to '200'
+3/26/2017 11:41:49 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'RegenHits' of ... to '6000'
+3/26/2017 11:42:10 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'RegenHits' of ... to '60000'
+3/26/2017 11:42:24 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set movable false'
+3/26/2017 11:42:27 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+3/26/2017 11:42:55 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'RegenHits' of ... to '6000'
+3/26/2017 11:43:09 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'RegenHits' of ... to '600'
+3/26/2017 11:43:26 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Luck' of ... to '4000'
+3/26/2017 11:43:33 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'ReflectPhysical' of ... to '10000'
+3/26/2017 11:43:51 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'SpellChanneling' of ... to '1'
+3/26/2017 11:44:06 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'SpellDamage' of ... to '-99'
+3/26/2017 11:44:14 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'WeaponDamage' of ... to '-99'
+3/26/2017 11:44:24 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'WeaponDamage' of ... to '-99'
+3/26/2017 11:44:31 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'WeaponSpeed' of ... to '100'
+3/26/2017 11:45:29 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Direct' of ... to '100'
+3/26/2017 11:58:17 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '

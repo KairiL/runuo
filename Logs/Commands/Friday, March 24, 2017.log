@@ -1,0 +1,391 @@
+##############################
+Log started on 3/24/2017 12:02:21 AM
+
+3/24/2017 12:02:26 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/24/2017 12:02:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'clearall '
+3/24/2017 12:02:35 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'clearall '
+3/24/2017 12:02:39 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'clearall '
+3/24/2017 12:02:42 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'clearall '
+3/24/2017 12:02:43 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'clearall '
+3/24/2017 12:02:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'clearall '
+3/24/2017 12:02:50 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'clearall '
+3/24/2017 12:03:00 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'clearall '
+3/24/2017 12:03:01 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'save '
+3/24/2017 12:03:41 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 3/24/2017 12:04:16 AM
+
+3/24/2017 12:04:25 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/24/2017 12:04:38 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add shepherdscrook'
+3/24/2017 12:04:39 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1428, 1679, 20) in Felucca: "shepherdscrook"
+3/24/2017 12:04:39 AM: 127.0.0.1: Serials: 0x400004D3; 
+3/24/2017 12:05:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/24/2017 12:05:10 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 3/24/2017 12:05:15 AM
+
+3/24/2017 12:05:41 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/24/2017 12:07:10 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set followersbonus 2'
+3/24/2017 12:07:12 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'followersbonus' of 0x400004D3 (ShepherdsCrook) to '2'
+3/24/2017 12:07:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set followersbonus 10'
+3/24/2017 12:07:21 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'followersbonus' of 0x400004D3 (ShepherdsCrook) to '10'
+3/24/2017 12:07:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setskill herding 0'
+3/24/2017 12:07:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Herding.Base' of 0xF1 "Kai" ('kairi') to '0'
+3/24/2017 12:07:41 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setskill herding 50'
+3/24/2017 12:07:42 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Herding.Base' of 0xF1 "Kai" ('kairi') to '50'
+3/24/2017 12:09:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setskill herding 120'
+3/24/2017 12:09:38 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Herding.Base' of 0xF1 "Kai" ('kairi') to '120'
+3/24/2017 12:13:02 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setskill herding 120'
+3/24/2017 12:13:04 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Herding.Base' of 0xF1 "Kai" ('kairi') to '120'
+3/24/2017 12:13:09 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set followersbonus 1'
+3/24/2017 12:13:12 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'followersbonus' of 0x400004D3 (ShepherdsCrook) to '1'
+3/24/2017 12:13:15 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setskill herding 10'
+3/24/2017 12:13:17 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Herding.Base' of 0xF1 "Kai" ('kairi') to '10'
+3/24/2017 12:13:24 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setskill herding 90'
+3/24/2017 12:13:25 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Herding.Base' of 0xF1 "Kai" ('kairi') to '90'
+3/24/2017 12:17:20 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+3/24/2017 12:18:47 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add ninjitsubook'
+3/24/2017 12:18:53 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1426, 1677, 20) in Felucca: "BookOfNinjitsu"
+3/24/2017 12:18:53 AM: 127.0.0.1: Serials: 0x40000532; 
+3/24/2017 12:26:18 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+3/24/2017 12:26:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'AttackChance' of ... to '100'
+3/24/2017 12:26:49 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'BonusDex' of ... to '125'
+3/24/2017 12:26:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'BonusHits' of ... to '5000'
+3/24/2017 12:27:02 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'BonusInt' of ... to '150'
+3/24/2017 12:27:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'BonusDex' of ... to '150'
+3/24/2017 12:27:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'BonusMana' of ... to '5000'
+3/24/2017 12:27:25 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'BonusStam' of ... to '5000'
+3/24/2017 12:27:29 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'BonusStr' of ... to '150'
+3/24/2017 12:27:34 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'CastRecovery' of ... to '7'
+3/24/2017 12:27:39 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'CastSpeed' of ... to '6'
+3/24/2017 12:27:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'DefendChance' of ... to '100'
+3/24/2017 12:28:10 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'EnhancePotions' of ... to '100'
+3/24/2017 12:34:55 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 3/24/2017 12:35:15 AM
+
+3/24/2017 12:35:22 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/24/2017 12:35:34 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'admin '
+3/24/2017 12:35:49 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') adding new account: kairi1.0
+3/24/2017 12:39:18 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go haven'
+3/24/2017 12:39:23 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'who '
+3/24/2017 12:39:29 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0xF2 "Kai" ('kairi1.0'), Location (3501, 2573, 14), Map Trammel
+3/24/2017 12:39:34 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set name Kairi1.0'
+3/24/2017 12:39:35 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'name' of 0xF2 "Kai" ('kairi1.0') to 'Kairi1.0'
+3/24/2017 12:41:49 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setskill herding 100'
+3/24/2017 12:41:51 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Herding.Base' of 0xF2 "Kairi1.0" ('kairi1.0') to '100'
+3/24/2017 12:42:21 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+3/24/2017 12:42:23 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0xF2 "Kairi1.0" ('kairi1.0') to (3489, 2569, 40)
+3/24/2017 12:42:24 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'tele '
+3/24/2017 12:42:29 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm add horse'
+3/24/2017 12:42:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (3485, 2572, 40) in Trammel: "horse"
+3/24/2017 12:42:30 AM: 127.0.0.1: Serials: 0xF3; 
+3/24/2017 12:42:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (3485, 2572, 40) in Trammel: "horse"
+3/24/2017 12:42:31 AM: 127.0.0.1: Serials: 0xF4; 
+3/24/2017 12:42:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (3485, 2572, 40) in Trammel: "horse"
+3/24/2017 12:42:31 AM: 127.0.0.1: Serials: 0xF5; 
+3/24/2017 12:42:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (3485, 2572, 40) in Trammel: "horse"
+3/24/2017 12:42:31 AM: 127.0.0.1: Serials: 0xF6; 
+3/24/2017 12:42:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (3486, 2573, 40) in Trammel: "horse"
+3/24/2017 12:42:32 AM: 127.0.0.1: Serials: 0xF7; 
+3/24/2017 12:42:33 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (3483, 2574, 40) in Trammel: "horse"
+3/24/2017 12:42:33 AM: 127.0.0.1: Serials: 0xF8; 
+3/24/2017 12:48:10 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add horse'
+3/24/2017 12:48:12 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (3485, 2572, 40) in Trammel: "horse"
+3/24/2017 12:48:12 AM: 127.0.0.1: Serials: 0xF9; 
+3/24/2017 12:48:17 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm remove'
+3/24/2017 12:48:18 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0xF9 "a horse" (no account)
+3/24/2017 12:48:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0xF5 "a horse" (no account)
+3/24/2017 12:48:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0xF3 "a horse" (no account)
+3/24/2017 12:48:20 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0xF6 "a horse" (no account)
+3/24/2017 12:48:20 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0xF7 "a horse" (no account)
+3/24/2017 12:48:45 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go '
+3/24/2017 12:48:52 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set facet fellucca'
+3/24/2017 12:49:05 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'admin '
+3/24/2017 12:49:17 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go britain'
+3/24/2017 12:49:39 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go skarabrae'
+3/24/2017 12:49:42 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go skara'
+3/24/2017 12:49:45 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go '
+3/24/2017 12:50:03 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+3/24/2017 12:50:29 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go fellucca'
+3/24/2017 12:50:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go felucca'
+3/24/2017 12:50:34 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go britain'
+3/24/2017 12:50:49 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'tele '
+3/24/2017 12:50:52 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+3/24/2017 12:51:20 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add stable'
+3/24/2017 12:51:26 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add animal'
+3/24/2017 12:51:29 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1510, 1542, 25) in Felucca: "AnimalTrainer"
+3/24/2017 12:51:29 AM: 127.0.0.1: Serials: 0xFA; 
+3/24/2017 12:51:33 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm add horse'
+3/24/2017 12:51:34 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1515, 1542, 25) in Felucca: "horse"
+3/24/2017 12:51:34 AM: 127.0.0.1: Serials: 0xFB; 
+3/24/2017 12:51:34 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1515, 1542, 25) in Felucca: "horse"
+3/24/2017 12:51:34 AM: 127.0.0.1: Serials: 0xFC; 
+3/24/2017 12:51:34 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1515, 1542, 25) in Felucca: "horse"
+3/24/2017 12:51:34 AM: 127.0.0.1: Serials: 0xFD; 
+3/24/2017 12:51:35 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1516, 1542, 25) in Felucca: "horse"
+3/24/2017 12:51:35 AM: 127.0.0.1: Serials: 0xFE; 
+3/24/2017 12:51:36 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1515, 1543, 25) in Felucca: "horse"
+3/24/2017 12:51:36 AM: 127.0.0.1: Serials: 0xFF; 
+3/24/2017 12:51:38 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'who '
+3/24/2017 12:51:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') bringing 0xF2 "Kairi1.0" ('kairi1.0') to Location (1513, 1544, 25), Map Felucca
+3/24/2017 12:51:47 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set owner'
+3/24/2017 12:52:28 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+3/24/2017 12:53:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get followers'
+3/24/2017 12:54:34 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm remove'
+3/24/2017 12:54:35 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0xFB "a horse" (no account)
+3/24/2017 12:54:36 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0xFC "a horse" (no account)
+3/24/2017 12:54:36 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0xFE "a horse" (no account)
+3/24/2017 12:54:38 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0xF4 "a horse" (no account)
+3/24/2017 12:54:39 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0xFF "a horse" (no account)
+3/24/2017 12:54:39 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0xFD "a horse" (no account)
+3/24/2017 1:01:40 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+3/24/2017 1:06:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get followersmax'
+3/24/2017 1:07:48 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 3/24/2017 1:08:18 AM
+
+3/24/2017 1:08:21 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/24/2017 1:08:25 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 3/24/2017 1:08:47 AM
+
+3/24/2017 1:09:00 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/24/2017 1:10:11 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add animal'
+3/24/2017 1:10:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1510, 1540, 25) in Felucca: "AnimalTrainer"
+3/24/2017 1:10:13 AM: 127.0.0.1: Serials: 0xF3; 
+3/24/2017 1:10:20 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'dupe '
+3/24/2017 1:10:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm add horse'
+3/24/2017 1:10:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1516, 1541, 25) in Felucca: "horse"
+3/24/2017 1:10:31 AM: 127.0.0.1: Serials: 0xF4; 
+3/24/2017 1:10:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1516, 1541, 25) in Felucca: "horse"
+3/24/2017 1:10:32 AM: 127.0.0.1: Serials: 0xF5; 
+3/24/2017 1:10:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1516, 1541, 25) in Felucca: "horse"
+3/24/2017 1:10:32 AM: 127.0.0.1: Serials: 0xF6; 
+3/24/2017 1:10:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1517, 1542, 25) in Felucca: "horse"
+3/24/2017 1:10:32 AM: 127.0.0.1: Serials: 0xF7; 
+3/24/2017 1:10:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1517, 1541, 25) in Felucca: "horse"
+3/24/2017 1:10:32 AM: 127.0.0.1: Serials: 0xF9; 
+3/24/2017 1:10:51 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+3/24/2017 1:11:11 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+3/24/2017 1:11:21 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'ControlMaster' of 0xF9 "a horse" (no account) to '0xF2 "Kairi1.0"'
+3/24/2017 1:11:38 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'ControlTarget' of 0xF9 "a horse" (no account) to '0xF2 "Kairi1.0"'
+3/24/2017 1:13:10 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+3/24/2017 1:13:14 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0xF2 "Kairi1.0" ('kairi1.0') to (1515, 1543, 25)
+3/24/2017 1:14:02 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+3/24/2017 1:14:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0xF2 "Kairi1.0" ('kairi1.0') to (1510, 1548, 25)
+3/24/2017 1:16:56 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm remoev'
+3/24/2017 1:16:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm remove'
+3/24/2017 1:16:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0xF9 "a horse" (no account)
+3/24/2017 1:16:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0xF6 "a horse" (no account)
+3/24/2017 1:17:00 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0xF5 "a horse" (no account)
+3/24/2017 1:17:00 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0xF4 "a horse" (no account)
+3/24/2017 1:17:01 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0xF7 "a horse" (no account)
+3/24/2017 1:18:39 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add shepherdscrook'
+3/24/2017 1:18:41 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1515, 1543, 25) in Felucca: "shepherdscrook"
+3/24/2017 1:18:41 AM: 127.0.0.1: Serials: 0x400005A8; 
+3/24/2017 1:20:03 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+3/24/2017 1:41:51 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+3/24/2017 1:41:53 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0xF2 "Kairi1.0" ('kairi1.0') to (1425, 1680, 20)
+3/24/2017 1:52:21 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 3/24/2017 1:52:38 AM
+
+3/24/2017 1:52:45 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/24/2017 1:53:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go '
+3/24/2017 1:53:23 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+3/24/2017 2:15:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go britain'
+3/24/2017 2:15:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+3/24/2017 2:16:16 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+3/24/2017 2:16:20 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get x'
+3/24/2017 2:16:23 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get y'
+3/24/2017 2:16:26 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get z'
+3/24/2017 2:17:40 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get x'
+3/24/2017 2:17:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get y'
+3/24/2017 2:18:47 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'tele '
+3/24/2017 2:27:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+3/24/2017 2:27:41 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 3/24/2017 2:28:06 AM
+
+3/24/2017 2:28:14 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/24/2017 2:35:51 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setallskills 120'
+3/24/2017 2:35:52 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'EverySkill.Base' of 0xF1 "Kai" ('kairi') to '120'
+##############################
+Log started on 3/24/2017 5:27:20 PM
+
+3/24/2017 5:28:39 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/24/2017 5:29:00 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+3/24/2017 5:31:35 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+3/24/2017 5:37:34 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'bank '
+3/24/2017 5:37:35 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') opening bank box of 0xF1 "Kai" ('kairi')
+3/24/2017 5:37:41 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add gold 60000'
+3/24/2017 5:37:42 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1430, 1686, 20) in Felucca: "gold" "60000"
+3/24/2017 5:37:42 PM: 127.0.0.1: Serials: 0x40000560; 
+3/24/2017 5:38:22 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+3/24/2017 5:40:45 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get insured'
+3/24/2017 5:42:08 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get checkblessed'
+3/24/2017 5:43:49 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 3/24/2017 5:45:04 PM
+
+3/24/2017 5:45:21 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/24/2017 5:46:14 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/24/2017 5:46:28 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+3/24/2017 5:46:30 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0xF2 "Kairi1.0" ('kairi1.0') to (1437, 1677, 10)
+3/24/2017 5:51:11 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/24/2017 5:51:18 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add thievesguildmaster'
+3/24/2017 5:51:36 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1442, 1669, 36) in Felucca: "ThiefGuildmaster"
+3/24/2017 5:51:36 PM: 127.0.0.1: Serials: 0xF5; 
+3/24/2017 5:52:22 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/24/2017 5:52:25 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'tele '
+3/24/2017 5:53:44 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setskill stealing 120'
+3/24/2017 5:53:48 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setskill stealing 60'
+3/24/2017 5:53:50 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Stealing.Base' of 0xF4 "Kairi" ('kairi2.0') to '60'
+3/24/2017 5:55:25 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+3/24/2017 5:55:54 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+3/24/2017 5:55:56 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+3/24/2017 5:59:20 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'NpcGuild' of 0xF4 "Kairi" ('kairi2.0') to 'ThievesGuild'
+3/24/2017 6:00:04 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set name Kairi2.0'
+3/24/2017 6:00:06 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'name' of 0xF4 "Kairi" ('kairi2.0') to 'Kairi2.0'
+3/24/2017 6:04:48 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/24/2017 6:04:52 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+3/24/2017 6:04:59 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'admin '
+3/24/2017 6:05:02 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'premiumspawner '
+3/24/2017 6:05:10 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'createworld '
+3/24/2017 6:05:10 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'spawner '
+3/24/2017 6:05:15 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'moongen '
+3/24/2017 6:05:27 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'doorgen '
+3/24/2017 6:05:31 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'decorate '
+3/24/2017 6:05:31 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'decoratese '
+3/24/2017 6:05:31 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'decorateml '
+3/24/2017 6:05:32 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'decoratekrfirstage '
+3/24/2017 6:05:32 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'decoratemag '
+3/24/2017 6:05:32 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'decoratekrsecondage '
+3/24/2017 6:05:32 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'decoratesa '
+3/24/2017 6:05:32 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'decoratehsfirstage '
+3/24/2017 6:05:32 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'decoratehssecondage '
+3/24/2017 6:05:32 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'signput '
+3/24/2017 6:05:32 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'TelMake SE'
+3/24/2017 6:05:32 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'shtelgen '
+3/24/2017 6:05:32 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'gengauntlet '
+3/24/2017 6:05:33 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'genchampions '
+3/24/2017 6:05:33 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'genkhaldun '
+3/24/2017 6:05:33 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'generatefactions '
+3/24/2017 6:05:33 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'genstealarties '
+3/24/2017 6:05:33 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'secretlocgen '
+3/24/2017 6:05:33 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'TelMake ML'
+3/24/2017 6:05:33 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'TelMake KR1'
+3/24/2017 6:05:33 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'SignDel KR1'
+3/24/2017 6:05:33 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'SignDel KR2'
+3/24/2017 6:05:33 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'TelMake SA'
+3/24/2017 6:05:46 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'spawncurrent '
+3/24/2017 6:05:46 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'spawner '
+3/24/2017 6:06:24 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen felucca/BlightedGrove.map'
+3/24/2017 6:06:25 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen felucca/BritainSewer.map'
+3/24/2017 6:06:25 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen felucca/Covetous.map'
+3/24/2017 6:06:25 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen felucca/Deceit.map'
+3/24/2017 6:06:25 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen felucca/Despise.map'
+3/24/2017 6:06:26 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen felucca/Destard.map'
+3/24/2017 6:06:26 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen felucca/Fire.map'
+3/24/2017 6:06:26 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen felucca/Graveyards.map'
+3/24/2017 6:06:26 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen felucca/Hythloth.map'
+3/24/2017 6:06:27 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen felucca/Ice.map'
+3/24/2017 6:06:27 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen felucca/Khaldun.map'
+3/24/2017 6:06:27 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen felucca/OrcCaves.map'
+3/24/2017 6:06:27 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen felucca/PaintedCaves.map'
+3/24/2017 6:06:27 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen felucca/PalaceOfParoxysmus.map'
+3/24/2017 6:06:28 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen felucca/PrismOfLight.map'
+3/24/2017 6:06:28 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen felucca/Sanctuary.map'
+3/24/2017 6:06:28 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen felucca/Shame.map'
+3/24/2017 6:06:28 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen felucca/SolenHive.map'
+3/24/2017 6:06:29 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen felucca/TerathanKeep.map'
+3/24/2017 6:06:29 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen felucca/TrinsicPassage.map'
+3/24/2017 6:06:29 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen felucca/Wrong.map'
+3/24/2017 6:06:30 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen felucca/TownsLife.map'
+3/24/2017 6:06:30 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen felucca/TownsPeople.map'
+3/24/2017 6:06:30 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen felucca/Vendors.map'
+3/24/2017 6:06:35 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen felucca/WildLife.map'
+3/24/2017 6:06:37 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen felucca/LostLands.map'
+3/24/2017 6:06:42 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen felucca/Outdoors.map'
+3/24/2017 6:06:51 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen felucca/Reagents.map'
+3/24/2017 6:06:57 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen felucca/SeaLife.map'
+3/24/2017 6:06:57 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen ilshenar/Ancientlair.map'
+3/24/2017 6:06:57 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen ilshenar/Ankh.map'
+3/24/2017 6:06:57 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen ilshenar/Blood.map'
+3/24/2017 6:06:57 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen ilshenar/Exodus.map'
+3/24/2017 6:06:57 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen ilshenar/Mushroom.map'
+3/24/2017 6:06:58 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen ilshenar/Outdoors.map'
+3/24/2017 6:06:58 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen ilshenar/Ratmancave.map'
+3/24/2017 6:06:58 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen ilshenar/Rock.map'
+3/24/2017 6:06:58 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen ilshenar/Sorcerers.map'
+3/24/2017 6:06:58 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen ilshenar/Spectre.map'
+3/24/2017 6:06:58 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen ilshenar/Towns.map'
+3/24/2017 6:06:58 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen ilshenar/TwistedWeald.map'
+3/24/2017 6:06:58 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen ilshenar/Vendors.map'
+3/24/2017 6:06:58 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen ilshenar/Wisp.map'
+3/24/2017 6:06:58 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen malas/Bedlam.map'
+3/24/2017 6:06:58 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen malas/Citadel.map'
+3/24/2017 6:06:58 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen malas/Doom.map'
+3/24/2017 6:06:58 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen malas/Labyrinth.map'
+3/24/2017 6:06:59 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen malas/North.map'
+3/24/2017 6:06:59 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen malas/OrcForts.map'
+3/24/2017 6:06:59 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen malas/South.map'
+3/24/2017 6:06:59 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen malas/Vendors.map'
+3/24/2017 6:06:59 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen tokuno/FanDancersDojo.map'
+3/24/2017 6:07:00 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen tokuno/Outdoors.map'
+3/24/2017 6:07:00 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen tokuno/TownsLife.map'
+3/24/2017 6:07:01 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen tokuno/Vendors.map'
+3/24/2017 6:07:01 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen tokuno/WildLife.map'
+3/24/2017 6:07:01 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen tokuno/YomutsoMines.map'
+3/24/2017 6:07:02 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen termur/Abyss.map'
+3/24/2017 6:07:03 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen termur/TerMur.map'
+3/24/2017 6:07:04 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen termur/Underworld.map'
+3/24/2017 6:07:04 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Spawngen termur/Vendors.map'
+3/24/2017 6:21:01 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/24/2017 6:21:13 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 3/24/2017 6:21:49 PM
+
+3/24/2017 6:22:11 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/24/2017 6:46:20 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/24/2017 6:46:47 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get insured'
+3/24/2017 6:53:23 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 3/24/2017 6:53:44 PM
+
+3/24/2017 6:53:58 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/24/2017 7:06:47 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/24/2017 7:08:55 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 3/24/2017 7:09:17 PM
+
+3/24/2017 10:47:07 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/24/2017 10:50:07 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 3/24/2017 10:50:14 PM
+
+3/24/2017 10:50:23 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/24/2017 10:51:14 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/24/2017 10:51:27 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setskill stealing 120'
+3/24/2017 10:51:29 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Stealing.Base' of 0xF4 "Kairi2.0" ('kairi2.0') to '120'
+3/24/2017 11:17:18 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/24/2017 11:17:23 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 3/24/2017 11:18:31 PM
+
+3/24/2017 11:18:35 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/24/2017 11:23:25 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/24/2017 11:23:28 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 3/24/2017 11:23:35 PM
+
+3/24/2017 11:23:43 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/24/2017 11:24:36 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/24/2017 11:24:42 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add packhorse frozen true'
+3/24/2017 11:24:48 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add packhorse set frozen true'
+3/24/2017 11:24:49 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1456, 1700, 0) in Felucca: "packhorse" "set" "frozen" "true"
+3/24/2017 11:24:49 PM: 127.0.0.1: Serials: 0x146D; 
+3/25/2017 12:30:42 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+3/25/2017 12:30:45 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+3/25/2017 4:48:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '

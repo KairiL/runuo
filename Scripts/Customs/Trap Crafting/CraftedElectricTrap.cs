@@ -84,8 +84,8 @@ namespace Server.Items
 			Effects.SendLocationParticles( EffectItem.Create( Location, Map, EffectItem.DefaultDuration ), 0x3967, 10, 30, 5052 );
 			Effects.PlaySound( Location, Map, 756 );
 
-           		int MinDamage = 10 * (TrapPower / 100);
-            		int MaxDamage = 25 * (TrapPower / 100);
+           	int MinDamage = 3 * (TrapPower / 100);
+            	int MaxDamage = 10 * (TrapPower / 100);
 
 			if ( MinDamage < 5 )
 				MinDamage = 5;
@@ -95,7 +95,6 @@ namespace Server.Items
 
 			if ( from.Alive )
 			{
-				
 				ArrayList targets = new ArrayList();
 				IPooledEnumerable eable = this.Map.GetMobilesInRange( new Point3D( Location ), 3 );
 
@@ -115,9 +114,13 @@ namespace Server.Items
 						Mobile m = (Mobile)targets[i];
 
 						double toDeal = damage;
-	
 						SpellHelper.Damage( TimeSpan.Zero, m, from, toDeal, 0, 0, 0, 0, 100 );
-					}
+
+                        if (m.Player)
+                            m.Paralyze(TimeSpan.FromSeconds(TrapPower / 100));
+                        else
+                            m.Paralyze(TimeSpan.FromSeconds(TrapPower / 30));
+                    }
 				}
 			}
 

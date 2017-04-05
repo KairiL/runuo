@@ -1,0 +1,66 @@
+##############################
+Log started on 4/5/2017 6:48:07 AM
+
+4/5/2017 6:48:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/5/2017 6:48:20 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+4/5/2017 6:49:36 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go britain'
+4/5/2017 6:56:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'kill '
+4/5/2017 6:56:52 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') killing 0xF1 "Kai" ('kairi')
+4/5/2017 6:57:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'res '
+4/5/2017 6:57:08 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') resurrecting 0xF1 "Kai" ('kairi')
+4/5/2017 7:00:00 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+4/5/2017 7:02:17 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+4/5/2017 7:14:49 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add giantrat'
+4/5/2017 7:14:50 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1429, 1684, 67) in Felucca: "giantrat"
+4/5/2017 7:14:50 AM: 127.0.0.1: Serials: 0x714; 
+4/5/2017 7:15:23 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/5/2017 7:15:25 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x714 "a giant rat" (no account)
+4/5/2017 7:15:28 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+4/5/2017 7:16:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go britain'
+4/5/2017 7:16:47 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+4/5/2017 7:17:56 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add houseplacementtool'
+4/5/2017 7:17:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1425, 1681, 27) in Felucca: "houseplacementtool"
+4/5/2017 7:17:58 AM: 127.0.0.1: Serials: 0x40001697; 
+4/5/2017 7:18:28 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go '
+4/5/2017 7:18:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+4/5/2017 7:19:14 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+4/5/2017 7:19:52 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+4/5/2017 7:22:26 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+4/5/2017 7:22:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/5/2017 7:22:38 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x400018FB (HouseSign)
+4/5/2017 7:22:40 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+4/5/2017 7:23:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+4/5/2017 7:25:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/5/2017 7:25:33 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x4000195D (HouseSign)
+4/5/2017 7:27:12 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go britain'
+4/5/2017 7:27:15 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+4/5/2017 7:28:10 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/5/2017 7:28:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40001697 (HousePlacementTool)
+4/5/2017 7:29:21 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm inc z 1'
+4/5/2017 7:29:38 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+4/5/2017 7:29:42 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x40003051 (MarbleFloor) to (1436, 1683, 21)
+4/5/2017 7:29:43 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+4/5/2017 7:29:46 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x61BD "Renaldo" (no account) to (1436, 1683, 21)
+4/5/2017 7:29:50 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+4/5/2017 7:29:53 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x40013CC4 (DisguiseKit) to (1436, 1684, 25)
+4/5/2017 7:29:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+4/5/2017 7:30:01 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x40013CC4 (DisguiseKit) to (1437, 1684, 25)
+4/5/2017 7:30:04 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm inc z 1'
+4/5/2017 7:32:55 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+4/5/2017 7:32:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x62BB "Cornelius" (no account) to (1424, 1684, 44)
+4/5/2017 7:35:14 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+4/5/2017 7:35:22 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x40017938 (PremiumSpawner) to (1427, 1681, 47)
+4/5/2017 7:39:53 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+4/5/2017 8:03:17 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'HomeRange' of 0x40017938 (PremiumSpawner) to '2'
+4/5/2017 8:03:22 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+4/5/2017 8:03:28 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x62BB "Cornelius" (no account) to (1427, 1681, 47)
+4/5/2017 8:04:03 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+4/5/2017 8:04:11 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+4/5/2017 8:07:51 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'tele '
+4/5/2017 8:07:54 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'tele '
+4/5/2017 8:35:46 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'HomeRange' of 0x40017938 (PremiumSpawner) to '1'
+4/5/2017 8:35:48 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+4/5/2017 8:35:51 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x62BB "Cornelius" (no account) to (1427, 1682, 47)
+4/5/2017 8:36:12 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'WalkingRange' of 0x40017938 (PremiumSpawner) to '6'
+4/5/2017 8:36:54 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'WalkingRange' of 0x40017938 (PremiumSpawner) to '4'
+4/5/2017 9:00:43 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'save '

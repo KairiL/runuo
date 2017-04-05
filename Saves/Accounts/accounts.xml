@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<accounts count="3">
+	<account>
+		<username>kairi</username>
+		<newCryptPassword>59-9B-40-5C-F8-29-C0-AF-A9-F6-8B-B8-FE-CC-ED-8C-41-4E-4A-D2</newCryptPassword>
+		<accessLevel>Owner</accessLevel>
+		<flags>2</flags>
+		<created>2017-03-22T08:02:32.2882832Z</created>
+		<lastLogin>2017-04-05T06:48:13.6973048Z</lastLogin>
+		<totalGameTime>P2DT23H9M32.1212018S</totalGameTime>
+		<chars>
+			<char index="0">241</char>
+		</chars>
+		<addressList count="2">
+			<ip>127.0.0.1</ip>
+			<ip>75.72.151.168</ip>
+		</addressList>
+		<totalCurrency>5.94E-05</totalCurrency>
+	</account>
+	<account>
+		<username>kairi1.0</username>
+		<newCryptPassword>80-87-70-D4-0B-0C-D0-97-63-15-21-0F-96-3B-CC-B3-05-24-16-B9</newCryptPassword>
+		<flags>2</flags>
+		<created>2017-03-24T00:35:49.1928057Z</created>
+		<lastLogin>2017-03-31T11:45:23.5343845Z</lastLogin>
+		<totalGameTime>PT14H6M33.0243685S</totalGameTime>
+		<chars>
+			<char index="0">242</char>
+		</chars>
+		<addressList count="1">
+			<ip>127.0.0.1</ip>
+		</addressList>
+		<totalCurrency>3.4000000000000003E-07</totalCurrency>
+	</account>
+	<account>
+		<username>kairi2.0</username>
+		<newCryptPassword>CD-A2-78-45-CD-F7-73-BB-3E-7B-81-9E-D6-51-91-58-9F-4B-76-AB</newCryptPassword>
+		<flags>2</flags>
+		<created>2017-03-24T17:46:48.8763147Z</created>
+		<lastLogin>2017-03-31T11:45:19.945501Z</lastLogin>
+		<totalGameTime>PT18H56M35.6963322S</totalGameTime>
+		<chars>
+			<char index="0">244</char>
+		</chars>
+		<addressList count="1">
+			<ip>127.0.0.1</ip>
+		</addressList>
+		<totalCurrency>0</totalCurrency>
+	</account>
+</accounts>

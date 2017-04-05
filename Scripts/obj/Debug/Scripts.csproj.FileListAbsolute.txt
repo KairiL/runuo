@@ -1,0 +1,8 @@
+C:\runuo\Scripts\Output\Scripts.CS.dll
+C:\runuo\Scripts\Output\Scripts.CS.pdb
+C:\runuo\Scripts\Output\RunUO.exe
+C:\runuo\Scripts\Output\RunUO.pdb
+C:\runuo\Scripts\Output\RunUO.exe.config
+C:\runuo\Scripts\obj\Debug\Scripts.csprojResolveAssemblyReference.cache
+C:\runuo\Scripts\obj\Debug\Scripts.CS.dll
+C:\runuo\Scripts\obj\Debug\Scripts.CS.pdb

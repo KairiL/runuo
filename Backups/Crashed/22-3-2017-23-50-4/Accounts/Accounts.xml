@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<accounts count="1">
+	<account>
+		<username>kairi</username>
+		<newCryptPassword>59-9B-40-5C-F8-29-C0-AF-A9-F6-8B-B8-FE-CC-ED-8C-41-4E-4A-D2</newCryptPassword>
+		<accessLevel>Owner</accessLevel>
+		<created>2017-03-22T08:02:32.2882832Z</created>
+		<lastLogin>2017-03-22T08:04:52.7716262Z</lastLogin>
+		<totalGameTime>PT10.6562332S</totalGameTime>
+		<chars>
+			<char index="0">241</char>
+		</chars>
+		<addressList count="1">
+			<ip>127.0.0.1</ip>
+		</addressList>
+		<totalCurrency>0</totalCurrency>
+	</account>
+</accounts>
