@@ -138,5 +138,33 @@ namespace Server
 		{
 			get{ return m_FeyAndUndead; }
 		}
-	}
+/*
+        private static OppositionGroup m_Factions = new OppositionGroup(new Type[][]
+            {
+                new Type[]
+                {
+                    typeof( FactionDeathKnight ),
+                    typeof( FactionNecromancer ),
+                    typeof( Daemon ),
+                    typeof( FactionDragoon ),
+                    typeof( FactionBerserker),
+                    typeof( OgreLord )
+                },
+                new Type[]
+                {
+                    typeof( FactionWizard ),
+                    typeof( FactionSorceress ),
+                    typeof( Wisp ),
+                    typeof( FactionPaladin ),
+                    typeof( FactionKnight ),
+                    typeof( SilverSerpent )
+                }
+            });
+
+        public static OppositionGroup Factions
+        {
+            get { return m_Factions; }
+        }
+        */
+    }
 }

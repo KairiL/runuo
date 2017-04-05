@@ -47,7 +47,7 @@ namespace Server.Factions
 			PackStrongPotions( 6, 12 );
 		}
 
-		public FactionNecromancer( Serial serial ) : base( serial )
+        public FactionNecromancer( Serial serial ) : base( serial )
 		{
 		}
 

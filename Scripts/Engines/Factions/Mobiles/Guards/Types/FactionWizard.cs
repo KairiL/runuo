@@ -48,7 +48,7 @@ namespace Server.Factions
 			PackStrongPotions( 6, 12 );
 		}
 
-		public FactionWizard( Serial serial ) : base( serial )
+        public FactionWizard( Serial serial ) : base( serial )
 		{
 		}
 

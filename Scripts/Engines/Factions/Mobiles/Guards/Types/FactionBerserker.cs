@@ -53,7 +53,7 @@ namespace Server.Factions
 			PackStrongPotions( 6, 12 );
 		}
 
-		public FactionBerserker( Serial serial ) : base( serial )
+        public FactionBerserker( Serial serial ) : base( serial )
 		{
 		}
 

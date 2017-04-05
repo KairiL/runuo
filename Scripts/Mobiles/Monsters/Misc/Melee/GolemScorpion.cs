@@ -14,7 +14,7 @@ namespace Server.Mobiles
 		public override bool IsBondable{ get{ return true; } }
 
 		[Constructable]
-		public GolemScorpion() : this( 0, 1.0, 0 )
+		public GolemScorpion() : this( 0, 1.8, 0 )
 		{
 		}
 
@@ -53,7 +53,7 @@ namespace Server.Mobiles
 						PackItem( new PowerCrystal() );
 
 					if ( 0.15 > Utility.RandomDouble() )
-						PackItem( new ClockworkAssembly() );
+						PackItem( new ScorpionAssembly() );
 
 					if ( 0.2 > Utility.RandomDouble() )
 						PackItem( new ArcaneGem() );
@@ -146,7 +146,7 @@ namespace Server.Mobiles
 				SetDamageType( ResistanceType.Physical, 100 );
 				SetResistance( ResistanceType.Physical, (int)(21*scalar), (int)(31*scalar) );
 				SetResistance( ResistanceType.Fire, (int)(21*scalar), (int)(31*scalar) );
-				SetResistance( ResistanceType.Cold, (int)(12*scalar), (int)(32*scalar) );
+				SetResistance( ResistanceType.Cold, (int)(12*scalar), (int)(30*scalar) );
 				SetResistance( ResistanceType.Poison, (int)(10*scalar), (int)(25*scalar) );
 				SetResistance( ResistanceType.Energy, (int)(22*scalar), (int)(32*scalar) );
 				ControlSlots = 2;
@@ -253,6 +253,8 @@ namespace Server.Mobiles
 		{   
 			base.OnGaveMeleeAttack( defender );
             Mobile master = (this.ControlMaster);
+            if (master == null)
+                master = this;
             int total = (int)(master.Skills[SkillName.Poisoning].Value + master.Skills[SkillName.Tinkering].Value) / 2;
             int level;
             if (total >= 100.0)
@@ -302,12 +304,12 @@ namespace Server.Mobiles
                 {
                     ThrowBomb(combatant);
                     m_Thrown++;
-                    m_Speed = 0;
-                    if ((((BaseCreature)this).Controlled || ((BaseCreature)this).Summoned) && ((BaseCreature)this).ControlMaster != null )
-                    {
-                        Mobile master = (((BaseCreature)this).ControlMaster);
-                        m_Speed = master.Skills[SkillName.Fletching].Value / 10.0;
-                    }
+                    m_Speed = 6;
+                if ((((BaseCreature)this).Controlled || ((BaseCreature)this).Summoned) && ((BaseCreature)this).ControlMaster != null)
+                {
+                    Mobile master = (((BaseCreature)this).ControlMaster);
+                    m_Speed = master.Skills[SkillName.Fletching].Value / 10.0;
+                }
 
                     if (0.75 >= Utility.RandomDouble() && (m_Thrown % 2) == 1) // 75% chance to quickly throw another bomb
                         m_NextBomb = DateTime.UtcNow + TimeSpan.FromSeconds(2.1 - m_Speed/5.0);
@@ -351,8 +353,8 @@ namespace Server.Mobiles
                 }
                 else
                 {
-                    minDamage = 0;
-                    exploDamage = 0;
+                    minDamage = 20;
+                    exploDamage = 20;
                 }
                 Priority = TimerPriority.TwoFiftyMS;
             }
@@ -370,10 +372,11 @@ namespace Server.Mobiles
                         {
                             if (o is PlayerMobile)
                                 AOS.Damage((Mobile)o, m_From, Utility.RandomMinMax(0, exploDamage/4), 0, 100, 0, 0, 0);
-                            else if (o is BaseCreature)
+                            else if (o is BaseCreature && ((BaseCreature)m_From).Controlled)
                                 if (((BaseCreature)m_From).ControlMaster != ((BaseCreature)o).ControlMaster)
                                     AOS.Damage((Mobile)o, m_From, Utility.RandomMinMax(0, exploDamage), 0, 100, 0, 0, 0);
-
+                            else if (o is BaseCreature)
+                                AOS.Damage((Mobile)o, m_From, Utility.RandomMinMax(0, exploDamage), 0, 100, 0, 0, 0);
                         }
                     }
                 }

@@ -55,7 +55,7 @@ namespace Server.Factions
 			PackStrongPotions( 6, 12 );
 		}
 
-		public FactionPaladin( Serial serial ) : base( serial )
+        public FactionPaladin( Serial serial ) : base( serial )
 		{
 		}
 

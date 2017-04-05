@@ -49,7 +49,7 @@ namespace Server.Factions
 			PackStrongPotions( 6, 12 );
 		}
 
-		public FactionDeathKnight( Serial serial ) : base( serial )
+        public FactionDeathKnight( Serial serial ) : base( serial )
 		{
 		}
 
