@@ -63,7 +63,7 @@ namespace Server.Items
 					return;
 				}
 
-				int trapskill = (int)Math.Round(from.Skills.Tinkering.Value);
+				int trapskill = (int)Math.Round(from.Skills.Tinkering.Value) + (int)Math.Round(from.Skills.Alchemy.Value);
 				int trapmod = trapskill - 50;
 
 				CraftedExplosionTrap trap = new CraftedExplosionTrap(); 
