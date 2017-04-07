@@ -10,9 +10,10 @@ namespace Server.Items
 	public class CraftedElectricTrap : CraftedTrap
 	{
 		[Constructable]
-		public CraftedElectricTrap() : base( 0xE2D )
+		public CraftedElectricTrap()
 		{
-			Visible = false;
+            ItemID = 3629;
+            Visible = false;
 			Hue = 6;
 			UsesRemaining = 1;
             Name = "A static-jolt trap";
@@ -20,7 +21,8 @@ namespace Server.Items
             DamageScalar = .1;
             TriggerRange = 3;
             DamageRange = 3;
-            ManaCost = (int)TrapPower / 10;
+            ManaCost = 20;
+            BonusSkill = SkillName.Inscribe;
         }
 
 		public CraftedElectricTrap( Serial serial ) : base( serial )
@@ -33,7 +35,8 @@ namespace Server.Items
             DamageScalar = .1;
             TriggerRange = 3;
             DamageRange = 3;
-            ManaCost = (int)TrapPower / 10;
+            ManaCost = 20;
+            BonusSkill = SkillName.Inscribe;
         }
 
         public override void Serialize(GenericWriter writer)

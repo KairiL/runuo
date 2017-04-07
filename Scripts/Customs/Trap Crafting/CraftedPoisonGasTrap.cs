@@ -13,7 +13,8 @@ namespace Server.Items
 		[Constructable]
 		public CraftedPoisonGasTrap() : base( 0x1848 )
 		{
-			Visible = false;
+            ItemID = 6216;
+            Visible = false;
 			Hue = 272;
 			UsesRemaining = 1;
             Name = "A poison-gas trap";
@@ -21,7 +22,8 @@ namespace Server.Items
             DamageScalar = 0;
             TriggerRange = 2;
             DamageRange = 3;
-            ManaCost = (int)(TrapPower / 10);
+            ManaCost = 11;
+            BonusSkill = SkillName.Poisoning;
         }
 
 		public override void OnTrigger( Mobile from )
@@ -41,7 +43,8 @@ namespace Server.Items
             DamageScalar = 0;
             TriggerRange = 2;
             DamageRange = 3;
-            ManaCost = (int)(TrapPower / 10);
+            ManaCost = 11;
+            BonusSkill = SkillName.Poisoning;
         }
 
         public override void Serialize(GenericWriter writer)

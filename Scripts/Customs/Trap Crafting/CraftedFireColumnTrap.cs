@@ -5,9 +5,10 @@ namespace Server.Items
 	public class CraftedFireColumnTrap : CraftedTrap
 	{
 		[Constructable]
-		public CraftedFireColumnTrap() : base( 0x1B71 )
+		public CraftedFireColumnTrap()
 		{
-			Visible = false;
+            ItemID = 7025;
+            Visible = false;
 			Hue = 45;
 			UsesRemaining = 1;
             Name = "A fire-column trap";
@@ -15,7 +16,8 @@ namespace Server.Items
             DamageScalar = 1;
             TriggerRange = 0;
             DamageRange = 0;
-            ManaCost = (int)TrapPower / 10;
+            ManaCost = 20;
+            BonusSkill = SkillName.Inscribe;
         }
         
 		public CraftedFireColumnTrap( Serial serial ) : base( serial )
@@ -28,7 +30,8 @@ namespace Server.Items
             DamageScalar = 1;
             TriggerRange = 0;
             DamageRange = 0;
-            ManaCost = (int)TrapPower / 10;
+            ManaCost = 20;
+            BonusSkill = SkillName.Inscribe;
         }
 
         public override void Serialize(GenericWriter writer)

@@ -11,8 +11,9 @@ namespace Server.Items
 	{
 		
 		[Constructable]
-		public CraftedExplosionTrap() : base( 0x2BD4 )
+		public CraftedExplosionTrap()
 		{
+            ItemID = 11220;
 			Visible = false;
 			Hue = 254;
 			UsesRemaining = 1;
@@ -21,7 +22,8 @@ namespace Server.Items
             DamageScalar = 1.5;
             TriggerRange = 1;
             DamageRange = 2;
-            ManaCost = (int)TrapPower / 10;
+            ManaCost = 40;
+            BonusSkill = SkillName.Alchemy;
         }
     
 		public CraftedExplosionTrap( Serial serial ) : base( serial )
@@ -34,7 +36,8 @@ namespace Server.Items
             DamageScalar = 1.5;
             TriggerRange = 1;
             DamageRange = 2;
-            ManaCost = (int)TrapPower / 10;
+            ManaCost = 40;
+            BonusSkill = SkillName.Alchemy;
         }
 
         public override void Serialize(GenericWriter writer)

@@ -11,16 +11,18 @@ namespace Server.Items
 	{
         
 		[Constructable]
-		public CraftedBoltTrap() : base( 0x1F18 )
+		public CraftedBoltTrap()
 		{
+            ItemID = 7960;
 			Visible = false;
 			Hue = 543;
 			UsesRemaining = 1;
             Name = "A bolt-firing trap";
-			TrapPower = 100;
             TriggerRange = 4;
             DamageRange = 4;
-            ManaCost = (int)TrapPower / 10;
+            ManaCost = 20;
+            DamageScalar = 1;
+            BonusSkill = SkillName.Fletching;
         }
         
 		public override void OnTrigger( Mobile from )
@@ -36,10 +38,11 @@ namespace Server.Items
             Hue = 543;
             UsesRemaining = 1;
             this.Name = "A bolt-firing trap";
-            TrapPower = 100;
             TriggerRange = 4;
             DamageRange = 4;
-            ManaCost = (int)TrapPower / 10;
+            ManaCost = 20;
+            DamageScalar = 1;
+            BonusSkill = SkillName.Fletching;
         }
 
         public override void Serialize(GenericWriter writer)

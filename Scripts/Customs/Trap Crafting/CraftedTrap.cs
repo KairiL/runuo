@@ -4,21 +4,49 @@ using Server.Targeting;
 using System.Collections;
 using System.Collections.Generic;
 using Server.ContextMenus;
-using Server.Spells.Necromancy;
+using Server.Spells;
+using Server.Mobiles;
 
 namespace Server.Items
 {
 	public class CraftedTrap : BaseTrap
 	{
-
 		private Mobile m_TrapOwner;
 		private int m_UsesRemaining, m_TrapPower, m_ManaCost, m_DamageRange, m_TriggerRange, m_ParalyzeTime;
         private double m_DamageScalar;
-        private Skill m_BonusSkill;
+        private SkillName m_BonusSkill;
         private Poison m_Poison;
+        private Point3D m_PointDest;
+        private Map m_MapDest;
 
         private DateTime lastused = DateTime.Now;
 		private TimeSpan delay = TimeSpan.FromSeconds( 7 );
+
+        [CommandProperty(AccessLevel.GameMaster)]
+        public Map MapDest
+        {
+            get
+            {
+                return m_MapDest;
+            }
+            set
+            {
+                m_MapDest = value;
+            }
+        }
+
+        [CommandProperty(AccessLevel.GameMaster)]
+        public Point3D PointDest
+        {
+            get
+            {
+                return m_PointDest;
+            }
+            set
+            {
+                m_PointDest = value;
+            }
+        }
 
         [CommandProperty(AccessLevel.GameMaster)]
         public double DamageScalar
@@ -32,6 +60,7 @@ namespace Server.Items
                 m_DamageScalar = value;
             }
         }
+
 
         [CommandProperty( AccessLevel.GameMaster )]
 		public Mobile TrapOwner
@@ -67,7 +96,7 @@ namespace Server.Items
         }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public Skill BonusSkill
+        public SkillName BonusSkill
         {
             get
             {
@@ -144,25 +173,43 @@ namespace Server.Items
 			}
 		}
 
-		public override bool PassivelyTriggered{ get{ return true; } }
+        public override bool PassivelyTriggered{ get{ return true; } }
 		public override TimeSpan PassiveTriggerDelay{ get{ return TimeSpan.FromSeconds( 10 ); } }
 		public int PassiveTriggerRange{ get{ return m_TriggerRange; } }
-		public override TimeSpan ResetDelay{ get{ return TimeSpan.FromSeconds( 2 ); } }
+		public override TimeSpan ResetDelay{ get{ return TimeSpan.FromSeconds( 0 ); } }
 
+        public void SetMap(Map map)
+        {
+            MapDest = map;
+        }
+        public void SetPoint(Point3D point)
+        {
+            PointDest = point;
+        }
         public override void OnTrigger(Mobile from)
         {
             ArrayList targets = new ArrayList();
             if (from.AccessLevel > AccessLevel.Player)
                 return;
-
-            if (from == TrapOwner)
+            int ManaLoss = ScaleMana(ManaCost);
+            if (TrapOwner != null )
+                if (TrapOwner.Player && TrapOwner.Map == this.Map && TrapOwner.InRange(Location, 200))
+                {
+                    if (TrapOwner.Mana >= ManaLoss)
+                        TrapOwner.Mana -= ManaLoss;
+                    else
+                    {
+                        ManaLoss -= TrapOwner.Mana;
+                        TrapOwner.Mana = 0;
+                        TrapOwner.Damage((ManaLoss));
+                    }
+                }
+            else
                 return;
+
 
             if (this.Visible == false)
                 this.Visible = true;
-
-            Effects.SendMovingEffect(this, from, 7166, 5, 0, false, false);
-            Effects.PlaySound(Location, Map, 564);
 
             int MinDamage = 40 * (TrapPower / 100);
             int MaxDamage = 60 * (TrapPower / 100);
@@ -179,28 +226,88 @@ namespace Server.Items
 
                 foreach (Mobile m in eable)
                     targets.Add(m);
-
                 eable.Free();
                 if (targets.Count > 0)
                     for (int i = 0; i < targets.Count; ++i)
                     {
-                        Spells.SpellHelper.Damage(TimeSpan.FromSeconds(0.5), from, from, Utility.RandomMinMax(MinDamage, MaxDamage), 100, 0, 0, 0, 0);
+                        if (DamageScalar != 0)
+                            Spells.SpellHelper.Damage(TimeSpan.FromSeconds(0.5), from, from, (int)DamageScalar*Utility.RandomMinMax(MinDamage, MaxDamage), 100, 0, 0, 0, 0);
                         Mobile m = (Mobile)targets[i];
 
                         if (Poison != null)
                             m.ApplyPoison(m, m_Poison);
-
-                        if (m.Player)
-                            m.Paralyze(TimeSpan.FromSeconds(ParalyzeTime / 4));
-                        else
-                            m.Paralyze(TimeSpan.FromSeconds(ParalyzeTime));
+                        if (ParalyzeTime > 0)
+                            if (m.Player)
+                                m.Paralyze(TimeSpan.FromSeconds(ParalyzeTime / 4));
+                            else
+                                m.Paralyze(TimeSpan.FromSeconds(ParalyzeTime));
 
                     }
-
+                if (PointDest != Point3D.Zero)
+                    Teleport(from);
                 this.UsesRemaining -= 1;
 
                 if (this.UsesRemaining <= 0)
                     this.Delete();
+            }
+        }
+
+        public bool Teleport(Mobile from)
+        {
+            if (Factions.Sigil.ExistsOn(from))
+            {
+                from.SendLocalizedMessage(1061632); // You can't do that while carrying the sigil.
+                return false;
+            }
+            else if (Server.Misc.WeightOverloading.IsOverloaded(from))
+            {
+                from.SendLocalizedMessage(502359, "", 0x22); // Thou art too encumbered to move.
+                return false;
+            }
+            else if (!SpellHelper.CheckTravel(from, TravelCheckType.TeleportFrom))
+            {
+                return false;
+            }
+            else if (!SpellHelper.CheckTravel(from, MapDest, PointDest, TravelCheckType.TeleportTo))
+            {
+                return false;
+            }
+            else if (MapDest == null || !MapDest.CanSpawnMobile(PointDest))
+            {
+                from.SendLocalizedMessage(501942); // That location is blocked.
+                return false;
+            }
+            else if (SpellHelper.CheckMulti(PointDest, MapDest))
+            {
+                from.SendLocalizedMessage(502831); // Cannot teleport to that spot.
+                return false;
+            }
+            else
+            {
+                Mobile m = from;
+                
+                bool sendEffect = (!m.Hidden || m.AccessLevel == AccessLevel.Player);
+                if (sendEffect)
+                {
+                    Effects.SendLocationParticles(EffectItem.Create(Location, m.Map, EffectItem.DefaultDuration), 0x3728, 10, 10, 2023);
+                    Effects.SendLocationParticles(EffectItem.Create(PointDest, m.Map, EffectItem.DefaultDuration), 0x3728, 10, 10, 5023);
+                }
+                else
+                    m.FixedParticles(0x376A, 9, 32, 0x13AF, EffectLayer.Waist);
+
+                m.PlaySound(0x1FE);
+
+                IPooledEnumerable eable = m.GetItemsInRange(0);
+
+                foreach (Item item in eable)
+                    if (item is Server.Spells.Sixth.ParalyzeFieldSpell.InternalItem || item is Server.Spells.Fifth.PoisonFieldSpell.InternalItem || item is Server.Spells.Fourth.FireFieldSpell.FireFieldItem)
+                        item.OnMoveOver(m);
+
+                eable.Free();
+
+                DoTeleport(m);
+                m.ProcessDelta();
+                return true;
             }
         }
 
@@ -209,7 +316,9 @@ namespace Server.Items
             double scalar = 1.0;
 
             // Max Lower Mana Cost = 60%
-            int lmc = AosAttributes.GetValue(m_TrapOwner, AosAttribute.LowerManaCost);
+            int lmc = 0;
+            if (TrapOwner != null)
+                lmc = AosAttributes.GetValue(TrapOwner, AosAttribute.LowerManaCost);
             if (lmc > 60)
                 lmc = 60;
 
@@ -222,15 +331,15 @@ namespace Server.Items
 		{
 			if ( from == TrapOwner )
 			{
-				from.SendMessage( "You conceal the trap." );
-				this.Visible = false;
+                from.SendMessage("You conceal the trap.");
+                this.Visible = false;
 			}
 
 			else if ( from != TrapOwner )
 			{
 
 				int trapmaxskill = (int)Math.Round(from.Skills.RemoveTrap.Value) + (int)Math.Round(from.Skills.Tinkering.Value) + 50;
-                int bonusmaxskill = (int)Math.Round(BonusSkill.Value);
+                int bonusmaxskill = (int)Math.Round(from.Skills[BonusSkill].Value);
 				int trapminskill = trapmaxskill - 20;
 				int trappower = this.TrapPower;
 				int trapcheck = Utility.RandomMinMax(trapminskill, trapmaxskill);
@@ -268,12 +377,44 @@ namespace Server.Items
 						
 		}
 
-		public CraftedTrap( Serial serial ) : base( serial )
+        public virtual void DoTeleport(Mobile m)
+        {
+            Map map = MapDest;
+
+            if (map == null || map == Map.Internal)
+                map = m.Map;
+
+            Point3D p = PointDest;
+
+            if (p == Point3D.Zero)
+                p = m.Location;
+
+            Server.Mobiles.BaseCreature.TeleportPets(m, p, map);
+
+            m.MoveToWorld(p, map);
+        }
+
+        [Constructable]
+        public CraftedTrap() : base( 0x1BC3 )
 		{
+            Visible = true;
+            UsesRemaining = 100;
+            Name = "A Trap";
             DamageScalar = 1;
             TriggerRange = 1;
             DamageRange = 0;
-            ManaCost = (int)TrapPower / 10;
+            ManaCost = 10;
+        }
+
+        public CraftedTrap( Serial serial ) : base( serial )
+		{
+            Visible = true;
+            UsesRemaining = 100;
+            Name = "A Trap";
+            DamageScalar = 1;
+            TriggerRange = 1;
+            DamageRange = 0;
+            ManaCost = 10;
         }
 
         public override void Serialize( GenericWriter writer )
@@ -291,6 +432,8 @@ namespace Server.Items
             writer.Write(m_ParalyzeTime);
             Poison.Serialize(m_Poison, writer);
             writer.Write(m_DamageScalar);
+            writer.Write(m_PointDest);
+            writer.Write(m_MapDest);
         }
 
 		public override void Deserialize( GenericReader reader )
@@ -311,9 +454,11 @@ namespace Server.Items
                     m_TriggerRange = reader.ReadInt();
                     m_ParalyzeTime = reader.ReadInt();
                     m_Poison = Poison.Deserialize(reader);
-                    m_DamageScalar = reader.ReadFloat();
+                    m_DamageScalar = reader.ReadDouble();
+                    m_PointDest = reader.ReadPoint3D();
+                    m_MapDest = reader.ReadMap();
 
-                    break;
+                        break;
 				}
 			}
 		}
