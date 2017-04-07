@@ -366,6 +366,13 @@ namespace Server.Engines.Craft
             AddRes(index, typeof(Bolt), 1044570, 10, 1044253);
             AddRes(index, typeof(IronIngot), 1044036, 25, 1044037);
 
+            // Craftable Teleport Trap
+            index = AddCraft(typeof(CraftedTeleporterComponents), (string.Format("New Traps")), (string.Format("Teleporter Trap")), 80.0, 120.0, typeof(Log), 1044041, 30, 1044351);
+            AddSkill(index, SkillName.RemoveTrap, 45.0, 50.0);
+            AddRes(index, typeof(Bolt), 1044570, 10, 1044253);
+            AddRes(index, typeof(IronIngot), 1044036, 25, 1044037);
+            AddRes(index, typeof(BlankScroll), "Blank Scrolls", 10);
+
             // Magic Jewelry
             if ( Core.ML )
 			{
