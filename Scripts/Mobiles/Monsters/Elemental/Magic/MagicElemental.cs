@@ -1,23 +1,27 @@
 using System;
 using Server;
 using Server.Items;
+using Server.Factions;
 
 namespace Server.Mobiles
 {
-	[CorpseName( "a blood elemental corpse" )]
-	public class BloodElemental : BaseCreature
+	[CorpseName( "a magic elemental corpse" )]
+	public class MagicElemental : BaseCreature
 	{
-		[Constructable]
-		public BloodElemental () : base( AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4 )
+        public override Faction FactionAllegiance { get { return CouncilOfMages.Instance; } }
+        public override Ethics.Ethic EthicAllegiance { get { return Ethics.Ethic.Hero; } }
+
+        [Constructable]
+		public MagicElemental () : base( AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4 )
 		{
-			Name = "a blood elemental";
+			Name = "a magic elemental";
 			Body = 159;
 			BaseSoundID = 278;
             CanSwim = true;
 
 			SetStr( 526, 615 );
 			SetDex( 66, 85 );
-			SetInt( 226, 350 );
+			SetInt( 426, 550 );
 
 			SetHits( 316, 369 );
 
@@ -33,15 +37,16 @@ namespace Server.Mobiles
 			SetResistance( ResistanceType.Poison, 50, 60 );
 			SetResistance( ResistanceType.Energy, 30, 40 );
 
-			SetSkill( SkillName.EvalInt, 85.1, 100.0 );
-			SetSkill( SkillName.Magery, 85.1, 100.0 );
-			SetSkill( SkillName.Meditation, 10.4, 50.0 );
-			SetSkill( SkillName.MagicResist, 80.1, 95.0 );
-			SetSkill( SkillName.Tactics, 80.1, 100.0 );
+			SetSkill( SkillName.EvalInt, 125.1, 160.0 );
+			SetSkill( SkillName.Magery, 105.1, 160.0 );
+			SetSkill( SkillName.Meditation, 300.4, 400.0 );
+			SetSkill( SkillName.MagicResist, 1000.0, 1200.0 );
+			SetSkill( SkillName.Necromancy, 100.1, 120.0 );
+            SetSkill( SkillName.SpiritSpeak, 125.1, 160.0 );
 			SetSkill( SkillName.Wrestling, 80.1, 100.0 );
 
 			Fame = 12500;
-			Karma = -12500;
+			Karma = 0;
 
 			VirtualArmor = 60;
 		}
@@ -52,9 +57,14 @@ namespace Server.Mobiles
 			AddLoot( LootPack.Rich );
 		}
 
-		public override int TreasureMapLevel{ get{ return 5; } }
+        public override void CheckReflect(Mobile caster, ref bool reflect)
+        {
+            reflect = true; // Always reflect if caster isn't female
+        }
 
-		public BloodElemental( Serial serial ) : base( serial )
+        public override int TreasureMapLevel{ get{ return 5; } }
+
+		public MagicElemental( Serial serial ) : base( serial )
 		{
 		}
 

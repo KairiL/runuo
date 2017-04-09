@@ -23,6 +23,7 @@ namespace Server.Mobiles
 			Body = 58;
 			BaseSoundID = 466;
 
+            CanSwim = true;
 			SetStr( 196, 225 );
 			SetDex( 196, 225 );
 			SetInt( 196, 225 );

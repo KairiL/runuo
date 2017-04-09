@@ -6,7 +6,8 @@ namespace Server.Factions
 {
 	public class FactionBerserker : BaseFactionGuard
 	{
-		public override GuardAI GuardAI{ get{ return GuardAI.Melee | GuardAI.Curse | GuardAI.Bless; } }
+        public override Faction FactionAllegiance { get { return Minax.Instance; } }
+        public override GuardAI GuardAI{ get{ return GuardAI.Melee | GuardAI.Curse | GuardAI.Bless; } }
 
 		[Constructable]
 		public FactionBerserker() : base( "the berserker" )

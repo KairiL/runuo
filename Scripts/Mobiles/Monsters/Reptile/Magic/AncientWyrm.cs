@@ -1,13 +1,17 @@
 using System;
 using Server;
 using Server.Items;
+using Server.Factions;
 
 namespace Server.Mobiles
 {
 	[CorpseName( "a dragon corpse" )]
 	public class AncientWyrm : BaseCreature
 	{
-		[Constructable]
+        public override Faction FactionAllegiance { get { return TrueBritannians.Instance; } }
+        public override Ethics.Ethic EthicAllegiance { get { return Ethics.Ethic.Hero; } }
+
+        [Constructable]
 		public AncientWyrm () : base( AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4 )
 		{
 			Name = "an ancient wyrm";

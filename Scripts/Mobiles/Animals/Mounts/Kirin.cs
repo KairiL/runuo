@@ -15,7 +15,7 @@ namespace Server.Mobiles
 
 		public override TimeSpan MountAbilityDelay { get { return TimeSpan.FromHours( 1.0 ); } }
 
-		public override void OnDisallowedRider( Mobile m )
+        public override void OnDisallowedRider( Mobile m )
 		{
 			m.SendLocalizedMessage( 1042319 ); // The Ki-Rin refuses your attempts to mount it.
 		}
@@ -50,39 +50,37 @@ namespace Server.Mobiles
 		{
 			BaseSoundID = 0x3C5;
 
-			SetStr( 296, 325 );
-			SetDex( 86, 105 );
-			SetInt( 186, 225 );
+            SetStr(456, 505);
+            SetDex(96, 115);
+            SetInt(286, 325);
 
-			SetHits( 191, 210 );
+            SetHits(291, 310);
 
-			SetDamage( 16, 22 );
+            SetDamage(16, 22);
 
-			SetDamageType( ResistanceType.Physical, 70 );
-			SetDamageType( ResistanceType.Fire, 10 );
-			SetDamageType( ResistanceType.Cold, 10 );
-			SetDamageType( ResistanceType.Energy, 10 );
+            SetDamageType(ResistanceType.Physical, 75);
+            SetDamageType(ResistanceType.Energy, 25);
 
-			SetResistance( ResistanceType.Physical, 55, 65 );
-			SetResistance( ResistanceType.Fire, 35, 45 );
-			SetResistance( ResistanceType.Cold, 25, 35 );
-			SetResistance( ResistanceType.Poison, 25, 35 );
-			SetResistance( ResistanceType.Energy, 25, 35 );
+            SetResistance(ResistanceType.Physical, 65, 55);
+            SetResistance(ResistanceType.Fire, 35, 50);
+            SetResistance(ResistanceType.Cold, 35, 50);
+            SetResistance(ResistanceType.Poison, 65, 75);
+            SetResistance(ResistanceType.Energy, 35, 50);
 
-			SetSkill( SkillName.EvalInt, 80.1, 90.0 );
-			SetSkill( SkillName.Magery, 60.4, 100.0 );
-			SetSkill( SkillName.Meditation, 90.1, 100.0 );
-			SetSkill( SkillName.MagicResist, 85.3, 100.0 );
-			SetSkill( SkillName.Tactics, 20.1, 22.5 );
-			SetSkill( SkillName.Wrestling, 80.5, 92.5 );
+            SetSkill(SkillName.EvalInt, 80.1, 90.0);
+            SetSkill(SkillName.Magery, 60.2, 80.0);
+            SetSkill(SkillName.Meditation, 60.1, 70.0);
+            SetSkill(SkillName.MagicResist, 75.3, 90.0);
+            SetSkill(SkillName.Tactics, 20.1, 22.5);
+            SetSkill(SkillName.Wrestling, 80.5, 92.5);
 
-			Fame = 9000;
-			Karma = 9000;
+            Fame = 9000;
+            Karma = 9000;
 
-			Tamable = true;
-			ControlSlots = 2;
-			MinTameSkill = 95.1;
-		}
+            Tamable = true;
+            ControlSlots = 2;
+            MinTameSkill = 95.1;
+        }
 
 		public override void GenerateLoot()
 		{

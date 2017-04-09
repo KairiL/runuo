@@ -1349,7 +1349,8 @@ namespace Server.Items
                         if (theirMaster == null)
                             theirMaster = tc.SummonMaster;
 
-                        if (master == theirMaster && tc.Combatant == defender)
+                        //if (master == theirMaster && tc.Combatant == defender)
+                        if (tc.Combatant == defender)
                             ++inPack;
                     }
 				}

@@ -18,17 +18,17 @@ namespace Server.Mobiles
 			SetDex( 86, 105 );
 			SetInt( 436, 475 );
 
-			SetHits( 478, 495 );
+			SetHits( 578, 595 );
 
 			SetDamage( 16, 22 );
 
 			SetDamageType( ResistanceType.Physical, 100 );
 
-			SetResistance( ResistanceType.Physical, 55, 65 );
-			SetResistance( ResistanceType.Fire, 60, 70 );
-			SetResistance( ResistanceType.Cold, 30, 40 );
-			SetResistance( ResistanceType.Poison, 25, 35 );
-			SetResistance( ResistanceType.Energy, 35, 45 );
+			SetResistance( ResistanceType.Physical, 65, 75 );
+			SetResistance( ResistanceType.Fire, 70, 80 );
+			SetResistance( ResistanceType.Cold, 40, 50 );
+			SetResistance( ResistanceType.Poison, 35, 45 );
+			SetResistance( ResistanceType.Energy, 45, 55 );
 
 			SetSkill( SkillName.EvalInt, 30.1, 40.0 );
 			SetSkill( SkillName.Magery, 30.1, 40.0 );

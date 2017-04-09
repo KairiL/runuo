@@ -17,22 +17,22 @@ namespace Server.Mobiles
 		{
 			BaseSoundID = 0xA8;
 
-			SetStr( 376, 400 );
+			SetStr( 496, 525);
 			SetDex( 91, 120 );
 			SetInt( 291, 300 );
 
-			SetHits( 226, 240 );
+			SetHits( 398, 415 );
 
 			SetDamage( 11, 30 );
 
 			SetDamageType( ResistanceType.Physical, 20 );
 			SetDamageType( ResistanceType.Fire, 80 );
 
-			SetResistance( ResistanceType.Physical, 30, 40 );
-			SetResistance( ResistanceType.Fire, 70, 80 );
-			SetResistance( ResistanceType.Cold, 20, 30 );
-			SetResistance( ResistanceType.Poison, 30, 40 );
-			SetResistance( ResistanceType.Energy, 30, 40 );
+			SetResistance( ResistanceType.Physical, 40, 50 );
+			SetResistance( ResistanceType.Fire, 80, 90 );
+			SetResistance( ResistanceType.Cold, 30, 40 );
+			SetResistance( ResistanceType.Poison, 40, 50 );
+			SetResistance( ResistanceType.Energy, 40, 50 );
 
 			SetSkill( SkillName.MagicResist, 100.0, 120.0 );
 			SetSkill( SkillName.Tactics, 100.0 );

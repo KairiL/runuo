@@ -3,13 +3,17 @@ using System.Collections;
 using Server.Items; 
 using Server.ContextMenus; 
 using Server.Misc; 
-using Server.Network; 
+using Server.Network;
+using Server.Factions;
 
 namespace Server.Mobiles 
 { 
 	public class Executioner : BaseCreature 
-	{ 
-		[Constructable] 
+	{
+        public override Faction FactionAllegiance { get { return Minax.Instance; } }
+        public override Ethics.Ethic EthicAllegiance { get { return Ethics.Ethic.Evil; } }
+
+        [Constructable] 
 		public Executioner() : base( AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4 ) 
 		{ 
 			SpeechHue = Utility.RandomDyedHue(); 
@@ -51,6 +55,8 @@ namespace Server.Mobiles
 			SetSkill( SkillName.Swords, 125.0 );
 			SetSkill( SkillName.Tactics, 125.0 );
 			SetSkill( SkillName.Lumberjacking, 125.0 );
+            SetSkill(SkillName.Magery, 95.1, 100.0);
+            SetSkill(SkillName.EvalInt, 80.2, 100.0);
 
 			Fame = 5000;
 			Karma = -5000;
@@ -70,7 +76,12 @@ namespace Server.Mobiles
 			AddLoot( LootPack.Meager );
 		}
 
-		public override bool AlwaysMurderer{ get{ return true; } }
+        public override void CheckReflect(Mobile caster, ref bool reflect)
+        {
+            reflect = true; // Always reflect if caster isn't female
+        }
+
+        public override bool AlwaysMurderer{ get{ return true; } }
 
 		public Executioner( Serial serial ) : base( serial ) 
 		{ 

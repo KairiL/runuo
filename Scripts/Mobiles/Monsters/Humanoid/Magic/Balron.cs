@@ -1,13 +1,17 @@
 using System;
 using Server;
 using Server.Items;
+using Server.Factions;
 
 namespace Server.Mobiles
 {
 	[CorpseName( "a balron corpse" )]
 	public class Balron : BaseCreature
 	{
-		[Constructable]
+        public override Faction FactionAllegiance { get { return Shadowlords.Instance; } }
+        public override Ethics.Ethic EthicAllegiance { get { return Ethics.Ethic.Evil; } }
+
+        [Constructable]
 		public Balron () : base( AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4 )
 		{
 			Name = NameList.RandomName( "balron" );

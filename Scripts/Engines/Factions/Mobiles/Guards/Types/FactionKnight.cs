@@ -6,7 +6,8 @@ namespace Server.Factions
 {
 	public class FactionKnight : BaseFactionGuard
 	{
-		public override GuardAI GuardAI{ get{ return GuardAI.Magic | GuardAI.Melee | GuardAI.Smart | GuardAI.Curse | GuardAI.Bless; } }
+        public override Faction FactionAllegiance { get { return TrueBritannians.Instance; } }
+        public override GuardAI GuardAI{ get{ return GuardAI.Magic | GuardAI.Melee | GuardAI.Smart | GuardAI.Curse | GuardAI.Bless; } }
 
 		[Constructable]
 		public FactionKnight() : base( "the knight" )

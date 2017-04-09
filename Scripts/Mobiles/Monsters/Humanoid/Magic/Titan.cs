@@ -1,13 +1,17 @@
 using System;
 using Server;
 using Server.Items;
+using Server.Factions;
 
 namespace Server.Mobiles
 {
 	[CorpseName( "a titans corpse" )]
 	public class Titan : BaseCreature
 	{
-		[Constructable]
+        public override Faction FactionAllegiance { get { return TrueBritannians.Instance; } }
+        public override Ethics.Ethic EthicAllegiance { get { return Ethics.Ethic.Hero; } }
+
+        [Constructable]
 		public Titan() : base( AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4 )
 		{
 			Name = "a titan";

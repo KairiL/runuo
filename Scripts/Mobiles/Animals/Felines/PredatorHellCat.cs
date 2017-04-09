@@ -14,11 +14,11 @@ namespace Server.Mobiles
 			Body = 127;
 			BaseSoundID = 0xBA;
 
-			SetStr( 161, 185 );
+			SetStr( 261, 285 );
 			SetDex( 96, 115 );
-			SetInt( 76, 100 );
+			SetInt( 176,200 );
 
-			SetHits( 97, 131 );
+			SetHits( 297, 331 );
 
 			SetDamage( 5, 17 );
 
@@ -26,8 +26,10 @@ namespace Server.Mobiles
 			SetDamageType( ResistanceType.Fire, 25 );
 
 			SetResistance( ResistanceType.Physical, 25, 35 );
-			SetResistance( ResistanceType.Fire, 30, 40 );
-			SetResistance( ResistanceType.Energy, 5, 15 );
+			SetResistance( ResistanceType.Fire, 50, 60 );
+            SetResistance(ResistanceType.Cold, 15, 25);
+            SetResistance(ResistanceType.Poison, 30, 40);
+            SetResistance( ResistanceType.Energy, 25, 35 );
 
 			SetSkill( SkillName.MagicResist, 75.1, 90.0 );
 			SetSkill( SkillName.Tactics, 50.1, 65.0 );

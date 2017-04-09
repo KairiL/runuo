@@ -18,18 +18,18 @@ namespace Server.Mobiles
 			SetDex( 101, 130 );
 			SetInt( 386, 425 );
 
-			SetHits( 433, 456 );
+			SetHits( 533, 556 );
 
 			SetDamage( 17, 25 );
 
 			SetDamageType( ResistanceType.Physical, 50 );
 			SetDamageType( ResistanceType.Cold, 50 );
 
-			SetResistance( ResistanceType.Physical, 55, 70 );
-			SetResistance( ResistanceType.Fire, 15, 25 );
-			SetResistance( ResistanceType.Cold, 80, 90 );
-			SetResistance( ResistanceType.Poison, 40, 50 );
-			SetResistance( ResistanceType.Energy, 40, 50 );
+			SetResistance( ResistanceType.Physical, 65, 80 );
+			SetResistance( ResistanceType.Fire, 25, 35 );
+			SetResistance( ResistanceType.Cold, 90, 100 );
+			SetResistance( ResistanceType.Poison, 50, 60 );
+			SetResistance( ResistanceType.Energy, 50, 60 );
 
 			SetSkill( SkillName.EvalInt, 99.1, 100.0 );
 			SetSkill( SkillName.Magery, 99.1, 100.0 );

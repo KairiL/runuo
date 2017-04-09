@@ -2,13 +2,17 @@ using System;
 using Server;
 using Server.Items;
 using Server.Gumps;
+using Server.Factions;
 
 namespace Server.Mobiles 
 { 
 	[CorpseName( "an ethereal warrior corpse" )] 
 	public class EtherealWarrior : BaseCreature 
-	{ 
-		public override bool InitialInnocent{ get{ return true; } }
+	{
+        public override Faction FactionAllegiance { get { return TrueBritannians.Instance; } }
+        public override Ethics.Ethic EthicAllegiance { get { return Ethics.Ethic.Hero; } }
+
+        public override bool InitialInnocent{ get{ return true; } }
 
 		[Constructable] 
 		public EtherealWarrior() : base( AIType.AI_Mage, FightMode.Evil, 10, 1, 0.2, 0.4 ) 

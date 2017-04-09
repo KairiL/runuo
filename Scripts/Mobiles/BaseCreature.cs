@@ -977,13 +977,17 @@ namespace Server.Mobiles
 			if ( g != null && g.IsEnemy( this, m ) )
 				return true;
 
-			if ( m is BaseGuard )
+            if ( m is BaseGuard )
 				return false;
 
 			if ( GetFactionAllegiance( m ) == Allegiance.Ally )
 				return false;
 
-			Ethics.Ethic ourEthic = EthicAllegiance;
+            if (m is BaseCreature)
+                if (((BaseCreature)m).FactionAllegiance != null && FactionAllegiance != null && ((BaseCreature)m).FactionAllegiance != FactionAllegiance)
+                    return true;
+
+            Ethics.Ethic ourEthic = EthicAllegiance;
 			Ethics.Player pl = Ethics.Player.Find( m, true );
 
 			if ( pl != null && pl.IsShielded && ( ourEthic == null || ourEthic == pl.Ethic ) )

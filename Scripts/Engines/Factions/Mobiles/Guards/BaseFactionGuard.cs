@@ -62,8 +62,13 @@ namespace Server.Factions
 			Faction ourFaction = m_Faction;
 			Faction theirFaction = Faction.Find( m );
 
-			if ( theirFaction == null && m is BaseFactionGuard )
-				theirFaction = ((BaseFactionGuard)m).Faction;
+            if (theirFaction == null && m is BaseFactionGuard)
+            {
+                theirFaction = ((BaseFactionGuard)m).Faction;
+            }
+            if (m is BaseCreature)
+                if (((BaseCreature)m).FactionAllegiance != null && FactionAllegiance != null && ((BaseCreature)m).FactionAllegiance != FactionAllegiance)
+                    return true;
 
 			if ( ourFaction != null && theirFaction != null && ourFaction != theirFaction )
 			{
@@ -71,6 +76,9 @@ namespace Server.Factions
 
 				if ( reactionType == ReactionType.Attack )
 					return true;
+
+                if (m is BaseFactionGuard)
+                    return true;
 
 				if ( theirFaction != null )
 				{

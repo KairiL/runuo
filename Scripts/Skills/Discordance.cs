@@ -30,7 +30,12 @@ namespace Server.SkillHandlers
 			from.NextSkillTime = Core.TickCount + 6000;
 		}
 
-		private class DiscordanceInfo
+        public static bool IsInnocentTo(Mobile from, Mobile to)
+        {
+            return (Notoriety.Compute(from, (Mobile)to) == Notoriety.Innocent);
+        }
+
+        private class DiscordanceInfo
 		{
 			public Mobile m_From;
 			public Mobile m_Creature;
@@ -162,7 +167,10 @@ namespace Server.SkillHandlers
 				{
 					Mobile targ = (Mobile)target;
 
-					if ( targ == from || (targ is BaseCreature && ( ((BaseCreature)targ).BardImmune || !from.CanBeHarmful( targ, false ) ) && ((BaseCreature)targ).ControlMaster != from) )
+                    if (IsInnocentTo(from, targ))
+                        from.CriminalAction(false);
+
+                    if ( targ == from || (targ is BaseCreature && ( ((BaseCreature)targ).BardImmune || !from.CanBeHarmful( targ, false ) ) && ((BaseCreature)targ).ControlMaster != from) )
 					{
 						from.SendLocalizedMessage( 1049535 ); // A song of discord would have no effect on that.
 					}
@@ -170,7 +178,7 @@ namespace Server.SkillHandlers
 					{
 						from.SendLocalizedMessage( 1049537 );// Your target is already in discord.
 					}
-					else if ( !targ.Player )
+					else
 					{
 						double diff = m_Instrument.GetDifficultyFor( targ ) - 10.0;
 						double music = from.Skills[SkillName.Musicianship].Value;
@@ -206,7 +214,10 @@ namespace Server.SkillHandlers
 								if ( Core.SE && BaseInstrument.GetBaseDifficulty( targ ) >= 160.0 )
 									effect /= 2;
 
-								scalar = effect * 0.01;
+                                if (targ.Player)
+                                    effect /= 4;
+
+                                scalar = effect * 0.01;
 
 								mods.Add( new ResistanceMod( ResistanceType.Physical, effect ) );
 								mods.Add( new ResistanceMod( ResistanceType.Fire, effect ) );
@@ -249,10 +260,6 @@ namespace Server.SkillHandlers
 						}
 
 						from.NextSkillTime = Core.TickCount + 12000;
-					}
-					else
-					{
-						m_Instrument.PlayInstrumentBadly( from );
 					}
 				}
 				else

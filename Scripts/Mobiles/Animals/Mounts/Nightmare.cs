@@ -22,7 +22,7 @@ namespace Server.Mobiles
 			SetDex( 86, 105 );
 			SetInt( 86, 125 );
 
-			SetHits( 298, 315 );
+			SetHits( 398, 415 );
 
 			SetDamage( 16, 22 );
 
@@ -30,11 +30,11 @@ namespace Server.Mobiles
 			SetDamageType( ResistanceType.Fire, 40 );
 			SetDamageType( ResistanceType.Energy, 20 );
 
-			SetResistance( ResistanceType.Physical, 55, 65 );
-			SetResistance( ResistanceType.Fire, 30, 40 );
-			SetResistance( ResistanceType.Cold, 30, 40 );
-			SetResistance( ResistanceType.Poison, 30, 40 );
-			SetResistance( ResistanceType.Energy, 20, 30 );
+			SetResistance( ResistanceType.Physical, 65, 75 );
+			SetResistance( ResistanceType.Fire, 40, 50 );
+			SetResistance( ResistanceType.Cold, 40, 50 );
+			SetResistance( ResistanceType.Poison, 40, 50 );
+			SetResistance( ResistanceType.Energy, 30, 40 );
 
 			SetSkill( SkillName.EvalInt, 10.4, 50.0 );
 			SetSkill( SkillName.Magery, 10.4, 50.0 );

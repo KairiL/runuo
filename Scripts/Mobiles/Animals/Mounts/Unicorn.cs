@@ -2,6 +2,7 @@ using System;
 using Server.Mobiles;
 using Server.Network;
 using Server.Items;
+using Server.Factions;
 
 namespace Server.Mobiles
 {
@@ -11,7 +12,10 @@ namespace Server.Mobiles
 		public override bool AllowMaleRider{ get{ return false; } }
 		public override bool AllowMaleTamer{ get{ return false; } }
 
-		public override bool InitialInnocent{ get{ return true; } }
+        public override Faction FactionAllegiance { get { return CouncilOfMages.Instance; } }
+        public override Ethics.Ethic EthicAllegiance { get { return Ethics.Ethic.Hero; } }
+
+        public override bool InitialInnocent{ get{ return true; } }
 
 		public override TimeSpan MountAbilityDelay { get { return TimeSpan.FromHours( 1.0 ); } }
 
@@ -62,26 +66,26 @@ namespace Server.Mobiles
 		{
 			BaseSoundID = 0x4BC;
 
-			SetStr( 296, 325 );
+			SetStr( 456, 505 );
 			SetDex( 96, 115 );
-			SetInt( 186, 225 );
+			SetInt( 286, 325 );
 
-			SetHits( 191, 210 );
+			SetHits( 291, 310 );
 
 			SetDamage( 16, 22 );
 
 			SetDamageType( ResistanceType.Physical, 75 );
 			SetDamageType( ResistanceType.Energy, 25 );
 
-			SetResistance( ResistanceType.Physical, 55, 65 );
-			SetResistance( ResistanceType.Fire, 25, 40 );
-			SetResistance( ResistanceType.Cold, 25, 40 );
-			SetResistance( ResistanceType.Poison, 55, 65 );
-			SetResistance( ResistanceType.Energy, 25, 40 );
+			SetResistance( ResistanceType.Physical, 65, 55 );
+			SetResistance( ResistanceType.Fire, 35, 50 );
+			SetResistance( ResistanceType.Cold, 35, 50 );
+			SetResistance( ResistanceType.Poison, 65, 75 );
+			SetResistance( ResistanceType.Energy, 35, 50 );
 
 			SetSkill( SkillName.EvalInt, 80.1, 90.0 );
 			SetSkill( SkillName.Magery, 60.2, 80.0 );
-			SetSkill( SkillName.Meditation, 50.1, 60.0 );
+			SetSkill( SkillName.Meditation, 60.1, 70.0 );
 			SetSkill( SkillName.MagicResist, 75.3, 90.0 );
 			SetSkill( SkillName.Tactics, 20.1, 22.5 );
 			SetSkill( SkillName.Wrestling, 80.5, 92.5 );

@@ -1,13 +1,17 @@
 using System;
 using Server;
 using Server.Items;
+using Server.Factions;
 
 namespace Server.Mobiles
 {
 	[CorpseName( "a liche's corpse" )]
 	public class LichLord : BaseCreature
 	{
-		[Constructable]
+        public override Faction FactionAllegiance { get { return Shadowlords.Instance; } }
+        public override Ethics.Ethic EthicAllegiance { get { return Ethics.Ethic.Evil; } }
+
+        [Constructable]
 		public LichLord() : base( AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4 )
 		{
 			Name = "a lich lord";

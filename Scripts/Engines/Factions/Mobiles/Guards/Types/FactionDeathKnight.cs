@@ -6,7 +6,8 @@ namespace Server.Factions
 {
 	public class FactionDeathKnight : BaseFactionGuard
 	{
-		public override GuardAI GuardAI{ get{ return GuardAI.Melee | GuardAI.Curse | GuardAI.Bless; } }
+        public override Faction FactionAllegiance { get { return Shadowlords.Instance; } }
+        public override GuardAI GuardAI{ get{ return GuardAI.Melee | GuardAI.Curse | GuardAI.Bless; } }
 
 		[Constructable]
 		public FactionDeathKnight() : base( "the death knight" )
