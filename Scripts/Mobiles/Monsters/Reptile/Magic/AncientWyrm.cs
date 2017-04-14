@@ -52,7 +52,9 @@ namespace Server.Mobiles
 		{
 			AddLoot( LootPack.FilthyRich, 3 );
 			AddLoot( LootPack.Gems, 5 );
-		}
+            AddLoot(LootPack.MedScrolls, 1);
+            AddLoot(LootPack.HighScrolls, 2);
+        }
 
 		public override int GetIdleSound()
 		{

@@ -53,8 +53,10 @@ namespace Server.Mobiles
 		public override void GenerateLoot()
 		{
 			AddLoot( LootPack.Rich );
-			AddLoot( LootPack.MedScrolls, 2 );
-		}
+            AddLoot(LootPack.MedScrolls, 1);
+            AddLoot( LootPack.MedScrolls, 2 );
+            AddLoot(LootPack.HighScrolls, 1);
+        }
 
 		public override OppositionGroup OppositionGroup
 		{

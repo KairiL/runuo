@@ -50,7 +50,9 @@ namespace Server.Mobiles
 		{
 			AddLoot( LootPack.FilthyRich );
 			AddLoot( LootPack.Rich );
-		}
+            AddLoot(LootPack.MedScrolls);
+            AddLoot(LootPack.HighScrolls);
+        }
 
 		public override int TreasureMapLevel{ get{ return 5; } }
 

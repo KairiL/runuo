@@ -56,7 +56,10 @@ namespace Server.Mobiles
 		{
 			AddLoot( LootPack.FilthyRich );
 			AddLoot( LootPack.Rich );
-		}
+            AddLoot(LootPack.LowScrolls, 2);
+            AddLoot(LootPack.MedScrolls, 3);
+            AddLoot(LootPack.HighScrolls, 4);
+        }
 
         public override void CheckReflect(Mobile caster, ref bool reflect)
         {
