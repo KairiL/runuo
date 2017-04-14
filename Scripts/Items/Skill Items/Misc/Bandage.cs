@@ -484,7 +484,6 @@ namespace Server.Items
 						{
 							seconds = 0.5 + resDelay;
 						}
-							seconds = 2.5 + (0.025 * (double)(120 - dex/3+healer.Skills[SkillName.Veterinary].Value)) + resDelay;
 					}
 					else if ( Core.AOS )
 					{

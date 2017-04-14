@@ -5022,7 +5022,7 @@ namespace Server.Mobiles
 
 		public override bool CanBeHarmful( Mobile target, bool message, bool ignoreOurBlessedness )
 		{
-			if ( target is BaseFactionGuard )
+			if ( target is BaseFactionGuard )//TODO: Let faction aligned creatures and guards attack opposing faction guards
 				return false;
 
 			if ( ( target is BaseCreature && ( (BaseCreature)target ).IsInvulnerable ) || target is PlayerVendor || target is TownCrier )

@@ -293,11 +293,12 @@ namespace Server.Spells
             if (curse)
             {
                 percent = 8 + (caster.Skills.EvalInt.Fixed / 100) - (target.Skills.MagicResist.Fixed / 100);
+                percent += (caster.Skills.Musicianship.Fixed + caster.Skills.Discordance.Fixed + caster.Skills.Provocation.Fixed) / 200;
             }
             else
             {
                 percent = 1 + (caster.Skills.EvalInt.Fixed / 100);
-                percent += (caster.Skills.Musicianship.Fixed + caster.Skills.Provocation.Fixed + caster.Skills.Peacemaking.Fixed)/200;
+                percent += (caster.Skills.Musicianship.Fixed + caster.Skills.Provocation.Fixed + caster.Skills.Peacemaking.Fixed) / 200;
             }
 			percent *= 0.01;
 
@@ -991,6 +992,9 @@ namespace Server.Spells
 
 			if( delay == TimeSpan.Zero )
 			{
+                if( target is Simon )
+                    ((Simon)target).AlterSpellDamageTo( spell, target, from, ref iDamage );
+
 				if( from is BaseCreature )
 					((BaseCreature)from).AlterSpellDamageTo( target, ref iDamage );
 

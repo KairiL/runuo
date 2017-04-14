@@ -62,6 +62,10 @@ namespace Server.Spells
 
 		public virtual bool CheckResisted( Mobile target )
 		{
+            int circle = (int)Circle;
+            if (Scroll != null)
+                circle++;
+
 			double n = GetResistPercent( target );
 
 			n /= 100.0;
@@ -72,8 +76,8 @@ namespace Server.Spells
 			if( n >= 1.0 )
 				return true;
 
-			int maxSkill = (1 + (int)Circle) * 10;
-			maxSkill += (1 + ((int)Circle / 6)) * 25;
+			int maxSkill = (1 + circle) * 10;
+			maxSkill += (1 + (circle / 6)) * 25;
 
 			if( target.Skills[SkillName.MagicResist].Value < maxSkill )
 				target.CheckSkill( SkillName.MagicResist, 0.0, target.Skills[SkillName.MagicResist].Cap );

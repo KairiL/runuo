@@ -627,6 +627,8 @@ namespace Server.Items
 			int strBonus = m_AosAttributes.BonusStr;
 			int dexBonus = m_AosAttributes.BonusDex;
 			int intBonus = m_AosAttributes.BonusInt;
+            int TameLoreBonus = 0;
+            int TameLorePoints = 0;
 
 			if ( (strBonus != 0 || dexBonus != 0 || intBonus != 0) )
 			{
@@ -645,7 +647,22 @@ namespace Server.Items
 			}
             
 			from.NextCombatTime = Core.TickCount + (int)GetDelay( from ).TotalMilliseconds;
-            from.FollowersMax = 5 + (int)from.Skills[SkillName.Herding].Value * FollowersBonus / 100;
+            TameLorePoints = (int)from.Skills[SkillName.AnimalTaming].Value;
+            TameLorePoints += (int)from.Skills[SkillName.AnimalLore].Value;
+            if (from.Skills[SkillName.Herding].Value >= 200)
+                TameLoreBonus += 1;
+            if (TameLorePoints >= 230)
+                TameLoreBonus += 1;
+            if (TameLorePoints >= 240)
+                TameLoreBonus += 1;
+            if (TameLorePoints >= 250)
+                TameLoreBonus += 1;
+            if (TameLorePoints >= 255)
+                TameLoreBonus += 1;
+            if (TameLorePoints >= 260)
+                TameLoreBonus += 1;
+
+            from.FollowersMax = 5 + (int)from.Skills[SkillName.Herding].Value * FollowersBonus * TameLoreBonus/ 100;
 
             if ( UseSkillMod && m_AccuracyLevel != WeaponAccuracyLevel.Regular )
 			{
@@ -1116,7 +1133,7 @@ namespace Server.Items
 
 			if ( shield != null )
 			{
-				double chance = (parry - bushidoNonRacial) / 400.0;	// As per OSI, no negitive effect from the Racial stuffs, ie, 120 parry and '0' bushido with humans
+				double chance = parry / 400.0;	// As per OSI, no negitive effect from the Racial stuffs, ie, 120 parry and '0' bushido with humans
 
 				if ( chance < 0 ) // chance shouldn't go below 0
 					chance = 0;				

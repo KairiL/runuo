@@ -62,7 +62,7 @@ namespace Server.Mobiles
 		public override bool CanRummageCorpses{ get{ return true; } }
 		public override Poison PoisonImmune{ get{ return Poison.Deadly; } }
 		public override int TreasureMapLevel{ get{ return 5; } }
-		public override int Meat{ get{ return 1; } }
+		public override int Meat{ get{ return 3; } }
 
 		public Balron( Serial serial ) : base( serial )
 		{

@@ -9,6 +9,7 @@ using Server.Spells.Ninjitsu;
 using System.Collections.Generic;
 using Server.Spells.Spellweaving;
 using Server.Spells.Bushido;
+using Server.Factions;
 
 namespace Server.Spells
 {
@@ -132,8 +133,10 @@ namespace Server.Spells
 			int damage = Utility.Dice( dice, sides, bonus ) * 100;
 			int damageBonus = 0;
 
-			int inscribeSkill = GetInscribeFixed( m_Caster );
-			int inscribeBonus = (inscribeSkill + (1000 * (inscribeSkill / 1000))) / 200;
+            Item Scroll = m_Scroll;
+
+            double inscribeSkill = GetInscribeSkill(m_Caster);
+			int inscribeBonus = (int)(inscribeSkill + (1000 * (int)(inscribeSkill / 100))) / 200;
 			damageBonus += inscribeBonus;
 
 			int intBonus = Caster.Int / 10;
@@ -141,16 +144,18 @@ namespace Server.Spells
 
 			int sdiBonus = AosAttributes.GetValue( m_Caster, AosAttribute.SpellDamage );
 			// PvP spell damage increase cap of 15% from an item’s magic property
-			if ( playerVsPlayer && sdiBonus > 15 )
-				sdiBonus = 15;
+			if ( playerVsPlayer && sdiBonus > 15 + ((int)inscribeSkill) / 100)
+				sdiBonus = 15 + ((int)inscribeSkill) / 100;
 
-			damageBonus += sdiBonus;
+            damageBonus += sdiBonus;
+            if (Scroll != null)
+                damageBonus += (int)inscribeSkill / 100;
 
 			TransformContext context = TransformationSpellHelper.GetContext( Caster );
 
 			if( context != null && context.Spell is ReaperFormSpell )
 				damageBonus += ((ReaperFormSpell)context.Spell).SpellDamageBonus;
-
+            
 			damage = AOS.Scale( damage, 100 + damageBonus );
 
 			int evalSkill = GetDamageFixed( m_Caster );
@@ -470,7 +475,7 @@ namespace Server.Spells
 			if ( m_Scroll is BaseWand )
 				return;
 
-			if ( m_Info.Mantra != null && m_Info.Mantra.Length > 0 && m_Caster.Player )
+			if ( m_Info.Mantra != null && m_Info.Mantra.Length > 0 && (m_Caster.Player || m_Caster is BaseFactionGuard))
 				m_Caster.PublicOverheadMessage( MessageType.Spell, m_Caster.SpeechHue, true, m_Info.Mantra, false );
 		}
 
@@ -684,7 +689,7 @@ namespace Server.Spells
 			// Faster casting cap of 2 (if not using the protection spell) 
 			// Faster casting cap of 0 (if using the protection spell) 
 			// Paladin spells are subject to a faster casting cap of 4 
-			// Paladins with magery of 70.0 or above are subject to a faster casting cap of 2 
+			// Paladins with magery of 70.0 or above are (no longer) subject to a faster casting cap of 2 
 			int fcMax = 4;
 
             if (CastSkill == SkillName.Magery || CastSkill == SkillName.Necromancy) //|| ( CastSkill == SkillName.Chivalry && m_Caster.Skills[SkillName.Magery].Value >= 70.0 ) )

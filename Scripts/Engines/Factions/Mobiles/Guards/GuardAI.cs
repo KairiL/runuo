@@ -486,7 +486,7 @@ namespace Server.Factions
 			Mobile dispelTarget = FindDispelTarget( true );
 
 			if ( m_Guard.Target != null && m_ReleaseTarget == DateTime.MinValue )
-				m_ReleaseTarget = DateTime.UtcNow + TimeSpan.FromSeconds( 10.0 );
+				m_ReleaseTarget = DateTime.UtcNow + TimeSpan.FromSeconds( 0.25 );
 
 			if ( m_Guard.Target != null && DateTime.UtcNow > m_ReleaseTarget )
 			{

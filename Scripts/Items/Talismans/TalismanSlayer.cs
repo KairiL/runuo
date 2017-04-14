@@ -16,7 +16,8 @@ namespace Server.Items
 		Bird,
 		Ice,
 		Flame,
-		Bovine
+		Bovine,
+        Player
 	}
 
 	public static class TalismanSlayer
@@ -88,7 +89,12 @@ namespace Server.Items
 
 				// TODO TormentedMinotaur
 			};
-		}
+
+            m_Table[TalismanSlayerName.Bear] = new Type[]
+            {
+                typeof( PlayerMobile ) //, typeof( Grobu )
+			};
+        }
 
 		public static bool Slays( TalismanSlayerName name, Mobile m )
 		{

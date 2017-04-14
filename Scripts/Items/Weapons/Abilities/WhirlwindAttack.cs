@@ -41,7 +41,7 @@ namespace Server.Items
 
 			ArrayList list = new ArrayList();
 
-			foreach ( Mobile m in attacker.GetMobilesInRange( 1 ) )
+			foreach ( Mobile m in attacker.GetMobilesInRange( weapon.MaxRange ) )
 				list.Add( m );
 
 			ArrayList targets = new ArrayList();

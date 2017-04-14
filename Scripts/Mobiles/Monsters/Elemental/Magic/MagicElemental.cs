@@ -15,7 +15,8 @@ namespace Server.Mobiles
 		public MagicElemental () : base( AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4 )
 		{
 			Name = "a magic elemental";
-			Body = 159;
+			Body = 16;
+            Hue = 2067;
 			BaseSoundID = 278;
             CanSwim = true;
 
@@ -23,9 +24,9 @@ namespace Server.Mobiles
 			SetDex( 66, 85 );
 			SetInt( 426, 550 );
 
-			SetHits( 316, 369 );
+            SetHits(592, 711);
 
-			SetDamage( 17, 27 );
+            SetDamage( 17, 27 );
 
 			SetDamageType( ResistanceType.Physical, 0 );
 			SetDamageType( ResistanceType.Poison, 50 );
@@ -43,7 +44,7 @@ namespace Server.Mobiles
 			SetSkill( SkillName.MagicResist, 1000.0, 1200.0 );
 			SetSkill( SkillName.Necromancy, 100.1, 120.0 );
             SetSkill( SkillName.SpiritSpeak, 125.1, 160.0 );
-			SetSkill( SkillName.Wrestling, 80.1, 100.0 );
+			SetSkill( SkillName.Wrestling, 90.1, 100.0 );
 
 			Fame = 12500;
 			Karma = 0;

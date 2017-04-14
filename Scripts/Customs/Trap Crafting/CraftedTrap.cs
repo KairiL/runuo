@@ -191,9 +191,11 @@ namespace Server.Items
             ArrayList targets = new ArrayList();
             if (from.AccessLevel > AccessLevel.Player)
                 return;
+
             int ManaLoss = ScaleMana(ManaCost);
+
             if (TrapOwner != null )
-                if (TrapOwner.Player && TrapOwner.Map == this.Map && TrapOwner.InRange(Location, 200))
+                if (TrapOwner.Player && TrapOwner.Map == this.Map && TrapOwner.InRange(Location, 200) && TrapOwner.CanBeHarmful(from, false) && from != TrapOwner)
                 {
                     if (TrapOwner.Mana >= ManaLoss)
                         TrapOwner.Mana -= ManaLoss;
@@ -206,13 +208,13 @@ namespace Server.Items
                 }
             else
                 return;
-
-
+            
             if (this.Visible == false)
                 this.Visible = true;
 
             int MinDamage = 40 * (TrapPower / 100);
             int MaxDamage = 60 * (TrapPower / 100);
+
 
             if (MinDamage < 5)
                 MinDamage = 5;
@@ -225,14 +227,21 @@ namespace Server.Items
                 IPooledEnumerable eable = this.Map.GetMobilesInRange(new Point3D(Location), DamageRange);
 
                 foreach (Mobile m in eable)
-                    targets.Add(m);
+                    if ((m != TrapOwner && SpellHelper.ValidIndirectTarget(TrapOwner, (Mobile)m) && TrapOwner.CanBeHarmful(m, false)))
+                        targets.Add(m);
+
+
                 eable.Free();
                 if (targets.Count > 0)
+
                     for (int i = 0; i < targets.Count; ++i)
                     {
-                        if (DamageScalar != 0)
-                            Spells.SpellHelper.Damage(TimeSpan.FromSeconds(0.5), from, from, (int)DamageScalar*Utility.RandomMinMax(MinDamage, MaxDamage), 100, 0, 0, 0, 0);
                         Mobile m = (Mobile)targets[i];
+                        if (DamageScalar != 0)
+                        {
+                            TrapOwner.DoHarmful(m);
+                            AOS.Damage(m, TrapOwner, (int)DamageScalar * Utility.RandomMinMax(MinDamage, MaxDamage), 0, 100, 0, 0, 0);
+                        }
 
                         if (Poison != null)
                             m.ApplyPoison(m, m_Poison);
@@ -243,8 +252,20 @@ namespace Server.Items
                                 m.Paralyze(TimeSpan.FromSeconds(ParalyzeTime));
 
                     }
+
                 if (PointDest != Point3D.Zero)
+                {
+                    if (TrapOwner.Mana >= ManaLoss)
+                        TrapOwner.Mana -= ManaLoss;
+                    else
+                    {
+                        ManaLoss -= TrapOwner.Mana;
+                        TrapOwner.Mana = 0;
+                        TrapOwner.Damage((ManaLoss));
+                    }
                     Teleport(from);
+                }
+
                 this.UsesRemaining -= 1;
 
                 if (this.UsesRemaining <= 0)

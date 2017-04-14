@@ -37,8 +37,10 @@ namespace Server.Factions
 			SetSkill( SkillName.Magery, 110.0, 120.0 );
 			SetSkill( SkillName.EvalInt, 110.0, 120.0 );
 			SetSkill( SkillName.Meditation, 110.0, 120.0 );
+            SetSkill( SkillName.Necromancy, 110.0, 120.0 );
+            SetSkill(SkillName.SpiritSpeak, 110.0, 120.0);
 
-			Item shroud = new Item( 0x204E );
+            Item shroud = new Item( 0x204E );
 			shroud.Layer = Layer.OuterTorso;
 
 			AddItem( Immovable( Rehued( shroud, 1109 ) ) );
