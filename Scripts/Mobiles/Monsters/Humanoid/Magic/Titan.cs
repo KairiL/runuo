@@ -41,7 +41,7 @@ namespace Server.Mobiles
 			SetSkill( SkillName.Wrestling, 40.1, 50.0 );
 
 			Fame = 11500;
-			Karma = -11500;
+			Karma = 0;
 
 			VirtualArmor = 40;
 
