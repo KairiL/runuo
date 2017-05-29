@@ -331,7 +331,7 @@ namespace Server.Mobiles
         {
             int minDamage;
             int exploDamage;
-            private int ExplosionRange = 5; // How long is the blast radius?
+            private int ExplosionRange = 3; // How long is the blast radius?
             private Mobile m_Mobile, m_From;
             private Point3D m_loc;
             private Map map;
@@ -342,11 +342,17 @@ namespace Server.Mobiles
                 m_From = from;
                 m_loc = m_Mobile.Location;
                 map = m_Mobile.Map;
+                int alchemyBonus = 0;
 
                 if ((((BaseCreature)from).Controlled || ((BaseCreature)from).Summoned) && ((BaseCreature)from).ControlMaster != null)
                 {
                     Mobile master = (((BaseCreature)from).ControlMaster);
-                    exploDamage = (int)(master.Skills[SkillName.Alchemy].Value/3.0);
+                    alchemyBonus = AosAttributes.GetValue(m, AosAttribute.EnhancePotions);
+                    if (alchemyBonus > 50)
+                        alchemyBonus = 50;
+                    alchemyBonus += m.Skills.Alchemy.Fixed / 330 * 10;
+
+                    exploDamage = (int)((20 + (master.Skills[SkillName.Alchemy].Value/30.0))*(1+alchemyBonus));
                     minDamage = (int)master.Skills[SkillName.Carpentry].Value;
                     minDamage += (int)master.Skills[SkillName.ArmsLore].Value;
                     minDamage /= 12;
@@ -364,7 +370,7 @@ namespace Server.Mobiles
                 m_Mobile.PlaySound(0x11D);
                 if ((Map)map != null)
                 {
-                    IPooledEnumerable eable = (IPooledEnumerable)map.GetMobilesInRange(m_loc, 5);
+                    IPooledEnumerable eable = (IPooledEnumerable)map.GetMobilesInRange(m_loc, 3);
 
                     foreach (object o in eable)
                     {
@@ -388,16 +394,19 @@ namespace Server.Mobiles
 		{
             double total = 0;
             int level = 0;
-			if ( Controlled || Summoned )
+            int lmc = AosAttributes.GetValue(from, AosAttribute.LowerManaCost);
+            int cost = (amount*(100-lmc))/100;
+            if ( Controlled || Summoned )
 			{
 				Mobile master = ( this.ControlMaster );
 
 				if ( master == null )
 					master = this.SummonMaster;
 
-				if ( master != null && master.Player && master.Map == this.Map && master.InRange( Location, 20 ) )
+				if ( master != null && master.Player && master.Map == this.Map && master.InRange( Location, 40 ) )
 				{
-					if ( master.Mana >= (int)(amount/3) )
+
+                    if ( master.Mana >= (int)(amount/3) )
 					{
 						master.Mana -= (int)(amount/3);
 					}

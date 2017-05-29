@@ -157,7 +157,16 @@ namespace Server.Multis
 			}
 		}
 
-		private DecayLevel m_LastDecayLevel;
+        [CommandProperty(AccessLevel.GameMaster)]
+        public uint keyValue
+        {
+            get
+            {
+                return m_KeyOwner;
+            }
+        }
+
+        private DecayLevel m_LastDecayLevel;
 
 		[CommandProperty( AccessLevel.GameMaster )]
 		public virtual DecayLevel DecayLevel
@@ -316,9 +325,27 @@ namespace Server.Multis
 		private int m_MaxSecures;
 		private int m_Price;
 
-		private int m_Visits;
+        private TentChest m_Chest;
 
-		private DateTime m_BuiltOn, m_LastTraded;
+        private BaseAddon m_SmallForge;
+        private BaseAddon m_LargeForge;
+        private BaseAddon m_Anvil;
+        private BaseAddon m_Loom;
+        private BaseAddon m_SpinningWheel1;
+        private BaseAddon m_SpinningWheel2;
+        private BaseAddon m_Oven;
+        private BaseAddon m_Fireplace;
+        private BaseAddon m_Mill;
+        private BaseAddon m_Training1;
+        private BaseAddon m_Training2;
+        private BaseAddon m_Pick1;
+        private BaseAddon m_Pick2;
+
+        private int m_Visits;
+
+        private uint m_KeyOwner;
+
+        private DateTime m_BuiltOn, m_LastTraded;
 
 		private Point3D m_RelativeBanLocation;
 
@@ -1460,7 +1487,41 @@ namespace Server.Multis
 			return value;
 		}
 
-		public BaseDoor[] AddSouthDoors( int x, int y, int z )
+        public uint CreateTentKeys(Mobile m)
+        {
+            uint value = Key.RandomValue();
+
+            m_KeyOwner = value;
+
+            if (!IsAosRules)
+            {
+
+                Key packKey = new Key(KeyType.Iron);
+                Key bankKey = new Key(KeyType.Iron);
+
+                packKey.KeyValue = value;
+                bankKey.KeyValue = value;
+
+                packKey.LootType = LootType.Regular;
+                bankKey.LootType = LootType.Regular;
+
+                BankBox box = m.BankBox;
+
+                if (box == null || !box.TryDropItem(m, bankKey, false))
+                    bankKey.Delete();
+                else
+                    m.LocalOverheadMessage(MessageType.Regular, 0x3B2, true, "A house key is now in my safety deposit box."); // A ship's key is now in my safety deposit box.
+
+                if (m.AddToBackpack(packKey))
+                    m.LocalOverheadMessage(MessageType.Regular, 0x3B2, true, "A house key is now in my backpack."); // A ship's key is now in my backpack.
+                else
+                    m.LocalOverheadMessage(MessageType.Regular, 0x3B2, true, "A house key is now at my feet."); // A ship's key is now at my feet.
+            }
+
+            return value;
+        }
+
+        public BaseDoor[] AddSouthDoors( int x, int y, int z )
 		{
 			return AddSouthDoors( true, x, y, z, false );
 		}
@@ -1539,7 +1600,22 @@ namespace Server.Multis
 			m_Sign.MoveToWorld( new Point3D( this.X + xoff, this.Y + yoff, this.Z + zoff ), this.Map );
 		}
 
-		private void SetLockdown( Item i, bool locked )
+        public void SetSignTowerCastle(int xoff, int yoff, int zoff)
+        {
+            m_Sign = new HouseSign(this, m_KeyOwner, true);
+            m_Sign.MoveToWorld(new Point3D(this.X + xoff, this.Y + yoff, this.Z + zoff), this.Map);
+        }
+
+        public void SetChest(uint k, int xoff, int yoff, int zoff)
+        {
+            m_Chest = new TentChest(this);
+            m_Chest.Locked = true;
+            m_Chest.KeyValue = k;
+
+            m_Chest.MoveToWorld(new Point3D(xoff + this.X, yoff + this.Y, zoff + this.Z), this.Map);
+        }
+
+        private void SetLockdown( Item i, bool locked )
 		{
 			SetLockdown( i, locked, false );
 		}
@@ -2485,7 +2561,24 @@ namespace Server.Multis
 			writer.Write( m_Sign );
 			writer.Write( m_Trash );
 
-			writer.WriteItemList( m_Doors, true );
+            writer.Write(m_Chest);
+            writer.Write((uint)m_KeyOwner);
+
+            writer.Write(m_SmallForge);
+            writer.Write(m_LargeForge);
+            writer.Write(m_Anvil);
+            writer.Write(m_Loom);
+            writer.Write(m_SpinningWheel1);
+            writer.Write(m_SpinningWheel2);
+            writer.Write(m_Oven);
+            writer.Write(m_Fireplace);
+            writer.Write(m_Mill);
+            writer.Write(m_Training1);
+            writer.Write(m_Training2);
+            writer.Write(m_Pick1);
+            writer.Write(m_Pick2);
+
+            writer.WriteItemList( m_Doors, true );
 			writer.WriteItemList( m_LockDowns, true );
 			//writer.WriteItemList( m_Secures, true );
 
@@ -2668,7 +2761,24 @@ namespace Server.Multis
 					m_Sign = reader.ReadItem() as HouseSign;
 					m_Trash = reader.ReadItem() as TrashBarrel;
 
-					m_Doors = reader.ReadItemList();
+                    m_Chest = reader.ReadItem() as TentChest;
+                    m_KeyOwner = reader.ReadUInt();
+
+                    m_SmallForge = reader.ReadItem() as SmallForgeAddon;
+                    m_LargeForge = reader.ReadItem() as LargeForgeSouthHouseAddon;
+                    m_Anvil = reader.ReadItem() as AnvilEastAddon;
+                    m_Loom = reader.ReadItem() as LoomSouthAddon;
+                    m_SpinningWheel1 = reader.ReadItem() as SpinningwheelEastAddon;
+                    m_SpinningWheel2 = reader.ReadItem() as SpinningwheelSouthAddon;
+                    m_Oven = reader.ReadItem() as StoneOvenSouthAddon;
+                    m_Fireplace = reader.ReadItem() as GrayBrickFireplaceSouthAddon;
+                    m_Mill = reader.ReadItem() as FlourMillSouthAddon;
+                    m_Training1 = reader.ReadItem() as TrainingDummyEastAddon;
+                    m_Training2 = reader.ReadItem() as TrainingDummySouthAddon;
+                    m_Pick1 = reader.ReadItem() as PickpocketDipEastAddon;
+                    m_Pick2 = reader.ReadItem() as PickpocketDipSouthAddon;
+
+                    m_Doors = reader.ReadItemList();
 					m_LockDowns = reader.ReadItemList();
 
 					for ( int i = 0; i < m_LockDowns.Count; ++i )

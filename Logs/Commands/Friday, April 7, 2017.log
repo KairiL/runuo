@@ -1,0 +1,325 @@
+##############################
+Log started on 4/7/2017 4:06:19 AM
+
+4/7/2017 4:06:47 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/7/2017 4:06:55 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add craftedteleporter'
+4/7/2017 4:06:56 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5384, 1085, 0) in Felucca: "craftedteleporter"
+4/7/2017 4:06:56 AM: 127.0.0.1: Serials: 0x40000D40; 
+4/7/2017 4:07:22 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'who '
+4/7/2017 4:07:35 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') bringing 0xF2 "Kairi1.0" ('kairi1.0') to Location (5383, 1084, 0), Map Felucca
+4/7/2017 4:07:48 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm inc stam 100'
+4/7/2017 4:07:56 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set str 125'
+4/7/2017 4:07:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'str' of 0xF2 "Kairi1.0" ('kairi1.0') to '125'
+4/7/2017 4:09:39 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/7/2017 4:10:21 AM
+
+4/7/2017 4:10:28 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/7/2017 4:10:39 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add craftedteleporter'
+4/7/2017 4:10:40 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5385, 1086, 0) in Felucca: "craftedteleporter"
+4/7/2017 4:10:40 AM: 127.0.0.1: Serials: 0x400008C7; 
+4/7/2017 4:10:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add craftedteleporter'
+4/7/2017 4:10:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5388, 1086, 0) in Felucca: "craftedteleporter"
+4/7/2017 4:10:59 AM: 127.0.0.1: Serials: 0x40000910; 
+4/7/2017 4:11:01 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add tinkerbell'
+4/7/2017 4:11:03 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5384, 1084, 0) in Felucca: "tinkerbell"
+4/7/2017 4:11:03 AM: 127.0.0.1: Serials: 0x40000912; 
+4/7/2017 4:11:11 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 4:11:16 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Sibling' of 0x400008C7 (CraftedTeleporter) to '0x40000910 "CraftedTeleporter"'
+4/7/2017 4:11:18 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 4:11:25 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Sibling' of 0x40000910 (CraftedTeleporter) to '0x400008C7 "CraftedTeleporter"'
+4/7/2017 4:11:55 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'TrapOwner' of 0x40000910 (CraftedTeleporter) to '0xF2 "Kairi1.0"'
+4/7/2017 4:24:12 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get z'
+4/7/2017 4:24:14 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get z'
+4/7/2017 4:27:51 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+4/7/2017 4:27:53 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x400008C7 (CraftedTeleporter) to (5385, 1088, 0)
+4/7/2017 4:27:54 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+4/7/2017 4:27:56 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x40000910 (CraftedTeleporter) to (5386, 1085, 0)
+4/7/2017 4:39:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/7/2017 4:48:58 AM
+
+4/7/2017 4:49:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/7/2017 4:49:28 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add craftedteleporter'
+4/7/2017 4:49:29 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5384, 1084, 0) in Felucca: "craftedteleporter"
+4/7/2017 4:49:29 AM: 127.0.0.1: Serials: 0x40000BD7; 
+4/7/2017 4:49:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add craftedteleporter'
+4/7/2017 4:49:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5387, 1083, 0) in Felucca: "craftedteleporter"
+4/7/2017 4:49:32 AM: 127.0.0.1: Serials: 0x40000BDA; 
+4/7/2017 4:49:34 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 4:49:42 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Sibling' of 0x40000BDA (CraftedTeleporter) to '0x40000BD7 "CraftedTeleporter"'
+4/7/2017 4:49:47 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add craftedteleporter'
+4/7/2017 4:49:48 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5383, 1084, 0) in Felucca: "craftedteleporter"
+4/7/2017 4:49:48 AM: 127.0.0.1: Serials: 0x40000BFA; 
+4/7/2017 4:49:54 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Sibling' of 0x40000BDA (CraftedTeleporter) to '0x40000BFA "CraftedTeleporter"'
+4/7/2017 4:49:56 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 4:50:01 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Sibling' of 0x40000BFA (CraftedTeleporter) to '0x40000BDA "CraftedTeleporter"'
+4/7/2017 4:56:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/7/2017 5:07:50 AM
+
+4/7/2017 5:08:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/7/2017 5:08:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add craftedteleporter'
+4/7/2017 5:08:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5383, 1086, 0) in Felucca: "craftedteleporter"
+4/7/2017 5:08:31 AM: 127.0.0.1: Serials: 0x4000078F; 
+4/7/2017 5:08:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add craftedteleporter'
+4/7/2017 5:08:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5386, 1086, 0) in Felucca: "craftedteleporter"
+4/7/2017 5:08:32 AM: 127.0.0.1: Serials: 0x40000791; 
+4/7/2017 5:08:41 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'link '
+4/7/2017 5:08:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add door'
+4/7/2017 5:08:48 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add irondoor'
+4/7/2017 5:08:54 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go britain'
+4/7/2017 5:09:00 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 5:09:15 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go '
+4/7/2017 5:09:20 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+4/7/2017 5:09:28 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 5:09:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 5:09:38 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Sibling' of 0x4000078F (CraftedTeleporter) to '0x40000791 "CraftedTeleporter"'
+4/7/2017 5:09:41 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 5:09:48 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Sibling' of 0x40000791 (CraftedTeleporter) to '0x4000078F "CraftedTeleporter"'
+4/7/2017 5:10:17 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+4/7/2017 5:10:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x40000791 (CraftedTeleporter) to (5382, 1094, 0)
+4/7/2017 5:10:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+4/7/2017 5:10:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x40000791 (CraftedTeleporter) to (5383, 1094, 0)
+4/7/2017 5:11:51 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 5:11:54 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 5:13:03 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add teleporter'
+4/7/2017 5:13:04 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5380, 1089, 0) in Felucca: "teleporter"
+4/7/2017 5:13:04 AM: 127.0.0.1: Serials: 0x40000BEC; 
+4/7/2017 5:13:05 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add teleporter'
+4/7/2017 5:13:06 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5380, 1093, 0) in Felucca: "teleporter"
+4/7/2017 5:13:06 AM: 127.0.0.1: Serials: 0x40000BF0; 
+4/7/2017 5:13:08 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 5:13:16 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'PointDest' of 0x40000BEC (Teleporter) to '(5380, 1093, 0)'
+4/7/2017 5:13:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 5:13:22 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'PointDest' of 0x40000BF0 (Teleporter) to '(5382, 1090, 0)'
+4/7/2017 5:13:26 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'PointDest' of 0x40000BF0 (Teleporter) to '(5380, 1089, 0)'
+4/7/2017 5:13:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm set visible true'
+4/7/2017 5:13:38 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'visible' of 0x40000BEC (Teleporter) to 'True'
+4/7/2017 5:13:39 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'visible' of 0x40000BF0 (Teleporter) to 'True'
+4/7/2017 5:13:52 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'visible' of 0x40000BEC (Teleporter) to 'True'
+4/7/2017 5:13:54 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 5:17:00 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/7/2017 5:17:20 AM
+
+4/7/2017 5:17:27 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/7/2017 5:18:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 5:18:53 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 5:18:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Sibling' of 0x4000078F (CraftedTeleporter) to '0x40000791 "CraftedTeleporter"'
+4/7/2017 5:19:02 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 5:19:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Sibling' of 0x40000791 (CraftedTeleporter) to '0x4000078F "CraftedTeleporter"'
+4/7/2017 5:22:34 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm remove'
+4/7/2017 5:22:38 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/7/2017 5:25:04 AM
+
+4/7/2017 5:25:20 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/7/2017 5:25:33 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add craftedteleporter'
+4/7/2017 5:25:36 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5383, 1085, 0) in Felucca: "craftedteleporter"
+4/7/2017 5:25:36 AM: 127.0.0.1: Serials: 0x400006E1; 
+4/7/2017 5:25:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add craftedteleporter'
+4/7/2017 5:25:38 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5382, 1094, 0) in Felucca: "craftedteleporter"
+4/7/2017 5:25:38 AM: 127.0.0.1: Serials: 0x400006E2; 
+4/7/2017 5:25:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+4/7/2017 5:25:45 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x400006E2 (CraftedTeleporter) to (5383, 1094, 0)
+4/7/2017 5:25:49 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 5:25:54 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Sibling' of 0x400006E2 (CraftedTeleporter) to '0x400006E1 "CraftedTeleporter"'
+4/7/2017 5:25:55 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 5:25:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Sibling' of 0x400006E1 (CraftedTeleporter) to '0x400006E2 "CraftedTeleporter"'
+4/7/2017 5:27:26 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 5:31:40 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm remove'
+4/7/2017 5:31:41 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x400006E1 (CraftedTeleporter)
+4/7/2017 5:31:43 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x400006E2 (CraftedTeleporter)
+4/7/2017 5:43:14 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get location'
+4/7/2017 5:43:16 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get x'
+4/7/2017 5:46:11 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/7/2017 6:01:52 AM
+
+4/7/2017 6:02:09 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/7/2017 6:02:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add craftedteleporter'
+4/7/2017 6:02:21 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5382, 1085, 0) in Felucca: "craftedteleporter"
+4/7/2017 6:02:21 AM: 127.0.0.1: Serials: 0x40000D4F; 
+4/7/2017 6:02:23 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add craftedteleporter'
+4/7/2017 6:02:25 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5382, 1094, 0) in Felucca: "craftedteleporter"
+4/7/2017 6:02:25 AM: 127.0.0.1: Serials: 0x40000D51; 
+4/7/2017 6:13:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/7/2017 6:19:07 AM
+
+4/7/2017 6:19:53 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/7/2017 6:20:09 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 6:20:14 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'TrapOwner' of 0x40000D4F (CraftedTeleporter) to '0xF2 "Kairi1.0"'
+4/7/2017 6:20:16 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 6:20:23 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'TrapOwner' of 0x40000D51 (CraftedTeleporter) to '0xF2 "Kairi1.0"'
+4/7/2017 6:20:50 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 6:22:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/7/2017 6:26:18 AM
+
+4/7/2017 6:26:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/7/2017 6:26:55 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 6:27:04 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 6:27:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 6:53:11 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/7/2017 7:32:29 AM
+
+4/7/2017 7:32:34 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/7/2017 7:48:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/7/2017 7:48:48 AM
+
+4/7/2017 7:48:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/7/2017 7:49:28 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 7:51:55 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/7/2017 7:52:20 AM
+
+4/7/2017 7:52:26 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/7/2017 7:52:27 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/7/2017 7:52:50 AM
+
+4/7/2017 7:52:53 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/7/2017 7:53:28 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 7:54:12 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/7/2017 7:54:33 AM
+
+4/7/2017 7:54:36 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/7/2017 7:54:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 7:54:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') unhiding 0xF1 "Kai" ('kairi')
+4/7/2017 7:54:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'self unhide'
+4/7/2017 7:57:43 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add craftedteleporter'
+4/7/2017 7:57:45 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5384, 1093, 0) in Felucca: "craftedteleporter"
+4/7/2017 7:57:45 AM: 127.0.0.1: Serials: 0x40000BFD; 
+4/7/2017 7:57:52 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 7:58:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/7/2017 7:59:06 AM
+
+4/7/2017 7:59:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/7/2017 7:59:20 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 8:02:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/7/2017 8:03:03 AM
+
+4/7/2017 8:03:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/7/2017 8:03:18 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 8:05:46 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/7/2017 8:06:06 AM
+
+4/7/2017 8:06:09 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/7/2017 8:06:40 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 8:07:14 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get name'
+4/7/2017 8:07:16 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get name'
+4/7/2017 8:07:18 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get name'
+4/7/2017 8:07:20 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get name'
+4/7/2017 8:08:03 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/7/2017 8:10:07 AM
+
+4/7/2017 8:11:06 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/7/2017 8:11:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/7/2017 8:11:50 AM
+
+4/7/2017 8:11:53 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/7/2017 8:14:40 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/7/2017 8:15:00 AM
+
+4/7/2017 8:15:26 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/7/2017 8:15:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 8:18:27 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/7/2017 8:18:50 AM
+
+4/7/2017 8:19:06 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/7/2017 8:20:16 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 8:21:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 8:21:49 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 8:22:20 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm remove'
+4/7/2017 8:22:22 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40001189 (AgilityPotion)
+4/7/2017 8:22:22 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40001667 (GreaterAgilityPotion)
+4/7/2017 8:22:23 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x400011E4 (Bottle)
+4/7/2017 8:22:24 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40000684 (GreaterConflagrationPotion)
+4/7/2017 8:22:25 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40000728 (GreaterExplosionPotion)
+4/7/2017 8:22:26 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40000541 (FeeblemindScroll)
+4/7/2017 8:22:27 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40000543 (StrengthScroll)
+4/7/2017 8:22:29 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x4000087E (Gold)
+4/7/2017 8:23:18 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 8:26:20 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/7/2017 8:26:43 AM
+
+4/7/2017 8:26:46 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/7/2017 8:26:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 8:32:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/7/2017 8:32:58 AM
+
+4/7/2017 8:33:08 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/7/2017 8:34:25 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/7/2017 8:34:47 AM
+
+4/7/2017 8:34:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/7/2017 8:35:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'res '
+4/7/2017 8:36:00 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') resurrecting 0xF2 "Kairi1.0" ('kairi1.0')
+4/7/2017 8:46:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/7/2017 8:47:20 AM
+
+4/7/2017 8:47:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/7/2017 8:50:39 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/7/2017 8:50:40 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40000D51 (CraftedTeleporter)
+4/7/2017 8:50:41 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm remove'
+4/7/2017 8:50:43 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40000BF0 (Teleporter)
+4/7/2017 8:50:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40000BEC (Teleporter)
+4/7/2017 8:50:50 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add craftedteleporter'
+4/7/2017 8:50:51 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5383, 1092, 0) in Felucca: "craftedteleporter"
+4/7/2017 8:50:51 AM: 127.0.0.1: Serials: 0x40001264; 
+4/7/2017 8:50:52 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 8:50:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'TrapOwner' of 0x40001264 (CraftedTeleporter) to '0xF2 "Kairi1.0"'
+4/7/2017 8:51:03 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set hits 100'
+4/7/2017 8:51:04 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'hits' of 0xF2 "Kairi1.0" ('kairi1.0') to '100'
+4/7/2017 8:53:36 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/7/2017 8:55:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go britain'
+4/7/2017 8:55:16 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+4/7/2017 9:01:40 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'who '
+4/7/2017 9:01:43 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0xF2 "Kairi1.0" ('kairi1.0'), Location (5384, 1091, 0), Map Felucca
+4/7/2017 9:01:56 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/7/2017 9:01:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40001264 (CraftedTeleporter)
+4/7/2017 9:03:05 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go britain'
+4/7/2017 9:03:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+4/7/2017 9:03:28 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add craftedteleporte'
+4/7/2017 9:03:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1434, 1689, 21) in Felucca: "CraftedTeleporterComponents"
+4/7/2017 9:03:30 AM: 127.0.0.1: Serials: 0x4000189D; 
+4/7/2017 9:03:38 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/7/2017 9:03:40 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x4000189E (CraftedTeleporter)
+4/7/2017 9:04:12 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'who '
+4/7/2017 9:04:15 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') bringing 0xF2 "Kairi1.0" ('kairi1.0') to Location (1437, 1687, 21), Map Felucca
+4/7/2017 9:15:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add tinkertools'
+4/7/2017 9:15:45 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1433, 1687, 21) in Felucca: "tinkertools"
+4/7/2017 9:15:45 AM: 127.0.0.1: Serials: 0x40001B12; 
+4/7/2017 9:16:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add blankscroll'
+4/7/2017 9:16:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1433, 1688, 21) in Felucca: "blankscroll"
+4/7/2017 9:16:32 AM: 127.0.0.1: Serials: 0x40001B20; 
+4/7/2017 9:18:49 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/7/2017 9:20:36 AM
+
+4/7/2017 9:21:33 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/7/2017 9:21:39 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add tinkerstools'
+4/7/2017 9:21:40 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1433, 1688, 21) in Felucca: "tinkerstools"
+4/7/2017 9:21:40 AM: 127.0.0.1: Serials: 0x400008BC; 
+4/7/2017 9:23:01 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/7/2017 9:23:03 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40001B20 (BlankScroll)
+4/7/2017 9:28:41 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+##############################
+Log started on 4/7/2017 11:28:42 PM
+

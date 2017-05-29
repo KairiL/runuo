@@ -108,7 +108,7 @@ namespace Server.Engines.Craft
 							else
 							{
 								if ( damage > (int)(skillValue * 0.3) )
-									damage = (int)(skillValue * 0.3);
+									damage = (int)(skillValue * 0.3);//max 33
 
 								damage += 30;
 
@@ -123,7 +123,7 @@ namespace Server.Engines.Craft
 
 									if ( v > 0 )
 									{
-										g.Hits += (v*5+(int)(from.Skills[SkillName.Blacksmith].Value/5));//max 36.8 w/o ancient hammer
+										g.Hits += (v*5+(int)(from.Skills[SkillName.Blacksmith].Value / 5));//max 36.8 w/o ancient hammer
                                         g.Hits += (int)(from.Skills[SkillName.Tailoring].Value / 5);//max24
                                         g.Hits += (int)(from.Skills[SkillName.ArmsLore].Value / 5);//max24
 

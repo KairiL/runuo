@@ -12,15 +12,32 @@ namespace Server.Multis
 	{
 		private BaseHouse m_Owner;
 		private Mobile m_OrgOwner;
+        private uint m_KeyOwner;
 
-		public HouseSign( BaseHouse owner ) : base( 0xBD2 )
+        public HouseSign( BaseHouse owner ) : base( 0xBD2 )
 		{
 			m_Owner = owner;
 			m_OrgOwner = m_Owner.Owner;
 			Movable = false;
 		}
+        public HouseSign(BaseHouse owner, uint keyValue) : base(0xBD2)
+        {
+            m_Owner = owner;
+            m_OrgOwner = m_Owner.Owner;
+            m_KeyOwner = keyValue;
+            Movable = false;
+        }
 
-		public HouseSign( Serial serial ) : base( serial )
+        public HouseSign(BaseHouse owner, uint keyValue, bool TowerCastle)
+            : base(0xBD0)
+        {
+            m_Owner = owner;
+            m_OrgOwner = m_Owner.Owner;
+            m_KeyOwner = keyValue;
+            Movable = false;
+        }
+
+        public HouseSign( Serial serial ) : base( serial )
 		{
 		}
 
@@ -280,7 +297,8 @@ namespace Server.Multis
 
 			writer.Write( m_Owner );
 			writer.Write( m_OrgOwner );
-		}
+            writer.Write((uint)m_KeyOwner);
+        }
 
 		public override void Deserialize( GenericReader reader )
 		{
@@ -294,8 +312,9 @@ namespace Server.Multis
 				{
 					m_Owner = reader.ReadItem() as BaseHouse;
 					m_OrgOwner = reader.ReadMobile();
+                    m_KeyOwner = reader.ReadUInt();
 
-					break;
+                    break;
 				}
 			}
 

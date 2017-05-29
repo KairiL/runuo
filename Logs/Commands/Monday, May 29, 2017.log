@@ -1,0 +1,294 @@
+##############################
+Log started on 5/29/2017 1:41:03 AM
+
+5/29/2017 7:33:57 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+5/29/2017 7:34:42 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'who '
+5/29/2017 7:34:46 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x772 "Kairi" ('kairi1.0'), Location (995, 520, -50), Map Malas
+5/29/2017 7:35:12 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+5/29/2017 7:35:34 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'LowerRegCost' of ... to '20'
+5/29/2017 7:40:00 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+5/29/2017 7:40:07 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go britain'
+5/29/2017 7:40:09 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/29/2017 7:40:17 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+5/29/2017 7:40:19 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40034253 (NecromancerSpellbook)
+5/29/2017 7:40:21 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+5/29/2017 7:40:47 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'allspells '
+5/29/2017 7:40:49 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') filling spellbook 0x4003425E (NecromancerSpellbook)
+5/29/2017 8:43:51 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'speedboost '
+5/29/2017 8:43:56 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/29/2017 8:44:07 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/29/2017 8:44:24 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/29/2017 8:44:25 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/29/2017 8:44:40 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'add soulwell'
+5/29/2017 8:45:27 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'add soulforge'
+5/29/2017 8:45:51 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/29/2017 8:46:28 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'add barbedrunickit'
+5/29/2017 8:46:52 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') building at (5656, 1163, 0) in Felucca: "SewingKit"
+5/29/2017 8:46:52 PM: 97.83.147.229: Serials: 0x40035509; 
+5/29/2017 8:47:00 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'delete '
+5/29/2017 8:47:01 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') deleting 0x40035509 (SewingKit)
+5/29/2017 8:49:13 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'Get ItemID'
+5/29/2017 8:49:22 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'add 3834'
+5/29/2017 8:49:36 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'help '
+5/29/2017 8:51:31 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'wholist '
+5/29/2017 8:52:32 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/29/2017 10:41:09 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+5/29/2017 10:41:11 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go papua'
+5/29/2017 10:41:13 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/29/2017 10:42:20 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm add rock'
+5/29/2017 10:42:26 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6045, 2370, 46) in Felucca: "DecoRock"
+5/29/2017 10:42:26 PM: 127.0.0.1: Serials: 0x40037B12; 
+5/29/2017 10:42:33 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+5/29/2017 10:42:34 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40037B12 (DecoRock)
+5/29/2017 10:42:38 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6045, 2370, 46) in Felucca: "DecoRock2"
+5/29/2017 10:42:38 PM: 127.0.0.1: Serials: 0x40037B15; 
+5/29/2017 10:42:46 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm add decorock2 set movable false'
+5/29/2017 10:42:49 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6043, 2373, 43) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:42:49 PM: 127.0.0.1: Serials: 0x40037B1C; 
+5/29/2017 10:42:50 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6043, 2372, 45) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:42:50 PM: 127.0.0.1: Serials: 0x40037B1D; 
+5/29/2017 10:42:51 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6043, 2371, 47) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:42:51 PM: 127.0.0.1: Serials: 0x40037B1E; 
+5/29/2017 10:42:52 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6043, 2370, 46) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:42:52 PM: 127.0.0.1: Serials: 0x40037B1F; 
+5/29/2017 10:42:53 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6043, 2369, 47) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:42:53 PM: 127.0.0.1: Serials: 0x40037B20; 
+5/29/2017 10:42:55 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6043, 2368, 46) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:42:55 PM: 127.0.0.1: Serials: 0x40037B22; 
+5/29/2017 10:42:56 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6043, 2367, 44) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:42:56 PM: 127.0.0.1: Serials: 0x40037B23; 
+5/29/2017 10:43:03 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6042, 2366, 46) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:43:03 PM: 127.0.0.1: Serials: 0x40037B24; 
+5/29/2017 10:43:04 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6042, 2365, 45) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:43:04 PM: 127.0.0.1: Serials: 0x40037B25; 
+5/29/2017 10:43:05 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6042, 2364, 45) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:43:05 PM: 127.0.0.1: Serials: 0x40037B26; 
+5/29/2017 10:43:06 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6042, 2363, 47) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:43:06 PM: 127.0.0.1: Serials: 0x40037B27; 
+5/29/2017 10:43:07 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6043, 2363, 48) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:43:07 PM: 127.0.0.1: Serials: 0x40037B28; 
+5/29/2017 10:43:08 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6043, 2362, 46) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:43:08 PM: 127.0.0.1: Serials: 0x40037B29; 
+5/29/2017 10:43:10 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6044, 2362, 43) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:43:10 PM: 127.0.0.1: Serials: 0x40037B2B; 
+5/29/2017 10:43:14 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6045, 2362, 47) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:43:14 PM: 127.0.0.1: Serials: 0x40037B2E; 
+5/29/2017 10:43:16 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6045, 2363, 47) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:43:16 PM: 127.0.0.1: Serials: 0x40037B2F; 
+5/29/2017 10:43:18 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6046, 2364, 62) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:43:18 PM: 127.0.0.1: Serials: 0x40037B30; 
+5/29/2017 10:43:20 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6046, 2363, 42) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:43:20 PM: 127.0.0.1: Serials: 0x40037B31; 
+5/29/2017 10:43:22 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6047, 2363, 45) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:43:22 PM: 127.0.0.1: Serials: 0x40037B33; 
+5/29/2017 10:43:23 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6047, 2364, 45) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:43:23 PM: 127.0.0.1: Serials: 0x40037B35; 
+5/29/2017 10:43:27 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6048, 2364, 47) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:43:27 PM: 127.0.0.1: Serials: 0x40037B38; 
+5/29/2017 10:43:29 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6048, 2365, 44) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:43:29 PM: 127.0.0.1: Serials: 0x40037B39; 
+5/29/2017 10:43:30 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6047, 2365, 46) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:43:30 PM: 127.0.0.1: Serials: 0x40037B3A; 
+5/29/2017 10:43:32 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6046, 2365, 48) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:43:32 PM: 127.0.0.1: Serials: 0x40037B3B; 
+5/29/2017 10:43:33 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6045, 2363, 47) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:43:33 PM: 127.0.0.1: Serials: 0x40037B3C; 
+5/29/2017 10:43:35 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6045, 2364, 43) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:43:35 PM: 127.0.0.1: Serials: 0x40037B51; 
+5/29/2017 10:43:37 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6044, 2364, 43) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:43:37 PM: 127.0.0.1: Serials: 0x40037B56; 
+5/29/2017 10:43:42 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/29/2017 10:43:49 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm add decorock2 set movable false'
+5/29/2017 10:43:54 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6044, 2367, 46) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:43:54 PM: 127.0.0.1: Serials: 0x40037B7A; 
+5/29/2017 10:43:55 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6044, 2368, 47) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:43:55 PM: 127.0.0.1: Serials: 0x40037B7D; 
+5/29/2017 10:43:56 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6045, 2368, 45) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:43:56 PM: 127.0.0.1: Serials: 0x40037B80; 
+5/29/2017 10:43:58 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6045, 2367, 45) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:43:58 PM: 127.0.0.1: Serials: 0x40037B83; 
+5/29/2017 10:44:03 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6048, 2366, 44) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:44:03 PM: 127.0.0.1: Serials: 0x40037B8E; 
+5/29/2017 10:44:05 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6047, 2366, 43) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:44:05 PM: 127.0.0.1: Serials: 0x40037B94; 
+5/29/2017 10:44:07 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6046, 2366, 46) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:44:07 PM: 127.0.0.1: Serials: 0x40037B97; 
+5/29/2017 10:44:10 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6046, 2367, 46) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:44:10 PM: 127.0.0.1: Serials: 0x40037B9C; 
+5/29/2017 10:44:11 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6046, 2368, 46) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:44:11 PM: 127.0.0.1: Serials: 0x40037B9F; 
+5/29/2017 10:44:43 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6047, 2367, 46) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:44:43 PM: 127.0.0.1: Serials: 0x40037BFA; 
+5/29/2017 10:44:44 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6047, 2368, 48) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:44:44 PM: 127.0.0.1: Serials: 0x40037BFD; 
+5/29/2017 10:45:28 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6049, 2370, 63) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:45:28 PM: 127.0.0.1: Serials: 0x40037C73; 
+5/29/2017 10:45:33 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6051, 2367, 42) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:45:33 PM: 127.0.0.1: Serials: 0x40037C7D; 
+5/29/2017 10:45:34 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6050, 2367, 45) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:45:34 PM: 127.0.0.1: Serials: 0x40037C7E; 
+5/29/2017 10:45:36 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6049, 2367, 46) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:45:36 PM: 127.0.0.1: Serials: 0x40037C7F; 
+5/29/2017 10:45:41 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6049, 2368, 47) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:45:41 PM: 127.0.0.1: Serials: 0x40037C82; 
+5/29/2017 10:45:44 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6049, 2369, 43) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:45:44 PM: 127.0.0.1: Serials: 0x40037C84; 
+5/29/2017 10:45:46 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6048, 2369, 42) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:45:46 PM: 127.0.0.1: Serials: 0x40037C85; 
+5/29/2017 10:45:48 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6047, 2369, 42) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:45:48 PM: 127.0.0.1: Serials: 0x40037C8A; 
+5/29/2017 10:45:52 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6047, 2370, 44) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:45:52 PM: 127.0.0.1: Serials: 0x40037C8E; 
+5/29/2017 10:45:54 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6048, 2370, 43) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:45:54 PM: 127.0.0.1: Serials: 0x40037C9A; 
+5/29/2017 10:45:59 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6052, 2368, 46) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:45:59 PM: 127.0.0.1: Serials: 0x40037CA9; 
+5/29/2017 10:46:00 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6052, 2369, 47) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:46:00 PM: 127.0.0.1: Serials: 0x40037CAE; 
+5/29/2017 10:46:01 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6051, 2369, 47) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:46:01 PM: 127.0.0.1: Serials: 0x40037CB1; 
+5/29/2017 10:46:03 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6051, 2370, 46) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:46:03 PM: 127.0.0.1: Serials: 0x40037CB4; 
+5/29/2017 10:46:06 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6050, 2370, 47) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:46:06 PM: 127.0.0.1: Serials: 0x40037CB9; 
+5/29/2017 10:46:08 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/29/2017 10:46:11 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm add decorock2 set movable false'
+5/29/2017 10:46:12 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6052, 2371, 43) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:46:12 PM: 127.0.0.1: Serials: 0x40037CFC; 
+5/29/2017 10:46:13 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6064, 2368, 65) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:46:13 PM: 127.0.0.1: Serials: 0x40037CFF; 
+5/29/2017 10:46:13 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6051, 2371, 46) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:46:13 PM: 127.0.0.1: Serials: 0x40037D00; 
+5/29/2017 10:46:18 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6052, 2373, 44) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:46:18 PM: 127.0.0.1: Serials: 0x40037D0B; 
+5/29/2017 10:46:20 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6052, 2374, 45) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:46:20 PM: 127.0.0.1: Serials: 0x40037D0E; 
+5/29/2017 10:46:21 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/29/2017 10:46:24 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/29/2017 10:46:29 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm add decorock2 set movable false'
+5/29/2017 10:46:32 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6051, 2372, 45) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:46:32 PM: 127.0.0.1: Serials: 0x40037D2E; 
+5/29/2017 10:46:33 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6051, 2373, 44) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:46:33 PM: 127.0.0.1: Serials: 0x40037D2F; 
+5/29/2017 10:46:36 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6051, 2375, 43) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:46:36 PM: 127.0.0.1: Serials: 0x40037D30; 
+5/29/2017 10:46:37 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6050, 2375, 42) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:46:37 PM: 127.0.0.1: Serials: 0x40037D31; 
+5/29/2017 10:46:39 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6050, 2374, 43) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:46:39 PM: 127.0.0.1: Serials: 0x40037D3B; 
+5/29/2017 10:52:02 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6050, 2372, 45) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:52:02 PM: 127.0.0.1: Serials: 0x40037FD4; 
+5/29/2017 10:52:04 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6050, 2373, 45) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:52:04 PM: 127.0.0.1: Serials: 0x40037FDA; 
+5/29/2017 10:52:13 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6045, 2371, 43) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:52:13 PM: 127.0.0.1: Serials: 0x40037FED; 
+5/29/2017 10:52:14 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6046, 2371, 43) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:52:14 PM: 127.0.0.1: Serials: 0x40037FF0; 
+5/29/2017 10:52:17 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6045, 2372, 44) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:52:17 PM: 127.0.0.1: Serials: 0x40037FF6; 
+5/29/2017 10:52:23 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'wipe '
+5/29/2017 10:52:26 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') wiping from (6042, 2360, 47) to (6050, 2377, 48) in Felucca (Items, Mobiles)
+5/29/2017 10:52:28 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'wipe '
+5/29/2017 10:52:29 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') wiping from (6048, 2364, 47) to (6054, 2377, 47) in Felucca (Items, Mobiles)
+5/29/2017 10:52:34 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'tile decorock2'
+5/29/2017 10:52:38 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building from (6043, 2364, 45) to (6052, 2374, 68) in Felucca: "decorock2"
+5/29/2017 10:52:38 PM: 127.0.0.1: Serials: 0x40038026; 0x40038027; 0x40038028; 0x40038029; 0x4003802A; 0x4003802B; 0x4003802C; 0x4003802D; 0x4003802E; 0x4003802F; 0x40038030; 0x40038031; 0x40038032; 0x40038033; 0x40038034; 0x40038035; 0x40038036; 0x40038037; 0x40038038; 0x40038039; 0x4003803A; 0x4003803B; 0x4003803C; 0x4003803D; 0x4003803E; 0x4003803F; 0x40038040; 0x40038041; 0x40038042; 0x40038043; 0x40038044; 0x40038045; 0x40038046; 0x40038047; 0x40038048; 0x40038049; 0x4003804A; 0x4003804B; 0x4003804C; 0x4003804D; 0x4003804E; 0x4003804F; 0x40038050; 0x40038051; 0x40038052; 0x40038053; 0x40038054; 0x40038055; 0x40038056; 0x40038057; 0x40038058; 0x40038059; 0x4003805A; 0x4003805B; 0x4003805C; 0x4003805D; 0x40038060; 0x40038061; 0x40038062; 0x40038063; 0x40038064; 0x40038065; 0x40038066; 0x40038067; 0x40038068; 0x40038069; 0x4003806A; 0x4003806B; 0x4003806C; 0x4003806D; 0x4003806E; 0x4003806F; 0x40038070; 0x40038071; 0x40038072; 0x40038073; 0x40038074; 0x40038075; 0x40038076; 0x40038077; 0x40038078; 0x40038079; 0x4003807A; 0x4003807B; 0x4003807C; 0x4003807D; 0x4003807E; 0x4003807F; 0x40038080; 0x40038081; 0x40038082; 0x40038083; 0x40038084; 0x40038085; 0x40038086; 0x40038087; 0x40038088; 0x40038089; 0x4003808A; 0x4003808B; 0x4003808C; 0x4003808D; 0x4003808E; 0x4003808F; 0x40038090; 0x40038091; 0x40038092; 0x40038093; 0x40038094; 0x40038095; 
+5/29/2017 10:52:41 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'tile decorock2'
+5/29/2017 10:52:42 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building from (6041, 2361, 44) to (6047, 2362, 47) in Felucca: "decorock2"
+5/29/2017 10:52:42 PM: 127.0.0.1: Serials: 0x4003809D; 0x4003809E; 0x4003809F; 0x400380A0; 0x400380A1; 0x400380A2; 0x400380A3; 0x400380A4; 0x400380A5; 0x400380A6; 0x400380A7; 0x400380A8; 0x400380A9; 0x400380AA; 
+5/29/2017 10:52:44 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'tile decorock2'
+5/29/2017 10:52:46 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building from (6041, 2363, 45) to (6048, 2363, 47) in Felucca: "decorock2"
+5/29/2017 10:52:46 PM: 127.0.0.1: Serials: 0x400380BC; 0x400380BD; 0x400380BE; 0x400380C0; 0x400380C1; 0x400380C2; 0x400380C3; 0x400380C4; 
+5/29/2017 10:52:47 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'tile decorock2'
+5/29/2017 10:52:50 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building from (6047, 2375, 42) to (6051, 2376, 45) in Felucca: "decorock2"
+5/29/2017 10:52:50 PM: 127.0.0.1: Serials: 0x400380C8; 0x400380C9; 0x400380CA; 0x400380CB; 0x400380CC; 0x400380CD; 0x400380CE; 0x400380CF; 0x400380D0; 0x400380D1; 
+5/29/2017 10:52:52 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'tile decorock2'
+5/29/2017 10:52:53 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building from (6047, 2375, 46) to (6048, 2377, 49) in Felucca: "decorock2"
+5/29/2017 10:52:53 PM: 127.0.0.1: Serials: 0x400380D3; 0x400380D4; 0x400380D5; 0x400380D6; 0x400380D7; 0x400380D8; 
+5/29/2017 10:53:01 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+5/29/2017 10:53:03 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x4003804C (DecoRock2)
+5/29/2017 10:53:08 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'wipe '
+5/29/2017 10:53:11 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') wiping from (6041, 2361, 47) to (6053, 2376, 51) in Felucca (Items, Mobiles)
+5/29/2017 10:53:20 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'tile decorock2 set movable false'
+5/29/2017 10:53:26 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building from (6043, 2364, 55) to (6053, 2377, 68) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:53:26 PM: 127.0.0.1: Serials: 0x40038147; 0x40038148; 0x40038149; 0x4003814A; 0x4003814B; 0x4003814C; 0x4003814D; 0x4003814E; 0x4003814F; 0x40038150; 0x40038151; 0x40038152; 0x40038153; 0x40038154; 0x40038155; 0x40038156; 0x40038157; 0x40038158; 0x40038159; 0x4003815A; 0x4003815B; 0x4003815C; 0x4003815D; 0x4003815E; 0x4003815F; 0x40038160; 0x40038161; 0x40038162; 0x40038163; 0x40038164; 0x40038165; 0x40038166; 0x40038167; 0x40038168; 0x40038169; 0x4003816A; 0x4003816B; 0x4003816C; 0x4003816D; 0x4003816E; 0x40038171; 0x40038172; 0x40038173; 0x40038174; 0x40038175; 0x40038176; 0x40038177; 0x40038178; 0x40038179; 0x4003817A; 0x4003817B; 0x4003817C; 0x4003817D; 0x4003817E; 0x4003817F; 0x40038180; 0x40038181; 0x40038182; 0x40038183; 0x40038184; 0x40038185; 0x40038186; 0x40038187; 0x40038188; 0x4003818A; 0x4003818B; 0x4003818C; 0x4003818D; 0x4003818E; 0x4003818F; 0x40038190; 0x40038191; 0x40038192; 0x40038193; 0x40038194; 0x40038195; 0x40038196; 0x40038197; 0x40038198; 0x40038199; 0x4003819A; 0x4003819B; 0x4003819C; 0x4003819D; 0x4003819E; 0x4003819F; 0x400381A0; 0x400381A1; 0x400381A2; 0x400381A3; 0x400381A4; 0x400381A5; 0x400381A6; 0x400381A7; 0x400381A8; 0x400381A9; 0x400381AA; 0x400381AB; 0x400381AC; 0x400381AD; 0x400381AE; 0x400381AF; 0x400381B0; 0x400381B1; 0x400381B2; 0x400381B3; 0x400381B4; 0x400381B5; 0x400381B6; 0x400381B7; 0x400381B8; 0x400381B9; 0x400381BA; 0x400381BB; 0x400381BC; 0x400381BD; 0x400381BE; 0x400381BF; 0x400381C0; 0x400381C1; 0x400381C2; 0x400381C3; 0x400381C4; 0x400381C5; 0x400381C6; 0x400381C7; 0x400381C8; 0x400381C9; 0x400381CA; 0x400381CB; 0x400381CC; 0x400381CD; 0x400381CE; 0x400381CF; 0x400381D0; 0x400381D1; 0x400381D2; 0x400381D3; 0x400381D4; 0x400381D5; 0x400381D6; 0x400381D7; 0x400381D8; 0x400381D9; 0x400381DA; 0x400381DB; 0x400381DC; 0x400381DD; 0x400381DE; 0x400381DF; 0x400381E0; 0x400381E1; 0x400381E2; 0x400381E3; 
+5/29/2017 10:53:29 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'tile decorock2 set movable false'
+5/29/2017 10:53:31 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building from (6043, 2361, 44) to (6047, 2362, 67) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:53:31 PM: 127.0.0.1: Serials: 0x400381E6; 0x400381E7; 0x400381E8; 0x400381E9; 0x400381EA; 0x400381EB; 0x400381EC; 0x400381ED; 0x400381EE; 0x400381EF; 
+5/29/2017 10:53:33 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/29/2017 10:53:45 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'tile decorock2 set movable false'
+5/29/2017 10:53:51 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building from (6066, 2399, 43) to (6069, 2431, 49) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:53:51 PM: 127.0.0.1: Serials: 0x400381FF; 0x40038200; 0x40038201; 0x40038202; 0x40038203; 0x40038204; 0x40038205; 0x40038206; 0x40038207; 0x40038208; 0x40038209; 0x4003820A; 0x4003820B; 0x4003820C; 0x4003820D; 0x4003820E; 0x4003820F; 0x40038210; 0x40038211; 0x40038212; 0x40038213; 0x40038214; 0x40038215; 0x40038216; 0x40038217; 0x40038218; 0x40038219; 0x4003821A; 0x4003821B; 0x4003821C; 0x4003821D; 0x4003821E; 0x4003821F; 0x40038220; 0x40038221; 0x40038222; 0x40038223; 0x40038224; 0x40038225; 0x40038226; 0x40038227; 0x40038228; 0x40038229; 0x4003822A; 0x4003822B; 0x4003822C; 0x4003822D; 0x4003822E; 0x4003822F; 0x40038230; 0x40038231; 0x40038232; 0x40038233; 0x40038234; 0x40038235; 0x40038236; 0x40038237; 0x40038238; 0x40038239; 0x4003823A; 0x4003823B; 0x4003823C; 0x4003823D; 0x4003823E; 0x4003823F; 0x40038240; 0x40038241; 0x40038242; 0x40038243; 0x40038244; 0x40038245; 0x40038246; 0x40038247; 0x40038248; 0x40038249; 0x4003824A; 0x4003824B; 0x4003824C; 0x4003824D; 0x4003824F; 0x40038251; 0x40038252; 0x40038253; 0x40038254; 0x40038255; 0x40038256; 0x40038257; 0x40038258; 0x40038259; 0x4003825A; 0x4003825B; 0x4003825C; 0x4003825D; 0x4003825E; 0x4003825F; 0x40038260; 0x40038261; 0x40038262; 0x40038263; 0x40038264; 0x40038265; 0x40038266; 0x40038267; 0x40038268; 0x40038269; 0x4003826A; 0x4003826B; 0x4003826C; 0x4003826D; 0x4003826E; 0x4003826F; 0x40038270; 0x40038271; 0x40038272; 0x40038273; 0x40038274; 0x40038275; 0x40038276; 0x40038277; 0x40038278; 0x40038279; 0x4003827A; 0x4003827B; 0x4003827C; 0x4003827D; 0x4003827E; 0x4003827F; 0x40038280; 0x40038281; 0x40038282; 0x40038283; 0x40038284; 
+5/29/2017 10:53:55 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'tile decorock2 set movable false\'
+5/29/2017 10:53:57 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building from (6058, 2403, -5) to (6066, 2420, 47) in Felucca: "decorock2" "set" "movable" "false\"
+5/29/2017 10:53:57 PM: 127.0.0.1: Serials: 0x40038286; 0x40038287; 0x40038288; 0x40038289; 0x4003828A; 0x4003828B; 0x4003828C; 0x4003828D; 0x4003828E; 0x4003828F; 0x40038290; 0x40038291; 0x40038292; 0x40038293; 0x40038294; 0x40038295; 0x40038296; 0x40038297; 0x40038298; 0x40038299; 0x4003829A; 0x4003829B; 0x4003829C; 0x4003829D; 0x4003829E; 0x4003829F; 0x400382A0; 0x400382A1; 0x400382A2; 0x400382A3; 0x400382A4; 0x400382A5; 0x400382A6; 0x400382A7; 0x400382A8; 0x400382A9; 0x400382AA; 0x400382AB; 0x400382AC; 0x400382AD; 0x400382AE; 0x400382AF; 0x400382B0; 0x400382B1; 0x400382B2; 0x400382B3; 0x400382B4; 0x400382B5; 0x400382B6; 0x400382B7; 0x400382B8; 0x400382B9; 0x400382BA; 0x400382BB; 0x400382BC; 0x400382BD; 0x400382BE; 0x400382BF; 0x400382C0; 0x400382C1; 0x400382C2; 0x400382C3; 0x400382C4; 0x400382C5; 0x400382C6; 0x400382C7; 0x400382C8; 0x400382C9; 0x400382CA; 0x400382CB; 0x400382CC; 0x400382CD; 0x400382CE; 0x400382CF; 0x400382D0; 0x400382D1; 0x400382D2; 0x400382D3; 0x400382D4; 0x400382D5; 0x400382D6; 0x400382D7; 0x400382D8; 0x400382D9; 0x400382DA; 0x400382DB; 0x400382DC; 0x400382DD; 0x400382DE; 0x400382DF; 0x400382E0; 0x400382E1; 0x400382E2; 0x400382E3; 0x400382E4; 0x400382E5; 0x400382E6; 0x400382E7; 0x400382E8; 0x400382E9; 0x400382EA; 0x400382EB; 0x400382EC; 0x400382ED; 0x400382EE; 0x400382EF; 0x400382F0; 0x400382F1; 0x400382F2; 0x400382F3; 0x400382F4; 0x400382F5; 0x400382F6; 0x400382F7; 0x400382F8; 0x400382F9; 0x400382FA; 0x400382FB; 0x400382FC; 0x400382FD; 0x400382FE; 0x400382FF; 0x40038300; 0x40038301; 0x40038302; 0x40038303; 0x40038304; 0x40038305; 0x40038306; 0x40038307; 0x40038308; 0x40038309; 0x4003830A; 0x4003830B; 0x4003830C; 0x4003830D; 0x4003830E; 0x4003830F; 0x40038310; 0x40038311; 0x40038312; 0x40038313; 0x40038314; 0x40038315; 0x40038316; 0x40038317; 0x40038318; 0x40038319; 0x4003831A; 0x4003831B; 0x4003831C; 0x4003831D; 0x4003831E; 0x4003831F; 0x40038320; 0x40038321; 0x40038322; 0x40038323; 0x40038324; 0x40038325; 0x40038326; 0x40038327; 
+5/29/2017 10:53:59 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'tile decorock2 set movable false\'
+5/29/2017 10:54:00 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building from (6064, 2410, 43) to (6065, 2411, 47) in Felucca: "decorock2" "set" "movable" "false\"
+5/29/2017 10:54:00 PM: 127.0.0.1: Serials: 0x4003832A; 0x4003832B; 0x4003832C; 0x4003832D; 
+5/29/2017 10:54:02 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'tile decorock2 set movable false\'
+5/29/2017 10:54:04 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building from (6070, 2409, 42) to (6072, 2422, 42) in Felucca: "decorock2" "set" "movable" "false\"
+5/29/2017 10:54:04 PM: 127.0.0.1: Serials: 0x40038332; 0x40038333; 0x40038334; 0x40038335; 0x40038336; 0x40038337; 0x40038338; 0x40038339; 0x4003833A; 0x4003833B; 0x4003833C; 0x4003833D; 0x4003833E; 0x4003833F; 0x40038340; 0x40038341; 0x40038342; 0x40038343; 0x40038344; 0x40038345; 0x40038346; 0x40038347; 0x40038348; 0x40038349; 0x4003834A; 0x4003834B; 0x4003834C; 0x4003834D; 0x4003834E; 0x4003834F; 0x40038350; 0x40038351; 0x40038352; 0x40038353; 0x40038354; 0x40038355; 0x40038356; 0x40038357; 0x40038358; 0x40038359; 0x4003835A; 0x4003835B; 
+5/29/2017 10:54:07 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'tile decorock2 set movable false\'
+5/29/2017 10:54:10 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building from (6068, 2416, 64) to (6069, 2420, 68) in Felucca: "decorock2" "set" "movable" "false\"
+5/29/2017 10:54:10 PM: 127.0.0.1: Serials: 0x4003838A; 0x4003838B; 0x4003838C; 0x4003838D; 0x4003838E; 0x4003838F; 0x40038390; 0x40038391; 0x40038392; 0x40038393; 
+5/29/2017 10:54:16 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'tele '
+5/29/2017 10:54:19 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'tele '
+5/29/2017 10:54:23 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'tile decorock2 set movable false\'
+5/29/2017 10:54:30 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building from (6070, 2423, 46) to (6080, 2437, 55) in Felucca: "decorock2" "set" "movable" "false\"
+5/29/2017 10:54:30 PM: 127.0.0.1: Serials: 0x400383BF; 0x400383C0; 0x400383C1; 0x400383C2; 0x400383C3; 0x400383C5; 0x400383C6; 0x400383C7; 0x400383C8; 0x400383C9; 0x400383CA; 0x400383CB; 0x400383CC; 0x400383CD; 0x400383CE; 0x400383CF; 0x400383D0; 0x400383D1; 0x400383D2; 0x400383D3; 0x400383D4; 0x400383D5; 0x400383D6; 0x400383D7; 0x400383D8; 0x400383D9; 0x400383DA; 0x400383DB; 0x400383DC; 0x400383DD; 0x400383DE; 0x400383DF; 0x400383E0; 0x400383E1; 0x400383E2; 0x400383E3; 0x400383E4; 0x400383E5; 0x400383E6; 0x400383E7; 0x400383E8; 0x400383E9; 0x400383EA; 0x400383EB; 0x400383EC; 0x400383ED; 0x400383EE; 0x400383EF; 0x400383F0; 0x400383F1; 0x400383F2; 0x400383F3; 0x400383F4; 0x400383F5; 0x400383F6; 0x400383F7; 0x400383F8; 0x400383F9; 0x400383FA; 0x400383FB; 0x400383FC; 0x400383FD; 0x400383FE; 0x400383FF; 0x40038400; 0x40038401; 0x40038402; 0x40038403; 0x40038404; 0x40038405; 0x40038406; 0x40038407; 0x40038408; 0x40038409; 0x4003840A; 0x4003840B; 0x4003840C; 0x4003840D; 0x4003840E; 0x4003840F; 0x40038410; 0x40038411; 0x40038412; 0x40038413; 0x40038414; 0x40038415; 0x40038416; 0x40038417; 0x40038418; 0x40038419; 0x4003841A; 0x4003841B; 0x4003841C; 0x4003841D; 0x4003841E; 0x4003841F; 0x40038420; 0x40038421; 0x40038422; 0x40038423; 0x40038424; 0x40038425; 0x40038426; 0x40038427; 0x40038428; 0x40038429; 0x4003842A; 0x4003842B; 0x4003842C; 0x4003842D; 0x4003842E; 0x4003842F; 0x40038430; 0x40038431; 0x40038432; 0x40038433; 0x40038434; 0x40038435; 0x40038436; 0x40038437; 0x40038438; 0x40038439; 0x4003843A; 0x4003843B; 0x4003843C; 0x4003843D; 0x4003843E; 0x4003843F; 0x40038440; 0x40038441; 0x40038442; 0x40038443; 0x40038444; 0x40038445; 0x40038446; 0x40038447; 0x40038448; 0x40038449; 0x4003844A; 0x4003844B; 0x4003844C; 0x4003844D; 0x4003844E; 0x4003844F; 0x40038450; 0x40038451; 0x40038452; 0x40038453; 0x40038454; 0x40038455; 0x40038456; 0x40038457; 0x40038458; 0x40038459; 0x4003845A; 0x4003845B; 0x4003845C; 0x4003845D; 0x4003845E; 0x4003845F; 0x40038460; 0x40038461; 0x40038462; 0x40038463; 0x40038464; 
+5/29/2017 10:54:33 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm remove'
+5/29/2017 10:54:35 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40038456 (DecoRock2)
+5/29/2017 10:54:35 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40038457 (DecoRock2)
+5/29/2017 10:54:35 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40038458 (DecoRock2)
+5/29/2017 10:54:36 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40038459 (DecoRock2)
+5/29/2017 10:54:37 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x4003845B (DecoRock2)
+5/29/2017 10:54:37 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x4003844B (DecoRock2)
+5/29/2017 10:54:38 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x4003844A (DecoRock2)
+5/29/2017 10:54:40 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x4003844C (DecoRock2)
+5/29/2017 10:54:41 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x4003844D (DecoRock2)
+5/29/2017 10:54:42 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x400383CC (DecoRock2)
+5/29/2017 10:54:42 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x400383CB (DecoRock2)
+5/29/2017 10:54:42 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x400383CA (DecoRock2)
+5/29/2017 10:54:43 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x400383C9 (DecoRock2)
+5/29/2017 10:54:44 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x400383DA (DecoRock2)
+5/29/2017 10:54:45 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x400383EA (DecoRock2)
+5/29/2017 10:54:46 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x400383F9 (DecoRock2)
+5/29/2017 10:54:46 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x400383FA (DecoRock2)
+5/29/2017 10:54:47 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40038418 (DecoRock2)
+5/29/2017 10:54:47 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x4003840A (DecoRock2)
+5/29/2017 10:54:50 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40038428 (DecoRock2)
+5/29/2017 10:54:57 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'wipe '
+5/29/2017 10:54:59 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') wiping from (6068, 2423, 46) to (6081, 2437, 56) in Felucca (Items, Mobiles)
+5/29/2017 10:55:02 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/29/2017 10:55:06 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'wipe '
+5/29/2017 10:55:10 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') wiping from (6069, 2430, 46) to (6081, 2435, 50) in Felucca (Items, Mobiles)
+5/29/2017 10:55:13 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'wipe '
+5/29/2017 10:55:17 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') wiping from (6071, 2423, 46) to (6073, 2425, 52) in Felucca (Items, Mobiles)
+5/29/2017 10:55:18 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'wipe '
+5/29/2017 10:55:20 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') wiping from (6065, 2411, 45) to (6072, 2431, 51) in Felucca (Items, Mobiles)
+5/29/2017 10:55:23 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'wipe '
+5/29/2017 10:55:24 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') wiping from (6062, 2410, 15) to (6072, 2427, 48) in Felucca (Items, Mobiles)
+5/29/2017 10:55:32 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/29/2017 10:55:38 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'wipe '
+5/29/2017 10:55:41 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') wiping from (6063, 2400, 47) to (6070, 2414, 51) in Felucca (Items, Mobiles)
+5/29/2017 10:55:44 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/29/2017 10:55:52 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/29/2017 10:56:05 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'tile decorock2 set movable false'
+5/29/2017 10:56:12 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building from (6065, 2398, 45) to (6070, 2428, 46) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:56:12 PM: 127.0.0.1: Serials: 0x400384FB; 0x400384FC; 0x400384FD; 0x400384FE; 0x400384FF; 0x40038500; 0x40038501; 0x40038502; 0x40038503; 0x40038504; 0x40038505; 0x40038506; 0x40038507; 0x40038508; 0x40038509; 0x4003850A; 0x4003850B; 0x4003850C; 0x4003850D; 0x4003850E; 0x4003850F; 0x40038510; 0x40038511; 0x40038512; 0x40038513; 0x40038514; 0x40038515; 0x40038516; 0x40038517; 0x40038518; 0x40038519; 0x4003851A; 0x4003851B; 0x4003851C; 0x4003851D; 0x4003851E; 0x4003851F; 0x40038520; 0x40038521; 0x40038522; 0x40038523; 0x40038524; 0x40038525; 0x40038526; 0x40038527; 0x40038528; 0x40038529; 0x4003852A; 0x4003852B; 0x4003852C; 0x4003852D; 0x4003852E; 0x4003852F; 0x40038530; 0x40038531; 0x40038532; 0x40038533; 0x40038534; 0x40038535; 0x40038536; 0x40038537; 0x40038538; 0x40038539; 0x4003853A; 0x4003853B; 0x4003853C; 0x4003853D; 0x4003853E; 0x4003853F; 0x40038540; 0x40038541; 0x40038542; 0x40038543; 0x40038544; 0x40038545; 0x40038546; 0x40038547; 0x40038548; 0x40038549; 0x4003854A; 0x4003854B; 0x4003854C; 0x4003854D; 0x4003854E; 0x4003854F; 0x40038550; 0x40038551; 0x40038552; 0x40038553; 0x40038554; 0x40038555; 0x40038556; 0x40038557; 0x40038558; 0x40038559; 0x4003855A; 0x4003855B; 0x4003855C; 0x4003855D; 0x4003855E; 0x4003855F; 0x40038560; 0x40038561; 0x40038562; 0x40038563; 0x40038564; 0x40038565; 0x40038566; 0x40038567; 0x40038568; 0x40038569; 0x4003856A; 0x4003856B; 0x4003856C; 0x4003856D; 0x4003856E; 0x4003856F; 0x40038570; 0x40038571; 0x40038572; 0x40038573; 0x40038574; 0x40038575; 0x40038576; 0x40038577; 0x40038578; 0x40038579; 0x4003857A; 0x4003857B; 0x4003857C; 0x4003857D; 0x4003857E; 0x4003857F; 0x40038580; 0x40038581; 0x40038582; 0x40038583; 0x40038584; 0x40038585; 0x40038586; 0x40038587; 0x40038588; 0x40038589; 0x4003858A; 0x4003858B; 0x4003858C; 0x4003858D; 0x4003858E; 0x4003858F; 0x40038590; 0x40038591; 0x40038592; 0x40038593; 0x40038594; 0x40038595; 0x40038596; 0x40038597; 0x40038598; 0x40038599; 0x4003859A; 0x4003859B; 0x4003859C; 0x4003859D; 0x4003859E; 0x4003859F; 0x400385A0; 0x400385A1; 0x400385A2; 0x400385A3; 0x400385A4; 0x400385A5; 0x400385A6; 0x400385A7; 0x400385A8; 0x400385A9; 0x400385AA; 0x400385AB; 0x400385AC; 0x400385AD; 0x400385AE; 0x400385AF; 0x400385B0; 0x400385B1; 0x400385B2; 0x400385B3; 0x400385B4; 
+5/29/2017 10:56:15 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'tile decorock2 set movable false'
+5/29/2017 10:56:17 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building from (6071, 2417, 42) to (6073, 2428, 66) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:56:17 PM: 127.0.0.1: Serials: 0x400385C1; 0x400385C2; 0x400385C3; 0x400385C4; 0x400385C5; 0x400385C6; 0x400385C7; 0x400385C8; 0x400385C9; 0x400385CA; 0x400385CB; 0x400385CC; 0x400385CD; 0x400385CE; 0x400385CF; 0x400385D0; 0x400385D1; 0x400385D2; 0x400385D3; 0x400385D4; 0x400385D5; 0x400385D6; 0x400385D7; 0x400385D8; 0x400385D9; 0x400385DA; 0x400385DB; 0x400385DC; 0x400385DD; 0x400385DE; 0x400385DF; 0x400385E0; 0x400385E1; 0x400385E2; 0x400385E3; 0x400385E4; 
+5/29/2017 10:56:21 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/29/2017 10:56:24 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'tile decorock2 set movable false'
+5/29/2017 10:56:28 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building from (6064, 2400, 42) to (6064, 2411, 46) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:56:28 PM: 127.0.0.1: Serials: 0x400385F7; 0x400385F8; 0x400385F9; 0x400385FA; 0x400385FB; 0x400385FC; 0x400385FD; 0x400385FE; 0x400385FF; 0x40038600; 0x40038601; 0x40038602; 
+5/29/2017 10:56:30 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'tile decorock2 set movable false'
+5/29/2017 10:56:33 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building from (6064, 2404, 47) to (6065, 2410, 66) in Felucca: "decorock2" "set" "movable" "false"
+5/29/2017 10:56:33 PM: 127.0.0.1: Serials: 0x4003860E; 0x4003860F; 0x40038610; 0x40038611; 0x40038612; 0x40038613; 0x40038614; 0x40038615; 0x40038616; 0x40038617; 0x40038618; 0x40038619; 0x4003861A; 0x4003861B; 
+5/29/2017 10:56:37 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/29/2017 11:03:44 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+5/29/2017 11:03:47 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 5/29/2017 11:04:37 PM
+

@@ -1,0 +1,58 @@
+##############################
+Log started on 4/13/2017 4:20:53 AM
+
+##############################
+Log started on 4/13/2017 4:41:26 AM
+
+4/13/2017 5:54:23 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/13/2017 5:54:26 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+4/13/2017 5:55:38 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/13/2017 6:03:27 AM
+
+4/13/2017 6:03:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/13/2017 6:04:54 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add simon'
+4/13/2017 6:04:55 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6034, 402, 0) in Felucca: "simon"
+4/13/2017 6:04:55 AM: 127.0.0.1: Serials: 0x685; 
+4/13/2017 6:05:03 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add human'
+4/13/2017 6:05:05 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6037, 404, 0) in Felucca: "human"
+4/13/2017 6:05:10 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add super'
+4/13/2017 6:05:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6038, 406, 0) in Felucca: "DummySuper"
+4/13/2017 6:05:13 AM: 127.0.0.1: Serials: 0x686; 
+4/13/2017 6:05:14 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6037, 405, 0) in Felucca: "DummySuper"
+4/13/2017 6:05:14 AM: 127.0.0.1: Serials: 0x687; 
+4/13/2017 6:05:20 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get bodyid'
+4/13/2017 6:05:23 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get body'
+4/13/2017 6:05:26 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm remove'
+4/13/2017 6:05:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm remove'
+4/13/2017 6:05:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x686 "Super Mage" (no account)
+4/13/2017 6:05:33 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x687 "Super Mage" (no account)
+4/13/2017 6:08:02 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/13/2017 6:08:04 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x685 "Simon" (no account)
+4/13/2017 6:08:10 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get random(1)'
+4/13/2017 6:20:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get location'
+4/13/2017 6:22:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/13/2017 6:24:29 AM
+
+4/13/2017 6:24:50 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/13/2017 6:24:52 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add simon'
+4/13/2017 6:24:53 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (6038, 402, 0) in Felucca: "simon"
+4/13/2017 6:24:53 AM: 127.0.0.1: Serials: 0x689; 
+4/13/2017 6:24:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set cantwalk false'
+4/13/2017 6:25:00 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'cantwalk' of 0xF1 "Kai" ('kairi') to 'False'
+4/13/2017 6:25:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+4/13/2017 6:25:36 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x689 "Simon" (no account) to (6035, 403, 0)
+4/13/2017 6:25:45 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get location'
+4/13/2017 6:26:34 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get location'
+4/13/2017 8:32:09 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/13/2017 8:36:34 AM
+
+4/13/2017 8:36:53 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/13/2017 8:37:01 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set cantwalk false'
+4/13/2017 8:37:03 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'cantwalk' of 0xF1 "Kai" ('kairi') to 'False'
+4/13/2017 8:37:10 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set cantwalk false'
+4/13/2017 8:37:11 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'cantwalk' of 0xF1 "Kai" ('kairi') to 'False'
+4/13/2017 8:37:15 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+4/13/2017 8:37:17 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x689 "Simon" (no account) to (6040, 405, 0)

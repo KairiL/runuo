@@ -261,11 +261,11 @@ namespace Server.Gumps
 
 			AddPage( 0 );
 
-			if ( isFriend )
+			/*if ( isFriend )
 			{
 				AddBackground( 0, 0, 420, 430, 5054 );
 				AddBackground( 10, 10, 400,410, 3000 );
-			}
+			}*/
 
 			AddImage( 130, 0, 100 );
 
@@ -284,7 +284,7 @@ namespace Server.Gumps
 				}
 			}
 
-			if ( !isFriend )
+			if ( !isFriend || isFriend )
 				return;
 
 			AddHtmlLocalized( 55, 103, 75, 20, 1011233, false, false ); // INFO
@@ -469,7 +469,7 @@ namespace Server.Gumps
 			{
 				case 1: // Rename sign
 				{
-					from.Prompt = new RenamePrompt( m_House );
+					from.Prompt = new HouseRenamePrompt( m_House );
 					from.SendLocalizedMessage( 501302 ); // What dost thou wish the sign to say?
 
 					break;
@@ -732,24 +732,26 @@ namespace Server.Gumps
 
 namespace Server.Prompts
 {
-	public class RenamePrompt : Prompt
+	public class HouseRenamePrompt : Prompt
 	{
 		private BaseHouse m_House;
 
-		public RenamePrompt( BaseHouse house )
+        public HouseRenamePrompt(BaseHouse house)
 		{
 			m_House = house;
 		}
 
 		public override void OnResponse( Mobile from, string text )
 		{
-			if ( m_House.IsFriend( from ) )
+			/*if ( m_House.IsFriend( from ) )
 			{
 				if ( m_House.Sign != null )
 					m_House.Sign.Name = text;
 
-				from.SendMessage( "Sign changed." );
-			}
+                from.SendAsciiMessage("You successfully change the name."); //Is there a message?
+			}*/
+            if (m_House.Sign != null)
+                m_House.Sign.Name = text;
 		}
 	}
 }

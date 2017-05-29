@@ -1,0 +1,326 @@
+##############################
+Log started on 5/24/2017 5:28:09 AM
+
+5/24/2017 5:28:17 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+##############################
+Log started on 5/24/2017 5:38:35 AM
+
+5/24/2017 5:38:55 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+5/24/2017 5:38:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 5/24/2017 5:39:17 AM
+
+5/24/2017 5:39:21 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+5/24/2017 5:39:29 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go britain'
+5/24/2017 5:39:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 5:39:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add tent'
+5/24/2017 5:39:40 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1430, 1691, 21) in Felucca: "GreenTentDeed"
+5/24/2017 5:39:40 AM: 127.0.0.1: Serials: 0x40000939; 
+5/24/2017 5:39:45 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go '
+5/24/2017 5:39:48 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'staffrunebook '
+5/24/2017 5:40:11 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set facet felucca'
+5/24/2017 5:40:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'staffrunebook '
+5/24/2017 5:40:28 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go luna'
+5/24/2017 5:40:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'staffrunebook '
+5/24/2017 5:41:05 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'staffrunebookreset '
+5/24/2017 5:41:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'staffrunebook '
+5/24/2017 5:41:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 5:42:01 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'flip '
+5/24/2017 5:42:11 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'wipe '
+5/24/2017 5:42:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') wiping from (5725, 977, 0) to (5735, 987, 0) in Felucca (Items, Mobiles)
+5/24/2017 5:43:01 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'wipemultis '
+5/24/2017 5:43:05 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') wiping from (5725, 977, 0) to (5735, 986, 0) in Felucca (Multis)
+5/24/2017 5:43:09 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'wipemultis '
+5/24/2017 5:43:10 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') wiping from (5731, 990, 0) to (5736, 1002, 45) in Felucca (Multis)
+5/24/2017 5:47:24 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add tent'
+5/24/2017 5:47:27 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5731, 986, 0) in Felucca: "GreenTentDeed"
+5/24/2017 5:47:27 AM: 127.0.0.1: Serials: 0x400010C1; 
+5/24/2017 5:47:29 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5730, 986, 0) in Felucca: "BlueTentDeed"
+5/24/2017 5:47:29 AM: 127.0.0.1: Serials: 0x400010C6; 
+5/24/2017 5:47:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+5/24/2017 5:48:01 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'wipe '
+5/24/2017 5:48:05 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'wipemultis '
+5/24/2017 5:48:12 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+5/24/2017 5:48:23 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'wipemultis '
+5/24/2017 5:48:26 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') wiping from (5734, 982, 20) to (5734, 982, 20) in Felucca (Multis)
+5/24/2017 5:48:27 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'wipemultis '
+5/24/2017 5:48:29 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') wiping from (5734, 981, 20) to (5734, 983, 20) in Felucca (Multis)
+5/24/2017 5:48:33 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'wipemultis '
+5/24/2017 5:48:34 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') wiping from (5734, 981, 0) to (5734, 983, 0) in Felucca (Multis)
+5/24/2017 5:48:35 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'wipemultis '
+5/24/2017 5:48:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') wiping from (5733, 980, 0) to (5735, 982, 0) in Felucca (Multis)
+5/24/2017 5:48:41 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'wipemultis '
+5/24/2017 5:48:43 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') wiping from (5729, 977, 0) to (5735, 984, 0) in Felucca (Multis)
+5/24/2017 5:48:50 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'wipemultis '
+5/24/2017 5:48:51 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') wiping from (5720, 981, 0) to (5723, 983, 0) in Felucca (Multis)
+5/24/2017 5:49:39 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go britain'
+5/24/2017 5:49:41 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 5:51:24 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add fireplac'
+5/24/2017 5:51:49 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 5/24/2017 5:52:00 AM
+
+5/24/2017 5:52:08 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+5/24/2017 5:57:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') hiding 0xF1 "Kai" ('kairi')
+5/24/2017 5:57:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'self hide'
+5/24/2017 6:08:17 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'who '
+5/24/2017 6:08:29 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add blacksithshop'
+5/24/2017 6:18:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+5/24/2017 6:18:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+5/24/2017 6:18:49 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'help '
+5/24/2017 6:19:39 AM: 127.0.0.1: Player 0x6004 "Kairi" ('kairi1.0') used command 'help '
+5/24/2017 6:19:44 AM: 127.0.0.1: Player 0x6004 "Kairi" ('kairi1.0') used command 'kpkorpre '
+5/24/2017 6:19:55 AM: 127.0.0.1: Player 0x6004 "Kairi" ('kairi1.0') used command 'time '
+5/24/2017 6:19:59 AM: 127.0.0.1: Player 0x6004 "Kairi" ('kairi1.0') used command 'kpkorpre2 '
+5/24/2017 6:20:20 AM: 127.0.0.1: Player 0xF4 "Kairi2.0" ('kairi2.0') used command 'kpkorpre2 '
+5/24/2017 6:20:24 AM: 127.0.0.1: Player 0xF4 "Kairi2.0" ('kairi2.0') used command 'kpkorpre '
+5/24/2017 6:20:27 AM: 127.0.0.1: Player 0xF4 "Kairi2.0" ('kairi2.0') used command 'help '
+5/24/2017 6:20:31 AM: 127.0.0.1: Player 0xF4 "Kairi2.0" ('kairi2.0') used command 'kpkorpre3 '
+5/24/2017 6:20:35 AM: 127.0.0.1: Player 0xF4 "Kairi2.0" ('kairi2.0') used command 'helpinfo '
+5/24/2017 6:21:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'learnallrecipes '
+5/24/2017 6:22:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add ecru'
+5/24/2017 6:28:42 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add essenceof'
+5/24/2017 6:29:06 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add scrapper'
+5/24/2017 6:29:10 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (993, 519, -50) in Malas: "ScrappersCompendium"
+5/24/2017 6:29:10 AM: 127.0.0.1: Serials: 0x40001AC1; 
+5/24/2017 6:29:14 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add scrapper'
+5/24/2017 6:29:18 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (992, 520, -50) in Malas: "ScrappersCompendium"
+5/24/2017 6:29:18 AM: 127.0.0.1: Serials: 0x40001AC8; 
+5/24/2017 6:29:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add scribe'
+5/24/2017 6:29:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add scrib'
+5/24/2017 6:29:34 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (992, 519, -50) in Malas: "ScribesPen"
+5/24/2017 6:29:34 AM: 127.0.0.1: Serials: 0x40001ACB; 
+5/24/2017 6:29:54 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go greenacres'
+5/24/2017 6:29:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go greenacres'
+5/24/2017 6:29:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go '
+5/24/2017 6:30:04 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go '
+5/24/2017 6:30:10 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go '
+5/24/2017 6:30:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go fel'
+5/24/2017 6:30:16 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go felucca'
+5/24/2017 6:30:20 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go britain'
+5/24/2017 6:30:24 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go greenacres'
+5/24/2017 6:30:25 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go '
+5/24/2017 6:30:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 6:30:53 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add dreadhornmane 100'
+5/24/2017 6:30:55 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5433, 1087, -2) in Felucca: "dreadhornmane" "100"
+5/24/2017 6:30:55 AM: 127.0.0.1: Serials: 0x40001B4D; 
+5/24/2017 6:31:02 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add taint 1000'
+5/24/2017 6:31:04 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5433, 1086, -2) in Felucca: "taint" "1000"
+5/24/2017 6:31:04 AM: 127.0.0.1: Serials: 0x40001BE5; 
+5/24/2017 6:31:08 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add corruption 1000'
+5/24/2017 6:31:10 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5433, 1087, -2) in Felucca: "corruption" "1000"
+5/24/2017 6:31:10 AM: 127.0.0.1: Serials: 0x40001BF8; 
+5/24/2017 6:31:16 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add blankscrolls 10000'
+5/24/2017 6:31:21 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add blankscroll 10000'
+5/24/2017 6:31:23 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5431, 1087, -2) in Felucca: "blankscroll" "10000"
+5/24/2017 6:31:23 AM: 127.0.0.1: Serials: 0x40001BF9; 
+5/24/2017 6:31:46 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'getskill inscription'
+5/24/2017 6:31:51 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'getskill inscribe'
+5/24/2017 6:31:55 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add totem'
+5/24/2017 6:31:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5432, 1087, -2) in Felucca: "TotemOfVoid"
+5/24/2017 6:31:59 AM: 127.0.0.1: Serials: 0x40001C09; 
+5/24/2017 6:32:06 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+5/24/2017 6:32:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40001C09 (TotemOfVoid)
+5/24/2017 6:32:09 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add talisma'
+5/24/2017 6:32:12 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5432, 1088, -2) in Felucca: "RandomTalisman"
+5/24/2017 6:32:13 AM: 127.0.0.1: Serials: 0x40001C16; 
+5/24/2017 6:32:18 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+5/24/2017 6:32:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Skill' of 0x40001C16 (RandomTalisman) to 'Inscribe'
+5/24/2017 6:32:42 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'ExceptionalBonus' of 0x40001C16 (RandomTalisman) to '15'
+5/24/2017 6:34:01 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'ExceptionalBonus' of 0x40001C16 (RandomTalisman) to '30'
+5/24/2017 6:34:21 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+5/24/2017 6:34:29 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'SuccessBonus' of 0x40001C16 (RandomTalisman) to '100'
+5/24/2017 6:34:44 AM: 127.0.0.1: Crafting 0x40001C9F (ScrappersCompendium) with craft system DefInscription
+5/24/2017 6:34:54 AM: 127.0.0.1: Crafting 0x40001CA7 (ScrappersCompendium) with craft system DefInscription
+5/24/2017 6:35:07 AM: 127.0.0.1: Crafting 0x40001CAF (ScrappersCompendium) with craft system DefInscription
+5/24/2017 6:35:14 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'getskill magery'
+5/24/2017 6:35:20 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setskill magery 120'
+5/24/2017 6:35:21 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Magery.Base' of 0xF1 "Kai" ('kairi') to '120'
+5/24/2017 6:35:23 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm remove'
+5/24/2017 6:35:25 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40001C9F (ScrappersCompendium)
+5/24/2017 6:35:27 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40001CAF (ScrappersCompendium)
+5/24/2017 6:35:27 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40001AC1 (ScrappersCompendium)
+5/24/2017 6:35:29 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40001CA7 (ScrappersCompendium)
+5/24/2017 6:35:33 AM: 127.0.0.1: Crafting 0x40001CC2 (ScrappersCompendium) with craft system DefInscription
+5/24/2017 6:35:37 AM: 127.0.0.1: Crafting 0x40001CC7 (ScrappersCompendium) with craft system DefInscription
+5/24/2017 6:35:42 AM: 127.0.0.1: Crafting 0x40001CD5 (ScrappersCompendium) with craft system DefInscription
+5/24/2017 6:35:48 AM: 127.0.0.1: Crafting 0x40001CDA (ScrappersCompendium) with craft system DefInscription
+5/24/2017 6:35:55 AM: 127.0.0.1: Crafting 0x40001CE4 (ScrappersCompendium) with craft system DefInscription
+5/24/2017 6:36:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setskill magery 140'
+5/24/2017 6:38:35 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm remove'
+5/24/2017 6:38:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40001CE4 (ScrappersCompendium)
+5/24/2017 6:38:38 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40001CC7 (ScrappersCompendium)
+5/24/2017 6:38:40 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40001CC2 (ScrappersCompendium)
+5/24/2017 6:38:41 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40001AC8 (ScrappersCompendium)
+5/24/2017 6:38:43 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40001CD5 (ScrappersCompendium)
+5/24/2017 6:38:45 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40001CDA (ScrappersCompendium)
+5/24/2017 6:38:53 AM: 127.0.0.1: Crafting 0x40001D49 (ScrappersCompendium) with craft system DefInscription
+5/24/2017 6:39:01 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm remove'
+5/24/2017 6:39:03 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40001D49 (ScrappersCompendium)
+5/24/2017 6:39:06 AM: 127.0.0.1: Crafting 0x40001D5D (ScrappersCompendium) with craft system DefInscription
+5/24/2017 6:39:11 AM: 127.0.0.1: Crafting 0x40001D65 (ScrappersCompendium) with craft system DefInscription
+5/24/2017 6:39:12 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40001D5D (ScrappersCompendium)
+5/24/2017 6:39:15 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40001D65 (ScrappersCompendium)
+5/24/2017 6:49:24 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add birdofbrit'
+5/24/2017 6:54:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add runic'
+5/24/2017 6:55:02 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add runicsewing'
+5/24/2017 6:55:05 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add runicsewingkit'
+5/24/2017 6:55:06 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5434, 1088, -2) in Felucca: "runicsewingkit"
+5/24/2017 6:55:15 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add runicsewingkit barbed 10000'
+5/24/2017 6:55:16 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5433, 1088, -2) in Felucca: "runicsewingkit" "barbed" "10000"
+5/24/2017 6:55:24 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add runicsewingkit barbedleather 10000'
+5/24/2017 6:55:25 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5432, 1087, -2) in Felucca: "runicsewingkit" "barbedleather" "10000"
+5/24/2017 6:55:25 AM: 127.0.0.1: Serials: 0x400021C7; 
+5/24/2017 6:57:47 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'speedboost '
+5/24/2017 6:57:50 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/24/2017 6:58:04 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'm tele'
+5/24/2017 6:58:10 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 6:58:45 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 7:00:12 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add glasses'
+5/24/2017 7:00:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add library'
+5/24/2017 7:00:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5433, 1086, -2) in Felucca: "FriendOfTheLibraryToken"
+5/24/2017 7:00:44 AM: 127.0.0.1: Serials: 0x4000232E; 
+5/24/2017 7:00:56 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add librar'
+5/24/2017 7:00:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5434, 1085, -2) in Felucca: "FriendsOfTheLibraryApplication"
+5/24/2017 7:00:59 AM: 127.0.0.1: Serials: 0x4000232F; 
+5/24/2017 7:01:10 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go britain'
+5/24/2017 7:01:12 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 7:02:21 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'ADD MASTEROF'
+5/24/2017 7:02:42 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add animaltra'
+5/24/2017 7:02:46 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 7:02:58 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/24/2017 7:03:02 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add shepherdscrook'
+5/24/2017 7:03:03 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 7:03:03 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1435, 1683, 21) in Felucca: "shepherdscrook"
+5/24/2017 7:03:03 AM: 127.0.0.1: Serials: 0x40002392; 
+5/24/2017 7:03:19 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 7:03:55 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 7:04:02 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go trammel'
+5/24/2017 7:04:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add verity'
+5/24/2017 7:11:25 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add veri'
+5/24/2017 7:11:28 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add verit'
+5/24/2017 7:14:16 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add barbedleather 10000'
+5/24/2017 7:14:18 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1409, 1597, 30) in Trammel: "barbedleather" "10000"
+5/24/2017 7:14:18 AM: 127.0.0.1: Serials: 0x4000269C; 
+5/24/2017 7:14:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add eyeoftravesty 100'
+5/24/2017 7:14:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1409, 1597, 30) in Trammel: "EyeOfTheTravesty"
+5/24/2017 7:14:37 AM: 127.0.0.1: Serials: 0x400026A6; 
+5/24/2017 7:14:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set amount 100'
+5/24/2017 7:14:46 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'amount' of 0x400026A6 (EyeOfTheTravesty) to '100'
+5/24/2017 7:14:52 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add putrefaction'
+5/24/2017 7:14:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1409, 1597, 30) in Trammel: "Putrefication"
+5/24/2017 7:14:59 AM: 127.0.0.1: Serials: 0x400026A8; 
+5/24/2017 7:15:06 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add scourge 1000'
+5/24/2017 7:15:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1409, 1597, 30) in Trammel: "scourge" "1000"
+5/24/2017 7:15:07 AM: 127.0.0.1: Serials: 0x400026A9; 
+5/24/2017 7:15:12 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set amount 1000'
+5/24/2017 7:15:14 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'amount' of 0x400026A8 (Putrefication) to '1000'
+5/24/2017 7:15:34 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'learnallrecipes '
+5/24/2017 7:15:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setallskills 120'
+5/24/2017 7:16:01 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'EverySkill.Base' of 0xF1 "Kai" ('kairi') to '120'
+5/24/2017 7:16:12 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+5/24/2017 7:16:23 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Skill' of 0x40001C16 (RandomTalisman) to 'Tailoring'
+5/24/2017 7:16:34 AM: 127.0.0.1: Crafting 0x40002721 (SpellWovenBritches) with craft system DefTailoring
+5/24/2017 7:16:58 AM: 127.0.0.1: Crafting 0x40002731 (SpellWovenBritches) with craft system DefTailoring
+5/24/2017 7:17:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+5/24/2017 7:17:41 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'SuccessBonus' of 0x40001C16 (RandomTalisman) to '30'
+5/24/2017 7:24:56 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'spawneditor '
+5/24/2017 7:26:53 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 7:46:18 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/24/2017 7:46:45 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 7:47:46 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/24/2017 7:48:02 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 7:48:40 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/24/2017 7:49:01 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 7:51:46 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 7:52:16 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 7:53:14 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/24/2017 7:57:50 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'who '
+5/24/2017 5:09:20 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+5/24/2017 5:09:22 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 5:09:29 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'speedboost '
+5/24/2017 5:09:31 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go felucca'
+5/24/2017 5:09:33 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/24/2017 5:09:34 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 5:09:50 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 5:09:56 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/24/2017 5:10:01 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/24/2017 5:10:05 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/24/2017 5:10:08 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/24/2017 5:10:20 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 5:10:59 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/24/2017 5:13:31 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 5:16:07 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 5:16:10 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 5:16:30 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 5:16:33 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 5:16:46 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 5:17:19 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 5:17:48 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 5:18:01 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 5:18:15 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 5:18:47 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 5:22:39 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 5:22:47 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 5:22:49 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/24/2017 8:11:59 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'who '
+5/24/2017 9:22:20 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'speedboost '
+5/24/2017 9:22:22 PM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'who '
+5/25/2017 1:52:42 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'speedboost '
+5/25/2017 1:52:44 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/25/2017 1:52:55 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/25/2017 1:59:32 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/25/2017 1:59:45 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/25/2017 2:00:21 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/25/2017 2:00:50 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/25/2017 2:02:10 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/25/2017 2:02:39 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/25/2017 2:02:50 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/25/2017 2:03:08 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/25/2017 2:04:07 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/25/2017 2:04:23 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/25/2017 2:09:59 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'speedboost '
+5/25/2017 2:10:02 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/25/2017 2:10:18 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/25/2017 2:10:29 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/25/2017 2:11:01 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/25/2017 2:17:26 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/25/2017 2:17:43 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/25/2017 2:18:06 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'MinDelay' of 0x4001F1BB (PremiumSpawner) to '00:00:30'
+5/25/2017 2:18:10 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'MaxDelay' of 0x4001F1BB (PremiumSpawner) to '00:02:00'
+5/25/2017 2:18:15 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/25/2017 2:18:42 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'MaxDelay' of 0x4001F200 (PremiumSpawner) to '00:01:00'
+5/25/2017 2:18:46 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'MaxDelay' of 0x4001F200 (PremiumSpawner) to '00:02:00'
+5/25/2017 2:20:00 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/25/2017 2:20:05 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/25/2017 2:31:02 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'who '
+5/25/2017 2:31:06 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') going to 0x6FEF "Jonesy" ('ezekiah'), Location (5130, 152, 0), Map Felucca
+5/25/2017 2:31:15 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'remove '
+5/25/2017 2:31:16 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') deleting 0x40036EF5 (Corpse)
+5/25/2017 2:31:28 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'MinDelay' of 0x4001F200 (PremiumSpawner) to '00:02:00'
+5/25/2017 2:31:38 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'MaxDelay' of 0x4001F200 (PremiumSpawner) to '00:00:30'
+5/25/2017 2:31:56 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/25/2017 2:51:27 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/25/2017 3:05:17 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/25/2017 3:05:29 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') unhiding 0x632E "Darnell" ('ezjones')
+5/25/2017 3:05:29 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'Self Unhide'
+5/25/2017 3:06:09 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'who '
+5/25/2017 3:06:11 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x632E "Darnell" ('ezjones'), Location (991, 519, -50), Map Malas
+5/25/2017 3:06:17 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go exodus'
+5/25/2017 3:06:20 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go '
+5/25/2017 3:06:28 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go ilshenar'
+5/25/2017 3:06:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go exodus'
+5/25/2017 3:10:16 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') hiding 0x632E "Darnell" ('ezjones')
+5/25/2017 3:10:16 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'Self Hide'
+5/25/2017 5:14:25 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+5/25/2017 5:14:27 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go britain'
+5/25/2017 5:14:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/25/2017 5:14:41 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setskill carpentry 100'
+5/25/2017 5:14:43 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Carpentry.Base' of 0x62A3 "Tinkerbell" (no account) to '100'
+5/25/2017 5:14:47 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setskill tailoring 120'
+5/25/2017 5:14:47 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Tailoring.Base' of 0x62A3 "Tinkerbell" (no account) to '120'
+5/25/2017 5:14:54 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setskill blacksmithy 120'
+5/25/2017 5:14:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setskill blacksmith 120'
+5/25/2017 5:14:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Blacksmith.Base' of 0x62A3 "Tinkerbell" (no account) to '120'
+5/25/2017 5:15:10 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setskill herding 100'
+5/25/2017 5:15:11 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Herding.Base' of 0x62A3 "Tinkerbell" (no account) to '100'

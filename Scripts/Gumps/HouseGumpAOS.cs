@@ -104,9 +104,8 @@ namespace Server.Gumps
 
 			for ( int i = 0; i < list.Count; ++i )
 			{
-				int xoffset = ((index % 20) / 10) * 200;
-				int yoffset = (index % 10) * 20;
-				int page = 1 + (index / 20);
+				int offset = index % 10;
+				int page = 1 + (index / 10);
 
 				if ( page != lastPage )
 				{
@@ -149,7 +148,7 @@ namespace Server.Gumps
 					continue;
 
 				if ( button != -1 )
-					AddButton( 10 + xoffset, 150 + yoffset, 4005, 4007, GetButtonID( button, i ), GumpButtonType.Reply, 0 );
+					AddButton( 10, 150 + (offset * 20), 4005, 4007, GetButtonID( button, i ), GumpButtonType.Reply, 0 );
 
 				if ( accountOf && m.Player && m.Account != null )
 					name = "Account of " + name;
@@ -157,7 +156,7 @@ namespace Server.Gumps
 				if ( leadingStar )
 					name = "* " + name;
 
-				AddLabel( button > 0 ? 45 + xoffset : 10 + xoffset, 150 + yoffset, labelHue, name );
+				AddLabel( button > 0 ? 45 : 10, 150 + (offset * 20), labelHue, name );
 				++index;
 			}
 		}
@@ -191,8 +190,6 @@ namespace Server.Gumps
 				660, 666, 672, 898, 970,
 				974, 982
 			};
-
-		private static List<int> _HouseSigns = new List<int>();
 
 		public HouseGumpAOS( HouseGumpPageAOS page, Mobile from, BaseHouse house ) : base( 50, 40 )
 		{
@@ -489,37 +486,20 @@ namespace Server.Gumps
 				case HouseGumpPageAOS.ChangeSign:
 				{
 					int index = 0;
-					
-					if ( _HouseSigns.Count == 0 )
-					{
-						// Add standard signs
-						for ( int i = 0; i < 54; ++i )
-						{
-							_HouseSigns.Add( 2980 + ( i * 2 ) );
-						}
 
-						// Add library and beekeeper signs ( ML )
-						_HouseSigns.Add( 2966 );
-						_HouseSigns.Add( 3140 );
-					}
-					
-					int signsPerPage = Core.ML ? 24 : 18;
-					int totalSigns = Core.ML ? 56 : 54;
-					int pages = (int) Math.Ceiling( (double) totalSigns / signsPerPage );
-
-					for ( int i = 0; i < pages; ++i )
+					for ( int i = 0; i < 3; ++i )
 					{
 						AddPage( i + 1 );
 
-						AddButton( 10, 360, 4005, 4007, 0, GumpButtonType.Page, ((i + 1) % pages ) + 1 );
+						AddButton( 10, 360, 4005, 4007, 0, GumpButtonType.Page, ((i + 1) % 3) + 1 );
 
-						for ( int j = 0; j < signsPerPage && totalSigns - ( signsPerPage * i ) - j > 0; ++j )
+						for ( int j = 0; j < 18; ++j )
 						{
 							int x = 30 + ((j % 6) * 60);
 							int y = 130 + ((j / 6) * 60);
 
 							AddButton( x, y, 4005, 4007, GetButtonID( 9, index ), GumpButtonType.Reply, 0 );
-							AddItem( x + 20, y, _HouseSigns[index++] );
+							AddItem( x + 20, y, 2980 + (index++ * 2) );
 						}
 					}
 
@@ -824,7 +804,7 @@ namespace Server.Gumps
 			bool isFriend = isCoOwner || m_House.IsFriend( from );
 
 			if ( isCombatRestricted )
-				isCoOwner = isFriend = false;
+				isFriend = isCoOwner = isFriend = false;
 
 			if ( !from.CheckAlive() )
 				return;
@@ -1143,14 +1123,6 @@ namespace Server.Gumps
 									// You cannot perform this action while you still have vendors rented out in this house.
 									from.SendGump( new NoticeGump( 1060637, 30720, 1062395, 32512, 320, 180, new NoticeGumpCallback( CustomizeNotice_Callback ), m_House ) );
 								}
-								#region Mondain's Legacy
-								else if ( m_House.HasAddonContainers )
-								{
-									// The house can not be customized when add-on containers such as aquariums, elven furniture containers, vanities, and boiling cauldrons 
-									// are present in the house.  Please re-deed the add-on containers before customizing the house.
-									from.SendGump( new NoticeGump( 1060637, 30720, 1074863, 32512, 320, 180, new NoticeGumpCallback( CustomizeNotice_Callback ), m_House ) );
-								}
-								#endregion
 								else
 								{
 									foundation.BeginCustomize( from );
@@ -1210,7 +1182,7 @@ namespace Server.Gumps
 						{
 							if ( isCoOwner )
 							{
-								from.Prompt = new RenamePrompt( m_House );
+								from.Prompt = new HouseRenamePrompt( m_House );
 								from.SendLocalizedMessage( 501302 ); // What dost thou wish the sign to say?
 							}
 
@@ -1228,19 +1200,10 @@ namespace Server.Gumps
 						{
 							if ( isOwner && m_House.MovingCrate == null && m_House.InternalizedVendors.Count == 0 )
 							{
-								if( !Guilds.Guild.NewGuildSystem && m_House.FindGuildstone() != null ) 
-								{
+								if( !Guilds.Guild.NewGuildSystem && m_House.FindGuildstone() != null )
 									from.SendLocalizedMessage( 501389 ); // You cannot redeed a house with a guildstone inside.
-								}
-								else if ( Core.ML && from.AccessLevel < AccessLevel.GameMaster && DateTime.UtcNow <= m_House.BuiltOn.AddHours ( 1 ) )
-								{
-									from.SendLocalizedMessage( 1080178 ); // You must wait one hour between each house demolition.
-								}
-								else 
-								{
-									from.CloseGump( typeof( HouseDemolishGump ) );
+								else
 									from.SendGump( new HouseDemolishGump( from, m_House ) );
-								}
 							}
 
 							break;
@@ -1339,9 +1302,9 @@ namespace Server.Gumps
 				}
 				case 9:
 				{
-					if ( isOwner && m_House.Public && index >= 0 && index < _HouseSigns.Count )
+					if ( isOwner && m_House.Public && index >= 0 && index < 54 )
 					{
-						m_House.ChangeSignType( _HouseSigns[index] );
+						m_House.ChangeSignType( 2980 + (index * 2) );
 						from.SendGump( new HouseGumpAOS( HouseGumpPageAOS.Customize, from, m_House ) );
 					}
 

@@ -649,19 +649,22 @@ namespace Server.Items
 			from.NextCombatTime = Core.TickCount + (int)GetDelay( from ).TotalMilliseconds;
             TameLorePoints = (int)from.Skills[SkillName.AnimalTaming].Value;
             TameLorePoints += (int)from.Skills[SkillName.AnimalLore].Value;
-            if (from.Skills[SkillName.Herding].Value >= 200)
+            if (from.Skills[SkillName.Herding].Value >= 100)
+            {
                 TameLoreBonus += 1;
-            if (TameLorePoints >= 230)
-                TameLoreBonus += 1;
-            if (TameLorePoints >= 240)
-                TameLoreBonus += 1;
-            if (TameLorePoints >= 250)
-                TameLoreBonus += 1;
-            if (TameLorePoints >= 255)
-                TameLoreBonus += 1;
-            if (TameLorePoints >= 260)
-                TameLoreBonus += 1;
-
+                if (TameLorePoints >= 220)
+                    TameLoreBonus += 1;
+                if (TameLorePoints >= 230)
+                    TameLoreBonus += 1;
+                if (TameLorePoints >= 240)
+                    TameLoreBonus += 1;
+                if (TameLorePoints >= 250)
+                    TameLoreBonus += 1;
+                if (TameLorePoints >= 255)
+                    TameLoreBonus += 1;
+                if (TameLorePoints >= 260)
+                    TameLoreBonus += 1;
+            }
             from.FollowersMax = 5 + (int)from.Skills[SkillName.Herding].Value * FollowersBonus * TameLoreBonus/ 100;
 
             if ( UseSkillMod && m_AccuracyLevel != WeaponAccuracyLevel.Regular )

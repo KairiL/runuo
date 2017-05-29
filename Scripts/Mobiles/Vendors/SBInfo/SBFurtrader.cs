@@ -20,7 +20,7 @@ namespace Server.Mobiles
 		{ 
 			public InternalBuyInfo() 
 			{ 
-				Add( new GenericBuyInfo( typeof( Hides ), 3, 40, 0x1079, 0 ) ); 
+				Add( new GenericBuyInfo( typeof( Hides ), 5, 40, 0x1079, 0 ) ); 
 			} 
 		} 
 

@@ -36,6 +36,7 @@ namespace Server.Mobiles
         public int MyX = 6035;
         public int MyY = 403;
         public int MyZ = 0;
+        public int Charge = 0;
 
         [Constructable]
         public Simon() : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
@@ -124,7 +125,16 @@ namespace Server.Mobiles
                     return;
                 }
             else if (State == SimonState.reflex)
-                return;
+                if (Charge>0)
+                {
+                    AOS.Damage(to, from, Charge, 20, 20, 20, 20, 20);
+                    //Charging = false;
+                }
+                else
+                {
+                    AOS.Damage(to, from, Charge, 20, 20, 20, 20, 20);
+                    damage = 0;
+                }
             else
                 damage = 0;
         }
@@ -200,7 +210,7 @@ namespace Server.Mobiles
         }
 
         public void Learn()
-        { 
+        {
             return;
         }
 

@@ -1,0 +1,693 @@
+##############################
+Log started on 4/10/2017 12:42:25 AM
+
+4/10/2017 12:42:29 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/10/2017 12:42:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add balron'
+4/10/2017 12:42:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5921, 318, 22) in Felucca: "balron"
+4/10/2017 12:42:32 AM: 127.0.0.1: Serials: 0x687; 
+4/10/2017 12:42:35 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add magicelemental'
+4/10/2017 12:42:36 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5922, 315, 22) in Felucca: "magicelemental"
+4/10/2017 12:42:36 AM: 127.0.0.1: Serials: 0x688; 
+4/10/2017 12:43:18 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/10/2017 12:43:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x687 "the Collector of Souls" (no account)
+4/10/2017 12:43:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add magicelemental'
+4/10/2017 12:43:33 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5922, 320, 22) in Felucca: "magicelemental"
+4/10/2017 12:43:33 AM: 127.0.0.1: Serials: 0x699; 
+4/10/2017 12:43:43 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add etherealwarrior'
+4/10/2017 12:43:45 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5924, 316, 22) in Felucca: "etherealwarrior"
+4/10/2017 12:43:45 AM: 127.0.0.1: Serials: 0x6A2; 
+4/10/2017 12:44:33 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/10/2017 12:44:34 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x699 "a magic elemental" (no account)
+4/10/2017 12:45:11 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add executioner'
+4/10/2017 12:45:12 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5926, 318, 22) in Felucca: "executioner"
+4/10/2017 12:45:12 AM: 127.0.0.1: Serials: 0x6B7; 
+4/10/2017 12:45:18 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add magicelemental'
+4/10/2017 12:45:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5922, 321, 22) in Felucca: "magicelemental"
+4/10/2017 12:45:19 AM: 127.0.0.1: Serials: 0x6BE; 
+4/10/2017 12:46:02 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'wipe '
+4/10/2017 12:46:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/10/2017 12:46:09 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x6BE "a magic elemental" (no account)
+4/10/2017 12:49:53 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+4/10/2017 1:12:34 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go '
+4/10/2017 1:12:45 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'staffrunebook '
+4/10/2017 1:13:06 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go '
+4/10/2017 1:13:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'who '
+4/10/2017 1:13:41 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') bringing 0xF4 "Kairi2.0" ('kairi2.0') to Location (969, 768, 0), Map Felucca
+4/10/2017 1:13:52 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setallskills 120'
+4/10/2017 1:13:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setallskills 100'
+4/10/2017 1:13:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'EverySkill.Base' of 0xF4 "Kairi2.0" ('kairi2.0') to '100'
+4/10/2017 1:14:09 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go ice'
+4/10/2017 1:14:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+4/10/2017 1:14:36 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'who '
+4/10/2017 1:14:40 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') bringing 0xF4 "Kairi2.0" ('kairi2.0') to Location (5923, 313, 22), Map Felucca
+4/10/2017 1:14:43 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add balron'
+4/10/2017 1:14:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5923, 320, 22) in Felucca: "balron"
+4/10/2017 1:14:44 AM: 127.0.0.1: Serials: 0x9A0; 
+4/10/2017 1:14:56 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add daemon'
+4/10/2017 1:14:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5924, 314, 22) in Felucca: "daemon"
+4/10/2017 1:14:57 AM: 127.0.0.1: Serials: 0x9A3; 
+4/10/2017 1:15:00 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add lichlord'
+4/10/2017 1:15:01 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5922, 320, 22) in Felucca: "lichlord"
+4/10/2017 1:15:01 AM: 127.0.0.1: Serials: 0x9A5; 
+4/10/2017 1:15:12 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add shadowwyrm'
+4/10/2017 1:15:14 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5922, 319, 22) in Felucca: "shadowwyrm"
+4/10/2017 1:15:14 AM: 127.0.0.1: Serials: 0x9A7; 
+4/10/2017 1:16:14 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm remove'
+4/10/2017 1:16:15 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x9A0 "the Lord of the Abyss" (no account)
+4/10/2017 1:16:18 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x9A3 "Satanchia" (no account)
+4/10/2017 1:16:20 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x9A5 "a lich lord" (no account)
+4/10/2017 1:16:23 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x9A7 "a shadow wyrm" (no account)
+4/10/2017 1:22:27 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/10/2017 1:35:04 AM
+
+4/10/2017 1:35:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/10/2017 1:35:34 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add ogremagelord'
+4/10/2017 1:35:38 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add ogrelordmage'
+4/10/2017 1:35:39 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5923, 323, 22) in Felucca: "ogrelordmage"
+4/10/2017 1:35:39 AM: 127.0.0.1: Serials: 0x683; 
+4/10/2017 1:35:41 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add balron'
+4/10/2017 1:35:42 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5925, 320, 22) in Felucca: "balron"
+4/10/2017 1:35:42 AM: 127.0.0.1: Serials: 0x684; 
+4/10/2017 1:37:01 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/10/2017 1:37:02 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x684 "the Slayer" (no account)
+4/10/2017 1:37:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add ogremage'
+4/10/2017 1:37:14 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5925, 320, 22) in Felucca: "ogremage"
+4/10/2017 1:37:14 AM: 127.0.0.1: Serials: 0x68D; 
+4/10/2017 1:37:17 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add unicorn'
+4/10/2017 1:37:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5924, 320, 22) in Felucca: "unicorn"
+4/10/2017 1:37:19 AM: 127.0.0.1: Serials: 0x68F; 
+4/10/2017 1:37:45 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/10/2017 1:37:46 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x68F "a unicorn" (no account)
+4/10/2017 1:37:47 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add wisp'
+4/10/2017 1:37:48 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5925, 320, 22) in Felucca: "wisp"
+4/10/2017 1:37:48 AM: 127.0.0.1: Serials: 0x695; 
+4/10/2017 1:38:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/10/2017 1:38:14 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x695 "a wisp" (no account)
+4/10/2017 1:38:15 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/10/2017 1:38:16 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x68D "an ogre mage" (no account)
+4/10/2017 1:38:22 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add ogremage'
+4/10/2017 1:38:23 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5923, 319, 22) in Felucca: "ogremage"
+4/10/2017 1:38:23 AM: 127.0.0.1: Serials: 0x697; 
+4/10/2017 1:38:26 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add daemon'
+4/10/2017 1:38:27 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5923, 318, 22) in Felucca: "daemon"
+4/10/2017 1:38:27 AM: 127.0.0.1: Serials: 0x698; 
+4/10/2017 1:38:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm remove'
+4/10/2017 1:39:09 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x698 "Sustugriel" (no account)
+4/10/2017 1:39:10 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x697 "an ogre mage" (no account)
+4/10/2017 1:40:17 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/10/2017 1:40:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40010F49 (PowerScroll)
+4/10/2017 1:41:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+4/10/2017 3:25:23 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/10/2017 3:26:55 AM
+
+4/10/2017 3:27:34 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/10/2017 3:27:54 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add crafte'
+4/10/2017 3:28:00 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5925, 312, 22) in Felucca: "CraftedBoltTrap"
+4/10/2017 3:28:00 AM: 127.0.0.1: Serials: 0x400006F2; 
+4/10/2017 3:28:03 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/10/2017 3:28:41 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'who '
+4/10/2017 3:28:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') bringing 0xF2 "Kairi1.0" ('kairi1.0') to Location (5923, 317, 22), Map Felucca
+4/10/2017 3:28:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/10/2017 3:29:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'TrapOwner' of 0x400006F2 (CraftedBoltTrap) to '0xF4 "Kairi2.0"'
+4/10/2017 3:29:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set visible true'
+4/10/2017 3:29:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'visible' of 0x400006F2 (CraftedBoltTrap) to 'True'
+4/10/2017 3:29:36 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set criminal true'
+4/10/2017 3:29:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'criminal' of 0xF2 "Kairi1.0" ('kairi1.0') to 'True'
+4/10/2017 3:29:53 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add crafted'
+4/10/2017 3:29:55 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5927, 312, 22) in Felucca: "CraftedBoltTrap"
+4/10/2017 3:29:55 AM: 127.0.0.1: Serials: 0x400008F0; 
+4/10/2017 3:29:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/10/2017 3:30:06 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'UsesRemaining' of 0x400008F0 (CraftedBoltTrap) to '100'
+4/10/2017 3:30:11 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set criminal false'
+4/10/2017 3:30:12 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'criminal' of 0xF2 "Kairi1.0" ('kairi1.0') to 'False'
+4/10/2017 3:30:14 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set criminal false'
+4/10/2017 3:30:15 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'criminal' of 0xF2 "Kairi1.0" ('kairi1.0') to 'False'
+4/10/2017 3:30:24 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'TrapOwner' of 0x400008F0 (CraftedBoltTrap) to '0xF4 "Kairi2.0"'
+4/10/2017 3:58:06 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/10/2017 3:58:25 AM
+
+4/10/2017 4:00:12 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/10/2017 4:21:55 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/10/2017 4:22:14 AM
+
+4/10/2017 4:22:21 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/10/2017 4:23:50 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/10/2017 4:24:12 AM
+
+4/10/2017 4:24:14 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/10/2017 4:26:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/10/2017 4:27:10 AM
+
+4/10/2017 4:31:25 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/10/2017 4:31:27 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/10/2017 4:31:46 AM
+
+4/10/2017 4:31:56 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/10/2017 4:33:16 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'hide '
+4/10/2017 4:33:17 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') hiding 0xF2 "Kairi1.0" ('kairi1.0')
+4/10/2017 4:33:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+4/10/2017 4:33:24 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x400008F0 (CraftedBoltTrap) to (5920, 313, 22)
+4/10/2017 4:33:29 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set trappower 200'
+4/10/2017 4:33:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'trappower' of 0x400008F0 (CraftedBoltTrap) to '200'
+4/10/2017 4:33:36 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add mongbat'
+4/10/2017 4:33:38 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5920, 316, 22) in Felucca: "mongbat"
+4/10/2017 4:33:38 AM: 127.0.0.1: Serials: 0x6D1; 
+4/10/2017 4:37:55 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/10/2017 4:41:16 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/10/2017 4:41:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/10/2017 4:42:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add robe'
+4/10/2017 4:42:14 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5924, 318, 22) in Felucca: "robe"
+4/10/2017 4:42:14 AM: 127.0.0.1: Serials: 0x4000176C; 
+4/10/2017 4:42:17 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/10/2017 4:42:18 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x4000176C (Robe)
+4/10/2017 5:03:45 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/10/2017 5:04:04 AM
+
+4/10/2017 5:04:09 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/10/2017 5:04:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add devrobe'
+4/10/2017 5:04:21 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5924, 317, 22) in Felucca: "devrobe"
+4/10/2017 5:04:21 AM: 127.0.0.1: Serials: 0x4000044D; 
+4/10/2017 5:04:42 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'dupe '
+4/10/2017 5:04:45 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duping 0x4000044D (DevRobe) (inBag=False; amount=1)
+4/10/2017 5:04:45 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duped 0x4000044D (DevRobe) creating 0x400005E7 (DevRobe)
+4/10/2017 5:05:26 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set dex 80'
+4/10/2017 5:05:27 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'dex' of 0xF4 "Kairi2.0" ('kairi2.0') to '80'
+4/10/2017 5:05:39 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set int 25'
+4/10/2017 5:05:40 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'int' of 0xF4 "Kairi2.0" ('kairi2.0') to '25'
+4/10/2017 5:10:48 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add hatofthemagi'
+4/10/2017 5:10:49 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5921, 317, 22) in Felucca: "hatofthemagi"
+4/10/2017 5:10:49 AM: 127.0.0.1: Serials: 0x40000B7F; 
+4/10/2017 5:11:20 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go '
+4/10/2017 5:11:26 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go britain'
+4/10/2017 5:11:28 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+4/10/2017 5:11:53 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add moongate'
+4/10/2017 5:15:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/10/2017 5:16:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set weight -10'
+4/10/2017 5:16:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'weight' of 0x4000044D (DevRobe) to '-10'
+4/10/2017 5:17:04 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/10/2017 5:17:06 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40001644 (Pouch)
+4/10/2017 5:17:10 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/10/2017 5:17:12 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40001647 (Pouch)
+4/10/2017 5:17:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set weight 0'
+4/10/2017 5:17:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'weight' of 0x4000044D (DevRobe) to '0'
+4/10/2017 5:20:17 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add bookofchivalry'
+4/10/2017 5:20:17 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1426, 1683, 27) in Felucca: "bookofchivalry"
+4/10/2017 5:20:17 AM: 127.0.0.1: Serials: 0x40001092; 
+4/10/2017 5:20:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/10/2017 5:22:14 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setskill healing -1'
+4/10/2017 5:22:15 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Healing.Base' of 0xF1 "Kai" ('kairi') to '-1'
+4/10/2017 5:22:21 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setskill healing 120'
+4/10/2017 5:22:22 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Healing.Base' of 0xF1 "Kai" ('kairi') to '120'
+4/10/2017 5:29:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'unhide '
+4/10/2017 5:29:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') unhiding 0xF1 "Kai" ('kairi')
+4/10/2017 5:31:05 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/10/2017 5:31:24 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Skill_1_Name' of ... to 'Chivalry'
+4/10/2017 5:31:28 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Skill_1_Value' of ... to '-20'
+4/10/2017 5:31:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Skill_1_Value' of ... to '10'
+4/10/2017 5:42:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Skill_1_Value' of ... to '0'
+4/10/2017 5:51:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'who '
+4/10/2017 5:51:15 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0xF4 "Kairi2.0" ('kairi2.0'), Location (5921, 315, 22), Map Felucca
+4/10/2017 5:51:24 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set movable false'
+4/10/2017 5:51:26 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'movable' of 0x400005E7 (DevRobe) to 'False'
+4/10/2017 5:51:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set blessed true'
+4/10/2017 5:51:36 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/10/2017 5:51:40 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set isblessed true'
+4/10/2017 5:52:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add clothingbless'
+4/10/2017 5:52:21 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5921, 318, 22) in Felucca: "ClothingBlessDeed"
+4/10/2017 5:52:21 AM: 127.0.0.1: Serials: 0x40001E02; 
+4/10/2017 5:52:36 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add clothingbless'
+4/10/2017 5:52:39 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5922, 316, 22) in Felucca: "ClothingBlessDeed"
+4/10/2017 5:52:39 AM: 127.0.0.1: Serials: 0x40001E0F; 
+4/10/2017 5:52:54 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set movable true'
+4/10/2017 5:53:01 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'movable' of 0x400005E7 (DevRobe) to 'True'
+4/10/2017 5:53:14 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set movable false'
+4/10/2017 5:53:15 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'movable' of 0x400005E7 (DevRobe) to 'False'
+4/10/2017 5:53:17 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'kill '
+4/10/2017 5:53:18 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') killing 0xF4 "Kairi2.0" ('kairi2.0')
+4/10/2017 5:53:21 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'res '
+4/10/2017 5:53:21 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') resurrecting 0xF4 "Kairi2.0" ('kairi2.0')
+4/10/2017 5:53:50 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add earr'
+4/10/2017 5:53:54 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add earring'
+4/10/2017 5:53:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5921, 318, 22) in Felucca: "EarringsOfProtection"
+4/10/2017 5:53:59 AM: 127.0.0.1: Serials: 0x40001E33; 
+4/10/2017 5:54:08 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5920, 318, 22) in Felucca: "EarringBoxSet"
+4/10/2017 5:54:08 AM: 127.0.0.1: Serials: 0x40001E34; 
+4/10/2017 6:01:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add powerscroll'
+4/10/2017 6:01:39 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5922, 317, 22) in Felucca: "powerscroll"
+4/10/2017 6:01:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add powerscroll healing 20'
+4/10/2017 6:01:45 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5921, 317, 22) in Felucca: "powerscroll" "healing" "20"
+4/10/2017 6:01:45 AM: 127.0.0.1: Serials: 0x40002032; 
+4/10/2017 6:01:50 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/10/2017 6:01:51 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40002032 (PowerScroll)
+4/10/2017 6:01:53 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/10/2017 6:01:54 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40001E33 (EarringsOfProtection)
+4/10/2017 8:46:46 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'getskill taming'
+4/10/2017 8:46:51 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'getskill animaltaming'
+4/10/2017 8:46:54 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'getskill animallore'
+4/10/2017 8:57:45 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'hide '
+4/10/2017 8:57:47 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') hiding 0xF1 "Kai" ('kairi')
+4/10/2017 8:57:48 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'hide '
+4/10/2017 8:57:49 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') hiding 0xF4 "Kairi2.0" ('kairi2.0')
+4/10/2017 8:59:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add boot'
+4/10/2017 8:59:48 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5921, 317, 22) in Felucca: "DetectiveBoots"
+4/10/2017 8:59:48 AM: 127.0.0.1: Serials: 0x400065DC; 
+4/10/2017 8:59:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/10/2017 9:00:04 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Level' of 0x400065DC (DetectiveBoots) to '3'
+4/10/2017 9:00:14 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set level 0'
+4/10/2017 9:00:16 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'level' of 0x400065DC (DetectiveBoots) to '0'
+4/10/2017 9:00:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set level -1'
+4/10/2017 9:00:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'level' of 0x400065DC (DetectiveBoots) to '-1'
+4/10/2017 9:00:23 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set level 3'
+4/10/2017 9:00:24 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'level' of 0x400065DC (DetectiveBoots) to '3'
+4/10/2017 9:00:25 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set level 3'
+4/10/2017 9:00:28 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set level 6'
+4/10/2017 9:00:29 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'level' of 0x400065DC (DetectiveBoots) to '6'
+4/10/2017 9:00:33 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/10/2017 9:00:34 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x400065DC (DetectiveBoots)
+4/10/2017 9:00:45 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add pouch'
+4/10/2017 9:00:46 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5920, 317, 22) in Felucca: "pouch"
+4/10/2017 9:00:46 AM: 127.0.0.1: Serials: 0x4000660A; 
+4/10/2017 9:01:43 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add crimsoncinture'
+4/10/2017 9:01:46 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add crimson'
+4/10/2017 9:01:48 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5921, 316, 22) in Felucca: "CrimsonCincture"
+4/10/2017 9:01:48 AM: 127.0.0.1: Serials: 0x40006647; 
+4/10/2017 9:01:53 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add sash'
+4/10/2017 9:01:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add '
+4/10/2017 9:02:22 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Add LieutenantOfTheBritannianRoyalGuard'
+4/10/2017 9:02:23 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5921, 316, 22) in Felucca: "LieutenantOfTheBritannianRoyalGuard"
+4/10/2017 9:02:23 AM: 127.0.0.1: Serials: 0x40006656; 
+4/10/2017 9:02:51 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add '
+4/10/2017 9:02:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add detective'
+4/10/2017 9:03:03 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5921, 317, 22) in Felucca: "DetectiveBoots"
+4/10/2017 9:03:03 AM: 127.0.0.1: Serials: 0x400066C4; 
+4/10/2017 9:03:08 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set level 3'
+4/10/2017 9:03:10 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'level' of 0x400066C4 (DetectiveBoots) to '3'
+4/10/2017 9:03:41 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add robeof'
+4/10/2017 9:03:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5921, 316, 22) in Felucca: "TheRobeOfBritanniaAri"
+4/10/2017 9:03:44 AM: 127.0.0.1: Serials: 0x400066E0; 
+4/10/2017 9:04:23 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add leathertunic'
+4/10/2017 9:04:25 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5921, 317, 22) in Felucca: "LeatherTunicArtifact"
+4/10/2017 9:04:25 AM: 127.0.0.1: Serials: 0x400066F7; 
+4/10/2017 9:04:29 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/10/2017 9:04:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x400066F7 (LeatherTunicArtifact)
+4/10/2017 9:04:36 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add armoroffortune'
+4/10/2017 9:04:38 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5921, 317, 22) in Felucca: "armoroffortune"
+4/10/2017 9:04:38 AM: 127.0.0.1: Serials: 0x400066F8; 
+4/10/2017 9:04:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add shadowdancerleggings'
+4/10/2017 9:04:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5921, 317, 22) in Felucca: "shadowdancerleggings"
+4/10/2017 9:04:58 AM: 127.0.0.1: Serials: 0x400066FA; 
+4/10/2017 9:05:08 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add doublet'
+4/10/2017 9:05:09 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5921, 317, 22) in Felucca: "doublet"
+4/10/2017 9:05:09 AM: 127.0.0.1: Serials: 0x40006737; 
+4/10/2017 9:05:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add ornamentofthemagician'
+4/10/2017 9:05:39 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5921, 317, 22) in Felucca: "ornamentofthemagician"
+4/10/2017 9:05:39 AM: 127.0.0.1: Serials: 0x4000678D; 
+4/10/2017 9:06:28 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Add HallowedSpellbook'
+4/10/2017 9:06:29 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5921, 317, 22) in Felucca: "HallowedSpellbook"
+4/10/2017 9:06:29 AM: 127.0.0.1: Serials: 0x400067C3; 
+4/10/2017 9:06:36 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Add TomeOfEnlightenment'
+4/10/2017 9:06:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5920, 317, 22) in Felucca: "TomeOfEnlightenment"
+4/10/2017 9:06:37 AM: 127.0.0.1: Serials: 0x400067C5; 
+4/10/2017 9:06:38 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Add TomeOfLostKnowledge'
+4/10/2017 9:06:39 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5921, 318, 22) in Felucca: "TomeOfLostKnowledge"
+4/10/2017 9:06:39 AM: 127.0.0.1: Serials: 0x400067C6; 
+4/10/2017 9:07:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm remove'
+4/10/2017 9:07:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40000508 (ElvenPants)
+4/10/2017 9:07:33 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40006737 (Doublet)
+4/10/2017 9:07:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add '
+4/10/2017 9:08:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Add RewardCloak'
+4/10/2017 9:08:14 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5921, 316, 22) in Felucca: "RewardCloak"
+4/10/2017 9:08:14 AM: 127.0.0.1: Serials: 0x4000682D; 
+4/10/2017 9:09:09 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add acidproof'
+4/10/2017 9:09:11 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5921, 316, 22) in Felucca: "AcidProofRobe"
+4/10/2017 9:09:11 AM: 127.0.0.1: Serials: 0x4000685D; 
+4/10/2017 9:14:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/10/2017 9:14:10 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x400067C3 (HallowedSpellbook)
+4/10/2017 9:14:29 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add shirt'
+4/10/2017 9:14:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5921, 317, 22) in Felucca: "shirt"
+4/10/2017 9:14:30 AM: 127.0.0.1: Serials: 0x40006976; 
+4/10/2017 9:15:21 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add skirt'
+4/10/2017 9:15:22 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5921, 317, 22) in Felucca: "skirt"
+4/10/2017 9:15:22 AM: 127.0.0.1: Serials: 0x40006984; 
+4/10/2017 9:15:28 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add pants'
+4/10/2017 9:15:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5921, 316, 22) in Felucca: "LongPants"
+4/10/2017 9:15:32 AM: 127.0.0.1: Serials: 0x40006997; 
+4/10/2017 9:15:40 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5920, 319, 22) in Felucca: "ShortPants"
+4/10/2017 9:15:40 AM: 127.0.0.1: Serials: 0x40006998; 
+4/10/2017 9:15:46 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/10/2017 9:15:47 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40006998 (ShortPants)
+4/10/2017 9:16:02 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add hakama'
+4/10/2017 9:16:04 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5922, 318, 22) in Felucca: "hakama"
+4/10/2017 9:16:04 AM: 127.0.0.1: Serials: 0x400069D1; 
+4/10/2017 9:16:10 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/10/2017 9:16:12 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x400069D1 (Hakama)
+4/10/2017 9:16:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm remove'
+4/10/2017 9:16:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40006997 (LongPants)
+4/10/2017 9:16:33 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40006976 (Shirt)
+4/10/2017 9:16:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/10/2017 9:16:45 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x4000685D (AcidProofRobe)
+4/10/2017 9:18:40 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add shield'
+4/10/2017 9:18:49 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5921, 318, 22) in Felucca: "ChaosShield"
+4/10/2017 9:18:49 AM: 127.0.0.1: Serials: 0x40006A54; 
+4/10/2017 9:37:43 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/10/2017 9:37:56 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'SpellDamage' of ... to '10000'
+4/10/2017 9:38:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setallskills 120'
+4/10/2017 9:38:08 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'EverySkill.Base' of 0xF4 "Kairi2.0" ('kairi2.0') to '120'
+4/10/2017 9:38:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'allspells '
+4/10/2017 9:38:14 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') filling spellbook 0x400067C6 (TomeOfLostKnowledge)
+4/10/2017 9:38:23 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add mongbat'
+4/10/2017 9:38:25 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5926, 318, 22) in Felucca: "mongbat"
+4/10/2017 9:38:25 AM: 127.0.0.1: Serials: 0x6176; 
+4/10/2017 9:44:12 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add taskmaster'
+4/10/2017 9:44:14 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5921, 317, 22) in Felucca: "TheTaskmaster"
+4/10/2017 9:44:14 AM: 127.0.0.1: Serials: 0x40011929; 
+4/10/2017 9:44:18 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add pouch'
+4/10/2017 9:44:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5920, 318, 22) in Felucca: "pouch"
+4/10/2017 9:44:19 AM: 127.0.0.1: Serials: 0x40011937; 
+4/10/2017 9:44:27 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add armsoftactical'
+4/10/2017 9:44:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5922, 317, 22) in Felucca: "ArmsOfTacticalExcellence"
+4/10/2017 9:44:30 AM: 127.0.0.1: Serials: 0x4001193B; 
+4/10/2017 9:46:29 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add candle'
+4/10/2017 9:46:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5921, 318, 22) in Felucca: "candle"
+4/10/2017 9:46:30 AM: 127.0.0.1: Serials: 0x40011A25; 
+4/10/2017 9:46:52 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/10/2017 9:47:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add lantern'
+4/10/2017 9:47:08 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5921, 317, 22) in Felucca: "lantern"
+4/10/2017 9:47:09 AM: 127.0.0.1: Serials: 0x40011A27; 
+4/10/2017 9:47:11 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add lanter'
+4/10/2017 9:47:15 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5922, 316, 22) in Felucca: "LanternOfSouls"
+4/10/2017 9:47:15 AM: 127.0.0.1: Serials: 0x40011A29; 
+4/10/2017 9:47:24 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5922, 317, 22) in Felucca: "TwilightLantern"
+4/10/2017 9:47:24 AM: 127.0.0.1: Serials: 0x40011A2A; 
+4/10/2017 9:47:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm remove'
+4/10/2017 9:47:39 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40011A27 (Lantern)
+4/10/2017 9:47:40 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40011A29 (LanternOfSouls)
+4/10/2017 9:47:45 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm remove'
+4/10/2017 9:47:47 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40011A2A (TwilightLantern)
+4/10/2017 9:50:35 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/10/2017 9:50:46 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'AttackChance' of ... to '-10'
+4/10/2017 9:50:56 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'AttackChance' of ... to '100'
+4/10/2017 9:54:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get itemid'
+4/10/2017 9:55:03 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get itemid10110'
+4/10/2017 9:55:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get itemid 10110'
+4/10/2017 9:55:26 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set itemid 10110'
+4/10/2017 9:55:28 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'itemid' of 0x40000B7F (HatOfTheMagi) to '10110'
+4/10/2017 9:55:38 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/10/2017 9:56:56 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add talisma'
+4/10/2017 9:57:00 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5921, 317, 22) in Felucca: "RandomTalisman"
+4/10/2017 9:57:00 AM: 127.0.0.1: Serials: 0x40013C39; 
+4/10/2017 9:57:15 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/10/2017 9:57:34 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'SuccessBonus' of 0x40013C39 (RandomTalisman) to '15'
+4/10/2017 9:57:49 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Type' of Gaman to 'Server.Mobiles.PlayerMobile'
+4/10/2017 9:58:49 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Slayer' of 0x40013C39 (RandomTalisman) to 'Mage'
+4/10/2017 9:59:04 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Type' of DeathwatchBeetle to 'Server.Mobiles.PlayerMobile'
+4/10/2017 9:59:42 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add talisman'
+4/10/2017 9:59:50 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add talisma'
+4/10/2017 10:00:00 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add talismanofdamageremoval'
+4/10/2017 10:00:54 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add talisman'
+4/10/2017 10:00:56 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5922, 316, 22) in Felucca: "CuSidheFormTalisman"
+4/10/2017 10:00:56 AM: 127.0.0.1: Serials: 0x40013D63; 
+4/10/2017 10:01:01 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/10/2017 10:02:36 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/10/2017 10:03:45 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get itemid'
+4/10/2017 10:04:00 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set itemid 3701'
+4/10/2017 10:04:02 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'itemid' of 0x40013C39 (RandomTalisman) to '3701'
+4/10/2017 10:04:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/10/2017 10:04:14 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40013C39 (RandomTalisman)
+4/10/2017 10:04:17 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add randomtalisma'
+4/10/2017 10:04:20 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5921, 318, 22) in Felucca: "RandomTalisman"
+4/10/2017 10:04:20 AM: 127.0.0.1: Serials: 0x400170FD; 
+4/10/2017 10:13:49 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/10/2017 10:16:17 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get killer.name'
+4/10/2017 10:16:25 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm inc killer.name'
+4/10/2017 10:16:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm inc killer.name 1'
+4/10/2017 10:16:38 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm inc killer.name 1'
+4/10/2017 10:16:47 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Name' of FireSteed to '#1072488'
+4/10/2017 10:16:56 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Name' of FireSteed to '#1072489'
+4/10/2017 10:17:06 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Name' of FireSteed to '#1'
+4/10/2017 10:17:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Name' of FireSteed to '#1072487'
+4/10/2017 10:17:46 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Name' of FireSteed to '#1072480'
+4/10/2017 10:19:24 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Name' of FireSteed to '#1072400'
+4/10/2017 10:19:43 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Name' of FireSteed to '#1072350'
+4/10/2017 10:19:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Name' of FireSteed to '#1072360'
+4/10/2017 10:20:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Name' of FireSteed to '#1072370'
+4/10/2017 10:20:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Name' of FireSteed to '#1072378'
+4/10/2017 10:20:29 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Name' of FireSteed to '#1072380'
+4/10/2017 10:20:39 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Name' of FireSteed to '#1072386'
+4/10/2017 10:20:47 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Name' of FireSteed to '#1072389'
+4/10/2017 10:20:54 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Name' of FireSteed to '#1072388'
+4/10/2017 10:21:20 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Name' of FireSteed to '#1072389'
+4/10/2017 10:22:38 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Name' of FireSteed to '#1072390'
+4/10/2017 10:22:46 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Name' of FireSteed to '#1072391'
+4/10/2017 10:22:54 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Name' of FireSteed to '#1072392'
+4/10/2017 10:23:04 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Name' of FireSteed to ''
+4/10/2017 10:24:51 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Type' of FireSteed to 'Server.Mobiles.PlayerMobile'
+4/10/2017 10:25:12 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Amount' of PlayerMobile to '100'
+4/10/2017 10:25:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'SET MOVABLE TRUE'
+4/10/2017 10:25:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'MOVABLE' of 0x400005E7 (DevRobe) to 'True'
+4/10/2017 10:26:35 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Type' of Ratman to 'Server.Mobiles.PlayerMobile'
+4/10/2017 10:26:41 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Name' of PlayerMobile to ''
+4/10/2017 10:26:46 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Amount' of PlayerMobile to '100'
+4/10/2017 10:28:29 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Amount' of PlayerMobile to '90'
+4/10/2017 10:28:48 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/10/2017 10:29:02 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Direct' of ... to '0'
+4/10/2017 10:29:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setallskills 120'
+4/10/2017 10:29:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'EverySkill.Base' of 0xF2 "Kairi1.0" ('kairi1.0') to '120'
+4/10/2017 10:29:36 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'dupe '
+4/10/2017 10:29:38 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duping 0x400005E7 (DevRobe) (inBag=False; amount=1)
+4/10/2017 10:29:38 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duped 0x400005E7 (DevRobe) creating 0x4001770A (DevRobe)
+4/10/2017 10:30:10 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/10/2017 10:30:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Amount' of PlayerMobile to '10'
+4/10/2017 10:30:40 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Amount' of PlayerMobile to '-100'
+4/10/2017 10:31:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/10/2017 10:31:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Amount' of PlayerMobile to '0'
+4/10/2017 10:32:06 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Amount' of PlayerMobile to '-100'
+4/10/2017 10:32:15 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Amount' of PlayerMobile to '100'
+4/10/2017 10:42:35 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get weapon.layer'
+4/10/2017 10:42:39 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get weapon'
+4/10/2017 10:42:43 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get weapon'
+4/10/2017 10:42:52 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get weapon'
+4/10/2017 10:42:55 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get weapon.layer'
+4/10/2017 10:42:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/10/2017 10:43:15 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get weapon.Layer'
+4/10/2017 10:43:17 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get weapon.Layer'
+4/10/2017 10:43:34 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get weapon'
+4/10/2017 10:43:46 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get weapon.itemid'
+4/10/2017 10:43:49 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get weapon'
+4/10/2017 10:43:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get '
+4/10/2017 10:44:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get labe'
+4/10/2017 10:44:08 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get label'
+4/10/2017 10:44:11 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get label'
+4/10/2017 10:44:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/10/2017 10:44:55 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
+##############################
+Log started on 4/10/2017 10:45:43 AM
+
+4/10/2017 10:45:46 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/10/2017 10:46:05 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/10/2017 10:46:10 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Slayer' of 0x400170FD (RandomTalisman) to 'Player'
+4/10/2017 10:46:54 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/10/2017 10:47:21 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Slayer' of 0x400170FD (RandomTalisman) to 'Player'
+4/10/2017 10:47:27 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Slayer' of 0x400170FD (RandomTalisman) to 'Bovine'
+4/10/2017 10:47:38 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Slayer' of 0x400170FD (RandomTalisman) to 'Player'
+4/10/2017 10:53:16 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/10/2017 10:53:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'SpellDamage' of ... to '0'
+##############################
+Log started on 4/10/2017 9:49:42 PM
+
+4/10/2017 9:50:03 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+4/10/2017 9:51:18 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/10/2017 9:51:20 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x400008F0 (CraftedBoltTrap)
+4/10/2017 9:51:23 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+4/10/2017 9:56:27 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/10/2017 9:56:30 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40000B7F (HatOfTheMagi)
+4/10/2017 9:56:32 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add hatofthemagi'
+4/10/2017 9:56:34 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5932, 316, 22) in Felucca: "hatofthemagi"
+4/10/2017 9:56:34 PM: 127.0.0.1: Serials: 0x40000D9A; 
+4/10/2017 9:56:59 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm get layer'
+4/10/2017 10:52:05 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add gauntlets'
+4/10/2017 10:52:08 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5936, 318, 44) in Felucca: "GauntletsOfNobility"
+4/10/2017 10:52:08 PM: 127.0.0.1: Serials: 0x40002110; 
+4/10/2017 11:02:26 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add paladi'
+4/10/2017 11:02:43 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add factionpaladin'
+4/10/2017 11:02:45 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5929, 315, 22) in Felucca: "factionpaladin"
+4/10/2017 11:02:45 PM: 127.0.0.1: Serials: 0x5D90; 
+4/10/2017 11:02:46 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/10/2017 11:02:48 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x5D90 "Manning" (no account)
+4/10/2017 11:14:49 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add '
+4/10/2017 11:17:12 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add shadowdancer'
+4/10/2017 11:17:14 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5926, 319, 22) in Felucca: "ShadowDancerLeggings"
+4/10/2017 11:17:14 PM: 127.0.0.1: Serials: 0x400026C8; 
+4/10/2017 11:17:18 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/10/2017 11:17:20 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x400026C8 (ShadowDancerLeggings)
+4/10/2017 11:17:22 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add jackals'
+4/10/2017 11:17:24 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5926, 319, 22) in Felucca: "JackalsCollar"
+4/10/2017 11:17:24 PM: 127.0.0.1: Serials: 0x400026CA; 
+4/10/2017 11:18:05 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Add HelmOfInsight'
+4/10/2017 11:18:07 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5925, 319, 22) in Felucca: "HelmOfInsight"
+4/10/2017 11:18:07 PM: 127.0.0.1: Serials: 0x4000272B; 
+4/10/2017 11:18:48 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Add LeggingsOfBane'
+4/10/2017 11:18:48 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5926, 319, 22) in Felucca: "LeggingsOfBane"
+4/10/2017 11:18:48 PM: 127.0.0.1: Serials: 0x4000273B; 
+4/10/2017 11:19:04 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Add OrnateCrownOfTheHarrower'
+4/10/2017 11:19:05 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5926, 319, 22) in Felucca: "OrnateCrownOfTheHarrower"
+4/10/2017 11:19:05 PM: 127.0.0.1: Serials: 0x4000273C; 
+4/10/2017 11:19:19 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Add InquisitorsResolution'
+4/10/2017 11:19:20 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5926, 319, 22) in Felucca: "InquisitorsResolution"
+4/10/2017 11:19:20 PM: 127.0.0.1: Serials: 0x4000274B; 
+4/10/2017 11:20:59 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add '
+4/10/2017 11:21:16 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Add AnthropomorphistGlasses'
+4/10/2017 11:21:17 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5925, 319, 22) in Felucca: "AnthropomorphistGlasses"
+4/10/2017 11:21:17 PM: 127.0.0.1: Serials: 0x4000278B; 
+4/10/2017 11:21:50 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Add BrambleCoat'
+4/10/2017 11:21:51 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5926, 320, 22) in Felucca: "BrambleCoat"
+4/10/2017 11:21:51 PM: 127.0.0.1: Serials: 0x4000279F; 
+4/10/2017 11:31:58 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set layer earrings'
+4/10/2017 11:32:00 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'layer' of 0x4000278B (AnthropomorphistGlasses) to 'Earrings'
+4/10/2017 11:32:35 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get layer'
+4/10/2017 11:32:47 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set layer earrings'
+4/10/2017 11:32:49 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'layer' of 0x400004F2 (Backpack) to 'Earrings'
+4/10/2017 11:33:04 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set layer backpack'
+4/10/2017 11:33:05 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'layer' of 0x400004F2 (Backpack) to 'Backpack'
+4/10/2017 11:33:10 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add backpack'
+4/10/2017 11:33:11 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5927, 319, 22) in Felucca: "backpack"
+4/10/2017 11:33:11 PM: 127.0.0.1: Serials: 0x40002ACA; 
+4/10/2017 11:33:14 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set layer earrings'
+4/10/2017 11:33:15 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'layer' of 0x40002ACA (Backpack) to 'Earrings'
+4/10/2017 11:33:31 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add earrin[remove'
+4/10/2017 11:33:35 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm remove'
+4/10/2017 11:33:38 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x400008BC (TinkersTools)
+4/10/2017 11:33:39 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40000506 (FemaleElvenRobe)
+4/10/2017 11:33:42 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40001EE1 (ConditionTeleporter)
+4/10/2017 11:33:44 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40000912 (TinkerBell)
+4/10/2017 11:33:50 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm remove'
+4/10/2017 11:33:53 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40002239 (Pouch)
+4/10/2017 11:40:13 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add bluebook'
+4/10/2017 11:40:14 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5927, 315, 22) in Felucca: "bluebook"
+4/10/2017 11:40:14 PM: 127.0.0.1: Serials: 0x40002CD0; 
+4/10/2017 11:50:53 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Add GlovesOfTheSun'
+4/10/2017 11:50:54 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5927, 318, 22) in Felucca: "GlovesOfTheSun"
+4/10/2017 11:50:54 PM: 127.0.0.1: Serials: 0x40002F1B; 
+4/10/2017 11:50:57 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/10/2017 11:50:59 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40002F1B (GlovesOfTheSun)
+4/10/2017 11:51:07 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Add HelmOfSwiftness'
+4/10/2017 11:51:08 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5928, 319, 22) in Felucca: "HelmOfSwiftness"
+4/10/2017 11:51:08 PM: 127.0.0.1: Serials: 0x40002F5D; 
+4/10/2017 11:51:11 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/10/2017 11:51:13 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40002F5D (HelmOfSwiftness)
+4/10/2017 11:51:28 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Add LeurociansMempoOfFortune'
+4/10/2017 11:51:29 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5927, 318, 22) in Felucca: "LeurociansMempoOfFortune"
+4/10/2017 11:51:29 PM: 127.0.0.1: Serials: 0x40002F60; 
+4/10/2017 11:52:04 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/10/2017 11:52:07 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x4000278B (AnthropomorphistGlasses)
+4/10/2017 11:52:45 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Add MaceShieldGlasses'
+4/10/2017 11:52:47 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5927, 317, 22) in Felucca: "MaceShieldGlasses"
+4/10/2017 11:52:47 PM: 127.0.0.1: Serials: 0x40002FB3; 
+4/11/2017 12:01:20 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/11/2017 12:01:41 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Add Stormgrip'
+4/11/2017 12:01:42 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5927, 318, 22) in Felucca: "Stormgrip"
+4/11/2017 12:01:42 AM: 127.0.0.1: Serials: 0x40003230; 
+4/11/2017 12:01:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/11/2017 12:01:46 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40003230 (Stormgrip)
+4/11/2017 12:02:00 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add donat'
+4/11/2017 12:02:04 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add vesper'
+4/11/2017 12:02:05 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add vespe'
+4/11/2017 12:06:52 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add replica'
+4/11/2017 12:06:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add '
+4/11/2017 12:07:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add holyknights'
+4/11/2017 12:07:15 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5927, 319, 22) in Felucca: "HolyKnightsBreastplate"
+4/11/2017 12:07:15 AM: 127.0.0.1: Serials: 0x400033B0; 
+4/11/2017 12:07:24 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/11/2017 12:07:26 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x400033B0 (HolyKnightsBreastplate)
+4/11/2017 12:08:35 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/11/2017 12:41:28 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/11/2017 12:41:29 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40018293 (Teleporter)
+4/11/2017 12:41:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/11/2017 12:41:33 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x400187FB (Teleporter)
+4/11/2017 12:41:34 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/11/2017 12:41:36 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40002943 (Pouch)
+4/11/2017 12:41:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/11/2017 12:41:40 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm remove'
+4/11/2017 12:41:43 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x4000668B (TinkerTools)
+4/11/2017 12:41:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x400004F3 (RedBook)
+4/11/2017 12:41:45 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x400004F7 (LeafGloves)
+4/11/2017 12:41:46 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40006C1F (RunicHammer)
+4/11/2017 12:41:48 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40013C23 (IronIngot)
+4/11/2017 12:41:51 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40000D72 (Gold)
+4/11/2017 12:41:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add scroll'
+4/11/2017 12:42:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5925, 320, 22) in Felucca: "AgilityScroll"
+4/11/2017 12:42:13 AM: 127.0.0.1: Serials: 0x40003B60; 
+4/11/2017 12:42:18 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5924, 320, 22) in Felucca: "CurseScroll"
+4/11/2017 12:42:18 AM: 127.0.0.1: Serials: 0x40003B6E; 
+4/11/2017 12:42:27 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5924, 319, 22) in Felucca: "FlamestrikeScroll"
+4/11/2017 12:42:27 AM: 127.0.0.1: Serials: 0x40003B70; 
+4/11/2017 12:42:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm set amount 100'
+4/11/2017 12:42:34 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm set amount 20'
+4/11/2017 12:42:35 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'amount' of 0x40003B70 (FlamestrikeScroll) to '20'
+4/11/2017 12:42:36 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'amount' of 0x40003B6E (CurseScroll) to '20'
+4/11/2017 12:42:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'amount' of 0x40003B60 (AgilityScroll) to '20'
+4/11/2017 12:43:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setskill magery 0'
+4/11/2017 12:43:42 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setskill magery 0'
+4/11/2017 12:43:43 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Magery.Base' of 0xF4 "Kairi2.0" ('kairi2.0') to '0'
+4/11/2017 1:02:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add backpack'
+4/11/2017 1:03:00 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get itemid'
+4/11/2017 1:03:18 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add backpack set itemid 4231 layer earrings'
+4/11/2017 1:03:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5925, 320, 22) in Felucca: "backpack" "set" "itemid" "4231" "layer" "earrings"
+4/11/2017 1:03:19 AM: 127.0.0.1: Serials: 0x4000401E; 
+4/11/2017 1:03:39 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get itemid'
+4/11/2017 1:03:46 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set itemid 3705'
+4/11/2017 1:03:48 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'itemid' of 0x4000401E (Backpack) to '3705'
+4/11/2017 1:03:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get itemid'
+4/11/2017 1:04:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set itemid 3701'
+4/11/2017 1:04:08 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'itemid' of 0x4000401E (Backpack) to '3701'
+4/11/2017 1:04:14 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set itemid'
+4/11/2017 1:04:24 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get itemid'
+4/11/2017 1:04:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set itemid 4231'
+4/11/2017 1:04:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'itemid' of 0x4000401E (Backpack) to '4231'
+4/11/2017 1:04:41 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get itemid'
+4/11/2017 1:04:46 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set itemid 3701'
+4/11/2017 1:04:48 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'itemid' of 0x4000401E (Backpack) to '3701'
+4/11/2017 1:05:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set itemid 4231'
+4/11/2017 1:05:09 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'itemid' of 0x4000401E (Backpack) to '4231'
+4/11/2017 1:05:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set itemid 3701'
+4/11/2017 1:05:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'itemid' of 0x4000401E (Backpack) to '3701'
+4/11/2017 1:05:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/11/2017 1:05:46 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x4000401E (Backpack)
+4/11/2017 1:06:20 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add quive'
+4/11/2017 1:10:26 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add berseker'
+4/11/2017 1:10:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add factionbe'
+4/11/2017 1:10:34 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5922, 312, 22) in Felucca: "FactionBerserker"
+4/11/2017 1:10:34 AM: 127.0.0.1: Serials: 0x6011; 
+4/11/2017 1:10:54 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm inc hits 100'
+4/11/2017 1:11:22 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'dupe '
+4/11/2017 1:11:26 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duping 0x4000678D (OrnamentOfTheMagician) (inBag=False; amount=1)
+4/11/2017 1:11:26 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duped 0x4000678D (OrnamentOfTheMagician) creating 0x40004231 (OrnamentOfTheMagician)
+4/11/2017 1:11:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add ring'
+4/11/2017 1:11:38 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5927, 318, 22) in Felucca: "AnOldRing"
+4/11/2017 1:11:38 AM: 127.0.0.1: Serials: 0x40004232; 
+4/11/2017 1:11:46 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get itemid'
+4/11/2017 1:11:53 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set itemid 4234'
+4/11/2017 1:11:55 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'itemid' of 0x40004231 (OrnamentOfTheMagician) to '4234'
+4/11/2017 1:11:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get layer'
+4/11/2017 1:12:01 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set layer ring'
+4/11/2017 1:12:03 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'layer' of 0x40004231 (OrnamentOfTheMagician) to 'Ring'
+4/11/2017 1:12:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm inc mana  200'
+4/11/2017 1:12:20 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'getskill magery'
+4/11/2017 1:12:42 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'cast curespell'
+4/11/2017 1:12:53 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+4/11/2017 1:12:54 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x6011 "Simon" (no account)
+4/11/2017 1:12:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add factionwiza'
+4/11/2017 1:13:00 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5922, 312, 22) in Felucca: "FactionWizard"
+4/11/2017 1:13:00 AM: 127.0.0.1: Serials: 0x6018; 
+4/11/2017 1:13:25 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set faction councilofmages'
+4/11/2017 1:13:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+4/11/2017 1:13:33 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Faction' of 0x6018 "Addison" (no account) to 'Council of Mages'
+4/11/2017 1:36:27 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '

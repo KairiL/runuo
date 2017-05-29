@@ -1,0 +1,1037 @@
+##############################
+Log started on 5/23/2017 7:31:45 PM
+
+5/23/2017 7:45:05 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+5/23/2017 7:45:08 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'who '
+5/23/2017 7:45:10 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6FEF "Jonesy" ('ezekiah'), Location (1765, 3011, 0), Map Felucca
+5/23/2017 7:45:11 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6FEF "Jonesy" ('ezekiah'), Location (1771, 3005, 0), Map Felucca
+5/23/2017 7:45:12 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6FEF "Jonesy" ('ezekiah'), Location (1775, 3002, 0), Map Felucca
+5/23/2017 7:45:12 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6FEF "Jonesy" ('ezekiah'), Location (1776, 3002, 0), Map Felucca
+5/23/2017 7:45:13 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6FEF "Jonesy" ('ezekiah'), Location (1784, 2994, 0), Map Felucca
+5/23/2017 7:45:13 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6FEF "Jonesy" ('ezekiah'), Location (1785, 2993, 0), Map Felucca
+5/23/2017 7:45:13 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6FEF "Jonesy" ('ezekiah'), Location (1788, 2990, 0), Map Felucca
+5/23/2017 7:45:14 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6FEF "Jonesy" ('ezekiah'), Location (1795, 2984, 0), Map Felucca
+5/23/2017 7:45:14 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6FEF "Jonesy" ('ezekiah'), Location (1798, 2986, 0), Map Felucca
+5/23/2017 7:45:15 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6FEF "Jonesy" ('ezekiah'), Location (1800, 2985, 0), Map Felucca
+5/23/2017 7:45:16 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6FEF "Jonesy" ('ezekiah'), Location (1806, 2987, 0), Map Felucca
+5/23/2017 7:45:16 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6FEF "Jonesy" ('ezekiah'), Location (1808, 2994, 0), Map Felucca
+5/23/2017 7:45:17 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6FEF "Jonesy" ('ezekiah'), Location (1811, 2997, 0), Map Felucca
+5/23/2017 7:45:17 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6FEF "Jonesy" ('ezekiah'), Location (1812, 2998, 0), Map Felucca
+5/23/2017 7:45:17 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6FEF "Jonesy" ('ezekiah'), Location (1814, 2999, 0), Map Felucca
+5/23/2017 7:45:17 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6FEF "Jonesy" ('ezekiah'), Location (1815, 2999, 3), Map Felucca
+5/23/2017 7:45:17 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6FEF "Jonesy" ('ezekiah'), Location (1816, 2998, 7), Map Felucca
+5/23/2017 7:45:18 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6FEF "Jonesy" ('ezekiah'), Location (1819, 2995, 0), Map Felucca
+5/23/2017 7:45:18 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6FEF "Jonesy" ('ezekiah'), Location (1821, 2993, 0), Map Felucca
+5/23/2017 7:45:18 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6FEF "Jonesy" ('ezekiah'), Location (1821, 2993, 0), Map Felucca
+5/23/2017 7:45:18 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6FEF "Jonesy" ('ezekiah'), Location (1823, 2993, 0), Map Felucca
+5/23/2017 7:45:19 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6FEF "Jonesy" ('ezekiah'), Location (1824, 2993, 0), Map Felucca
+5/23/2017 7:45:19 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6FEF "Jonesy" ('ezekiah'), Location (1826, 2991, 0), Map Felucca
+5/23/2017 7:45:19 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6FEF "Jonesy" ('ezekiah'), Location (1827, 2990, 2), Map Felucca
+5/23/2017 7:45:19 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6FEF "Jonesy" ('ezekiah'), Location (1829, 2988, 4), Map Felucca
+5/23/2017 7:45:19 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6FEF "Jonesy" ('ezekiah'), Location (1830, 2988, 3), Map Felucca
+5/23/2017 7:45:19 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6FEF "Jonesy" ('ezekiah'), Location (1831, 2987, 2), Map Felucca
+5/23/2017 7:45:20 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6FEF "Jonesy" ('ezekiah'), Location (1832, 2986, 5), Map Felucca
+5/23/2017 7:45:20 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6FEF "Jonesy" ('ezekiah'), Location (1834, 2984, 2), Map Felucca
+5/23/2017 7:45:23 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go luna'
+5/23/2017 11:07:03 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+5/23/2017 11:07:05 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go fire'
+5/23/2017 11:07:13 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/23/2017 11:08:42 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/23/2017 11:11:02 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/23/2017 11:11:09 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+5/23/2017 11:11:11 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x4001CF47 (PremiumSpawner) to (5852, 1467, 1)
+5/23/2017 11:11:14 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+5/23/2017 11:11:15 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x4001CE8A (PremiumSpawner) to (5851, 1468, 2)
+5/23/2017 11:11:25 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+5/23/2017 11:12:01 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'HomeRange' of 0x4001CE8A (PremiumSpawner) to '30'
+5/23/2017 11:13:03 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add hellca'
+5/23/2017 11:13:07 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5863, 1461, 2) in Felucca: "PredatorHellCat"
+5/23/2017 11:13:07 PM: 127.0.0.1: Serials: 0x60BA; 
+5/23/2017 11:15:05 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'who '
+5/23/2017 11:15:11 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6AB "Davonna" ('mom'), Location (788, 576, 0), Map Felucca
+5/23/2017 11:15:27 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/23/2017 11:15:37 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/23/2017 11:15:42 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/23/2017 11:15:53 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add premiumspawner'
+5/23/2017 11:15:55 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (772, 751, 5) in Felucca: "premiumspawner"
+5/23/2017 11:15:55 PM: 127.0.0.1: Serials: 0x400194E8; 
+5/23/2017 11:16:09 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'HomeRange' of 0x400194E8 (PremiumSpawner) to '100'
+5/23/2017 11:16:31 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'MinDelay' of 0x400194E8 (PremiumSpawner) to '00:00:00'
+5/23/2017 11:16:47 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Count' of 0x400194E8 (PremiumSpawner) to '25'
+5/23/2017 11:16:53 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/23/2017 11:17:00 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/23/2017 11:17:25 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/23/2017 11:17:51 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'HomeRange' of 0x400194E8 (PremiumSpawner) to '250'
+5/23/2017 11:18:36 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add imp'
+5/23/2017 11:18:38 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (772, 748, 0) in Felucca: "imp"
+5/23/2017 11:18:38 PM: 127.0.0.1: Serials: 0x60D6; 
+5/23/2017 11:18:42 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+5/23/2017 11:18:48 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get hitpoints'
+5/23/2017 11:18:51 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get hits'
+5/23/2017 11:18:56 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+5/23/2017 11:18:58 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x60D6 "an imp" (no account)
+5/23/2017 11:21:03 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add orc'
+5/23/2017 11:21:06 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add or'
+5/23/2017 11:21:13 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add orcm'
+5/23/2017 11:21:15 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add orci'
+5/23/2017 11:22:45 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Count' of 0x400194E8 (PremiumSpawner) to '10'
+5/23/2017 11:27:24 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/23/2017 11:27:34 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/23/2017 11:28:19 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Count' of 0x400194E8 (PremiumSpawner) to '25'
+5/23/2017 11:28:26 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'HomeRange' of 0x400194E8 (PremiumSpawner) to '400'
+5/23/2017 11:29:15 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/23/2017 11:29:28 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/23/2017 11:29:52 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add premiumspawner'
+5/23/2017 11:30:03 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add orcish'
+5/23/2017 11:31:33 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add greatermongba'
+5/23/2017 11:33:37 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'HomeRange' of 0x400194E8 (PremiumSpawner) to '450'
+5/23/2017 11:34:47 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Count' of 0x400194E8 (PremiumSpawner) to '60'
+5/23/2017 11:34:59 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'MaxDelay' of 0x400194E8 (PremiumSpawner) to '00:03:00'
+5/23/2017 11:35:19 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'dupe '
+5/23/2017 11:35:20 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duping 0x400194E8 (PremiumSpawner) (inBag=False; amount=1)
+5/23/2017 11:35:20 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duped 0x400194E8 (PremiumSpawner) creating 0x40019B65 (PremiumSpawner)
+5/23/2017 11:35:36 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+5/23/2017 11:35:38 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x40019B65 (PremiumSpawner) to (2702, 692, 5)
+5/23/2017 11:35:46 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+5/23/2017 11:35:47 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40019B65 (PremiumSpawner)
+5/23/2017 11:35:54 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add premiumspawner'
+5/23/2017 11:35:55 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (2702, 692, 5) in Felucca: "premiumspawner"
+5/23/2017 11:35:55 PM: 127.0.0.1: Serials: 0x4001AA41; 
+5/23/2017 11:39:21 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Count' of 0x4001AA41 (PremiumSpawner) to '60'
+5/23/2017 11:39:31 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'HomeRange' of 0x4001AA41 (PremiumSpawner) to '450'
+5/23/2017 11:39:36 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'MinDelay' of 0x4001AA41 (PremiumSpawner) to '00:00:00'
+5/23/2017 11:39:39 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'MaxDelay' of 0x4001AA41 (PremiumSpawner) to '00:03:00'
+5/23/2017 11:40:27 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add premiumspawner'
+5/23/2017 11:40:30 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (648, 2084, 0) in Felucca: "premiumspawner"
+5/23/2017 11:40:30 PM: 127.0.0.1: Serials: 0x4001BDD9; 
+5/23/2017 11:41:57 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Count' of 0x4001BDD9 (PremiumSpawner) to '15'
+5/23/2017 11:42:07 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'HomeRange' of 0x4001BDD9 (PremiumSpawner) to '100'
+5/23/2017 11:42:11 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/23/2017 11:42:29 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/23/2017 11:42:44 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/23/2017 11:43:08 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Count' of 0x4001BDD9 (PremiumSpawner) to '8'
+5/23/2017 11:43:12 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/23/2017 11:43:24 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/23/2017 11:43:34 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'HomeRange' of 0x4001BDD9 (PremiumSpawner) to '70'
+5/23/2017 11:43:41 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'MinDelay' of 0x4001BDD9 (PremiumSpawner) to '00:00:00'
+5/23/2017 11:44:01 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'MaxDelay' of 0x4001BDD9 (PremiumSpawner) to '00:04:00'
+5/23/2017 11:44:39 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/23/2017 11:45:04 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/23/2017 11:45:27 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add premiumspawner'
+5/23/2017 11:45:28 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1410, 3812, 0) in Felucca: "premiumspawner"
+5/23/2017 11:45:28 PM: 127.0.0.1: Serials: 0x4001C8ED; 
+5/23/2017 11:45:30 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+5/23/2017 11:45:36 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/23/2017 11:47:13 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/23/2017 11:47:16 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') unhiding 0xF1 "Kai" ('kairi')
+5/23/2017 11:47:16 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'self unhide'
+5/23/2017 11:48:46 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'bank '
+5/23/2017 11:48:47 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') opening bank box of 0x6AB "Davonna" ('mom')
+5/23/2017 11:51:17 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'hide '
+5/23/2017 11:51:19 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') hiding 0xF1 "Kai" ('kairi')
+5/23/2017 11:52:01 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/23/2017 11:53:28 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add premiumspawner'
+5/23/2017 11:53:29 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1416, 3815, 0) in Felucca: "premiumspawner"
+5/23/2017 11:53:29 PM: 127.0.0.1: Serials: 0x4001DB6A; 
+5/23/2017 11:53:31 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/23/2017 11:53:34 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/23/2017 11:54:08 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'CountA' of 0x4001D1B9 (PremiumSpawner) to '0'
+5/23/2017 11:54:12 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'CountB' of 0x4001D1B9 (PremiumSpawner) to '0'
+5/23/2017 11:54:24 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Count' of 0x4001D1B9 (PremiumSpawner) to '3'
+5/23/2017 11:54:28 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'MinDelay' of 0x4001D1B9 (PremiumSpawner) to '00:00:00'
+5/23/2017 11:54:38 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'MaxDelay' of 0x4001D1B9 (PremiumSpawner) to '00:02:00'
+5/23/2017 11:54:44 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'HomeRange' of 0x4001D1B9 (PremiumSpawner) to '15'
+5/23/2017 11:54:53 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'HomeRange' of 0x4001D1B9 (PremiumSpawner) to '20'
+5/23/2017 11:55:10 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/23/2017 11:55:27 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Count' of 0x4001D1B9 (PremiumSpawner) to '6'
+5/23/2017 11:55:31 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/23/2017 11:55:56 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'HomeRange' of 0x4001D1B9 (PremiumSpawner) to '18'
+5/23/2017 11:56:24 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'HomeRange' of 0x4001D1B9 (PremiumSpawner) to '16'
+5/23/2017 11:56:32 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/23/2017 11:56:47 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/23/2017 11:56:57 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm te'
+5/23/2017 11:57:00 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/23/2017 11:57:43 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add premiumspawner'
+5/23/2017 11:57:45 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1411, 3828, 0) in Felucca: "premiumspawner"
+5/23/2017 11:57:45 PM: 127.0.0.1: Serials: 0x4001E17F; 
+5/23/2017 11:59:24 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'HomeRange' of 0x4001E17F (PremiumSpawner) to '150'
+5/23/2017 11:59:47 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Count' of 0x4001E17F (PremiumSpawner) to '20'
+5/24/2017 12:00:52 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'HomeRange' of 0x4001E17F (PremiumSpawner) to '150'
+5/24/2017 12:01:10 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Count' of 0x4001E17F (PremiumSpawner) to '30'
+5/24/2017 12:01:21 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:02:00 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:02:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:02:34 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'admin '
+5/24/2017 12:03:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') adding new account: ezjones
+5/24/2017 12:03:49 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') changing access level of account ezjones to GameMaster
+5/24/2017 12:04:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:04:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'staffrunebook '
+5/24/2017 12:05:08 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'speedboost '
+5/24/2017 12:05:25 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:05:51 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:07:00 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'who '
+5/24/2017 12:07:04 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:07:05 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') going to 0x6137 "Kairi1.3" ('kairi1.0'), Location (988, 520, -50), Map Malas
+5/24/2017 12:07:09 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go '
+5/24/2017 12:07:11 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'gmbody '
+5/24/2017 12:07:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'staffrunebook '
+5/24/2017 12:07:14 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') is assuming a GM body
+5/24/2017 12:07:14 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'AutoSpeedBooster true'
+5/24/2017 12:07:20 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/24/2017 12:07:40 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'staffrunebook '
+5/24/2017 12:07:55 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go destard'
+5/24/2017 12:07:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:07:57 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 12:09:27 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/24/2017 12:10:06 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'who '
+5/24/2017 12:10:10 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/24/2017 12:10:42 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Width' of (5235, 813)+(48, 48) to '56'
+5/24/2017 12:10:47 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Height' of (5235, 813)+(56, 48) to '56'
+5/24/2017 12:10:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Active' of 0x4001A4D7 (ChampionSpawn) to 'False'
+5/24/2017 12:11:02 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Active' of 0x4001A4D7 (ChampionSpawn) to 'True'
+5/24/2017 12:11:14 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'where '
+5/24/2017 12:11:17 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/24/2017 12:11:41 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:12:20 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:12:49 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 12:12:51 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/24/2017 12:13:08 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Count' of 0x4001CD74 (PremiumSpawner) to '3'
+5/24/2017 12:13:41 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/24/2017 12:14:36 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+5/24/2017 12:14:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x4000E3AD (Static)
+5/24/2017 12:14:43 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'cast teleportspell'
+5/24/2017 12:14:43 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/24/2017 12:14:49 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm remove'
+5/24/2017 12:14:54 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') unhiding 0x632E "Darnell" ('ezjones')
+5/24/2017 12:14:54 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'Self Unhide'
+5/24/2017 12:14:56 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'unhide '
+5/24/2017 12:14:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') unhiding 0xF1 "Kai" ('kairi')
+5/24/2017 12:15:02 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm remove'
+5/24/2017 12:15:03 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x4000E3AB (Static)
+5/24/2017 12:15:04 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x4000E3A9 (Static)
+5/24/2017 12:15:05 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x4000E3AF (Static)
+5/24/2017 12:15:06 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x4000E3B1 (Static)
+5/24/2017 12:16:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set blessed true'
+5/24/2017 12:17:03 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') hiding 0x632E "Darnell" ('ezjones')
+5/24/2017 12:17:03 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'Self Hide'
+5/24/2017 12:17:06 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/24/2017 12:17:08 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'gmbody '
+5/24/2017 12:17:11 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') is assuming a GM body
+5/24/2017 12:17:11 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'AutoSpeedBooster true'
+5/24/2017 12:18:13 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/24/2017 12:18:25 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 12:21:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') hiding 0xF1 "Kai" ('kairi')
+5/24/2017 12:21:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'self hide'
+5/24/2017 12:24:54 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go despise'
+5/24/2017 12:24:56 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go shame'
+5/24/2017 12:25:08 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:26:02 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+5/24/2017 12:26:26 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+5/24/2017 12:26:28 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x4001E73A (PremiumSpawner) to (5499, 179, 0)
+5/24/2017 12:26:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Count' of 0x4001E73A (PremiumSpawner) to '1'
+5/24/2017 12:26:50 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'HomeRange' of 0x4001E73A (PremiumSpawner) to '4'
+5/24/2017 12:27:08 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add premiumspawner'
+5/24/2017 12:27:10 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5507, 187, 0) in Felucca: "premiumspawner"
+5/24/2017 12:27:10 AM: 127.0.0.1: Serials: 0x40024E47; 
+5/24/2017 12:27:33 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'MaxDelay' of 0x4001E73A (PremiumSpawner) to '00:02:00'
+5/24/2017 12:27:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'MinDelay' of 0x4001E73A (PremiumSpawner) to '00:00:00'
+5/24/2017 12:27:48 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'MaxDelay' of 0x40024E47 (PremiumSpawner) to '00:02:00'
+5/24/2017 12:27:51 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'MinDelay' of 0x40024E47 (PremiumSpawner) to '00:00:00'
+5/24/2017 12:28:00 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:28:43 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'MaxDelay' of 0x4001E9A1 (PremiumSpawner) to '00:02:00'
+5/24/2017 12:28:47 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'MinDelay' of 0x4001E9A1 (PremiumSpawner) to '00:00:00'
+5/24/2017 12:28:50 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:29:13 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'gmbody '
+5/24/2017 12:29:16 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'staffrunebook '
+5/24/2017 12:29:44 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 12:29:45 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:30:11 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm remove'
+5/24/2017 12:30:12 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0xE51 "a blood elemental" (no account)
+5/24/2017 12:30:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0xE54 "a blood elemental" (no account)
+5/24/2017 12:30:22 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0xE50 "a blood elemental" (no account)
+5/24/2017 12:30:23 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0xE52 "a blood elemental" (no account)
+5/24/2017 12:30:25 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0xE56 "a blood elemental" (no account)
+5/24/2017 12:30:26 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0xE53 "a blood elemental" (no account)
+5/24/2017 12:30:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get z'
+5/24/2017 12:30:36 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm remove'
+5/24/2017 12:30:38 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0xE55 "a blood elemental" (no account)
+5/24/2017 12:30:54 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:30:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:31:27 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm remove'
+5/24/2017 12:31:28 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0xE4F "a blood elemental" (no account)
+5/24/2017 12:31:36 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'wipe '
+5/24/2017 12:31:39 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') wiping from (5721, 14, 0) to (5726, 29, 20) in Felucca (Items, Mobiles)
+5/24/2017 12:31:42 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:31:49 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+5/24/2017 12:31:51 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x40010804 (WoodenChest) to (5701, 15, 10)
+5/24/2017 12:32:01 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+5/24/2017 12:32:03 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x40010804 (WoodenChest) to (5698, 20, 10)
+5/24/2017 12:32:04 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+5/24/2017 12:32:05 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x40010804 (WoodenChest) to (5698, 19, 10)
+5/24/2017 12:32:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:32:55 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm remove'
+5/24/2017 12:32:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x6424 "a blood elemental" (no account)
+5/24/2017 12:33:05 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:33:20 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm inc z -1'
+5/24/2017 12:33:40 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set z 0'
+5/24/2017 12:33:42 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'z' of 0xF1 "Kai" ('kairi') to '0'
+5/24/2017 12:33:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'tele '
+5/24/2017 12:33:50 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set z 0'
+5/24/2017 12:33:53 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'z' of 0xF1 "Kai" ('kairi') to '0'
+5/24/2017 12:34:01 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'tele '
+5/24/2017 12:34:05 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'wipe '
+5/24/2017 12:34:17 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') wiping from (5698, 6, 0) to (5731, 34, 33) in Felucca (Items, Mobiles)
+5/24/2017 12:34:22 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:34:48 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'who '
+5/24/2017 12:35:00 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add premiumspawner'
+5/24/2017 12:35:10 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5704, 11, 10) in Felucca: "premiumspawner"
+5/24/2017 12:35:10 AM: 127.0.0.1: Serials: 0x40025668; 
+5/24/2017 12:35:25 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'MaxDelay' of 0x40025668 (PremiumSpawner) to '00:05:00'
+5/24/2017 12:35:28 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'MinDelay' of 0x40025668 (PremiumSpawner) to '00:00:00'
+5/24/2017 12:35:48 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 12:35:51 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add premiumspawner'
+5/24/2017 12:36:18 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'HomeRange' of 0x40025668 (PremiumSpawner) to '10'
+5/24/2017 12:36:23 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add premiumspawner'
+5/24/2017 12:36:25 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5720, 8, 11) in Felucca: "premiumspawner"
+5/24/2017 12:36:25 AM: 127.0.0.1: Serials: 0x4002587E; 
+5/24/2017 12:36:41 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'MaxDelay' of 0x4002587E (PremiumSpawner) to '00:05:00'
+5/24/2017 12:36:47 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'MinDelay' of 0x4002587E (PremiumSpawner) to '00:00:00'
+5/24/2017 12:37:02 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'HomeRange' of 0x4002587E (PremiumSpawner) to '10'
+5/24/2017 12:37:12 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add premiumspawner'
+5/24/2017 12:37:17 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5714, 31, 0) in Felucca: "premiumspawner"
+5/24/2017 12:37:17 AM: 127.0.0.1: Serials: 0x40025A1B; 
+5/24/2017 12:37:35 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'HomeRange' of 0x40025A1B (PremiumSpawner) to '10'
+5/24/2017 12:37:41 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'MaxDelay' of 0x40025A1B (PremiumSpawner) to '00:05:00'
+5/24/2017 12:37:47 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'MinDelay' of 0x40025A1B (PremiumSpawner) to '00:00:00'
+5/24/2017 12:37:56 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'who '
+5/24/2017 12:38:00 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x632E "Darnell" ('ezjones'), Location (5202, 1574, 0), Map Felucca
+5/24/2017 12:38:03 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:38:51 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:39:19 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 12:39:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:41:22 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:41:39 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'who '
+5/24/2017 12:41:42 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x632E "Darnell" ('ezjones'), Location (5179, 1702, -2), Map Felucca
+5/24/2017 12:41:45 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') unhiding 0xF1 "Kai" ('kairi')
+5/24/2017 12:41:45 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'self unhide'
+5/24/2017 12:41:50 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') unhiding 0x632E "Darnell" ('ezjones')
+5/24/2017 12:41:50 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'Self Unhide'
+5/24/2017 12:42:06 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:43:50 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:44:20 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:44:33 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'spawneditor '
+5/24/2017 12:45:34 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'spawneditor '
+5/24/2017 12:45:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:46:05 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:46:57 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'spawneditor '
+5/24/2017 12:47:29 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:48:18 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'who '
+5/24/2017 12:48:22 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6137 "Kairi1.3" ('kairi1.0'), Location (988, 520, -50), Map Malas
+5/24/2017 12:48:42 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'delete '
+5/24/2017 12:48:49 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') deleting 0x4001EDC6 (PremiumSpawner)
+5/24/2017 12:48:54 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'spawneditor '
+5/24/2017 12:49:20 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'spawneditor '
+5/24/2017 12:49:26 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'add spawner'
+5/24/2017 12:49:28 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') building at (5335, 1706, -72) in Felucca: "spawner"
+5/24/2017 12:49:28 AM: 97.83.147.229: Serials: 0x40026A06; 
+5/24/2017 12:49:48 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'spawneditor '
+5/24/2017 12:51:00 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'editor '
+5/24/2017 12:51:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go shame'
+5/24/2017 12:51:39 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:51:47 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'add premiumspawner'
+5/24/2017 12:51:48 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') building at (5335, 1705, -72) in Felucca: "premiumspawner"
+5/24/2017 12:51:48 AM: 97.83.147.229: Serials: 0x40026A76; 
+5/24/2017 12:51:52 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'remove '
+5/24/2017 12:51:52 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') deleting 0x40026A76 (PremiumSpawner)
+5/24/2017 12:51:55 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'remove '
+5/24/2017 12:51:56 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') deleting 0x40026A06 (Spawner)
+5/24/2017 12:52:02 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'add premiumspawner'
+5/24/2017 12:52:03 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') building at (5335, 1706, -72) in Felucca: "premiumspawner"
+5/24/2017 12:52:03 AM: 97.83.147.229: Serials: 0x40026AB3; 
+5/24/2017 12:52:06 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'spawneditor '
+5/24/2017 12:52:42 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:52:57 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'HomeRange' of 0x40026AB3 (PremiumSpawner) to '8'
+5/24/2017 12:53:09 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'MinDelay' of 0x40026AB3 (PremiumSpawner) to '00:02:00'
+5/24/2017 12:53:14 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'MaxDelay' of 0x40026AB3 (PremiumSpawner) to '00:05:00'
+5/24/2017 12:53:23 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 12:53:38 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'add premiumspawner'
+5/24/2017 12:53:40 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') building at (5364, 1721, -125) in Felucca: "premiumspawner"
+5/24/2017 12:53:40 AM: 97.83.147.229: Serials: 0x40026C28; 
+5/24/2017 12:53:43 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'spawneditor '
+5/24/2017 12:53:52 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'editor '
+5/24/2017 12:54:18 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 12:54:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add premiumspawner'
+5/24/2017 12:54:33 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5990, 151, 0) in Felucca: "premiumspawner"
+5/24/2017 12:54:33 AM: 127.0.0.1: Serials: 0x40026CE1; 
+5/24/2017 12:54:45 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'editor '
+5/24/2017 12:55:04 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Count' of 0x40026CE1 (PremiumSpawner) to '3'
+5/24/2017 12:55:12 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'HomeRange' of 0x40026CE1 (PremiumSpawner) to '12'
+5/24/2017 12:55:22 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 12:55:26 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'MaxDelay' of 0x40026CE1 (PremiumSpawner) to '00:05:00'
+5/24/2017 12:55:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'MinDelay' of 0x40026CE1 (PremiumSpawner) to '00:00:00'
+5/24/2017 12:55:31 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'delete '
+5/24/2017 12:55:34 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') deleting 0x40026EA3 (Corpse)
+5/24/2017 12:55:37 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'delete '
+5/24/2017 12:55:38 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') deleting 0x4001EF66 (PremiumSpawner)
+5/24/2017 12:55:43 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:55:43 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'm tele'
+5/24/2017 12:56:03 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+5/24/2017 12:56:08 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x40026CE1 (PremiumSpawner) to (5988, 155, 0)
+5/24/2017 12:56:18 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go fire'
+5/24/2017 12:56:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:56:51 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add premiumspawner'
+5/24/2017 12:56:56 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5792, 1488, 43) in Felucca: "premiumspawner"
+5/24/2017 12:56:56 AM: 127.0.0.1: Serials: 0x4002718F; 
+5/24/2017 12:57:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add fires'
+5/24/2017 12:57:36 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add serpe'
+5/24/2017 12:57:49 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 12:57:52 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Count' of 0x4002718F (PremiumSpawner) to '8'
+5/24/2017 12:58:03 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'HomeRange' of 0x4002718F (PremiumSpawner) to '25'
+5/24/2017 12:58:05 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'delete '
+5/24/2017 12:58:06 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') deleting 0x4001EEDB (PremiumSpawner)
+5/24/2017 12:58:08 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 12:58:11 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:58:46 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 12:58:50 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 12:59:08 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'wipe '
+5/24/2017 12:59:12 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') wiping from (5177, 1704, -1) to (5179, 1704, 1) in Felucca (Items, Mobiles)
+5/24/2017 12:59:18 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'wipe '
+5/24/2017 12:59:24 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') wiping from (5169, 1689, -2) to (5181, 1709, -1) in Felucca (Items, Mobiles)
+5/24/2017 12:59:29 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'add premiumspawner'
+5/24/2017 12:59:31 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') building at (5176, 1701, 2) in Felucca: "premiumspawner"
+5/24/2017 12:59:31 AM: 97.83.147.229: Serials: 0x4002836A; 
+5/24/2017 12:59:35 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'spawneditor '
+5/24/2017 1:02:08 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'HomeRange' of 0x4002836A (PremiumSpawner) to '16'
+5/24/2017 1:02:22 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'CountA' of 0x4002836A (PremiumSpawner) to '1'
+5/24/2017 1:02:27 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'Count' of 0x4002836A (PremiumSpawner) to '4'
+5/24/2017 1:02:30 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'CountB' of 0x4002836A (PremiumSpawner) to '1'
+5/24/2017 1:02:34 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'CountB' of 0x4002836A (PremiumSpawner) to '1'
+5/24/2017 1:02:36 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'CountC' of 0x4002836A (PremiumSpawner) to '1'
+5/24/2017 1:02:39 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'CountD' of 0x4002836A (PremiumSpawner) to '1'
+5/24/2017 1:02:41 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'CountE' of 0x4002836A (PremiumSpawner) to '1'
+5/24/2017 1:03:45 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'Count' of 0x4002836A (PremiumSpawner) to '1'
+5/24/2017 1:03:57 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'spawneditor '
+5/24/2017 1:04:21 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 1:04:54 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'add premiumspawner'
+5/24/2017 1:04:55 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') building at (5211, 1684, 2) in Felucca: "premiumspawner"
+5/24/2017 1:04:55 AM: 97.83.147.229: Serials: 0x400292DC; 
+5/24/2017 1:04:57 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'spawneditor '
+5/24/2017 1:05:26 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'MinDelay' of 0x400292DC (PremiumSpawner) to '00:00:00'
+5/24/2017 1:05:33 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'MaxDelay' of 0x400292DC (PremiumSpawner) to '00:02:00'
+5/24/2017 1:05:45 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'Count' of 0x400292DC (PremiumSpawner) to '8'
+5/24/2017 1:06:26 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'HomeRange' of 0x400292DC (PremiumSpawner) to '20'
+5/24/2017 1:07:01 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 1:07:06 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'm tele'
+5/24/2017 1:07:26 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 1:08:23 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 1:08:30 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'HomeRange' of 0x4001ECE4 (PremiumSpawner) to '30'
+5/24/2017 1:08:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'wipe '
+5/24/2017 1:08:48 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') wiping from (5822, 1411, 4) to (5883, 1489, 22) in Felucca (Items, Mobiles)
+5/24/2017 1:08:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add premiumspawner'
+5/24/2017 1:09:09 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'HomeRange' of 0x4001ECF5 (PremiumSpawner) to '30'
+5/24/2017 1:09:20 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'HomeRange' of 0x4001ED16 (PremiumSpawner) to '30'
+5/24/2017 1:09:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5865, 1441, -2) in Felucca: "premiumspawner"
+5/24/2017 1:09:37 AM: 127.0.0.1: Serials: 0x4002A9A8; 
+5/24/2017 1:09:40 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+5/24/2017 1:09:42 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x4002A9A8 (PremiumSpawner)
+5/24/2017 1:09:43 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 1:10:01 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 1:10:24 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add premiumspawner'
+5/24/2017 1:10:29 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5837, 1471, -1) in Felucca: "premiumspawner"
+5/24/2017 1:10:29 AM: 127.0.0.1: Serials: 0x4002AB36; 
+5/24/2017 1:10:54 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'HomeRange' of 0x4001EC69 (PremiumSpawner) to '25'
+5/24/2017 1:11:10 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'HomeRange' of 0x4001EC8A (PremiumSpawner) to '25'
+5/24/2017 1:11:20 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'MaxDelay' of 0x4001EC58 (PremiumSpawner) to '00:05:00'
+5/24/2017 1:11:23 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'MinDelay' of 0x4001EC58 (PremiumSpawner) to '00:02:00'
+5/24/2017 1:11:32 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'MinDelay' of 0x4001EC69 (PremiumSpawner) to '00:00:00'
+5/24/2017 1:11:37 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'MaxDelay' of 0x4001EC69 (PremiumSpawner) to '00:01:00'
+5/24/2017 1:11:46 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'MaxDelay' of 0x4001EC8A (PremiumSpawner) to '00:01:00'
+5/24/2017 1:11:50 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'MinDelay' of 0x4001EC8A (PremiumSpawner) to '00:00:00'
+5/24/2017 1:12:01 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 1:12:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Count' of 0x4002AB36 (PremiumSpawner) to '12'
+5/24/2017 1:12:42 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'HomeRange' of 0x4002AB36 (PremiumSpawner) to '20'
+5/24/2017 1:12:48 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 1:13:06 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'MinDelay' of 0x4001EE0A (PremiumSpawner) to '00:02:00'
+5/24/2017 1:13:11 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'MaxDelay' of 0x4001EE0A (PremiumSpawner) to '00:04:00'
+5/24/2017 1:13:16 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 1:13:31 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'MaxDelay' of 0x4001EE1B (PremiumSpawner) to '00:02:00'
+5/24/2017 1:13:36 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'MinDelay' of 0x4001EE1B (PremiumSpawner) to '00:00:30'
+5/24/2017 1:14:00 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'delete '
+5/24/2017 1:14:01 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+5/24/2017 1:14:01 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') deleting 0x4001EE35 (PremiumSpawner)
+5/24/2017 1:14:03 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 1:14:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x4002AB36 (PremiumSpawner) to (5855, 1465, -1)
+5/24/2017 1:14:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 1:14:17 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'add premiumspawner'
+5/24/2017 1:14:19 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') building at (5307, 1732, -16) in Felucca: "premiumspawner"
+5/24/2017 1:14:19 AM: 97.83.147.229: Serials: 0x4002DFFE; 
+5/24/2017 1:14:31 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'MinDelay' of 0x4002DFFE (PremiumSpawner) to '00:02:00'
+5/24/2017 1:14:34 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'MaxDelay' of 0x4002DFFE (PremiumSpawner) to '00:05:00'
+5/24/2017 1:14:40 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'HomeRange' of 0x4002AB36 (PremiumSpawner) to '30'
+5/24/2017 1:14:43 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 1:14:49 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 1:15:18 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'MaxDelay' of 0x4001ED81 (PremiumSpawner) to '00:03:00'
+5/24/2017 1:15:22 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'MinDelay' of 0x4001ED81 (PremiumSpawner) to '00:01:00'
+5/24/2017 1:15:28 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'HomeRange' of 0x4001ED81 (PremiumSpawner) to '15'
+5/24/2017 1:15:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 1:15:49 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'delete '
+5/24/2017 1:15:50 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') deleting 0x4001EDAE (PremiumSpawner)
+5/24/2017 1:15:55 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add doo'
+5/24/2017 1:16:00 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'CountA' of 0x4001ED92 (PremiumSpawner) to '2'
+5/24/2017 1:16:03 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'CountB' of 0x4001ED92 (PremiumSpawner) to '2'
+5/24/2017 1:16:06 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'CountC' of 0x4001ED92 (PremiumSpawner) to '2'
+5/24/2017 1:16:09 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'CountD' of 0x4001ED92 (PremiumSpawner) to '2'
+5/24/2017 1:16:16 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'HomeRange' of 0x4001ED92 (PremiumSpawner) to '30'
+5/24/2017 1:16:21 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'MinDelay' of 0x4001ED92 (PremiumSpawner) to '00:00:00'
+5/24/2017 1:16:23 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add premiumspawner'
+5/24/2017 1:16:25 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'MaxDelay' of 0x4001ED92 (PremiumSpawner) to '00:02:00'
+5/24/2017 1:16:30 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 1:16:55 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 1:17:16 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add premiumspawner'
+5/24/2017 1:17:22 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5839, 1422, 0) in Felucca: "premiumspawner"
+5/24/2017 1:17:22 AM: 127.0.0.1: Serials: 0x4002E947; 
+5/24/2017 1:17:24 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'add '
+5/24/2017 1:17:30 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'add premiumspawner'
+5/24/2017 1:17:31 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') building at (5356, 1617, 0) in Felucca: "premiumspawner"
+5/24/2017 1:17:31 AM: 97.83.147.229: Serials: 0x4002E981; 
+5/24/2017 1:19:22 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'CountA' of 0x4002E981 (PremiumSpawner) to '4'
+5/24/2017 1:19:24 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'CountB' of 0x4002E981 (PremiumSpawner) to '4'
+5/24/2017 1:19:27 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'CountC' of 0x4002E981 (PremiumSpawner) to '4'
+5/24/2017 1:19:29 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'CountD' of 0x4002E981 (PremiumSpawner) to '4'
+5/24/2017 1:19:36 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'MaxDelay' of 0x4002E981 (PremiumSpawner) to '00:01:00'
+5/24/2017 1:19:40 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'MinDelay' of 0x4002E981 (PremiumSpawner) to '00:00:00'
+5/24/2017 1:19:48 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'HomeRange' of 0x4002E981 (PremiumSpawner) to '20'
+5/24/2017 1:19:49 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add turtl'
+5/24/2017 1:19:58 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'dupe '
+5/24/2017 1:19:59 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') duping 0x4002E981 (PremiumSpawner) (inBag=False; amount=1)
+5/24/2017 1:19:59 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') duped 0x4002E981 (PremiumSpawner) creating 0x4002EBBA (PremiumSpawner)
+5/24/2017 1:20:10 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'move '
+5/24/2017 1:20:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Count' of 0x4002E947 (PremiumSpawner) to '4'
+5/24/2017 1:20:13 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') moving 0x4002EBBA (PremiumSpawner) to (5314, 1615, 0)
+5/24/2017 1:20:27 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'HomeRange' of 0x4002E947 (PremiumSpawner) to '15'
+5/24/2017 1:21:10 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'delete '
+5/24/2017 1:21:46 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'MinDelay' of 0x4002EBBA (PremiumSpawner) to '00:01:00'
+5/24/2017 1:22:06 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'MinDelay' of 0x4002E981 (PremiumSpawner) to '00:01:00'
+5/24/2017 1:22:55 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 1:23:03 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'who '
+5/24/2017 1:23:06 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x632E "Darnell" ('ezjones'), Location (5291, 1562, 0), Map Felucca
+5/24/2017 1:23:08 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 1:23:30 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'delete '
+5/24/2017 1:23:31 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') deleting 0x4001EC69 (PremiumSpawner)
+5/24/2017 1:23:45 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'add premiumspawner'
+5/24/2017 1:23:48 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') building at (5245, 1562, 0) in Felucca: "premiumspawner"
+5/24/2017 1:23:48 AM: 97.83.147.229: Serials: 0x4002F1AF; 
+5/24/2017 1:24:14 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'HomeRange' of 0x4002F1AF (PremiumSpawner) to '20'
+5/24/2017 1:24:16 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 1:24:21 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'Count' of 0x4002F1AF (PremiumSpawner) to '5'
+5/24/2017 1:24:25 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'MaxDelay' of 0x4002F1AF (PremiumSpawner) to '00:02:00'
+5/24/2017 1:24:28 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') set property 'MinDelay' of 0x4002F1AF (PremiumSpawner) to '00:01:00'
+5/24/2017 1:25:06 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'delete '
+5/24/2017 1:25:07 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') deleting 0x4001EF77 (PremiumSpawner)
+5/24/2017 1:25:15 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 1:25:44 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 1:26:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add premiumspawner'
+5/24/2017 1:26:09 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5345, 1665, -15) in Felucca: "premiumspawner"
+5/24/2017 1:26:09 AM: 127.0.0.1: Serials: 0x4002F900; 
+5/24/2017 1:27:21 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add ophidian'
+5/24/2017 1:27:23 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 1:28:01 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'HomeRange' of 0x4002F900 (PremiumSpawner) to '20'
+5/24/2017 1:28:06 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 1:28:16 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Count' of 0x4002F900 (PremiumSpawner) to '4'
+5/24/2017 1:28:27 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'delete '
+5/24/2017 1:28:28 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') deleting 0x4001EF23 (PremiumSpawner)
+5/24/2017 1:28:30 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 1:28:33 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Count' of 0x4002F900 (PremiumSpawner) to '3'
+5/24/2017 1:28:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 1:28:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'HomeRange' of 0x4002F900 (PremiumSpawner) to '25'
+5/24/2017 1:29:14 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm m tele'
+5/24/2017 1:29:17 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 1:32:14 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 1:32:49 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 1:33:12 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Width' of (5166, 1581)+(48, 48) to '52'
+5/24/2017 1:33:17 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Height' of (5166, 1581)+(52, 48) to '52'
+5/24/2017 1:34:20 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') hiding 0x632E "Darnell" ('ezjones')
+5/24/2017 1:34:20 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'Self Hide'
+5/24/2017 1:34:23 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/24/2017 1:37:43 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 1:40:38 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go despise'
+5/24/2017 1:40:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 1:41:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+5/24/2017 1:41:40 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x40022ACB (PremiumSpawner) to (1324, 1075, 0)
+5/24/2017 1:42:06 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add gobl'
+5/24/2017 1:42:10 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1320, 1079, 0) in Felucca: "GrayGoblin"
+5/24/2017 1:42:10 AM: 127.0.0.1: Serials: 0x69CA; 
+5/24/2017 1:42:16 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+5/24/2017 1:42:17 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x69CA "a gray goblin" (no account)
+5/24/2017 1:43:36 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add camp'
+5/24/2017 1:43:43 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+5/24/2017 1:43:47 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40022ACB (PremiumSpawner)
+5/24/2017 1:43:55 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1328, 1076, 0) in Felucca: "LizardmenCamp"
+5/24/2017 1:43:55 AM: 127.0.0.1: Serials: 0x40030504; 
+5/24/2017 1:44:08 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+5/24/2017 1:44:11 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x4003051C (MediumCrate)
+5/24/2017 1:44:14 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'wipe '
+5/24/2017 1:44:16 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') wiping from (1323, 1071, 0) to (1333, 1079, 0) in Felucca (Items, Mobiles)
+5/24/2017 1:44:17 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'wipe '
+5/24/2017 1:44:20 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') wiping from (1320, 1070, 0) to (1334, 1084, 0) in Felucca (Items, Mobiles)
+5/24/2017 1:44:24 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+5/24/2017 1:44:25 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x69DF "Slishless" (no account)
+5/24/2017 1:44:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add spawner'
+5/24/2017 1:44:47 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add premiumspawner'
+5/24/2017 1:44:49 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1324, 1076, 0) in Felucca: "premiumspawner"
+5/24/2017 1:44:49 AM: 127.0.0.1: Serials: 0x40030543; 
+5/24/2017 1:46:01 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Count' of 0x40030543 (PremiumSpawner) to '14'
+5/24/2017 1:46:15 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'HomeRange' of 0x40030543 (PremiumSpawner) to '25'
+5/24/2017 1:46:21 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 1:46:41 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add waterwh'
+5/24/2017 1:46:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add whee'
+5/24/2017 1:46:54 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1320, 1050, 0) in Felucca: "ElvenSpinningwheelEastAddon"
+5/24/2017 1:46:54 AM: 127.0.0.1: Serials: 0x400305F0; 
+5/24/2017 1:46:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+5/24/2017 1:47:01 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x400305F1 (AddonComponent)
+5/24/2017 1:47:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add shrine'
+5/24/2017 1:47:11 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 1:47:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add camp'
+5/24/2017 1:47:28 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add tent'
+5/24/2017 1:47:41 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add '
+5/24/2017 1:50:11 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'tele '
+5/24/2017 1:50:15 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'tele '
+5/24/2017 1:50:20 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add bedroll'
+5/24/2017 1:50:22 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1306, 1060, -1) in Felucca: "bedroll"
+5/24/2017 1:50:22 AM: 127.0.0.1: Serials: 0x400306FC; 
+5/24/2017 1:50:25 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set movable false'
+5/24/2017 1:50:26 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'movable' of 0x400306FC (Bedroll) to 'False'
+5/24/2017 1:50:33 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm inc z -1'
+5/24/2017 1:50:39 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm inc z 1'
+5/24/2017 1:50:49 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add bedroll'
+5/24/2017 1:50:52 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1306, 1059, 1) in Felucca: "bedroll"
+5/24/2017 1:50:52 AM: 127.0.0.1: Serials: 0x40030717; 
+5/24/2017 1:50:53 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'flip '
+5/24/2017 1:50:56 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'flip '
+5/24/2017 1:50:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'flip '
+5/24/2017 1:50:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'flip '
+5/24/2017 1:51:00 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'flip '
+5/24/2017 1:51:15 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'flip '
+5/24/2017 1:52:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+5/24/2017 1:53:29 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+5/24/2017 1:53:47 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+5/24/2017 1:53:48 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x400306FC (Bedroll)
+5/24/2017 1:53:50 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+5/24/2017 1:54:22 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm inc z -1'
+5/24/2017 1:54:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add bedroll'
+5/24/2017 1:54:34 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1305, 1061, 0) in Felucca: "bedroll"
+5/24/2017 1:54:34 AM: 127.0.0.1: Serials: 0x400307EA; 
+5/24/2017 1:54:39 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm flip'
+5/24/2017 1:54:41 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'flip '
+5/24/2017 1:54:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'flip '
+5/24/2017 1:55:17 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set movable false'
+5/24/2017 1:55:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'movable' of 0x400307EA (Bedroll) to 'False'
+5/24/2017 1:55:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set movable false'
+5/24/2017 1:55:21 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'movable' of 0x40030717 (Bedroll) to 'False'
+5/24/2017 1:55:27 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add bedroll'
+5/24/2017 1:55:28 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1305, 1061, 0) in Felucca: "bedroll"
+5/24/2017 1:55:28 AM: 127.0.0.1: Serials: 0x40030807; 
+5/24/2017 1:55:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'flip '
+5/24/2017 1:55:40 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'flip '
+5/24/2017 1:55:43 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'flip '
+5/24/2017 1:55:46 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'flip '
+5/24/2017 1:55:48 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'flip '
+5/24/2017 1:55:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'flip '
+5/24/2017 1:56:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'flip '
+5/24/2017 1:56:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'flip '
+5/24/2017 1:56:17 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'flip '
+5/24/2017 1:56:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'flip '
+5/24/2017 1:56:20 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'flip '
+5/24/2017 1:56:26 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+5/24/2017 1:56:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add bedroll'
+5/24/2017 1:56:39 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1305, 1060, 2) in Felucca: "bedroll"
+5/24/2017 1:56:39 AM: 127.0.0.1: Serials: 0x40030836; 
+5/24/2017 1:56:42 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'flip '
+5/24/2017 1:56:45 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'flip '
+5/24/2017 1:56:51 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set movable false'
+5/24/2017 1:56:52 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'movable' of 0x40030836 (Bedroll) to 'False'
+5/24/2017 1:56:53 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set movable false'
+5/24/2017 1:56:54 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'movable' of 0x40030807 (Bedroll) to 'False'
+5/24/2017 1:56:55 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set movable false'
+5/24/2017 1:56:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set movable true'
+5/24/2017 1:57:00 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'movable' of 0x40030807 (Bedroll) to 'True'
+5/24/2017 1:57:01 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set movable true'
+5/24/2017 1:57:03 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'movable' of 0x40030836 (Bedroll) to 'True'
+5/24/2017 1:57:04 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'dupe '
+5/24/2017 1:57:06 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duping 0x40030836 (Bedroll) (inBag=False; amount=1)
+5/24/2017 1:57:06 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duped 0x40030836 (Bedroll) creating 0x40030839 (Bedroll)
+5/24/2017 1:57:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'dupe '
+5/24/2017 1:57:10 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duping 0x40030807 (Bedroll) (inBag=False; amount=1)
+5/24/2017 1:57:10 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duped 0x40030807 (Bedroll) creating 0x4003083A (Bedroll)
+5/24/2017 1:57:15 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set movable false'
+5/24/2017 1:57:15 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'movable' of 0x40030807 (Bedroll) to 'False'
+5/24/2017 1:57:16 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set movable false'
+5/24/2017 1:57:18 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'movable' of 0x40030836 (Bedroll) to 'False'
+5/24/2017 1:57:23 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'dupe '
+5/24/2017 1:57:25 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duping 0x4003083A (Bedroll) (inBag=False; amount=1)
+5/24/2017 1:57:25 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duped 0x4003083A (Bedroll) creating 0x40030843 (Bedroll)
+5/24/2017 1:57:26 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'dupe '
+5/24/2017 1:57:28 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duping 0x40030839 (Bedroll) (inBag=False; amount=1)
+5/24/2017 1:57:28 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duped 0x40030839 (Bedroll) creating 0x40030844 (Bedroll)
+5/24/2017 1:57:46 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'inc x -1'
+5/24/2017 1:57:49 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'inc x 1'
+5/24/2017 1:57:52 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'inc y 1'
+5/24/2017 1:57:55 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'inc y -1'
+5/24/2017 1:57:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'inc y -1'
+5/24/2017 1:58:04 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set movable false'
+5/24/2017 1:58:04 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'movable' of 0x40030839 (Bedroll) to 'False'
+5/24/2017 1:58:05 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set movable false'
+5/24/2017 1:58:06 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'movable' of 0x40030843 (Bedroll) to 'False'
+5/24/2017 1:58:11 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add campfire'
+5/24/2017 1:58:12 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1305, 1063, 0) in Felucca: "campfire"
+5/24/2017 1:58:16 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add campf'
+5/24/2017 1:58:20 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add kindling'
+5/24/2017 1:58:23 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1305, 1061, 0) in Felucca: "kindling"
+5/24/2017 1:58:23 AM: 127.0.0.1: Serials: 0x40030868; 
+5/24/2017 1:58:33 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'flip '
+5/24/2017 1:58:35 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'flip '
+5/24/2017 1:58:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'flip '
+5/24/2017 1:58:38 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'flip '
+5/24/2017 1:58:43 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set movable false'
+5/24/2017 1:58:45 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'movable' of 0x40030869 (Campfire) to 'False'
+5/24/2017 1:58:46 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+5/24/2017 1:58:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Status' of 0x40030869 (Campfire) to 'Burning'
+5/24/2017 1:59:21 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+5/24/2017 1:59:33 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set decaytime 0'
+5/24/2017 1:59:36 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+5/24/2017 1:59:53 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+5/24/2017 1:59:54 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40030869 (Campfire)
+5/24/2017 1:59:56 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add fire'
+5/24/2017 2:00:24 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1302, 1065, 0) in Felucca: "StoneFireplaceEastDeed"
+5/24/2017 2:00:24 AM: 127.0.0.1: Serials: 0x40030945; 
+5/24/2017 2:00:28 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1303, 1065, 0) in Felucca: "StoneFireplaceSouthAddon"
+5/24/2017 2:00:28 AM: 127.0.0.1: Serials: 0x40030958; 
+5/24/2017 2:00:36 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+5/24/2017 2:00:38 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x40030807 (Bedroll) to (1305, 1062, 0)
+5/24/2017 2:00:40 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+5/24/2017 2:00:43 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+5/24/2017 2:00:50 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x40030839 (Bedroll) to (1304, 1062, 1)
+5/24/2017 2:00:54 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'inc z 1'
+5/24/2017 2:00:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'inc z 1'
+5/24/2017 2:00:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+5/24/2017 2:01:04 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+5/24/2017 2:01:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x40030839 (Bedroll) to (1304, 1063, 0)
+5/24/2017 2:01:15 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'inc y 1'
+5/24/2017 2:01:16 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'inc y 1'
+5/24/2017 2:01:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'inc y -2'
+5/24/2017 2:01:23 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'inc x -1'
+5/24/2017 2:01:27 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+5/24/2017 2:01:28 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40030839 (Bedroll)
+5/24/2017 2:01:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm remove'
+5/24/2017 2:01:34 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40030836 (Bedroll)
+5/24/2017 2:01:36 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+5/24/2017 2:01:40 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x4003095A (AddonComponent) to (1305, 1060, 2)
+5/24/2017 2:01:43 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'inc x -1'
+5/24/2017 2:01:48 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'inc x 1'
+5/24/2017 2:01:51 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'inc y -1'
+5/24/2017 2:01:54 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'inc y 1'
+5/24/2017 2:02:02 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+5/24/2017 2:02:03 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40030945 (StoneFireplaceEastDeed)
+5/24/2017 2:02:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get movable'
+5/24/2017 2:02:18 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+5/24/2017 2:02:20 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x40030807 (Bedroll) to (1306, 1062, 0)
+5/24/2017 2:02:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm set movable false'
+5/24/2017 2:02:33 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'movable' of 0x40030843 (Bedroll) to 'False'
+5/24/2017 2:02:34 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'movable' of 0x40030807 (Bedroll) to 'False'
+5/24/2017 2:02:35 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'movable' of 0x40030717 (Bedroll) to 'False'
+5/24/2017 2:02:36 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'movable' of 0x400307EA (Bedroll) to 'False'
+5/24/2017 2:02:43 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1328, 1060, 0) in Felucca: "GrayBrickFireplaceEastAddon"
+5/24/2017 2:02:43 AM: 127.0.0.1: Serials: 0x4003097C; 
+5/24/2017 2:02:47 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+5/24/2017 2:02:48 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x4003097E (AddonComponent)
+5/24/2017 2:03:12 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add forge'
+5/24/2017 2:03:23 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add stabl'
+5/24/2017 2:03:42 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go brit'
+5/24/2017 2:03:45 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go britain'
+5/24/2017 2:03:47 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 2:03:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add lizardman'
+5/24/2017 2:03:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1428, 1687, 27) in Felucca: "lizardman"
+5/24/2017 2:03:58 AM: 127.0.0.1: Serials: 0x6A62; 
+5/24/2017 2:04:02 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+5/24/2017 2:04:04 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x6A62 "Thys" (no account) to (1425, 1690, 21)
+5/24/2017 2:04:26 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add dog set cantwalk true'
+5/24/2017 2:04:27 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1424, 1691, 21) in Felucca: "dog" "set" "cantwalk" "true"
+5/24/2017 2:04:27 AM: 127.0.0.1: Serials: 0x6A68; 
+5/24/2017 2:04:28 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add dog set cantwalk true'
+5/24/2017 2:04:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1425, 1690, 21) in Felucca: "dog" "set" "cantwalk" "true"
+5/24/2017 2:04:32 AM: 127.0.0.1: Serials: 0x6A6B; 
+5/24/2017 2:04:52 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+5/24/2017 2:04:53 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x6A62 "Thys" (no account)
+5/24/2017 2:04:55 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm remove'
+5/24/2017 2:04:56 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x6A6B "a dog" (no account)
+5/24/2017 2:04:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x6A68 "a dog" (no account)
+5/24/2017 2:05:00 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go despise'
+5/24/2017 2:07:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') hiding 0xF1 "Kai" ('kairi')
+5/24/2017 2:07:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'self hide'
+5/24/2017 2:17:27 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add scorpio'
+5/24/2017 2:27:05 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+5/24/2017 2:27:08 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go britain'
+5/24/2017 2:27:10 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 2:27:47 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'getskill removetrap'
+5/24/2017 2:27:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setskill removetrap 120'
+5/24/2017 2:27:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'RemoveTrap.Base' of 0x62A3 "Tinkerbell" (no account) to '120'
+5/24/2017 2:28:08 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setskill tinkering 120'
+5/24/2017 2:28:10 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Tinkering.Base' of 0x62A3 "Tinkerbell" (no account) to '120'
+5/24/2017 2:28:18 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setskill tinkering 100'
+5/24/2017 2:28:18 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Tinkering.Base' of 0x62A3 "Tinkerbell" (no account) to '100'
+5/24/2017 2:28:22 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setskill removetrap 100'
+5/24/2017 2:28:23 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'RemoveTrap.Base' of 0x62A3 "Tinkerbell" (no account) to '100'
+5/24/2017 2:28:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setskill lockpicking 0'
+5/24/2017 2:28:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Lockpicking.Base' of 0x62A3 "Tinkerbell" (no account) to '0'
+5/24/2017 2:29:09 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add leather'
+5/24/2017 2:29:11 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add leathe'
+5/24/2017 2:29:17 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1437, 1691, 21) in Felucca: "LeatherArms"
+5/24/2017 2:29:17 AM: 127.0.0.1: Serials: 0x4003116F; 
+5/24/2017 2:29:24 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get hue'
+5/24/2017 2:29:29 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set hue 63'
+5/24/2017 2:29:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'hue' of 0x4003116F (LeatherArms) to '63'
+5/24/2017 2:29:43 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add hatofthemagi'
+5/24/2017 2:29:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1437, 1691, 21) in Felucca: "hatofthemagi"
+5/24/2017 2:29:44 AM: 127.0.0.1: Serials: 0x40031179; 
+5/24/2017 2:29:48 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set hue 63'
+5/24/2017 2:29:50 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'hue' of 0x40031179 (HatOfTheMagi) to '63'
+5/24/2017 2:30:15 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add crimson'
+5/24/2017 2:30:17 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1437, 1691, 21) in Felucca: "CrimsonCincture"
+5/24/2017 2:30:17 AM: 127.0.0.1: Serials: 0x4003118B; 
+5/24/2017 2:30:25 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add sash'
+5/24/2017 2:30:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add britann'
+5/24/2017 2:30:36 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1437, 1691, 21) in Felucca: "LieutenantOfTheBritannianRoyalGuard"
+5/24/2017 2:30:36 AM: 127.0.0.1: Serials: 0x40031190; 
+5/24/2017 2:30:42 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1437, 1691, 21) in Felucca: "TheRobeOfBritanniaAri"
+5/24/2017 2:30:42 AM: 127.0.0.1: Serials: 0x40031191; 
+5/24/2017 2:30:49 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+5/24/2017 2:30:52 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40031191 (TheRobeOfBritanniaAri)
+5/24/2017 2:31:01 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add inspect'
+5/24/2017 2:31:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add royal'
+5/24/2017 2:31:16 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1437, 1691, 21) in Felucca: "RoyalGuardSurvivalKnife"
+5/24/2017 2:31:16 AM: 127.0.0.1: Serials: 0x4003119C; 
+5/24/2017 2:31:28 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+5/24/2017 2:31:56 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+5/24/2017 2:31:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x4003119C (RoyalGuardSurvivalKnife)
+5/24/2017 2:32:11 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get enhancepotions'
+5/24/2017 2:32:16 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+5/24/2017 2:32:18 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40017812 (Shoes)
+5/24/2017 2:32:21 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add inspec'
+5/24/2017 2:32:27 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add boot'
+5/24/2017 2:32:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1437, 1691, 21) in Felucca: "DetectiveBoots"
+5/24/2017 2:32:31 AM: 127.0.0.1: Serials: 0x40031228; 
+5/24/2017 2:32:35 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get level'
+5/24/2017 2:32:39 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'inc level 2'
+5/24/2017 2:32:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'inc level1'
+5/24/2017 2:32:46 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'inc level 1'
+5/24/2017 2:32:51 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set level 3'
+5/24/2017 2:32:51 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'level' of 0x40031228 (DetectiveBoots) to '3'
+5/24/2017 2:32:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm set blessed true'
+5/24/2017 2:33:10 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set hue 64'
+5/24/2017 2:33:12 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set hue 64'
+5/24/2017 2:33:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set hue 63'
+5/24/2017 2:33:15 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'hue' of 0x4003118B (CrimsonCincture) to '63'
+5/24/2017 2:33:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set hue 63'
+5/24/2017 2:33:20 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'hue' of 0x40031190 (LieutenantOfTheBritannianRoyalGuard) to '63'
+5/24/2017 2:33:22 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set hue 63'
+5/24/2017 2:33:23 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'hue' of 0x40031228 (DetectiveBoots) to '63'
+5/24/2017 2:33:53 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add gis'
+5/24/2017 2:33:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1437, 1691, 21) in Felucca: "Aegis"
+5/24/2017 2:33:57 AM: 127.0.0.1: Serials: 0x400312BF; 
+5/24/2017 2:34:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add ornament'
+5/24/2017 2:34:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1437, 1691, 21) in Felucca: "ornament"
+5/24/2017 2:34:34 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add ornamentofthe'
+5/24/2017 2:35:04 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+5/24/2017 2:35:10 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add ornamentofthemagician'
+5/24/2017 2:35:11 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1437, 1691, 21) in Felucca: "ornamentofthemagician"
+5/24/2017 2:35:11 AM: 127.0.0.1: Serials: 0x400312F2; 
+5/24/2017 2:35:26 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add bracelet'
+5/24/2017 2:35:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1437, 1691, 21) in Felucca: "SilverBracelet"
+5/24/2017 2:35:30 AM: 127.0.0.1: Serials: 0x400312FF; 
+5/24/2017 2:35:35 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+5/24/2017 2:36:03 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'EnhancePotions' of ... to '25'
+5/24/2017 2:45:24 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'BonusInt' of ... to '8'
+5/24/2017 2:45:42 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'LowerManaCost' of ... to '8'
+5/24/2017 2:45:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'DefendChance' of ... to '15'
+5/24/2017 2:47:11 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Luck' of ... to '100'
+5/24/2017 2:48:11 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Skill_1_Name' of ... to 'Meditation'
+5/24/2017 2:48:17 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Skill_1_Value' of ... to '15'
+5/24/2017 3:15:45 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go '
+5/24/2017 3:15:53 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go jail'
+5/24/2017 3:15:55 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 3:17:20 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get z'
+5/24/2017 3:17:42 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+5/24/2017 3:17:46 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x4001C6F8 (PremiumSpawner) to (5315, 748, -20)
+5/24/2017 3:17:56 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+5/24/2017 3:17:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x4001C6F9 (TreasureLevel3) to (5315, 750, -20)
+5/24/2017 3:18:00 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+5/24/2017 3:18:02 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x4001C6F9 (TreasureLevel3) to (5315, 751, -20)
+5/24/2017 3:18:03 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+5/24/2017 3:18:05 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x4000DDE2 (MetalChest) to (5312, 751, -20)
+5/24/2017 3:18:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+5/24/2017 3:18:08 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x4000DDE2 (MetalChest) to (5312, 750, -20)
+5/24/2017 3:18:24 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+5/24/2017 3:18:28 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+5/24/2017 3:18:39 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+5/24/2017 3:18:53 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x4001C717 (TreasureLevel4) to (5310, 752, -20)
+5/24/2017 3:18:55 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+5/24/2017 3:18:56 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x4001C717 (TreasureLevel4) to (5311, 752, -20)
+5/24/2017 3:19:06 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get z'
+5/24/2017 3:19:11 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set z 0'
+5/24/2017 3:19:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'z' of 0xF1 "Kai" ('kairi') to '0'
+5/24/2017 3:19:17 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 3:23:11 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'GO BRITAIN'
+5/24/2017 3:23:15 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add eccru'
+5/24/2017 3:23:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add ecru'
+5/24/2017 3:23:25 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add citrine'
+5/24/2017 3:23:27 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add citrin'
+5/24/2017 3:44:23 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go jail'
+5/24/2017 3:44:26 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add ettin'
+5/24/2017 3:44:27 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5276, 1165, 0) in Felucca: "ettin"
+5/24/2017 3:44:27 AM: 127.0.0.1: Serials: 0x6D31; 
+5/24/2017 3:44:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add greaterexplosionpotion'
+5/24/2017 3:44:34 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5276, 1164, 0) in Felucca: "greaterexplosionpotion"
+5/24/2017 3:44:34 AM: 127.0.0.1: Serials: 0x400322CA; 
+5/24/2017 3:44:38 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'dupe '
+5/24/2017 3:44:41 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duping 0x400322CA (GreaterExplosionPotion) (inBag=False; amount=1)
+5/24/2017 3:44:41 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duped 0x400322CA (GreaterExplosionPotion) creating 0x400322CB (GreaterExplosionPotion)
+5/24/2017 3:44:51 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'get alchemy'
+5/24/2017 3:45:09 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setskill alchemy 100'
+5/24/2017 3:45:11 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Alchemy.Base' of 0xF1 "Kai" ('kairi') to '100'
+5/24/2017 3:45:24 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'who '
+5/24/2017 3:45:28 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') bringing 0x6004 "Kairi" ('kairi1.0') to Location (5275, 1163, 0), Map Felucca
+5/24/2017 3:46:09 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'dupe '
+5/24/2017 3:46:14 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duping 0x400322CB (GreaterExplosionPotion) (inBag=False; amount=1)
+5/24/2017 3:46:14 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duped 0x400322CB (GreaterExplosionPotion) creating 0x40032390 (GreaterExplosionPotion)
+5/24/2017 3:46:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'getskill alchemy'
+5/24/2017 3:46:25 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setskill alchemy 100'
+5/24/2017 3:46:27 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Alchemy.Base' of 0x6004 "Kairi" ('kairi1.0') to '100'
+5/24/2017 3:47:05 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add silverbracelet'
+5/24/2017 3:47:07 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5276, 1161, 0) in Felucca: "silverbracelet"
+5/24/2017 3:47:07 AM: 127.0.0.1: Serials: 0x400323B2; 
+5/24/2017 3:47:11 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+5/24/2017 3:47:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'EnhancePotions' of ... to '50'
+5/24/2017 3:47:56 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add ettin'
+5/24/2017 3:47:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5272, 1160, 0) in Felucca: "ettin"
+5/24/2017 3:47:58 AM: 127.0.0.1: Serials: 0x6D4D; 
+5/24/2017 3:48:01 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set cantwalk true'
+5/24/2017 3:48:03 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'cantwalk' of 0x6D4D "an ettin" (no account) to 'True'
+5/24/2017 3:48:17 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'res '
+5/24/2017 3:48:18 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') resurrecting 0x6004 "Kairi" ('kairi1.0')
+5/24/2017 3:48:28 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'dupe '
+5/24/2017 3:48:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duping 0x40032390 (GreaterExplosionPotion) (inBag=False; amount=1)
+5/24/2017 3:48:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duped 0x40032390 (GreaterExplosionPotion) creating 0x400323F3 (GreaterExplosionPotion)
+5/24/2017 3:48:46 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+5/24/2017 3:48:47 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x6D4D "an ettin" (no account)
+5/24/2017 3:48:50 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 3:54:03 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'who '
+5/24/2017 3:54:09 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') bringing 0x6004 "Kairi" ('kairi1.0') to Location (5435, 1086, -3), Map Felucca
+5/24/2017 3:54:18 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add ettin set cantwalk true'
+5/24/2017 3:54:19 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5431, 1087, -2) in Felucca: "ettin" "set" "cantwalk" "true"
+5/24/2017 3:54:19 AM: 127.0.0.1: Serials: 0x6D62; 
+5/24/2017 3:54:22 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+5/24/2017 3:54:34 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'FireResistSeed' of 0x6D62 "an ettin" (no account) to '0'
+5/24/2017 3:56:00 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/24/2017 3:56:37 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'dupe '
+5/24/2017 3:56:39 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duping 0x400323F3 (GreaterExplosionPotion) (inBag=False; amount=1)
+5/24/2017 3:56:39 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duped 0x400323F3 (GreaterExplosionPotion) creating 0x40032528 (GreaterExplosionPotion)
+5/24/2017 3:56:45 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'dupe '
+5/24/2017 3:56:46 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duping 0x40032528 (GreaterExplosionPotion) (inBag=False; amount=1)
+5/24/2017 3:56:46 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duped 0x40032528 (GreaterExplosionPotion) creating 0x40032529 (GreaterExplosionPotion)
+5/24/2017 3:56:51 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'dupe '
+5/24/2017 3:56:52 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duping 0x40032528 (GreaterExplosionPotion) (inBag=False; amount=1)
+5/24/2017 3:56:52 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duped 0x40032528 (GreaterExplosionPotion) creating 0x4003252A (GreaterExplosionPotion)
+5/24/2017 3:56:56 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'dupe '
+5/24/2017 3:56:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duping 0x40032528 (GreaterExplosionPotion) (inBag=False; amount=1)
+5/24/2017 3:56:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duped 0x40032528 (GreaterExplosionPotion) creating 0x40032557 (GreaterExplosionPotion)
+5/24/2017 3:57:00 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'dupe '
+5/24/2017 3:57:00 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duping 0x40032528 (GreaterExplosionPotion) (inBag=False; amount=1)
+5/24/2017 3:57:00 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duped 0x40032528 (GreaterExplosionPotion) creating 0x40032558 (GreaterExplosionPotion)
+5/24/2017 3:57:27 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add ettin'
+5/24/2017 3:57:29 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5431, 1088, -2) in Felucca: "ettin"
+5/24/2017 3:57:29 AM: 127.0.0.1: Serials: 0x6D75; 
+5/24/2017 3:57:47 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'getskill magery'
+5/24/2017 3:58:10 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add mortar'
+5/24/2017 3:58:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5436, 1087, -2) in Felucca: "MortarPestle"
+5/24/2017 3:58:13 AM: 127.0.0.1: Serials: 0x4003261D; 
+5/24/2017 3:59:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') unhiding 0xF1 "Kai" ('kairi')
+5/24/2017 3:59:32 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'self unhide'
+5/24/2017 4:00:25 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setskill resistmagic 0'
+5/24/2017 4:00:30 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setskill magicresist 0'
+5/24/2017 4:00:31 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'MagicResist.Base' of 0xF1 "Kai" ('kairi') to '0'
+5/24/2017 4:00:53 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm inc hits 100'
+5/24/2017 4:01:08 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set str 100'
+5/24/2017 4:01:10 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'str' of 0x6004 "Kairi" ('kairi1.0') to '100'
+5/24/2017 4:01:33 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'set str 125'
+5/24/2017 4:01:34 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'str' of 0x6004 "Kairi" ('kairi1.0') to '125'
+5/24/2017 4:01:38 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+5/24/2017 4:03:39 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+5/24/2017 4:03:42 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x6004 "Kairi" ('kairi1.0') to (5434, 1088, -2)
+5/24/2017 4:03:44 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'move '
+5/24/2017 4:03:45 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') moving 0x6004 "Kairi" ('kairi1.0') to (5434, 1090, -2)
+5/24/2017 4:04:23 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm inc hits 100'
+5/24/2017 4:04:45 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'dupe '
+5/24/2017 4:04:47 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duping 0x400323F3 (GreaterExplosionPotion) (inBag=False; amount=1)
+5/24/2017 4:04:47 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duped 0x400323F3 (GreaterExplosionPotion) creating 0x4003274D (GreaterExplosionPotion)
+5/24/2017 4:04:49 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'dupe '
+5/24/2017 4:04:49 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duping 0x400323F3 (GreaterExplosionPotion) (inBag=False; amount=1)
+5/24/2017 4:04:49 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duped 0x400323F3 (GreaterExplosionPotion) creating 0x4003274E (GreaterExplosionPotion)
+5/24/2017 4:04:50 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'dupe '
+5/24/2017 4:04:50 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duping 0x400323F3 (GreaterExplosionPotion) (inBag=False; amount=1)
+5/24/2017 4:04:50 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duped 0x400323F3 (GreaterExplosionPotion) creating 0x4003274F (GreaterExplosionPotion)
+5/24/2017 4:04:51 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'dupe '
+5/24/2017 4:04:51 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duping 0x400323F3 (GreaterExplosionPotion) (inBag=False; amount=1)
+5/24/2017 4:04:51 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duped 0x400323F3 (GreaterExplosionPotion) creating 0x40032751 (GreaterExplosionPotion)
+5/24/2017 4:04:52 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'dupe '
+5/24/2017 4:04:52 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duping 0x400323F3 (GreaterExplosionPotion) (inBag=False; amount=1)
+5/24/2017 4:04:52 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duped 0x400323F3 (GreaterExplosionPotion) creating 0x40032752 (GreaterExplosionPotion)
+5/24/2017 4:04:53 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'dupe '
+5/24/2017 4:04:53 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duping 0x400323F3 (GreaterExplosionPotion) (inBag=False; amount=1)
+5/24/2017 4:04:53 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duped 0x400323F3 (GreaterExplosionPotion) creating 0x40032753 (GreaterExplosionPotion)
+5/24/2017 4:04:54 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'dupe '
+5/24/2017 4:04:55 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duping 0x400323F3 (GreaterExplosionPotion) (inBag=False; amount=1)
+5/24/2017 4:04:55 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duped 0x400323F3 (GreaterExplosionPotion) creating 0x40032755 (GreaterExplosionPotion)
+5/24/2017 4:04:55 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'dupe '
+5/24/2017 4:04:56 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duping 0x400323F3 (GreaterExplosionPotion) (inBag=False; amount=1)
+5/24/2017 4:04:56 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duped 0x400323F3 (GreaterExplosionPotion) creating 0x40032756 (GreaterExplosionPotion)
+5/24/2017 4:04:56 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'dupe '
+5/24/2017 4:04:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duping 0x400323F3 (GreaterExplosionPotion) (inBag=False; amount=1)
+5/24/2017 4:04:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duped 0x400323F3 (GreaterExplosionPotion) creating 0x40032757 (GreaterExplosionPotion)
+5/24/2017 4:04:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'dupe '
+5/24/2017 4:04:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duping 0x400323F3 (GreaterExplosionPotion) (inBag=False; amount=1)
+5/24/2017 4:04:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duped 0x400323F3 (GreaterExplosionPotion) creating 0x40032758 (GreaterExplosionPotion)
+5/24/2017 4:04:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'dupe '
+5/24/2017 4:04:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duping 0x400323F3 (GreaterExplosionPotion) (inBag=False; amount=1)
+5/24/2017 4:04:59 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') duped 0x400323F3 (GreaterExplosionPotion) creating 0x40032759 (GreaterExplosionPotion)
+5/24/2017 4:05:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'tele '
+5/24/2017 4:06:08 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'tele '
+5/24/2017 4:06:15 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'inc hits 100'
+5/24/2017 4:06:36 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'inc hits 100'
+5/24/2017 4:07:25 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'inc hits 100'
+5/24/2017 4:07:41 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'props '
+5/24/2017 4:07:55 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'EnhancePotions' of ... to '80'
+5/24/2017 4:08:11 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'inc hits 100'
+5/24/2017 4:08:56 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'EnhancePotions' of ... to '230'
+5/24/2017 4:09:09 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'inc hits 100'
+5/24/2017 4:26:23 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'inc hits 100'
+5/24/2017 4:26:42 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'inc hits 100'
+5/24/2017 4:26:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'inc hits 100'
+5/24/2017 4:27:22 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'inc hits 100'
+5/24/2017 4:38:49 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+5/24/2017 4:38:51 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x400323B2 (SilverBracelet)
+5/24/2017 4:39:05 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'setskill alchemy 50'
+5/24/2017 4:39:06 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'Alchemy.Base' of 0x6004 "Kairi" ('kairi1.0') to '50'
+5/24/2017 4:40:40 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') hiding 0xF1 "Kai" ('kairi')
+5/24/2017 4:40:40 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'self hide'
+5/24/2017 4:40:42 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go luna'
+5/24/2017 4:40:47 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'who '
+5/24/2017 4:40:53 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') bringing 0x6004 "Kairi" ('kairi1.0') to Location (989, 520, -50), Map Malas
+5/24/2017 4:45:08 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+5/24/2017 4:45:09 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'who '
+5/24/2017 4:45:13 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'who '
+5/24/2017 4:45:17 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6FEF "Jonesy" ('ezekiah'), Location (1176, 2638, 0), Map Felucca
+5/24/2017 4:45:29 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6FEF "Jonesy" ('ezekiah'), Location (5243, 999, 0), Map Felucca
+5/24/2017 4:45:33 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') unhiding 0xF1 "Kai" ('kairi')
+5/24/2017 4:45:33 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'self unhide'
+5/24/2017 4:45:58 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'inc hits 100'
+5/24/2017 4:46:11 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '

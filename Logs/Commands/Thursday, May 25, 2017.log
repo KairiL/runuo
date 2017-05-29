@@ -1,0 +1,24 @@
+##############################
+Log started on 5/25/2017 8:18:19 PM
+
+5/26/2017 4:13:08 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'speedboost '
+5/26/2017 4:13:10 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'who '
+5/26/2017 4:13:14 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') going to 0x6AB "Davonna" ('mom'), Location (1116, 3591, 0), Map Felucca
+5/26/2017 4:15:24 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'M Tele'
+5/26/2017 4:19:04 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'go 2500, 199, 0'
+5/26/2017 4:19:16 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'go felucca 2400 199 0'
+5/26/2017 4:19:34 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'go felucca (2400 199 0)'
+5/26/2017 4:19:47 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'go felucca (2400 199)'
+5/26/2017 4:20:02 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'go [felucca (2400 199)'
+5/26/2017 4:20:13 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'go [felucca (2400 199)'
+5/26/2017 4:20:20 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'go fel (2400 199)'
+5/26/2017 4:20:44 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'move '
+5/26/2017 4:20:46 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') moving 0x40019FA9 (Teleporter) to (5752, 437, 77)
+5/26/2017 4:20:54 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'move '
+5/26/2017 4:20:56 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') moving 0x40019F75 (Teleporter) to (2400, 199, 0)
+5/26/2017 4:21:25 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') used command 'move '
+5/26/2017 4:21:27 AM: 97.83.147.229: GameMaster 0x632E "Darnell" ('ezjones') moving 0x40019FA9 (Teleporter) to (5753, 437, 77)
+5/27/2017 2:26:47 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+5/27/2017 2:26:50 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'admin '
+5/28/2017 12:17:41 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+5/28/2017 12:17:47 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '

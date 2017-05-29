@@ -80,7 +80,7 @@ namespace Server.Spells.Chivalry
 				else if ( toHeal > 39 )
 					toHeal = 39;
 
-                toHeal += (int)Caster.Skills.Healing.Fixed / 20;
+                toHeal += (int)Caster.Skills.Healing.Fixed / 200;
         
 				if ( (m.Hits + toHeal) > m.HitsMax )
 					toHeal = m.HitsMax - m.Hits;

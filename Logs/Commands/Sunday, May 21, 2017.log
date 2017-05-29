@@ -1,0 +1,64 @@
+##############################
+Log started on 5/21/2017 3:14:35 PM
+
+5/21/2017 3:58:20 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+5/21/2017 3:58:24 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'who '
+5/21/2017 3:58:27 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6AB "Davonna" ('mom'), Location (991, 517, -50), Map Malas
+5/21/2017 3:58:30 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'Get ItemID'
+5/21/2017 3:58:36 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add trash'
+5/21/2017 3:58:52 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (987, 525, -50) in Malas: "TrashBarrel"
+5/21/2017 3:58:52 PM: 127.0.0.1: Serials: 0x40001DC8; 
+5/21/2017 3:58:56 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (991, 525, -50) in Malas: "TrashBarrel"
+5/21/2017 3:58:56 PM: 127.0.0.1: Serials: 0x40001DC9; 
+5/21/2017 3:59:08 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (994, 522, -50) in Malas: "TrashBarrel"
+5/21/2017 3:59:08 PM: 127.0.0.1: Serials: 0x40001DDC; 
+5/21/2017 3:59:12 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (996, 517, -50) in Malas: "TrashBarrel"
+5/21/2017 3:59:12 PM: 127.0.0.1: Serials: 0x40001DDD; 
+5/21/2017 3:59:13 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (996, 522, -50) in Malas: "TrashBarrel"
+5/21/2017 3:59:13 PM: 127.0.0.1: Serials: 0x40001DDE; 
+5/21/2017 3:59:16 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+5/21/2017 3:59:19 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40001DDC (TrashBarrel)
+5/21/2017 3:59:26 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm remove'
+5/21/2017 3:59:27 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40001DDE (TrashBarrel)
+5/21/2017 3:59:28 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40001DDD (TrashBarrel)
+5/21/2017 3:59:38 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add troll'
+5/21/2017 3:59:39 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (997, 527, -50) in Malas: "troll"
+5/21/2017 3:59:39 PM: 127.0.0.1: Serials: 0x180E; 
+5/21/2017 4:00:06 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add ancientwyrm'
+5/21/2017 4:00:08 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (989, 526, -50) in Malas: "ancientwyrm"
+5/21/2017 4:00:08 PM: 127.0.0.1: Serials: 0x1812; 
+5/21/2017 4:00:56 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/21/2017 4:01:02 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add trash barrel'
+5/21/2017 4:01:07 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1424, 1693, 0) in Felucca: "TrashBarrel"
+5/21/2017 4:01:07 PM: 127.0.0.1: Serials: 0x40001E6A; 
+5/21/2017 4:01:17 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1431, 1685, 27) in Felucca: "TrashBarrel"
+5/21/2017 4:01:17 PM: 127.0.0.1: Serials: 0x40001E6C; 
+5/21/2017 4:01:38 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add bookofninjitsu'
+5/21/2017 4:01:39 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (1431, 1695, 0) in Felucca: "bookofninjitsu"
+5/21/2017 4:01:39 PM: 127.0.0.1: Serials: 0x40001E83; 
+5/21/2017 4:01:57 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') set property 'HomeRange' of 0x400357E9 (PremiumSpawner) to '0'
+5/21/2017 4:02:04 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+5/21/2017 4:02:05 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40001E83 (BookOfNinjitsu)
+5/21/2017 4:02:06 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'remove '
+5/21/2017 4:02:07 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') deleting 0x40000AC9 (BookOfNinjitsu)
+5/21/2017 4:37:28 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'who '
+5/21/2017 4:37:33 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6AB "Davonna" ('mom'), Location (991, 517, -50), Map Malas
+5/21/2017 4:48:34 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+5/21/2017 4:49:46 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+5/21/2017 4:49:54 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'admin '
+5/21/2017 4:50:47 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') adding new account: Gary
+5/21/2017 7:31:32 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+5/21/2017 7:31:33 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'who '
+##############################
+Log started on 5/21/2017 7:33:20 PM
+
+5/21/2017 7:33:42 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+##############################
+Log started on 5/21/2017 7:36:18 PM
+
+5/21/2017 10:27:36 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+5/21/2017 10:27:39 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/22/2017 4:24:57 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+5/22/2017 4:25:09 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'bank '
+5/22/2017 4:25:14 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') opening bank box of 0xF4 "Kairi2.0" ('kairi2.0')
+5/22/2017 4:25:25 AM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'restart '
