@@ -6,8 +6,8 @@
 		<accessLevel>Owner</accessLevel>
 		<flags>2</flags>
 		<created>2017-03-22T08:02:32.2882832Z</created>
-		<lastLogin>2017-05-29T23:03:44.6504894Z</lastLogin>
-		<totalGameTime>P6DT15H45M36.1293014S</totalGameTime>
+		<lastLogin>2017-05-29T23:31:57.7912234Z</lastLogin>
+		<totalGameTime>P6DT15H48M57.8235898S</totalGameTime>
 		<chars>
 			<char index="0">241</char>
 		</chars>
@@ -23,7 +23,7 @@
 		<flags>2</flags>
 		<created>2017-03-24T00:35:49.1928057Z</created>
 		<lastLogin>2017-05-29T23:09:53.5149431Z</lastLogin>
-		<totalGameTime>P3DT22H9M19.7734371S</totalGameTime>
+		<totalGameTime>P3DT22H19M42.5113575S</totalGameTime>
 		<chars>
 			<char index="0">242</char>
 			<char index="1">1906</char>
@@ -86,7 +86,7 @@
 		<flags>2</flags>
 		<created>2017-05-20T05:12:06.7046639Z</created>
 		<lastLogin>2017-05-29T23:06:26.4818831Z</lastLogin>
-		<totalGameTime>P7DT24M20.5058762S</totalGameTime>
+		<totalGameTime>P7DT34M43.2437966S</totalGameTime>
 		<chars>
 			<char index="0">1707</char>
 			<char index="1">28602</char>
@@ -119,7 +119,7 @@
 		<flags>2</flags>
 		<created>2017-05-20T23:53:55.7486774Z</created>
 		<lastLogin>2017-05-29T23:05:24.37077Z</lastLogin>
-		<totalGameTime>P3DT6H58M46.2748436S</totalGameTime>
+		<totalGameTime>P3DT7H9M9.012764S</totalGameTime>
 		<chars>
 			<char index="0">28655</char>
 			<char index="1">30168</char>
@@ -130,15 +130,15 @@
 			<ip>192.168.1.5</ip>
 			<ip>97.83.147.229</ip>
 		</addressList>
-		<totalCurrency>4.6741999999999987E-05</totalCurrency>
+		<totalCurrency>3.1741999999999988E-05</totalCurrency>
 	</account>
 	<account>
 		<username>ezekiahjones</username>
 		<newCryptPassword>98-68-AC-BF-04-90-F6-11-81-33-A1-1B-AB-D7-AC-8C-08-7E-B9-E8</newCryptPassword>
 		<flags>2</flags>
 		<created>2017-05-20T23:54:21.366437Z</created>
-		<lastLogin>2017-05-29T23:05:43.6188657Z</lastLogin>
-		<totalGameTime>P1DT23H46M21.1255026S</totalGameTime>
+		<lastLogin>2017-05-29T23:27:17.5168575Z</lastLogin>
+		<totalGameTime>P1DT23H56M34.3939958S</totalGameTime>
 		<chars>
 			<char index="0">29145</char>
 			<char index="1">25031</char>

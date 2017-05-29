@@ -144,14 +144,16 @@ namespace Server.Items
 						typeof( Gears ),
                         typeof( GreaterExplosionPotion ),
                         typeof( Bolt ),
+                        typeof( Board ),
                         typeof( Leather ),
                     },
 					new int[]
 					{
 						1,
 						500,
-						5,
-                        5,
+						50,
+                        50,
+                        500,
                         500,
                         200
                     } );
