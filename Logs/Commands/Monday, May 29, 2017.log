@@ -292,3 +292,18 @@ Log started on 5/29/2017 1:41:03 AM
 ##############################
 Log started on 5/29/2017 11:04:37 PM
 
+5/29/2017 11:31:57 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'speedboost '
+5/29/2017 11:32:00 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'add board'
+5/29/2017 11:32:02 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') building at (5213, 2347, 30) in Felucca: "board"
+5/29/2017 11:32:02 PM: 127.0.0.1: Serials: 0x40001F62; 
+5/29/2017 11:34:11 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'who '
+5/29/2017 11:34:14 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') going to 0x6FEF "Jonesy" ('ezekiah'), Location (2471, 483, 15), Map Felucca
+5/29/2017 11:34:29 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'm tele'
+5/29/2017 11:34:43 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') unhiding 0xF1 "Kai" ('kairi')
+5/29/2017 11:34:43 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'self unhide'
+5/29/2017 11:35:12 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'echo LAST SAVE!'
+5/29/2017 11:35:14 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'echo LAST SAVE!'
+5/29/2017 11:35:15 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'echo LAST SAVE!'
+5/29/2017 11:35:15 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'echo LAST SAVE!'
+5/29/2017 11:35:18 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'save '
+5/29/2017 11:37:48 PM: 127.0.0.1: Owner 0xF1 "Kai" ('kairi') used command 'go luna'
