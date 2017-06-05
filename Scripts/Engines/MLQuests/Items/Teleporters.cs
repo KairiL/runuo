@@ -108,7 +108,121 @@ namespace Server.Engines.MLQuests.Items
 		}
 	}
 
-	public interface ITicket
+    public class MovingTeleporter : Teleporter
+    {
+        private Point3D m_Home;
+        private int m_HomeRange;
+        private Mobile m_LastUser;
+        private int m_TimesUsed;
+        private int m_UsesNeeded;
+
+        [CommandProperty(AccessLevel.GameMaster)]
+        public Point3D Home
+        {
+            get { return m_Home; }
+            set { m_Home = value; InvalidateProperties(); }
+        }
+
+        [CommandProperty(AccessLevel.GameMaster)]
+        public int HomeRange
+        {
+            get { return m_HomeRange; }
+            set { m_HomeRange = value; InvalidateProperties(); }
+        }
+
+        [CommandProperty(AccessLevel.GameMaster)]
+        public Mobile LastUser
+        {
+            get { return m_LastUser; }
+            set { m_LastUser = value; InvalidateProperties(); }
+        }
+
+        [CommandProperty(AccessLevel.GameMaster)]
+        public int TimesUsed
+        {
+            get { return m_TimesUsed; }
+            set { m_TimesUsed = value; InvalidateProperties(); }
+        }
+
+        [CommandProperty(AccessLevel.GameMaster)]
+        public int UsesNeeded
+        {
+            get { return m_UsesNeeded; }
+            set { m_UsesNeeded = value; InvalidateProperties(); }
+        }
+
+        [Constructable]
+        public MovingTeleporter()
+			: this(Point3D.Zero, null)
+		{
+        }
+
+        [Constructable]
+        public MovingTeleporter(Point3D pointDest, Map mapDest)
+			: base(pointDest, mapDest)
+		{
+            Home = new Point3D (6506, 83, -4);
+            HomeRange = 8;
+            UsesNeeded = 5;
+            LastUser = null;
+            TimesUsed = 0;
+            ItemID = 0x3818;
+            Visible = true;
+        }
+
+        public override bool OnMoveOver(Mobile m)
+        {
+            if (LastUser == m)
+                TimesUsed += 1;
+            else
+            {
+                TimesUsed = 0;
+                LastUser = m;
+            }
+            X = Home.X + Utility.Random(HomeRange);
+            Y = Home.Y + Utility.Random(HomeRange);
+            Z = Home.Z;
+
+            if (TimesUsed < UsesNeeded)
+                return false;
+
+            TimesUsed = 0;
+            return base.OnMoveOver(m);
+        }
+
+        public MovingTeleporter(Serial serial)
+			: base(serial)
+		{
+        }
+
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
+
+            writer.Write((int)0); // version
+
+            writer.Write(m_Home);
+            writer.Write(m_HomeRange);
+            writer.Write(m_UsesNeeded);
+            writer.Write(m_LastUser);
+            writer.Write(m_TimesUsed);
+        }
+
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
+
+            int version = reader.ReadInt();
+
+            m_Home = reader.ReadPoint3D();
+            m_HomeRange = reader.ReadInt();
+            m_UsesNeeded = reader.ReadInt();
+            m_LastUser = reader.ReadMobile();
+            m_TimesUsed = reader.ReadInt();
+        }
+    }
+
+    public interface ITicket
 	{
 		void OnTicketUsed(Mobile from);
 	}
