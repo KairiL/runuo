@@ -153,9 +153,9 @@ namespace Server.Items
 						500,
 						50,
                         50,
-                        500,
-                        500,
-                        200
+                        200,
+                        50,
+                        50
                     } );
 
 				switch ( res )
@@ -172,22 +172,27 @@ namespace Server.Items
 					}
 					case 2:
 					{
-						from.SendMessage( "You must have 5 gears to construct the golem." );
+						from.SendMessage( "You must have 50 gears to construct the golem." );
 						break;
 					}
                     case 3:
                     {
-                        from.SendMessage("You must have 5 greater explosion potions to construct the golem.");
+                        from.SendMessage("You must have 50 greater explosion potions to construct the golem.");
                         break;
                     }
                     case 4:
                     {
-                        from.SendMessage("You must have 500 bolts to construct the golem.");
+                        from.SendMessage("You must have 200 bolts to construct the golem.");
                         break;
                     }
                     case 5:
                     {
-                        from.SendMessage("You must have 200 leather to construct the golem.");
+                        from.SendMessage("You must have 50 boards to construct the golem.");
+                        break;
+                    }
+                    case 6:
+                    {
+                        from.SendMessage("You must have 50 leather to construct the golem.");
                         break;
                     }
 

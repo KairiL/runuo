@@ -66,7 +66,7 @@ namespace Server.Items
 
 				int trapskill = (int)Math.Round(from.Skills.Tinkering.Value) + (int)Math.Round(from.Skills.Fletching.Value);
 				int trapmod = trapskill - 50;
-				int trapuses = (trapskill / 20) + Utility.RandomMinMax(1, 3);
+				int trapuses = (trapskill / 2) + Utility.RandomMinMax(1, 3);
 
 				CraftedBoltTrap trap = new CraftedBoltTrap(); 
 

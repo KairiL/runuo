@@ -71,7 +71,8 @@ namespace Server.Items
 
 				trap.TrapOwner = from;
 				trap.TrapPower += trapmod;
-				trap.UsesRemaining += trapuses;				
+				trap.UsesRemaining += trapuses;
+                trap.ParalyzeTime = trapuses;
 
 				trap.MoveToWorld( new Point3D( x, y, z ), map );
 

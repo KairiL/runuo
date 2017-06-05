@@ -339,8 +339,8 @@ namespace Server.Engines.Craft
             // Craftable Explosion Trap
             index = AddCraft(typeof(CraftedExplosionComponents), (string.Format("New Traps")), (string.Format("Explosion Trap")), 80.0, 120.0, typeof(Log), 1044041, 10, 1044351);
             AddSkill(index, SkillName.RemoveTrap, 45.0, 50.0);
-            AddRes(index, typeof(SulfurousAsh), 1044359, 50, 1044367);
-            AddRes(index, typeof(IronIngot), 1044036, 25, 1044037);
+            AddRes(index, typeof(SulfurousAsh), 1044359, 10, 1044367);
+            AddRes(index, typeof(IronIngot), 1044036, 15, 1044037);
 
             // Craftable Poison Gas Trap
             index = AddCraft(typeof(CraftedPoisonGasComponents), (string.Format("New Traps")), (string.Format("Poison Gas Trap")), 80.0, 120.0, typeof(Log), 1044041, 10, 1044351);

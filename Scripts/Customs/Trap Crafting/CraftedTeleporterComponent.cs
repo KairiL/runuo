@@ -65,7 +65,7 @@ namespace Server.Items
 
 				int trapskill = (int)Math.Round(from.Skills.Tinkering.Value) + (int)Math.Round(from.Skills.Inscribe.Value);
 				int trapmod = trapskill - 50;
-				int trapuses = (trapskill / 25);
+				int trapuses = (trapskill);
 
 				CraftedTeleporter trap = new CraftedTeleporter(); 
 

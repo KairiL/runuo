@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using Server.ContextMenus;
 using Server.Spells;
 using Server.Mobiles;
+using Server.Spells.Spellweaving;
 
 namespace Server.Items
 {
@@ -188,14 +189,16 @@ namespace Server.Items
         }
         public override void OnTrigger(Mobile from)
         {
+            int sdiBonus;
             ArrayList targets = new ArrayList();
-            if (from.AccessLevel > AccessLevel.Player)
-                return;
+            //uncomment this if you want staff to be immune to traps
+            //if (from.AccessLevel > AccessLevel.Player)
+            //    return;
 
             int ManaLoss = ScaleMana(ManaCost);
 
             if (TrapOwner != null )
-                if (TrapOwner.Player && TrapOwner.Map == this.Map && TrapOwner.InRange(Location, 200) && TrapOwner.CanBeHarmful(from, false) && from != TrapOwner)
+                if (TrapOwner.Player && TrapOwner.Map == this.Map && TrapOwner.CanBeHarmful(from, false) && from != TrapOwner)
                 {
                     if (TrapOwner.Mana >= ManaLoss)
                         TrapOwner.Mana -= ManaLoss;
@@ -208,7 +211,10 @@ namespace Server.Items
                 }
             else
                 return;
-            
+
+            if (!(TrapOwner.InRange(Location, 200)))
+                return;
+
             if (this.Visible == false)
                 this.Visible = true;
 
@@ -221,7 +227,6 @@ namespace Server.Items
 
             if (MaxDamage < 10)
                 MaxDamage = 10;
-
             if (from.Alive)
             {
                 IPooledEnumerable eable = this.Map.GetMobilesInRange(new Point3D(Location), DamageRange);
@@ -239,7 +244,15 @@ namespace Server.Items
                         Mobile m = (Mobile)targets[i];
                         if (DamageScalar != 0)
                         {
+                            sdiBonus = AosAttributes.GetValue(TrapOwner, AosAttribute.SpellDamage);
+                            sdiBonus += ArcaneEmpowermentSpell.GetSpellBonus(TrapOwner, (m.Player && TrapOwner.Player));
+                            // PvP spell damage increase cap of 15% from an item’s magic property
+                            if ( (m.Player && TrapOwner.Player) && (sdiBonus > 15 + (int)(m.Skills[SkillName.Inscribe].Value / 100) ) )
+                                sdiBonus = 15 + (int)(m.Skills[SkillName.Inscribe].Value / 100);
+
                             TrapOwner.DoHarmful(m);
+                            MinDamage *= 1 + sdiBonus;
+                            MaxDamage *= 1 + sdiBonus;
                             AOS.Damage(m, TrapOwner, (int)DamageScalar * Utility.RandomMinMax(MinDamage, MaxDamage), 0, 100, 0, 0, 0);
                         }
 
@@ -265,8 +278,10 @@ namespace Server.Items
                     }
                     Teleport(from);
                 }
-
-                this.UsesRemaining -= 1;
+                if (TrapOwner.Alive)
+                    this.UsesRemaining -= 1;
+                else
+                    UsesRemaining -= 10;
 
                 if (this.UsesRemaining <= 0)
                     this.Delete();
@@ -361,7 +376,8 @@ namespace Server.Items
 
 				int trapmaxskill = (int)Math.Round(from.Skills.RemoveTrap.Value) + (int)Math.Round(from.Skills.Tinkering.Value) + 50;
                 int bonusmaxskill = (int)Math.Round(from.Skills[BonusSkill].Value);
-				int trapminskill = trapmaxskill - 20;
+                trapmaxskill += bonusmaxskill;
+                int trapminskill = trapmaxskill - 20;
 				int trappower = this.TrapPower;
 				int trapcheck = Utility.RandomMinMax(trapminskill, trapmaxskill);
 
