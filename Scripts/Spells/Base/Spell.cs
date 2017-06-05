@@ -142,9 +142,13 @@ namespace Server.Spells
 			int intBonus = Caster.Int / 10;
 			damageBonus += intBonus;
 
-			int sdiBonus = AosAttributes.GetValue( m_Caster, AosAttribute.SpellDamage );
-			// PvP spell damage increase cap of 15% from an item’s magic property
-			if ( playerVsPlayer && sdiBonus > 15 + ((int)inscribeSkill) / 100)
+            int ArcaneEmpowermentBonus = Spellweaving.ArcaneEmpowermentSpell.GetSpellBonus(m_Caster, playerVsPlayer);
+            
+            int sdiBonus = AosAttributes.GetValue( m_Caster, AosAttribute.SpellDamage );
+            sdiBonus += ArcaneEmpowermentBonus;
+
+            // PvP spell damage increase cap of 15% from an item’s magic property
+            if ( playerVsPlayer && sdiBonus > 15 + ((int)inscribeSkill) / 100)
 				sdiBonus = 15 + ((int)inscribeSkill) / 100;
 
             damageBonus += sdiBonus;

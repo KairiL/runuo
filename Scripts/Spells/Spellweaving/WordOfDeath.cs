@@ -52,7 +52,8 @@ namespace Server.Spells.Spellweaving
 					int maxDamage = (int)Caster.Skills.Spellweaving.Value / 3;
 					damage = Utility.RandomMinMax(minDamage, maxDamage);
 					int damageBonus = AosAttributes.GetValue( Caster, AosAttribute.SpellDamage );
-					if (m.Player && damageBonus > 15)
+                    damageBonus += Spellweaving.ArcaneEmpowermentSpell.GetSpellBonus(m, m.Player);
+                    if (m.Player && damageBonus > 15)
 						damageBonus = 15;
 					damage *= damageBonus + 100;
 					damage /= 100;

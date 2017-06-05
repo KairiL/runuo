@@ -6,6 +6,7 @@ using Server.Network;
 using Server.Targeting;
 using Server.Spells;
 using Server.Mobiles;
+using Server.Spells.Spellweaving;
 
 namespace Server.Items
 {
@@ -275,7 +276,9 @@ namespace Server.Items
 
 				m_MinDamage = Scale( m_From, m_MinDamage + alchemyBonus );
 				m_MaxDamage = Scale( m_From, m_MaxDamage + alchemyBonus );
-			}
+                m_MinDamage *= 1 + ArcaneEmpowermentSpell.GetSpellBonus(m_From, false);
+                m_MaxDamage *= 1 + ArcaneEmpowermentSpell.GetSpellBonus(m_From, false);
+            }
 
 			public override void Serialize( GenericWriter writer )
 			{

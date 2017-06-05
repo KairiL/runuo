@@ -6,6 +6,7 @@ using Server.Network;
 using Server.Targeting;
 using Server.Spells;
 using Server.Mobiles;
+using Server.Spells.Spellweaving;
 
 namespace Server.Items
 {
@@ -296,8 +297,9 @@ namespace Server.Items
 					else if ( Core.AOS && toDamage > 2 )
 						damage /= toDamage - 1;
                     if(!(m is PlayerMobile))
-                        damage *= 4;
-                       
+                        damage *= 2;
+                    
+                    damage *= 1 + ArcaneEmpowermentSpell.GetSpellBonus(from, false);
                     if (((BasePotion)this).Poison != null)
                     {
                         PoisonChance = .1;

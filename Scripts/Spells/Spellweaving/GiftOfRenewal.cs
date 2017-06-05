@@ -58,6 +58,7 @@ namespace Server.Spells.Spellweaving
 
 					int hitsPerRound = 5 + (int)(skill / 24) + FocusLevel;
                     hitsPerRound += (int)(Caster.Skills[SkillName.Healing].Value / 40.0);
+                    Spellweaving.ArcaneEmpowermentSpell.AddHealBonus(Caster, ref hitsPerRound);
                     TimeSpan duration = TimeSpan.FromSeconds( 30 + (FocusLevel * 10) );
 
 					GiftOfRenewalInfo info = new GiftOfRenewalInfo( Caster, m, hitsPerRound );

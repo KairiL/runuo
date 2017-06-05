@@ -391,7 +391,7 @@ namespace Server.Mobiles
 		#region Bonding
 		public const bool BondingEnabled = true;
 
-		public virtual bool IsBondable{ get{ return ( BondingEnabled && !Summoned ); } }
+		public virtual bool IsBondable{ get{ return ( BondingEnabled && !Summoned && !Allured); } }
 		public virtual TimeSpan BondingDelay{ get{ return TimeSpan.FromDays( 7.0 ); } }
 		public virtual TimeSpan BondingAbandonDelay{ get{ return TimeSpan.FromDays( 1.0 ); } }
 
@@ -1757,7 +1757,7 @@ namespace Server.Mobiles
 		{
 			base.Serialize( writer );
 
-			writer.Write( (int) 18 ); // version
+			writer.Write( (int) 19 ); // version
 
 			writer.Write( (int)m_CurrentAI );
 			writer.Write( (int)m_DefaultAI );
@@ -1868,8 +1868,12 @@ namespace Server.Mobiles
 			writer.Write( (bool)m_RemoveIfUntamed );
 			writer.Write( (int)m_RemoveStep );
 
-			// Version 17
-			if ( IsStabled || ( Controlled && ControlMaster != null ) )
+            #region Mondain's Legacy version 19
+            writer.Write((bool)m_Allured);
+            #endregion
+
+            // Version 17
+            if ( IsStabled || ( Controlled && ControlMaster != null ) )
 				writer.Write( TimeSpan.Zero );
 			else
 				writer.Write( DeleteTimeLeft );
@@ -2083,7 +2087,12 @@ namespace Server.Mobiles
 				m_RemoveStep = reader.ReadInt();
 			}
 
-			TimeSpan deleteTime = TimeSpan.Zero;
+            #region Mondain's Legacy version 19
+            if (version >= 19)
+                m_Allured = reader.ReadBool();
+            #endregion
+
+            TimeSpan deleteTime = TimeSpan.Zero;
 
 			if ( version >= 17 )
 				deleteTime = reader.ReadTimeSpan();
@@ -2790,7 +2799,17 @@ namespace Server.Mobiles
 			{
 				m_ControlOrder = value;
 
-				if ( m_AI != null )
+                #region Mondain's Legacy
+                if (m_Allured)
+                {
+                    if (m_ControlOrder == OrderType.Release)
+                        Say(502003); // Sorry, but no.
+                    else if (m_ControlOrder != OrderType.None)
+                        Say(1079120); // Very well.
+                }
+                #endregion
+
+                if ( m_AI != null )
 					m_AI.OnCurrentOrderChanged();
 
 				InvalidateProperties();
@@ -4785,9 +4804,30 @@ namespace Server.Mobiles
 
 		#region Mondain's Legacy
 		public virtual bool GivesMLMinorArtifact{ get{ return false; } }
-		#endregion
 
-		public virtual void OnKilledBy( Mobile mob )
+        private bool m_Allured;
+
+        [CommandProperty(AccessLevel.GameMaster)]
+        public bool Allured
+        {
+            get { return m_Allured; }
+            set { m_Allured = value; }
+        }
+
+        public virtual void OnRelease(Mobile from)
+        {
+            if (m_Allured)
+                Timer.DelayCall(TimeSpan.FromSeconds(2), new TimerCallback(Delete));
+        }
+        public override void OnItemLifted(Mobile from, Item item)
+        {
+            base.OnItemLifted(from, item);
+
+            InvalidateProperties();
+        }
+        #endregion
+
+        public virtual void OnKilledBy( Mobile mob )
 		{
 			#region Mondain's Legacy
 			if ( GivesMLMinorArtifact )

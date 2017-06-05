@@ -81,8 +81,10 @@ namespace Server.Spells.Chivalry
 					toHeal = 39;
 
                 toHeal += (int)Caster.Skills.Healing.Fixed / 200;
-        
-				if ( (m.Hits + toHeal) > m.HitsMax )
+                Spellweaving.ArcaneEmpowermentSpell.AddHealBonus(Caster, ref toHeal);
+
+
+                if ( (m.Hits + toHeal) > m.HitsMax )
 					toHeal = m.HitsMax - m.Hits;
 					
 

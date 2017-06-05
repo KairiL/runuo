@@ -1,6 +1,7 @@
 using System;
 using Server;
 using Server.Network;
+using Server.Spells.Spellweaving;
 
 namespace Server.Items
 {
@@ -36,8 +37,9 @@ namespace Server.Items
 		{
 			int min = Scale( from, MinHeal );
 			int max = Scale( from, MaxHeal );
-
-			from.Heal( Utility.RandomMinMax( min, max ) );
+            ArcaneEmpowermentSpell.AddHealBonus(from, ref min);
+            ArcaneEmpowermentSpell.AddHealBonus(from, ref max);
+            from.Heal( Utility.RandomMinMax( min, max ) );
 		}
 
 		public override void Drink( Mobile from )

@@ -14,6 +14,7 @@ using Server.Spells.Ninjitsu;
 using System.Collections.Generic;
 using Server.Spells.Seventh;
 using Server.Spells.Fifth;
+using Server.Spells.Spellweaving;
 
 namespace Server
 {
@@ -479,7 +480,12 @@ namespace Server.Spells
 				creature.RawInt = (int)(creature.RawInt * scale);
 				creature.Mana = creature.ManaMax;
 			}
-
+            if (ArcaneEmpowermentSpell.GetSpellBonus(caster, false) > 0 )
+            {
+                creature.Hits = ( creature.Hits * 110 ) / 100;
+                //creature.Skills.MagicResist.Fixed += 200;
+                //creature.DispelDifficulty += 20;
+            }
 			Point3D p = new Point3D( caster );
 
 			if( SpellHelper.FindValidSpawnLocation( map, ref p, true ) )

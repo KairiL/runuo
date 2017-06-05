@@ -71,9 +71,9 @@ namespace Server.Spells.Fourth
 				int toHeal = (int)(Caster.Skills[SkillName.Magery].Value * 0.4);
 				toHeal += Utility.Random( 1, 10 );
                 toHeal += (int)Caster.Skills[SkillName.Healing].Value / 15;
-        
-				//m.Heal( toHeal, Caster );
-				SpellHelper.Heal( toHeal, m, Caster );
+                Spellweaving.ArcaneEmpowermentSpell.AddHealBonus(Caster, ref toHeal);
+                //m.Heal( toHeal, Caster );
+                SpellHelper.Heal( toHeal, m, Caster );
 
 				m.FixedParticles( 0x376A, 9, 32, 5030, EffectLayer.Waist );
 				m.PlaySound( 0x202 );

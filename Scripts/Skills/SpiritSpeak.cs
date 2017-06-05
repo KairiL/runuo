@@ -3,6 +3,7 @@ using Server;
 using Server.Items;
 using Server.Spells;
 using Server.Network;
+using Server.Spells.Spellweaving;
 
 namespace Server.SkillHandlers
 {
@@ -187,8 +188,11 @@ namespace Server.SkillHandlers
 
 						if ( min > max )
 							min = max;
-
-						Caster.Hits += Utility.RandomMinMax( min, max );
+                        min += (int)Caster.Skills[SkillName.Healing].Value / 15; ;
+                        max += (int)Caster.Skills[SkillName.Healing].Value / 15; ;
+                        ArcaneEmpowermentSpell.AddHealBonus(Caster, ref min);
+                        ArcaneEmpowermentSpell.AddHealBonus(Caster, ref max);
+                        Caster.Hits += Utility.RandomMinMax( min, max );
 
 						Caster.FixedParticles( 0x375A, 1, 15, 9501, 2100, 4, EffectLayer.Waist );
 					}
