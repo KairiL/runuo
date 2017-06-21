@@ -335,6 +335,7 @@ namespace Server.Mobiles
             private Mobile m_Mobile, m_From;
             private Point3D m_loc;
             private Map map;
+            
 
             public InternalTimer(Mobile m, Mobile from) : base(TimeSpan.FromSeconds(0.0))
             {
@@ -367,10 +368,11 @@ namespace Server.Mobiles
 
             protected override void OnTick()
             {
+                int ExpRange = (int)(ExplosionRange + ((BaseCreature)m_From).ControlMaster.Skills[SkillName.Tinkering].Value / 50.0);
                 m_Mobile.PlaySound(0x11D);
                 if ((Map)map != null)
                 {
-                    IPooledEnumerable eable = (IPooledEnumerable)map.GetMobilesInRange(m_loc, 3);
+                    IPooledEnumerable eable = (IPooledEnumerable)map.GetMobilesInRange(m_loc, ExpRange);
 
                     foreach (object o in eable)
                     {

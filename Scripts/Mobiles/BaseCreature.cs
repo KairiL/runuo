@@ -2458,8 +2458,14 @@ namespace Server.Mobiles
 				case AIType.AI_Spellbinder:
 					m_AI = new SpellbinderAI(this);
 					break;
-// end 2nd
-			}
+                // end 2nd
+                case AIType.AI_Necro:
+                    m_AI = new NecroAI(this);
+                    break;
+                case AIType.AI_Necromage:
+                    m_AI = new NecromageAI(this);
+                    break;
+            }
 		}
 
 		public void ChangeAIToDefault()

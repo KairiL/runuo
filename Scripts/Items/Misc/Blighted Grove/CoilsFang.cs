@@ -12,7 +12,8 @@ namespace Server.Items
 		{
 			LootType = LootType.Blessed;
 			Hue = 0x487;
-		}
+            Weight = 0.01;
+        }
 
 		public CoilsFang( Serial serial ) : base( serial )
 		{

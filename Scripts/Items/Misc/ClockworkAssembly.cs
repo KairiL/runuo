@@ -109,22 +109,22 @@ namespace Server.Items
 				else if ( targeted is ValoriteIngot && tinkerSkill > 94.9)
 					{metal = 0.9; typ = typeof( ValoriteIngot );}
 				else 
-					{
-					from.SendMessage("You havent got the required skill for that kind of iron");
+				{
+					from.SendMessage("You havent got the required skill for that kind of metal");
 				 	return;
-					}
-				if ( metal >= 0.6 && (from.Followers + 5) > from.FollowersMax )
-					{
+				}
+				if ( metal >= 0.7 && (from.Followers + 5) > from.FollowersMax )
+				{
 					from.SendLocalizedMessage( 1049607 ); // You have too many followers to control that creature.
 					return;
-					}
+				}
 				else if ( (from.Followers + 4) > from.FollowersMax )
-					{
+				{
 					from.SendLocalizedMessage( 1049607 ); // You have too many followers to control that creature.
 					return;
-					}
-					
-				double scalar;
+				}
+
+                double scalar;
 
 				if ( tinkerSkill >= 100.0 )
 					scalar = 1.0 + metal;

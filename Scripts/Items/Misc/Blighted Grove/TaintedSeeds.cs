@@ -11,8 +11,9 @@ namespace Server.Items
 		public TaintedSeeds() : base( 0xDFA )
 		{
 			LootType = LootType.Blessed;
-			Hue = 0x48; // TODO check
-		}
+            Hue = 1161;
+            Weight = 0.01;
+        }
 
 		public TaintedSeeds( Serial serial ) : base( serial )
 		{

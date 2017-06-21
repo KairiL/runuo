@@ -12,7 +12,8 @@ namespace Server.Items
 		{
 			LootType = LootType.Blessed;
 			Hue = 0x5C;
-		}
+            Weight = 0.01;
+        }
 
 		public SalivasFeather( Serial serial ) : base( serial )
 		{
