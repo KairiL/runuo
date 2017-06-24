@@ -65,15 +65,20 @@ namespace Server.Items
 
 				int trapskill = (int)Math.Round(from.Skills.Tinkering.Value) + (int)Math.Round(from.Skills.Inscribe.Value);
 				int trapmod = trapskill - 50;
-				int trapuses = (trapskill);
+				int trapuses = (int)(from.Skills.Tailoring.Value + (from.Skills.Carpentry.Value + (from.Skills.ArmsLore.Value + trapskill) / 2) / 4) / 2 + Utility.RandomMinMax(1, 3);
+                int delayBonus = (int)(from.Skills.Blacksmith.Value + from.Skills.Carpentry.Value) / 100;
 
-				CraftedTeleporter trap = new CraftedTeleporter(); 
+                if (from.Skills.Blacksmith.Value >= 120)
+                    delayBonus += 1;
+
+                CraftedTeleporter trap = new CraftedTeleporter(); 
 
 				trap.TrapOwner = from;
 				trap.TrapPower += trapmod;
-				trap.UsesRemaining += trapuses;				
+				trap.UsesRemaining += trapuses;
+                trap.Delay -= TimeSpan.FromSeconds(delayBonus);
 
-				trap.MoveToWorld( new Point3D( x, y, z ), map );
+                trap.MoveToWorld( new Point3D( x, y, z ), map );
 
 				from.SendMessage("You have configured the trap and concealed it at your location.");
 		

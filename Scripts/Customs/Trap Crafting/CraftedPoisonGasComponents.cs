@@ -63,13 +63,23 @@ namespace Server.Items
 					return;
 				}
 
-				int trapskill = (int)Math.Round(from.Skills.Tinkering.Value);
 				double poisonskill = from.Skills.Poisoning.Value;
-				int trapuses = (trapskill / 25);
+                int trapskill = (int)Math.Round(from.Skills.Tinkering.Value) + (int)(from.Skills.Poisoning.Value);
+                int trapuses = (int)(from.Skills.Tailoring.Value + (from.Skills.Carpentry.Value + (from.Skills.ArmsLore.Value + trapskill) / 2) / 4) / 2 + Utility.RandomMinMax(1, 3);
+                int rangeBonus = (int)(from.Skills.Fletching.Value * 2 + from.Skills.ArmsLore.Value) / 100;
+                int radiusBonus = (int)(from.Skills.Alchemy.Value + from.Skills.Blacksmith.Value + from.Skills.Tinkering.Value + from.Skills.Poisoning.Value) / 100;
+                int delayBonus = (int)(from.Skills.Blacksmith.Value + from.Skills.Carpentry.Value) / 100;
 
-				CraftedPoisonGasTrap trap = new CraftedPoisonGasTrap(); 
+                if (from.Skills.Blacksmith.Value >= 120)
+                    delayBonus += 1;
 
-				trap.TrapOwner = from;
+                CraftedPoisonGasTrap trap = new CraftedPoisonGasTrap();
+
+                trap.TriggerRange += rangeBonus;
+                trap.DamageRange += radiusBonus * 2;
+                trap.Delay -= TimeSpan.FromSeconds(delayBonus);
+
+                trap.TrapOwner = from;
 				trap.UsesRemaining += trapuses;
 
 				if ( poisonskill <= 19.9 )

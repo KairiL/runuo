@@ -19,24 +19,27 @@ namespace Server.Items
             Name = "A static-jolt trap";
 			TrapPower = 100;
             DamageScalar = .1;
-            TriggerRange = 3;
-            DamageRange = 3;
+            TriggerRange = 1;
+            DamageRange = 1;
             ManaCost = 20;
             BonusSkill = SkillName.Inscribe;
+            Delay = TimeSpan.FromSeconds(5);
         }
 
 		public CraftedElectricTrap( Serial serial ) : base( serial )
 		{
+            ItemID = 3629;
             Visible = false;
             Hue = 6;
             UsesRemaining = 1;
             Name = "A static-jolt trap";
             TrapPower = 100;
             DamageScalar = .1;
-            TriggerRange = 3;
-            DamageRange = 3;
+            TriggerRange = 1;
+            DamageRange = 1;
             ManaCost = 20;
             BonusSkill = SkillName.Inscribe;
+            Delay = TimeSpan.FromSeconds(5);
         }
 
         public override void Serialize(GenericWriter writer)

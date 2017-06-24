@@ -872,6 +872,12 @@
 				</Runebook>
 			</Runebook>
 		</Runebook>
+		<Runebook Name="Dev">
+			<Rune Name="Minax Champ" TargetMap="Felucca" X="6995" Y="733" Z="51" />
+			<Rune Name="Tiny Island" TargetMap="Felucca" X="6998" Y="1558" Z="0" />
+			<Rune Name="T2A rectangle" TargetMap="Felucca" X="7017" Y="1893" Z="40" />
+			<Rune Name="Moonglow Chunk" TargetMap="Felucca" X="6796" Y="2155" Z="0" />
+		</Runebook>
 	</RuneAccount>
 	<RuneAccount Username="ezjones">
 		<Runebook Name="Felucca">
@@ -1053,7 +1059,7 @@
 					<Rune Name="Center" TargetMap="Felucca" X="1475" Y="1645" Z="20" />
 					<Rune Name="Farmlands" TargetMap="Felucca" X="1228" Y="1705" Z="0" />
 					<Rune Name="Park" TargetMap="Felucca" X="1614" Y="1641" Z="35" />
-					<Rune Name="Suburbs" TargetMap="Felucca" X="1662" Y="1572" Z="5" />
+					<Rune Name="West Brit Bank" TargetMap="Felucca" X="1431" Y="1697" Z="1" />
 				</Runebook>
 				<Runebook Name="Buccaneers Den">
 					<Rune Name="Bathhouse" TargetMap="Felucca" X="2667" Y="2084" Z="5" />
@@ -1513,6 +1519,9 @@
 					<Rune Name="Level 6" TargetMap="Ilshenar" X="866" Y="1434" Z="-28" />
 					<Rune Name="Level 7" TargetMap="Ilshenar" X="807" Y="1548" Z="-28" />
 					<Rune Name="Level 8" TargetMap="Ilshenar" X="754" Y="1479" Z="-28" />
+				</Runebook>
+				<Runebook Name="Twisted Weald">
+					<Rune Name="Entrance" TargetMap="Ilshenar" X="2189" Y="1253" Z="0" />
 				</Runebook>
 			</Runebook>
 			<Runebook Name="Caves">

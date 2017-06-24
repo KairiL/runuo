@@ -10,7 +10,7 @@ namespace Server.Items
 {
 	public class CraftedTeleporter : CraftedTrap
 	{
-		[Constructable]
+        [Constructable]
 		public CraftedTeleporter()
 		{
             Visible = true;
@@ -22,6 +22,7 @@ namespace Server.Items
             ParalyzeTime = 0;
             DamageScalar = 0;
             BonusSkill = SkillName.Inscribe;
+            Delay = TimeSpan.FromSeconds(3);
         }
 
 		public CraftedTeleporter( Serial serial ) : base( serial )
@@ -35,6 +36,7 @@ namespace Server.Items
             ParalyzeTime = 0;
             DamageScalar = 0;
             BonusSkill = SkillName.Inscribe;
+            Delay = TimeSpan.FromSeconds(3);
         }
 
         public override void Serialize(GenericWriter writer)

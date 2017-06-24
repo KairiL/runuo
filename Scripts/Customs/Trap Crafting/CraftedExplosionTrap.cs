@@ -9,35 +9,38 @@ namespace Server.Items
 {
 	public class CraftedExplosionTrap : CraftedTrap
 	{
-		
-		[Constructable]
+        [Constructable]
 		public CraftedExplosionTrap()
 		{
+            DamageType = "Fire";
             ItemID = 11220;
 			Visible = false;
 			Hue = 254;
 			UsesRemaining = 1;
             Name = "An explosion trap";
 			TrapPower = 100;
-            DamageScalar = 1.5;
-            TriggerRange = 1;
-            DamageRange = 2;
-            ManaCost = 40;
+            DamageScalar = .2;
+            TriggerRange = 3;
+            DamageRange = 5;
+            ManaCost = 20;
             BonusSkill = SkillName.Alchemy;
+            Delay = TimeSpan.FromSeconds(5);
         }
     
 		public CraftedExplosionTrap( Serial serial ) : base( serial )
 		{
+            DamageType = "Fire";
             Visible = false;
             Hue = 254;
             UsesRemaining = 1;
             Name = "An explosion trap";
             TrapPower = 100;
-            DamageScalar = 1.5;
-            TriggerRange = 1;
-            DamageRange = 2;
-            ManaCost = 40;
+            DamageScalar = .2;
+            TriggerRange = 3;
+            DamageRange = 4;
+            ManaCost = 20;
             BonusSkill = SkillName.Alchemy;
+            Delay = TimeSpan.FromSeconds(5);
         }
 
         public override void Serialize(GenericWriter writer)

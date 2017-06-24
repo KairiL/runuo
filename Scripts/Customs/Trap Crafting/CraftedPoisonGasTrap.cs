@@ -13,6 +13,7 @@ namespace Server.Items
 		[Constructable]
 		public CraftedPoisonGasTrap() : base( 0x1848 )
 		{
+            DamageType = "Poison";
             ItemID = 6216;
             Visible = false;
 			Hue = 272;
@@ -24,6 +25,7 @@ namespace Server.Items
             DamageRange = 3;
             ManaCost = 11;
             BonusSkill = SkillName.Poisoning;
+            Delay = TimeSpan.FromSeconds(5);
         }
 
 		public override void OnTrigger( Mobile from )
@@ -35,6 +37,8 @@ namespace Server.Items
 
 		public CraftedPoisonGasTrap( Serial serial ) : base( serial )
 		{
+            DamageType = "Poison";
+            ItemID = 6216;
             Visible = false;
             Hue = 272;
             UsesRemaining = 1;
@@ -45,6 +49,7 @@ namespace Server.Items
             DamageRange = 3;
             ManaCost = 11;
             BonusSkill = SkillName.Poisoning;
+            Delay = TimeSpan.FromSeconds(5);
         }
 
         public override void Serialize(GenericWriter writer)

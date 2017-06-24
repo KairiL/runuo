@@ -12,6 +12,8 @@ namespace Server.Items
 {
 	public class CraftedTrap : BaseTrap
 	{
+        //TODO: Slayer damage bonus
+        private string m_DamageType;
 		private Mobile m_TrapOwner;
 		private int m_UsesRemaining, m_TrapPower, m_ManaCost, m_DamageRange, m_TriggerRange, m_ParalyzeTime;
         private double m_DamageScalar;
@@ -21,7 +23,33 @@ namespace Server.Items
         private Map m_MapDest;
 
         private DateTime lastused = DateTime.Now;
-		private TimeSpan delay = TimeSpan.FromSeconds( 7 );
+		private TimeSpan delay = TimeSpan.FromSeconds( 4 );
+
+        [CommandProperty(AccessLevel.GameMaster)]
+        public TimeSpan Delay
+        {
+            get
+            {
+                return delay;
+            }
+            set
+            {
+                delay = value;
+            }
+        }
+
+        [CommandProperty(AccessLevel.GameMaster)]
+        public string DamageType
+        {
+            get
+            {
+                return m_DamageType;
+            }
+            set
+            {
+                m_DamageType = value;
+            }
+        }
 
         [CommandProperty(AccessLevel.GameMaster)]
         public Map MapDest
@@ -187,6 +215,27 @@ namespace Server.Items
         {
             PointDest = point;
         }
+
+        public override bool OnMoveOver(Mobile m)
+        {
+            int ManaLoss = ScaleMana(ManaCost);
+
+            if (TrapOwner != null)
+                if (PointDest != Point3D.Zero && TrapOwner.Player && (!TrapOwner.CanBeHarmful(m, false) || m == TrapOwner))
+                {
+                    if (TrapOwner.Mana >= ManaLoss)
+                        TrapOwner.Mana -= ManaLoss;
+                    else
+                    {
+                        ManaLoss -= TrapOwner.Mana;
+                        TrapOwner.Mana = 0;
+                        TrapOwner.Damage((ManaLoss));
+                    }
+                    Teleport(m);
+                    return false;
+                }
+            return true;
+        }
         public override void OnTrigger(Mobile from)
         {
             int sdiBonus;
@@ -198,7 +247,7 @@ namespace Server.Items
             int ManaLoss = ScaleMana(ManaCost);
 
             if (TrapOwner != null )
-                if (TrapOwner.Player && TrapOwner.Map == this.Map && TrapOwner.CanBeHarmful(from, false) && from != TrapOwner)
+                if (TrapOwner.Player && TrapOwner.CanBeHarmful(from, false) && from != TrapOwner)
                 {
                     if (TrapOwner.Mana >= ManaLoss)
                         TrapOwner.Mana -= ManaLoss;
@@ -206,13 +255,13 @@ namespace Server.Items
                     {
                         ManaLoss -= TrapOwner.Mana;
                         TrapOwner.Mana = 0;
-                        TrapOwner.Damage((ManaLoss));
+                        TrapOwner.Damage(ManaLoss);
                     }
                 }
             else
                 return;
 
-            if (!(TrapOwner.InRange(Location, 200)))
+            if (!(TrapOwner.InRange(Location, 100)))
                 return;
 
             if (this.Visible == false)
@@ -229,16 +278,18 @@ namespace Server.Items
                 MaxDamage = 10;
             if (from.Alive)
             {
-                IPooledEnumerable eable = this.Map.GetMobilesInRange(new Point3D(Location), DamageRange);
+                IPooledEnumerable eable = this.Map.GetMobilesInRange(new Point3D(from.Location), DamageRange);
 
                 foreach (Mobile m in eable)
                     if ((m != TrapOwner && SpellHelper.ValidIndirectTarget(TrapOwner, (Mobile)m) && TrapOwner.CanBeHarmful(m, false)))
                         targets.Add(m);
-
-
                 eable.Free();
-                if (targets.Count > 0)
 
+                if ((from != TrapOwner && SpellHelper.ValidIndirectTarget(TrapOwner, (Mobile)from) && TrapOwner.CanBeHarmful(from, false)))
+                    targets.Add(from);
+
+                if (targets.Count > 0)
+                {
                     for (int i = 0; i < targets.Count; ++i)
                     {
                         Mobile m = (Mobile)targets[i];
@@ -246,38 +297,47 @@ namespace Server.Items
                         {
                             sdiBonus = AosAttributes.GetValue(TrapOwner, AosAttribute.SpellDamage);
                             sdiBonus += ArcaneEmpowermentSpell.GetSpellBonus(TrapOwner, (m.Player && TrapOwner.Player));
+                            
                             // PvP spell damage increase cap of 15% from an item’s magic property
-                            if ( (m.Player && TrapOwner.Player) && (sdiBonus > 15 + (int)(m.Skills[SkillName.Inscribe].Value / 100) ) )
-                                sdiBonus = 15 + (int)(m.Skills[SkillName.Inscribe].Value / 100);
+                            if ( (m.Player && TrapOwner.Player) && (sdiBonus > 15 + (int)(TrapOwner.Skills[SkillName.Inscribe].Value / 10) ) )
+                                sdiBonus = 15 + (int)(TrapOwner.Skills[SkillName.Inscribe].Value / 10);
+                            sdiBonus += (int)(TrapOwner.Skills[SkillName.Inscribe].Value / 10);
 
                             TrapOwner.DoHarmful(m);
-                            MinDamage *= 1 + sdiBonus;
-                            MaxDamage *= 1 + sdiBonus;
-                            AOS.Damage(m, TrapOwner, (int)DamageScalar * Utility.RandomMinMax(MinDamage, MaxDamage), 0, 100, 0, 0, 0);
+                            MinDamage = MinDamage*(100 + sdiBonus)/100;
+                            MaxDamage = MaxDamage*(100 + sdiBonus) / 100;
+                            switch(m_DamageType)
+                            {
+                                case "Physical":
+                                    AOS.Damage(m, TrapOwner, (int)DamageScalar * Utility.RandomMinMax(MinDamage, MaxDamage), 100, 0, 0, 0, 0);
+                                    break;
+                                case "Fire":
+                                    AOS.Damage(m, TrapOwner, (int)DamageScalar * Utility.RandomMinMax(MinDamage, MaxDamage), 0, 100, 0, 0, 0);
+                                    break;
+                                case "Cold":
+                                    AOS.Damage(m, TrapOwner, (int)DamageScalar * Utility.RandomMinMax(MinDamage, MaxDamage), 0, 0, 100, 0, 0);
+                                    break;
+                                case "Poison":
+                                    AOS.Damage(m, TrapOwner, (int)DamageScalar * Utility.RandomMinMax(MinDamage, MaxDamage), 0, 0, 0, 100, 0);
+                                    break;
+                                case "Energy":
+                                    AOS.Damage(m, TrapOwner, (int)DamageScalar * Utility.RandomMinMax(MinDamage, MaxDamage), 0, 0, 0, 0, 100);
+                                    break;
+                            }
                         }
-
                         if (Poison != null)
                             m.ApplyPoison(m, m_Poison);
+
                         if (ParalyzeTime > 0)
                             if (m.Player)
-                                m.Paralyze(TimeSpan.FromSeconds(ParalyzeTime / 4));
+                                m.Paralyze(TimeSpan.FromSeconds(ParalyzeTime - (m.Skills.MagicResist.Value/12) / 4));
                             else
-                                m.Paralyze(TimeSpan.FromSeconds(ParalyzeTime));
+                                m.Paralyze(TimeSpan.FromSeconds(ParalyzeTime - (m.Skills.MagicResist.Value / 12)));
 
+                        if (PointDest != Point3D.Zero && TrapOwner.Player)
+                            Teleport(m);
                     }
 
-                if (PointDest != Point3D.Zero)
-                {
-                    if (TrapOwner.Mana >= ManaLoss)
-                        TrapOwner.Mana -= ManaLoss;
-                    else
-                    {
-                        ManaLoss -= TrapOwner.Mana;
-                        TrapOwner.Mana = 0;
-                        TrapOwner.Damage((ManaLoss));
-                    }
-                    Teleport(from);
-                }
                 if (TrapOwner.Alive)
                     this.UsesRemaining -= 1;
                 else
@@ -285,6 +345,7 @@ namespace Server.Items
 
                 if (this.UsesRemaining <= 0)
                     this.Delete();
+                }
             }
         }
 
@@ -434,6 +495,7 @@ namespace Server.Items
         [Constructable]
         public CraftedTrap() : base( 0x1BC3 )
 		{
+            DamageType = "Physical";
             Visible = true;
             UsesRemaining = 100;
             Name = "A Trap";
@@ -445,6 +507,7 @@ namespace Server.Items
 
         public CraftedTrap( Serial serial ) : base( serial )
 		{
+            DamageType = "Physical";
             Visible = true;
             UsesRemaining = 100;
             Name = "A Trap";
@@ -458,8 +521,8 @@ namespace Server.Items
 		{
 			base.Serialize( writer );
 
-			writer.Write( (int) 0 ); // version
-
+			writer.Write( (int) 1 ); // version
+            writer.Write( m_DamageType );
 			writer.Write( m_TrapOwner );
            	writer.Write( m_UsesRemaining );
             writer.Write( m_TrapPower );
@@ -481,6 +544,9 @@ namespace Server.Items
 
 			switch ( version )
 			{
+                case 1:
+                    m_DamageType = reader.ReadString();
+                    break;
 				case 0:
 				{
 					m_TrapOwner = reader.ReadMobile();
@@ -497,6 +563,7 @@ namespace Server.Items
 
                         break;
 				}
+                
 			}
 		}
 	}

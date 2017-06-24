@@ -9,20 +9,21 @@ namespace Server.Items
 {
 	public class CraftedBoltTrap : CraftedTrap
 	{
-        
-		[Constructable]
+        [Constructable]
 		public CraftedBoltTrap()
 		{
+            DamageType = "Physical";
             ItemID = 7960;
 			Visible = false;
 			Hue = 543;
 			UsesRemaining = 1;
             Name = "A bolt-firing trap";
-            TriggerRange = 4;
-            DamageRange = 4;
-            ManaCost = 20;
-            DamageScalar = 1;
+            TriggerRange = 3;
+            DamageRange = 0;
+            ManaCost = 5;
+            DamageScalar = .5;
             BonusSkill = SkillName.Fletching;
+            Delay = TimeSpan.FromSeconds(3);
         }
         
 		public override void OnTrigger( Mobile from )
@@ -34,15 +35,17 @@ namespace Server.Items
         
 		public CraftedBoltTrap( Serial serial ) : base( serial )
 		{
+            ItemID = 7960;
             Visible = false;
             Hue = 543;
             UsesRemaining = 1;
-            this.Name = "A bolt-firing trap";
-            TriggerRange = 4;
-            DamageRange = 4;
-            ManaCost = 20;
-            DamageScalar = 1;
+            Name = "A bolt-firing trap";
+            TriggerRange = 3;
+            DamageRange = 0;
+            ManaCost = 10;
+            DamageScalar = .5;
             BonusSkill = SkillName.Fletching;
+            Delay = TimeSpan.FromSeconds(3);
         }
 
         public override void Serialize(GenericWriter writer)
