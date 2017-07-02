@@ -1,37 +1,44 @@
 using System;
+using System.Collections.Generic;
 using Server.Items;
 using Server.Spells;
 using System.Collections;
+using Server.Gumps;
 
 namespace Server.Mobiles
 {
-	[CorpseName( "a golem corpse" )]
-	public class GolemScorpion : Golem
+	public class LesserGolem : Golem
 	{
-		public override bool IsScaredOfScaryThings{ get{ return false; } }
+        public override bool DeleteCorpseOnDeath { get { return true; } }
+        public override bool IsHouseSummonable { get { return true; } }
+
+        public override bool IsScaredOfScaryThings{ get{ return false; } }
 		public override bool IsScaryToPets{ get{ return true; } }
 
-		public override bool IsBondable{ get{ return true; } }
+        public override double DispelDifficulty { get { return 125.0; } }
+        public override double DispelFocus { get { return 90.0; } }
+
+        public override bool IsBondable{ get{ return false; } }
 
 		[Constructable]
-		public GolemScorpion() : this( 0, 1.8, 0 )
+		public LesserGolem() : this( 0, 1.8, 0 )
 		{
 		}
 
 		[Constructable]
-		public GolemScorpion( int summoned, double scalar, double met )
+		public LesserGolem( int summoned, double scalar, double met )
 		{
 			if ( summoned == 0 )
 				{
-					Name = "a golem scorpion";
-					Body = 717;			
-					SetStr( (int)(251*scalar), (int)(350*scalar) );
-					SetDex( (int)(76*scalar), (int)(100*scalar) );
-					SetInt( (int)(101*scalar), (int)(150*scalar) );
+                    Name = "a lesser golem";
+					Body = 334;			
+					SetStr( (int)(10*scalar), (int)(20*scalar) );
+					SetDex( (int)(20*scalar), (int)(30*scalar) );
+					SetInt( (int)(1*scalar), (int)(3*scalar) );
 
-					SetHits( (int)(151*scalar), (int)(210*scalar) );
+					SetHits( (int)(10*scalar), (int)(20*scalar) );
 
-					SetDamage( (int)(13*scalar), (int)(24*scalar) );
+					SetDamage( (int)(3*scalar), (int)(4*scalar) );
 
 					SetDamageType( ResistanceType.Physical, 100 );
 
@@ -52,8 +59,8 @@ namespace Server.Mobiles
 					if ( 0.1 > Utility.RandomDouble() )
 						PackItem( new PowerCrystal() );
 
-					if ( 0.15 > Utility.RandomDouble() )
-						PackItem( new ScorpionAssembly() );
+					//if ( 0.15 > Utility.RandomDouble() )
+					//	PackItem( new OverseerAssembly() );
 
 					if ( 0.2 > Utility.RandomDouble() )
 						PackItem( new ArcaneGem() );
@@ -62,47 +69,42 @@ namespace Server.Mobiles
 						PackItem( new Gears() );
 					return;
 				}
-			
-			Body = 717;
+            ControlSlots = 1;
+            Body = 334;
 		    
-			SetStr( (int)(100*scalar), (int)(125*scalar) );
-			SetDex( (int)(76*scalar), (int)(125*scalar) );
-			SetInt( (int)(51*scalar), (int)(100*scalar) );
+			SetStr( (int)(30*scalar), (int)(40*scalar) );
+			SetDex( (int)(30*scalar), (int)(40*scalar) );
+			SetInt( (int)(1*scalar), (int)(3*scalar) );
 
-			if (met < 0.3)
-				SetHits( (int)(100*(scalar+0.9)), (int)(140*(scalar+0.9)) );
-			else if (met < 0.4)
-				SetHits( (int)(100*(scalar+0.8)), (int)(140*(scalar+0.8)) );
-			else
-				SetHits( (int)(100*(scalar+0.7)), (int)(140*(scalar+0.7)) );
+			SetHits( (int)(5*(scalar)), (int)(10*(scalar)) );
 
 			if ( met < 0.2 )
 				{
-				Name = "an iron golem scorpion";
+				Name = "an iron lesser golem";
 				SetDamageType( ResistanceType.Physical, 100 );
 				SetResistance( ResistanceType.Physical, (int)(20*scalar), (int)(30*scalar) );
 				SetResistance( ResistanceType.Fire, (int)(20*scalar), (int)(30*scalar) );
 				SetResistance( ResistanceType.Cold, (int)(10*scalar), (int)(30*scalar) );
 				SetResistance( ResistanceType.Poison, (int)(10*scalar), (int)(25*scalar) );
 				SetResistance( ResistanceType.Energy, (int)(20*scalar), (int)(30*scalar) );
-				ControlSlots = 2;
+				ControlSlots = 1;
 				Hue = 0;
 				}
 			else if ( met < 0.3 )
 				{
-				Name = "a dull copper golem scorpion";
+				Name = "a dull copper lesser golem";
 				SetDamageType( ResistanceType.Physical, 100 );
 				SetResistance( ResistanceType.Physical, (int)(26*scalar), (int)(36*scalar) );
 				SetResistance( ResistanceType.Fire, (int)(20*scalar), (int)(30*scalar) );
 				SetResistance( ResistanceType.Cold, (int)(10*scalar), (int)(30*scalar) );
 				SetResistance( ResistanceType.Poison, (int)(10*scalar), (int)(25*scalar) );
 				SetResistance( ResistanceType.Energy, (int)(20*scalar), (int)(30*scalar) );
-				ControlSlots = 2;
+				ControlSlots = 1;
 				Hue = 2419;
 				}
 			else if ( met < 0.4 )
 				{
-				Name = "a shadowiron golem scorpion";
+				Name = "a shadow iron lesser golem";
 				SetDamageType( ResistanceType.Physical, 80 );
 				SetDamageType( ResistanceType.Cold, 20 );
 				SetResistance( ResistanceType.Physical, (int)(22*scalar), (int)(32*scalar) );
@@ -110,12 +112,12 @@ namespace Server.Mobiles
 				SetResistance( ResistanceType.Cold, (int)(10*scalar), (int)(30*scalar) );
 				SetResistance( ResistanceType.Poison, (int)(10*scalar), (int)(25*scalar) );
 				SetResistance( ResistanceType.Energy, (int)(25*scalar), (int)(35*scalar) );
-				ControlSlots = 2;
+				ControlSlots = 1;
 				Hue = 2406;
 				}
 			else if ( met < 0.5 )
 				{
-				Name = "a copper golem scorpion";
+				Name = "a copper lesser golem";
 				SetDamageType( ResistanceType.Physical, 70 );
 				SetDamageType( ResistanceType.Poison, 10 );
 				SetDamageType( ResistanceType.Energy, 20 );
@@ -124,12 +126,12 @@ namespace Server.Mobiles
 				SetResistance( ResistanceType.Cold, (int)(10*scalar), (int)(30*scalar) );
 				SetResistance( ResistanceType.Poison, (int)(15*scalar), (int)(30*scalar) );
 				SetResistance( ResistanceType.Energy, (int)(22*scalar), (int)(32*scalar) );
-				ControlSlots = 2;
+				ControlSlots = 1;
 				Hue = 2413;
 				}
 			else if ( met < 0.6 )
 				{
-				Name = "a bronze golem scorpion";
+				Name = "a bronze lesser golem";
 				SetDamageType( ResistanceType.Physical, 60 );
 				SetDamageType( ResistanceType.Fire, 40 );
 				SetResistance( ResistanceType.Physical, (int)(23*scalar), (int)(33*scalar) );
@@ -137,24 +139,24 @@ namespace Server.Mobiles
 				SetResistance( ResistanceType.Cold, (int)(15*scalar), (int)(35*scalar) );
 				SetResistance( ResistanceType.Poison, (int)(11*scalar), (int)(26*scalar) );
 				SetResistance( ResistanceType.Energy, (int)(21*scalar), (int)(31*scalar) );
-				ControlSlots = 2;
+				ControlSlots = 1;
 				Hue = 2418;
 				}
 			else if ( met < 0.7 )
 				{
-				Name = "a gold golem scorpion";
+				Name = "a gold lesser golem";
 				SetDamageType( ResistanceType.Physical, 100 );
 				SetResistance( ResistanceType.Physical, (int)(21*scalar), (int)(31*scalar) );
 				SetResistance( ResistanceType.Fire, (int)(21*scalar), (int)(31*scalar) );
 				SetResistance( ResistanceType.Cold, (int)(12*scalar), (int)(30*scalar) );
 				SetResistance( ResistanceType.Poison, (int)(10*scalar), (int)(25*scalar) );
 				SetResistance( ResistanceType.Energy, (int)(22*scalar), (int)(32*scalar) );
-				ControlSlots = 2;
+				ControlSlots = 1;
 				Hue = 2213;
 				}
 			else if ( met < 0.8 )
 				{
-				Name = "an agapite golem scorpion";
+				Name = "an agapite lesser golem";
 				SetDamageType( ResistanceType.Physical, 50 );
 				SetDamageType( ResistanceType.Cold, 30 );
 				SetDamageType( ResistanceType.Energy, 20 );
@@ -163,12 +165,12 @@ namespace Server.Mobiles
 				SetResistance( ResistanceType.Cold, (int)(27*scalar), (int)(32*scalar) );
 				SetResistance( ResistanceType.Poison, (int)(22*scalar), (int)(27*scalar) );
 				SetResistance( ResistanceType.Energy, (int)(27*scalar), (int)(32*scalar) );
-				ControlSlots = 3;
+				ControlSlots = 1;
 				Hue = 2425;
 				}
 			else if ( met < 0.9 )
 				{
-				Name = "a verite golem scorpion";
+				Name = "a verite lesser golem";
 				SetDamageType( ResistanceType.Physical, 40 );
 				SetDamageType( ResistanceType.Poison, 40 );
 				SetDamageType( ResistanceType.Energy, 20 );
@@ -177,12 +179,12 @@ namespace Server.Mobiles
 				SetResistance( ResistanceType.Cold, (int)(27*scalar), (int)(32*scalar) );
 				SetResistance( ResistanceType.Poison, (int)(23*scalar), (int)(28*scalar) );
 				SetResistance( ResistanceType.Energy, (int)(26*scalar), (int)(31*scalar) );
-				ControlSlots = 3;
+				ControlSlots = 1;
 				Hue = 2207;
 				}
 			else
 				{
-				Name = "a valorite golem scorpion";
+				Name = "a valorite lesser golem";
 				SetDamageType( ResistanceType.Physical, 40 );
 				SetDamageType( ResistanceType.Fire, 10 );
 				SetDamageType( ResistanceType.Cold, 20 );
@@ -193,17 +195,17 @@ namespace Server.Mobiles
 				SetResistance( ResistanceType.Cold, (int)(29*scalar), (int)(34*scalar) );//24-62 at gm
 				SetResistance( ResistanceType.Poison, (int)(18*scalar), (int)(23*scalar) );//24-43 at gm
 				SetResistance( ResistanceType.Energy, (int)(28*scalar), (int)(33*scalar) );//43-62 at gm
-				ControlSlots = 3;
+				ControlSlots = 1;
 				Hue = 2219;
 				}
 			
 			
 			SetSkill( SkillName.MagicResist, (80.1*(scalar-met/2)), (100.0*(scalar-met/2)) );
-			SetSkill( SkillName.Tactics, (50.1*(scalar-met/2)), (80.0*(scalar-met/2)) );
-			SetSkill( SkillName.Wrestling, (40.1* (scalar - met / 2)), (50.0*(scalar-met/2)) );
+			SetSkill( SkillName.Tactics, (30.1*(scalar-met/2)), (40.0*(scalar-met/2)) );
+			SetSkill( SkillName.Wrestling, (30.1* (scalar - met / 2)), (40.0*(scalar-met/2)) );
 			SetSkill( SkillName.Anatomy, (40.1* (scalar - met / 2)), (50.1* (scalar - met / 2)) );
 			
-			SetDamage( (int)(4*(scalar-met*0.8)), (int)(10*(scalar-met*0.8)) );
+			SetDamage( (int)(4*(scalar-met*0.8)), (int)(6*(scalar-met*0.8)) );
 
 			Fame = 10;
 			Karma = 10;
@@ -218,7 +220,33 @@ namespace Server.Mobiles
 			return 541;
 		}
 
-		public override int GetIdleSound()
+        public override void CheckReflect(Mobile caster, ref bool reflect)
+        {
+            if (Hue == 2413 || Hue == 2219) // Copper || Valorite
+                reflect = true; // Every spell is reflected back to the caster
+            else
+                reflect = false;
+        }
+        public override void AlterMeleeDamageFrom(Mobile from, ref int damage)
+        {
+            if (Hue == 2413) //Copper
+                from.Damage(damage / 2, this);
+            base.AlterMeleeDamageFrom(from, ref damage);
+        }
+        /*
+        public override void AlterDamageScalarFrom(Mobile caster, ref double scalar)
+        {
+            if (Hue == 2219 || Hue == 2406)
+                scalar = 0.0; // Immune to all the things?
+        }
+        */
+        public override void AlterSpellDamageFrom(Mobile from, ref int damage)
+        {
+            if (Hue == 2406 || Hue == 2219) //Shadow || Valorite
+                damage = 0;// Immune to magic
+        }
+
+        public override int GetIdleSound()
 		{
 			if ( !Controlled )
 				return 542;
@@ -286,74 +314,43 @@ namespace Server.Mobiles
         private DateTime m_NextBomb;
         private int m_Thrown;
         private double m_Speed;
-        private int m_Range;
         public override void OnActionCombat()
         {
-            Mobile combatant = Combatant;
-            Mobile m;
-            if (combatant == null || combatant.Deleted || combatant.Map != Map || !InRange(combatant, m_Range) || !CanBeHarmful(combatant) || !InLOS(combatant))
-                return;
-
-            if (DateTime.UtcNow >= m_NextBomb)
-            {
-                ThrowBomb(combatant);
-                m_Thrown++;
-                m_Range = 10;
-                m_Speed = 6;
-                if ((Controlled || Summoned) && (ControlMaster != null))
-                {
-                    m = ControlMaster;
-                    m_Speed = (int)((m.Skills[SkillName.Fletching].Value * 3 + m.Skills[SkillName.Carpentry].Value + m.Skills[SkillName.Blacksmith].Value) / 58.0);
-                    m_Range = 4 + (int)(m.Skills[SkillName.Fletching].Value / 10.0);
-                    m_Speed = m.Skills[SkillName.Fletching].Value / 10.0;
-                }
-
-                if (0.75 >= Utility.RandomDouble() && (m_Thrown % 2) == 1) // 75% chance to quickly throw another bomb
-                    m_NextBomb = DateTime.UtcNow + TimeSpan.FromSeconds(2.1 - m_Speed/5.0);
-                else
-                    m_NextBomb = DateTime.UtcNow + TimeSpan.FromSeconds(3.0 + (3.0 * Utility.RandomDouble()) - m_Speed/2); // 3-6 seconds (0-1)
-            }
             base.OnActionCombat();
         }
 
-        public void ThrowBomb(Mobile m)
+        public override void OnThink()
         {
-            DoHarmful(m);
-
-            this.MovingParticles(m, 0x1C19, 1, 0, false, true, 0, 0, 9502, 6014, 0x11D, EffectLayer.Waist, 0);
-
-            new InternalTimer(m, this).Start();
+            base.OnThink();
+            if (ControlMaster == null)
+                return;
         }
 
-        private class InternalTimer : Timer
+        public override void OnDeath(Container c)
         {
-            int minDamage;
+            int alchemyBonus = 0;
             int exploDamage;
-            private int ExplosionRange = 3; // How long is the blast radius?
-            private Mobile m_Mobile, m_From;
-            private Point3D m_loc;
-            private Map map;
-            
-
-            public InternalTimer(Mobile m, Mobile from) : base(TimeSpan.FromSeconds(0.0))
+            int minDamage;
+            int range = 4;
+            int damage;
+            Mobile m = ControlMaster;
+            if (m == null)
+                m = SummonMaster;
+            if (Hue == 2419)//Dull Copper
             {
-                m_Mobile = m;
-                m_From = from;
-                m_loc = m_Mobile.Location;
-                map = m_Mobile.Map;
-                int alchemyBonus = 0;
-
-                if ((((BaseCreature)from).Controlled || ((BaseCreature)from).Summoned) && ((BaseCreature)from).ControlMaster != null)
+                if ((Controlled || Summoned) && (m != null) && (!(m is BaseCreature) || ((BaseCreature)m).ControlMaster != null))
                 {
-                    Mobile master = (((BaseCreature)from).ControlMaster);
+                    if (m is BaseCreature && ((BaseCreature)m).ControlMaster != null)
+                        m = ((BaseCreature)m).ControlMaster;
+                    range = (int)((m.Skills[SkillName.Tinkering].Value + m.Skills[SkillName.Alchemy].Value) / 20);
                     alchemyBonus = AosAttributes.GetValue(m, AosAttribute.EnhancePotions);
                     if (alchemyBonus > 50)
                         alchemyBonus = 50;
                     alchemyBonus += m.Skills.Alchemy.Fixed / 330 * 10;
 
-                    exploDamage = (int)(((master.Skills[SkillName.Alchemy].Value / 5.0)) * (1 + alchemyBonus));
-                    minDamage = (int)master.Skills[SkillName.Carpentry].Value;
-                    minDamage += (int)master.Skills[SkillName.ArmsLore].Value;
+                    exploDamage = (int)((1 + (m.Skills[SkillName.Alchemy].Value / 5.0)) * (1 + alchemyBonus));
+                    minDamage = (int)m.Skills[SkillName.Carpentry].Value;
+                    minDamage += (int)m.Skills[SkillName.ArmsLore].Value;
                     minDamage /= 12;
                 }
                 else
@@ -361,49 +358,40 @@ namespace Server.Mobiles
                     minDamage = 20;
                     exploDamage = 20;
                 }
-                Priority = TimerPriority.TwoFiftyMS;
-            }
-
-            protected override void OnTick()
-            {
-                if (m_From == null)
-                    return;
-                int ExpRange = ExplosionRange;
-                if (((BaseCreature)m_From).ControlMaster!=null)
-                    ExpRange += (int)(((BaseCreature)m_From).ControlMaster.Skills[SkillName.Tinkering].Value + ((BaseCreature)m_From).ControlMaster.Skills[SkillName.Alchemy].Value )/ 50;
-                m_Mobile.PlaySound(0x11D);
-                if ((Map)map != null)
+            
+                if (m != null)
                 {
-                    IPooledEnumerable eable = (IPooledEnumerable)map.GetMobilesInRange(m_loc, ExpRange);
-
-                    foreach (object o in eable)
-                    {
-                        if ( (o is Mobile) && (o != m_From) && (m_Mobile == null || (SpellHelper.ValidIndirectTarget(m_From, (Mobile)o) && m_From.CanBeHarmful((Mobile)o, false))))
+                    m.SendMessage(String.Format("dying with alive = {0}", Alive));
+                    if (ControlMaster == null)
+                        if (SummonMaster == null)
+                            return;
+                        else if (SummonMaster == m)
                         {
-                            if (o is PlayerMobile)
-                                AOS.Damage((Mobile)o, m_From, Utility.RandomMinMax(0, exploDamage/4), 0, 100, 0, 0, 0);
-                            else if (o is BaseCreature && ((BaseCreature)m_From).Controlled)
-                                if (((BaseCreature)m_From).ControlMaster != ((BaseCreature)o).ControlMaster)
-                                    AOS.Damage((Mobile)o, m_From, Utility.RandomMinMax(0, exploDamage), 0, 100, 0, 0, 0);
-                            else if (o is BaseCreature)
-                                AOS.Damage((Mobile)o, m_From, Utility.RandomMinMax(0, exploDamage), 0, 100, 0, 0, 0);
+                                foreach (Mobile o in this.GetMobilesInRange(range))
+                                        if ((o != m) && o != this && (SpellHelper.ValidIndirectTarget(this, (Mobile)o) && CanBeHarmful((Mobile)o, false)) && !(o is Golem) && o.Alive)
+                                            AOS.Damage(o, this, (int)(Utility.RandomDouble() * (minDamage + exploDamage)), 80, 20, 0, 0, 0);
                         }
+                        else
+                        {
+                            foreach (Mobile o in this.GetMobilesInRange(range))
+                                if ((o != SummonMaster) && o != m && o != this && (SpellHelper.ValidIndirectTarget(this, (Mobile)o) && CanBeHarmful((Mobile)o, false)) && !(o is Golem) && o.Alive)
+                                    AOS.Damage(o, this, (int)(Utility.RandomDouble() * (minDamage + exploDamage)), 80, 20, 0, 0, 0);
+                        }
+                    else
+                    {
+                        foreach (Mobile o in this.GetMobilesInRange(range))
+                            if ((o != ControlMaster) && o != m && o != this && (SpellHelper.ValidIndirectTarget(this, (Mobile)o) && CanBeHarmful((Mobile)o, false)) && !(o is Golem) && o.Alive)
+                                AOS.Damage(o, this, (int)(Utility.RandomDouble() * (minDamage + exploDamage)), 80, 20, 0, 0, 0);
                     }
                 }
-                if (m_Mobile != null)
-                    AOS.Damage(m_Mobile, m_From, Utility.RandomMinMax(minDamage, minDamage*3), 100, 0, 0, 0, 0);
             }
+            base.OnDeath(c);
         }
 
-        public override void OnDamage( int amount, Mobile from, bool willKill )
-		{
-            base.OnDamage( amount, from, willKill );
-		}
-
-		public override bool BardImmune{ get{ return true; } }
+        public override bool BardImmune{ get{ return true; } }
 		public override Poison PoisonImmune{ get{ return Poison.Lethal; } }
 
-		public GolemScorpion( Serial serial ) : base( serial )
+		public LesserGolem( Serial serial ) : base( serial )
 		{
 		}
 

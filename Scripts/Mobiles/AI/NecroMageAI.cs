@@ -13,6 +13,7 @@ using Server.Spells.Fifth;
 using Server.Spells.Sixth;
 using Server.Spells.Seventh;
 using Server.Spells.Necromancy;
+using Server.Spells.Ninjitsu;
 using Server.Misc;
 using Server.Regions;
 using Server.SkillHandlers;
@@ -757,12 +758,14 @@ namespace Server.Mobiles
 			return null;
 		}
 
-		public bool CanDispel( Mobile m )
-		{
-			return ( m is BaseCreature && ((BaseCreature)m).Summoned && m_Mobile.CanBeHarmful( m, false ) && !((BaseCreature)m).IsAnimatedDead );
-		}
+        public bool CanDispel(Mobile m)
+        {
+            return ((TransformationSpellHelper.GetContext(m) != null) || !m.CanBeginAction(typeof(PolymorphSpell)) || AnimalForm.UnderTransformation(m) ||
+                TransformationSpellHelper.UnderTransformation(m) ||
+                (m is BaseCreature && ((BaseCreature)m).Summoned && m_Mobile.CanBeHarmful(m, false) && !((BaseCreature)m).IsAnimatedDead));
+        }
 
-		private static int[] m_Offsets = new int[]
+        private static int[] m_Offsets = new int[]
 			{
 				-1, -1,
 				-1,  0,

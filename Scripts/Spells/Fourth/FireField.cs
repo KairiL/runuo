@@ -47,6 +47,7 @@ namespace Server.Spells.Fourth
 				int dy = Caster.Location.Y - p.Y;
 				int rx = (dx - dy) * 44;
 				int ry = (dx + dy) * 44;
+                int damage;
 
 				bool eastToWest;
 
@@ -78,11 +79,13 @@ namespace Server.Spells.Fourth
 				else
 					duration = TimeSpan.FromSeconds( 4.0 + (Caster.Skills[SkillName.Magery].Value * 0.5) );
 
-				for ( int i = -2; i <= 2; ++i )
+                damage = (15 + (Caster.Skills.EvalInt.Fixed / 5)) / 12;
+
+                for ( int i = -3; i <= 3; ++i )
 				{
 					Point3D loc = new Point3D( eastToWest ? p.X + i : p.X, eastToWest ? p.Y : p.Y + i, p.Z );
 
-					new FireFieldItem( itemID, loc, Caster, Caster.Map, duration, i );
+					new FireFieldItem( itemID, loc, Caster, Caster.Map, duration, i, damage);
 				}
 			}
 

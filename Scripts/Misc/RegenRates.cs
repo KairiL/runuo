@@ -53,22 +53,24 @@ namespace Server.Misc
 		private static TimeSpan Mobile_HitsRegenRate( Mobile from )
 		{
 			int points = AosAttributes.GetValue( from, AosAttribute.RegenHits );
+            points += (int)(from.Skills[SkillName.Focus].Value * 0.05);
 
-			if ( from is BaseCreature && !((BaseCreature)from).IsAnimatedDead )
+            if ( from is BaseCreature && !((BaseCreature)from).IsAnimatedDead )
 				points += 4;
 
 			if ( (from is BaseCreature && ((BaseCreature)from).IsParagon) || from is Leviathan )
 				points += 40;
 
 			if( Core.ML && from.Race == Race.Human )	//Is this affected by the cap?
-				points += 2;
-
+				points += 4;
+            /*
 			if ( points < 0 )
 				points = 0;
-
+            */
+            /*
 			if( Core.ML && from is PlayerMobile )	//does racial bonus go before/after?
 				points = Math.Min( points, 18 );
-
+            */
 			if ( CheckTransform( from, typeof( HorrificBeastSpell ) ) )
 				points += 20;
 
@@ -85,7 +87,7 @@ namespace Server.Misc
 
 			CheckBonusSkill( from, from.Stam, from.StamMax, SkillName.Focus );
 
-			int points =(int)(from.Skills[SkillName.Focus].Value * 0.1);
+			int points =(int)(from.Skills[SkillName.Focus].Value * 0.1) + 4;
 
 			if( (from is BaseCreature && ((BaseCreature)from).IsParagon) || from is Leviathan )
 				points += 40;
@@ -97,10 +99,10 @@ namespace Server.Misc
 
 			if ( CheckAnimal( from, typeof( Kirin ) ) )
 				cappedPoints += 20;
-
+            /*
 			if( Core.ML && from is PlayerMobile )
 				cappedPoints = Math.Min( cappedPoints, 24 );
-
+            */
 			points += cappedPoints;
 
 			if ( points < -1 )
@@ -122,19 +124,20 @@ namespace Server.Misc
 
 			if ( Core.AOS )
 			{
-				double medPoints = from.Int + (from.Skills[SkillName.Meditation].Value * 3);
+				double medPoints = from.Int*2 + (from.Skills[SkillName.Meditation].Value * 6);
 
 				medPoints *= ( from.Skills[SkillName.Meditation].Value < 100.0 ) ? 0.025 : 0.0275;
 
 				CheckBonusSkill( from, from.Mana, from.ManaMax, SkillName.Focus );
 
-				double focusPoints = (from.Skills[SkillName.Focus].Value * 0.05);
+				double focusPoints = (from.Skills[SkillName.Focus].Value * 0.10);
 
 				if ( armorPenalty > 0 )
-					medPoints = 0; // In AOS, wearing any meditation-blocking armor completely removes meditation bonus
+					medPoints /= 2; // In AOS, wearing any meditation-blocking armor completely removes meditation bonus
 
-				double totalPoints = focusPoints + medPoints + (from.Meditating ? (medPoints > 13.0 ? 13.0 : medPoints) : 0.0);
-
+				//double totalPoints = focusPoints + medPoints + (from.Meditating ? (medPoints > 26.0 ? 26.0 : medPoints) : 0.0);
+                double totalPoints = focusPoints + medPoints + (from.Meditating ? medPoints: 0.0);
+                
 				if( (from is BaseCreature && ((BaseCreature)from).IsParagon) || from is Leviathan )
 					totalPoints += 40;
 
@@ -144,10 +147,10 @@ namespace Server.Misc
 					cappedPoints += 3;
 				else if ( CheckTransform( from, typeof( LichFormSpell ) ) )
 					cappedPoints += 13;
-
+                /*
 				if( Core.ML && from is PlayerMobile )
 					cappedPoints = Math.Min( cappedPoints, 18 );
-
+                */
 				totalPoints += cappedPoints;
 
 				if ( totalPoints < -1 )

@@ -9,6 +9,7 @@ using Server.Spells.Second;
 using Server.Spells.Seventh;
 using Server.Spells.Sixth;
 using Server.Spells.Third;
+using Server.Spells.Ninjitsu;
 using Server.Targeting;
 
 namespace Server.Mobiles
@@ -920,7 +921,9 @@ namespace Server.Mobiles
 
 		public bool CanDispel( Mobile m )
 		{
-			return ( m is BaseCreature && ( (BaseCreature)m ).Summoned && m_Mobile.CanBeHarmful( m, false ) && !( (BaseCreature)m ).IsAnimatedDead );
+			return ((TransformationSpellHelper.GetContext(m) != null) || !m.CanBeginAction(typeof(PolymorphSpell)) || AnimalForm.UnderTransformation(m) ||
+                TransformationSpellHelper.UnderTransformation(m) ||
+                (m is BaseCreature && ( (BaseCreature)m ).Summoned && m_Mobile.CanBeHarmful( m, false ) && !( (BaseCreature)m ).IsAnimatedDead ) );
 		}
 
 		private static int[] m_Offsets = new int[]

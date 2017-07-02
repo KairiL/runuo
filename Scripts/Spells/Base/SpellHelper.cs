@@ -930,6 +930,7 @@ namespace Server.Spells
 
 		public static void CheckReflect( int circle, ref Mobile caster, ref Mobile target )
 		{
+            /*
 			if( target.MagicDamageAbsorb > 0 )
 			{
 				++circle;
@@ -958,7 +959,8 @@ namespace Server.Spells
 					target = temp;
 				}
 			}
-			else if( target is BaseCreature )
+            */ //else
+			if( target is BaseCreature )
 			{
 				bool reflect = false;
 
@@ -1097,7 +1099,7 @@ namespace Server.Spells
 			{
 				if ( context.Type == typeof( WraithFormSpell ) )
 				{
-					int wraithLeech = ( 5 + (int)( ( 15 * from.Skills.SpiritSpeak.Value ) / 100 ) ); // Wraith form gives 5-20% mana leech
+					int wraithLeech = ( 5 + (int)( ( 10 * from.Skills.SpiritSpeak.Value ) / 100 ) ); // Wraith form gives 5-17% mana leech
 					int manaLeech = AOS.Scale( damageGiven, wraithLeech );
 					if ( manaLeech != 0 )
 					{

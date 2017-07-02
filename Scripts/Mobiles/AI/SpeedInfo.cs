@@ -146,7 +146,7 @@ namespace Server
 					typeof( FactionHenchman ),	typeof( FactionMercenary ),	typeof( FactionNecromancer ),
 					typeof( FactionSorceress ),	typeof( FactionWizard ),	typeof( FactionBerserker ),
 					typeof( FactionPaladin ),	typeof( Leviathan ),		typeof( FireBeetle ),
-					typeof( FanDancer ),		typeof( FactionDeathKnight )
+					typeof( FanDancer ),		typeof( FactionDeathKnight ),typeof( LesserGolem )
 				} ),
 				/* Medium */
 				new SpeedInfo( 0.25, 0.5, new Type[]

@@ -115,21 +115,18 @@ namespace Server.Items
 	{
 		public override int BaseLabelNumber { get { return 1042965; } } // a jug of Ale
 		public override int MaxQuantity { get { return 10; } }
-		public override bool Fillable { get { return false; } }
+		public override bool Fillable { get { return true; } }
 
 		public override int ComputeItemID()
 		{
-			if( !IsEmpty )
-				return 0x9C8;
-
-			return 0;
+		    return 0x9C8;
 		}
 
 		[Constructable]
 		public Jug( BeverageType type )
 			: base( type )
 		{
-			Weight = 1.0;
+			Weight = 2.0;
 		}
 
 		public Jug( Serial serial )
@@ -464,14 +461,14 @@ namespace Server.Items
 		[Constructable]
 		public Pitcher()
 		{
-			Weight = 2.0;
+			Weight = 1.0;
 		}
 
 		[Constructable]
 		public Pitcher( BeverageType type )
 			: base( type )
 		{
-			Weight = 2.0;
+			Weight = 1.0;
 		}
 
 		public Pitcher( Serial serial )
@@ -836,7 +833,42 @@ namespace Server.Items
 			}
 		}
 
-		private static int[] m_SwampTiles = new int[]
+        public static bool FillThirst(Mobile from)
+        {
+            if (from.Thirst >= 20)
+            {
+                from.SendMessage("You can't drink anymore!"); // You are simply too full to eat any more!
+                return false;
+            }
+
+            int iThirst = from.Thirst + 1;
+
+            if (from.Stam < from.StamMax)
+                from.Stam += Utility.Random(6, 3);
+
+            if (iThirst >= 20)
+            {
+                from.Thirst = 20;
+                from.SendMessage("You manage to drink the beverage, but you feel bloated!"); // You manage to eat the food, but you are stuffed!
+            }
+            else
+            {
+                from.Thirst = iThirst;
+
+                if (iThirst < 5)
+                    from.SendMessage("You drink the beverage but are still extremely parched!");
+                else if (iThirst < 10)
+                    from.SendMessage("You drink the beverage and begin to feel more satiated.");
+                else if (iThirst < 15)
+                    from.SendMessage("After drinking the beverage you feel much less thirsty.");
+                else
+                    from.SendMessage("You feel quite moist after consuming the beverage.");
+            }
+
+            return true;
+        }
+
+        private static int[] m_SwampTiles = new int[]
 			{
 				0x9C4, 0x9EB,
 				0x3D65, 0x3D65,
@@ -993,10 +1025,10 @@ namespace Server.Items
 			}
 			else if( from == targ )
 			{
-				if( from.Thirst < 20 )
-					from.Thirst += 1;
+                if (!FillThirst(from))
+                    return;
 
-				if( ContainsAlchohol )
+                if ( ContainsAlchohol )
 				{
 					int bac = 0;
 

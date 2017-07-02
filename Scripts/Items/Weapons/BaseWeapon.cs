@@ -843,6 +843,7 @@ namespace Server.Items
 				if ( bonus > 45 + (int)(attacker.Skills[SkillName.Wrestling].Value / 12.0))
 					bonus = 45 + (int)(attacker.Skills[SkillName.Wrestling].Value / 12.0);
 
+                bonus += (attacker.Hunger + attacker.Thirst - defender.Hunger - defender.Thirst)/4;
 				ourValue = (atkValue + 20.0) * (100 + bonus);
 
 				bonus = AosAttributes.GetValue( defender, AosAttribute.DefendChance );
@@ -951,7 +952,11 @@ namespace Server.Items
 
 				if ( Core.ML )
 				{
-					int stamTicks = m.Stam / 30;
+					int stamTicks;
+                    if (m.Stam < m.Dex)
+                        stamTicks = m.Stam / 30;
+                    else
+                        stamTicks = m.Dex / 30;
 
 					ticks = speed * 4;
 					ticks = Math.Floor( ( ticks - stamTicks ) * ( 100.0 / ( 100 + bonus ) ) );
@@ -967,7 +972,7 @@ namespace Server.Items
 				}
 				
 				// Swing speed currently capped at one swing every 1.25 seconds (5 ticks).
-				if ( ticks < 5 )
+				if ( ticks < 4 )
 					ticks = 5;
 
 				delayInSeconds = ticks * 0.25;
@@ -1504,12 +1509,12 @@ namespace Server.Items
 			{
 				percentageBonus += packInstinctBonus;
 			}
-
+            /*
 			if( m_InDoubleStrike )
 			{
 				percentageBonus -= 10;
 			}
-
+            */
 			TransformContext context = TransformationSpellHelper.GetContext( defender );
 
 			if( (m_Slayer == SlayerName.Silver || m_Slayer2 == SlayerName.Silver) && context != null && context.Spell is NecromancerSpell && context.Type != typeof( HorrificBeastSpell ) )
@@ -1634,13 +1639,13 @@ namespace Server.Items
 				int wraithLeech = 0;
 
 				if ( (int)(AosWeaponAttributes.GetValue( attacker, AosWeaponAttribute.HitLeechHits ) * propertyBonus) > Utility.Random( 100 ) )
-					lifeLeech += 30; // HitLeechHits% chance to leech 30% of damage as hit points
+					lifeLeech += 40; // HitLeechHits% chance to leech 30% of damage as hit points
 
 				if ( (int)(AosWeaponAttributes.GetValue( attacker, AosWeaponAttribute.HitLeechStam ) * propertyBonus) > Utility.Random( 100 ) )
 					stamLeech += 100; // HitLeechStam% chance to leech 100% of damage as stamina
 
 				if ( (int)(AosWeaponAttributes.GetValue( attacker, AosWeaponAttribute.HitLeechMana ) * propertyBonus) > Utility.Random( 100 ) )
-					manaLeech += 40; // HitLeechMana% chance to leech 40% of damage as mana
+					manaLeech += 50; // HitLeechMana% chance to leech 40% of damage as mana
 
 				if ( m_Cursed )
 					lifeLeech += 50; // Additional 50% life leech for cursed weapons (necro spell)
@@ -1652,7 +1657,7 @@ namespace Server.Items
 
 				if ( context != null && context.Type == typeof( WraithFormSpell ) )
 				{
-					wraithLeech = (5 + (int)((15 * attacker.Skills.SpiritSpeak.Value) / 100)); // Wraith form gives an additional 5-20% mana leech
+					wraithLeech = (5 + (int)((10 * attacker.Skills.SpiritSpeak.Value) / 100)); // Wraith form gives an additional 5-20% mana leech
 
 					// Mana leeched by the Wraith Form spell is actually stolen, not just leeched.
 					defender.Mana -= AOS.Scale( damageGiven, wraithLeech );
@@ -1673,7 +1678,7 @@ namespace Server.Items
 					attacker.PlaySound( 0x44D );
 			}
 
-			if ( m_MaxHits > 0 && ((MaxRange <= 1 && (defender is Slime || defender is AcidElemental)) || Utility.RandomDouble() < .04) ) // Stratics says 50% chance, seems more like 4%..
+			if ( m_MaxHits > 0 && ((MaxRange <= 1 && (defender is Slime || defender is AcidElemental)) || Utility.RandomDouble() < .1) ) // Stratics says 50% chance, seems more like 4%..
 			{
 				if ( MaxRange <= 1 && (defender is Slime || defender is AcidElemental) )
 					attacker.LocalOverheadMessage( MessageType.Regular, 0x3B2, 500263 ); // *Acid blood scars your weapon!*
@@ -1803,7 +1808,7 @@ namespace Server.Items
 			// Inscription bonus
 			int inscribeSkill = attacker.Skills[SkillName.Inscribe].Fixed;
 
-			damageBonus += inscribeSkill / 200;
+			damageBonus += inscribeSkill / 20;
 
 			if ( inscribeSkill >= 1000 )
 				damageBonus += 5;
@@ -1850,7 +1855,7 @@ namespace Server.Items
 
 			attacker.DoHarmful( defender );
 
-			double damage = GetAosDamage( attacker, 17, 1, 5 );
+			double damage = GetAosDamage( attacker, 15, 1, 5 );
 
 			if ( !defender.InRange( attacker, 2 ) )
 				damage *= 0.25; // 1/4 damage at > 2 tile range

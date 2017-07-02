@@ -337,7 +337,7 @@ namespace Server.Engines.BulkOrders
 										m_Book.Entries.Remove(obj);
 										m_Book.InvalidateProperties();
 										
-										if ( m_Book.Entries.Count / 5 < m_Book.ItemCount )
+										if ( m_Book.Entries.Count / 10 < m_Book.ItemCount )
 										{
 											m_Book.ItemCount--;
 											m_Book.InvalidateItems();

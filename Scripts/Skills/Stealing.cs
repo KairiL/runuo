@@ -285,8 +285,15 @@ namespace Server.SkillHandlers
 						m_Caught = ( m_Thief.Skills[SkillName.Stealing].Value < Utility.Random( 150 ) );
 					}
 				}
+                if (stolen!=null && stolen.Insured)
+                {
+                    stolen = null;
+                    m_Caught = true;
+                    if (Utility.RandomDouble() > .9)
+                        toSteal.Insured = false;
+                }
 
-				return stolen;
+                return stolen;
 			}
 
 			protected override void OnTarget( Mobile from, object target )

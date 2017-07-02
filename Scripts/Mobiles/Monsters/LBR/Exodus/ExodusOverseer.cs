@@ -52,7 +52,10 @@ namespace Server.Mobiles
 				PackItem( new ArcaneGem() );
 
 			m_FieldActive = CanUseField;
-		}
+
+            if (0.15 > Utility.RandomDouble())
+                PackItem(new OverseerAssembly());
+        }
 
 		public override void GenerateLoot()
 		{

@@ -9,35 +9,37 @@ namespace Server.Gumps
 {
 	public class PolymorphEntry
 	{
-		public static readonly PolymorphEntry Chicken =		new PolymorphEntry( 8401, 0xD0, 1015236, 15, 10 );
-		public static readonly PolymorphEntry Dog =			new PolymorphEntry( 8405, 0xD9, 1015237, 17, 10 );
-		public static readonly PolymorphEntry Wolf =		new PolymorphEntry( 8426, 0xE1, 1015238, 18, 10 );
-		public static readonly PolymorphEntry Panther =		new PolymorphEntry( 8473, 0xD6, 1015239, 20, 14 );
-		public static readonly PolymorphEntry Gorilla =		new PolymorphEntry( 8437, 0x1D, 1015240, 23, 10 );
-		public static readonly PolymorphEntry BlackBear =	new PolymorphEntry( 8399, 0xD3, 1015241, 22, 10 );
-		public static readonly PolymorphEntry GrizzlyBear =	new PolymorphEntry( 8411, 0xD4, 1015242, 22, 12 );
-		public static readonly PolymorphEntry PolarBear =	new PolymorphEntry( 8417, 0xD5, 1015243, 26, 10 );
-		public static readonly PolymorphEntry HumanMale =	new PolymorphEntry( 8397, 0x190, 1015244, 29, 8 );
-		public static readonly PolymorphEntry HumanFemale =	new PolymorphEntry( 8398, 0x191, 1015254, 29, 10 );
-		public static readonly PolymorphEntry Slime =		new PolymorphEntry( 8424, 0x33, 1015246, 5, 10 );
-		public static readonly PolymorphEntry Orc =			new PolymorphEntry( 8416, 0x11, 1015247, 29, 10 );
-		public static readonly PolymorphEntry LizardMan =	new PolymorphEntry( 8414, 0x21, 1015248, 26, 10 );
-		public static readonly PolymorphEntry Gargoyle =	new PolymorphEntry( 8409, 0x04, 1015249, 22, 10 );
-		public static readonly PolymorphEntry Ogre =		new PolymorphEntry( 8415, 0x01, 1015250, 24, 9 );
-		public static readonly PolymorphEntry Troll =		new PolymorphEntry( 8425, 0x36, 1015251, 25, 9 );
-		public static readonly PolymorphEntry Ettin =		new PolymorphEntry( 8408, 0x02, 1015252, 25, 8 );
-		public static readonly PolymorphEntry Daemon =		new PolymorphEntry( 8403, 0x09, 1015253, 25, 8 );
+		public static readonly PolymorphEntry Chicken =		new PolymorphEntry( 8401, 0xD0, 1015236, 15, 10, "a chicken" );
+		public static readonly PolymorphEntry Dog =			new PolymorphEntry( 8405, 0xD9, 1015237, 17, 10, "a dog" );
+		public static readonly PolymorphEntry Wolf =		new PolymorphEntry( 8426, 0xE1, 1015238, 18, 10, "a wolf" );
+		public static readonly PolymorphEntry Panther =		new PolymorphEntry( 8473, 0xD6, 1015239, 20, 14, "a panther" );
+		public static readonly PolymorphEntry Gorilla =		new PolymorphEntry( 8437, 0x1D, 1015240, 23, 10, "a gorilla" );
+		public static readonly PolymorphEntry BlackBear =	new PolymorphEntry( 8399, 0xD3, 1015241, 22, 10, "a black bear" );
+		public static readonly PolymorphEntry GrizzlyBear =	new PolymorphEntry( 8411, 0xD4, 1015242, 22, 12, "a grizzly bear" );
+		public static readonly PolymorphEntry PolarBear =	new PolymorphEntry( 8417, 0xD5, 1015243, 26, 10, "a polar bear" );
+		public static readonly PolymorphEntry HumanMale =	new PolymorphEntry( 8397, 0x190, 1015244, 29, 8, null);
+		public static readonly PolymorphEntry HumanFemale =	new PolymorphEntry( 8398, 0x191, 1015254, 29, 10, null);
+		public static readonly PolymorphEntry Slime =		new PolymorphEntry( 8424, 0x33, 1015246, 5, 10, "a slime");
+		public static readonly PolymorphEntry Orc =			new PolymorphEntry( 8416, 0x11, 1015247, 29, 10, "an orcish mage");
+		public static readonly PolymorphEntry LizardMan =	new PolymorphEntry( 8414, 0x21, 1015248, 26, 10, "a lizardman" );
+		public static readonly PolymorphEntry Gargoyle =	new PolymorphEntry( 8409, 0x04, 1015249, 22, 10, "a gargoyle" );
+		public static readonly PolymorphEntry Ogre =		new PolymorphEntry( 8415, 0x01, 1015250, 24, 9, "an ogre" );
+		public static readonly PolymorphEntry Troll =		new PolymorphEntry( 8425, 0x36, 1015251, 25, 9, "a troll" );
+		public static readonly PolymorphEntry Ettin =		new PolymorphEntry( 8408, 0x02, 1015252, 25, 8, "an ettin" );
+		public static readonly PolymorphEntry Daemon =		new PolymorphEntry( 8403, 0x09, 1015253, 25, 8, "Nebirots" );
 
 
 		private int m_Art, m_Body, m_Num, m_X, m_Y;
+        private string m_Name;
 
-		private PolymorphEntry( int Art, int Body, int LocNum, int X, int Y )
+		private PolymorphEntry( int Art, int Body, int LocNum, int X, int Y, string Name )
 		{
 			m_Art = Art;
 			m_Body = Body;
 			m_Num = LocNum;
 			m_X = X;
 			m_Y = Y;
+            m_Name = Name;
 		}
 
 		public int ArtID { get { return m_Art; } }
@@ -45,6 +47,7 @@ namespace Server.Gumps
 		public int LocNumber{ get { return m_Num; } }
 		public int X{ get{ return m_X; } }
 		public int Y{ get{ return m_Y; } }
+        public string Name{ get{ return m_Name; } }
 	}
 
 
@@ -148,7 +151,7 @@ namespace Server.Gumps
 				{
 					if ( ent >= 0 && ent < Categories[cat].Entries.Length )
 					{
-						Spell spell = new PolymorphSpell( m_Caster, m_Scroll, Categories[cat].Entries[ent].BodyID );
+						Spell spell = new PolymorphSpell( m_Caster, m_Scroll, Categories[cat].Entries[ent].BodyID, Categories[cat].Entries[ent].Name );
 						spell.Cast();
 					}
 				}
@@ -240,7 +243,7 @@ namespace Server.Gumps
 			if ( idx < 0 || idx >= m_Entries.Length )
 				return;
 
-			Spell spell = new PolymorphSpell( m_Caster, m_Scroll, m_Entries[idx].BodyID );
+			Spell spell = new PolymorphSpell( m_Caster, m_Scroll, m_Entries[idx].BodyID, m_Entries[idx].Name );
 			spell.Cast();
 		}
 	}

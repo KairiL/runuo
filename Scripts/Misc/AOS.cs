@@ -131,11 +131,13 @@ namespace Server
 			{
 				if ( quiver != null )
 					damage += damage * quiver.DamageIncrease / 100;
-
+                /*
 				if ( !deathStrike )
 					totalDamage = Math.Min( damage, 35 );	// Direct Damage cap of 35
 				else
 					totalDamage = Math.Min( damage, 70 );	// Direct Damage cap of 70
+                */
+                totalDamage = damage;
 			}
 			else
 			{

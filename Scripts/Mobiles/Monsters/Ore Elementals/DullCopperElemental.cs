@@ -1,6 +1,7 @@
 using System;
 using Server;
 using Server.Items;
+using Server.Spells;
 
 namespace Server.Mobiles
 {
@@ -59,7 +60,17 @@ namespace Server.Mobiles
 		public override bool BleedImmune{ get{ return true; } }
 		public override int TreasureMapLevel{ get{ return 1; } }
 
-		public DullCopperElemental( Serial serial ) : base( serial )
+        public override void OnDeath( Container c)
+        {
+            foreach (Mobile o in this.GetMobilesInRange(5))
+            {
+                if ((o != ControlMaster) && o != this && !(o is Golem) && (SpellHelper.ValidIndirectTarget(this, (Mobile)o) && CanBeHarmful((Mobile)o, false)))
+                    AOS.Damage(o, this, Utility.RandomMinMax(50, 150), 80, 20, 0, 0, 0);
+            }
+            base.OnDeath(c);
+        }
+
+        public DullCopperElemental( Serial serial ) : base( serial )
 		{
 		}
 

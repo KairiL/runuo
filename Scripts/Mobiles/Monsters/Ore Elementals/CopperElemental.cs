@@ -64,7 +64,12 @@ namespace Server.Mobiles
 			reflect = true; // Every spell is reflected back to the caster
 		}
 
-		public CopperElemental( Serial serial ) : base( serial )
+        public override void AlterMeleeDamageFrom(Mobile from, ref int damage)
+        {
+            from.Damage(damage/2, this);
+        }
+
+            public CopperElemental( Serial serial ) : base( serial )
 		{
 		}
 

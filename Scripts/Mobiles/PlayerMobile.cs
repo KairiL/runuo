@@ -2619,7 +2619,69 @@ namespace Server.Mobiles
 			base.OnDamage( amount, from, willKill );
 		}
 
-		public override void Resurrect()
+        #region Alter[...]Damage From/To
+
+        public virtual void AlterDamageScalarFrom(Mobile caster, ref double scalar)
+        {
+        }
+
+        public virtual void AlterDamageScalarTo(Mobile target, ref double scalar)
+        {
+        }
+
+        public void AlterSpellDamageFrom(Mobile from, ref int damage)
+        {
+            if (MagicDamageAbsorb != 0)
+            {
+                if (MagicDamageAbsorb > damage)
+                {
+                    MagicDamageAbsorb -= damage;
+                    SendLocalizedMessage(1075127, String.Format("{0}\t{1}", damage, MagicDamageAbsorb)); // ~1_damage~ point(s) of damage have been absorbed. A total of ~2_remaining~ point(s) of shielding remain.
+                    damage = 0;
+                }
+                else
+                {
+                    SendLocalizedMessage(1075127, String.Format("{0}\t{1}", MagicDamageAbsorb, 0)); // ~1_damage~ point(s) of damage have been absorbed. A total of ~2_remaining~ point(s) of shielding remain.
+                    damage -= MagicDamageAbsorb;
+                    MagicDamageAbsorb = 0;
+                }
+                
+
+            }
+        }
+
+        public virtual void AlterSpellDamageTo(Mobile to, ref int damage)
+        {
+        }
+
+        public void AlterMeleeDamageFrom(Mobile from, ref int damage)
+        {
+            if (MeleeDamageAbsorb != 0)
+                if (MeleeDamageAbsorb > damage)
+                {
+                    MeleeDamageAbsorb -= damage;
+                    SendLocalizedMessage(1075127, String.Format("{0}\t{1}", damage, MeleeDamageAbsorb)); // ~1_damage~ point(s) of damage have been absorbed. A total of ~2_remaining~ point(s) of shielding remain.
+                    damage = 0;
+                }
+                else
+                {
+                    SendLocalizedMessage(1075127, String.Format("{0}\t{1}", MeleeDamageAbsorb, 0)); // ~1_damage~ point(s) of damage have been absorbed. A total of ~2_remaining~ point(s) of shielding remain.
+                    damage -= MeleeDamageAbsorb;
+                    MeleeDamageAbsorb = 0;
+                }
+        }
+
+        public virtual void AlterMeleeDamageTo(Mobile to, ref int damage)
+        {
+        }
+
+        #endregion
+
+        public virtual void CheckReflect(Mobile caster, ref bool reflect)
+        {
+        }
+
+        public override void Resurrect()
 		{
 			bool wasAlive = this.Alive;
 

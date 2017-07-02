@@ -11,7 +11,7 @@ namespace Server.Misc
 			new FoodDecayTimer().Start();
 		}
 
-		public FoodDecayTimer() : base( TimeSpan.FromMinutes( 5 ), TimeSpan.FromMinutes( 5 ) )
+		public FoodDecayTimer() : base( TimeSpan.FromMinutes( 10 ), TimeSpan.FromMinutes( 10 ) )
 		{
 			Priority = TimerPriority.OneMinute;
 		}
@@ -33,13 +33,31 @@ namespace Server.Misc
 		public static void HungerDecay( Mobile m )
 		{
 			if ( m != null && m.Hunger >= 1 )
+            {
 				m.Hunger -= 1;
+                if (m.Hunger <= 5)
+                    m.SendMessage("You are starving!");
+                else if (m.Hunger <= 10)
+                    m.SendMessage("You are starting to feel hungry.");
+            }
+            else
+                m.SendMessage("You are starving!");
+            
 		}
 
 		public static void ThirstDecay( Mobile m )
 		{
 			if ( m != null && m.Thirst >= 1 )
+            {
 				m.Thirst -= 1;
+                if (m.Thirst <= 5)
+                    m.SendMessage("You are dehydrated!");
+                else if (m.Thirst <= 10)
+                    m.SendMessage("You are starting to feel parched.");
+
+            }
+            else
+                m.SendMessage("You are parched!");
 		}
 	}
 }

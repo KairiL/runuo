@@ -88,7 +88,7 @@ namespace Server.Misc
 			if ( skill == null )
 				return false;
 
-			double value = skill.Value;
+			double value = skill.Value - 20 + (from.Hunger + from.Thirst) / 2;
 
 			if ( value < minSkill )
 				return false; // Too difficult
@@ -151,7 +151,7 @@ namespace Server.Misc
 			if ( skill == null )
 				return false;
 
-			double value = skill.Value;
+			double value = skill.Value - 20 + (from.Hunger + from.Thirst) / 2;
 
 			if ( value < minSkill )
 				return false; // Too difficult

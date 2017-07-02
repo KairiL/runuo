@@ -44,11 +44,10 @@ namespace Server.Spells.Spellweaving
 				Caster.PlaySound( 0x5C3 );
 				Caster.FixedParticles( 0x3728, 1, 13, 0x26B8, 0x455, 7, EffectLayer.Waist );
 				Caster.FixedParticles( 0x3779, 1, 15, 0x251E, 0x3F, 7, EffectLayer.Waist );
+                int damageAbsorb = (int)(18 + ((Caster.Skills[SkillName.Spellweaving].Value - 10) / 10) * 3 + (FocusLevel * 6));
 
-				double skill = Caster.Skills[SkillName.Spellweaving].Value;
-
-				int damageAbsorb = (int)(18 + ((skill-10)/10)*3 + (FocusLevel * 6));
-				Caster.MeleeDamageAbsorb = damageAbsorb;
+                if (Caster.MeleeDamageAbsorb < damageAbsorb)
+                    Caster.MeleeDamageAbsorb = damageAbsorb;
 
 				TimeSpan duration = TimeSpan.FromSeconds( 60 + (FocusLevel * 12) );
 
@@ -69,18 +68,21 @@ namespace Server.Spells.Spellweaving
 
 		public static void TryAbsorb( Mobile defender, ref int damage )
 		{
+            return;
+            /*
 			if( damage == 0 || !IsAbsorbing( defender ) || defender.MeleeDamageAbsorb <= 0 )
 				return;
 
 			int absorbed = Math.Min( damage, defender.MeleeDamageAbsorb );
 
 			damage -= absorbed;
-			defender.MeleeDamageAbsorb -= absorbed;
+			/efender.MeleeDamageAbsorb -= absorbed;
 
 			defender.SendLocalizedMessage( 1075127, String.Format( "{0}\t{1}", absorbed, defender.MeleeDamageAbsorb ) ); // ~1_damage~ point(s) of damage have been absorbed. A total of ~2_remaining~ point(s) of shielding remain.
 
 			if( defender.MeleeDamageAbsorb <= 0 )
 				StopAbsorbing( defender, true );
+            */
 		}
 
 		public static bool IsAbsorbing( Mobile m )

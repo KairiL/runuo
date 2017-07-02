@@ -50,7 +50,7 @@ namespace Server.Spells.Second
 				
 				if ( Core.AOS )
 				{
-					damage = GetNewAosDamage( 17, 1, 5, m );
+					damage = GetNewAosDamage( 15, 1, 5, m );
 				}
 				else
 				{

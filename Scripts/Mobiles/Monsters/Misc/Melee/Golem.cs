@@ -257,29 +257,56 @@ namespace Server.Mobiles
 
 		public override void OnDamage( int amount, Mobile from, bool willKill )
 		{
-			if ( Controlled || Summoned )
-			{
-				Mobile master = ( this.ControlMaster );
+            double pskill = 0;
+            int level = 0;
+            int lmc = AosAttributes.GetValue(from, AosAttribute.LowerManaCost);
+            int cost = (amount * (100 - lmc)) / 300;
+            if (Controlled || Summoned)
+            {
+                Mobile master = (this.ControlMaster);
 
-				if ( master == null )
-					master = this.SummonMaster;
+                if (master == null)
+                    master = this.SummonMaster;
 
-				if ( master != null && master.Player && master.Map == this.Map && master.InRange( Location, 20 ) )
-				{
-					if ( master.Mana >= (int)(amount/3) )
-					{
-						master.Mana -= (int)(amount/3);
-					}
-					else
-					{
-						amount -= master.Mana;
-						master.Mana = 0;
-						master.Damage( (int)(amount/3) );
-					}
-				}
-			}
+                if (master != null && master.Player)
+                {
 
-			base.OnDamage( (int)(amount/3), from, willKill );
+                    if (master.Mana >= cost)
+                    {
+                        master.Mana -= cost;
+                    }
+                    else
+                    {
+                        master.Damage(cost - master.Mana);
+                        master.Mana = 0;
+                        
+                    }
+                    if (from is BaseCreature || from is PlayerMobile)
+                    {
+                        pskill = master.Skills[SkillName.Poisoning].Value;
+                        if (pskill >= 100.0)
+                            level = 4;
+                        else if (pskill >= 85.0)
+                            level = 3;
+                        else if (pskill > 65.0)
+                            level = 2;
+                        else if (pskill > 50.0)
+                            level = 1;
+                        else
+                            level = 0;
+
+                        if (Utility.RandomDouble() < master.Skills[SkillName.Poisoning].Value / 140.0)
+                        {
+                            if (Utility.RandomDouble() < master.Skills[SkillName.Poisoning].Value / 140.0)
+                                ++level;
+                            from.ApplyPoison(master, Poison.GetPoison(level));
+                        }
+                    }
+
+                }
+            }
+
+            base.OnDamage( cost, from, willKill );
 		}
 
 		public override bool BardImmune{ get{ return true; } }

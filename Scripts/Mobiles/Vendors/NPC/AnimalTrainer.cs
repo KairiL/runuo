@@ -140,17 +140,7 @@ namespace Server.Mobiles
 			double vetern = from.Skills[SkillName.Veterinary].Value;
 			double sklsum = taming + anlore + vetern;
 
-			int max;
-
-			if ( sklsum >= 240.0 )
-				max = 5;
-			else if ( sklsum >= 200.0 )
-				max = 4;
-			else if ( sklsum >= 160.0 )
-				max = 3;
-			else
-				max = 2;
-
+			int max = 5;
 			if ( taming >= 100.0 )
 				max += (int)((taming - 90.0) / 10);
 

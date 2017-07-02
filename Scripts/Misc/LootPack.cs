@@ -15,7 +15,7 @@ namespace Server
 				return 0;
 
 			int luck = killer.Luck;
-
+            int golemBonus = 0;
 			PlayerMobile pmKiller = killer as PlayerMobile;
 			if( pmKiller != null && pmKiller.SentHonorContext != null && pmKiller.SentHonorContext.Target == victim )
 				luck += pmKiller.SentHonorContext.PerfectionLuckBonus;
@@ -25,8 +25,14 @@ namespace Server
 
 			if ( !Core.SE && luck > 1200 )
 				luck = 1200;
+            foreach (Mobile m in killer.GetMobilesInRange(4))
+                if (m is GolemOverseer && m.Hue == 2213 && ((BaseCreature)m).ControlMaster != null && m.InRange(((BaseCreature)m).ControlMaster, 4))
+                    golemBonus += (int)((BaseCreature)m).ControlMaster.Skills.Inscribe.Value*2;
 
-			return (int)(Math.Pow( luck, 1 / 1.8 ) * 100);
+            if (golemBonus > 1000)
+                golemBonus = 1000;
+                
+            return (int)(Math.Pow( luck, 1 / 1.8 ) * 100);
 		}
 
 		public static int GetLuckChanceForKiller( Mobile dead )

@@ -22,13 +22,15 @@ namespace Server.Spells.Seventh
 		public override SpellCircle Circle { get { return SpellCircle.Seventh; } }
 
 		private int m_NewBody;
+        private string m_NewName;
 
-		public PolymorphSpell( Mobile caster, Item scroll, int body ) : base( caster, scroll, m_Info )
+		public PolymorphSpell( Mobile caster, Item scroll, int body, string name ) : base( caster, scroll, m_Info )
 		{
 			m_NewBody = body;
+            m_NewName = name;
 		}
 
-		public PolymorphSpell( Mobile caster, Item scroll ) : this(caster,scroll,0)
+		public PolymorphSpell( Mobile caster, Item scroll ) : this(caster,scroll,0,null)
 		{
 		}
 
@@ -137,6 +139,8 @@ namespace Server.Spells.Seventh
 							Caster.HueMod = Utility.RandomSkinHue();
 						else
 							Caster.HueMod = 0;
+                        if ( m_NewName != null )
+                            Caster.NameMod = m_NewName;
 
 						BaseArmor.ValidateMobile( Caster );
 						BaseClothing.ValidateMobile( Caster );
@@ -177,12 +181,13 @@ namespace Server.Spells.Seventh
 			return ( t != null );
 		}
 
-		private static void EndPolymorph( Mobile m )
+		public static void EndPolymorph( Mobile m )
 		{
 			if( !m.CanBeginAction( typeof( PolymorphSpell ) ) )
 			{
 				m.BodyMod = 0;
 				m.HueMod = -1;
+                m.NameMod = null;
 				m.EndAction( typeof( PolymorphSpell ) );
 
 				BaseArmor.ValidateMobile( m );

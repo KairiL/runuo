@@ -1515,7 +1515,7 @@ namespace Server.Mobiles
 		public virtual void OnHarmfulSpell( Mobile from )
 		{
 		}
-
+        
 		#region Alter[...]Damage From/To
 
 		public virtual void AlterDamageScalarFrom( Mobile caster, ref double scalar )
@@ -1536,7 +1536,7 @@ namespace Server.Mobiles
 
 		public virtual void AlterMeleeDamageFrom( Mobile from, ref int damage )
 		{
-		}
+        }
 
 		public virtual void AlterMeleeDamageTo( Mobile to, ref int damage )
 		{

@@ -71,15 +71,15 @@ namespace Server.Mobiles
 					damage = 0; // Immune to pets and provoked creatures
 			}
 		}
-
+        /*
 		public override void AlterDamageScalarFrom( Mobile caster, ref double scalar )
 		{
 			scalar = 0.0; // Immune to magic
 		}
-		
+		*/
 		public override void AlterSpellDamageFrom( Mobile from, ref int damage )
 		{
-			damage = 0;
+			damage = 0; // Immune to magic
 		}
 
 		public ShadowIronElemental( Serial serial ) : base( serial )
