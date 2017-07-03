@@ -329,7 +329,7 @@ namespace Server.Mobiles
         {
             int minDamage;
             int exploDamage;
-            private int ExplosionRange = 3; // How long is the blast radius?
+            private int ExplosionRange = 2; // How long is the blast radius?
             private Mobile m_Mobile, m_From;
             private Point3D m_loc;
             private Map map;
@@ -391,7 +391,10 @@ namespace Server.Mobiles
                     }
                 }
                 if (m_Mobile != null)
-                    AOS.Damage(m_Mobile, m_From, Utility.RandomMinMax(minDamage, minDamage*3), 100, 0, 0, 0, 0);
+                    if (m_Mobile is PlayerMobile)
+                        AOS.Damage(m_Mobile, m_From, Utility.RandomMinMax(1, minDamage), 100, 0, 0, 0, 0);
+                    else
+                        AOS.Damage(m_Mobile, m_From, Utility.RandomMinMax(minDamage, minDamage*3), 100, 0, 0, 0, 0);
             }
         }
 

@@ -309,19 +309,24 @@ namespace Server.Items
                             switch(m_DamageType)
                             {
                                 case "Physical":
-                                    AOS.Damage(m, TrapOwner, (int)DamageScalar * Utility.RandomMinMax(MinDamage, MaxDamage), 100, 0, 0, 0, 0);
+                                    SpellHelper.DoLeech(AOS.Damage(m, TrapOwner, (int)DamageScalar * Utility.RandomMinMax(MinDamage, MaxDamage), 100, 0, 0, 0, 0), 
+                                        TrapOwner, m);
                                     break;
                                 case "Fire":
-                                    AOS.Damage(m, TrapOwner, (int)DamageScalar * Utility.RandomMinMax(MinDamage, MaxDamage), 0, 100, 0, 0, 0);
+                                    SpellHelper.DoLeech(AOS.Damage(m, TrapOwner, (int)DamageScalar * Utility.RandomMinMax(MinDamage, MaxDamage), 0, 100, 0, 0, 0),
+                                        TrapOwner, m);
                                     break;
                                 case "Cold":
-                                    AOS.Damage(m, TrapOwner, (int)DamageScalar * Utility.RandomMinMax(MinDamage, MaxDamage), 0, 0, 100, 0, 0);
+                                    SpellHelper.DoLeech(AOS.Damage(m, TrapOwner, (int)DamageScalar * Utility.RandomMinMax(MinDamage, MaxDamage), 0, 0, 100, 0, 0),
+                                        TrapOwner, m);
                                     break;
                                 case "Poison":
-                                    AOS.Damage(m, TrapOwner, (int)DamageScalar * Utility.RandomMinMax(MinDamage, MaxDamage), 0, 0, 0, 100, 0);
+                                    SpellHelper.DoLeech(AOS.Damage(m, TrapOwner, (int)DamageScalar * Utility.RandomMinMax(MinDamage, MaxDamage), 0, 0, 0, 100, 0),
+                                        TrapOwner, m);
                                     break;
                                 case "Energy":
-                                    AOS.Damage(m, TrapOwner, (int)DamageScalar * Utility.RandomMinMax(MinDamage, MaxDamage), 0, 0, 0, 0, 100);
+                                    SpellHelper.DoLeech(AOS.Damage(m, TrapOwner, (int)DamageScalar * Utility.RandomMinMax(MinDamage, MaxDamage), 0, 0, 0, 0, 100),
+                                        TrapOwner, m);
                                     break;
                             }
                         }
@@ -549,6 +554,7 @@ namespace Server.Items
                     break;
 				case 0:
 				{
+                    m_DamageType = reader.ReadString();
 					m_TrapOwner = reader.ReadMobile();
 					m_UsesRemaining = reader.ReadInt();
 					m_TrapPower = reader.ReadInt();
