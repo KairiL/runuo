@@ -114,7 +114,7 @@ namespace Server.Items
 	public class Jug : BaseBeverage
 	{
 		public override int BaseLabelNumber { get { return 1042965; } } // a jug of Ale
-		public override int MaxQuantity { get { return 10; } }
+		public override int MaxQuantity { get { return 20; } }
 		public override bool Fillable { get { return true; } }
 
 		public override int ComputeItemID()

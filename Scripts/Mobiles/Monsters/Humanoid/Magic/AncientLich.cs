@@ -29,18 +29,19 @@ namespace Server.Mobiles
 			SetResistance( ResistanceType.Physical, 55, 65 );
 			SetResistance( ResistanceType.Fire, 25, 30 );
 			SetResistance( ResistanceType.Cold, 50, 60 );
-			SetResistance( ResistanceType.Poison, 50, 60 );
+			SetResistance( ResistanceType.Poison, 80, 90 );
 			SetResistance( ResistanceType.Energy, 25, 30 );
 
-			SetSkill( SkillName.EvalInt, 120.1, 130.0 );
-			SetSkill( SkillName.Magery, 120.1, 130.0 );
-			SetSkill( SkillName.Meditation, 100.1, 101.0 );
-			SetSkill( SkillName.Poisoning, 100.1, 101.0 );
+			SetSkill( SkillName.EvalInt, 130.1, 160.0 );
+			SetSkill( SkillName.Magery, 140.1, 160.0 );
+			SetSkill( SkillName.Meditation, 300.1, 401.0 );
+			SetSkill( SkillName.Poisoning, 100.1, 141.0 );
 			SetSkill( SkillName.MagicResist, 175.2, 200.0 );
 			SetSkill( SkillName.Tactics, 90.1, 100.0 );
 			SetSkill( SkillName.Wrestling, 75.1, 100.0 );
-			SetSkill( SkillName.Necromancy, 120.1, 130.0 );
-			SetSkill( SkillName.SpiritSpeak, 120.1, 130.0 );
+			SetSkill( SkillName.Necromancy, 130.1, 160.0 );
+			SetSkill( SkillName.SpiritSpeak, 130.1, 160.0 );
+            
 
 			Fame = 23000;
 			Karma = -23000;
@@ -82,9 +83,11 @@ namespace Server.Mobiles
 
 		public override void GenerateLoot()
 		{
-			AddLoot( LootPack.FilthyRich, 3 );
-			AddLoot( LootPack.MedScrolls, 2 );
-		}
+            AddLoot(LootPack.UltraRich, 4);
+            AddLoot(LootPack.LowScrolls, 2);
+            AddLoot(LootPack.MedScrolls, 2);
+            AddLoot(LootPack.HighScrolls, 3);
+        }
 
 		public override bool Unprovokable{ get{ return true; } }
 		public override bool BleedImmune{ get{ return true; } }

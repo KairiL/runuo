@@ -62,7 +62,7 @@ namespace Server.Misc
 				points += 40;
 
 			if( Core.ML && from.Race == Race.Human )	//Is this affected by the cap?
-				points += 4;
+				points += 8;
             /*
 			if ( points < 0 )
 				points = 0;

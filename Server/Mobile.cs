@@ -4240,7 +4240,7 @@ namespace Server
 				m.OnDoubleClick( this );
 		}
 
-		private static int m_ActionDelay = 250;
+		private static int m_ActionDelay = 200;
 
 		public static int ActionDelay
 		{

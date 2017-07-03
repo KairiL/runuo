@@ -54,7 +54,8 @@ namespace Server.Spells.Sixth
 					}
                     else if (TransformationSpellHelper.UnderTransformation(m))
                     {
-                        double dispelChance = ((from.Hunger + from.Thirst)/2 + from.Skills.Magery.Value - (m.Hunger - m.Thirst)/2 - m.Skills.Necromancy.Value + m.Skills.MagicResist.Value + 1)/100;
+                        double dispelChance = Math.Pow((((from.Hunger + from.Thirst)/2 + from.Skills.Magery.Value )/
+                            ((m.Hunger - m.Thirst)/2 + m.Skills.Necromancy.Value + m.Skills.MagicResist.Value + 1)),4)/2;
                         if ( dispelChance < 0 )
                             dispelChance = 0.01;
                         if ( dispelChance > 1 )
@@ -75,7 +76,8 @@ namespace Server.Spells.Sixth
                     }
                     else if (!m.CanBeginAction(typeof(PolymorphSpell)))
                     {
-                        double dispelChance = ((from.Hunger + from.Thirst) / 2 + from.Skills.Magery.Value - (m.Hunger - m.Thirst) / 2 - m.Skills.Magery.Value + m.Skills.MagicResist.Value + 1) / 100;
+                        double dispelChance = Math.Pow((((from.Hunger + from.Thirst)/2 + from.Skills.Magery.Value )/
+                            ((m.Hunger - m.Thirst)/2 + m.Skills.Magery.Value + m.Skills.MagicResist.Value + 1)),4)/2;
                         if (dispelChance < 0)
                             dispelChance = 0.01;
                         if (dispelChance > 1)
@@ -96,7 +98,8 @@ namespace Server.Spells.Sixth
                     }
                     else if (AnimalForm.UnderTransformation(m))
                     {
-                        double dispelChance = ((from.Hunger + from.Thirst) / 2 + from.Skills.Magery.Value - (m.Hunger - m.Thirst) / 2 - m.Skills.Ninjitsu.Value + m.Skills.MagicResist.Value + 1) / 100;
+                        double dispelChance = Math.Pow((((from.Hunger + from.Thirst) / 2 + from.Skills.Magery.Value) /
+                            ((m.Hunger - m.Thirst) / 2 + m.Skills.Ninjitsu.Value + m.Skills.MagicResist.Value + 1)),  4) / 2;
                         if (dispelChance < 0)
                             dispelChance = 0.01;
                         if (dispelChance > 1)
@@ -117,7 +120,8 @@ namespace Server.Spells.Sixth
                     }
                     else if (TransformationSpellHelper.GetContext(m) != null)
                     {
-                        double dispelChance = ((from.Hunger + from.Thirst) / 2 + from.Skills.Magery.Value - (m.Hunger - m.Thirst) / 2 - m.Skills.Spellweaving.Value + m.Skills.MagicResist.Value + 1) / 100;
+                        double dispelChance = Math.Pow((((from.Hunger + from.Thirst) / 2 + from.Skills.Magery.Value) /
+                            ((m.Hunger - m.Thirst) / 2 + m.Skills.Spellweaving.Value + m.Skills.MagicResist.Value + 1)), 4) / 2;
                         if (dispelChance < 0)
                             dispelChance = 0.01;
                         if (dispelChance > 1)
