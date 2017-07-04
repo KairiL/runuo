@@ -203,9 +203,9 @@ namespace Server.Items
 		}
 
         public override bool PassivelyTriggered{ get{ return true; } }
-		public override TimeSpan PassiveTriggerDelay{ get{ return TimeSpan.FromSeconds( 10 ); } }
-		public int PassiveTriggerRange{ get{ return m_TriggerRange; } }
-		public override TimeSpan ResetDelay{ get{ return TimeSpan.FromSeconds( 0 ); } }
+		public override TimeSpan PassiveTriggerDelay{ get{ return TimeSpan.Zero; } }
+		public override int PassiveTriggerRange{ get{ return m_TriggerRange; } }
+		public override TimeSpan ResetDelay{ get{ return TimeSpan.Zero; } }
 
         public void SetMap(Map map)
         {
@@ -239,6 +239,7 @@ namespace Server.Items
         public override void OnTrigger(Mobile from)
         {
             int sdiBonus;
+            int damage = 0;
             ArrayList targets = new ArrayList();
             //uncomment this if you want staff to be immune to traps
             //if (from.AccessLevel > AccessLevel.Player)
@@ -309,26 +310,22 @@ namespace Server.Items
                             switch(m_DamageType)
                             {
                                 case "Physical":
-                                    SpellHelper.DoLeech(AOS.Damage(m, TrapOwner, (int)DamageScalar * Utility.RandomMinMax(MinDamage, MaxDamage), 100, 0, 0, 0, 0), 
-                                        TrapOwner, m);
+                                    damage = AOS.Damage( m, TrapOwner, (int)(DamageScalar * Utility.RandomMinMax(MinDamage, MaxDamage)), 100, 0, 0, 0, 0);
                                     break;
                                 case "Fire":
-                                    SpellHelper.DoLeech(AOS.Damage(m, TrapOwner, (int)DamageScalar * Utility.RandomMinMax(MinDamage, MaxDamage), 0, 100, 0, 0, 0),
-                                        TrapOwner, m);
+                                    damage = AOS.Damage( m, TrapOwner, (int)(DamageScalar * Utility.RandomMinMax(MinDamage, MaxDamage)), 0, 100, 0, 0, 0);
                                     break;
                                 case "Cold":
-                                    SpellHelper.DoLeech(AOS.Damage(m, TrapOwner, (int)DamageScalar * Utility.RandomMinMax(MinDamage, MaxDamage), 0, 0, 100, 0, 0),
-                                        TrapOwner, m);
+                                    damage = AOS.Damage( m, TrapOwner, (int)(DamageScalar * Utility.RandomMinMax(MinDamage, MaxDamage)), 0, 0, 100, 0, 0);
                                     break;
                                 case "Poison":
-                                    SpellHelper.DoLeech(AOS.Damage(m, TrapOwner, (int)DamageScalar * Utility.RandomMinMax(MinDamage, MaxDamage), 0, 0, 0, 100, 0),
-                                        TrapOwner, m);
+                                    damage = AOS.Damage(m, TrapOwner, (int)(DamageScalar * Utility.RandomMinMax(MinDamage, MaxDamage)), 0, 0, 0, 100, 0);
                                     break;
                                 case "Energy":
-                                    SpellHelper.DoLeech(AOS.Damage(m, TrapOwner, (int)DamageScalar * Utility.RandomMinMax(MinDamage, MaxDamage), 0, 0, 0, 0, 100),
-                                        TrapOwner, m);
+                                    damage = AOS.Damage( m, TrapOwner, (int)(DamageScalar * Utility.RandomMinMax(MinDamage, MaxDamage)), 0, 0, 0, 0, 100);
                                     break;
                             }
+                            SpellHelper.DoLeech(damage, TrapOwner, m);
                         }
                         if (Poison != null)
                             m.ApplyPoison(m, m_Poison);
@@ -526,7 +523,8 @@ namespace Server.Items
 		{
 			base.Serialize( writer );
 
-			writer.Write( (int) 1 ); // version
+			writer.Write( (int) 2 ); // version
+            writer.Write( delay );
             writer.Write( m_DamageType );
 			writer.Write( m_TrapOwner );
            	writer.Write( m_UsesRemaining );
@@ -549,12 +547,14 @@ namespace Server.Items
 
 			switch ( version )
 			{
+                case 2:
+                    delay =  reader.ReadTimeSpan();
+                    goto case 1;
                 case 1:
                     m_DamageType = reader.ReadString();
-                    break;
+                    goto case 0;
 				case 0:
 				{
-                    m_DamageType = reader.ReadString();
 					m_TrapOwner = reader.ReadMobile();
 					m_UsesRemaining = reader.ReadInt();
 					m_TrapPower = reader.ReadInt();
