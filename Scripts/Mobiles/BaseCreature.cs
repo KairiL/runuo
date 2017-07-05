@@ -2302,7 +2302,15 @@ namespace Server.Mobiles
 								}
 							}
 						}
+                        if ( Hunger < 11 )
+                            Hunger += 10;
+                        else
+                            Hunger = 20;
 
+                        if ( Thirst <= 11 )
+                            Thirst += 10;
+                        else
+                            Thirst = 20;
 						/* if ( happier )*/	// looks like in OSI pets say they are happier even if they are at maximum loyalty
 							SayTo( from, 502060 ); // Your pet looks happier.
 
