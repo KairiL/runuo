@@ -139,7 +139,8 @@ namespace Server.Items
 			Layer = Layer.Bank;
 			Movable = false;
 			m_Owner = owner;
-		}
+            MaxItems = 225;
+        }
 
 		public override bool IsAccessibleTo(Mobile check)
 		{

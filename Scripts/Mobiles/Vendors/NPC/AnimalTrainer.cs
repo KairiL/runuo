@@ -238,22 +238,13 @@ namespace Server.Mobiles
 			if ( Deleted || !from.CheckAlive() )
 				return;
 
-			Container bank = from.FindBankNoCreate();
+			/* I charge 30 gold per pet for a real week's stable time.
+				* I will withdraw it from thy bank account.
+				* Which animal wouldst thou like to stable here?
+				*/
+			from.SendLocalizedMessage(1042558);
 
-			if ( ( from.Backpack == null || from.Backpack.GetAmount( typeof( Gold ) ) < 30 ) && ( bank == null || bank.GetAmount( typeof( Gold ) ) < 30 ) )
-			{
-				SayTo( from, 1042556 ); // Thou dost not have enough gold, not even in thy bank account.
-			}
-			else
-			{
-				/* I charge 30 gold per pet for a real week's stable time.
-				 * I will withdraw it from thy bank account.
-				 * Which animal wouldst thou like to stable here?
-				 */
-				from.SendLocalizedMessage(1042558);
-
-				from.Target = new StableTarget( this );
-			}
+			from.Target = new StableTarget( this );
 		}
 
 		public void EndStable( Mobile from, BaseCreature pet )
@@ -303,8 +294,9 @@ namespace Server.Mobiles
 			{
 				Container bank = from.FindBankNoCreate();
 
-				if ( ( from.Backpack != null && from.Backpack.ConsumeTotal( typeof( Gold ), 30 ) ) || ( bank != null && bank.ConsumeTotal( typeof( Gold ), 30 ) ) )
-				{
+				if ( ( from.Backpack != null && from.Backpack.ConsumeTotal( typeof( Gold ), 30 ) ) || from.Account.WithdrawGold(30))//( bank != null && bank.ConsumeTotal( typeof( Gold ), 30 ) ) )
+
+                {
 					pet.ControlTarget = null;
 					pet.ControlOrder = OrderType.Stay;
 					pet.Internalize();

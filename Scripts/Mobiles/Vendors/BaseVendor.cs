@@ -1021,7 +1021,12 @@ namespace Server.Mobiles
 					bought = true;
 					fromBank = true;
 				}
-				else
+                else if (buyer.Account.WithdrawGold(totalCost))
+                {
+                    bought = true;
+                    fromBank = true;
+                }
+                else
 				{
 					SayTo( buyer, 500191 ); //Begging thy pardon, but thy bank account lacks these funds.
 				}
