@@ -1,6 +1,7 @@
 using System;
 using Server.Network;
 using Server;
+using Server.Mobiles;
 
 namespace Server.Misc
 {
@@ -32,7 +33,7 @@ namespace Server.Misc
 
 		public static void HungerDecay( Mobile m )
 		{
-            if ( m is PlayerMobile || (m is Basecreature && (m.ControlMaster != null && !(m is Golem))))
+            if ( m is PlayerMobile || (m is BaseCreature && (((BaseCreature)m).ControlMaster != null && !(m is Golem))))
 			    if ( m != null && m.Hunger >= 1 )
                 {
 				    m.Hunger -= 1;
@@ -49,7 +50,7 @@ namespace Server.Misc
 
 		public static void ThirstDecay( Mobile m )
 		{
-            if (m is PlayerMobile || (m is Basecreature && (m.ControlMaster != null && !(m is Golem))))
+            if (m is PlayerMobile || (m is BaseCreature && (((BaseCreature)m).ControlMaster != null && !(m is Golem))))
                 if ( m != null && m.Thirst >= 1 )
                 {
 				    m.Thirst -= 1;
