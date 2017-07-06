@@ -788,7 +788,7 @@ namespace Server.Mobiles
 				OnSuccessfulBulkOrderReceive( from );
 
 				if ( Core.ML && pm != null )
-					pm.NextBODTurnInTime = DateTime.UtcNow + TimeSpan.FromSeconds( 10.0 );
+					pm.NextBODTurnInTime = DateTime.UtcNow + TimeSpan.FromSeconds( 0.5 );
 
 				dropped.Delete();
 				return true;
