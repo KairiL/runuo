@@ -18,7 +18,7 @@ namespace Server.Mobiles
 			SetDex( 96, 115 );
 			SetInt( 966, 1045 );
 
-			SetHits( 560, 595 );
+			SetHits( 750, 1200 );
 
 			SetDamage( 15, 27 );
 
@@ -30,13 +30,14 @@ namespace Server.Mobiles
 			SetResistance( ResistanceType.Fire, 25, 30 );
 			SetResistance( ResistanceType.Cold, 50, 60 );
 			SetResistance( ResistanceType.Poison, 80, 90 );
-			SetResistance( ResistanceType.Energy, 25, 30 );
+			SetResistance( ResistanceType.Energy, 45, 50 );
 
 			SetSkill( SkillName.EvalInt, 130.1, 160.0 );
 			SetSkill( SkillName.Magery, 140.1, 160.0 );
 			SetSkill( SkillName.Meditation, 300.1, 401.0 );
 			SetSkill( SkillName.Poisoning, 100.1, 141.0 );
 			SetSkill( SkillName.MagicResist, 175.2, 200.0 );
+
 			SetSkill( SkillName.Tactics, 90.1, 100.0 );
 			SetSkill( SkillName.Wrestling, 75.1, 100.0 );
 			SetSkill( SkillName.Necromancy, 130.1, 160.0 );
