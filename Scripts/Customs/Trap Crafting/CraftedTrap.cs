@@ -220,8 +220,9 @@ namespace Server.Items
         {
             int ManaLoss = ScaleMana(ManaCost);
 
-            if (TrapOwner != null)
-                if (PointDest != Point3D.Zero && TrapOwner.Player && (!TrapOwner.CanBeHarmful(m, false) || m == TrapOwner))
+            if (TrapOwner != null && DamageScalar == 0)
+                //if (PointDest != Point3D.Zero && TrapOwner.Player && (!SpellHelper.ValidIndirectTarget(TrapOwner, m) || m == (Mobile)TrapOwner))
+                if (PointDest != Point3D.Zero && TrapOwner.Player && ((m.Party != null && m.Party == TrapOwner.Party) || m == TrapOwner))
                 {
                     if (TrapOwner.Mana >= ManaLoss)
                         TrapOwner.Mana -= ManaLoss;
@@ -232,7 +233,12 @@ namespace Server.Items
                         TrapOwner.Damage((ManaLoss));
                     }
                     Teleport(m);
+                    if (TrapOwner.Alive)
+                        this.UsesRemaining -= 1;
+                    else
+                        UsesRemaining -= 10;
                     return false;
+
                 }
             return true;
         }
@@ -247,8 +253,9 @@ namespace Server.Items
 
             int ManaLoss = ScaleMana(ManaCost);
 
-            if (TrapOwner != null )
-                if (TrapOwner.Player && TrapOwner.CanBeHarmful(from, false) && from != TrapOwner)
+            if (TrapOwner != null  && TrapOwner.Player && TrapOwner.CanBeHarmful(from, false) && 
+                    from != TrapOwner && SpellHelper.ValidIndirectTarget(TrapOwner, (Mobile)from) &&
+                    (!(from is BaseCreature) || ((BaseCreature)from).ControlMaster != TrapOwner))
                 {
                     if (TrapOwner.Mana >= ManaLoss)
                         TrapOwner.Mana -= ManaLoss;
@@ -268,8 +275,8 @@ namespace Server.Items
             if (this.Visible == false)
                 this.Visible = true;
 
-            int MinDamage = 40 * (TrapPower / 100);
-            int MaxDamage = 60 * (TrapPower / 100);
+            int MinDamage = 20 * (TrapPower / 100);
+            int MaxDamage = 30 * (TrapPower / 100);
 
 
             if (MinDamage < 5)
@@ -326,6 +333,8 @@ namespace Server.Items
                                     break;
                             }
                             SpellHelper.DoLeech(damage, TrapOwner, m);
+                            if (PointDest != Point3D.Zero && TrapOwner.Player)
+                                Teleport(m);
                         }
                         if (Poison != null)
                             m.ApplyPoison(m, m_Poison);
@@ -336,8 +345,7 @@ namespace Server.Items
                             else
                                 m.Paralyze(TimeSpan.FromSeconds(ParalyzeTime - (m.Skills.MagicResist.Value / 12)));
 
-                        if (PointDest != Point3D.Zero && TrapOwner.Player)
-                            Teleport(m);
+                        
                     }
 
                 if (TrapOwner.Alive)
@@ -350,7 +358,10 @@ namespace Server.Items
                 }
             }
         }
-
+        public bool CanTeleport()
+        { 
+            return true;
+        }
         public bool Teleport(Mobile from)
         {
             if (Factions.Sigil.ExistsOn(from))
@@ -371,7 +382,7 @@ namespace Server.Items
             {
                 return false;
             }
-            else if (MapDest == null || !MapDest.CanSpawnMobile(PointDest))
+            else if (MapDest == null)
             {
                 from.SendLocalizedMessage(501942); // That location is blocked.
                 return false;

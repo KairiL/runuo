@@ -14,7 +14,7 @@ namespace Server.Items
 		public CraftedTeleporter()
 		{
             Visible = true;
-			UsesRemaining = 100;
+			UsesRemaining = 10;
             Name = "A teleporter";
             ManaCost = 4;
             DamageRange = 0;
@@ -28,7 +28,7 @@ namespace Server.Items
 		public CraftedTeleporter( Serial serial ) : base( serial )
 		{
             Visible = true;
-            UsesRemaining = 100;
+            UsesRemaining = 10;
             Name = "A teleporter";
             ManaCost = 4;
             DamageRange = 0;

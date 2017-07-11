@@ -148,9 +148,9 @@ namespace Server.Spells.Seventh
 
 			public override bool OnMoveOver( Mobile m )
 			{
-				int noto;
                 return false;
                 /*
+                int noto;
 				if ( m is PlayerMobile )
 				{
 					noto = Notoriety.Compute( m_Caster, m );
@@ -159,9 +159,9 @@ namespace Server.Spells.Seventh
 				}
 				return base.OnMoveOver( m );
                 */
-			}
+            }
 
-			public override void OnAfterDelete()
+            public override void OnAfterDelete()
 			{
 				base.OnAfterDelete();
 

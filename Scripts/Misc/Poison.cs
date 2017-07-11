@@ -21,7 +21,7 @@ namespace Server
 				Register( new PoisonImpl( "Greater",	2, 12, 20, 15.0, 3.0, 4.25, 10, 2 ) );
 				Register( new PoisonImpl( "Deadly",		3, 16, 30, 30.0, 3.0, 5.25, 15, 2 ) );
 				Register( new PoisonImpl( "Lethal",		4, 20, 50, 35.0, 3.0, 5.25, 20, 2 ) );
-                Register( new PoisonImpl( "Godly",      5, 20, 50, 35.0, 3.0, 3.25, 20, 2 ) );
+                Register( new PoisonImpl( "Godly",      5, 20, 50, 35.0, 3.0, 3.25, 100, 2 ) );
 			}
 			else
 			{
@@ -88,9 +88,12 @@ namespace Server
 
 			protected override void OnTick()
 			{
-				if ( (Core.AOS && m_Poison.Level < 4 && TransformationSpellHelper.UnderTransformation( m_Mobile, typeof( VampiricEmbraceSpell ) )) ||
+
+                if ( (Core.AOS && m_Poison.Level < 4 && TransformationSpellHelper.UnderTransformation( m_Mobile, typeof( VampiricEmbraceSpell ) )) ||
 					(m_Poison.Level < 3 && OrangePetals.UnderEffect( m_Mobile )) ||
-					AnimalForm.UnderTransformation( m_Mobile, typeof( Unicorn ) ) )
+					AnimalForm.UnderTransformation( m_Mobile, typeof( Unicorn ) ) ||
+                    (TransformationSpellHelper.UnderTransformation(m_Mobile, typeof(VampiricEmbraceSpell)) && m_Mobile.Skills.Poisoning.Value >= 100) ||
+                    (((Double)m_Mobile.Skills.Poisoning.Value)/((Double)m_Poison.Level+1.0))/50.0 > Utility.RandomDouble())
 				{
 					if ( m_Mobile.CurePoison( m_Mobile ) )
 					{

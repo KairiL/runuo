@@ -332,7 +332,6 @@ namespace Server.Mobiles
             int exploDamage;
             int minDamage;
             int range = 4;
-            int damage;
             Mobile m = ControlMaster;
             if (m == null)
                 m = SummonMaster;

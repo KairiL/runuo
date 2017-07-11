@@ -634,8 +634,42 @@ namespace Server.Items
 				}
 			}
 		}
+        public static void ApplyAttributesTo(BaseInstrument instrument, int attributeCount, int min, int max)
+        {
+            ApplyAttributesTo(instrument, false, 0, attributeCount, min, max);
+        }
 
-		public static void ApplyAttributesTo( Spellbook spellbook, int attributeCount, int min, int max )
+        public static void ApplyAttributesTo(BaseInstrument instrument, bool isRunicTool, int luckChance, int attributeCount, int min, int max)
+        {
+            m_IsRunicTool = isRunicTool;
+            m_LuckChance = luckChance;
+
+            m_Props.SetAll(false);
+
+            for (int i = 0; i < attributeCount; ++i)
+            {
+                int random = GetUniqueRandom(16);
+
+                if (random == -1)
+                    break;
+
+
+                switch (random)
+                { 
+                    case 0: instrument.Slayer = GetRandomSlayer(); break;
+                    case 1: instrument.Quality = InstrumentQuality.Exceptional; break;
+                    case 2: instrument.UsesRemaining += 400; break;
+                    case 3: instrument.ReplenishesCharges = true; break;
+                    case 4: instrument.Slayer2 = GetRandomSlayer(); break;
+
+                }
+                
+            }
+
+            if ( instrument.Slayer == instrument.Slayer2 )
+                instrument.Hue = 1281 + Utility.Random( 8 );
+        }
+            public static void ApplyAttributesTo( Spellbook spellbook, int attributeCount, int min, int max )
 		{
 			ApplyAttributesTo( spellbook, false, 0, attributeCount, min, max );
 		}

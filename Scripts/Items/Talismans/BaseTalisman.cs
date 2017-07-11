@@ -862,7 +862,8 @@ namespace Server.Items
 			typeof( Crane ),		typeof( SnowLeopard ), 				typeof( IceFiend ), 		typeof( FrostOoze ), 		typeof( FrostTroll ),
 			typeof( IceElemental ),	typeof( SnowElemental ), 			typeof( GiantIceWorm ), 	typeof( LadyOfTheSnow ), 	typeof( FireElemental ),
 			typeof( FireSteed ), 	typeof( HellHound ), 				typeof( HellCat ), 			typeof( PredatorHellCat ), 	typeof( LavaLizard ),
-			typeof( FireBeetle ), 	typeof( Cow ), 						typeof( Bull ), 			typeof( Gaman ),            typeof( PlayerMobile )//,			typeof( Minotaur)
+			typeof( FireBeetle ), 	typeof( Cow ), 						typeof( Bull ), 			typeof( Gaman ),            typeof( Minotaur),      
+            typeof( Meraktus ),     typeof( TormentedMinotaur ),        typeof( PlayerMobile )
 			// TODO Meraktus, Tormented Minotaur, Minotaur
 		};
 
@@ -880,7 +881,9 @@ namespace Server.Items
 			1072473, 1072474, 1072477, 1072478, 1072479,
 			1072480, 1072481, 1072483, 1072485, 1072486,
 			1072487, 1072489, 1072490, 1072491, 1072492,
-			1072493, 1072494, 1072495, 1072498, 0
+			1072493, 1072494, 1072495, 1072498, 1072501, 
+            1072499, 1072500, 0
+
 		};
 
 		public static TalismanAttribute GetRandomKiller()
@@ -893,9 +896,9 @@ namespace Server.Items
 			if ( includingNone && Utility.RandomBool() )
 				return new TalismanAttribute();
 
-			int num = Utility.Random(m_Killers.Length);
+			int num = Utility.Random(m_Killers.Length) - 1;//-1 to keep PlayerMobile from being included
 
-			return new TalismanAttribute(m_Killers[num], m_KillerLabels[num], Utility.RandomMinMax(10, 100));
+            return new TalismanAttribute(m_Killers[num], m_KillerLabels[num], Utility.RandomMinMax(10, 100));
 		}
 
 		public static TalismanAttribute GetRandomProtection()
@@ -908,7 +911,7 @@ namespace Server.Items
 			if ( includingNone && Utility.RandomBool() )
 				return new TalismanAttribute();
 
-			int num = Utility.Random(m_Killers.Length);
+			int num = Utility.Random(m_Killers.Length) - 1;//-1 to keep PlayerMobile from being included
 
 			return new TalismanAttribute(m_Killers[num], m_KillerLabels[num], Utility.RandomMinMax(5, 60));
 		}

@@ -806,6 +806,9 @@ namespace Server.Items
 			double atkValue = atkWeapon.GetAttackSkillValue( attacker, defender );
 			double defValue = defWeapon.GetDefendSkillValue( attacker, defender );
 
+            atkValue += attacker.Skills.Tactics.Value/24;
+            defValue += defender.Skills.Tactics.Value/24;
+
 			double ourValue, theirValue;
 
 			int bonus = GetHitChanceBonus();
@@ -839,9 +842,10 @@ namespace Server.Items
 				if ( move != null )
 					bonus += move.GetAccuracyBonus( attacker );
 
-				// Max Hit Chance Increase = 45%
-				if ( bonus > 45 + (int)(attacker.Skills[SkillName.Wrestling].Value / 12.0))
-					bonus = 45 + (int)(attacker.Skills[SkillName.Wrestling].Value / 12.0);
+                // Max Hit Chance Increase = 45% + Wrestling/12
+                if (atkSkill != attacker.Skills.Wrestling)
+                    if ( bonus > 45 + (int)(attacker.Skills[SkillName.Wrestling].Value / 12.0))
+					    bonus = 45 + (int)(attacker.Skills[SkillName.Wrestling].Value / 12.0);
 
                 bonus += (attacker.Hunger + attacker.Thirst - defender.Hunger - defender.Thirst)/4;
 				ourValue = (atkValue + 20.0) * (100 + bonus);
@@ -871,8 +875,9 @@ namespace Server.Items
 					bonus -= discordanceEffect;
 
 				// Defense Chance Increase = 45%
-				if ( bonus > 45 + (int)(defender.Skills[SkillName.Wrestling].Value / 12.0))
-					bonus = 45 + (int)(defender.Skills[SkillName.Wrestling].Value / 12.0);
+                if (atkSkill != attacker.Skills.Wrestling)
+                    if ( bonus > 45 + (int)(defender.Skills[SkillName.Wrestling].Value / 12.0))
+					    bonus = 45 + (int)(defender.Skills[SkillName.Wrestling].Value / 12.0);
 
 				theirValue = (defValue + 20.0) * (100 + bonus);
 
@@ -1385,7 +1390,7 @@ namespace Server.Items
                 return 175;
             else
                 return ((inPack - 1) * 25);
-			return 0;
+			//return 0;
 		}
 
 		private static bool m_InDoubleStrike;
@@ -2271,9 +2276,9 @@ namespace Server.Items
 			 * No caps apply.
 			 */
 			double strengthBonus = GetBonus( attacker.Str,										0.300, 100.0,  5.00 );
-			double  anatomyBonus = GetBonus( attacker.Skills[SkillName.Anatomy].Value,			0.500, 100.0,  5.00 );
-			double  tacticsBonus = GetBonus( attacker.Skills[SkillName.Tactics].Value,			0.625, 100.0,  6.25 );
-			double   lumberBonus = GetBonus( attacker.Skills[SkillName.Lumberjacking].Value,	0.200, 100.0, 10.00 );
+			double  anatomyBonus = GetBonus( attacker.Skills[SkillName.Anatomy].Value,			0.625, 100.0,  6.25 );
+			double  tacticsBonus = GetBonus( attacker.Skills[SkillName.Tactics].Value,			0.500, 100.0,  6.25 );
+			double   lumberBonus = GetBonus( attacker.Skills[SkillName.Lumberjacking].Value,	0.300, 100.0, 10.00 );
 
 			if ( Type != WeaponType.Axe )
 				lumberBonus = 0.0;

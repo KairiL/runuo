@@ -67,7 +67,10 @@ namespace Server.Spells.Necromancy
 					if ( Caster.CanBeHarmful(m, false ) )
 						targets.Add( m );
 
-					foreach( Mobile targ in m.GetMobilesInRange( 2 ) )
+                    if (Caster.Skills.Poisoning.Value / 200.0 >= Utility.RandomDouble())
+                        m.ApplyPoison(Caster, Poison.Lesser);
+
+                    foreach ( Mobile targ in m.GetMobilesInRange( 2 ) )
 						if(!(Caster is BaseCreature && targ is BaseCreature ))
 							if( ( targ != Caster && m != targ ) && ( SpellHelper.ValidIndirectTarget( Caster, targ ) && Caster.CanBeHarmful( targ, false) ) )
 								targets.Add( targ );
@@ -85,7 +88,7 @@ namespace Server.Spells.Necromancy
 							num = 3;
 
 						Caster.DoHarmful( targ );
-						SpellHelper.Damage( this, targ, ((m.Player && Caster.Player) ? pvpDamage : pvmDamage) / num, 0, 0, 0, 100, 0 );
+                        SpellHelper.Damage( this, targ, ((m.Player && Caster.Player) ? pvpDamage : pvmDamage) / num, 0, 0, 0, 100, 0 );
 					}
 				}
 			}

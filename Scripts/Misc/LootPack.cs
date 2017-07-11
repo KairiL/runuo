@@ -472,9 +472,35 @@ namespace Server
 				new LootPackEntry( false, OldMagicItems,	100.00, 1, 1, 70, 100 )
 			} );
 		#endregion
+        /*
+        #region Khaldun definitions
+        public static readonly LootPack EpicJewel = new LootPack( new LootPackEntry[]
+            {
+                new LootPackEntry( true, typeof( BaseJewel ), 100.00, 1, 6, 0, 100)
+            } );
 
-		#region Generic accessors
-		public static LootPack Poor{ get{ return Core.SE ? SePoor : Core.AOS ? AosPoor : OldPoor; } }
+        public static readonly LootPack EpicInstrument = new LootPack( new LootPackEntry[]
+            {
+                new LootPackEntry( true, typeof( Instrument ), 100.00, 1, 2, 0, 100 )
+            } );
+        public static readonly LootPack EpicWeapon = new LootPack( new LootPackEntry[]
+            {
+                new LootPackEntry( true, typeof( BaseWeapon ), 100.00, 1, 6, 0, 100)
+            } );
+        public static readonly LootPack EpicRanged = new LootPack(new LootPackEntry[]
+            {
+                new LootPackEntry( true, typeof( BaseRanged ), 100.00, 1, 6, 0, 100)
+            });
+        public static readonly LootPack EpicArmor = new LootPack(new LootPackEntry[]
+            {
+                new LootPackEntry( true, typeof( BaseArmor ), 100.00, 1, 6, 0, 100)
+            });
+        //Shield
+        
+        #endregion
+        */
+        #region Generic accessors
+        public static LootPack Poor{ get{ return Core.SE ? SePoor : Core.AOS ? AosPoor : OldPoor; } }
 		public static LootPack Meager{ get{ return Core.SE ? SeMeager : Core.AOS ? AosMeager : OldMeager; } }
 		public static LootPack Average{ get{ return Core.SE ? SeAverage : Core.AOS ? AosAverage : OldAverage; } }
 		public static LootPack Rich{ get{ return Core.SE ? SeRich : Core.AOS ? AosRich : OldRich; } }
@@ -522,9 +548,9 @@ namespace Server
 			} );
 		#endregion
 		*/
-	}
+    }
 
-	public class LootPackEntry
+    public class LootPackEntry
 	{
 		private int m_Chance;
 		private LootPackDice m_Quantity;
@@ -660,7 +686,7 @@ namespace Server
 
 						if ( bonusProps < m_MaxProps && LootPack.CheckLuck( luckChance ) )
 							++bonusProps;
-
+                        
 						int props = 1 + bonusProps;
 
 						// Make sure we're not spawning items with 6 properties.
@@ -712,7 +738,6 @@ namespace Server
 				else if ( item is BaseInstrument )
 				{
 					SlayerName slayer = SlayerName.None;
-
 					if ( Core.AOS )
 						slayer = BaseRunicTool.GetRandomSlayer();
 					else
@@ -727,7 +752,10 @@ namespace Server
 					BaseInstrument instr = (BaseInstrument)item;
 
 					instr.Quality = InstrumentQuality.Regular;
-					instr.Slayer = slayer;
+                    if ( instr.Slayer == SlayerName.None)
+					    instr.Slayer = slayer;
+                    else
+                        instr.Slayer2 = slayer;
 				}
 
 				if ( item.Stackable )
@@ -766,22 +794,34 @@ namespace Server
 
 		public int GetBonusProperties()
 		{
-			int p0=0, p1=0, p2=0, p3=0, p4=0, p5=0;
+			int p0=0, p1=0, p2=0, p3=0, p4=0, p5=0, p6=0, p7=0;
 
 			switch ( m_MaxProps )
 			{
 				case 1: p0= 3; p1= 1; break;
-				case 2: p0= 6; p1= 3; p2= 1; break;
-				case 3: p0=10; p1= 6; p2= 3; p3= 1; break;
-				case 4: p0=16; p1=12; p2= 6; p3= 5; p4=1; break;
-				case 5: p0=30; p1=25; p2=20; p3=15; p4=9; p5=1; break;
+				case 2: p0= 6; p1 = 3; p2= 1; break;
+				case 3: p0=10; p1 = 6; p2= 3; p3= 1; break;
+				case 4: p0=16; p1 =12; p2= 6; p3= 5; p4=1; break;
+				case 5: p0=30; p1 =25; p2=20; p3=15; p4=9; p5=1; break;
+                case 6: p1=30; p2 =25; p3=20; p4=15; p5=9; p6=1; break;
+                case 7: p2=30; p3 =25; p4=20; p5=15; p6=9; p7=1; break;
 			}
 
-			int pc = p0+p1+p2+p3+p4+p5;
+			int pc = p0+p1+p2+p3+p4+p5+p6+p7;
 
 			int rnd = Utility.Random( pc );
 
-			if ( rnd < p5 )
+            if (rnd < p7)
+                return 7;
+            else
+                rnd -= p7;
+
+            if (rnd < p6)
+                return 6;
+            else
+                rnd -= p6;
+
+            if ( rnd < p5 )
 				return 5;
 			else
 				rnd -= p5;

@@ -56,7 +56,7 @@ namespace Server.Items
 				int y = from.Y;
 				int z = from.Z;
 
-				ArrayList trapshere = CheckTrap( m_pnt, map, 0 );
+				ArrayList trapshere = CheckTrap( m_pnt, map, 3 );
 				if ( trapshere.Count > 0 )
 				{
 					from.SendMessage( "There is already a trap here." ); 

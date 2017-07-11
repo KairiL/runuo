@@ -51,7 +51,8 @@ namespace Server.Spells.Third
 
 					if ( Core.AOS )
 					{
-						if ( Caster.InRange( m, 2 ) )
+
+						if ( Caster.InRange( m, 5 ) )
 						{
 							int total = (Caster.Skills.Magery.Fixed + Caster.Skills.Poisoning.Fixed) / 2;
 
@@ -63,7 +64,9 @@ namespace Server.Spells.Third
 								level = 1;
 							else
 								level = 0;
-						}
+                            if (level > 0 && !Caster.InRange(m, 3))
+                                level -= 1;
+                        }
 						else
 						{
 							level = 0;
