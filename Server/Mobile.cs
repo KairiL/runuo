@@ -793,7 +793,7 @@ namespace Server
 
 		private static readonly TimeSpan WarmodeSpamCatch = TimeSpan.FromSeconds( (Core.SE ? 1.0 : 0.5) );
 		private static readonly TimeSpan WarmodeSpamDelay = TimeSpan.FromSeconds( (Core.SE ? 4.0 : 2.0) );
-		private const int WarmodeCatchCount = 4; // Allow four warmode changes in 0.5 seconds, any more will be delay for two seconds
+		private const int WarmodeCatchCount = 8; // Allow four warmode changes in 0.5 seconds, any more will be delay for two seconds
 
 		[CommandProperty( AccessLevel.GameMaster )]
 		public Race Race

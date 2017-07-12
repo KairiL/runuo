@@ -38,8 +38,7 @@ namespace Server.Items
 		public override void OnHit( Mobile attacker, Mobile defender, double damageBonus )
 		{
 			base.OnHit( attacker, defender, damageBonus );
-
-			defender.Stam -= Utility.Random( 3, 3 ); // 3-5 points of stamina loss
+			defender.Stam -= (int)(attacker.Skills.Macing.Value / 5.0); //orig  3-5 points of stamina loss
 		}
 
 		public override double GetBaseDamage( Mobile attacker )

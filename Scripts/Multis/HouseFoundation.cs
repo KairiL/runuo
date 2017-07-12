@@ -950,8 +950,11 @@ namespace Server.Multis
 			int oldPrice = Price;
 			int newPrice = oldPrice + CustomizationCost + ((DesignState.Components.List.Length - ( CurrentState.Components.List.Length + CurrentState.Fixtures.Length )) * 500);
 			int cost = newPrice - oldPrice;
+            if (from.Account.Username == "mom" || from.Account.Username == "mom2")
+                cost = 0;
 
-			if ( !this.Deleted ) { // Temporary Fix. We should be booting a client out of customization mode in the delete handler.
+
+            if ( !this.Deleted ) { // Temporary Fix. We should be booting a client out of customization mode in the delete handler.
 				if ( from.AccessLevel >= AccessLevel.GameMaster && cost != 0 )
 				{
 					from.SendMessage( "{0} gold would have been {1} your bank if you were not a GM.", cost.ToString(), ((cost > 0 )? "withdrawn from" : "deposited into" ) );
@@ -1051,8 +1054,9 @@ namespace Server.Multis
 				int oldPrice = context.Foundation.Price;
 				int newPrice = oldPrice + context.Foundation.CustomizationCost + ((context.Foundation.DesignState.Components.List.Length - ( context.Foundation.CurrentState.Components.List.Length + context.Foundation.Fixtures.Count) ) * 500);
 				int bankBalance = Banker.GetBalance( from );
-
-				from.SendGump( new ConfirmCommitGump( from, context.Foundation, bankBalance, oldPrice, newPrice ) );
+                if (from.Account.Username == "mom" || from.Account.Username == "mom2")
+                    newPrice = oldPrice;
+                from.SendGump( new ConfirmCommitGump( from, context.Foundation, bankBalance, oldPrice, newPrice ) );
 			}
 		}
 
