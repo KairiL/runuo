@@ -41,8 +41,9 @@ namespace Server.Items
 			Attributes.CastSpeed = 1;
             Attributes.Luck = 400;
             SkillBonuses.SetValues(0, SkillName.Hiding, 100);
-            SkillBonuses.SetValues(0, SkillName.Poisoning, 100);
-            SkillBonuses.SetValues(0, SkillName.Necromancy, 100);
+            SkillBonuses.SetValues(1, SkillName.MagicResist, 100);
+            SkillBonuses.SetValues(2, SkillName.Poisoning, 100);
+            SkillBonuses.SetValues(3, SkillName.Necromancy, 100);
             //TODO skill bonuses
         }
 
@@ -72,6 +73,7 @@ namespace Server.Items
             from.Poison = null;
             from.Hits += 20;
             from.Stam += 20;
+            from.Combatant = null;
         }
 
         private void DoPulls(Mobile from)
