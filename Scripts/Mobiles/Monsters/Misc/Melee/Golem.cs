@@ -259,15 +259,16 @@ namespace Server.Mobiles
 		{
             double pskill = 0;
             int level = 0;
-            int lmc = AosAttributes.GetValue(from, AosAttribute.LowerManaCost);
-            int cost = (amount * (100 - lmc)) / 300;
+            int lmc;
+            int cost = amount;
             if (Controlled || Summoned)
             {
                 Mobile master = (this.ControlMaster);
 
                 if (master == null)
                     master = this.SummonMaster;
-
+                lmc = AosAttributes.GetValue(master, AosAttribute.LowerManaCost);
+                cost = (amount * (100 - lmc)) / 300;
                 if (master != null && master.Player)
                 {
 
@@ -306,7 +307,7 @@ namespace Server.Mobiles
                 }
             }
 
-            base.OnDamage( cost, from, willKill );
+            base.OnDamage( amount, from, willKill );
 		}
 
 		public override bool BardImmune{ get{ return true; } }
