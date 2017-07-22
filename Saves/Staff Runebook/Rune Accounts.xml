@@ -62,6 +62,7 @@
 					<Rune Name="Level 2" TargetMap="Felucca" X="5976" Y="169" Z="0" />
 					<Rune Name="Level 3" TargetMap="Felucca" X="6083" Y="145" Z="-20" />
 					<Rune Name="Level 4" TargetMap="Felucca" X="6059" Y="89" Z="24" />
+					<Rune Name="Mysterious stairs (Level 3)" TargetMap="Felucca" X="6028" Y="197" Z="22" />
 				</Runebook>
 				<Runebook Name="Ice">
 					<Rune Name="Entrance" TargetMap="Felucca" X="5210" Y="2322" Z="30" />
@@ -74,6 +75,15 @@
 					<Rune Name="Entrance 1" TargetMap="Felucca" X="6009" Y="3775" Z="19" />
 					<Rune Name="Entrance 2" TargetMap="Felucca" X="5882" Y="3819" Z="-1" />
 					<Rune Name="Level 1" TargetMap="Felucca" X="5571" Y="1302" Z="0" />
+					<Rune Name="Body Shop" TargetMap="Felucca" X="5619" Y="1331" Z="5" />
+					<Rune Name="Alchemist's Lab" TargetMap="Felucca" X="5435" Y="1340" Z="5" />
+					<Rune Name="Smith" TargetMap="Felucca" X="5387" Y="1343" Z="0" />
+					<Rune Name="Skull Altar" TargetMap="Felucca" X="5395" Y="1419" Z="0" />
+					<Rune Name="Sarcophagi" TargetMap="Felucca" X="5395" Y="1468" Z="0" />
+					<Rune Name="Coffin Hole" TargetMap="Felucca" X="5491" Y="1396" Z="2" />
+					<Rune Name="Switch1" TargetMap="Felucca" X="5460" Y="1426" Z="0" />
+					<Rune Name="Switch2" TargetMap="Felucca" X="5403" Y="1361" Z="0" />
+					<Rune Name="Secret Room" TargetMap="Felucca" X="5524" Y="1365" Z="0" />
 				</Runebook>
 				<Runebook Name="Miscellaneous">
 					<Rune Name="Hyloth Fire Pit" TargetMap="Felucca" X="4596" Y="3630" Z="30" />
@@ -142,6 +152,9 @@
 					<Rune Name="Level 1" TargetMap="Felucca" X="5825" Y="630" Z="0" />
 					<Rune Name="Level 2" TargetMap="Felucca" X="5690" Y="569" Z="25" />
 					<Rune Name="Level 3" TargetMap="Felucca" X="5703" Y="639" Z="0" />
+				</Runebook>
+				<Runebook Name="??">
+					<Rune Name="Library/Prison?" TargetMap="Felucca" X="6754" Y="78" Z="0" />
 				</Runebook>
 			</Runebook>
 			<Runebook Name="Internal">
@@ -838,9 +851,30 @@
 					<Rune Name="Silver Sapling" TargetMap="TerMur" X="341" Y="619" Z="26" />
 					<Rune Name="Stygian Dragon Lair Entrance" TargetMap="TerMur" X="851" Y="279" Z="-12" />
 					<Rune Name="Sutek the Mage" TargetMap="TerMur" X="924" Y="595" Z="-14" />
+					<Rune Name="Abyssal Infernal Entrance" TargetMap="TerMur" X="975" Y="419" Z="-21" />
 				</Runebook>
 				<Runebook Name="Underworld">
 					<Rune Name="Enterance" TargetMap="TerMur" X="1128" Y="1211" Z="-2" />
+					<Rune Name="Lava Door" TargetMap="TerMur" X="984" Y="310" Z="-35" />
+					<Rune Name="Weird Building" TargetMap="TerMur" X="837" Y="277" Z="30" />
+					<Rune Name="Star Room" TargetMap="TerMur" X="946" Y="70" Z="72" />
+					<Rune Name="Lil stairs" TargetMap="TerMur" X="1234" Y="1135" Z="-42" />
+				</Runebook>
+				<Runebook Name="??">
+					<Rune Name="Ant Palace TD?" TargetMap="TerMur" X="854" Y="1776" Z="11" />
+					<Rune Name="Lava Sands Champ?" TargetMap="TerMur" X="928" Y="1616" Z="0" />
+					<Rune Name="Bananas" TargetMap="TerMur" X="863" Y="1407" Z="22" />
+					<Rune Name="Medusa" TargetMap="TerMur" X="818" Y="927" Z="-15" />
+					<Rune Name="Navrey" TargetMap="TerMur" X="1053" Y="868" Z="-26" />
+					<Rune Name="4vs4 Arena?" TargetMap="TerMur" X="895" Y="2304" Z="45" />
+					<Rune Name="Sand Eye Room" TargetMap="TerMur" X="768" Y="2303" Z="0" />
+					<Rune Name="Big Blue Room" TargetMap="TerMur" X="506" Y="2308" Z="0" />
+					<Rune Name="Stairs &amp; Circles" TargetMap="TerMur" X="532" Y="2191" Z="25" />
+					<Rune Name="Sand Hole" TargetMap="TerMur" X="121" Y="1683" Z="-2" />
+					<Rune Name="Stairs to stairs &amp; Circles" TargetMap="TerMur" X="916" Y="2016" Z="67" />
+					<Rune Name="Cave near lava" TargetMap="TerMur" X="877" Y="2101" Z="40" />
+					<Rune Name="Abyssal Infernal" TargetMap="Felucca" X="7150" Y="753" Z="26" />
+					<Rune Name="Primeval Lich" TargetMap="Felucca" X="6999" Y="1020" Z="-15" />
 				</Runebook>
 			</Runebook>
 			<Runebook Name="Sites">
@@ -869,6 +903,7 @@
 					<Rune Name="Void Isle" TargetMap="TerMur" X="440" Y="3577" Z="38" />
 					<Rune Name="Walled Circus" TargetMap="TerMur" X="370" Y="3273" Z="0" />
 					<Rune Name="Waterfall Point" TargetMap="TerMur" X="661" Y="2894" Z="39" />
+					<Rune Name="Lava Sands Champ" TargetMap="TerMur" X="928" Y="1616" Z="0" />
 				</Runebook>
 			</Runebook>
 		</Runebook>
@@ -877,6 +912,17 @@
 			<Rune Name="Tiny Island" TargetMap="Felucca" X="6998" Y="1558" Z="0" />
 			<Rune Name="T2A rectangle" TargetMap="Felucca" X="7017" Y="1893" Z="40" />
 			<Rune Name="Moonglow Chunk" TargetMap="Felucca" X="6796" Y="2155" Z="0" />
+			<Rune Name="Destard Mysterious Cave" TargetMap="Felucca" X="5135" Y="993" Z="0" />
+			<Rune Name="Hythloth Mysterious Stairs" TargetMap="Felucca" X="6026" Y="197" Z="22" />
+			<Rune Name="Deceit Mysterious Door" TargetMap="Felucca" X="5304" Y="676" Z="-20" />
+			<Rune Name="Fire Mysterious teleporter" TargetMap="Felucca" X="5691" Y="1348" Z="0" />
+			<Rune Name="Shame Mage Tower Room" TargetMap="Felucca" X="5447" Y="180" Z="0" />
+			<Rune Name="Shame Unreachable Room" TargetMap="Felucca" X="5737" Y="49" Z="5" />
+			<Rune Name="Fire Mage Tower End" TargetMap="Felucca" X="5643" Y="1435" Z="0" />
+			<Rune Name="Wrong Maze Room" TargetMap="Felucca" X="5703" Y="639" Z="0" />
+			<Rune Name="Hidden Hole Stygian Abyss" TargetMap="TerMur" X="1008" Y="443" Z="-11" />
+			<Rune Name="Abyssal Infernal Entrance" TargetMap="TerMur" X="975" Y="419" Z="-21" />
+			<Rune Name="Primeval Lich Entrance" TargetMap="TerMur" X="513" Y="584" Z="11" />
 		</Runebook>
 	</RuneAccount>
 	<RuneAccount Username="ezjones">
