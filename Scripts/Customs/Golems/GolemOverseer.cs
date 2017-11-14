@@ -80,7 +80,12 @@ namespace Server.Mobiles
 			else
 				SetHits( (int)(50*(scalar+0.7)), (int)(70*(scalar+0.7)) );
 
-			if ( met < 0.2 )
+            Container pack = Backpack;
+
+            if (pack != null)
+                pack.Delete();
+
+            if ( met < 0.2 )
 			{
 				Name = "an iron golem overseer";
 				SetDamageType( ResistanceType.Physical, 100 );
@@ -91,10 +96,7 @@ namespace Server.Mobiles
 				SetResistance( ResistanceType.Energy, (int)(20*scalar), (int)(30*scalar) );
 				ControlSlots = 2;
 				Hue = 0;
-                Container pack = Backpack;
-
-                if (pack != null)
-                    pack.Delete();
+                
 
                 pack = new StrongBackpack();
                 pack.Movable = false;
@@ -556,7 +558,7 @@ namespace Server.Mobiles
                 }
 
             }
-            if (Mana >= 50 && caster.Skills.Inscribe.Value >= 80 && overseerCount >= 3 && (Hue == 2425 || Hue == 0))//Agapite or Iron
+            if (Mana >= 50 && caster.Skills.Inscribe.Value >= 80 && overseerCount >= 3 && (Hue == 2425 || Hue == 0 || Hue == 2213))//Agapite or Iron or Gold
             {
                 for (int i = 0; i < deadList.Count; ++i)
                 {
@@ -948,18 +950,20 @@ namespace Server.Mobiles
 
             return base.IsSnoop(from);
         }
-
+        /*
         public override bool OnDragDrop(Mobile from, Item item)
         {
+           
             if ( Hue == 0 || Hue == 2213 || Hue == 2425 )
                 if (PackAnimal.CheckAccess(this, from))
                 {
                     AddToBackpack(item);
                     return true;
                 }
+            
             return base.OnDragDrop(from, item);
         }
-
+        */
         public override bool CheckNonlocalDrop(Mobile from, Item item, Item target)
         {
             return PackAnimal.CheckAccess(this, from);

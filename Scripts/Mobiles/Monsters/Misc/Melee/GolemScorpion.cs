@@ -305,7 +305,7 @@ namespace Server.Mobiles
                     m = ControlMaster;
                     m_Speed = (int)((m.Skills[SkillName.Fletching].Value * 3 + m.Skills[SkillName.Carpentry].Value + m.Skills[SkillName.Blacksmith].Value) / 58.0);
                     m_Range = 4 + (int)(m.Skills[SkillName.Fletching].Value / 10.0);
-                    m_Speed = m.Skills[SkillName.Fletching].Value / 10.0;
+                    //m_Speed = m.Skills[SkillName.Fletching].Value / 10.0;
                 }
 
                 if (0.75 >= Utility.RandomDouble() && (m_Thrown % 2) == 1) // 75% chance to quickly throw another bomb

@@ -11,7 +11,8 @@ namespace Server.Mobiles
 
 		public override bool IsBondable{ get{ return true; } }
 
-		[Constructable]
+        public override FoodType FavoriteFood { get { return FoodType.Gold; } }
+        [Constructable]
 		public Golem() : this( 0, 1.0, 0 )
 		{
 		}

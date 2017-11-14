@@ -159,7 +159,7 @@ namespace Server.Mobiles
 						this.Title = "a ballem";
 						
 						this.BodyValue = 792;
-            this.BaseSoundID = 0x3E9;
+                        this.BaseSoundID = 0x3E9;
 						this.VirtualArmor = va;
 						this.Stage = 2;
 
@@ -178,14 +178,14 @@ namespace Server.Mobiles
 						this.SetSkill( SkillName.Magery, 70.0 );
 						this.SetSkill( SkillName.MagicResist, 70.0 );
 						this.SetSkill( SkillName.Tactics, 70.0 );
-            this.SetSkill( SkillName.Wrestling, 70.0 );
+                        this.SetSkill( SkillName.Wrestling, 70.0 );
             
 						this.SetStr( 991 );
-            this.SetDex( 1001 );
-            this.SetInt( 243 );
-            this.SetHits( 521 );
+                        this.SetDex( 1001 );
+                        this.SetInt( 243 );
+                        this.SetHits( 521 );
             
-            this.SetDamage( 10, 15 );
+                        this.SetDamage( 10, 15 );
 					}
 				}
 			}
@@ -238,14 +238,14 @@ namespace Server.Mobiles
 						this.SetSkill( SkillName.Magery, 100.0 );
 						this.SetSkill( SkillName.MagicResist, 100.0 );
 						this.SetSkill( SkillName.Tactics, 70.0 );
-            this.SetSkill( SkillName.Wrestling, 80.0 );
+                        this.SetSkill( SkillName.Wrestling, 80.0 );
 						
 						this.SetStr( 1000 );
-            this.SetDex( 1028 );
-            this.SetInt( 1014 );
-            this.SetHits( 2125 );
+                        this.SetDex( 1028 );
+                        this.SetInt( 1014 );
+                        this.SetHits( 2125 );
             
-            this.SetDamage( 17, 21 );
+                        this.SetDamage( 17, 21 );
 					}
 				}
 			}
