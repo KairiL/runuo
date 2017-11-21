@@ -29,7 +29,7 @@ namespace Server.Items
 
 		public bool CheckRange( Point3D loc, Point3D oldLoc, int range )
 		{
-			return CheckRange( loc, range ) && !CheckRange( oldLoc, range );
+			return CheckRange( loc, range );
 		}
 
 		public bool CheckRange( Point3D loc, int range )

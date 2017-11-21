@@ -40,7 +40,8 @@ namespace Server.Mobiles
 		AI_Spellbinder, // PAPPA SMURF's
 // end 1st
         AI_Necro,
-        AI_Necromage
+        AI_Necromage,
+        AI_NecromageEpic
     }
 
 	public enum ActionType

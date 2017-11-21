@@ -166,7 +166,6 @@ namespace Server.Mobiles
 				SetResistance( ResistanceType.Energy, (int)(22*scalar), (int)(32*scalar) );
 				ControlSlots = 2;
 				Hue = 2213;
-                Container pack = Backpack;
 
                 if (pack != null)
                     pack.Delete();
@@ -189,7 +188,6 @@ namespace Server.Mobiles
 				SetResistance( ResistanceType.Energy, (int)(27*scalar), (int)(32*scalar) );
 				ControlSlots = 3;
 				Hue = 2425;
-                Container pack = Backpack;
 
                 if (pack != null)
                     pack.Delete();

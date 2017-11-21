@@ -66,14 +66,12 @@ namespace Server.Items
 				int trapskill = (int)Math.Round(from.Skills.Tinkering.Value) + (int)Math.Round(from.Skills.Alchemy.Value);
 				int trapmod = trapskill - 50;
                 int trapuses = (int)(from.Skills.Tailoring.Value + (from.Skills.Carpentry.Value + (from.Skills.ArmsLore.Value + trapskill) / 2) / 4) / 2 + Utility.RandomMinMax(1, 3);
-                int rangeBonus = (int)(from.Skills.Fletching.Value*2 + from.Skills.ArmsLore.Value) / 100;
+                int rangeBonus = (int)(from.Skills.Fletching.Value * 2 + from.Skills.ArmsLore.Value) / 100;
                 int radiusBonus = (int)(from.Skills.Alchemy.Value + from.Skills.Blacksmith.Value + from.Skills.Tinkering.Value) / 100;
                 int delayBonus = (int)(from.Skills.Blacksmith.Value + from.Skills.Carpentry.Value) / 100;
 
                 if (from.Skills.Blacksmith.Value >= 120)
                     delayBonus += 1;
-
-
 
                 CraftedExplosionTrap trap = new CraftedExplosionTrap(); 
 
@@ -83,7 +81,6 @@ namespace Server.Items
                 trap.TriggerRange += rangeBonus;
                 trap.DamageRange += radiusBonus*2;
                 trap.Delay -= TimeSpan.FromSeconds(delayBonus);
-
 	
 				trap.MoveToWorld( new Point3D( x, y, z ), map );
 
