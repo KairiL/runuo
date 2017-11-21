@@ -1,4 +1,4 @@
-opusing System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Server;
@@ -173,11 +173,11 @@ namespace Server.Mobiles
 
 			SetDamage( 17, 21 );
 
-			SetDamageType( ResistanceType.Physical, 20 );
-			SetDamageType( ResistanceType.Fire, 20 );
-			SetDamageType( ResistanceType.Cold, 20 );
-			SetDamageType( ResistanceType.Poison, 20 );
-			SetDamageType( ResistanceType.Energy, 20 );
+			SetDamageType( ResistanceType.Physical, 50 );
+			SetDamageType( ResistanceType.Fire, 70 );
+			SetDamageType( ResistanceType.Cold, 70 );
+			SetDamageType( ResistanceType.Poison, 70 );
+			SetDamageType( ResistanceType.Energy, 70 );
 
 			SetResistance( ResistanceType.Physical, 30 );
 			SetResistance( ResistanceType.Fire, 30 );
