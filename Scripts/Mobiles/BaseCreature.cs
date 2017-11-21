@@ -2473,6 +2473,9 @@ namespace Server.Mobiles
                 case AIType.AI_Necromage:
                     m_AI = new NecromageAI(this);
                     break;
+                case AIType.AI_NecromageEpic:
+                    m_AI = new NecromageEpicAI(this);
+                    break;
             }
 		}
 

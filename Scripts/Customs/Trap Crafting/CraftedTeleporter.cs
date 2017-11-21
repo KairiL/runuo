@@ -8,7 +8,9 @@ using Server.Spells;
 
 namespace Server.Items
 {
-	public class CraftedTeleporter : CraftedTrap
+    
+
+    public class CraftedTeleporter : CraftedTrap
 	{
         [Constructable]
 		public CraftedTeleporter()
@@ -38,6 +40,8 @@ namespace Server.Items
             BonusSkill = SkillName.Inscribe;
             Delay = TimeSpan.FromSeconds(3);
         }
+
+        private static TimeSpan m_DDT = TimeSpan.FromHours(168.0);
 
         public override void Serialize(GenericWriter writer)
         {

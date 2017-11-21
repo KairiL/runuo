@@ -21,9 +21,27 @@ namespace Server.Items
         private Poison m_Poison;
         private Point3D m_PointDest;
         private Map m_MapDest;
+        private bool decays = true;
+
+        private static TimeSpan m_DDT = TimeSpan.FromHours(24.0);
+
+        public bool CheckRange(Point3D loc, Point3D oldLoc, int range)
+        {
+            return CheckRange(loc, range);
+        }
+
+        [CommandProperty(AccessLevel.GameMaster)]
+        public bool Decays
+        {
+            get
+            {
+                return m_TrapOwner.AccessLevel <= AccessLevel.GameMaster && decays;
+            }
+        }
 
         private DateTime lastused = DateTime.Now;
 		private TimeSpan delay = TimeSpan.FromSeconds( 4 );
+
 
         [CommandProperty(AccessLevel.GameMaster)]
         public TimeSpan Delay
@@ -337,13 +355,20 @@ namespace Server.Items
                                 Teleport(m);
                         }
                         if (Poison != null)
+                        {
                             m.ApplyPoison(m, m_Poison);
+                            TrapOwner.DoHarmful(m);
+                        }
 
                         if (ParalyzeTime > 0)
+                        {
+                            TrapOwner.DoHarmful(m);
                             if (m.Player)
                                 m.Paralyze(TimeSpan.FromSeconds(ParalyzeTime - (m.Skills.MagicResist.Value/12) / 4));
                             else
                                 m.Paralyze(TimeSpan.FromSeconds(ParalyzeTime - (m.Skills.MagicResist.Value / 12)));
+                            
+                        }
 
                         
                     }
@@ -516,6 +541,8 @@ namespace Server.Items
             TriggerRange = 1;
             DamageRange = 0;
             ManaCost = 10;
+            TrapPower = 0;
+            Delay = TimeSpan.FromSeconds(5);
         }
 
         public CraftedTrap( Serial serial ) : base( serial )
@@ -528,6 +555,8 @@ namespace Server.Items
             TriggerRange = 1;
             DamageRange = 0;
             ManaCost = 10;
+            TrapPower = 0;
+            Delay = TimeSpan.FromSeconds(5);
         }
 
         public override void Serialize( GenericWriter writer )

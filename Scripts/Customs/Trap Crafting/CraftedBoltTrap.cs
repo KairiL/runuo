@@ -35,6 +35,7 @@ namespace Server.Items
         
 		public CraftedBoltTrap( Serial serial ) : base( serial )
 		{
+            DamageType = "Physical";
             ItemID = 7960;
             Visible = false;
             Hue = 543;
