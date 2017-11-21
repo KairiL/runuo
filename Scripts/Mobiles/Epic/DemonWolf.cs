@@ -1,4 +1,4 @@
-using System;
+opusing System;
 using System.Collections;
 using System.Collections.Generic;
 using Server;
@@ -160,7 +160,7 @@ namespace Server.Mobiles
 		[Constructable]
 		public DemonWolf() : base( AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4 )
 		{
-			Name = "demon knight wolf";
+			Name = "a demon wolf";
 			Body = 16076;
 			BaseSoundID = 0x165;
 
@@ -186,10 +186,10 @@ namespace Server.Mobiles
 			SetResistance( ResistanceType.Energy, 30 );
 
 			SetSkill( SkillName.Necromancy, 120, 120.0 );
-			SetSkill( SkillName.SpiritSpeak, 120.0, 120.0 );
+			SetSkill( SkillName.SpiritSpeak, 120.0, 140.0 );
 
 			SetSkill( SkillName.DetectHidden, 80.0 );
-			SetSkill( SkillName.EvalInt, 100.0 );
+			SetSkill( SkillName.EvalInt, 120.0, 140 );
 			SetSkill( SkillName.Magery, 100.0 );
 			SetSkill( SkillName.Meditation, 120.0 );
 			SetSkill( SkillName.MagicResist, 150.0 );
@@ -227,44 +227,7 @@ namespace Server.Mobiles
 				MovingEffect( from, 0xECA, 10, 0, false, false, 0, 0 );
 				PlaySound( 0x491 );
 
-				if ( 0.05 > Utility.RandomDouble() )
-					Timer.DelayCall( TimeSpan.FromSeconds( 1.0 ), new TimerStateCallback( CreateBones_Callback ), from );
-
 				m_InHere = false;
-			}
-		}
-
-		public virtual void CreateBones_Callback( object state )
-		{
-			Mobile from = (Mobile)state;
-			Map map = from.Map;
-
-			if ( map == null )
-				return;
-
-			int count = Utility.RandomMinMax( 1, 3 );
-
-			for ( int i = 0; i < count; ++i )
-			{
-				int x = from.X + Utility.RandomMinMax( -1, 1 );
-				int y = from.Y + Utility.RandomMinMax( -1, 1 );
-				int z = from.Z;
-
-				if ( !map.CanFit( x, y, z, 16, false, true ) )
-				{
-					z = map.GetAverageZ( x, y );
-
-					if ( z == from.Z || !map.CanFit( x, y, z, 16, false, true ) )
-						continue;
-				}
-
-				UnholyBone bone = new UnholyBone();
-
-				bone.Hue = 0;
-				bone.Name = "unholy bones";
-				bone.ItemID = Utility.Random( 0xECA, 9 );
-
-				bone.MoveToWorld( new Point3D( x, y, z ), map );
 			}
 		}
 
