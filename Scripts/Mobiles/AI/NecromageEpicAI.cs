@@ -47,11 +47,11 @@ namespace Server.Mobiles
 			}
 		}
 
-		private const double HealChance = 0.05; // 5% chance to heal at gm necromancy, uses spirit speak healing
-		private const double TeleportChance = 0.20; // 5% chance to teleport at gm necromancy
+		private const double HealChance = 0.10; // 10% chance to heal at gm necromancy?, uses spirit speak healing
+		private const double TeleportChance = 0.10; // 10% chance to teleport at gm necromancy
 		//private const double DispelChance = 0.75; // 75% chance to dispel at gm necromancy
-        private const double ItemChance = 0.0; //0% chance to use an offensive item
-        private const double AbilityChance = 0.0; //0% chance to use special abilities
+        //private const double ItemChance = 0.0; //0% chance to use an offensive item
+        //private const double AbilityChance = 0.0; //0% chance to use special abilities
 
 		public virtual double ScaleByNecromancy( double v )
 		{
@@ -177,8 +177,8 @@ namespace Server.Mobiles
 		{
 			int maxCircle = (int)((m_Mobile.Skills[SkillName.Necromancy].Value + 50.0) / (100.0 / 7.0));
 			int minCircle = (int)((m_Mobile.Skills[SkillName.Magery].Value + 50.0) / (100.0 / 7.0));
-
-			if ( maxCircle < 2 && minCircle < 8 )
+           // m_Mobile.DebugSay("Casting random spell");
+            if ( maxCircle < 2 && minCircle < 8 )
 				maxCircle = 2;
 				minCircle = 8;
 
@@ -196,7 +196,7 @@ namespace Server.Mobiles
 				case  9: return new StrangleSpell( m_Mobile, null );
 				case 10: return new WitherSpell( m_Mobile, null );
 				case 11: return new VengefulSpiritSpell( m_Mobile, null );
-				default: return new MeteorSwarmSpell( m_Mobile, null );
+				default: return new ExplosionSpell( m_Mobile, null );
 			}
 		}
 
@@ -230,14 +230,17 @@ namespace Server.Mobiles
 			Spell spell = null;
 
 			int healChance = (m_Mobile.Hits == 0 ? m_Mobile.HitsMax : (m_Mobile.HitsMax / m_Mobile.Hits));
-            int witherChance = 20; //20% chance to wither per enemy in range
-
-			switch ( Utility.Random( 5 + healChance ) )
+            int spellResult;
+            double witherChance = .05; //05% chance to wither per enemy in range
+            m_Mobile.DebugSay("Choosing a Spell");
+            spellResult = Utility.Random(4 + healChance);
+            m_Mobile.DebugSay("Chose " + spellResult);
+            switch ( spellResult )
 			{
 				case 0: // Heal  myself
 				{
-					
-					if ( m_Mobile.Hits < (m_Mobile.HitsMax - 50) )
+                    m_Mobile.DebugSay("0. Spirit Speak");
+                    if ( m_Mobile.Hits < (m_Mobile.HitsMax - 50) )
 						m_Mobile.UseSkill( SkillName.SpiritSpeak );
 					else if ( m_Mobile.Hits < (m_Mobile.HitsMax - 10) )
 						m_Mobile.UseSkill( SkillName.SpiritSpeak );
@@ -246,11 +249,12 @@ namespace Server.Mobiles
 				}
 				case 1: // PoisonStrike them
 				{
-					if ( !c.Poisoned )
+                    m_Mobile.DebugSay("1. Poison Strike");
+                    if ( !c.Poisoned )
                         if (Utility.RandomDouble() > .5)
 						    spell = new PoisonStrikeSpell( m_Mobile, null );
                         else
-                            spell = new PoisonFieldSpell( m_Mobile, null );
+                            spell = new PoisonFieldSpell( m_Mobile, null );//need to do targeting on fields
                     else
                         spell = new FireFieldSpell( m_Mobile, null );
 
@@ -258,40 +262,47 @@ namespace Server.Mobiles
 				}
 				case 2: // Deal some damage
 				{
-                        List<Mobile> targets = new List<Mobile>();
+                    List<Mobile> targets = new List<Mobile>();
 
-                        BaseCreature cbc = m_Mobile as BaseCreature;
-                        bool isMonster = (cbc != null && !cbc.Controlled && !cbc.Summoned);
-                        //check if enough wither targets.
-                        foreach (Mobile m in m_Mobile.GetMobilesInRange(Core.ML ? 4 : 5))
+                    BaseCreature cbc = m_Mobile as BaseCreature;
+                    bool isMonster = (cbc != null && !cbc.Controlled && !cbc.Summoned);
+                    //check if enough wither targets.
+                    foreach (Mobile m in m_Mobile.GetMobilesInRange(Core.ML ? 4 : 5))
+                    {
+                        if (m_Mobile != m && m_Mobile.InLOS(m) && (isMonster || SpellHelper.ValidIndirectTarget(m_Mobile, m)) && m_Mobile.CanBeHarmful(m, false))
                         {
-                            if (m_Mobile != m && m_Mobile.InLOS(m) && (isMonster || SpellHelper.ValidIndirectTarget(m_Mobile, m)) && m_Mobile.CanBeHarmful(m, false))
+                            if (isMonster)
                             {
-                                if (isMonster)
+                                if (m is BaseCreature)
                                 {
-                                    if (m is BaseCreature)
-                                    {
-                                        BaseCreature bc = (BaseCreature)m;
+                                    BaseCreature bc = (BaseCreature)m;
 
-                                        if (!bc.Controlled && !bc.Summoned && bc.Team == cbc.Team)
-                                            continue;
-                                    }
-                                    else if (!m.Player)
-                                    {
+                                    if (!bc.Controlled && !bc.Summoned && bc.Team == cbc.Team)
                                         continue;
-                                    }
                                 }
-
-                                targets.Add(m);
+                                else if (!m.Player)
+                                {
+                                    continue;
+                                }
                             }
+
+                            targets.Add(m);
                         }
+                    }
 
-                        if (targets.Count * witherChance > Utility.RandomDouble())
-                            spell = new WitherSpell( m_Mobile, null );
-
+                    if (targets.Count * witherChance > Utility.RandomDouble())
+                    {
+                        m_Mobile.DebugSay("2. Wither");
+                        spell = new WitherSpell( m_Mobile, null );
+                    }
+                    else
+                    {
                         spell = GetRandomDamageSpell();
+                        m_Mobile.DebugSay("2. Random Spell");
+                    }
 
-					break;
+
+                    break;
 				}
 				case 3: // Set up a combo of attacks
 				{
@@ -305,41 +316,42 @@ namespace Server.Mobiles
 						}
 						else if ( !c.Poisoned )
 						{
-							spell = new PoisonSpell( m_Mobile, null );
+                            m_Mobile.DebugSay("3. Casting Poison");
+                            spell = new PoisonSpell( m_Mobile, null );
 						}
 					}
 					else if ( m_Mobile.Mana > 30 && m_Mobile.Mana < 80 )
 					{
 						if ( Utility.Random( 2 ) == 0 && !c.Paralyzed && !c.Frozen && !c.Poisoned )
 						{
-							m_Combo = 0;
+                            m_Mobile.DebugSay("3. Pain Spike (Explo)");
+                            m_Combo = 0;
 							spell = new PainSpikeSpell( m_Mobile, null );
 						}
 						else
 						{
-							m_Combo = 1;
+                            m_Mobile.DebugSay("3. Mind Rot (FS)");
+                            m_Combo = 1;
 							spell = new MindRotSpell( m_Mobile, null );
 						}
 					     
 					}
-				     break;
-				}
-				case 4: //Combo to soften our enemies with a powerful attack while we have max mana amounts
-				{
-					if ( m_Mobile.Mana > 80 )
-					{
-						if ( Utility.Random( 2 ) == 0 && !c.Paralyzed && !c.Frozen && !c.Poisoned ) 
-						{
-							m_Combo = 0;
-							spell = new VengefulSpiritSpell ( m_Mobile, null );
-						}
-						else
-						{
-							m_Combo = 1;
-							spell = new PoisonStrikeSpell ( m_Mobile, null );
-						}
-					}
-				    break;
+                    else
+                    {
+                        if (Utility.Random(2) == 0 && !c.Paralyzed && !c.Frozen && !c.Poisoned)
+                        {
+                            m_Mobile.DebugSay("4. Vengeful Spirit (Explo)");
+                            m_Combo = 0;
+                            spell = new VengefulSpiritSpell(m_Mobile, null);
+                        }
+                        else
+                        {
+                            m_Mobile.DebugSay("4. Poison Strike (FS)");
+                            m_Combo = 1;
+                            spell = new PoisonStrikeSpell(m_Mobile, null);
+                        }
+                    }
+                    break;
 				}
 			
 			}
@@ -352,52 +364,65 @@ namespace Server.Mobiles
 		public virtual Spell DoCombo( Mobile c )
 		{
 			Spell spell = null;
-            
+            m_Mobile.DebugSay("Doing Combo");
             if ( m_Combo == 0 )
             {
+                m_Mobile.DebugSay(" Casting Explosion and moving to the next spell ");
                 spell = new ExplosionSpell( m_Mobile, null );
-            }
-			if ( m_Combo == 1 )
-			{
-                if (m_Mobile.Skills[SkillName.Magery].Value * Utility.RandomDouble() > m_Mobile.Skills[SkillName.Necromancy].Value * Utility.RandomDouble())
-                    spell = new FlameStrikeSpell( m_Mobile, null );
-                else
-                    spell = new PoisonStrikeSpell(m_Mobile, null);
                 ++m_Combo; // Move to next spell
+            }
+			else if ( m_Combo == 1 )
+			{
+               
+                if (m_Mobile.Skills[SkillName.Magery].Value * Utility.RandomDouble() > m_Mobile.Skills[SkillName.Necromancy].Value * Utility.RandomDouble())
+                {
+                    spell = new FlameStrikeSpell( m_Mobile, null );
+                    m_Mobile.DebugSay("Casting Flamestrike and moving to the next spell ");
+                }
+                else
+                {
+                    spell = new PoisonStrikeSpell(m_Mobile, null);
+                    m_Mobile.DebugSay("Casting Poison Strike and moving to the next spell ");
+                }
+                    ++m_Combo; // Move to next spell
 			}
 			else if ( m_Combo == 2 )
 			{
-				if ( !c.Poisoned )
+                m_Mobile.DebugSay("Casting maybe poison and moving to next spell");
+                if ( !c.Poisoned )
 					spell = new PoisonSpell( m_Mobile, null );
 
 				++m_Combo; // Move to next spell
 			}
-
-			if ( m_Combo == 2 && spell == null )
+            else if ( m_Combo == 3 && spell == null )
 			{
 				switch ( Utility.Random( 3 ) )
 				{
 					default:
 					case 0:
 					{
+                        m_Mobile.DebugSay( "Casting Mind Rot or Wither and moving to next spell" );
 						if ( c.Int < c.Dex )
 							spell = new MindRotSpell( m_Mobile, null );
 						else
 							spell = new WitherSpell( m_Mobile, null );
 
-						++m_Combo; // Move to next spell
+                        m_Mobile.DebugSay( "Moving to next spell" );
+                        ++m_Combo; // Move to next spell
 
 						break;
 					}
 					case 1:
 					{
-						spell = new StrangleSpell( m_Mobile, null );
+                        m_Mobile.DebugSay("Casting Strangle and resetting combo");
+                        spell = new StrangleSpell( m_Mobile, null );
 						m_Combo = -1; // Reset combo state
 						break;
 					}
 					case 2:
 					{
-						spell = new WitherSpell( m_Mobile, null );
+                        m_Mobile.DebugSay("Casting Wither and resetting combo");
+                        spell = new WitherSpell( m_Mobile, null );
 						m_Combo = -1; // Reset combo state
 						break;
 					}
@@ -405,7 +430,8 @@ namespace Server.Mobiles
 			}
 			else if ( m_Combo == 4 && spell == null )
 			{
-				spell = new VengefulSpiritSpell( m_Mobile, null );
+                m_Mobile.DebugSay("Casting Vengeful Spirit and resetting combo");
+                spell = new VengefulSpiritSpell( m_Mobile, null );
 				m_Combo = -1;
 			}
 
@@ -554,8 +580,9 @@ namespace Server.Mobiles
 				{
 					TimeSpan delay;
 
-				    delay = TimeSpan.FromSeconds( m_Mobile.ActiveSpeed );
+				    delay = spell.GetCastDelay();
 					m_NextCastTime = DateTime.Now + delay;
+                    m_Mobile.DebugSay("Spell Delay is " + delay );
 				}
 			}
 			else if ( m_Mobile.Spell == null || !m_Mobile.Spell.IsCasting )
@@ -584,7 +611,8 @@ namespace Server.Mobiles
 				}
 				else
 				{
-					if ( m_Mobile.Hits < (m_Mobile.HitsMax - 50) )
+                    m_Mobile.DebugSay("Casting some heal spell and guarding");
+                    if ( m_Mobile.Hits < (m_Mobile.HitsMax - 50) )
 					{
 						if ( !new GreaterHealSpell( m_Mobile, null ).Cast() )
 							new HealSpell( m_Mobile, null ).Cast();
@@ -785,6 +813,8 @@ namespace Server.Mobiles
 			bool isDispel = ( targ is DispelSpell.InternalTarget );
 			bool isParalyze = ( targ is ParalyzeSpell.InternalTarget );
 			bool isTeleport = ( targ is TeleportSpell.InternalTarget );
+            bool isFireField = ( targ is FireFieldSpell.InternalTarget );
+            bool isPoisonField = ( targ is PoisonFieldSpell.InternalTarget );
 			bool teleportAway = false;
 
 			Mobile toTarget;
@@ -827,7 +857,7 @@ namespace Server.Mobiles
 					RunTo( toTarget );
 			}
 
-			if ( (targ.Flags & TargetFlags.Harmful) != 0 && toTarget != null )
+			if ( ( (targ.Flags & TargetFlags.Harmful) != 0) || (isPoisonField || isFireField ) && toTarget != null )
 			{
 				if ( (targ.Range == -1 || m_Mobile.InRange( toTarget, targ.Range )) && m_Mobile.CanSee( toTarget ) && m_Mobile.InLOS( toTarget ) )
 				{
