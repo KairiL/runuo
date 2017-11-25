@@ -277,7 +277,7 @@ namespace Server.Spells.Fifth
 			}
 		}
 
-		private class InternalTarget : Target
+		public class InternalTarget : Target
 		{
 			private PoisonFieldSpell m_Owner;
 
