@@ -31,7 +31,8 @@ namespace Server.Mobiles
 		AI_Healer,
 		AI_Vendor,
 		AI_Mage,
-		AI_Berserk,
+        AI_MageEpic,
+        AI_Berserk,
 		AI_Predator,
 // >>> [1st change of 12]
 		AI_Thief,
@@ -41,7 +42,8 @@ namespace Server.Mobiles
 // end 1st
         AI_Necro,
         AI_Necromage,
-        AI_NecromageEpic
+        AI_NecromageEpic,
+        AI_HiveMind
     }
 
 	public enum ActionType

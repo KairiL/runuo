@@ -526,7 +526,7 @@ namespace Server.Mobiles
 				}
 				else if ( SmartAI && (c.Spell is HealSpell || c.Spell is GreaterHealSpell) && !c.Poisoned ) // They have a heal spell out
 				{
-					spell = new PoisonStrikeSpell( m_Mobile, null );
+					spell = new PoisonSpell( m_Mobile, null );
 				}
 				else
 				{

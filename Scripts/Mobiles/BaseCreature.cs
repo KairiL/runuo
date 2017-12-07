@@ -2476,6 +2476,12 @@ namespace Server.Mobiles
                 case AIType.AI_NecromageEpic:
                     m_AI = new NecromageEpicAI(this);
                     break;
+                case AIType.AI_MageEpic:
+                    m_AI = new MageEpicAI(this);
+                    break;
+                case AIType.AI_HiveMind:
+                    m_AI = new HiveMindAI(this);
+                    break;
             }
 		}
 
