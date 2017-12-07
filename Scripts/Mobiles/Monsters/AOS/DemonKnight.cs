@@ -150,7 +150,7 @@ namespace Server.Mobiles
 				default:
 				case 0: return WeaponAbility.DoubleStrike;
 				case 1: return WeaponAbility.WhirlwindAttack;
-				case 2: return WeaponAbility.CrushingBlow;
+				case 2: return WeaponAbility.ArmorIgnore;
 			}
 		}
 
@@ -163,7 +163,7 @@ namespace Server.Mobiles
 		}
 
 		[Constructable]
-		public DemonKnight() : base( AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4 )
+		public DemonKnight() : base( AIType.AI_NecromageEpic, FightMode.Closest, 10, 1, 0.2, 0.4 )
 		{
 			Name = NameList.RandomName( "demon knight" );
 			Title = "the Dark Father";

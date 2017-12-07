@@ -7,10 +7,10 @@ using Server.Items;
 namespace Server.Mobiles
 {
 	[CorpseName( "a demon wolf corpse" )]
-	public class DemonWolf : BaseCreature
+	public class DemonWolf : BaseMount
 	{
 		public override bool IgnoreYoungProtection { get { return Core.ML; } }
-
+        
 		public static Type[] ArtifactRarity10 { get { return m_ArtifactRarity10; } }
 		public static Type[] ArtifactRarity11 { get { return m_ArtifactRarity11; } }
 		private static Type[] m_ArtifactRarity10 = new Type[]
@@ -114,6 +114,7 @@ namespace Server.Mobiles
 			if ( to == null || artifact == null )
 				return;
 
+            artifact.LootType = LootType.Cursed;
 			Container pack = to.Backpack;
 
 			if ( pack == null || !pack.TryDropItem( to, artifact, false ) )
@@ -157,15 +158,17 @@ namespace Server.Mobiles
 				DemonWolf.DistributeArtifact( this );
 		}
 
-		[Constructable]
-		public DemonWolf() : base( AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4 )
+        [Constructable]
+        public DemonWolf() : this( "a demon wolf" )
 		{
-			Name = "a demon wolf";
-			Body = 16076;
-			BaseSoundID = 0x165;
+        }
+        [Constructable]
+		public DemonWolf(string name) : base( name, 1410, 16076, AIType.AI_NecromageEpic, FightMode.Closest, 16, 1, .2, .4 )
+		{
+            BaseSoundID = 0x165;
 
 			SetStr( 500 );
-			SetDex( 100 );
+			SetDex( 150 );
 			SetInt( 1000 );
 
 			SetHits( 30000 );
@@ -173,24 +176,24 @@ namespace Server.Mobiles
 
 			SetDamage( 17, 21 );
 
-			SetDamageType( ResistanceType.Physical, 50 );
-			SetDamageType( ResistanceType.Fire, 70 );
-			SetDamageType( ResistanceType.Cold, 70 );
-			SetDamageType( ResistanceType.Poison, 70 );
-			SetDamageType( ResistanceType.Energy, 70 );
+			SetDamageType( ResistanceType.Physical, 20 );
+			SetDamageType( ResistanceType.Fire, 20 );
+			SetDamageType( ResistanceType.Cold, 20 );
+			SetDamageType( ResistanceType.Poison, 20 );
+			SetDamageType( ResistanceType.Energy, 20 );
 
-			SetResistance( ResistanceType.Physical, 30 );
-			SetResistance( ResistanceType.Fire, 30 );
-			SetResistance( ResistanceType.Cold, 30 );
-			SetResistance( ResistanceType.Poison, 30 );
-			SetResistance( ResistanceType.Energy, 30 );
+			SetResistance( ResistanceType.Physical, 50 );
+			SetResistance( ResistanceType.Fire, 50 );
+			SetResistance( ResistanceType.Cold, 50 );
+			SetResistance( ResistanceType.Poison, 50 );
+			SetResistance( ResistanceType.Energy, 50 );
 
-			SetSkill( SkillName.Necromancy, 120, 120.0 );
-			SetSkill( SkillName.SpiritSpeak, 120.0, 140.0 );
+			SetSkill( SkillName.Necromancy, 140);
+			SetSkill( SkillName.SpiritSpeak, 120.0, 120.0 );
 
 			SetSkill( SkillName.DetectHidden, 80.0 );
 			SetSkill( SkillName.EvalInt, 120.0, 140 );
-			SetSkill( SkillName.Magery, 100.0 );
+			SetSkill( SkillName.Magery, 140.0 );
 			SetSkill( SkillName.Meditation, 120.0 );
 			SetSkill( SkillName.MagicResist, 150.0 );
 			SetSkill( SkillName.Tactics, 100.0 );

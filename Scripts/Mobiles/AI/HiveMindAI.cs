@@ -1,5 +1,7 @@
+//TODO: Change Spirit Speak to heal
 using System;
 using System.Collections.Generic;
+//using System.LINQ;
 using Server.Targeting;
 using Server.Network;
 using Server.Mobiles;
@@ -20,11 +22,11 @@ using Server.SkillHandlers;
 
 namespace Server.Mobiles
 {
-	public class NecromageEpicAI : BaseAI
+	public class HiveMindAI : BaseAI
 	{
 		private DateTime m_NextCastTime;
 
-		public NecromageEpicAI( BaseCreature m ) : base( m )
+		public HiveMindAI( BaseCreature m ) : base( m )
 		{
 		}
 
@@ -47,11 +49,28 @@ namespace Server.Mobiles
 			}
 		}
 
-		private const double HealChance = 0.05; // 5% chance to heal at gm necromancy?, uses spirit speak healing
+		private const double HealChance = 0.10; // 10% chance to heal at gm necromancy, uses spirit speak healing
 		private const double TeleportChance = 0.10; // 10% chance to teleport at gm necromancy
-		//private const double DispelChance = 0.75; // 75% chance to dispel at gm necromancy
+        private const double HealPercent = .80; // Will target another Hive Member with heal at 80% health or less
+        private const double PetSwitchChance = .30; // 30% of the time Will switch from pet to pet owner
+        private const double AllySwitchChance = .10; // 10% chance to switch to ally's target
+        //private const double DispelChance = 0.75; // 75% chance to dispel at gm necromancy
         //private const double ItemChance = 0.0; //0% chance to use an offensive item
         //private const double AbilityChance = 0.0; //0% chance to use special abilities
+        private int HiveSize;
+        private int m_HiveRange = 8;
+
+        public int HiveRange
+        {
+            set
+            {
+                m_HiveRange = value;
+            }
+            get
+            {
+                return m_HiveRange;
+            } 
+        }
 
 		public virtual double ScaleByNecromancy( double v )
 		{
@@ -177,8 +196,8 @@ namespace Server.Mobiles
 		{
 			int maxCircle = (int)((m_Mobile.Skills[SkillName.Necromancy].Value + 50.0) / (100.0 / 7.0));
 			int minCircle = (int)((m_Mobile.Skills[SkillName.Magery].Value + 50.0) / (100.0 / 7.0));
-           // m_Mobile.DebugSay("Casting random spell");
-            if ( maxCircle < 2 && minCircle < 8 )
+
+			if ( maxCircle < 2 && minCircle < 8 )
 				maxCircle = 2;
 				minCircle = 8;
 
@@ -188,59 +207,32 @@ namespace Server.Mobiles
 				case  1: return new PainSpikeSpell( m_Mobile, null );
 				case  2: return new MindBlastSpell( m_Mobile, null );
 				case  3: return new BloodOathSpell( m_Mobile, null );
-				case  4: return new LightningSpell( m_Mobile, null );
+				case  4: return new ChainLightningSpell( m_Mobile, null );
 				case  5: return new EvilOmenSpell( m_Mobile, null );
 				case  6: return new CurseSpell( m_Mobile, null );
 				case  7: return new MindRotSpell( m_Mobile, null );
-				case  8: return new ChainLightningSpell( m_Mobile, null );
+				case  8: return new LightningSpell( m_Mobile, null );
 				case  9: return new StrangleSpell( m_Mobile, null );
 				case 10: return new WitherSpell( m_Mobile, null );
 				case 11: return new VengefulSpiritSpell( m_Mobile, null );
-				default: return new ExplosionSpell( m_Mobile, null );
+				default: return new MeteorSwarmSpell( m_Mobile, null );
 			}
 		}
 
-        public virtual Spell GetSmallDamageSpell()
-        {
-            int maxCircle = (int)((m_Mobile.Skills[SkillName.Magery].Value + 50.0) / (100.0 / 7.0));
-            int minCircle = (int)((m_Mobile.Skills[SkillName.Magery].Value + 50.0) / (100.0 / 7.0));
-            // m_Mobile.DebugSay("Casting random small spell");
-            if (maxCircle < 2 && minCircle < 8)
-            {
-                maxCircle = 2;
-                minCircle = 8;
-            }
-
-            switch (Utility.Random(minCircle + (maxCircle * 2)))
-            {
-
-                case 0: return new HarmSpell(m_Mobile, null);
-                case 1: return new FireballSpell(m_Mobile, null);
-                case 2: return new LightningSpell(m_Mobile, null);
-                case 3: return new CurseSpell(m_Mobile, null);
-                case 4: return new MagicArrowSpell(m_Mobile, null);
-                case 5: return new FireFieldSpell(m_Mobile, null);
-                case 6: return new WeakenSpell(m_Mobile, null);
-                case 7: return new HarmSpell(m_Mobile, null);
-                case 8: return new FireballSpell(m_Mobile, null);
-                case 9: return new LightningSpell(m_Mobile, null);
-                case 10: return new CurseSpell(m_Mobile, null);
-                case 11: return new MagicArrowSpell(m_Mobile, null);
-                default: return new PainSpikeSpell(m_Mobile, null);
-            }
-        }
-
-        public virtual Spell DoDispel( Mobile toDispel )
+		public virtual Spell DoDispel( Mobile toDispel )
 		{
 			Spell spell = null;
 
 			if ( !m_Mobile.Summoned && Utility.Random( 0, 4 + (m_Mobile.Hits == 0 ? m_Mobile.HitsMax : (m_Mobile.HitsMax / m_Mobile.Hits)) ) >= 3 )
 			{
+                /*
 				if ( m_Mobile.Hits < (m_Mobile.HitsMax - 50) )
 					m_Mobile.UseSkill( SkillName.SpiritSpeak );
 				else if ( m_Mobile.Hits < (m_Mobile.HitsMax - 20) )
 					m_Mobile.UseSkill( SkillName.SpiritSpeak );
-			}
+                */
+                spell = new GreaterHealSpell(m_Mobile, null);//incorporate hive to use different heal?
+            }
 
 			if ( spell == null )
 			{
@@ -257,34 +249,49 @@ namespace Server.Mobiles
 
 		public virtual Spell ChooseSpell( Mobile c )
 		{
-			Spell spell = null;
-
-			int healChance = (m_Mobile.Hits == 0 ? m_Mobile.HitsMax : (m_Mobile.HitsMax / m_Mobile.Hits));
-            int spellResult;
+            Spell spell = null;
+            
+            
+            int healChance = 0;
+            
+            foreach (Mobile m in m_Mobile.GetMobilesInRange(HiveRange))
+            {
+                
+                if (m_Mobile != m && m_Mobile.InLOS(m) && !m_Mobile.Player && ((BaseCreature)m_Mobile).Team == ((BaseCreature)m).Team && 
+                    ((BaseCreature)m).Hits / ((BaseCreature)m).HitsMax < HealPercent)
+                {
+                    if (((BaseCreature)m).Hits/ ((BaseCreature)m).HitsMax < HealPercent)
+                        healChance += ((BaseCreature)m).Hits / ((BaseCreature)m).HitsMax / 4;
+                }
+            }
+            
+            healChance += (((BaseCreature)m_Mobile).Hits == 0 ? ((BaseCreature)m_Mobile).HitsMax : (((BaseCreature)m_Mobile).HitsMax / ((BaseCreature)m_Mobile).Hits));
             double witherChance = .05; //05% chance to wither per enemy in range
-            m_Mobile.DebugSay("Choosing a Spell");
-            spellResult = Utility.Random(4 + healChance);
-            m_Mobile.DebugSay("Chose " + spellResult);
-            switch ( spellResult )
+            
+            if (healChance >= 1)
+                healChance = 1;
+                
+            switch ( Utility.Random( 5 + healChance ) )
 			{
 				case 0: // Heal  myself
 				{
-                    m_Mobile.DebugSay("0. Spirit Speak");
-                    if ( m_Mobile.Hits < (m_Mobile.HitsMax - 50) )
-						m_Mobile.UseSkill( SkillName.SpiritSpeak );
-					else if ( m_Mobile.Hits < (m_Mobile.HitsMax - 10) )
-						m_Mobile.UseSkill( SkillName.SpiritSpeak );
-
-					break;
+					
+                    /*
+					if (((BaseCreature)m_Mobile).Hits < (((BaseCreature)m_Mobile.HitsMax) - 50) )
+						m_Mobile.UseSkill( SkillName.SpiritSpeak );//Change to cast big heal
+					else if (((BaseCreature)m_Mobile).Hits < (((BaseCreature)m_Mobile).HitsMax - 10) )
+						m_Mobile.UseSkill( SkillName.SpiritSpeak ); //Change to cast small heal
+                    */
+                    spell = new GreaterHealSpell( m_Mobile, null );//incorporate hive to use different heal?
+                    break;
 				}
 				case 1: // PoisonStrike them
 				{
-                    m_Mobile.DebugSay("1. Poison Strike");
-                    if ( !c.Poisoned )
+					if ( !c.Poisoned )
                         if (Utility.RandomDouble() > .5)
 						    spell = new PoisonStrikeSpell( m_Mobile, null );
                         else
-                            spell = new PoisonFieldSpell( m_Mobile, null );//need to do targeting on fields
+                            spell = new PoisonFieldSpell( m_Mobile, null );
                     else
                         spell = new FireFieldSpell( m_Mobile, null );
 
@@ -292,47 +299,40 @@ namespace Server.Mobiles
 				}
 				case 2: // Deal some damage
 				{
-                    List<Mobile> targets = new List<Mobile>();
+                        List<Mobile> targets = new List<Mobile>();
 
-                    BaseCreature cbc = m_Mobile as BaseCreature;
-                    bool isMonster = (cbc != null && !cbc.Controlled && !cbc.Summoned);
-                    //check if enough wither targets.
-                    foreach (Mobile m in m_Mobile.GetMobilesInRange(Core.ML ? 4 : 5))
-                    {
-                        if (m_Mobile != m && m_Mobile.InLOS(m) && (isMonster || SpellHelper.ValidIndirectTarget(m_Mobile, m)) && m_Mobile.CanBeHarmful(m, false))
+                        BaseCreature cbc = m_Mobile as BaseCreature;
+                        bool isMonster = (cbc != null && !cbc.Controlled && !cbc.Summoned);
+                        //check if enough wither targets.
+                        foreach (Mobile m in m_Mobile.GetMobilesInRange(Core.ML ? 4 : 5))
                         {
-                            if (isMonster)
+                            if (m_Mobile != m && m_Mobile.InLOS(m) && (isMonster || SpellHelper.ValidIndirectTarget(m_Mobile, m)) && m_Mobile.CanBeHarmful(m, false))
                             {
-                                if (m is BaseCreature)
+                                if (isMonster)
                                 {
-                                    BaseCreature bc = (BaseCreature)m;
+                                    if (m is BaseCreature)
+                                    {
+                                        BaseCreature bc = (BaseCreature)m;
 
-                                    if (!bc.Controlled && !bc.Summoned && bc.Team == cbc.Team)
+                                        if (!bc.Controlled && !bc.Summoned && bc.Team == cbc.Team)
+                                            continue;
+                                    }
+                                    else if (!m.Player)
+                                    {
                                         continue;
+                                    }
                                 }
-                                else if (!m.Player)
-                                {
-                                    continue;
-                                }
+
+                                targets.Add(m);
                             }
-
-                            targets.Add(m);
                         }
-                    }
 
-                    if (targets.Count * witherChance > Utility.RandomDouble())
-                    {
-                        m_Mobile.DebugSay("2. Wither");
-                        spell = new WitherSpell( m_Mobile, null );
-                    }
-                    else
-                    {
+                        if (targets.Count * witherChance > Utility.RandomDouble())
+                            spell = new WitherSpell( m_Mobile, null );
+
                         spell = GetRandomDamageSpell();
-                        m_Mobile.DebugSay("2. Random Spell");
-                    }
 
-
-                    break;
+					break;
 				}
 				case 3: // Set up a combo of attacks
 				{
@@ -346,42 +346,41 @@ namespace Server.Mobiles
 						}
 						else if ( !c.Poisoned )
 						{
-                            m_Mobile.DebugSay("3. Casting Poison");
-                            spell = new PoisonSpell( m_Mobile, null );
+							spell = new PoisonSpell( m_Mobile, null );
 						}
 					}
 					else if ( m_Mobile.Mana > 30 && m_Mobile.Mana < 80 )
 					{
 						if ( Utility.Random( 2 ) == 0 && !c.Paralyzed && !c.Frozen && !c.Poisoned )
 						{
-                            m_Mobile.DebugSay("3. Pain Spike (Explo)");
-                            m_Combo = 0;
+							m_Combo = 0;
 							spell = new PainSpikeSpell( m_Mobile, null );
 						}
 						else
 						{
-                            m_Mobile.DebugSay("3. Mind Rot (FS)");
-                            m_Combo = 1;
+							m_Combo = 1;
 							spell = new MindRotSpell( m_Mobile, null );
 						}
 					     
 					}
-                    else
-                    {
-                        if (Utility.Random(2) == 0 && !c.Paralyzed && !c.Frozen && !c.Poisoned)
-                        {
-                            m_Mobile.DebugSay("4. Vengeful Spirit (Explo)");
-                            m_Combo = 0;
-                            spell = new VengefulSpiritSpell(m_Mobile, null);
-                        }
-                        else
-                        {
-                            m_Mobile.DebugSay("4. Poison Strike (FS)");
-                            m_Combo = 1;
-                            spell = new PoisonStrikeSpell(m_Mobile, null);
-                        }
-                    }
-                    break;
+				     break;
+				}
+				case 4: //Combo to soften our enemies with a powerful attack while we have max mana amounts
+				{
+					if ( m_Mobile.Mana > 80 )
+					{
+						if ( Utility.Random( 2 ) == 0 && !c.Paralyzed && !c.Frozen && !c.Poisoned ) 
+						{
+							m_Combo = 0;
+							spell = new VengefulSpiritSpell ( m_Mobile, null );
+						}
+						else
+						{
+							m_Combo = 1;
+							spell = new PoisonStrikeSpell ( m_Mobile, null );
+						}
+					}
+				    break;
 				}
 			
 			}
@@ -394,69 +393,60 @@ namespace Server.Mobiles
 		public virtual Spell DoCombo( Mobile c )
 		{
 			Spell spell = null;
-            m_Mobile.DebugSay("Doing Combo");
+            
             if ( m_Combo == 0 )
             {
-                m_Mobile.DebugSay(" Casting Explosion and moving to the next spell ");
                 spell = new ExplosionSpell( m_Mobile, null );
-                ++m_Combo; // Move to next spell
             }
-			else if ( m_Combo == 1 )
+			if ( m_Combo == 1 )
 			{
-               
                 if (m_Mobile.Skills[SkillName.Magery].Value * Utility.RandomDouble() > m_Mobile.Skills[SkillName.Necromancy].Value * Utility.RandomDouble())
-                {
                     spell = new FlameStrikeSpell( m_Mobile, null );
-                    m_Mobile.DebugSay("Casting Flamestrike and moving to the next spell ");
-                }
                 else
-                {
                     spell = new PoisonStrikeSpell(m_Mobile, null);
-                    m_Mobile.DebugSay("Casting Poison Strike and moving to the next spell ");
-                }
-                    ++m_Combo; // Move to next spell
+                ++m_Combo; // Move to next spell
 			}
 			else if ( m_Combo == 2 )
 			{
-                m_Mobile.DebugSay("Casting maybe poison and moving to next spell");
-                if ( !c.Poisoned )
+				if ( !c.Poisoned )
 					spell = new PoisonSpell( m_Mobile, null );
 
 				++m_Combo; // Move to next spell
 			}
-            else if ( m_Combo == 3 && spell == null )
+
+			if ( m_Combo == 2 && spell == null )
 			{
 				switch ( Utility.Random( 3 ) )
 				{
 					default:
 					case 0:
 					{
-                        m_Mobile.DebugSay( "Casting small spell" );
-						spell = GetSmallDamageSpell();
-                        m_Mobile.DebugSay( "Moving to next spell" );
-                        ++m_Combo; // Move to next spell
+						if ( c.Int < c.Dex )
+							spell = new MindRotSpell( m_Mobile, null );
+						else
+							spell = new WitherSpell( m_Mobile, null );
+
+						++m_Combo; // Move to next spell
 
 						break;
 					}
 					case 1:
 					{
-                        m_Mobile.DebugSay("Casting Strangle and resetting combo");
-                        spell = new StrangleSpell( m_Mobile, null );
+						spell = new StrangleSpell( m_Mobile, null );
 						m_Combo = -1; // Reset combo state
 						break;
 					}
 					case 2:
 					{
-                        m_Mobile.DebugSay("Casting small spell");
-                        spell = GetSmallDamageSpell();
+						spell = new WitherSpell( m_Mobile, null );
+						m_Combo = -1; // Reset combo state
 						break;
 					}
 				}
 			}
 			else if ( m_Combo == 4 && spell == null )
 			{
-                m_Mobile.DebugSay("Casting Vengeful Spirit and resetting combo");
-                spell = new VengefulSpiritSpell( m_Mobile, null );
+				spell = new VengefulSpiritSpell( m_Mobile, null );
 				m_Combo = -1;
 			}
 
@@ -579,7 +569,7 @@ namespace Server.Mobiles
 				}
 				else if ( (c.Spell is HealSpell || c.Spell is GreaterHealSpell) && !c.Poisoned ) // They have a heal spell out
 				{
-					spell = new PoisonSpell( m_Mobile, null );
+					spell = new PoisonStrikeSpell( m_Mobile, null );
 				}
 				else
 				{
@@ -605,9 +595,8 @@ namespace Server.Mobiles
 				{
 					TimeSpan delay;
 
-				    delay = spell.GetCastDelay();
+				    delay = TimeSpan.FromSeconds( m_Mobile.ActiveSpeed );
 					m_NextCastTime = DateTime.Now + delay;
-                    m_Mobile.DebugSay("Spell Delay is " + delay );
 				}
 			}
 			else if ( m_Mobile.Spell == null || !m_Mobile.Spell.IsCasting )
@@ -636,8 +625,7 @@ namespace Server.Mobiles
 				}
 				else
 				{
-                    m_Mobile.DebugSay("Casting some heal spell and guarding");
-                    if ( m_Mobile.Hits < (m_Mobile.HitsMax - 50) )
+					if ( m_Mobile.Hits < (m_Mobile.HitsMax - 50) )
 					{
 						if ( !new GreaterHealSpell( m_Mobile, null ).Cast() )
 							new HealSpell( m_Mobile, null ).Cast();
@@ -838,9 +826,7 @@ namespace Server.Mobiles
 			bool isDispel = ( targ is DispelSpell.InternalTarget );
 			bool isParalyze = ( targ is ParalyzeSpell.InternalTarget );
 			bool isTeleport = ( targ is TeleportSpell.InternalTarget );
-            bool isFireField = ( targ is FireFieldSpell.InternalTarget );
-            bool isPoisonField = ( targ is PoisonFieldSpell.InternalTarget );
-			bool teleportAway = false;
+			bool teleportAway = true;
 
 			Mobile toTarget;
 
@@ -882,9 +868,26 @@ namespace Server.Mobiles
 					RunTo( toTarget );
 			}
 
-			if ( (toTarget != null && ( (targ.Flags & TargetFlags.Harmful) != 0) || (isPoisonField || isFireField ) ) )
+			if ( (targ.Flags & TargetFlags.Harmful) != 0 && toTarget != null )
 			{
-				if ( (targ.Range == -1 || m_Mobile.InRange( toTarget, targ.Range )) && m_Mobile.CanSee( toTarget ) && m_Mobile.InLOS( toTarget ) )
+                /*
+                foreach (Mobile m in m_Mobile.GetMobilesInRange(HiveRange))
+                {
+                    if ((m_Mobile != m && m_Mobile.InLOS(m) && !m_Mobile.Player && ((BaseCreature)m_Mobile).Team == ((BaseCreature)m).Team && m.Combatant != null && Utility.RandomDouble() < AllySwitchChance) &&
+                        (targ.Range == -1 || m_Mobile.InRange(m.Combatant, targ.Range)) && m_Mobile.CanSee(m.Combatant) && m_Mobile.InLOS(m.Combatant))
+                    {
+                        m_Mobile.Combatant = m.Combatant;
+                        toTarget = m.Combatant;
+                        break;
+
+                    }
+                }
+                if (((BaseCreature)toTarget).Controlled && ((BaseCreature)toTarget).ControlMaster != null && Utility.RandomDouble() < PetSwitchChance &&
+                    ((targ.Range == -1 || m_Mobile.InRange(((BaseCreature)toTarget).ControlMaster, targ.Range)) && 
+                      m_Mobile.CanSee(((BaseCreature)toTarget).ControlMaster) && m_Mobile.InLOS(((BaseCreature)toTarget).ControlMaster)) )
+                    targ.Invoke( m_Mobile, ((BaseCreature)toTarget).ControlMaster );
+                    */
+               if ( (targ.Range == -1 || m_Mobile.InRange( toTarget, targ.Range )) && m_Mobile.CanSee( toTarget ) && m_Mobile.InLOS( toTarget ) )
 				{
 					targ.Invoke( m_Mobile, toTarget );
 				}
@@ -895,7 +898,26 @@ namespace Server.Mobiles
 			}
 			else if ( (targ.Flags & TargetFlags.Beneficial) != 0 )
 			{
-				targ.Invoke( m_Mobile, m_Mobile );
+                if (m_Mobile.Hits < HealPercent)
+                {
+                    targ.Invoke( m_Mobile, m_Mobile );
+                }
+                else
+                {
+                    /*
+                    bool Invoked = false;
+                    foreach (Mobile m in m_Mobile.GetMobilesInRange(HiveRange))
+                    {
+                        if (m_Mobile != m && m_Mobile.InLOS(m) && !m_Mobile.Player &&((BaseCreature) m_Mobile).Team == ((BaseCreature)m).Team && m.Hits/m.HitsMax < HealPercent)
+                        {
+                            targ.Invoke( m_Mobile, m);
+                            Invoked = true;
+                            break;
+                        }
+                    }
+                    if (!Invoked)*/
+                        targ.Invoke(m_Mobile, m_Mobile);
+                }
 			}
 			else if ( isTeleport && toTarget != null )
 			{

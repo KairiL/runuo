@@ -23,7 +23,7 @@ namespace Server.Items
         private Map m_MapDest;
         private bool decays = true;
 
-        private static TimeSpan m_DDT = TimeSpan.FromHours(24.0);
+        private static TimeSpan m_DDT = TimeSpan.FromHours(1.0);
 
         public bool CheckRange(Point3D loc, Point3D oldLoc, int range)
         {

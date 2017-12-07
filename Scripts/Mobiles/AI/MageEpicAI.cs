@@ -12,7 +12,7 @@ using Server.Spells.Fourth;
 using Server.Spells.Fifth;
 using Server.Spells.Sixth;
 using Server.Spells.Seventh;
-using Server.Spells.Necromancy;
+using Server.Spells.Eighth;
 using Server.Spells.Ninjitsu;
 using Server.Misc;
 using Server.Regions;
@@ -20,11 +20,11 @@ using Server.SkillHandlers;
 
 namespace Server.Mobiles
 {
-	public class NecromageEpicAI : BaseAI
+	public class MageEpicAI : BaseAI
 	{
 		private DateTime m_NextCastTime;
 
-		public NecromageEpicAI( BaseCreature m ) : base( m )
+		public MageEpicAI( BaseCreature m ) : base( m )
 		{
 		}
 
@@ -52,11 +52,6 @@ namespace Server.Mobiles
 		//private const double DispelChance = 0.75; // 75% chance to dispel at gm necromancy
         //private const double ItemChance = 0.0; //0% chance to use an offensive item
         //private const double AbilityChance = 0.0; //0% chance to use special abilities
-
-		public virtual double ScaleByNecromancy( double v )
-		{
-			return m_Mobile.Skills[SkillName.Necromancy].Value * v * 0.01;
-		}
 		
 		public virtual double ScaleByMagery( double v )
 		{
@@ -175,27 +170,30 @@ namespace Server.Mobiles
 
 		public virtual Spell GetRandomDamageSpell()
 		{
-			int maxCircle = (int)((m_Mobile.Skills[SkillName.Necromancy].Value + 50.0) / (100.0 / 7.0));
+			int maxCircle = (int)((m_Mobile.Skills[SkillName.Magery].Value + 50.0) / (100.0 / 7.0));
 			int minCircle = (int)((m_Mobile.Skills[SkillName.Magery].Value + 50.0) / (100.0 / 7.0));
            // m_Mobile.DebugSay("Casting random spell");
             if ( maxCircle < 2 && minCircle < 8 )
+            {
 				maxCircle = 2;
 				minCircle = 8;
+            }
 
 			switch ( Utility.Random( minCircle + (maxCircle*2) ) )
 			{
-				case  0: return new FireballSpell( m_Mobile, null );
-				case  1: return new PainSpikeSpell( m_Mobile, null );
-				case  2: return new MindBlastSpell( m_Mobile, null );
-				case  3: return new BloodOathSpell( m_Mobile, null );
-				case  4: return new LightningSpell( m_Mobile, null );
-				case  5: return new EvilOmenSpell( m_Mobile, null );
-				case  6: return new CurseSpell( m_Mobile, null );
-				case  7: return new MindRotSpell( m_Mobile, null );
-				case  8: return new ChainLightningSpell( m_Mobile, null );
-				case  9: return new StrangleSpell( m_Mobile, null );
-				case 10: return new WitherSpell( m_Mobile, null );
-				case 11: return new VengefulSpiritSpell( m_Mobile, null );
+				
+				case  0: return new HarmSpell( m_Mobile, null );
+				case  1: return new FireballSpell( m_Mobile, null );
+				case  2: return new LightningSpell( m_Mobile, null );
+				case  3: return new CurseSpell( m_Mobile, null );
+				case  4: return new FireFieldSpell( m_Mobile, null );
+				case  5: return new ParalyzeSpell( m_Mobile, null );
+				case  6: return new MindBlastSpell( m_Mobile, null );
+				case  7: return new PoisonFieldSpell( m_Mobile, null );
+                case  8: return new ParalyzeFieldSpell(m_Mobile, null);
+                case  9: return new ChainLightningSpell( m_Mobile, null );
+				case 10: return new MeteorSwarmSpell( m_Mobile, null );
+				case 11: return new SummonDaemonSpell( m_Mobile, null );//Doesn't work?
 				default: return new ExplosionSpell( m_Mobile, null );
 			}
 		}
@@ -226,7 +224,8 @@ namespace Server.Mobiles
                 case 9: return new LightningSpell(m_Mobile, null);
                 case 10: return new CurseSpell(m_Mobile, null);
                 case 11: return new MagicArrowSpell(m_Mobile, null);
-                default: return new PainSpikeSpell(m_Mobile, null);
+                case 12: return new FireFieldSpell(m_Mobile, null);
+                default: return new WeakenSpell(m_Mobile, null);
             }
         }
 
@@ -279,14 +278,14 @@ namespace Server.Mobiles
 				}
 				case 1: // PoisonStrike them
 				{
-                    m_Mobile.DebugSay("1. Poison Strike");
-                    if ( !c.Poisoned )
+                    //m_Mobile.DebugSay("1. Flame Strike");
+                    if ( c.Poisoned )
                         if (Utility.RandomDouble() > .5)
-						    spell = new PoisonStrikeSpell( m_Mobile, null );
+						    spell = new FlameStrikeSpell( m_Mobile, null );
                         else
-                            spell = new PoisonFieldSpell( m_Mobile, null );//need to do targeting on fields
+                            spell = new FireFieldSpell( m_Mobile, null );
                     else
-                        spell = new FireFieldSpell( m_Mobile, null );
+                        spell = new PoisonFieldSpell( m_Mobile, null );
 
 					break;
 				}
@@ -296,34 +295,16 @@ namespace Server.Mobiles
 
                     BaseCreature cbc = m_Mobile as BaseCreature;
                     bool isMonster = (cbc != null && !cbc.Controlled && !cbc.Summoned);
-                    //check if enough wither targets.
-                    foreach (Mobile m in m_Mobile.GetMobilesInRange(Core.ML ? 4 : 5))
-                    {
-                        if (m_Mobile != m && m_Mobile.InLOS(m) && (isMonster || SpellHelper.ValidIndirectTarget(m_Mobile, m)) && m_Mobile.CanBeHarmful(m, false))
-                        {
-                            if (isMonster)
-                            {
-                                if (m is BaseCreature)
-                                {
-                                    BaseCreature bc = (BaseCreature)m;
-
-                                    if (!bc.Controlled && !bc.Summoned && bc.Team == cbc.Team)
-                                        continue;
-                                }
-                                else if (!m.Player)
-                                {
-                                    continue;
-                                }
-                            }
-
-                            targets.Add(m);
-                        }
-                    }
+                    //check if enough Earthquake targets.
+                    if (m_Mobile.Map != null)
+                        foreach (Mobile m in m_Mobile.GetMobilesInRange(1 + (int)(m_Mobile.Skills[SkillName.Magery].Value / 15.0)))
+                            if (m_Mobile != m && SpellHelper.ValidIndirectTarget(m_Mobile, m) && m_Mobile.CanBeHarmful(m, false) && (!Core.AOS || m_Mobile.InLOS(m)))
+                                targets.Add(m);
 
                     if (targets.Count * witherChance > Utility.RandomDouble())
                     {
-                        m_Mobile.DebugSay("2. Wither");
-                        spell = new WitherSpell( m_Mobile, null );
+                        m_Mobile.DebugSay("2. Earthquake");
+                        spell = new EarthquakeSpell( m_Mobile, null );
                     }
                     else
                     {
@@ -354,15 +335,15 @@ namespace Server.Mobiles
 					{
 						if ( Utility.Random( 2 ) == 0 && !c.Paralyzed && !c.Frozen && !c.Poisoned )
 						{
-                            m_Mobile.DebugSay("3. Pain Spike (Explo)");
+                            m_Mobile.DebugSay("3. Curse (Explo)");
                             m_Combo = 0;
-							spell = new PainSpikeSpell( m_Mobile, null );
+							spell = new CurseSpell( m_Mobile, null );
 						}
 						else
 						{
-                            m_Mobile.DebugSay("3. Mind Rot (FS)");
+                            m_Mobile.DebugSay("3. Curse (FS)");
                             m_Combo = 1;
-							spell = new MindRotSpell( m_Mobile, null );
+							spell = new CurseSpell( m_Mobile, null );
 						}
 					     
 					}
@@ -370,15 +351,15 @@ namespace Server.Mobiles
                     {
                         if (Utility.Random(2) == 0 && !c.Paralyzed && !c.Frozen && !c.Poisoned)
                         {
-                            m_Mobile.DebugSay("4. Vengeful Spirit (Explo)");
+                            m_Mobile.DebugSay("4. Mana Vampire (Explo)");
                             m_Combo = 0;
-                            spell = new VengefulSpiritSpell(m_Mobile, null);
+                            spell = new ManaVampireSpell(m_Mobile, null);
                         }
                         else
                         {
-                            m_Mobile.DebugSay("4. Poison Strike (FS)");
+                            m_Mobile.DebugSay("4. Mana Vampire (FS)");
                             m_Combo = 1;
-                            spell = new PoisonStrikeSpell(m_Mobile, null);
+                            spell = new ManaVampireSpell(m_Mobile, null);
                         }
                     }
                     break;
@@ -403,18 +384,9 @@ namespace Server.Mobiles
             }
 			else if ( m_Combo == 1 )
 			{
-               
-                if (m_Mobile.Skills[SkillName.Magery].Value * Utility.RandomDouble() > m_Mobile.Skills[SkillName.Necromancy].Value * Utility.RandomDouble())
-                {
-                    spell = new FlameStrikeSpell( m_Mobile, null );
-                    m_Mobile.DebugSay("Casting Flamestrike and moving to the next spell ");
-                }
-                else
-                {
-                    spell = new PoisonStrikeSpell(m_Mobile, null);
-                    m_Mobile.DebugSay("Casting Poison Strike and moving to the next spell ");
-                }
-                    ++m_Combo; // Move to next spell
+                spell = new FlameStrikeSpell( m_Mobile, null );
+                m_Mobile.DebugSay("Casting Flamestrike and moving to the next spell ");
+                ++m_Combo; // Move to next spell
 			}
 			else if ( m_Combo == 2 )
 			{
@@ -431,23 +403,22 @@ namespace Server.Mobiles
 					default:
 					case 0:
 					{
-                        m_Mobile.DebugSay( "Casting small spell" );
-						spell = GetSmallDamageSpell();
-                        m_Mobile.DebugSay( "Moving to next spell" );
+                        m_Mobile.DebugSay( "Random small Spell and next spell" );
+                        spell = GetSmallDamageSpell();
                         ++m_Combo; // Move to next spell
 
 						break;
 					}
 					case 1:
 					{
-                        m_Mobile.DebugSay("Casting Strangle and resetting combo");
-                        spell = new StrangleSpell( m_Mobile, null );
-						m_Combo = -1; // Reset combo state
+                        m_Mobile.DebugSay("Random small spell and resetting combo");
+                        spell = GetSmallDamageSpell();
+                        m_Combo = -1; // Reset combo state
 						break;
 					}
 					case 2:
 					{
-                        m_Mobile.DebugSay("Casting small spell");
+                        m_Mobile.DebugSay("Random small spell and same state");
                         spell = GetSmallDamageSpell();
 						break;
 					}
@@ -455,8 +426,8 @@ namespace Server.Mobiles
 			}
 			else if ( m_Combo == 4 && spell == null )
 			{
-                m_Mobile.DebugSay("Casting Vengeful Spirit and resetting combo");
-                spell = new VengefulSpiritSpell( m_Mobile, null );
+                m_Mobile.DebugSay("Casting Flamestrike and resetting combo");
+                spell = new FlameStrikeSpell( m_Mobile, null );
 				m_Combo = -1;
 			}
 
