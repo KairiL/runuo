@@ -19,7 +19,7 @@ namespace Server.Mobiles
 		public override MonsterStatuetteType[] StatueTypes{ get{ return new MonsterStatuetteType[] { }; } }
 
 		[Constructable]
-		public Neira() : base( AIType.AI_Mage )
+		public Neira() : base( AIType.AI_MageEpic )
 		{
 			Name = "Neira";
 			Title = "the necromancer";
