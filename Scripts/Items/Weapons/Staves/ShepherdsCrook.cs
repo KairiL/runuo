@@ -72,6 +72,7 @@ namespace Server.Items
 				if ( targ is BaseCreature )
 				{
 					BaseCreature bc = (BaseCreature)targ;
+                    
 
 					if ( IsHerdable( bc ) )
 					{
@@ -83,7 +84,8 @@ namespace Server.Items
 						{
 							from.SendLocalizedMessage( 502475 ); // Click where you wish the animal to go.
 							from.Target = new InternalTarget( bc );
-						}
+                            bc.BeginDeleteTimer();
+                        }
 					}
 					else
 					{
