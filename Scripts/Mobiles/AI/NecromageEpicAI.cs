@@ -12,6 +12,7 @@ using Server.Spells.Fourth;
 using Server.Spells.Fifth;
 using Server.Spells.Sixth;
 using Server.Spells.Seventh;
+using Server.Spells.Eighth;
 using Server.Spells.Necromancy;
 using Server.Spells.Ninjitsu;
 using Server.Misc;
@@ -47,13 +48,14 @@ namespace Server.Mobiles
 			}
 		}
 
-		private const double HealChance = 0.05; // 5% chance to heal at gm necromancy?, uses spirit speak healing
+		private const double HealChance = 0.20; // 5% chance to heal at gm necromancy?, uses spirit speak healing
 		private const double TeleportChance = 0.10; // 10% chance to teleport at gm necromancy
-		//private const double DispelChance = 0.75; // 75% chance to dispel at gm necromancy
+        private const double PetSwitchChance = .30; // 30% of the time Will switch from pet to pet owner
+        //private const double DispelChance = 0.75; // 75% chance to dispel at gm necromancy
         //private const double ItemChance = 0.0; //0% chance to use an offensive item
         //private const double AbilityChance = 0.0; //0% chance to use special abilities
 
-		public virtual double ScaleByNecromancy( double v )
+        public virtual double ScaleByNecromancy( double v )
 		{
 			return m_Mobile.Skills[SkillName.Necromancy].Value * v * 0.01;
 		}
@@ -90,7 +92,7 @@ namespace Server.Mobiles
 
 				if ( m_Mobile.Poisoned )
 				{
-                    new CureSpell( m_Mobile, null ).Cast();
+                    new ArchCureSpell( m_Mobile, null ).Cast();
 				}
 				else if (ScaleByMagery( HealChance ) > Utility.RandomDouble())
 				{
@@ -175,14 +177,7 @@ namespace Server.Mobiles
 
 		public virtual Spell GetRandomDamageSpell()
 		{
-			int maxCircle = (int)((m_Mobile.Skills[SkillName.Necromancy].Value + 50.0) / (100.0 / 7.0));
-			int minCircle = (int)((m_Mobile.Skills[SkillName.Magery].Value + 50.0) / (100.0 / 7.0));
-           // m_Mobile.DebugSay("Casting random spell");
-            if ( maxCircle < 2 && minCircle < 8 )
-				maxCircle = 2;
-				minCircle = 8;
-
-			switch ( Utility.Random( minCircle + (maxCircle*2) ) )
+			switch ( Utility.Random( 14 ) )
 			{
 				case  0: return new FireballSpell( m_Mobile, null );
 				case  1: return new PainSpikeSpell( m_Mobile, null );
@@ -196,22 +191,14 @@ namespace Server.Mobiles
 				case  9: return new StrangleSpell( m_Mobile, null );
 				case 10: return new WitherSpell( m_Mobile, null );
 				case 11: return new VengefulSpiritSpell( m_Mobile, null );
-				default: return new ExplosionSpell( m_Mobile, null );
+                case 12: return new SummonDaemonSpell(m_Mobile, null);
+                default: return new ExplosionSpell( m_Mobile, null );
 			}
 		}
 
         public virtual Spell GetSmallDamageSpell()
         {
-            int maxCircle = (int)((m_Mobile.Skills[SkillName.Magery].Value + 50.0) / (100.0 / 7.0));
-            int minCircle = (int)((m_Mobile.Skills[SkillName.Magery].Value + 50.0) / (100.0 / 7.0));
-            // m_Mobile.DebugSay("Casting random small spell");
-            if (maxCircle < 2 && minCircle < 8)
-            {
-                maxCircle = 2;
-                minCircle = 8;
-            }
-
-            switch (Utility.Random(minCircle + (maxCircle * 2)))
+            switch (Utility.Random(14))
             {
 
                 case 0: return new HarmSpell(m_Mobile, null);
@@ -226,6 +213,7 @@ namespace Server.Mobiles
                 case 9: return new LightningSpell(m_Mobile, null);
                 case 10: return new CurseSpell(m_Mobile, null);
                 case 11: return new MagicArrowSpell(m_Mobile, null);
+                case 12: return new BlessSpell(m_Mobile, null);
                 default: return new PainSpikeSpell(m_Mobile, null);
             }
         }
@@ -567,7 +555,7 @@ namespace Server.Mobiles
 
 				if ( m_Mobile.Poisoned ) // Top cast priority is cure
 				{
-					spell = new CureSpell( m_Mobile, null );
+					spell = new ArchCureSpell( m_Mobile, null );
 				}
 				else if ( toDispel != null ) // Something dispellable is attacking us
 				{
@@ -632,7 +620,7 @@ namespace Server.Mobiles
 			{
 				if ( m_Mobile.Poisoned )
 				{
-					new CureSpell( m_Mobile, null ).Cast();
+					new ArchCureSpell( m_Mobile, null ).Cast();
 				}
 				else
 				{
@@ -674,7 +662,7 @@ namespace Server.Mobiles
 				m_Mobile.FocusMob = null;
 
 				if ( m_Mobile.Poisoned && Utility.Random( 0, 5 ) == 0 )
-					new CureSpell( m_Mobile, null ).Cast();
+					new ArchCureSpell( m_Mobile, null ).Cast();
 			}
 			else
 			{
@@ -884,7 +872,19 @@ namespace Server.Mobiles
 
 			if ( (toTarget != null && ( (targ.Flags & TargetFlags.Harmful) != 0) || (isPoisonField || isFireField ) ) )
 			{
-				if ( (targ.Range == -1 || m_Mobile.InRange( toTarget, targ.Range )) && m_Mobile.CanSee( toTarget ) && m_Mobile.InLOS( toTarget ) )
+                //check switch to target's owner
+                if (toTarget is BaseCreature &&
+                    ((BaseCreature)toTarget).Controlled &&
+                    ((BaseCreature)toTarget).ControlMaster != null &&
+                    Utility.RandomDouble() < PetSwitchChance &&
+                    ((targ.Range == -1 || m_Mobile.InRange(((BaseCreature)toTarget).ControlMaster, targ.Range)) &&
+                    m_Mobile.CanSee(((BaseCreature)toTarget).ControlMaster) &&
+                    m_Mobile.InLOS(((BaseCreature)toTarget).ControlMaster)))
+                {
+                    targ.Invoke(m_Mobile, ((BaseCreature)toTarget).ControlMaster);
+                }
+
+                if ( (targ.Range == -1 || m_Mobile.InRange( toTarget, targ.Range )) && m_Mobile.CanSee( toTarget ) && m_Mobile.InLOS( toTarget ) )
 				{
 					targ.Invoke( m_Mobile, toTarget );
 				}

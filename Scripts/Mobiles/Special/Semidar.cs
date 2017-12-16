@@ -16,7 +16,7 @@ namespace Server.Mobiles
 		public override MonsterStatuetteType[] StatueTypes{ get{ return new MonsterStatuetteType[] { }; } }
 
 		[Constructable]
-		public Semidar() : base( AIType.AI_Mage )
+		public Semidar() : base( AIType.AI_MageEpic )
 		{
 			Name = "Semidar";
 			Body = 174;

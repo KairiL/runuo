@@ -193,7 +193,7 @@ namespace Server.Mobiles
                 case  8: return new ParalyzeFieldSpell(m_Mobile, null);
                 case  9: return new ChainLightningSpell( m_Mobile, null );
 				case 10: return new MeteorSwarmSpell( m_Mobile, null );
-				case 11: return new SummonDaemonSpell( m_Mobile, null );//Doesn't work?
+				case 11: return new SummonDaemonSpell( m_Mobile, null );
 				default: return new ExplosionSpell( m_Mobile, null );
 			}
 		}

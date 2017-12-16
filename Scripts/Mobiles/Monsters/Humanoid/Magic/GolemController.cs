@@ -20,8 +20,8 @@ namespace Server.Mobiles
 			AddArcane( new ThighBoots() );
 			AddArcane( new LeatherGloves() );
 			AddArcane( new Cloak() );
-
-			SetStr( 126, 150 );
+            
+            SetStr( 126, 150 );
 			SetDex( 96, 120 );
 			SetInt( 151, 175 );
 
@@ -51,7 +51,9 @@ namespace Server.Mobiles
 
 			if ( 0.7 > Utility.RandomDouble() )
 				PackItem( new ArcaneGem() );
-		}
+            if (0.8 > Utility.RandomDouble() )
+                PackItem(new TrapRepairKit());
+        }
 
 		public override void GenerateLoot()
 		{

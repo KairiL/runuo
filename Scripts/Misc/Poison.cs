@@ -30,7 +30,8 @@ namespace Server
 				Register( new PoisonImpl( "Greater",	2, 6, 26,  6.250, 3.5, 3.0, 10, 2 ) );
 				Register( new PoisonImpl( "Deadly",		3, 7, 26, 12.500, 3.5, 4.0, 10, 2 ) );
 				Register( new PoisonImpl( "Lethal",		4, 9, 26, 25.000, 3.5, 5.0, 10, 2 ) );
-			}
+                Register( new PoisonImpl( "Godly",      5, 20, 50, 35.0, 3.0, 3.25, 100, 2) );
+            }
 		}
 
 		public static Poison IncreaseLevel( Poison oldPoison )

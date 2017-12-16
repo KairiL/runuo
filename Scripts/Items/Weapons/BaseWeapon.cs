@@ -976,9 +976,9 @@ namespace Server.Items
 					ticks = Math.Floor( ( 80000.0 / ( ( m.Stam + 100 ) * speed ) ) - 2 );
 				}
 				
-				// Swing speed currently capped at one swing every 1.25 seconds (5 ticks).
-				if ( ticks < 4 )
-					ticks = 5;
+				// Swing speed currently capped at one swing every .75 seconds (3 ticks).
+				if ( ticks < 3 )
+					ticks = 3;
 
 				delayInSeconds = ticks * 0.25;
 			}

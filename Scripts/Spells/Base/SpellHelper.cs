@@ -410,7 +410,8 @@ namespace Server.Spells
 			if( to is BaseCreature )
 			{
 				BaseCreature c = (BaseCreature)to;
-
+                if (c.IsFriend(from))
+                    return false;
 				if( c.Controlled || c.Summoned )
 				{
 					if( c.ControlMaster == from || c.SummonMaster == from )
@@ -425,7 +426,10 @@ namespace Server.Spells
 			{
 				BaseCreature c = (BaseCreature)from;
 
-				if( c.Controlled || c.Summoned )
+                if (c.IsFriend(to))
+                    return false;
+
+                if ( c.Controlled || c.Summoned )
 				{
 					if( c.ControlMaster == to || c.SummonMaster == to )
 						return false;

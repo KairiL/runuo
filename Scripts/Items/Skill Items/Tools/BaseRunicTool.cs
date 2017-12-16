@@ -472,7 +472,7 @@ namespace Server.Items
 			m_Props.SetAll( false );
 
 			bool isShield = ( armor is BaseShield );
-			int baseCount = ( isShield ? 7 : 20 );
+			int baseCount = ( isShield ? 8 : 20 );
 			int baseOffset = ( isShield ? 0 : 4 );
 
 			if ( !isShield && armor.MeditationAllowance == ArmorMeditationAllowance.All )
@@ -499,21 +499,15 @@ namespace Server.Items
 						/* Begin Sheilds */
 					case  0: ApplyAttribute( primary,	min, max, AosAttribute.SpellChanneling,			1, 1 ); break;
 					case  1: ApplyAttribute( primary,	min, max, AosAttribute.DefendChance,			1, 15 ); break;
-					case  2:
-						if (Core.ML) {
-							ApplyAttribute( primary,    min, max, AosAttribute.ReflectPhysical,                 1, 15 );
-							} else {
-							ApplyAttribute( primary,    min, max, AosAttribute.AttackChance,                    1, 15 );
-							}
-						break;
+					case  2: ApplyAttribute( primary,    min, max, AosAttribute.AttackChance,           1, 10 ); break;
 					case  3: ApplyAttribute( primary,	min, max, AosAttribute.CastSpeed,				1, 1 ); break;
 						/* Begin Armor */
 					case  4: ApplyAttribute( secondary,	min, max, AosArmorAttribute.LowerStatReq,		10, 100, 10 ); break;
 					case  5: ApplyAttribute( secondary,	min, max, AosArmorAttribute.SelfRepair,			1, 5 ); break;
 					case  6: ApplyAttribute( secondary,	min, max, AosArmorAttribute.DurabilityBonus,	10, 100, 10 ); break;
-						/* End Shields */
-					case  7: ApplyAttribute( secondary,	min, max, AosArmorAttribute.MageArmor,			1, 1 ); break;
-					case  8: ApplyAttribute( primary,	min, max, AosAttribute.RegenHits,				1, 2 ); break;
+                    case  7: ApplyAttribute( primary,   min, max, AosAttribute.ReflectPhysical,         1, 15); break;
+                    /* End Shields */
+                    case  8: ApplyAttribute( primary,	min, max, AosAttribute.RegenHits,				1, 2 ); break;
 					case  9: ApplyAttribute( primary,	min, max, AosAttribute.RegenStam,				1, 3 ); break;
 					case 10: ApplyAttribute( primary,	min, max, AosAttribute.RegenMana,				1, 2 ); break;
 					case 11: ApplyAttribute( primary,	min, max, AosAttribute.NightSight,				1, 1 ); break;
@@ -523,8 +517,8 @@ namespace Server.Items
 					case 15: ApplyAttribute( primary,	min, max, AosAttribute.LowerManaCost,			1, 8 ); break;
 					case 16: ApplyAttribute( primary,	min, max, AosAttribute.LowerRegCost,			1, 20 ); break;
 					case 17: ApplyAttribute( primary,	min, max, AosAttribute.Luck,					1, 100 ); break;
-					case 18: ApplyAttribute( primary,	min, max, AosAttribute.ReflectPhysical,			1, 15 ); break;
-					case 19: ApplyResistance( armor,	min, max, ResistanceType.Physical,				1, 15 ); break;
+                    case 18: ApplyAttribute(secondary,  min, max, AosArmorAttribute.MageArmor,          1, 1); break;
+                    case 19: ApplyResistance( armor,	min, max, ResistanceType.Physical,				1, 15 ); break;
 					case 20: ApplyResistance( armor,	min, max, ResistanceType.Fire,					1, 15 ); break;
 					case 21: ApplyResistance( armor,	min, max, ResistanceType.Cold,					1, 15 ); break;
 					case 22: ApplyResistance( armor,	min, max, ResistanceType.Poison,				1, 15 ); break;

@@ -1,110 +1,123 @@
 using System;
 using Server;
-using Server.Items;
-using Server.Engines.CannedEvil;
-using System.Collections;
-using Server.Misc;
 using Server.Spells;
+using Server.Regions;
+using Server.Targeting;
+using System.Collections;
+using Server.Items;
+using Server.Misc;
+using Server.Mobiles;
 
-namespace Server.Mobiles
+namespace Server.Items
 {
-	public class Mephitis : BaseChampion
-	{
-		public override ChampionSkullType SkullType{ get{ return ChampionSkullType.Venom; } }
+    public class GoopyGauntlets : PlateGloves
+    {
+        public override int ArtifactRarity { get { return 12; } }
 
-		public override Type[] UniqueList{ get{ return new Type[] { typeof( Calm ) }; } }
-		public override Type[] SharedList { get { return new Type[] { typeof(OblivionsNeedle), typeof(ANecromancerShroud), typeof(EmbroideredOakLeafCloak), typeof(TheMostKnowledgePerson) }; } }
-		public override Type[] DecorativeList{ get{ return new Type[] { typeof( Web ), typeof( MonsterStatuette ) }; } }
+        public override int InitMinHits { get { return 255; } }
+        public override int InitMaxHits { get { return 255; } }
 
-		public override MonsterStatuetteType[] StatueTypes{ get{ return new MonsterStatuetteType[] { MonsterStatuetteType.Spider }; } }
-
-		[Constructable]
-		public Mephitis() : base( AIType.AI_Melee )
-		{
-			Body = 173;
-			Name = "Mephitis";
-
-			BaseSoundID = 0x183;
-
-			SetStr( 505, 1000 );
-			SetDex( 102, 300 );
-			SetInt( 402, 600 );
-
-			SetHits( 3000 );
-			SetStam( 105, 600 );
-
-			SetDamage( 21, 33 );
-
-			SetDamageType( ResistanceType.Physical, 50 );
-			SetDamageType( ResistanceType.Poison, 50 );
-
-			SetResistance( ResistanceType.Physical, 75, 80 );
-			SetResistance( ResistanceType.Fire, 60, 70 );
-			SetResistance( ResistanceType.Cold, 60, 70 );
-			SetResistance( ResistanceType.Poison, 100 );
-			SetResistance( ResistanceType.Energy, 60, 70 );
-
-			SetSkill( SkillName.MagicResist, 70.7, 140.0 );
-			SetSkill( SkillName.Tactics, 97.6, 100.0 );
-			SetSkill( SkillName.Wrestling, 97.6, 100.0 );
-
-			Fame = 22500;
-			Karma = -22500;
-
-			VirtualArmor = 80;
-		}
-
-		public override void GenerateLoot()
-		{
-			AddLoot( LootPack.UltraRich, 4 );
-		}
-
-		public override Poison PoisonImmune{ get{ return Poison.Lethal; } }
-		public override Poison HitPoison{ get{ return Poison.Lethal; } }
-
-        public override void OnDamage(int amount, Mobile from, bool willKill)
+        
+        public override void OnDoubleClick(Mobile from)
         {
-            if ( CanSee(from) )
-                if (Utility.RandomDouble() > .5)
-                    PullIn(from);
-            if (from is BaseCreature && ((BaseCreature)from).ControlMaster != null)
+            //TODO: Checks
+            if (Parent != from)
             {
-                if (Utility.RandomDouble() > .75 && CanSee(((BaseCreature)from).ControlMaster))
-                    PullIn(((BaseCreature)from).ControlMaster);
+                from.SendMessage("You must equip the item to use it");
             }
-            else if (from is BaseCreature && ((BaseCreature)from).SummonMaster != null)
-                if (Utility.RandomDouble() > .75 && CanSee(((BaseCreature)from).SummonMaster))
-                    PullIn(((BaseCreature)from).SummonMaster);
-            base.OnDamage( amount, from, willKill );
+            else if (!from.CanBeginAction(typeof(GoopyGauntlets)))
+            {
+                from.SendMessage("You have to wait a few moments before you can shoot more goop!"); // You have to wait a few moments before you can use another bola!
+            }
+            else if (!HasFreeHands(from))
+            {
+                from.SendLocalizedMessage(1040015); // Your hands must be free to use this
+            }
+            else if (from.BeginAction(typeof(GoopyGauntlets)))
+            {
+                Timer.DelayCall(TimeSpan.FromSeconds(3.0), new TimerStateCallback(ReleaseGoopLock), from);
+                from.Target = new InternalTarget();
+            }
+
         }
 
-        public void PullIn( Mobile from )
+        private static void ReleaseGoopLock(object state)
         {
-            from.Paralyze(TimeSpan.FromSeconds(5));
-            new WebItem(0x10D4, (IPoint3D)from, from, from.Map, TimeSpan.FromSeconds(15), 1, 0);
-            from.Location = Location;
-
+            ((Mobile)state).EndAction(typeof(GoopyGauntlets));
         }
-        #region Web stuff
+
+        private static bool HasFreeHands(Mobile from)
+        {
+            Item one = from.FindItemOnLayer(Layer.OneHanded);
+            Item two = from.FindItemOnLayer(Layer.TwoHanded);
+
+            if (Core.SE)
+            {
+                Container pack = from.Backpack;
+
+                if (pack != null)
+                {
+                    if (one != null && one.Movable)
+                    {
+                        pack.DropItem(one);
+                        one = null;
+                    }
+
+                    if (two != null && two.Movable)
+                    {
+                        pack.DropItem(two);
+                        two = null;
+                    }
+                }
+            }
+            else if (Core.AOS)
+            {
+                if (one != null && one.Movable)
+                {
+                    from.AddToBackpack(one);
+                    one = null;
+                }
+
+                if (two != null && two.Movable)
+                {
+                    from.AddToBackpack(two);
+                    two = null;
+                }
+            }
+
+            return (one == null && two == null);
+        }
+
+
+        [Constructable]
+        public GoopyGauntlets()
+        {
+            Weight = 5.0;
+            Name = "Goopy Gauntlets";
+            Attributes.BonusDex = -10;
+            Attributes.Luck = 150;
+            LootType = LootType.Cursed;
+            Hue = 0x850;
+        }
+
         [DispellableField]
-        public class WebItem : Item
+        public class GoopItem : Item
         {
             private Timer m_Timer;
             private DateTime m_End;
             private Mobile m_Caster;
             private int m_Damage;
-            private double m_StickChance = .75;
-            private double m_TeleChance = .75;
+            private double m_StickChance= .5;
 
             public override bool BlocksFit { get { return true; } }
 
-            public WebItem(int itemID, IPoint3D loc, Mobile caster, Map map, TimeSpan duration, int val)
-                : this(itemID, loc, caster, map, duration, val, 0)
-            {
-            }
+            public GoopItem( int itemID, IPoint3D loc, Mobile caster, Map map, TimeSpan duration, int val )
+				: this( itemID, loc, caster, map, duration, val, 0 )
+			{
+			}
 
-            public WebItem(int itemID, IPoint3D loc, Mobile caster, Map map, TimeSpan duration, int val, int damage) : base(itemID)
-            {
+			public GoopItem( int itemID, IPoint3D loc, Mobile caster, Map map, TimeSpan duration, int val, int damage ) : base( itemID )
+			{
                 Point3D p = new Point3D(loc.X, loc.Y, loc.Z);
 
                 bool canFit = SpellHelper.AdjustField(ref p, map, 12, false);
@@ -126,14 +139,12 @@ namespace Server.Mobiles
 
             public override bool OnMoveOff(Mobile m)
             {
-                return ( Utility.RandomDouble() > m_StickChance || m == m_Caster);
+                return Utility.RandomDouble() > m_StickChance;
             }
 
             public override bool OnMoveOver(Mobile m)
             {
-                if ( Utility.RandomDouble() < m_TeleChance && m != m_Caster)
-                    m.Location = m_Caster.Location;
-                return (Utility.RandomDouble() > m_StickChance || m == m_Caster);
+                return Utility.RandomDouble() > m_StickChance;
             }
             public override void OnAfterDelete()
             {
@@ -142,9 +153,9 @@ namespace Server.Mobiles
                 if (m_Timer != null)
                     m_Timer.Stop();
             }
-            
-            public WebItem(Serial serial) : base(serial)
-            {
+
+            public GoopItem(Serial serial) : base( serial )
+			{
             }
             public override void Serialize(GenericWriter writer)
             {
@@ -162,7 +173,7 @@ namespace Server.Mobiles
                 base.Deserialize(reader);
 
                 int version = reader.ReadInt();
-
+                
                 m_Damage = reader.ReadInt();
                 m_Caster = reader.ReadMobile();
                 m_End = reader.ReadDeltaTime();
@@ -172,12 +183,12 @@ namespace Server.Mobiles
 
             private class InternalTimer : Timer
             {
-                private WebItem m_Item;
+                private GoopItem m_Item;
                 private bool m_InLOS, m_CanFit;
 
                 private static Queue m_Queue = new Queue();
 
-                public InternalTimer(WebItem item, TimeSpan delay, bool inLOS, bool canFit) : base(delay, TimeSpan.FromSeconds(1.0))
+                public InternalTimer(GoopItem item, TimeSpan delay, bool inLOS, bool canFit) : base(delay, TimeSpan.FromSeconds(1.0))
                 {
                     m_Item = item;
                     m_InLOS = inLOS;
@@ -224,17 +235,16 @@ namespace Server.Mobiles
                             while (m_Queue.Count > 0)
                             {
                                 int damage = m_Item.m_Damage;
-                                
-                                Mobile m = (Mobile)m_Queue.Dequeue();
-
                                 if (damage > 0)
                                 {
+                                    Mobile m = (Mobile)m_Queue.Dequeue();
+
                                     if (SpellHelper.CanRevealCaster(m))
                                         caster.RevealingAction();
 
                                     caster.DoHarmful(m);
 
-
+                                
                                     if (!Core.AOS && m.CheckSkill(SkillName.MagicResist, 0.0, 30.0))
                                     {
                                         damage = 1;
@@ -244,7 +254,7 @@ namespace Server.Mobiles
 
                                     AOS.Damage(m, caster, damage, 0, 100, 0, 0, 0);
                                     m.PlaySound(0x208);
-
+                                
                                     if (m is BaseCreature)
                                         ((BaseCreature)m).OnHarmfulSpell(caster);
                                 }
@@ -253,26 +263,46 @@ namespace Server.Mobiles
                     }
                 }
             }
-
+            
         }
-        #endregion
 
-        public Mephitis( Serial serial ) : base( serial )
-		{
-		}
+        private class InternalTarget : Target
+        {
+            public InternalTarget() : base(10, true, TargetFlags.None)
+            {
+            }
 
-		public override void Serialize( GenericWriter writer )
-		{
-			base.Serialize( writer );
+            protected override void OnTarget(Mobile from, object targeted)
+            {
+                if (!from.CanSee(targeted))
+                {
+                    from.SendLocalizedMessage(500237); // Target can not be seen.
+                }
+                else
+                {
+                    int duration = 10;
+                    new GoopItem(0xCC3, (IPoint3D)targeted, from, from.Map, TimeSpan.FromSeconds(duration), 1, 0);//TODO: add skill based damage & duration
+                }
+                
+            }
+        }
+        public GoopyGauntlets(Serial serial) : base(serial)
+        {
+        }
 
-			writer.Write( (int) 0 ); // version
-		}
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
 
-		public override void Deserialize( GenericReader reader )
-		{
-			base.Deserialize( reader );
+            writer.Write((int)1);
+        }
 
-			int version = reader.ReadInt();
-		}
-	}
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
+
+            int version = reader.ReadInt();
+            
+        }
+    }
 }
