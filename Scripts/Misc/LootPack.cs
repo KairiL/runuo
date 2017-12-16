@@ -472,6 +472,52 @@ namespace Server
 				new LootPackEntry( false, OldMagicItems,	100.00, 1, 1, 70, 100 )
 			} );
 		#endregion
+
+        #region Epic LootPacks
+        public static readonly LootPack LowEpic1 = new LootPack( new LootPackEntry[]
+        {
+                new LootPackEntry( true, Gold,         100.00, "5d100+500" ),
+                new LootPackEntry( false, Instruments, 0.01, 1, 2, 100, 101 ),
+                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 6, 25, 100),
+                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 6, 25, 100),
+                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 6, 25, 100),
+                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 6, 25, 100)
+        } );
+        public static readonly LootPack LowEpic2 = new LootPack(new LootPackEntry[]
+        {
+                new LootPackEntry( true, Gold,         100.00, "5d100+500" ),
+                new LootPackEntry( false, Instruments, 0.01, 1, 2, 100, 101 ),
+                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 5, 25, 120),
+                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 5, 25, 120),
+                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 5, 25, 120),
+                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 5, 25, 120)
+        });
+
+        public static readonly LootPack Epic = new LootPack(new LootPackEntry[]
+        {
+                new LootPackEntry( true, Gold,         100.00, "10d100+500" ),
+                new LootPackEntry( false, Instruments, 0.01, 1, 2, 100, 150 ),
+                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 6, 25, 120),
+                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 6, 25, 120),
+                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 6, 25, 120),
+                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 6, 25, 120),
+                new LootPackEntry( false, Instruments, 0.01, 1, 3, 100, 101 ),
+                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 7, 25, 100),
+                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 7, 25, 100),
+                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 7, 25, 100),
+                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 7, 25, 100)
+        });
+
+        public static readonly LootPack HighEpic = new LootPack(new LootPackEntry[]
+        {
+                new LootPackEntry( true, Gold,         100.00, "15d100+500" ),
+                new LootPackEntry( false, Instruments, 0.01, 1, 3, 100, 150 ),
+                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 7, 35, 150),
+                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 7, 35, 150),
+                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 7, 35, 150),
+                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 7, 35, 150)
+        });
+        #endregion
         /*
         #region Khaldun definitions
         public static readonly LootPack EpicJewel = new LootPack( new LootPackEntry[]
@@ -689,7 +735,7 @@ namespace Server
                         
 						int props = 1 + bonusProps;
 
-						// Make sure we're not spawning items with 6 properties.
+						// Make sure we're not spawning items with too many properties.
 						if ( props > m_MaxProps )
 							props = m_MaxProps;
 
@@ -762,7 +808,10 @@ namespace Server
 					item.Amount = m_Quantity.Roll();
 			}
 
-			return item;
+            if (m_MaxIntensity > 100 || m_MaxProps > 5) //Item is epic and should be cursed
+                item.LootType = LootType.Cursed;
+
+            return item;
 		}
 
 		public LootPackEntry( bool atSpawnTime, LootPackItem[] items, double chance, string quantity ) : this( atSpawnTime, items, chance, new LootPackDice( quantity ), 0, 0, 0 )
@@ -947,7 +996,7 @@ namespace Server
 				else
 					item = Activator.CreateInstance( m_Type ) as Item;
 
-				return item;
+                return item;
 			}
 			catch
 			{

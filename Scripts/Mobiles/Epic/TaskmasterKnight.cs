@@ -1,48 +1,48 @@
-//TODO: Add FC/FCR ring
 using System;
 using Server;
 using Server.Items;
 
 namespace Server.Mobiles
 {
-	[CorpseName( "an ancient liche's corpse" )]
-	public class AncientLich : BaseCreature
+	[CorpseName( "an taskmaster corpse" )]
+	public class TaskmasterKnight : BaseCreature
 	{
 		[Constructable]
-		public AncientLich() : base( AIType.AI_NecromageEpic, FightMode.Closest, 10, 1, 0.1, 0.2 )
+		public TaskmasterKnight() : base( AIType.AI_NecromageHive, FightMode.Closest, 10, 0, 0.1, 0.2 )
 		{
-			Name = NameList.RandomName( "ancient lich" );
-			Body = 78;
-			BaseSoundID = 412;
+			Name = "A Taskmaster Knight";
+			Body = 1403;
+			BaseSoundID = 412;//TODO: change sound ID
 
 			SetStr( 216, 305 );
-			SetDex( 96, 115 );
+			SetDex( 96, 420 );
 			SetInt( 966, 1045 );
 
-			SetHits( 750, 1200 );
+			SetHits( 750, 1800 );
 
-			SetDamage( 20, 30 );
+			SetDamage( 16, 28 );
 
 			SetDamageType( ResistanceType.Physical, 20 );
 			SetDamageType( ResistanceType.Cold, 40 );
 			SetDamageType( ResistanceType.Energy, 40 );
 
 			SetResistance( ResistanceType.Physical, 55, 65 );
-			SetResistance( ResistanceType.Fire, 25, 30 );
+			SetResistance( ResistanceType.Fire, 45, 50 );
 			SetResistance( ResistanceType.Cold, 50, 60 );
-			SetResistance( ResistanceType.Poison, 80, 90 );
+			SetResistance( ResistanceType.Poison, 70, 80 );
 			SetResistance( ResistanceType.Energy, 45, 50 );
 
 			SetSkill( SkillName.EvalInt, 130.1, 160.0 );
 			SetSkill( SkillName.Magery, 140.1, 160.0 );
-			SetSkill( SkillName.Meditation, 300.1, 401.0 );
-			SetSkill( SkillName.Poisoning, 100.1, 141.0 );
-			SetSkill( SkillName.MagicResist, 175.2, 200.0 );
+			SetSkill( SkillName.Meditation, 100.1, 120.0 );
+			SetSkill( SkillName.Poisoning, 120.1, 141.0 );
+			SetSkill( SkillName.MagicResist, 80.1, 100.0 );
 
-			SetSkill( SkillName.Tactics, 90.1, 100.0 );
-			SetSkill( SkillName.Wrestling, 75.1, 100.0 );
-			SetSkill( SkillName.Necromancy, 130.1, 160.0 );
-			SetSkill( SkillName.SpiritSpeak, 130.1, 160.0 );
+            SetSkill( SkillName.Anatomy, 100.1, 120.0 );
+			SetSkill( SkillName.Tactics, 120.1, 140.0 );
+			SetSkill( SkillName.Wrestling, 120.1, 140.0 );
+			SetSkill( SkillName.Necromancy, 110.1, 130.0 );
+			SetSkill( SkillName.SpiritSpeak, 100.1, 120.0 );
             
 
 			Fame = 23000;
@@ -50,27 +50,22 @@ namespace Server.Mobiles
 
 			VirtualArmor = 60;
 			PackNecroReg( 30, 275 );
-            AddNewbied(new StaffRing());
-
-
-        }
-
-        public void AddNewbied(Item item)
-        {
-            item.LootType = LootType.Newbied;
-
-            AddItem(item);
-        }
-        public override TimeSpan ReacquireDelay { get { return TimeSpan.FromSeconds(1.0); } }
-        public virtual bool ReacquireOnMovement { get { return true; } }
-
-
-        public override OppositionGroup OppositionGroup
-		{
-			get{ return OppositionGroup.FeyAndUndead; }
+			
 		}
 
-		public override int GetIdleSound()
+        public override TimeSpan ReacquireDelay { get { return TimeSpan.FromSeconds(3.0); } }
+        public virtual bool ReacquireOnMovement { get { return true; } }
+        public override Poison HitPoison { get { return (Poison.Lethal); } }
+
+        public override bool OnBeforeDeath()
+        {
+            SpillAcid(6);
+
+            return base.OnBeforeDeath();
+        }
+
+
+        public override int GetIdleSound()
 		{
 			return 0x19D;
 		}
@@ -105,12 +100,11 @@ namespace Server.Mobiles
             AddLoot(LootPack.HighScrolls, 3);
         }
 
-		public override bool Unprovokable{ get{ return true; } }
-		public override bool BleedImmune{ get{ return true; } }
+		
 		public override Poison PoisonImmune{ get{ return Poison.Lethal; } }
 		public override int TreasureMapLevel{ get{ return 5; } }
 
-		public AncientLich( Serial serial ) : base( serial )
+		public TaskmasterKnight( Serial serial ) : base( serial )
 		{
 		}
     

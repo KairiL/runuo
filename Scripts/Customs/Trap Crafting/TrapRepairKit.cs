@@ -1,3 +1,4 @@
+//TODO: Add limited uses
 using System;
 using System.Collections.Generic;
 using Server.Mobiles;
@@ -12,10 +13,14 @@ namespace Server.Items
         public TrapRepairKit()
 		{
             Name = "A Trap Repair Kit";
+            ItemID = 0x1EB8;
+            Hue = 0;
         }
         public TrapRepairKit(Serial serial) : base( serial )
 		{
             Name = "A Trap Repair Kit";
+            ItemID = 0x1EB8;
+            Hue = 0;
         }
         public override void OnDoubleClick(Mobile from)
         {
@@ -35,7 +40,6 @@ namespace Server.Items
                 int newTimeSpan;
                 int newDamageRange;
                 int newTriggerRange;
-                int newDamage=0;
 
 
 
@@ -45,6 +49,7 @@ namespace Server.Items
 
                 if (target is CraftedTrap)
                 {
+                    //Repair Trap uses
                     newUses = (int)(from.Skills.Tailoring.Value + 
                         (from.Skills.Carpentry.Value + (from.Skills.ArmsLore.Value + from.Skills[((CraftedTrap)target).BonusSkill].Value / 2) / 4) / 2 + Utility.RandomMinMax(1, 3));
                     if ( ( (CraftedTrap)target).UsesRemaining > newUses )
@@ -54,6 +59,7 @@ namespace Server.Items
                         from.SendMessage("You repair the trap");
                     }
 
+                    //Upgrade trap power
                     if (!(((CraftedTrap)target).TrapPower != 0 ))
                     {
                         newTrapPower = (int)Math.Round(from.Skills.Tinkering.Value) + (int)Math.Round(from.Skills[((CraftedTrap)target).BonusSkill].Value) - 50;
@@ -66,6 +72,7 @@ namespace Server.Items
 
                     }
 
+                    //Upgrade trap delay
                     if ( target is CraftedPoisonGasTrap || target is CraftedFireColumnTrap || 
                          target is CraftedExplosionTrap || target is CraftedElectricTrap )
                     {
@@ -94,6 +101,7 @@ namespace Server.Items
                         }
                     }
 
+                    //Upgrade Trigger Range
                     newTriggerRange = 0;
 
                     if (target is CraftedPoisonGasTrap )
@@ -114,6 +122,7 @@ namespace Server.Items
                         upgraded = true;
                     }
                     
+                    //Upgrade damage range
                     newDamageRange = 0;
 
                     if (target is CraftedExplosionTrap ||
@@ -122,21 +131,21 @@ namespace Server.Items
                     else if (target is CraftedPoisonGasTrap )
                         newDamageRange = 2;
                     else if (target is CraftedElectricTrap )
-                        newDamage = 1;
+                        newDamageRange = 1;
 
                     if (target is CraftedPoisonGasTrap )
-                        newDamage += 2 * (int)( from.Skills.Alchemy.Value + 
+                        newDamageRange += 2 * (int)( from.Skills.Alchemy.Value + 
                                                from.Skills.Blacksmith.Value + 
                                                from.Skills.Tinkering.Value + 
                                                from.Skills.Poisoning.Value) / 100;
                     else if ( target is CraftedFireColumnTrap ||
                               target is CraftedElectricTrap ||
                               target is CraftedBoltTrap )
-                        newDamage += (int)( from.Skills.Alchemy.Value + 
+                        newDamageRange += (int)( from.Skills.Alchemy.Value + 
                                             from.Skills.Blacksmith.Value + 
                                             from.Skills.Tinkering.Value ) / 100;
                     else if ( target is CraftedExplosionTrap )
-                        newDamage += 2 * (int)(from.Skills.Alchemy.Value + 
+                        newDamageRange += 2 * (int)(from.Skills.Alchemy.Value + 
                                                from.Skills.Blacksmith.Value + 
                                                from.Skills.Tinkering.Value) / 100;
 

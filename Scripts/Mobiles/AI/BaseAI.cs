@@ -43,7 +43,7 @@ namespace Server.Mobiles
         AI_Necro,
         AI_Necromage,
         AI_NecromageEpic,
-        AI_HiveMind
+        AI_NecromageHive
     }
 
 	public enum ActionType

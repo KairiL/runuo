@@ -194,7 +194,10 @@ namespace Server.Spells.Fifth
 
 			public override bool OnMoveOver( Mobile m )
 			{
-				if ( Visible && m_Caster != null && (!Core.AOS || m != m_Caster) && SpellHelper.ValidIndirectTarget( m_Caster, m ) && m_Caster.CanBeHarmful( m, false ) )
+				if ( Visible && m_Caster != null && 
+                    (!Core.AOS || m != m_Caster) && 
+                    SpellHelper.ValidIndirectTarget( m_Caster, m ) && 
+                    m_Caster.CanBeHarmful( m, false ) )
 				{
 					m_Caster.DoHarmful( m );
 

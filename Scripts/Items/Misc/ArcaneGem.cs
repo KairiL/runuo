@@ -39,12 +39,12 @@ namespace Server.Items
 
 		public int GetChargesFor( Mobile m )
 		{
-			int v = (int)(m.Skills[SkillName.Tailoring].Value / 5);
+			int v = (int)(m.Skills[SkillName.Tailoring].Value / 2);
 
-			if ( v < 16 )
-				return 16;
-			else if ( v > 24 )
-				return 24;
+			if ( v < 20 )
+				return 20;
+			else if ( v > 60 )
+				return 60;
 
 			return v;
 		}

@@ -6,8 +6,8 @@ using Server.Items;
 
 namespace Server.Mobiles
 {
-	[CorpseName( "a demon wolf corpse" )]
-	public class DemonWolf : BaseMount
+	[CorpseName( "a giant corpse" )]
+	public class Giant : BaseMount
 	{
 		public override bool IgnoreYoungProtection { get { return Core.ML; } }
         
@@ -154,16 +154,16 @@ namespace Server.Mobiles
 		{
 			base.OnDeath( c );
 
-			if ( !Summoned && !NoKillAwards && DemonWolf.CheckArtifactChance( this ) )
-				DemonWolf.DistributeArtifact( this );
+			if ( !Summoned && !NoKillAwards && Giant.CheckArtifactChance( this ) )
+				Giant.DistributeArtifact( this );
 		}
 
         [Constructable]
-        public DemonWolf() : this( "a demon wolf" )
+        public Giant() : this( "a giant" )
 		{
         }
         [Constructable]
-		public DemonWolf(string name) : base( name, 1410, 16076, AIType.AI_NecromageEpic, FightMode.Closest, 16, 1, .2, .4 )
+		public Giant(string name) : base( name, 1405, 16076, AIType.AI_NecromageEpic, FightMode.Closest, 16, 1, .2, .4 )
 		{
             BaseSoundID = 0x165;
 
@@ -234,7 +234,7 @@ namespace Server.Mobiles
 			}
 		}
 
-		public DemonWolf( Serial serial ) : base( serial )
+		public Giant( Serial serial ) : base( serial )
 		{
 		}
 

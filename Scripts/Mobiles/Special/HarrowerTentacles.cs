@@ -29,7 +29,7 @@ namespace Server.Mobiles
 		{
 		}
 		
-		public HarrowerTentacles( Mobile harrower ) : base( AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4 )
+		public HarrowerTentacles( Mobile harrower ) : base( AIType.AI_Melee, FightMode.Closest, 14, 1, 0.2, 0.4 )
 		{
 			m_Harrower = harrower;
 
@@ -179,7 +179,7 @@ namespace Server.Mobiles
 					return;
 				}
 
-				foreach ( Mobile m in m_Owner.GetMobilesInRange( 9 ) )
+				foreach ( Mobile m in m_Owner.GetMobilesInRange( 14 ) )
 				{
 					if ( m == m_Owner || m == m_Owner.Harrower || !m_Owner.CanBeHarmful( m ) )
 						continue;

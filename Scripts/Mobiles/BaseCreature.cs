@@ -2479,8 +2479,8 @@ namespace Server.Mobiles
                 case AIType.AI_MageEpic:
                     m_AI = new MageEpicAI(this);
                     break;
-                case AIType.AI_HiveMind:
-                    m_AI = new HiveMindAI(this);
+                case AIType.AI_NecromageHive:
+                    m_AI = new NecromageHiveAI(this);
                     break;
             }
 		}
