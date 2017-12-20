@@ -79,8 +79,8 @@ namespace Server.Mobiles
 				case 29: AddItem( new DeathEssenceGloves () ); break;      
 				case 30: AddItem( new DeathEssenceHelm () ); break;		
 				case 31: AddItem( new DeathEssenceLegs () ); break;		
- }
- }
+            }
+        }
 		public override void GenerateLoot()
 		{
 			AddLoot( LootPack.AosUltraRich );
@@ -96,25 +96,26 @@ namespace Server.Mobiles
 		public AMasterJonath( Serial serial ) : base( serial )
 		{
 		}
-public override void OnDeath( Container c )
-{
-	if ( Utility.Random( 10 ) == 0 )
-	{
-		Item item;
 
-		switch ( Utility.Random( 3 ))
-		{
-                        default:
-			case 1: item = new JonahNote1(); break;
-			case 2: item = new JonahNote2(); break;
-			case 3: item = new JonahNote3(); break;
-					}
+        public override void OnDeath( Container c )
+        {
+	        if ( Utility.Random( 10 ) == 0 )
+	        {
+		        Item item;
 
-		c.DropItem( item );
-	}
+		        switch ( Utility.Random( 3 ))
+		        {
+                    default:
+			        case 1: item = new JonahNote1(); break;
+			        case 2: item = new JonahNote2(); break;
+			        case 3: item = new JonahNote3(); break;
+				}
 
-	base.OnDeath( c );
-}
+		        c.DropItem( item );
+	        }
+
+	        base.OnDeath( c );
+        }
 
 
 		public override void Serialize( GenericWriter writer )

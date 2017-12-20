@@ -56,24 +56,24 @@ namespace Server.Mobiles
 		public override FoodType FavoriteFood{ get{ return FoodType.Meat | FoodType.Fish | FoodType.FruitsAndVegies | FoodType.GrainsAndHay | FoodType.Eggs; } }
 
 		public override void OnDeath( Container c )
-{
-	if ( Utility.Random( 10 ) == 0 )
-	{
-		Item item;
+        {
+	        if ( Utility.Random( 10 ) == 0 )
+	        {
+		        Item item;
 
-		switch ( Utility.Random( 3 ))
-		{
-                        default:
-			case 1: item = new ProxyHead(); break;
-			case 2: item = new ProxyLeg(); break;
-			case 3: item = new ProxyTorso(); break;
-					}
+		        switch ( Utility.Random( 3 ))
+		        {
+                    default:
+			        case 1: item = new ProxyHead(); break;
+			        case 2: item = new ProxyLeg(); break;
+			        case 3: item = new ProxyTorso(); break;
+				}
 
-		c.DropItem( item );
-	}
+		        c.DropItem( item );
+	        }
 
-	base.OnDeath( c );
-}
+        base.OnDeath( c );
+        }
 
 
 		public ProxyGuadian( Serial serial ) : base( serial )

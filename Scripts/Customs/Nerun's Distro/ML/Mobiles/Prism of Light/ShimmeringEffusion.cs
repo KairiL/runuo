@@ -8,7 +8,7 @@ namespace Server.Mobiles
 	public class ShimmeringEffusion : BaseCreature
 	{
 		[Constructable]
-		public ShimmeringEffusion() : base( AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4 )
+		public ShimmeringEffusion() : base( AIType.AI_MageEpic, FightMode.Closest, 10, 1, 0.2, 0.4 )
 		{
 			Name = "a shimmering effusion";
 			Body = 0x105;			
@@ -47,9 +47,16 @@ namespace Server.Mobiles
 			
 			PackItem( new GnarledStaff() );
 			PackNecroReg( 15, 25 );
-		}
+            Timer.DelayCall(TimeSpan.FromMinutes(10.0), new TimerStateCallback(DeletePeerless), this);
+        }
 
-		public override void GenerateLoot()
+        public void DeletePeerless(object state)
+        {
+            Mobile from = (Mobile)state;
+            from.Delete();
+        }
+
+        public override void GenerateLoot()
 		{
 			AddLoot( LootPack.AosSuperBoss, 8 );
 		}

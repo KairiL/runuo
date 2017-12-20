@@ -45,25 +45,25 @@ namespace Server.Mobiles
 
 			VirtualArmor = 80;
 		
-		switch ( Utility.Random( 4 ))
+		    switch ( Utility.Random( 4 ))
             {                                   
             	case 0: AddItem( new CrimsonCinture() ); break;      	
-							}
+			}
 
-switch ( Utility.Random( 8 ))
+            switch ( Utility.Random( 8 ))
             {                                   
             	case 0: AddItem( new Tomb1() ); break;
             	case 1: AddItem( new Tomb2 () ); break;
 				case 2: AddItem( new Tomb3() ); break;
             	case 3: AddItem( new Tomb4 () ); break;        	
-							}
-				switch ( Utility.Random( 12 ))
+			}
+			switch ( Utility.Random( 12 ))
             {                                   
             	case 0: AddItem( new GrizzleSummoner() ); break;
 				case 1: AddItem( new SkullPike2() ); break;
        	
-							}
-							switch ( Utility.Random( 64 ))
+			}
+			switch ( Utility.Random( 64 ))
             {                                   
             	case 0: AddItem( new PlateOfHonorArms() ); break;
             	case 1: AddItem( new PlateOfHonorChest() ); break;
@@ -97,9 +97,17 @@ switch ( Utility.Random( 8 ))
 				case 29: AddItem( new DeathEssenceGloves () ); break;      
 				case 30: AddItem( new DeathEssenceHelm () ); break;		
 				case 31: AddItem( new DeathEssenceLegs () ); break;		
- }
- }
-		public override void GenerateLoot()
+            }
+            Timer.DelayCall(TimeSpan.FromMinutes(10.0), new TimerStateCallback(DeletePeerless), this);
+        }
+
+        public void DeletePeerless(object state)
+        {
+            Mobile from = (Mobile)state;
+            from.Delete();
+        }
+
+        public override void GenerateLoot()
 		{
 			AddLoot( LootPack.FilthyRich, 2 );
 			AddLoot( LootPack.MedScrolls, 2 );

@@ -1743,6 +1743,8 @@ namespace Server.Mobiles
 				NameHue = 0x35;
 
 			GenerateLoot( true );
+
+            Hunger = 20;
 		}
 
 		public BaseCreature( Serial serial ) : base( serial )

@@ -160,12 +160,11 @@ namespace Server.Mobiles
 				{
 					BaseCreature rat;
 
-					switch ( Utility.Random( 5 ) )
+					switch ( Utility.Random( 2 ) )
 					{
 						default:
-						case 0: case 1:	rat = new Ratman(); break;
-						case 2: case 3:	rat = new RatmanArcher(); break;
-						case 4:			rat = new RatmanMage(); break;
+						case 0:	rat = new RatmanArcher(); break;
+						case 1: rat = new RatmanMage(); break;
 					}
 
 					rat.Team = this.Team;
@@ -204,7 +203,7 @@ namespace Server.Mobiles
 			if ( Hits < 500 && !IsBodyMod ) // Baracoon is low on life, polymorph into a ratman
 				Polymorph( this );
 		}
-
+        /*
 		public override void OnGotMeleeAttack( Mobile attacker )
 		{
 			base.OnGotMeleeAttack( attacker );
@@ -218,8 +217,14 @@ namespace Server.Mobiles
 
 			DoSpecialAbility( defender );
 		}
+        */
+        public override void OnDamage(int amount, Mobile from, bool willKill)
+        {
+            base.OnDamage(amount, from, willKill);
+            DoSpecialAbility(from);
+        }
 
-		public Barracoon( Serial serial ) : base( serial )
+        public Barracoon( Serial serial ) : base( serial )
 		{
 		}
 

@@ -88,8 +88,8 @@ namespace Server.Mobiles
 				case 29: AddItem( new DeathEssenceGloves () ); break;      
 				case 30: AddItem( new DeathEssenceHelm () ); break;		
 				case 31: AddItem( new DeathEssenceLegs () ); break;		
- }
-}
+            }
+        }
 
 		public override bool BleedImmune { get { return true; } }
         public override bool AutoDispel{ get{ return true; } }
@@ -104,25 +104,25 @@ namespace Server.Mobiles
 		{
 		}
 
-public override void OnDeath( Container c )
-{
-	if ( Utility.Random( 10 ) == 0 )
-	{
-		Item item;
+        public override void OnDeath( Container c )
+        {
+	        if ( Utility.Random( 10 ) == 0 )
+	        {
+		        Item item;
 
-		switch ( Utility.Random( 3 ))
-		{
-                        default:
-			case 1: item = new JonahNote1(); break;
-			case 2: item = new JonahNote2(); break;
-			case 3: item = new JonahNote3(); break;
-					}
+		        switch ( Utility.Random( 3 ))
+		        {
+                                default:
+			        case 1: item = new JonahNote1(); break;
+			        case 2: item = new JonahNote2(); break;
+			        case 3: item = new JonahNote3(); break;
+					        }
 
-		c.DropItem( item );
-	}
+		        c.DropItem( item );
+	        }
 
-	base.OnDeath( c );
-}
+	        base.OnDeath( c );
+        }
 
 		public override void Serialize( GenericWriter writer )
 		{

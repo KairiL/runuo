@@ -13,9 +13,16 @@ namespace Server.Items
 			LootType = LootType.Blessed;
             Hue = 1161;
             Weight = 0.01;
+            Timer.DelayCall(TimeSpan.FromHours(3.0), new TimerStateCallback(DeleteKey), this);
         }
 
-		public TaintedSeeds( Serial serial ) : base( serial )
+        public void DeleteKey(object state)
+        {
+            Item from = (Item)state;
+            from.Delete();
+        }
+
+        public TaintedSeeds( Serial serial ) : base( serial )
 		{
 		}
 

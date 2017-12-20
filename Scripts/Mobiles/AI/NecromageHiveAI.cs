@@ -265,7 +265,7 @@ namespace Server.Mobiles
 
 			int healChance = (m_Mobile.Hits == 0 ? m_Mobile.HitsMax : (m_Mobile.HitsMax / m_Mobile.Hits));
             int spellResult;
-            double witherChance = .05; //05% chance to wither per enemy in range
+            double witherChance = .10; //05% chance to wither per enemy in range
             m_Mobile.DebugSay("Choosing a Spell");
             spellResult = Utility.Random(4 + healChance);
             m_Mobile.DebugSay("Chose " + spellResult);

@@ -1,5 +1,3 @@
-//Property of Milkman Dan
-// Demonic Ridez http://www.demonicridez.com
 using System;
 using Server;
 using Server.ContextMenus;
@@ -21,7 +19,7 @@ namespace Server.Mobiles
 	[CorpseName( "a wounded explorer corpse" )]
 	public class Jabba : Mobile
 	{
-                public virtual bool IsInvulnerable{ get{ return true; } }
+        public virtual bool IsInvulnerable{ get{ return true; } }
                 
 		[Constructable]
 		public Jabba()
@@ -33,7 +31,7 @@ namespace Server.Mobiles
             VirtualArmor = 50;
 			CantWalk = true;
 
-           Item hair = new Item( Utility.RandomList( 0x203B, 0x203C, 0x203D, 0x2044, 0x2045, 0x2047, 0x2049, 0x204A ) );
+            Item hair = new Item( Utility.RandomList( 0x203B, 0x203C, 0x203D, 0x2044, 0x2045, 0x2047, 0x2049, 0x204A ) );
             hair.Hue = Utility.RandomHairHue();
 		    hair.Layer = Layer.Hair;
             hair.Movable = false;
@@ -61,10 +59,10 @@ namespace Server.Mobiles
 		}
 
 		public override void GetContextMenuEntries( Mobile from, List<ContextMenuEntry> list ) 
-	        { 
-	                base.GetContextMenuEntries( from, list ); 
-        	        list.Add( new JabbaEntry( from, this ) ); 
-	        } 
+	    { 
+	        base.GetContextMenuEntries( from, list ); 
+        	list.Add( new JabbaEntry( from, this ) ); 
+	    } 
 
 		public override void Serialize( GenericWriter writer )
 		{
@@ -122,26 +120,16 @@ namespace Server.Mobiles
 							
 							switch ( Utility.Random( 1 ) )
 							{
-								
 								case  0: mobile.AddToBackpack( new ChiefParoxysmusKey() );; break;
 							}
                         }
                     }
-					
-										else
-                            {
-                                mobile.SendGump(new JabbaQuestGump(mobile));
-							
-                            }
-					
-                    
+					else
+                    {
+                        mobile.SendGump(new JabbaQuestGump(mobile));
+                    }
                 }
-				
-				
-				
             }
 		}
-
-		
 	}
 }

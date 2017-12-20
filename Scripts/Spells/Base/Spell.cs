@@ -700,8 +700,11 @@ namespace Server.Spells
 				fcMax = 2;
 
 			int fc = AosAttributes.GetValue( m_Caster, AosAttribute.CastSpeed );
+            int sc = AosAttributes.GetValue( m_Caster, AosAttribute.SpellChanneling );
 
-			if ( fc > fcMax )
+            if ( sc > 2 )
+                fcMax += sc -2;
+			if ( fc > fcMax)
 				fc = fcMax;
 
 			if ( ProtectionSpell.Registry.Contains( m_Caster ) )

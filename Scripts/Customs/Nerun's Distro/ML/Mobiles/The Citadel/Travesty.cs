@@ -41,7 +41,14 @@ namespace Server.Mobiles
 			
 			PackItem( new GnarledStaff() );
 			PackNecroReg( 15, 25 );
-		}
+            Timer.DelayCall(TimeSpan.FromMinutes(10.0), new TimerStateCallback(DeletePeerless), this);
+        }
+
+        public void DeletePeerless(object state)
+        { 
+            Mobile from = (Mobile)state;
+            from.Delete();
+        }
 
 		public override void GenerateLoot()
 		{

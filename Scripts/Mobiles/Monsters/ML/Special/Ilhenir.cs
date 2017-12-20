@@ -38,7 +38,7 @@ namespace Server.Mobiles
 
 		[Constructable]
 		public Ilhenir()
-			: base( AIType.AI_Mage )
+			: base( AIType.AI_MageEpic )
 		{
 			Name = "Ilhenir";
 			Title = "the Stained";

@@ -28,14 +28,22 @@ namespace Server.Items
 		{
 			Name = "Monstrous Interred Grizzle Teleporter. Dont Spawn Here till you use this!";
 			LootType = LootType.Blessed;
-		}
-		
-		public MonstrousInterredGrizzleKey( Serial serial ) : base( serial )
+            Timer.DelayCall(TimeSpan.FromHours(3.0), new TimerStateCallback(DeleteKey), this);
+        }
+
+        public void DeleteKey(object state)
+        {
+            Item from = (Item)state;
+            from.Delete();
+        }
+
+        public MonstrousInterredGrizzleKey( Serial serial ) : base( serial )
 		{
 		}
 		
 		public override void OnDoubleClick( Mobile from )
-		{			
+		{
+            /* //TODO: check if no players in area
 			ArrayList list = new ArrayList();
 			
 			foreach ( Mobile m in World.Mobiles.Values )
@@ -51,7 +59,9 @@ namespace Server.Items
 			if ( list.Count > 0 )
 				from.SendMessage( "A Party is Already in Battle With the Monstrous Interred Grizzle. Please Wait" );
 
-			
+			*/
+            if (false)
+            { }
 			else
 			{
 				from.SendGump( new MonstrousInterredGrizzleGump( from, this ) );

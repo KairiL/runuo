@@ -50,12 +50,9 @@ namespace Server.Mobiles
 		public override void GenerateLoot()
 		{
 			AddLoot( LootPack.UltraRich, 2 );
-			// TODO: uncomment once added
 			//AddLoot( LootPack.Parrot );
 		}
 
-		/*
-		// TODO: uncomment once added
 		public override void OnDeath( Container c )
 		{
 			base.OnDeath( c );
@@ -63,10 +60,11 @@ namespace Server.Mobiles
 			if ( Utility.RandomDouble() < 0.6 )
 				c.DropItem( new BrokenCrystals() );
 
-			if ( Utility.RandomDouble() < 0.1 )
+			/*
+               if ( Utility.RandomDouble() < 0.1 )
 				c.DropItem( new ParrotItem() );
+            */
 		}
-		*/
 
 		public UnfrozenMummy( Serial serial )
 			: base( serial )

@@ -118,7 +118,7 @@ namespace Server.Gumps
 			this.AddImage(500, 112, 10430);
 			this.AddImage(535, 513, 10105);
 			this.AddImage(520, 417, 10412);
-			this.AddLabel(282, 151, 1153, @"Melisandes Demise");
+			this.AddLabel(282, 151, 1153, @"Paroxymous's Demise");
 			this.AddButton(282, 469, 247, 248, 0, GumpButtonType.Reply, 0);
 			this.AddHtml( 157, 181, 345, 279, "<i>Thank you so much, I am overjoyed! I have waited so long for that tyrant to be dead!</i> <br><br> After what seems to be an eternity, you are given a special teleporter. You feel priviledged to have been given the oppurtunity to slay the foe. <br><br>Make sure you, and all your party members are standing next to each other before double clicking the teleporter!</i> ", true, true);
 		}

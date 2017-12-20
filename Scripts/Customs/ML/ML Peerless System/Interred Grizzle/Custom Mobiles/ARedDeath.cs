@@ -52,7 +52,7 @@ namespace Server.Mobiles
 			Tamable = false;
 			MinTameSkill = 0.0;
 			ControlSlots = 0;
-		switch ( Utility.Random( 64 ))
+		    switch ( Utility.Random( 64 ))
             {                                   
             	case 0: AddItem( new PlateOfHonorArms() ); break;
             	case 1: AddItem( new PlateOfHonorChest() ); break;
@@ -86,8 +86,8 @@ namespace Server.Mobiles
 				case 29: AddItem( new DeathEssenceGloves () ); break;      
 				case 30: AddItem( new DeathEssenceHelm () ); break;		
 				case 31: AddItem( new DeathEssenceLegs () ); break;		
- }
- }
+            }
+        }
 		
 			public override void GenerateLoot()
 		{
@@ -105,23 +105,23 @@ namespace Server.Mobiles
 		{
 		}
 		
-public override void OnDeath( Container c )
-{
-	if ( Utility.Random( 2 ) == 0 )
-	{
-		Item item;
+        public override void OnDeath( Container c )
+        {
+	        if ( Utility.Random( 2 ) == 0 )
+	        {
+		        Item item;
 
-		switch ( Utility.Random( 1 ))
-		{
-                        default:
-			case 1: item = new JonahDeath(); break;
-					}
+		        switch ( Utility.Random( 1 ))
+		        {
+                    default:
+			        case 1: item = new JonahDeath(); break;
+		        }
 
-		c.DropItem( item );
-	}
+		        c.DropItem( item );
+	        }
 
-	base.OnDeath( c );
-}
+	        base.OnDeath( c );
+        }
 
 		public override void Serialize( GenericWriter writer )
 		{

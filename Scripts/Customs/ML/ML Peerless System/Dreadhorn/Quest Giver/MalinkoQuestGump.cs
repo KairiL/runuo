@@ -123,7 +123,7 @@ namespace Server.Gumps
 			this.AddImage(500, 112, 10430);
 			this.AddImage(535, 513, 10105);
 			this.AddImage(520, 417, 10412);
-			this.AddLabel(282, 151, 1153, @"Perils of Malinko");
+			this.AddLabel(282, 151, 1153, @"Dreadhorn's Demise");
 			this.AddButton(226, 469, 247, 248, 0, GumpButtonType.Reply, 0);
 			this.AddButton(351, 469, 241, 242,  1, GumpButtonType.Reply, 0);
 			this.AddHtml( 157, 181, 345, 279, "You see a woman before you. She is probably younger than she looks but life here will age anyone. <br><br> She barely turns around but notices you: <br><br><i>Tell me you are here to help me!?</i><br><br> You tell her you have heard of tales of the great Dread Horn.<br><br> She takes a deep breath and sizes you up. <br><Br><i> I can only help you with part of it and it's the easy part. You need to gather some items to prove you are worthy. <br><br> If you get these items, I will be honored to give you a chance to slay the Mighty Foe.</i>", false, true);

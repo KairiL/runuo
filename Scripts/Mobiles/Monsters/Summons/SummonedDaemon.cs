@@ -41,9 +41,18 @@ namespace Server.Mobiles
 
 			VirtualArmor = 58;
 			ControlSlots = Core.SE ? 4 : 5;
-		}
 
-		public override Poison PoisonImmune{ get{ return Poison.Regular; } } // TODO: Immune to poison?
+            if (ControlMaster != null && ControlMaster is BaseCreature )
+                Timer.DelayCall(TimeSpan.FromHours(2.0), new TimerStateCallback(DeleteSummon), this);
+        }
+
+        public void DeleteSummon(object state)
+        {
+            Item from = (Item)state;
+            from.Delete();
+        }
+
+        public override Poison PoisonImmune{ get{ return Poison.Regular; } } // TODO: Immune to poison?
 		public override bool CanFly { get { return true; } }
 
 		public SummonedDaemon( Serial serial ) : base( serial )
