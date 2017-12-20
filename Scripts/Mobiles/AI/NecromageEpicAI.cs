@@ -267,14 +267,17 @@ namespace Server.Mobiles
 				}
 				case 1: // PoisonStrike them
 				{
-                    m_Mobile.DebugSay("1. Poison Strike");
+                    m_Mobile.DebugSay("1. Poison Strike or Pfield or Ffield");
                     if ( !c.Poisoned )
                         if (Utility.RandomDouble() > .5)
 						    spell = new PoisonStrikeSpell( m_Mobile, null );
                         else
                             spell = new PoisonFieldSpell( m_Mobile, null );//need to do targeting on fields
                     else
-                        spell = new FireFieldSpell( m_Mobile, null );
+                        if (Utility.RandomDouble() > .5)
+                            spell = new FireFieldSpell( m_Mobile, null );
+                        else
+                            spell = new FlameStrikeSpell( m_Mobile, null);
 
 					break;
 				}

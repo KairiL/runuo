@@ -292,9 +292,12 @@ namespace Server.Mobiles
                         else
                             spell = new PoisonFieldSpell( m_Mobile, null );//need to do targeting on fields
                     else
-                        spell = new FireFieldSpell( m_Mobile, null );
+                        if (Utility.RandomDouble() > .5)
+                            spell = new FireFieldSpell(m_Mobile, null);
+                        else
+                            spell = new FlameStrikeSpell(m_Mobile, null);
 
-					break;
+                        break;
 				}
 				case 2: // Deal some damage
 				{

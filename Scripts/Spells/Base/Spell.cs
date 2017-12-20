@@ -653,7 +653,7 @@ namespace Server.Spells
 		public virtual int CastRecoveryBase{ get{ return 6; } }
 		public virtual int CastRecoveryFastScalar{ get{ return 1; } }
 		public virtual int CastRecoveryPerSecond{ get{ return 4; } }
-		public virtual int CastRecoveryMinimum{ get{ return 0; } }
+		public virtual int CastRecoveryMinimum{ get{ return -1; } }
 
 		public virtual TimeSpan GetCastRecovery()
 		{
