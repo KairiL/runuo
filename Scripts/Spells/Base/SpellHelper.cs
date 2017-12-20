@@ -412,6 +412,8 @@ namespace Server.Spells
 				BaseCreature c = (BaseCreature)to;
                 if (c.IsFriend(from))
                     return false;
+                if ( c.ControlMaster == from || c.SummonMaster == from)
+                    return false;
 				if( c.Controlled || c.Summoned )
 				{
 					if( c.ControlMaster == from || c.SummonMaster == from )
