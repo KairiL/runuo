@@ -12,9 +12,16 @@ namespace Server.Items
 		{
 			LootType = LootType.Blessed;
 			Hue = 0x455;
-		}
+            Timer.DelayCall(TimeSpan.FromHours(3.0), new TimerStateCallback(DeleteKey), this);
+        }
 
-		public ThrashersTail( Serial serial ) : base( serial )
+        public void DeleteKey(object state)
+        {
+            Item from = (Item)state;
+            from.Delete();
+        }
+
+        public ThrashersTail( Serial serial ) : base( serial )
 		{
 		}
 

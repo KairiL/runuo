@@ -8,7 +8,7 @@ namespace Server.Mobiles
 	public class LadyMelisande : BaseCreature
 	{
 		[Constructable]
-		public LadyMelisande() : base( AIType.AI_Necro, FightMode.Closest, 10, 1, 0.2, 0.4 )
+		public LadyMelisande() : base( AIType.AI_NecromageEpic, FightMode.Closest, 10, 1, 0.2, 0.4 )
 		{
 			Name = "Lady Melisande";
 			Body = 0x102;
@@ -109,7 +109,14 @@ namespace Server.Mobiles
             }
             PackItem( new GnarledStaff() );
 			PackNecroReg( 50, 80 );
-		}
+            Timer.DelayCall(TimeSpan.FromMinutes(10.0), new TimerStateCallback(DeletePeerless), this);
+        }
+
+        public void DeletePeerless(object state)
+        {
+            Mobile from = (Mobile)state;
+            from.Delete();
+        }
 
         public override void GenerateLoot()
         {

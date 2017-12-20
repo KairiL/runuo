@@ -225,10 +225,10 @@ namespace Server.Mobiles
 			if ( !m_Mobile.Summoned && Utility.Random( 0, 4 + (m_Mobile.Hits == 0 ? m_Mobile.HitsMax : (m_Mobile.HitsMax / m_Mobile.Hits)) ) >= 3 )
 			{
 				if ( m_Mobile.Hits < (m_Mobile.HitsMax - 50) )
-					m_Mobile.UseSkill( SkillName.SpiritSpeak );
+					spell = new GreaterHealSpell( m_Mobile, null );
 				else if ( m_Mobile.Hits < (m_Mobile.HitsMax - 20) )
-					m_Mobile.UseSkill( SkillName.SpiritSpeak );
-			}
+                    spell = new HealSpell(m_Mobile, null);
+            }
 
 			if ( spell == null )
 			{
@@ -249,7 +249,7 @@ namespace Server.Mobiles
 
 			int healChance = (m_Mobile.Hits == 0 ? m_Mobile.HitsMax : (m_Mobile.HitsMax / m_Mobile.Hits));
             int spellResult;
-            double witherChance = .05; //05% chance to wither per enemy in range
+            double witherChance = .10; //05% chance to wither per enemy in range
             m_Mobile.DebugSay("Choosing a Spell");
             spellResult = Utility.Random(4 + healChance);
             m_Mobile.DebugSay("Chose " + spellResult);
@@ -257,13 +257,13 @@ namespace Server.Mobiles
 			{
 				case 0: // Heal  myself
 				{
-                    m_Mobile.DebugSay("0. Spirit Speak");
-                    if ( m_Mobile.Hits < (m_Mobile.HitsMax - 50) )
-						m_Mobile.UseSkill( SkillName.SpiritSpeak );
-					else if ( m_Mobile.Hits < (m_Mobile.HitsMax - 10) )
-						m_Mobile.UseSkill( SkillName.SpiritSpeak );
+                    m_Mobile.DebugSay("0. Heal");
+                    if (m_Mobile.Hits < (m_Mobile.HitsMax - 50))
+                        spell = new GreaterHealSpell(m_Mobile, null);
+                    else if (m_Mobile.Hits < (m_Mobile.HitsMax - 20))
+                        spell = new HealSpell(m_Mobile, null);
 
-					break;
+                    break;
 				}
 				case 1: // PoisonStrike them
 				{

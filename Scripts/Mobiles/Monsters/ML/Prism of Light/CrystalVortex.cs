@@ -48,12 +48,10 @@ namespace Server.Mobiles
 		public override void GenerateLoot()
 		{
 			AddLoot( LootPack.FilthyRich, 2 );
-			// TODO: uncomment once added
 			//AddLoot( LootPack.Parrot );
 		}
 
-		/*
-		// TODO: uncomment once added
+
 		public override void OnDeath( Container c )
 		{
 			base.OnDeath( c );
@@ -64,7 +62,6 @@ namespace Server.Mobiles
 			if ( Utility.RandomDouble() < 0.06 )
 				c.DropItem( new JaggedCrystals() );
 		}
-		*/
 
 		public override int GetAngerSound() { return 0x15; }
 		public override int GetAttackSound() { return 0x28; }

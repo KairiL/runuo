@@ -55,44 +55,44 @@ namespace Server.Mobiles
 
 			VirtualArmor = 90;
 
-		switch ( Utility.Random( 64 ))
+		    switch ( Utility.Random( 64 ))
             {                                   
-            	case 0: AddItem( new PlateOfHonorArms() ); break;
-            	case 1: AddItem( new PlateOfHonorChest() ); break;
-				case 2: AddItem( new PlateOfHonorGloves () ); break;
-            	case 3: AddItem( new PlateOfHonorGorget () ); break;       
-				case 4: AddItem( new PlateOfHonorHelm () ); break;		
-				case 5: AddItem( new PlateOfHonorLegs () ); break;		
-				case 6: AddItem( new AcolyteArms() ); break;
-            	case 7: AddItem( new AcolyteChest() ); break;
-				case 8: AddItem( new AcolyteGloves () ); break;	
-				case 9: AddItem( new AcolyteLegs () ); break;	
-				case 10: AddItem( new EvocaricusSword() ); break;
-            	case 11: AddItem( new MalekisHonor() ); break;
-				case 12: AddItem( new GrizzleArms() ); break;
-            	case 13: AddItem( new GrizzleChest() ); break;
-				case 14: AddItem( new GrizzleGloves () ); break;       
-				case 15: AddItem( new GrizzleHelm () ); break;		
-				case 16: AddItem( new PlateOfHonorLegs () ); break;
-				case 17: AddItem( new MageArmorArms() ); break;
-            	case 18: AddItem( new MageArmorChest() ); break;
-				case 19: AddItem( new MageArmorGloves () ); break;	
-				case 20: AddItem( new MageArmorLegs () ); break;                    
-				case 21: AddItem( new MyrmidonArms() ); break;
-            	case 22: AddItem( new MyrmidonChest() ); break;
-				case 23: AddItem( new MyrmidonGloves () ); break;
-            	case 24: AddItem( new MyrmidonGorget () ); break;       
-				case 25: AddItem( new MyrmidonHelm () ); break;		
-				case 26: AddItem( new MyrmidonLegs () ); break;		
-				case 27: AddItem( new DeathEssenceArms() ); break;
-            	case 28: AddItem( new DeathEssenceChest() ); break;
-				case 29: AddItem( new DeathEssenceGloves () ); break;      
-				case 30: AddItem( new DeathEssenceHelm () ); break;		
-				case 31: AddItem( new DeathEssenceLegs () ); break;		
- }
+            	    case 0: AddItem( new PlateOfHonorArms() ); break;
+            	    case 1: AddItem( new PlateOfHonorChest() ); break;
+				    case 2: AddItem( new PlateOfHonorGloves () ); break;
+            	    case 3: AddItem( new PlateOfHonorGorget () ); break;       
+				    case 4: AddItem( new PlateOfHonorHelm () ); break;		
+				    case 5: AddItem( new PlateOfHonorLegs () ); break;		
+				    case 6: AddItem( new AcolyteArms() ); break;
+            	    case 7: AddItem( new AcolyteChest() ); break;
+				    case 8: AddItem( new AcolyteGloves () ); break;	
+				    case 9: AddItem( new AcolyteLegs () ); break;	
+				    case 10: AddItem( new EvocaricusSword() ); break;
+            	    case 11: AddItem( new MalekisHonor() ); break;
+				    case 12: AddItem( new GrizzleArms() ); break;
+            	    case 13: AddItem( new GrizzleChest() ); break;
+				    case 14: AddItem( new GrizzleGloves () ); break;       
+				    case 15: AddItem( new GrizzleHelm () ); break;		
+				    case 16: AddItem( new PlateOfHonorLegs () ); break;
+				    case 17: AddItem( new MageArmorArms() ); break;
+            	    case 18: AddItem( new MageArmorChest() ); break;
+				    case 19: AddItem( new MageArmorGloves () ); break;	
+				    case 20: AddItem( new MageArmorLegs () ); break;                    
+				    case 21: AddItem( new MyrmidonArms() ); break;
+            	    case 22: AddItem( new MyrmidonChest() ); break;
+				    case 23: AddItem( new MyrmidonGloves () ); break;
+            	    case 24: AddItem( new MyrmidonGorget () ); break;       
+				    case 25: AddItem( new MyrmidonHelm () ); break;		
+				    case 26: AddItem( new MyrmidonLegs () ); break;		
+				    case 27: AddItem( new DeathEssenceArms() ); break;
+            	    case 28: AddItem( new DeathEssenceChest() ); break;
+				    case 29: AddItem( new DeathEssenceGloves () ); break;      
+				    case 30: AddItem( new DeathEssenceHelm () ); break;		
+				    case 31: AddItem( new DeathEssenceLegs () ); break;		
+            }
 
 			
-		}
+	    }
 
 		public override void GenerateLoot()
 		{
@@ -105,23 +105,23 @@ namespace Server.Mobiles
 		public override int TreasureMapLevel { get { return 5; } }
 		public override int Meat { get { return 1; } }
 
-public override void OnDeath( Container c )
-{
-	if ( Utility.Random( 4 ) == 0 )
-	{
-		Item item;
+        public override void OnDeath( Container c )
+        {
+	        if ( Utility.Random( 4 ) == 0 )
+	        {
+		        Item item;
 
-		switch ( Utility.Random( 1 ))
-		{
-                        default:
-			case 1: item = new PutrifierSpleen(); break;
-					}
+		        switch ( Utility.Random( 1 ))
+		        {
+                    default:
+			        case 1: item = new PutrifierSpleen(); break;
+				}
 
-		c.DropItem( item );
-	}
+		        c.DropItem( item );
+	        }
 
-	base.OnDeath( c );
-}
+	        base.OnDeath( c );
+        }
 
 		public APutrefier( Serial serial ) : base( serial )
 		{

@@ -94,7 +94,7 @@ namespace Server.Mobiles
 		{
 			// If I'm poisoned, always attempt to cure.
 			if( m_Mobile.Poisoned )
-				return new CureSpell( m_Mobile, null );
+				return new ArchCureSpell( m_Mobile, null );
 
 			// Summoned creatures never heal themselves.
 			if( m_Mobile.Summoned )
@@ -676,7 +676,7 @@ namespace Server.Mobiles
 				{
 					m_Mobile.DebugSay( "I am going to cure myself" );
 
-					spell = new CureSpell( m_Mobile, null );
+					spell = new ArchCureSpell( m_Mobile, null );
 				}
 				else if( toDispel != null ) // Something dispellable is attacking us
 				{
@@ -796,7 +796,7 @@ namespace Server.Mobiles
 				m_Mobile.FocusMob = null;
 
 				if( m_Mobile.Poisoned && Utility.Random( 0, 5 ) == 0 )
-					new CureSpell( m_Mobile, null ).Cast();
+					new ArchCureSpell( m_Mobile, null ).Cast();
 			}
 			else
 			{

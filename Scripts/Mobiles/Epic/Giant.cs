@@ -203,9 +203,17 @@ namespace Server.Mobiles
 			Karma = -28000;
 
 			VirtualArmor = 64;
-		}
+            AddNewbied(new StaffRing());
+        }
 
-		public override void GenerateLoot()
+        public void AddNewbied(Item item)
+        {
+            item.LootType = LootType.Newbied;
+
+            AddItem(item);
+        }
+
+        public override void GenerateLoot()
 		{
 			AddLoot( LootPack.SuperBoss, 2 );
 			AddLoot( LootPack.HighScrolls, Utility.RandomMinMax( 6, 60 ) );

@@ -48,8 +48,7 @@ namespace Server.Mobiles
 		public override void GenerateLoot()
 		{
 			AddLoot( LootPack.FilthyRich, 4 );
-			// TODO: uncomment once added
-			//AddLoot( LootPack.Parrot );
+            //AddLoot( LootPack.Parrot );
 			AddLoot( LootPack.Gems );
 		}
 
@@ -108,8 +107,6 @@ namespace Server.Mobiles
 			}
 		}
 
-		/*
-		// TODO: uncomment once added
 		public override void OnDeath( Container c )
 		{
 			base.OnDeath( c );
@@ -120,7 +117,6 @@ namespace Server.Mobiles
 			if ( Utility.RandomDouble() < 0.07 )
 				c.DropItem( new PiecesOfCrystal() );
 		}
-		*/
 
 		public override int Feathers { get { return 100; } }
 		public override int TreasureMapLevel { get { return 5; } }

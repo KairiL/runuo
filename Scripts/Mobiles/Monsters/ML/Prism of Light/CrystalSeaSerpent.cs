@@ -32,14 +32,12 @@ namespace Server.Mobiles
 			SetResistance( ResistanceType.Energy, 60, 80 );
 		}
 
-		/*
-		// TODO: uncomment once added
 		public override void OnDeath( Container c )
 		{
 			base.OnDeath( c );
 
 			if ( Utility.RandomDouble() < 0.05 )
-				c.DropItem( new CrushedCrystals() );
+				c.DropItem( new CrushedCrystalPieces() );
 
 			if ( Utility.RandomDouble() < 0.1 )
 				c.DropItem( new IcyHeart() );
@@ -47,7 +45,6 @@ namespace Server.Mobiles
 			if ( Utility.RandomDouble() < 0.1 )
 				c.DropItem( new LuckyDagger() );
 		}
-		*/
 
 		public CrystalSeaSerpent( Serial serial )
 			: base( serial )

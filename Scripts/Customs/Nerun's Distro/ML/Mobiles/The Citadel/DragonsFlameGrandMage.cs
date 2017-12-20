@@ -28,7 +28,15 @@ namespace Server.Mobiles
 			AddLoot( LootPack.AosFilthyRich, 6 );
 		}
 
-		public override void Serialize( GenericWriter writer )
+        public override void OnDeath(Container c)
+        {
+            base.OnDeath(c);
+
+            if (Utility.RandomDouble() < 0.2)
+                c.DropItem(new BlueKey());
+        }
+
+        public override void Serialize( GenericWriter writer )
 		{
 			base.Serialize( writer );
 			

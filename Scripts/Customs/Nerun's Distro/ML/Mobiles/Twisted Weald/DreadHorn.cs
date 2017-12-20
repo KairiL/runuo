@@ -105,7 +105,13 @@ namespace Server.Mobiles
 
             m_Timer = new TeleportTimer(this);
             m_Timer.Start();
+            Timer.DelayCall(TimeSpan.FromMinutes(10.0), new TimerStateCallback(DeletePeerless), this);
+        }
 
+        public void DeletePeerless(object state)
+        {
+            Mobile from = (Mobile)state;
+            from.Delete();
         }
 
         public override void GenerateLoot()

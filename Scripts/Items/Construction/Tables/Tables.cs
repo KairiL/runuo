@@ -124,8 +124,45 @@ namespace Server.Items
 				Weight = 1.0;
 		}
 	}
+    /*
+    [Furniture]
+    [Flipable(0xB35, 0xB34)]
+    public class KeyedTable : Item
+    {
+        [Constructable]
+        public KeyedTable() : base(0xB35)
+        {
+            Weight = 1.0;
+        }
 
-	[Furniture]
+        public KeyedTable(Serial serial) : base(serial)
+        {
+        }
+
+        public override void OnDoubleClick(Mobile from)
+        { 
+            //check for keys
+            //add Travesty Key to pack
+        }
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
+
+            writer.Write((int)0);
+        }
+
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
+
+            int version = reader.ReadInt();
+
+            if (Weight == 4.0)
+                Weight = 1.0;
+        }
+    }
+    */
+    [Furniture]
 	[Flipable(0xB8F,0xB7C)]
 	public class YewWoodTable : Item
 	{

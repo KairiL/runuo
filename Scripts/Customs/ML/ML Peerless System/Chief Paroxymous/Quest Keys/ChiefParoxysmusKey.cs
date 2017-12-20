@@ -35,7 +35,8 @@ namespace Server.Items
 		}
 		
 		public override void OnDoubleClick( Mobile from )
-		{			
+		{
+            /* //TODO: check if no players in area
 			ArrayList list = new ArrayList();
 			
 			foreach ( Mobile m in World.Mobiles.Values )
@@ -51,7 +52,9 @@ namespace Server.Items
 			if ( list.Count > 0 )
 				from.SendMessage( "A Party is Already in Battle With Chief Paroxysmus. Please Wait" );
 
-			
+			*/
+            if (false)
+            { }
 			else
 			{
 				from.SendGump( new ChiefParoxysmusGump( from, this ) );
@@ -130,17 +133,17 @@ namespace Server.Items
 
 							if( Utility.InRange( from.Location, m.Location, 6 ) )
 							{
-								m.MoveToWorld( new Point3D( 6519, 381, 0 ), Map.Trammel );
+								m.MoveToWorld( new Point3D( 6519, 381, 0 ), Map.Felucca );
 							}
 						}
 					}
 					else
 					{
-						from.MoveToWorld( new Point3D( 6519, 381, 0 ), Map.Trammel );
+						from.MoveToWorld( new Point3D( 6519, 381, 0 ), Map.Felucca);
                     }
 
 					ChiefParoxysmus cp = new ChiefParoxysmus();
-                    cp.MoveToWorld( new Point3D( 6518, 360, 2 ), Map.Trammel );
+                    cp.MoveToWorld( new Point3D( 6518, 360, 2 ), Map.Felucca);
 					m_Deed.Delete();
 
                     break;

@@ -12,7 +12,7 @@ namespace Server.Mobiles
         public override Ethics.Ethic EthicAllegiance { get { return Ethics.Ethic.Hero; } }
 
         [Constructable]
-		public MagicElemental () : base( AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4 )
+		public MagicElemental () : base( AIType.AI_Mage, FightMode.Closest, 12, 1, 0.2, 0.4 )
 		{
 			Name = "a magic elemental";
 			Body = 16;
@@ -50,16 +50,40 @@ namespace Server.Mobiles
 			Karma = 0;
 
 			VirtualArmor = 60;
-		}
+            AddNewbied(new StaffRing());
 
-		public override void GenerateLoot()
+        }
+
+        public void AddNewbied(Item item)
+        {
+            item.LootType = LootType.Newbied;
+
+            AddItem(item);
+        }
+
+        public override void GenerateLoot()
 		{
-			AddLoot( LootPack.FilthyRich );
-			AddLoot( LootPack.Rich );
+			AddLoot( LootPack.FilthyRich, 3 );
             AddLoot(LootPack.LowScrolls, 2);
             AddLoot(LootPack.MedScrolls, 3);
             AddLoot(LootPack.HighScrolls, 4);
         }
+
+        public override bool ReacquireOnMovement { get { return true; } }
+        public override bool HasBreath { get { return true; } } // fire breath enabled
+
+        public override int BreathFireDamage { get { return 20; } }
+        public override int BreathColdDamage { get { return 20; } }
+        public override int BreathPhysicalDamage { get { return 20; } }
+        public override int BreathEnergyDamage { get { return 20; } }
+        public override int BreathPoisonDamage { get { return 20; } }
+
+        public override int BreathEffectHue { get { return 2067; } }
+
+        public virtual double BreathMinDelay { get { return 2.0; } }
+        public virtual double BreathMaxDelay { get { return 15.0; } }
+        
+        public virtual double BreathStallTime { get { return 0.0; } }
 
         public override void CheckReflect(Mobile caster, ref bool reflect)
         {

@@ -14,7 +14,7 @@ namespace Server.Mobiles
         public override Ethics.Ethic EthicAllegiance { get { return Ethics.Ethic.Evil; } }
 
         [Constructable] 
-		public Executioner() : base( AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4 ) 
+		public Executioner() : base( AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4 ) 
 		{ 
 			SpeechHue = Utility.RandomDyedHue(); 
 			Title = "the executioner"; 
@@ -65,20 +65,20 @@ namespace Server.Mobiles
 
 			AddItem( new ThighBoots( Utility.RandomRedHue() ) ); 
 			AddItem( new Surcoat( Utility.RandomRedHue() ) );    
-			AddItem( new ExecutionersAxe());
+			AddItem( new SCExecutionersAxe());
 
 			Utility.AssignRandomHair( this );
 		}
 
 		public override void GenerateLoot()
 		{
-			AddLoot( LootPack.FilthyRich );
+			AddLoot( LootPack.FilthyRich, 3 );
 			AddLoot( LootPack.Meager );
 		}
 
         public override void CheckReflect(Mobile caster, ref bool reflect)
         {
-            reflect = true; // Always reflect if caster isn't female
+            reflect = true;
         }
 
         public override bool AlwaysMurderer{ get{ return true; } }

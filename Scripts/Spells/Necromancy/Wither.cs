@@ -48,7 +48,7 @@ namespace Server.Spells.Necromancy
 
 					foreach( Mobile m in Caster.GetMobilesInRange( Core.ML ? 4 : 5 ) )
 					{
-						if( Caster != m && Caster.InLOS( m ) && ( isMonster || SpellHelper.ValidIndirectTarget( Caster, m ) ) && Caster.CanBeHarmful( m, false ) )
+						if( Caster != m && Caster.InLOS( m ) && ( SpellHelper.ValidIndirectTarget( Caster, m ) ) && Caster.CanBeHarmful( m, false ) )
 						{
 							if ( isMonster )
 							{

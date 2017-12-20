@@ -28,14 +28,22 @@ namespace Server.Items
 		{
 			Name = "Melisande Teleporter. Dont Spawn Here till you use this!";
 			LootType = LootType.Blessed;
-		}
-		
-		public MelisandeKey( Serial serial ) : base( serial )
+            Timer.DelayCall(TimeSpan.FromHours(3.0), new TimerStateCallback(DeleteKey), this);
+        }
+
+        public void DeleteKey(object state)
+        {
+            Item from = (Item)state;
+            from.Delete();
+        }
+
+        public MelisandeKey( Serial serial ) : base( serial )
 		{
 		}
 		
 		public override void OnDoubleClick( Mobile from )
-		{			
+		{
+            /* //TODO: check if no players in area
 			ArrayList list = new ArrayList();
 			
 			foreach ( Mobile m in World.Mobiles.Values )
@@ -50,8 +58,9 @@ namespace Server.Items
 			}
 			if ( list.Count > 0 )
 				from.SendMessage( "A Party is Already in Battle With Melisande. Please Wait" );
-
-			
+            */
+			if (false)
+            { }
 			else
 			{
 				from.SendGump( new MelisandeGump( from, this ) );
@@ -130,17 +139,17 @@ namespace Server.Items
 
 							if( Utility.InRange( from.Location, m.Location, 6 ) )
 							{
-								m.MoveToWorld( new Point3D( 6519, 948, 36 ), Map.Trammel );
+								m.MoveToWorld( new Point3D( 6519, 948, 36 ), Map.Felucca );
 							}
 						}
 					}
 					else
 					{
-						from.MoveToWorld( new Point3D( 6519, 948, 36 ), Map.Trammel );
+						from.MoveToWorld( new Point3D( 6519, 948, 36 ), Map.Felucca );
                     }
 
 					LadyMelisande lm = new LadyMelisande();
-                    lm.MoveToWorld( new Point3D( 6483, 947, 23 ), Map.Trammel );
+                    lm.MoveToWorld( new Point3D( 6483, 947, 23 ), Map.Felucca );
 					m_Deed.Delete();
 
                     break;

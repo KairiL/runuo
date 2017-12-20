@@ -9,7 +9,7 @@ namespace Server.Mobiles
 	public class SlasherOfVeils : BaseCreature
 	{
 		[Constructable]
-		public SlasherOfVeils() : base( AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4 )
+		public SlasherOfVeils() : base( AIType.AI_MageEpic, FightMode.Closest, 10, 1, 0.2, 0.4 )
 		{
 			Name = "The Slasher of Veils";
 			Body = 741; 
@@ -48,7 +48,7 @@ namespace Server.Mobiles
 		{
 			AddLoot( LootPack.SuperBoss, 1 );
 			AddLoot( LootPack.UltraRich, 2 );
-			AddLoot( LootPack.FilthyRich, 3 );
+			AddLoot( LootPack.Epic, 1 );
 		}
 
 		public override int GetIdleSound() { return 1589; } 

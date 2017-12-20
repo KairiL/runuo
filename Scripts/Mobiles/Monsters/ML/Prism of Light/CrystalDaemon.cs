@@ -51,9 +51,7 @@ namespace Server.Mobiles
 		{
 			AddLoot( LootPack.FilthyRich, 3 );
 		}
-
-		/*
-		// TODO: uncomment once added
+        
 		public override void OnDeath( Container c )
 		{
 			base.OnDeath( c );
@@ -61,7 +59,7 @@ namespace Server.Mobiles
 			if ( Utility.RandomDouble() < 0.4 )
 				c.DropItem( new ScatteredCrystals() );
 		}
-		*/
+		
 
 		public CrystalDaemon( Serial serial )
 			: base( serial )
