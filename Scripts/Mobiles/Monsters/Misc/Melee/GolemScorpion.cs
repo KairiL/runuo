@@ -87,13 +87,6 @@ namespace Server.Mobiles
 				SetResistance( ResistanceType.Energy, (int)(20*scalar), (int)(30*scalar) );
 				ControlSlots = 2;
 				Hue = 0;
-                
-                if (pack != null)
-                    pack.Delete();
-
-                pack = new StrongBackpack();
-                pack.Movable = false;
-                AddItem(pack);
             }
 			else if ( met < 0.3 )
 				{
@@ -158,12 +151,6 @@ namespace Server.Mobiles
 				SetResistance( ResistanceType.Energy, (int)(22*scalar), (int)(32*scalar) );
 				ControlSlots = 2;
 				Hue = 2213;
-                if (pack != null)
-                    pack.Delete();
-
-                pack = new StrongBackpack();
-                pack.Movable = false;
-                AddItem(pack);
             }
 			else if ( met < 0.8 )
 				{
@@ -178,12 +165,6 @@ namespace Server.Mobiles
 				SetResistance( ResistanceType.Energy, (int)(27*scalar), (int)(32*scalar) );
 				ControlSlots = 3;
 				Hue = 2425;
-                if (pack != null)
-                    pack.Delete();
-
-                pack = new StrongBackpack();
-                pack.Movable = false;
-                AddItem(pack);
             }
 			else if ( met < 0.9 )
 				{
