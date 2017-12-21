@@ -36,7 +36,6 @@ namespace Server.Items
 		
 		public override void OnDoubleClick( Mobile from )
 		{
-            /* //TODO: check if no players in area
 			ArrayList list = new ArrayList();
 			
 			foreach ( Mobile m in World.Mobiles.Values )
@@ -51,10 +50,6 @@ namespace Server.Items
 			}
 			if ( list.Count > 0 )
 				from.SendMessage( "A Party is Already in Battle With Dreadhorn. Please Wait" );
-
-			*/
-            if (false)
-            { }
 			else
 			{
 				from.SendGump( new DreadhornGump( from, this ) );
