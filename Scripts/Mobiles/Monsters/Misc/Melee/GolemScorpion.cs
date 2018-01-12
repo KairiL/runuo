@@ -372,7 +372,7 @@ namespace Server.Mobiles
                 if (0.75 >= Utility.RandomDouble() && (m_Thrown % 2) == 1) // 75% chance to quickly throw another bomb
                     m_NextBomb = DateTime.UtcNow + TimeSpan.FromSeconds(2.1 - m_Speed/5.0);
                 else
-                    m_NextBomb = DateTime.UtcNow + TimeSpan.FromSeconds(3.0 + (3.0 * Utility.RandomDouble()) - m_Speed/2); // 3-6 seconds (0-1)
+                    m_NextBomb = DateTime.UtcNow + TimeSpan.FromSeconds(3.0 + (3.0 * Utility.RandomDouble()) - m_Speed/2); // 3-6 seconds avg 4.5 (0-1 avg .333 with +60 hammer)
             }
             base.OnActionCombat();
         }

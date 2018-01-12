@@ -479,8 +479,12 @@ namespace Server.Items
                 int trapminskill = trapmaxskill - 20;
 				int trappower = this.TrapPower;
 				int trapcheck = Utility.RandomMinMax(trapminskill, trapmaxskill);
+                CampfireEntry entry = Campfire.GetEntry(from);
 
-				if ( trappower > trapmaxskill )
+                if (entry != null && entry.Safe)
+                    trapcheck+=20;
+
+                if ( trappower > trapmaxskill )
 				{
                     from.SendMessage("You have no chance of removing this trap.");
 					return;

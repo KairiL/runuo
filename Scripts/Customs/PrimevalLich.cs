@@ -105,8 +105,7 @@ namespace Server.Mobiles
 
 		public override void GenerateLoot()
 		{
-            AddLoot(LootPack.UltraRich, 2);
-            AddLoot(LootPack.Epic, 1);
+            AddLoot(LootPack.Epic, 2);
             AddLoot(LootPack.HighEpic, 1);
             AddLoot(LootPack.LowScrolls, 2);
             AddLoot(LootPack.MedScrolls, 2);
@@ -131,8 +130,6 @@ namespace Server.Mobiles
 
             if (!target.Hidden && CanBeHarmful(target))
             {
-                target.SendLocalizedMessage(1072061); // You hear jarring music, suppressing your strength.
-
                 for (int i = 0; i < target.Skills.Length; i++)
                 {
                     Skill s = target.Skills[i];

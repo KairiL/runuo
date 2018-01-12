@@ -532,7 +532,7 @@ namespace Server.Mobiles
                     if (ControlOrder == OrderType.Guard)
                     {
                         
-                        if ( Hue == 2413 || Hue == 2425 )//Copper
+                        if ( Hue == 2413 || Hue == 2425 )//Copper or Agapite
                         {
                             DoHarmful(m);
                             m.Mana -= (amount / 2);
