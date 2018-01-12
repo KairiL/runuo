@@ -155,11 +155,13 @@ namespace Server.SkillHandlers
 						{
 							double diff = m_Instrument.GetDifficultyFor( targ ) - 10.0;
 							double music = from.Skills[SkillName.Musicianship].Value;
+                            CampfireEntry entry = Campfire.GetEntry(from);
 
-							if ( music > 100.0 )
+                            if ( music > 100.0 )
 								diff -= (music - 100.0) * 0.5;
-
-							if ( !from.CheckTargetSkill( SkillName.Peacemaking, targ, diff - 25.0, diff + 25.0 ) )
+                            if (entry != null && entry.Safe)
+                                diff -= 20;
+                            if ( !from.CheckTargetSkill( SkillName.Peacemaking, targ, diff - 25.0, diff + 25.0 ) )
 							{
 								from.SendLocalizedMessage( 1049531 ); // You attempt to calm your target, but fail.
 								m_Instrument.PlayInstrumentBadly( from );

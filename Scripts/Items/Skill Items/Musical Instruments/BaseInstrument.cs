@@ -540,10 +540,14 @@ namespace Server.Items
 
 		public static bool CheckMusicianship( Mobile m )
 		{
-			m.CheckSkill( SkillName.Musicianship, 0.0, 120.0 );
+            CampfireEntry entry = Campfire.GetEntry(m);
 
-			return ( (m.Skills[SkillName.Musicianship].Value / 100) > Utility.RandomDouble() );
-		}
+            m.CheckSkill( SkillName.Musicianship, 0.0, 120.0 );
+            if (entry != null && entry.Safe)
+                return ( ( (m.Skills[SkillName.Musicianship].Value + 20) / 100) > Utility.RandomDouble() );
+            else
+                return ((m.Skills[SkillName.Musicianship].Value / 100) > Utility.RandomDouble());
+        }
 
 		public void PlayInstrumentWell( Mobile from )
 		{

@@ -1,5 +1,6 @@
 using System;
 using Server;
+using Server.Items;
 using Server.Targeting;
 using Server.Network;
 using Server.Mobiles;
@@ -64,13 +65,17 @@ namespace Server.Spells.Fourth
 			}
 			else if ( CheckBSequence( m ) )
 			{
-				SpellHelper.Turn( Caster, m );
+                CampfireEntry casterEntry = Campfire.GetEntry(Caster);
+                SpellHelper.Turn( Caster, m );
 
 				// Algorithm: (40% of magery) + (1-10)
 
 				int toHeal = (int)(Caster.Skills[SkillName.Magery].Value * 0.4);
 				toHeal += Utility.Random( 1, 10 );
                 toHeal += (int)Caster.Skills[SkillName.Healing].Value / 15;
+                if (casterEntry != null && casterEntry.Safe)
+                    toHeal += 3;
+
                 Spellweaving.ArcaneEmpowermentSpell.AddHealBonus(Caster, ref toHeal);
                 //m.Heal( toHeal, Caster );
                 SpellHelper.Heal( toHeal, m, Caster );

@@ -290,16 +290,30 @@ namespace Server.Spells
 		public static double GetOffsetScalar( Mobile caster, Mobile target, bool curse )
 		{
 			double percent;
+            CampfireEntry casterEntry = Campfire.GetEntry(caster);
+            CampfireEntry targetEntry = Campfire.GetEntry(target);
+
 
             if (curse)
             {
                 percent = 8 + (caster.Skills.EvalInt.Fixed / 100) - (target.Skills.MagicResist.Fixed / 100);
                 percent += (caster.Skills.Musicianship.Fixed + caster.Skills.Discordance.Fixed + caster.Skills.Provocation.Fixed) / 200;
+
+                if (casterEntry != null && casterEntry.Safe)
+                    percent += 10;
+                if (targetEntry != null && targetEntry.Safe)
+                    percent -= 10;
             }
             else
             {
                 percent = 1 + (caster.Skills.EvalInt.Fixed / 100);
                 percent += (caster.Skills.Musicianship.Fixed + caster.Skills.Provocation.Fixed + caster.Skills.Peacemaking.Fixed) / 200;
+
+                if (casterEntry != null && casterEntry.Safe)
+                    percent += 10;
+                if (targetEntry != null && targetEntry.Safe)
+                    percent -= 10;
+
             }
 			percent *= 0.01;
 

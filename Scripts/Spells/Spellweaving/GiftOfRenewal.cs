@@ -1,4 +1,5 @@
 using System;
+using Server.Items;
 using System.Collections;
 using System.Collections.Generic;
 using Server.Targeting;
@@ -55,9 +56,12 @@ namespace Server.Spells.Spellweaving
 				else
 				{
 					double skill = Caster.Skills[SkillName.Spellweaving].Value;
+                    CampfireEntry casterEntry = Campfire.GetEntry(Caster);
 
-					int hitsPerRound = 5 + (int)(skill / 24) + FocusLevel;
+                    int hitsPerRound = 5 + (int)(skill / 24) + FocusLevel;
                     hitsPerRound += (int)(Caster.Skills[SkillName.Healing].Value / 40.0);
+                    if (casterEntry != null && casterEntry.Safe)
+                        hitsPerRound += 1;
                     Spellweaving.ArcaneEmpowermentSpell.AddHealBonus(Caster, ref hitsPerRound);
                     TimeSpan duration = TimeSpan.FromSeconds( 30 + (FocusLevel * 10) );
 
