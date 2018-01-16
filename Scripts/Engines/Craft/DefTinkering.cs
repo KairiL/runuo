@@ -336,6 +336,7 @@ namespace Server.Engines.Craft
 			AddRes( index, typeof( IronIngot ), 1044036, 10, 1044037 );
             #endregion
 
+            #region Craftable Traps
             // Craftable Explosion Trap
             index = AddCraft(typeof(CraftedExplosionComponents), (string.Format("New Traps")), (string.Format("Explosion Trap")), 80.0, 120.0, typeof(Log), 1044041, 10, 1044351);
             AddSkill(index, SkillName.RemoveTrap, 45.0, 50.0);
@@ -374,7 +375,8 @@ namespace Server.Engines.Craft
             AddRes(index, typeof(IronIngot), 1044036, 15, 1044037);
             AddRes(index, typeof(BlankScroll), "Blank Scrolls", 10);
 
-            // Magic Jewelry
+            #endregion 
+            #region Magic Jewelry
             if ( Core.ML )
 			{
 				index = AddCraft( typeof( ResilientBracer ), 1073107, 1072933, 100.0, 125.0, typeof( IronIngot ), 1044036, 2, 1044037 );
@@ -400,8 +402,57 @@ namespace Server.Engines.Craft
 				AddRareRecipe( index, 602 );
 				ForceNonExceptional( index );
 				SetNeededExpansion( index, Expansion.ML );
-			}
 
+                index = AddCraft( typeof( EcruCitrineRing ), 1073107, (string.Format("Ecru Citrine Ring")), 100.0, 125.0, typeof( IronIngot ), 1044036, 5, 1044037 );
+                AddRes( index, typeof( Citrine ), "Citrine", 20 );
+                AddRes(index, typeof(EcruCitrine), "Ecru Citrine", 10);
+                ForceNonExceptional(index);
+
+                index = AddCraft(typeof( BlueDiamondRing ), 1073107, (string.Format("Blue Diamond Ring")), 100.0, 125.0, typeof(IronIngot), 1044036, 5, 1044037);
+                AddRes(index, typeof(Diamond), 1062608, 20, 1044253);
+                AddRes(index, typeof(BlueDiamond), 1032696, 10, 1044253);
+                ForceNonExceptional(index);
+
+                index = AddCraft(typeof(BrilliantAmberBracelet), 1073107, (string.Format("Briliant Amber Bracelet")), 100.0, 125.0, typeof(IronIngot), 1044036, 5, 1044037);
+                AddRes(index, typeof(Amber), "Amber", 20);
+                AddRes(index, typeof(BrilliantAmber), "Brilliant Amber", 10);
+                ForceNonExceptional(index);
+
+                index = AddCraft(typeof(DarkSapphireBracelet), 1073107, (string.Format("Dark Sapphire Bracelet")), 100.0, 125.0, typeof(IronIngot), 1044036, 5, 1044037);
+                AddRes(index, typeof(Sapphire), "Sapphire", 20);
+                AddRes(index, typeof(DarkSapphire), "Dark Sapphire", 10);
+                ForceNonExceptional(index);
+
+                index = AddCraft(typeof(FireRubyBracelet), 1073107, (string.Format("Fire Ruby Bracelet")), 100.0, 125.0, typeof(IronIngot), 1044036, 5, 1044037);
+                AddRes(index, typeof(FireRuby), 1032695, 10, 1044253);
+                AddRes(index, typeof(Ruby), 1062603, 20, 1044253);
+                ForceNonExceptional(index);
+
+                index = AddCraft(typeof(PerfectEmeraldRing), 1073107, (string.Format("Perfect Emerald Ring")), 100.0, 125.0, typeof(IronIngot), 1044036, 5, 1044037);
+                AddRes(index, typeof(PerfectEmerald), "Perfect Emerald", 10);
+                AddRes(index, typeof(Emerald), "Emerald", 20);
+                ForceNonExceptional(index);
+
+                index = AddCraft(typeof(TurquoiseRing), 1073107, (string.Format("Turquoise Ring")), 100.0, 125.0, typeof(IronIngot), 1044036, 5, 1044037);
+                AddRes(index, typeof(Turquoise), "Turquoise", 10);
+                AddRes(index, typeof(Amethyst), "Amethyst", 20);
+                ForceNonExceptional(index);
+
+                index = AddCraft(typeof(PerfectEmeraldRing), 1073107, (string.Format("Perfect Emerald Ring")), 100.0, 125.0, typeof(IronIngot), 1044036, 5, 1044037);
+                AddRes(index, typeof(PerfectEmerald), "Perfect Emerald", 10);
+                AddRes(index, typeof(Emerald), "Emerald", 20);
+                ForceNonExceptional(index);
+
+                index = AddCraft(typeof(WhitePearlBracelet), 1073107, (string.Format("White Pearl Bracelet")), 100.0, 125.0, typeof(IronIngot), 1044036, 5, 1044037);
+                AddRes(index, typeof(Tourmaline), "Tourmaline", 20);
+                AddRes(index, typeof(WhitePearl), "White Pearl", 10);
+                ForceNonExceptional(index);
+
+
+
+            }
+
+            #endregion
 			// Set the overridable material
 			SetSubRes( typeof( IronIngot ), 1044022 );
 

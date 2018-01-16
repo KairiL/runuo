@@ -747,7 +747,11 @@ namespace Server
 							BaseRunicTool.ApplyAttributesTo( (BaseJewel)item, false, luckChance, props, m_MinIntensity, m_MaxIntensity );
 						else if ( item is BaseHat )
 							BaseRunicTool.ApplyAttributesTo( (BaseHat)item, false, luckChance, props, m_MinIntensity, m_MaxIntensity );
-					}
+
+                        if (bonusProps > 5) //Item is epic and should be cursed 95% chance
+                            if (Utility.RandomDouble() > .05)
+                                item.LootType = LootType.Cursed;
+                    }
 					else // not aos
 					{
 						if ( item is BaseWeapon )
@@ -802,15 +806,15 @@ namespace Server
 					    instr.Slayer = slayer;
                     else
                         instr.Slayer2 = slayer;
-				}
+                    if ( instr.Slayer2 != SlayerName.None)
+                        if (Utility.RandomDouble() > .05)
+                            item.LootType = LootType.Cursed;
+                }
 
 				if ( item.Stackable )
 					item.Amount = m_Quantity.Roll();
 			}
-
-            if (m_MaxIntensity > 100 || m_MaxProps > 5) //Item is epic and should be cursed
-                item.LootType = LootType.Cursed;
-
+            
             return item;
 		}
 

@@ -2,25 +2,24 @@
 
 namespace Server.Items
 {
-    public class EcruCitrineRing : BaseRing
+    public class FireRubyBracelet : BaseBracelet
     {
         [Constructable]
-        public EcruCitrineRing() : base(0x1F09)
+        public FireRubyBracelet() : base(0x1086)
         {
             Weight = 0.1;
-
-            BaseRunicTool.ApplyAttributesTo(this, 5, 0, 100);
-
-            if (Utility.RandomDouble()<.05)
-                Attributes.EnhancePotions = 50;
+            Name = "A Brilliant Amber Bracelet";
+            int maxProps = CraftUtil.GetBonusProps(5);
+            if (Utility.RandomDouble() > .5)
+                Resistances.Fire = 10;
             else
-                Attributes.EnhancePotions = 5;
-            Attributes.BonusStr = 5;
+                Attributes.RegenHits = 2;
 
+            BaseRunicTool.ApplyAttributesTo(this, maxProps, 0, 100);
 
         }
 
-        public EcruCitrineRing(Serial serial) : base(serial)
+        public FireRubyBracelet(Serial serial) : base(serial)
         {
         }
 

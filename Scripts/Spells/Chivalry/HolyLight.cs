@@ -49,14 +49,24 @@ namespace Server.Spells.Chivalry
 					Mobile m = targets[i];
 
 					int damage = ComputePowerValue( 10 ) + Utility.RandomMinMax( 0, 2 );
+                    int sdiBonus = AosAttributes.GetValue(Caster, AosAttribute.SpellDamage);
+                    // PvP spell damage increase cap of 15% from an item’s magic property in Publish 33(SE)
+                    if (Core.SE && m.Player && Caster.Player && sdiBonus > 15)
+                        sdiBonus = 15;
 
-					// TODO: Should caps be applied?
-					if ( damage < 8 )
+                    damage *= (100 + sdiBonus);
+                    damage /= 100;
+
+                    // TODO: Should caps be applied?
+                    /*
+                    if ( damage < 8 )
 						damage = 8;
 					else if ( damage > 24 )
 						damage = 24;
+                    */
 
-					Caster.DoHarmful( m );
+
+                    Caster.DoHarmful( m );
 					SpellHelper.Damage( this, m, damage, 0, 0, 0, 0, 100 );
 				}
 			}
