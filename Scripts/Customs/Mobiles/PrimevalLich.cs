@@ -13,9 +13,10 @@ namespace Server.Mobiles
 		{
 			Name = "Primeval Lich";
             Body = 830;
-			BaseSoundID = 412;
+            BaseSoundID = 0x3E9;
 
-			SetStr( 216, 305 );
+
+            SetStr( 216, 305 );
 			SetDex( 96, 115 );
 			SetInt( 966, 1045 );
 
@@ -70,37 +71,11 @@ namespace Server.Mobiles
         {
             base.OnThink();
             Suppress(Combatant);
-
         }
 
         public override OppositionGroup OppositionGroup
 		{
 			get{ return OppositionGroup.FeyAndUndead; }
-		}
-
-		public override int GetIdleSound()
-		{
-			return 0x19D;
-		}
-
-		public override int GetAngerSound()
-		{
-			return 0x175;
-		}
-
-		public override int GetDeathSound()
-		{
-			return 0x108;
-		}
-
-		public override int GetAttackSound()
-		{
-			return 0xE2;
-		}
-
-		public override int GetHurtSound()
-		{
-			return 0x28B;
 		}
 
 		public override void GenerateLoot()

@@ -228,7 +228,8 @@ namespace Server.Engines.BulkOrders
 		private static Item CreateRunicHammer( int type )
 		{
 			if ( type >= 1 && type <= 8 )
-				return new RunicHammer( CraftResource.Iron + type, Core.AOS ? ( 55 - (type*5) ) : 50 );
+				//return new RunicHammer( CraftResource.Iron + type, Core.AOS ? ( 55 - (type*5) ) : 50 );
+                return new RunicHammer( CraftResource.Iroon + type, 15 );
 
 			throw new InvalidOperationException();
 		}
@@ -542,7 +543,7 @@ namespace Server.Engines.BulkOrders
 		private static Item CreateRunicKit( int type )
 		{
 			if ( type >= 1 && type <= 3 )
-				return new RunicSewingKit( CraftResource.RegularLeather + type, 60 - (type*15) );
+				return new RunicSewingKit( CraftResource.RegularLeather + type, 15 );
 
 			throw new InvalidOperationException();
 		}
