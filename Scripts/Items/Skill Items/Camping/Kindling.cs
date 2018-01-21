@@ -58,10 +58,14 @@ namespace Server.Items
 			{
 				from.SendLocalizedMessage( 501695 ); // There is not a spot nearby to place your campfire.
 			}
-			else if ( !from.CheckSkill( SkillName.Camping, 0.0, 100.0 ) )
-			{
-				from.SendLocalizedMessage( 501696 ); // You fail to ignite the campfire.
-			}
+            else if (!from.CheckSkill(SkillName.Camping, 0.0, 100.0))
+            {
+                from.SendLocalizedMessage(501696); // You fail to ignite the campfire.
+            }
+            else if ( from.Region.IsPartOf(typeof(DungeonRegion)) && !from.CheckSkill(SkillName.Camping, 80.0, 110.0) )
+            {
+                from.SendLocalizedMessage(501696); // You fail to ignite the campfire.
+            }
 			else
 			{
 				Consume();
@@ -75,7 +79,7 @@ namespace Server.Items
 
 		private Point3D GetFireLocation( Mobile from )
 		{
-			if ( from.Region.IsPartOf( typeof( DungeonRegion ) ) )
+			if ( from.Region.IsPartOf( typeof( DungeonRegion ) ) && from.Skills[SkillName.Camping].Value < 80 )
 				return Point3D.Zero;
 
 			if ( this.Parent == null )

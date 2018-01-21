@@ -201,8 +201,9 @@ namespace Server.SkillHandlers
 							ArrayList mods = new ArrayList();
 							int effect;
 							double scalar;
+                            CampfireEntry casterEntry = Campfire.GetEntry(from);
 
-							if ( Core.AOS )
+                            if ( Core.AOS )
 							{
 								double discord = from.Skills[SkillName.Discordance].Value;
 
@@ -214,9 +215,13 @@ namespace Server.SkillHandlers
 								if ( Core.SE && BaseInstrument.GetBaseDifficulty( targ ) >= 160.0 )
 									effect /= 2;
 
+                                if (casterEntry != null && casterEntry.Safe)
+                                    effect = (int)(effect*1.25);
+
                                 if (targ.Player)
                                     effect /= 4;
 
+                                
                                 scalar = effect * 0.01;
 
 								mods.Add( new ResistanceMod( ResistanceType.Physical, effect ) );

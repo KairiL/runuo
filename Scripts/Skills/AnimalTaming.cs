@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Server;
+using Server.Items;
 using Server.Targeting;
 using Server.Network;
 using Server.Mobiles;
@@ -349,8 +350,11 @@ namespace Server.SkillHandlers
 							m_Tamer.CheckTargetSkill( SkillName.AnimalLore, m_Creature, 0.0, 120.0 );
 
 						double minSkill = m_Creature.MinTameSkill + (m_Creature.Owners.Count * 6.0);
+                        CampfireEntry tamerEntry = Campfire.GetEntry(m_Tamer);
+                        if (tamerEntry != null && tamerEntry.Safe)
+                            minSkill -= 10;
 
-						if ( minSkill > -24.9 && CheckMastery( m_Tamer, m_Creature ) )
+                        if ( minSkill > -24.9 && CheckMastery( m_Tamer, m_Creature ) )
 							minSkill = -24.9; // 50% at 0.0?
 
 						minSkill += 24.9;

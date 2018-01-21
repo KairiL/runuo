@@ -114,11 +114,14 @@ namespace Server.SkillHandlers
 
 						double diff = ((m_Instrument.GetDifficultyFor( m_Creature ) + m_Instrument.GetDifficultyFor( creature )) * 0.5) - 5.0;
 						double music = from.Skills[SkillName.Musicianship].Value;
+                        CampfireEntry entry = Campfire.GetEntry(from);
 
-						if ( music > 100.0 )
+                        if ( music > 100.0 )
 							diff -= (music - 100.0) * 0.5;
+                        if (entry != null && entry.Safe)
+                            diff-=20;
 
-						if ( from.CanBeHarmful( m_Creature, true ) && from.CanBeHarmful( creature, true ) )
+                        if ( from.CanBeHarmful( m_Creature, true ) && from.CanBeHarmful( creature, true ) )
 						{
 							if ( !BaseInstrument.CheckMusicianship( from ) )
 							{

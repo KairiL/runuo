@@ -32,8 +32,9 @@ namespace Server.SkillHandlers
 			protected override void OnTarget( Mobile src, object targ )
 			{
 				bool foundAnyone = false;
-
-				Point3D p;
+                CampfireEntry srcEntry = Campfire.GetEntry(src);
+                
+                Point3D p;
 				if ( targ is Mobile )
 					p = ((Mobile)targ).Location;
 				else if ( targ is Item )
@@ -44,7 +45,11 @@ namespace Server.SkillHandlers
 					p = src.Location;
 
 				double srcSkill = src.Skills[SkillName.DetectHidden].Value;
-				int range = (int)(srcSkill / 10.0);
+                
+
+                if (srcEntry != null && srcEntry.Safe)
+                    srcSkill += 30;
+                int range = (int)(srcSkill / 10.0);
 
 				if ( !src.CheckSkill( SkillName.DetectHidden, 0.0, 100.0 ) )
 					range /= 2;
@@ -66,8 +71,11 @@ namespace Server.SkillHandlers
 						{
 							double ss = srcSkill + Utility.Random( 21 ) - 10;
 							double ts = trg.Skills[SkillName.Hiding].Value + Utility.Random( 21 ) - 10;
+                            CampfireEntry targetEntry = Campfire.GetEntry(trg);
 
-							if ( src.AccessLevel >= trg.AccessLevel && ( ss >= ts || ( inHouse && house.IsInside( trg ) ) ) )
+                            if (targetEntry != null && targetEntry.Safe)
+                                ts += 30;
+                            if ( src.AccessLevel >= trg.AccessLevel && ( ss >= ts || ( inHouse && house.IsInside( trg ) ) ) )
 							{
 								if ( trg is ShadowKnight && (trg.X != p.X || trg.Y != p.Y) )
 									continue;

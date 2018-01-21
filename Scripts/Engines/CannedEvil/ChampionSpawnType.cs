@@ -14,7 +14,9 @@ namespace Server.Engines.CannedEvil
 		UnholyTerror,
 		SleepingDragon,
 		Glade,
-		Pestilence
+		Pestilence,
+        PrimevalLich/*,
+        AbyssalInfernal*/
 	}
 
 	public class ChampionSpawnInfo
@@ -87,7 +89,7 @@ namespace Server.Engines.CannedEvil
 					new Type[]{ typeof( LichLord ), typeof( RottingCorpse ) }												// Level 4
 				} ),
 				new ChampionSpawnInfo( "Sleeping Dragon", typeof( Serado ), new string[]{ "Rival", "Challenger", "Antagonist" } , new Type[][]
-				{																											// Unholy Terror
+				{																											// Sleeping Dragon
 					new Type[]{ typeof( DeathwatchBeetleHatchling ), typeof( Lizardman ) },
 					new Type[]{ typeof( DeathwatchBeetle ), typeof( Kappa ) },
 					new Type[]{ typeof( LesserHiryu ), typeof( RevenantLion ) },
@@ -101,12 +103,19 @@ namespace Server.Engines.CannedEvil
 					new Type[]{ typeof( FerelTreefellow ), typeof( RagingGrizzlyBear ) }
 				} ),
 				new ChampionSpawnInfo( "The Corrupt", typeof( Ilhenir ), new string[]{ "Cleanser", "Expunger", "Depurator" } , new Type[][]
-				{																											// Unholy Terror
+				{																											// The Corrupt
 					new Type[]{ typeof( PlagueSpawn ), typeof( Bogling ) },
 					new Type[]{ typeof( PlagueBeast ), typeof( BogThing ) },
 					new Type[]{ typeof( PlagueBeastLord ), typeof( InterredGrizzle ) },
 					new Type[]{ typeof( FetidEssence ), typeof( PestilentBandage ) }
-				} )
+				} ),
+                new ChampionSpawnInfo( "Primeval Lich", typeof( PrimevalLich ), new string[]{ "Opposer", "Eliminator", "Purifier" }, new type[][]
+                {
+                    new Type[]{ typeof( BoneMagi ), typeof( SkeletalMage ) },
+                    new Type[]{ typeof( Lich ), typeof( BoneMagi ) },
+                    new Type[]{ typeof( Lich ), typeof( LichLord) },
+                    new Type[]{ typeof( LichLord ), typeof(BloodElemental ) },
+                } )
 			};
 
 		public static ChampionSpawnInfo GetInfo( ChampionSpawnType type )

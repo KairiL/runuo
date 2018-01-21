@@ -218,7 +218,10 @@ namespace Server.Items
 			{
 				double healing = m_Healer.Skills[primarySkill].Value;
 				double anatomy = m_Healer.Skills[secondarySkill].Value;
-				double chance = ((healing - 68.0) / 50.0) - (m_Slips * 0.02);
+                CampfireEntry entry = Campfire.GetEntry(m_Healer);
+                if (entry != null && entry.Safe)
+                    healing += 20;
+                double chance = ((healing - 68.0) / 50.0) - (m_Slips * 0.02);
 
 				if (( (checkSkills = (healing >= 80.0 && anatomy >= 80.0)) && chance > Utility.RandomDouble() )
 				      || ( Core.SE && petPatient is Factions.FactionWarHorse && petPatient.ControlMaster == m_Healer) )	//TODO: Dbl check doesn't check for faction of the horse here?

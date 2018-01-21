@@ -66,7 +66,8 @@ namespace Server.Spells.Chivalry
 			}
 			else if ( CheckBSequence( m ) )
 			{
-				SpellHelper.Turn( Caster, m );
+                CampfireEntry casterEntry = Campfire.GetEntry(Caster);
+                SpellHelper.Turn( Caster, m );
 
 				/* Heals the target for 7 to 39 points of damage.
 				 * The caster's Karma affects the amount of damage healed.
@@ -80,7 +81,9 @@ namespace Server.Spells.Chivalry
 				else if ( toHeal > 39 )
 					toHeal = 39;
 
-                toHeal += (int)Caster.Skills.Healing.Fixed / 200;
+                toHeal += (int)(Caster.Skills.Healing.Value / 20);
+                if (casterEntry != null && casterEntry.Safe)
+                    toHeal += 3;
                 Spellweaving.ArcaneEmpowermentSpell.AddHealBonus(Caster, ref toHeal);
 
 

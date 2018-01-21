@@ -85,8 +85,11 @@ namespace Server.SkillHandlers
 				else if( m.CheckSkill( SkillName.Stealth, -20.0 + (armorRating * 2), (Core.AOS ? 60.0 : 80.0) + (armorRating * 2) ) )
 				{
 					int steps = (int)(m.Skills[SkillName.Stealth].Value / (Core.AOS ? 5.0 : 10.0));
+                    CampfireEntry entry = Campfire.GetEntry(m);
 
-					if( steps < 1 )
+                    if (entry != null && entry.Safe)
+                        steps *= 2;
+                    if ( steps < 1 )
 						steps = 1;
 
 					m.AllowedStealthSteps = steps;

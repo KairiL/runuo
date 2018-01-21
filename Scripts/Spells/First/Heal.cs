@@ -1,5 +1,6 @@
 using System;
 using Server;
+using Server.Items;
 using Server.Targeting;
 using Server.Network;
 using Server.Mobiles;
@@ -66,13 +67,14 @@ namespace Server.Spells.First
 				SpellHelper.Turn( Caster, m );
 
 				int toHeal;
+                CampfireEntry casterEntry = Campfire.GetEntry(Caster);
 
-				if ( Core.AOS )
+                if ( Core.AOS )
 				{
 					toHeal = Caster.Skills.Magery.Fixed / 120;
 					toHeal += Utility.RandomMinMax( 1, 4 );
-
-					if( Core.SE && Caster != m )
+                    
+                    if ( Core.SE && Caster != m )
 						toHeal = (int)(toHeal * 1.5);
 				}
 				else
@@ -80,6 +82,8 @@ namespace Server.Spells.First
 					toHeal = (int)(Caster.Skills[SkillName.Magery].Value * 0.1);
 					toHeal += Utility.Random( 1, 5 );
 				}
+                if (casterEntry != null && casterEntry.Safe)
+                    toHeal += 2;
                 toHeal += (int)Caster.Skills[SkillName.Healing].Value / 24;
                 //m.Heal( toHeal, Caster );
                 Spellweaving.ArcaneEmpowermentSpell.AddHealBonus(Caster, ref toHeal);
