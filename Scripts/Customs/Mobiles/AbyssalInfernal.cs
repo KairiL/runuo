@@ -18,9 +18,9 @@ namespace Server.Mobiles
 
             SetStr( 316, 405 );
 			SetDex( 196, 215 );
-			SetInt( 966, 1045 );
+			SetInt( 150, 250 );
 
-			SetHits( 10000, 15000 );
+			SetHits( 15000, 20000 );
 
 			SetDamage( 20, 30 );
 
@@ -35,8 +35,7 @@ namespace Server.Mobiles
 
 			SetSkill( SkillName.EvalInt, 140.1, 160.0 );
 			SetSkill( SkillName.Magery, 140.1, 160.0 );
-			SetSkill( SkillName.Meditation, 100.1, 201.0 );
-            SetSkill(SkillName.Focus, 400.1, 501.0);
+			SetSkill( SkillName.Meditation, 100.1, 121.0 );
             SetSkill( SkillName.Poisoning, 120.1, 141.0 );
 			SetSkill( SkillName.MagicResist, 275.2, 300.0 );
 
@@ -56,7 +55,7 @@ namespace Server.Mobiles
 
         }
 
-        public void AddNewbied(Item item)
+        public void AddNewbied(BaseRing item)
         {
             item.LootType = LootType.Newbied;
             item.Attributes.CastSpeed = 6;
@@ -65,12 +64,6 @@ namespace Server.Mobiles
         public override TimeSpan ReacquireDelay { get { return TimeSpan.FromSeconds(1.0); } }
         public override bool ReacquireOnMovement { get { return true; } }
         public override bool CanFlee { get { return false; } }
-
-        public override void OnThink()
-        {
-            base.OnThink();
-            Suppress(Combatant);
-        }
 
         public override OppositionGroup OppositionGroup
 		{

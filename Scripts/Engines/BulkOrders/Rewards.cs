@@ -229,7 +229,7 @@ namespace Server.Engines.BulkOrders
 		{
 			if ( type >= 1 && type <= 8 )
 				//return new RunicHammer( CraftResource.Iron + type, Core.AOS ? ( 55 - (type*5) ) : 50 );
-                return new RunicHammer( CraftResource.Iroon + type, 15 );
+                return new RunicHammer( CraftResource.Iron + type, 15 );
 
 			throw new InvalidOperationException();
 		}

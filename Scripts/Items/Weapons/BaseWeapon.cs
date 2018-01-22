@@ -847,7 +847,8 @@ namespace Server.Items
                     if ( bonus > 45 + (int)(attacker.Skills[SkillName.Wrestling].Value / 12.0))
 					    bonus = 45 + (int)(attacker.Skills[SkillName.Wrestling].Value / 12.0);
 
-                bonus += (attacker.Hunger + attacker.Thirst - defender.Hunger - defender.Thirst)/4;
+                //bonus += (attacker.Hunger + attacker.Thirst - defender.Hunger - defender.Thirst)/4;
+                //removed hunger by popular request
 				ourValue = (atkValue + 20.0) * (100 + bonus);
 
 				bonus = AosAttributes.GetValue( defender, AosAttribute.DefendChance );
