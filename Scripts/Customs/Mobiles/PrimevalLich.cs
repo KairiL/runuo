@@ -18,7 +18,7 @@ namespace Server.Mobiles
 
             SetStr( 216, 305 );
 			SetDex( 96, 115 );
-			SetInt( 966, 1045 );
+			SetInt( 466, 545 );
 
 			SetHits( 10000, 15000 );
 
@@ -36,10 +36,9 @@ namespace Server.Mobiles
 
 			SetSkill( SkillName.EvalInt, 140.1, 160.0 );
 			SetSkill( SkillName.Magery, 140.1, 160.0 );
-			SetSkill( SkillName.Meditation, 400.1, 501.0 );
-            SetSkill(SkillName.Focus, 400.1, 501.0);
+			SetSkill( SkillName.Meditation, 100.1, 121.0 );
             SetSkill( SkillName.Poisoning, 120.1, 141.0 );
-			SetSkill( SkillName.MagicResist, 275.2, 300.0 );
+			SetSkill( SkillName.MagicResist, 0, 75.0 );
 
 			SetSkill( SkillName.Tactics, 90.1, 100.0 );
 			SetSkill( SkillName.Wrestling, 120.1, 140.0 );

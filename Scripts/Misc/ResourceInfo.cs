@@ -122,7 +122,7 @@ namespace Server.Items
 			dullCopper.WeaponDurability = 100;
 			dullCopper.WeaponLowerRequirements = 50;
 			dullCopper.RunicMinAttributes = 1;
-			dullCopper.RunicMaxAttributes = 4;
+			dullCopper.RunicMaxAttributes = 3;
 			if ( Core.ML )
 			{
 				dullCopper.RunicMinIntensity = 10;
@@ -147,7 +147,7 @@ namespace Server.Items
 			if ( Core.ML )
 			{
 				shadowIron.RunicMinIntensity = 10;
-				shadowIron.RunicMaxIntensity = 100;
+				shadowIron.RunicMaxIntensity = 80;
 			}
 			else
 			{
@@ -164,7 +164,7 @@ namespace Server.Items
 			copper.WeaponPoisonDamage = 10;
 			copper.WeaponEnergyDamage = 20;
 			copper.RunicMinAttributes = 1;
-			copper.RunicMaxAttributes = 5;
+			copper.RunicMaxAttributes = 4;
 			if ( Core.ML )
 			{
 				copper.RunicMinIntensity = 10;
@@ -183,7 +183,7 @@ namespace Server.Items
 			bronze.ArmorPoisonResist = 1;
 			bronze.ArmorEnergyResist = 1;
 			bronze.WeaponFireDamage = 40;
-			bronze.RunicMinAttributes = 2;
+			bronze.RunicMinAttributes = 1;
 			bronze.RunicMaxAttributes = 5;
 			if ( Core.ML )
 			{
@@ -296,7 +296,7 @@ namespace Server.Items
 			if ( Core.ML )
 			{
 				spined.RunicMinIntensity = 10;
-				spined.RunicMaxIntensity = 100;
+				spined.RunicMaxIntensity = 80;
 			}
 			else
 			{

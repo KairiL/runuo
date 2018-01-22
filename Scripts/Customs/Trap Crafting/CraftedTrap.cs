@@ -271,6 +271,9 @@ namespace Server.Items
 
             int ManaLoss = ScaleMana(ManaCost);
 
+            if (!(TrapOwner.InRange(Location, 100)))
+                return;
+
             if (TrapOwner != null  && TrapOwner.Player && TrapOwner.CanBeHarmful(from, false) && 
                     from != TrapOwner && SpellHelper.ValidIndirectTarget(TrapOwner, (Mobile)from) &&
                     (!(from is BaseCreature) || ((BaseCreature)from).ControlMaster != TrapOwner))
@@ -285,9 +288,6 @@ namespace Server.Items
                     }
                 }
             else
-                return;
-
-            if (!(TrapOwner.InRange(Location, 100)))
                 return;
 
             if (this.Visible == false)

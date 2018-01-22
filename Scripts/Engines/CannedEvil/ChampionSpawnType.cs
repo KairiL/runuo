@@ -109,7 +109,7 @@ namespace Server.Engines.CannedEvil
 					new Type[]{ typeof( PlagueBeastLord ), typeof( InterredGrizzle ) },
 					new Type[]{ typeof( FetidEssence ), typeof( PestilentBandage ) }
 				} ),
-                new ChampionSpawnInfo( "Primeval Lich", typeof( PrimevalLich ), new string[]{ "Opposer", "Eliminator", "Purifier" }, new type[][]
+                new ChampionSpawnInfo( "Primeval Lich", typeof( PrimevalLich ), new string[]{ "Opposer", "Eliminator", "Purifier" }, new Type[][]
                 {
                     new Type[]{ typeof( BoneMagi ), typeof( SkeletalMage ) },
                     new Type[]{ typeof( Lich ), typeof( BoneMagi ) },
