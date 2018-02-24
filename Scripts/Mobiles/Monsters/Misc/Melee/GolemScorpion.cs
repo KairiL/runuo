@@ -43,9 +43,6 @@ namespace Server.Mobiles
 					SetResistance( ResistanceType.Poison, (int)(10*scalar), (int)(25*scalar) );
 					SetResistance( ResistanceType.Energy, (int)(30*scalar), (int)(40*scalar) );
 
-					SetSkill( SkillName.MagicResist, (130.1*scalar), (150.1*scalar) );
-					SetSkill( SkillName.Tactics, (40.1*scalar), (60.0*scalar) );
-					SetSkill( SkillName.Wrestling, (40.1*scalar), (60.0*scalar) );
 					Fame = 3500;
 					Karma = -3500;
 
@@ -448,6 +445,7 @@ namespace Server.Mobiles
                                     AOS.Damage((Mobile)o, m_From, Utility.RandomMinMax(0, exploDamage), 0, 100, 0, 0, 0);
                             else if (o is BaseCreature)
                                 AOS.Damage((Mobile)o, m_From, Utility.RandomMinMax(0, exploDamage), 0, 100, 0, 0, 0);
+                            m_From.DoHarmful((Mobile)o);
                         }
                     }
                 }
@@ -456,6 +454,7 @@ namespace Server.Mobiles
                         AOS.Damage(m_Mobile, m_From, Utility.RandomMinMax(1, minDamage), 100, 0, 0, 0, 0);
                     else
                         AOS.Damage(m_Mobile, m_From, Utility.RandomMinMax(minDamage, minDamage*3), 100, 0, 0, 0, 0);
+                    m_From.DoHarmful(m_Mobile);
             }
         }
 
