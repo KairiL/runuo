@@ -476,7 +476,7 @@ namespace Server.Mobiles
 		{
 			base.Serialize( writer );
 			writer.Write( (int) 1 ); //version = 1
-            writer.Write((DateTime)m_NextBomb);
+            writer.Write(DateTime.UtcNow);
             writer.Write((int)m_Thrown);
             writer.Write((double)m_Speed);
             writer.Write((int) m_Range);
