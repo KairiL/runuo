@@ -153,7 +153,7 @@ namespace Server.Mobiles
 
             if (tinkering >= 100.0)
             {
-                max += (int)((tinkering - 90.0) / 5);
+                max += (int)((tinkering - 90.0) / 3);
             }
 
             return max;
