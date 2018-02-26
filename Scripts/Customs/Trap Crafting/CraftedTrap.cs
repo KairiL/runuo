@@ -273,6 +273,8 @@ namespace Server.Items
 
             if (!(TrapOwner.InRange(Location, 100)))
                 return;
+            if (TrapOwner.Map != Map || TrapOwner.Map == Map.Internal)
+                return;
 
             if (TrapOwner != null  && TrapOwner.Player && TrapOwner.CanBeHarmful(from, false) && 
                     from != TrapOwner && SpellHelper.ValidIndirectTarget(TrapOwner, (Mobile)from) &&
