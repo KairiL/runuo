@@ -237,7 +237,7 @@ namespace Server.Mobiles
 				else if ( Utility.Random( 3 ) == 0 && !m_Mobile.InRange( toDispel, 3 ) && !toDispel.Paralyzed && !toDispel.Frozen )
 					spell = new ParalyzeSpell( m_Mobile, null );
 				else
-					spell = new DispelSpell( m_Mobile, null );
+					spell = new MassDispelSpell( m_Mobile, null );
 			}
 
 			return spell;

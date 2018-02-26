@@ -138,6 +138,7 @@ namespace Server.Mobiles
 			double taming = from.Skills[SkillName.AnimalTaming].Value;
 			double anlore = from.Skills[SkillName.AnimalLore].Value;
 			double vetern = from.Skills[SkillName.Veterinary].Value;
+            double tinkering = from.Skills[SkillName.Tinkering].Value;
 			double sklsum = taming + anlore + vetern;
 
 			int max = 5;
@@ -150,7 +151,12 @@ namespace Server.Mobiles
 			if ( vetern >= 100.0 )
 				max += (int)((vetern - 90.0) / 10);
 
-			return max;
+            if (tinkering >= 100.0)
+            {
+                max += (int)((tinkering - 90.0) / 3);
+            }
+
+            return max;
 		}
 
 		private class StableTarget : Target

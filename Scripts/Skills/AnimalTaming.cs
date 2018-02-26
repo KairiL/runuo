@@ -134,7 +134,9 @@ namespace Server.SkillHandlers
 				{
 					if ( targeted is BaseCreature )
 					{
-						BaseCreature creature = (BaseCreature)targeted;
+                        CampfireEntry tamerEntry = Campfire.GetEntry(from);
+
+                        BaseCreature creature = (BaseCreature)targeted;
 
 						if ( !creature.Tamable )
 						{
@@ -168,7 +170,8 @@ namespace Server.SkillHandlers
 						{
 							creature.PrivateOverheadMessage( MessageType.Regular, 0x3B2, 1054025, from.NetState ); // You must subdue this creature before you can tame it!
 						}
-						else if ( CheckMastery( from, creature ) || from.Skills[SkillName.AnimalTaming].Value >= creature.MinTameSkill )
+						else if ( CheckMastery( from, creature ) || from.Skills[SkillName.AnimalTaming].Value >= creature.MinTameSkill ||
+                            ((tamerEntry != null && tamerEntry.Safe) && from.Skills[SkillName.AnimalTaming].Value >= creature.MinTameSkill - 10))
 						{
 							FactionWarHorse warHorse = creature as FactionWarHorse;
 
@@ -222,7 +225,7 @@ namespace Server.SkillHandlers
 								m_SetSkillTime = false;
 							}
 						}
-						else
+                        else
 						{
 							creature.PrivateOverheadMessage( MessageType.Regular, 0x3B2, 502806, from.NetState ); // You have no chance of taming this creature.
 						}

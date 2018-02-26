@@ -130,7 +130,7 @@ namespace Server.Items
 				else
 					scalar = 0.6 + metal;
 
-                scalar += synergyBonus;//max .7 without ancient hammer, .768 with.
+                scalar += synergyBonus;//max .704 without ancient hammer, .8 with.
 
                 Container pack = from.Backpack;
 				if ( pack == null )

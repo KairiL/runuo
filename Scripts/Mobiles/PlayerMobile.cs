@@ -1425,6 +1425,8 @@ namespace Server.Mobiles
 				{
 					strBase = this.RawStr;
 				}
+                if (Race == Race.Human)
+                    strOffs += 20;
 
 				return (strBase / 2) + 50 + strOffs;
 			}

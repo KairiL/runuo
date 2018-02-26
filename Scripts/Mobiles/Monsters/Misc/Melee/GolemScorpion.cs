@@ -24,44 +24,41 @@ namespace Server.Mobiles
 		public GolemScorpion( int summoned, double scalar, double met )
 		{
 			if ( summoned == 0 )
-				{
-					Name = "a golem scorpion";
-					Body = 717;			
-					SetStr( (int)(251*scalar), (int)(350*scalar) );
-					SetDex( (int)(76*scalar), (int)(100*scalar) );
-					SetInt( (int)(101*scalar), (int)(150*scalar) );
+			{
+				Name = "a golem scorpion";
+				Body = 717;			
+				SetStr( (int)(251*scalar), (int)(350*scalar) );
+				SetDex( (int)(76*scalar), (int)(100*scalar) );
+				SetInt( (int)(101*scalar), (int)(150*scalar) );
 
-					SetHits( (int)(151*scalar), (int)(210*scalar) );
+				SetHits( (int)(151*scalar), (int)(210*scalar) );
 
-					SetDamage( (int)(13*scalar), (int)(24*scalar) );
+				SetDamage( (int)(13*scalar), (int)(24*scalar) );
 
-					SetDamageType( ResistanceType.Physical, 100 );
+				SetDamageType( ResistanceType.Physical, 100 );
 
-					SetResistance( ResistanceType.Physical, (int)(35*scalar), (int)(55*scalar) );
-					SetResistance( ResistanceType.Fire, (int)(100*scalar) );
-					SetResistance( ResistanceType.Cold, (int)(10*scalar), (int)(30*scalar) );
-					SetResistance( ResistanceType.Poison, (int)(10*scalar), (int)(25*scalar) );
-					SetResistance( ResistanceType.Energy, (int)(30*scalar), (int)(40*scalar) );
+				SetResistance( ResistanceType.Physical, (int)(35*scalar), (int)(55*scalar) );
+				SetResistance( ResistanceType.Fire, (int)(100*scalar) );
+				SetResistance( ResistanceType.Cold, (int)(10*scalar), (int)(30*scalar) );
+				SetResistance( ResistanceType.Poison, (int)(10*scalar), (int)(25*scalar) );
+				SetResistance( ResistanceType.Energy, (int)(30*scalar), (int)(40*scalar) );
 
-					SetSkill( SkillName.MagicResist, (130.1*scalar), (150.1*scalar) );
-					SetSkill( SkillName.Tactics, (40.1*scalar), (60.0*scalar) );
-					SetSkill( SkillName.Wrestling, (40.1*scalar), (60.0*scalar) );
-					Fame = 3500;
-					Karma = -3500;
+				Fame = 3500;
+				Karma = -3500;
 
-					if ( 0.1 > Utility.RandomDouble() )
-						PackItem( new PowerCrystal() );
+				if ( 0.1 > Utility.RandomDouble() )
+					PackItem( new PowerCrystal() );
 
-					if ( 0.15 > Utility.RandomDouble() )
-						PackItem( new ScorpionAssembly() );
+				if ( 0.15 > Utility.RandomDouble() )
+					PackItem( new ScorpionAssembly() );
 
-					if ( 0.2 > Utility.RandomDouble() )
-						PackItem( new ArcaneGem() );
+				if ( 0.2 > Utility.RandomDouble() )
+					PackItem( new ArcaneGem() );
 
-					if ( 0.25 > Utility.RandomDouble() )
-						PackItem( new Gears() );
-					return;
-				}
+				if ( 0.25 > Utility.RandomDouble() )
+					PackItem( new Gears() );
+				return;
+			}
 			
 			Body = 717;
 		    
@@ -77,7 +74,7 @@ namespace Server.Mobiles
 				SetHits( (int)(100*(scalar+0.7)), (int)(140*(scalar+0.7)) );
             Container pack = Backpack;
             if ( met < 0.2 )
-				{
+			{
 				Name = "an iron golem scorpion";
 				SetDamageType( ResistanceType.Physical, 100 );
 				SetResistance( ResistanceType.Physical, (int)(20*scalar), (int)(30*scalar) );
@@ -89,7 +86,7 @@ namespace Server.Mobiles
 				Hue = 0;
             }
 			else if ( met < 0.3 )
-				{
+			{
 				Name = "a dull copper golem scorpion";
 				SetDamageType( ResistanceType.Physical, 100 );
 				SetResistance( ResistanceType.Physical, (int)(26*scalar), (int)(36*scalar) );
@@ -99,9 +96,9 @@ namespace Server.Mobiles
 				SetResistance( ResistanceType.Energy, (int)(20*scalar), (int)(30*scalar) );
 				ControlSlots = 2;
 				Hue = 2419;
-				}
+			}
 			else if ( met < 0.4 )
-				{
+			{
 				Name = "a shadowiron golem scorpion";
 				SetDamageType( ResistanceType.Physical, 80 );
 				SetDamageType( ResistanceType.Cold, 20 );
@@ -112,9 +109,9 @@ namespace Server.Mobiles
 				SetResistance( ResistanceType.Energy, (int)(25*scalar), (int)(35*scalar) );
 				ControlSlots = 2;
 				Hue = 2406;
-				}
+			}
 			else if ( met < 0.5 )
-				{
+			{
 				Name = "a copper golem scorpion";
 				SetDamageType( ResistanceType.Physical, 70 );
 				SetDamageType( ResistanceType.Poison, 10 );
@@ -126,9 +123,9 @@ namespace Server.Mobiles
 				SetResistance( ResistanceType.Energy, (int)(22*scalar), (int)(32*scalar) );
 				ControlSlots = 2;
 				Hue = 2413;
-				}
+			}
 			else if ( met < 0.6 )
-				{
+			{
 				Name = "a bronze golem scorpion";
 				SetDamageType( ResistanceType.Physical, 60 );
 				SetDamageType( ResistanceType.Fire, 40 );
@@ -141,7 +138,7 @@ namespace Server.Mobiles
 				Hue = 2418;
 				}
 			else if ( met < 0.7 )
-				{
+		    {
 				Name = "a gold golem scorpion";
 				SetDamageType( ResistanceType.Physical, 100 );
 				SetResistance( ResistanceType.Physical, (int)(21*scalar), (int)(31*scalar) );
@@ -153,7 +150,7 @@ namespace Server.Mobiles
 				Hue = 2213;
             }
 			else if ( met < 0.8 )
-				{
+			{
 				Name = "an agapite golem scorpion";
 				SetDamageType( ResistanceType.Physical, 50 );
 				SetDamageType( ResistanceType.Cold, 30 );
@@ -167,7 +164,7 @@ namespace Server.Mobiles
 				Hue = 2425;
             }
 			else if ( met < 0.9 )
-				{
+			{
 				Name = "a verite golem scorpion";
 				SetDamageType( ResistanceType.Physical, 40 );
 				SetDamageType( ResistanceType.Poison, 40 );
@@ -179,9 +176,9 @@ namespace Server.Mobiles
 				SetResistance( ResistanceType.Energy, (int)(26*scalar), (int)(31*scalar) );
 				ControlSlots = 3;
 				Hue = 2207;
-				}
+			}
 			else
-				{
+			{
 				Name = "a valorite golem scorpion";
 				SetDamageType( ResistanceType.Physical, 40 );
 				SetDamageType( ResistanceType.Fire, 10 );
@@ -195,7 +192,7 @@ namespace Server.Mobiles
 				SetResistance( ResistanceType.Energy, (int)(28*scalar), (int)(33*scalar) );//43-62 at gm
 				ControlSlots = 3;
 				Hue = 2219;
-				}
+			}
 			
 			
 			SetSkill( SkillName.MagicResist, (80.1*(scalar-met/2)), (100.0*(scalar-met/2)) );
@@ -344,10 +341,10 @@ namespace Server.Mobiles
             base.AggressiveAction(aggressor, criminal);
         }
 
-        private DateTime m_NextBomb;
-        private int m_Thrown;
-        private double m_Speed;
-        private int m_Range;
+        private DateTime m_NextBomb = DateTime.UtcNow;
+        private int m_Thrown = 0;
+        private double m_Speed = 6;
+        private int m_Range = 10;
         public override void OnActionCombat()
         {
             Mobile combatant = Combatant;
@@ -366,13 +363,15 @@ namespace Server.Mobiles
                     m = ControlMaster;
                     m_Speed = (int)((m.Skills[SkillName.Fletching].Value * 3 + m.Skills[SkillName.Carpentry].Value + m.Skills[SkillName.Blacksmith].Value) / 58.0);
                     m_Range = 4 + (int)(m.Skills[SkillName.Fletching].Value / 10.0);
-                    //m_Speed = m.Skills[SkillName.Fletching].Value / 10.0;
                 }
 
                 if (0.75 >= Utility.RandomDouble() && (m_Thrown % 2) == 1) // 75% chance to quickly throw another bomb
                     m_NextBomb = DateTime.UtcNow + TimeSpan.FromSeconds(2.1 - m_Speed/5.0);
                 else
                     m_NextBomb = DateTime.UtcNow + TimeSpan.FromSeconds(3.0 + (3.0 * Utility.RandomDouble()) - m_Speed/2); // 3-6 seconds avg 4.5 (0-1 avg .333 with +60 hammer)
+
+                if (m_Thrown > 32768)
+                    m_Thrown -= 32768;
             }
             base.OnActionCombat();
         }
@@ -448,6 +447,7 @@ namespace Server.Mobiles
                                     AOS.Damage((Mobile)o, m_From, Utility.RandomMinMax(0, exploDamage), 0, 100, 0, 0, 0);
                             else if (o is BaseCreature)
                                 AOS.Damage((Mobile)o, m_From, Utility.RandomMinMax(0, exploDamage), 0, 100, 0, 0, 0);
+                            m_From.DoHarmful((Mobile)o);
                         }
                     }
                 }
@@ -456,6 +456,7 @@ namespace Server.Mobiles
                         AOS.Damage(m_Mobile, m_From, Utility.RandomMinMax(1, minDamage), 100, 0, 0, 0, 0);
                     else
                         AOS.Damage(m_Mobile, m_From, Utility.RandomMinMax(minDamage, minDamage*3), 100, 0, 0, 0, 0);
+                    m_From.DoHarmful(m_Mobile);
             }
         }
 
@@ -474,13 +475,24 @@ namespace Server.Mobiles
 		public override void Serialize( GenericWriter writer )
 		{
 			base.Serialize( writer );
-			writer.Write( (int) 0 );
-		}
+			writer.Write( (int) 1 ); //version = 1
+            writer.Write(DateTime.UtcNow);
+            writer.Write((int)m_Thrown);
+            writer.Write((double)m_Speed);
+            writer.Write((int) m_Range);
+        }
 
 		public override void Deserialize( GenericReader reader )
 		{
 			base.Deserialize( reader );
 			int version = reader.ReadInt();
+            if (version == 1 )
+            { 
+                m_NextBomb = reader.ReadDateTime();
+                m_Thrown = reader.ReadInt();
+                m_Speed = reader.ReadDouble();
+                m_Range = reader.ReadInt();
+            }
 		}
 	}
 }

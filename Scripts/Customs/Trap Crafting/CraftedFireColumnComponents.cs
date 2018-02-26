@@ -37,66 +37,27 @@ namespace Server.Items
 			Armed = false;
 		}
 
+        protected void CreateTrap(Map map, int x, int y, int z, Mobile from, int trapmod, double poisonskill, int trapskill, int trapuses,
+   int rangeBonus, int radiusBonus, double delayBonus)
+        {
+            CraftedFireColumnTrap trap = new CraftedFireColumnTrap();
 
-		public override void OnDoubleClick( Mobile from ) 
-		{ 
-			if ( this.Armed == false )
-			{
-				this.Armed = true;
-				from.SendMessage("This trap is now ARMED. Double-clicking these components again will place the trap.");
-				this.Name = "Components for a Fire Column [ARMED]";
-			}
+            trap.TrapOwner = from;
+            trap.TrapPower += trapmod;
+            trap.TriggerRange += rangeBonus;
+            trap.DamageRange += radiusBonus;
+            trap.UsesRemaining += trapuses;
+            if (delayBonus > 0)
+                trap.Delay = (TimeSpan.FromSeconds((trap.Delay.TotalSeconds) / delayBonus));
 
-			else if ( this.Armed == true )
-			{
-				Map map = from.Map;
-				Point3D m_pnt = from.Location;
+            trap.Poison = null;
 
-				int x = from.X;
-				int y = from.Y;
-				int z = from.Z;
+            trap.MoveToWorld(new Point3D(x, y, z), map);
 
-				ArrayList trapshere = CheckTrap( m_pnt, map, 3 );
-				if ( trapshere.Count > 0 )
-				{
-					from.SendMessage( "There is already a trap here." ); 
-					return;
-				}
+            from.SendMessage("You have configured the trap and concealed it at your location.");
+        }
 
-				int trapskill = (int)Math.Round(from.Skills.Tinkering.Value) + (int)Math.Round(from.Skills.Inscribe.Value);
-				int trapmod = trapskill - 50;
-				int trapuses = (int)(from.Skills.Tailoring.Value + (from.Skills.Carpentry.Value + (from.Skills.ArmsLore.Value + trapskill) / 2) / 4) / 2 + Utility.RandomMinMax(1, 3);
-                int rangeBonus = (int)(from.Skills.Fletching.Value * 2 + from.Skills.ArmsLore.Value) / 100;
-                int radiusBonus = (int)(from.Skills.Alchemy.Value + from.Skills.Blacksmith.Value + from.Skills.Tinkering.Value) / 100;
-                int delayBonus = (int)(from.Skills.Blacksmith.Value + from.Skills.Carpentry.Value) / 100;
-
-                if (from.Skills.Blacksmith.Value >= 120)
-                    delayBonus += 1;
-
-                CraftedFireColumnTrap trap = new CraftedFireColumnTrap(); 
-
-				trap.TrapOwner = from;
-				trap.TrapPower += trapmod;
-				trap.UsesRemaining += trapuses;
-                trap.TriggerRange += rangeBonus;
-                trap.DamageRange += radiusBonus;
-                trap.Delay -= TimeSpan.FromSeconds(delayBonus);
-
-                trap.MoveToWorld( new Point3D( x, y, z ), map );
-
-				from.SendMessage("You have configured the trap and concealed it at your location.");
-				if (trapmod <= -10 )
-					from.SendMessage("Due to your poor Tinkering ability, the trap will do less damage.");
-
-				if (trapmod >= 10 )
-					from.SendMessage("Due to your great Tinkering ability, the trap will do more damage.");
-		
-				this.Delete();
-			}
-
-		}
-
-		public static ArrayList CheckTrap( Point3D pnt, Map map, int range )
+        public static ArrayList CheckTrap( Point3D pnt, Map map, int range )
 		{
 			ArrayList traps = new ArrayList();
 

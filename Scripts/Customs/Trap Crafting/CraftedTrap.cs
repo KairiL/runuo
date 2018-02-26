@@ -271,7 +271,9 @@ namespace Server.Items
 
             int ManaLoss = ScaleMana(ManaCost);
 
-            if (!(TrapOwner.InRange(Location, 100)))
+            if (!(TrapOwner.InRange(Location, 25)))
+                return;
+            if (TrapOwner.Map != Map || TrapOwner.Map == Map.Internal)
                 return;
 
             if (TrapOwner != null  && TrapOwner.Player && TrapOwner.CanBeHarmful(from, false) && 
