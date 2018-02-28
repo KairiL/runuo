@@ -12,6 +12,14 @@ namespace Server.Items
 
     public class CraftedTeleporter : CraftedTrap
 	{
+        public override TimeSpan DecayPeriod
+        {
+            get
+            {
+                return TimeSpan.FromDays(3.0);
+            }
+        }
+
         [Constructable]
 		public CraftedTeleporter()
 		{
@@ -41,7 +49,7 @@ namespace Server.Items
             Delay = TimeSpan.FromSeconds(3);
         }
 
-        private static TimeSpan m_DDT = TimeSpan.FromHours(168.0);
+        private static TimeSpan m_DDT = TimeSpan.FromDays(3.0);
 
         public override void Serialize(GenericWriter writer)
         {

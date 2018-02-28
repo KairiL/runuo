@@ -23,7 +23,7 @@ namespace Server.Items
         private Map m_MapDest;
         private bool decays = true;
 
-        private static TimeSpan m_DDT = TimeSpan.FromHours(1.0);
+        private static TimeSpan m_DDT = TimeSpan.FromHours(1.0); //Decay time? Doesn't seem to work.  Need to use DecayPeriod maybe.
 
         public bool CheckRange(Point3D loc, Point3D oldLoc, int range)
         {
@@ -36,6 +36,14 @@ namespace Server.Items
             get
             {
                 return m_TrapOwner.AccessLevel <= AccessLevel.GameMaster && decays;
+            }
+        }
+
+        public virtual TimeSpan DecayPeriod
+        {
+            get
+            {
+                    return TimeSpan.FromHours(1.0);
             }
         }
 
@@ -468,11 +476,10 @@ namespace Server.Items
 		{
 			if ( from == TrapOwner )
 			{
-                from.SendMessage("You conceal the trap.");
-                this.Visible = false;
-			}
-
-			else if ( from != TrapOwner )
+                this.Delete();
+                from.SendMessage("You successfully remove the trap.");
+            }
+			else
 			{
 
 				int trapmaxskill = (int)Math.Round(from.Skills.RemoveTrap.Value) + (int)Math.Round(from.Skills.Tinkering.Value) + 50;
