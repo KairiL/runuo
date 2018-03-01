@@ -170,16 +170,14 @@ namespace Server.Mobiles
 
 		public virtual Spell GetRandomDamageSpell()
 		{
-			int maxCircle = (int)((m_Mobile.Skills[SkillName.Magery].Value + 50.0) / (100.0 / 7.0));
+            /*
+			int maxCircle = (int)((m_Mobile.Skills[SkillName.Necromancy].Value + 50.0) / (100.0 / 7.0));
 			int minCircle = (int)((m_Mobile.Skills[SkillName.Magery].Value + 50.0) / (100.0 / 7.0));
-           // m_Mobile.DebugSay("Casting random spell");
-            if ( maxCircle < 2 && minCircle < 8 )
-            {
-				maxCircle = 2;
-				minCircle = 8;
-            }
+            *///removed since all epics are presumed to be able to cast any spell
 
-			switch ( Utility.Random( minCircle + (maxCircle*2) ) )
+            int numSpells = 12;
+
+            switch ( Utility.Random( minCircle + (maxCircle*2) ) )
 			{
 				
 				case  0: return new HarmSpell( m_Mobile, null );

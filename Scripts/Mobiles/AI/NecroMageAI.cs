@@ -186,14 +186,17 @@ namespace Server.Mobiles
 
 		public virtual Spell GetRandomDamageSpell()
 		{
+            /*
 			int maxCircle = (int)((m_Mobile.Skills[SkillName.Necromancy].Value + 50.0) / (100.0 / 7.0));
 			int minCircle = (int)((m_Mobile.Skills[SkillName.Magery].Value + 50.0) / (100.0 / 7.0));
+            *///removed since all epics are presumed to be able to cast any spell
 
+            int numSpells = 11;
 			if ( maxCircle < 2 && minCircle < 8 )
 				maxCircle = 2;
 				minCircle = 8;
 
-			switch ( Utility.Random( minCircle + (maxCircle*2) ) )
+			switch ( Utility.Random( numSpells ) )
 			{
 				case  0: return new FireballSpell( m_Mobile, null );
 				case  1: return new PainSpikeSpell( m_Mobile, null );
@@ -207,7 +210,8 @@ namespace Server.Mobiles
 				case  9: return new StrangleSpell( m_Mobile, null );
 				//case 10: return new WitherSpell( m_Mobile, null );
 				case 10: return new VengefulSpiritSpell( m_Mobile, null );
-				default: return new FlameStrikeSpell( m_Mobile, null );
+                case 11: return new SummonDaemonSpell(m_Mobile, null);
+                default: return new FlameStrikeSpell( m_Mobile, null );
 			}
 		}
 
