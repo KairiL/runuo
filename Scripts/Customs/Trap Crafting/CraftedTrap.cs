@@ -317,11 +317,11 @@ namespace Server.Items
                 IPooledEnumerable eable = this.Map.GetMobilesInRange(new Point3D(from.Location), DamageRange);
 
                 foreach (Mobile m in eable)
-                    if ((m != TrapOwner && SpellHelper.ValidIndirectTarget(TrapOwner, (Mobile)m) && TrapOwner.CanBeHarmful(m, false)))
+                    if ((m != TrapOwner && SpellHelper.ValidIndirectTarget(TrapOwner, (Mobile)m) && TrapOwner.CanBeHarmful(m, false)) && m.InLOS(this) )
                         targets.Add(m);
                 eable.Free();
 
-                if ((from != TrapOwner && SpellHelper.ValidIndirectTarget(TrapOwner, (Mobile)from) && TrapOwner.CanBeHarmful(from, false)))
+                if ((from != TrapOwner && SpellHelper.ValidIndirectTarget(TrapOwner, (Mobile)from) && TrapOwner.CanBeHarmful(from, false)) && from.InLOS(this) ) //yes, intentional double hit to triggerer
                     targets.Add(from);
 
                 if (targets.Count > 0)
