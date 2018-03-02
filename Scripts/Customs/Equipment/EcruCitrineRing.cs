@@ -9,7 +9,7 @@ namespace Server.Items
         {
             Weight = 0.1;
             Name = "An Ecru Citrine Ring";
-            int maxProps = CraftUtil.GetBonusProps(5);
+            int maxProps = CraftUtil.GetBonusProps(3)+2;
             switch (Utility.Random(2))
             {
                 case 0:

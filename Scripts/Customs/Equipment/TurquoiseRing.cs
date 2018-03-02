@@ -9,7 +9,7 @@ namespace Server.Items
         {
             Weight = 0.1;
             Name = "A Turquoise Ring";
-            int maxProps = CraftUtil.GetBonusProps(5);
+            int maxProps = CraftUtil.GetBonusProps(3)+2;
             if ( Utility.RandomDouble() > .95 )
                 Attributes.WeaponSpeed = 5;
             else
