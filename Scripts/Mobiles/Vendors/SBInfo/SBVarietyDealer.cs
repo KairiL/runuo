@@ -25,17 +25,17 @@ namespace Server.Mobiles
 				Add( new GenericBuyInfo( typeof( BlankScroll ), 10, 999, 0x0E34, 0 ) );
                 Add(new GenericBuyInfo(typeof(Bottle), 10, 100, 0xF0E, 0));
 
-                Add( new GenericBuyInfo( typeof( NightSightPotion ), 30, 10, 0xF06, 0 ) );
-				Add( new GenericBuyInfo( typeof( AgilityPotion ), 30, 10, 0xF08, 0 ) );
-				Add( new GenericBuyInfo( typeof( StrengthPotion ), 30, 10, 0xF09, 0 ) );
-				Add( new GenericBuyInfo( typeof( RefreshPotion ), 30, 10, 0xF0B, 0 ) );
-				Add( new GenericBuyInfo( typeof( LesserCurePotion ), 30, 10, 0xF07, 0 ) );
-				Add( new GenericBuyInfo( typeof( LesserHealPotion ), 30, 10, 0xF0C, 0 ) );
-				Add( new GenericBuyInfo( typeof( LesserPoisonPotion ), 30, 10, 0xF0A, 0 ) );
-				Add( new GenericBuyInfo( typeof( LesserExplosionPotion ), 42, 10, 0xF0D, 0 ) );
+                Add( new GenericBuyInfo( typeof( NightSightPotion ), 30, 20, 0xF06, 0 ) );
+				Add( new GenericBuyInfo( typeof( AgilityPotion ), 30, 20, 0xF08, 0 ) );
+				Add( new GenericBuyInfo( typeof( StrengthPotion ), 30, 20, 0xF09, 0 ) );
+				Add( new GenericBuyInfo( typeof( RefreshPotion ), 30, 20, 0xF0B, 0 ) );
+				Add( new GenericBuyInfo( typeof( LesserCurePotion ), 30, 20, 0xF07, 0 ) );
+				Add( new GenericBuyInfo( typeof( LesserHealPotion ), 30, 20, 0xF0C, 0 ) );
+				Add( new GenericBuyInfo( typeof( LesserPoisonPotion ), 30, 20, 0xF0A, 0 ) );
+				Add( new GenericBuyInfo( typeof( LesserExplosionPotion ), 42, 20, 0xF0D, 0 ) );
 
-				Add( new GenericBuyInfo( typeof( Bolt ), 12, Utility.Random( 30, 60 ), 0x1BFB, 0 ) );
-				Add( new GenericBuyInfo( typeof( Arrow ), 6, Utility.Random( 30, 60 ), 0xF3F, 0 ) );
+				Add( new GenericBuyInfo( typeof( Bolt ), 12, 999, 0x1BFB, 0 ) );
+				Add( new GenericBuyInfo( typeof( Arrow ), 6, 999, 0xF3F, 0 ) );
 
 				Add( new GenericBuyInfo( typeof( BlackPearl ),10, 999, 0xF7A, 0 ) ); 
 				Add( new GenericBuyInfo( typeof( Bloodmoss ), 10, 999, 0xF7B, 0 ) ); 
@@ -47,8 +47,8 @@ namespace Server.Mobiles
 				Add( new GenericBuyInfo( typeof( SulfurousAsh ), 6, 999, 0xF8C, 0 ) );
 
                 Add(new GenericBuyInfo(typeof(TinkersTools), 14, 20, 0x1EBC, 0));
-                Add(new GenericBuyInfo(typeof(Board), 6, 20, 0x1BD7, 0));
-                Add(new GenericBuyInfo(typeof(IronIngot), 10, 16, 0x1BF2, 0));
+                Add(new GenericBuyInfo(typeof(Board), 6, 999, 0x1BD7, 0));
+                Add(new GenericBuyInfo(typeof(IronIngot), 10, 999, 0x1BF2, 0));
 
                 Add( new GenericBuyInfo( typeof( BreadLoaf ), 14, 10, 0x103B, 0 ) );
 				Add( new GenericBuyInfo( typeof( Backpack ), 30, 20, 0x9B2, 0 ) );
