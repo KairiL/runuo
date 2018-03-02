@@ -52,7 +52,11 @@ namespace Server.Spells.Eighth
 					SpellHelper.Summon( m_Daemon, Caster, 0x216, duration, false, false );
 					m_Daemon.FixedParticles(0x3728, 8, 20, 5042, EffectLayer.Head );
                     if (Caster is BaseCreature)
+                    {
                         m_Daemon.ControlOrder = OrderType.Guard;
+                        if (Caster.Combatant != null)
+                            m_Daemon.Combatant = Caster.Combatant;
+                    }
 				}
 				else
 					SpellHelper.Summon( new Daemon(), Caster, 0x216, duration, false, false );

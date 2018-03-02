@@ -13,14 +13,16 @@ namespace Server.Items
         public TrapRepairKit()
 		{
             Name = "A Trap Repair Kit";
-            ItemID = 0x1EB8;
+            ItemID = 0x1EBB;
             Hue = 0;
+            LootType = LootType.Regular;
         }
         public TrapRepairKit(Serial serial) : base( serial )
 		{
             Name = "A Trap Repair Kit";
-            ItemID = 0x1EB8;
+            ItemID = 0x1EBB;
             Hue = 0;
+            LootType = LootType.Regular;
         }
         public override void OnDoubleClick(Mobile from)
         {
@@ -45,118 +47,123 @@ namespace Server.Items
 
                 bool repaired = false;
                 bool upgraded = false;
-                
 
+                
                 if (target is CraftedTrap)
                 {
-                    //Repair Trap uses
-                    newUses = (int)(from.Skills.Tailoring.Value + 
-                        (from.Skills.Carpentry.Value + (from.Skills.ArmsLore.Value + from.Skills[((CraftedTrap)target).BonusSkill].Value / 2) / 4) / 2 + Utility.RandomMinMax(1, 3));
-                    if ( ( (CraftedTrap)target).UsesRemaining > newUses )
-                    {
-                        ((CraftedTrap)target).UsesRemaining = newUses;
-                        repaired = true;
-                        from.SendMessage("You repair the trap");
-                    }
 
-                    //Upgrade trap power
-                    if (!(((CraftedTrap)target).TrapPower != 0 ))
+                    if (from != ((CraftedTrap)target).TrapOwner && (from.Party == null || from.Party != ((CraftedTrap)target).TrapOwner.Party) )
+                        from.SendMessage("You must be in the trap's owner's party to repair or upgrade their traps");
+                    else
                     {
-                        newTrapPower = (int)Math.Round(from.Skills.Tinkering.Value) + (int)Math.Round(from.Skills[((CraftedTrap)target).BonusSkill].Value) - 50;
-                        if (newTrapPower > ((CraftedTrap)target).TrapPower)
+                        //Repair Trap uses
+                        newUses = (int)(from.Skills.Tailoring.Value + 
+                            (from.Skills.Carpentry.Value + (from.Skills.ArmsLore.Value + from.Skills[((CraftedTrap)target).BonusSkill].Value / 2) / 4) / 2 + Utility.RandomMinMax(1, 3));
+                        if ( ( (CraftedTrap)target).UsesRemaining > newUses )
                         {
-                            ( (CraftedTrap)target).TrapPower = newTrapPower;
-                            from.SendMessage("You upgrade the trap's power.");
-                            upgraded = true;
+                            ((CraftedTrap)target).UsesRemaining = newUses;
+                            repaired = true;
+                            from.SendMessage("You repair the trap");
                         }
 
-                    }
-
-                    //Upgrade trap delay
-                    if ( target is CraftedPoisonGasTrap || target is CraftedFireColumnTrap || 
-                         target is CraftedExplosionTrap || target is CraftedElectricTrap )
-                    {
-                        newTimeSpan = 5 - (int)(from.Skills.Blacksmith.Value + from.Skills.Carpentry.Value) / 100;
-                        if (from.Skills.Blacksmith.Value >= 120)
-                            newTimeSpan -= 1;
-                        if (TimeSpan.FromSeconds(newTimeSpan) < ((CraftedTrap)target).Delay)
+                        //Upgrade trap power
+                        if (!(((CraftedTrap)target).TrapPower != 0 ))
                         {
-                            ((CraftedTrap)target).Delay = TimeSpan.FromSeconds(newTimeSpan);
-                            from.SendMessage("You upgrade the trap's delay.");
+                            newTrapPower = (int)Math.Round(from.Skills.Tinkering.Value) + (int)Math.Round(from.Skills[((CraftedTrap)target).BonusSkill].Value) - 50;
+                            if (newTrapPower > ((CraftedTrap)target).TrapPower)
+                            {
+                                ( (CraftedTrap)target).TrapPower = newTrapPower;
+                                from.SendMessage("You upgrade the trap's power.");
+                                upgraded = true;
+                            }
+
+                        }
+
+                        //Upgrade trap delay
+                        if ( target is CraftedPoisonGasTrap || target is CraftedFireColumnTrap || 
+                             target is CraftedExplosionTrap || target is CraftedElectricTrap )
+                        {
+                            newTimeSpan = 5 - (int)(from.Skills.Blacksmith.Value + from.Skills.Carpentry.Value) / 100;
+                            if (from.Skills.Blacksmith.Value >= 120)
+                                newTimeSpan -= 1;
+                            if (TimeSpan.FromSeconds(newTimeSpan) < ((CraftedTrap)target).Delay)
+                            {
+                                ((CraftedTrap)target).Delay = TimeSpan.FromSeconds(newTimeSpan);
+                                from.SendMessage("You upgrade the trap's delay.");
+                                upgraded = true;
+                            }
+                        }
+
+                        if (target is CraftedTeleporter || target is CraftedBoltTrap )
+                        {
+                            newTimeSpan = 3 - (int)(from.Skills.Blacksmith.Value + 
+                                                     from.Skills.Carpentry.Value) / 100;
+                            if (from.Skills.Blacksmith.Value >= 120)
+                                newTimeSpan -= 1;
+                            if (TimeSpan.FromSeconds(newTimeSpan) < ((CraftedTrap)target).Delay)
+                            {
+                                ((CraftedTrap)target).Delay = TimeSpan.FromSeconds(newTimeSpan);
+                                from.SendMessage("You upgrade the trap's delay.");
+                                upgraded = true;
+                            }
+                        }
+
+                        //Upgrade Trigger Range
+                        newTriggerRange = 0;
+
+                        if (target is CraftedPoisonGasTrap )
+                            newTriggerRange = 2;
+                        else if (target is CraftedExplosionTrap ||
+                                 target is CraftedBoltTrap)
+                            newTriggerRange = 3;
+                        else if (target is CraftedElectricTrap )
+                            newTriggerRange = 1;
+
+                        newTriggerRange += (int)(from.Skills.Fletching.Value * 2 + 
+                                                 from.Skills.ArmsLore.Value) / 100;
+
+                        if ( newTriggerRange > ((CraftedTrap)target).TriggerRange )
+                        {
+                            ((CraftedTrap)target).TriggerRange = newTriggerRange;
+                            from.SendMessage("You have upgraded the trap's Trigger Range");
                             upgraded = true;
                         }
-                    }
-
-                    if (target is CraftedTeleporter || target is CraftedBoltTrap )
-                    {
-                        newTimeSpan = 3 - (int)(from.Skills.Blacksmith.Value + 
-                                                 from.Skills.Carpentry.Value) / 100;
-                        if (from.Skills.Blacksmith.Value >= 120)
-                            newTimeSpan -= 1;
-                        if (TimeSpan.FromSeconds(newTimeSpan) < ((CraftedTrap)target).Delay)
-                        {
-                            ((CraftedTrap)target).Delay = TimeSpan.FromSeconds(newTimeSpan);
-                            from.SendMessage("You upgrade the trap's delay.");
-                            upgraded = true;
-                        }
-                    }
-
-                    //Upgrade Trigger Range
-                    newTriggerRange = 0;
-
-                    if (target is CraftedPoisonGasTrap )
-                        newTriggerRange = 2;
-                    else if (target is CraftedExplosionTrap ||
-                             target is CraftedBoltTrap)
-                        newTriggerRange = 3;
-                    else if (target is CraftedElectricTrap )
-                        newTriggerRange = 1;
-
-                    newTriggerRange += (int)(from.Skills.Fletching.Value * 2 + 
-                                             from.Skills.ArmsLore.Value) / 100;
-
-                    if ( newTriggerRange > ((CraftedTrap)target).TriggerRange )
-                    {
-                        ((CraftedTrap)target).TriggerRange = newTriggerRange;
-                        from.SendMessage("You have upgraded the trap's Trigger Range");
-                        upgraded = true;
-                    }
                     
-                    //Upgrade damage range
-                    newDamageRange = 0;
+                        //Upgrade damage range
+                        newDamageRange = 0;
 
-                    if (target is CraftedExplosionTrap ||
-                        target is CraftedBoltTrap)
-                        newDamageRange = 3;
-                    else if (target is CraftedPoisonGasTrap )
-                        newDamageRange = 2;
-                    else if (target is CraftedElectricTrap )
-                        newDamageRange = 1;
+                        if (target is CraftedExplosionTrap ||
+                            target is CraftedBoltTrap)
+                            newDamageRange = 3;
+                        else if (target is CraftedPoisonGasTrap )
+                            newDamageRange = 2;
+                        else if (target is CraftedElectricTrap )
+                            newDamageRange = 1;
 
-                    if (target is CraftedPoisonGasTrap )
-                        newDamageRange += 2 * (int)( from.Skills.Alchemy.Value + 
-                                               from.Skills.Blacksmith.Value + 
-                                               from.Skills.Tinkering.Value + 
-                                               from.Skills.Poisoning.Value) / 100;
-                    else if ( target is CraftedFireColumnTrap ||
-                              target is CraftedElectricTrap ||
-                              target is CraftedBoltTrap )
-                        newDamageRange += (int)( from.Skills.Alchemy.Value + 
-                                            from.Skills.Blacksmith.Value + 
-                                            from.Skills.Tinkering.Value ) / 100;
-                    else if ( target is CraftedExplosionTrap )
-                        newDamageRange += 2 * (int)(from.Skills.Alchemy.Value + 
-                                               from.Skills.Blacksmith.Value + 
-                                               from.Skills.Tinkering.Value) / 100;
+                        if (target is CraftedPoisonGasTrap )
+                            newDamageRange += 2 * (int)( from.Skills.Alchemy.Value + 
+                                                   from.Skills.Blacksmith.Value + 
+                                                   from.Skills.Tinkering.Value + 
+                                                   from.Skills.Poisoning.Value) / 100;
+                        else if ( target is CraftedFireColumnTrap ||
+                                  target is CraftedElectricTrap ||
+                                  target is CraftedBoltTrap )
+                            newDamageRange += (int)( from.Skills.Alchemy.Value + 
+                                                from.Skills.Blacksmith.Value + 
+                                                from.Skills.Tinkering.Value ) / 100;
+                        else if ( target is CraftedExplosionTrap )
+                            newDamageRange += 2 * (int)(from.Skills.Alchemy.Value + 
+                                                   from.Skills.Blacksmith.Value + 
+                                                   from.Skills.Tinkering.Value) / 100;
 
 
-                    if (newDamageRange > ((CraftedTrap)target).DamageRange)
-                    {
-                        ((CraftedTrap)target).DamageRange = newDamageRange;
-                        from.SendMessage("You have upgraded the trap's Damage Range");
-                        upgraded = true;
+                        if (newDamageRange > ((CraftedTrap)target).DamageRange)
+                        {
+                            ((CraftedTrap)target).DamageRange = newDamageRange;
+                            from.SendMessage("You have upgraded the trap's Damage Range");
+                            upgraded = true;
+                        }
                     }
-
 
 
                 }

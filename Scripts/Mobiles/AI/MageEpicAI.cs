@@ -170,16 +170,14 @@ namespace Server.Mobiles
 
 		public virtual Spell GetRandomDamageSpell()
 		{
-			int maxCircle = (int)((m_Mobile.Skills[SkillName.Magery].Value + 50.0) / (100.0 / 7.0));
+            /*
+			int maxCircle = (int)((m_Mobile.Skills[SkillName.Necromancy].Value + 50.0) / (100.0 / 7.0));
 			int minCircle = (int)((m_Mobile.Skills[SkillName.Magery].Value + 50.0) / (100.0 / 7.0));
-           // m_Mobile.DebugSay("Casting random spell");
-            if ( maxCircle < 2 && minCircle < 8 )
-            {
-				maxCircle = 2;
-				minCircle = 8;
-            }
+            *///removed since all epics are presumed to be able to cast any spell
 
-			switch ( Utility.Random( minCircle + (maxCircle*2) ) )
+            int numSpells = 12;
+
+            switch (numSpells)
 			{
 				
 				case  0: return new HarmSpell( m_Mobile, null );
@@ -278,9 +276,8 @@ namespace Server.Mobiles
 				}
 				case 1: // PoisonStrike them
 				{
-                    //m_Mobile.DebugSay("1. Flame Strike");
-                    if ( c.Poisoned )
-                        if (Utility.RandomDouble() > .5)
+                    if ( c.Poisoned && (!(c is BaseCreature) || ((BaseCreature)c).PoisonImmune.Level < m_Mobile.HitPoison.Level))
+                        if (Utility.RandomDouble() > .5 )
 						    spell = new FlameStrikeSpell( m_Mobile, null );
                         else
                             spell = new FireFieldSpell( m_Mobile, null );
@@ -325,7 +322,7 @@ namespace Server.Mobiles
 
 							m_Mobile.UseSkill( SkillName.Meditation );
 						}
-						else if ( !c.Poisoned )
+						else if ( !c.Poisoned && (!(c is BaseCreature) || ( (BaseCreature)c).PoisonImmune.Level < ((BaseCreature)m_Mobile).HitPoison.Level) )
 						{
                             m_Mobile.DebugSay("3. Casting Poison");
                             spell = new PoisonSpell( m_Mobile, null );
@@ -391,8 +388,8 @@ namespace Server.Mobiles
 			else if ( m_Combo == 2 )
 			{
                 m_Mobile.DebugSay("Casting maybe poison and moving to next spell");
-                if ( !c.Poisoned )
-					spell = new PoisonSpell( m_Mobile, null );
+                if ( !c.Poisoned && (!(c is BaseCreature) || ((BaseCreature)c).PoisonImmune.Level < ((BaseCreature)m_Mobile).HitPoison.Level))
+                    spell = new PoisonSpell( m_Mobile, null );
 
 				++m_Combo; // Move to next spell
 			}
@@ -538,7 +535,17 @@ namespace Server.Mobiles
 
 				if ( m_Mobile.Poisoned ) // Top cast priority is cure
 				{
-					spell = new CureSpell( m_Mobile, null );
+                    IPooledEnumerable eable = (IPooledEnumerable)m_Mobile.Map.GetItemsInRange(m_Mobile.Location, 1);
+
+                    foreach (object o in eable)
+                    {
+                        if (o is PoisonFieldSpell.InternalItem)
+                        {
+                            m_Mobile.Move(m_Mobile.Direction);
+                            break;
+                        }
+                    }
+                    spell = new CureSpell( m_Mobile, null );
 				}
 				else if ( toDispel != null ) // Something dispellable is attacking us
 				{
@@ -548,7 +555,8 @@ namespace Server.Mobiles
 				{
 					spell = DoCombo( c );
 				}
-				else if ( (c.Spell is HealSpell || c.Spell is GreaterHealSpell) && !c.Poisoned ) // They have a heal spell out
+				else if ( (c.Spell is HealSpell || c.Spell is GreaterHealSpell) && !c.Poisoned && 
+                    (!(c is BaseCreature) || ((BaseCreature)c).PoisonImmune.Level < ((BaseCreature)m_Mobile).HitPoison.Level)) // They have a heal spell out
 				{
 					spell = new PoisonSpell( m_Mobile, null );
 				}

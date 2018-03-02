@@ -416,11 +416,24 @@ namespace Server.Spells
 			if( fromGuild != null && toGuild != null && (fromGuild == toGuild || fromGuild.IsAlly( toGuild )) )
 				return false;
 
-			Party p = Party.Get( from );
+            Mobile ownerfrom = from;
+            Mobile ownerto = to;
+            while (ownerfrom is BaseCreature && (((BaseCreature)ownerfrom).ControlMaster != null || ((BaseCreature)ownerfrom).SummonMaster != null))
+                if (((BaseCreature)ownerfrom).ControlMaster != null)
+                    ownerfrom = ((BaseCreature)ownerfrom).ControlMaster;
+                else
+                    ownerfrom = ((BaseCreature)ownerfrom).SummonMaster;
+            while (ownerto is BaseCreature && (((BaseCreature)ownerto).ControlMaster != null || ((BaseCreature)ownerto).SummonMaster != null))
+                if (((BaseCreature)ownerto).ControlMaster != null)
+                    ownerfrom = ((BaseCreature)ownerto).ControlMaster;
+                else
+                    ownerfrom = ((BaseCreature)ownerto).SummonMaster;
 
-			if( p != null && p.Contains( to ) )
-				return false;
+            if (ownerfrom == ownerto)
+                return false;
 
+            if (Party.Get( ownerfrom ) != null && Party.Get(ownerfrom) == Party.Get( ownerto ))
+                return false;
 			if( to is BaseCreature )
 			{
 				BaseCreature c = (BaseCreature)to;
@@ -432,13 +445,9 @@ namespace Server.Spells
 				{
 					if( c.ControlMaster == from || c.SummonMaster == from )
 						return false;
-
-					if( p != null && (p.Contains( c.ControlMaster ) || p.Contains( c.SummonMaster )) )
-						return false;
 				}
 			}
-
-			if( from is BaseCreature )
+            if ( from is BaseCreature )
 			{
 				BaseCreature c = (BaseCreature)from;
 
@@ -449,16 +458,17 @@ namespace Server.Spells
 				{
 					if( c.ControlMaster == to || c.SummonMaster == to )
 						return false;
-
-					p = Party.Get( to );
-
-					if( p != null && (p.Contains( c.ControlMaster ) || p.Contains( c.SummonMaster )) )
-						return false;
 				}
-			}
+
+                if ( !((BaseCreature)from).Controlled && !((BaseCreature)from).InitialInnocent && to is PlayerMobile)
+                    return true;
+
+            }
 
 			if( to is BaseCreature && !((BaseCreature)to).Controlled && ((BaseCreature)to).InitialInnocent )
 				return true;
+
+
 
 			int noto = Notoriety.Compute( from, to );
 
