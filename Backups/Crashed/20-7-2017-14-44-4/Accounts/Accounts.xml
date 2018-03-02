@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<accounts count="18">
+	<account>
+		<username>kairi</username>
+		<newCryptPassword>59-9B-40-5C-F8-29-C0-AF-A9-F6-8B-B8-FE-CC-ED-8C-41-4E-4A-D2</newCryptPassword>
+		<accessLevel>Owner</accessLevel>
+		<flags>2</flags>
+		<created>2017-03-22T08:02:32.2882832Z</created>
+		<lastLogin>2017-07-15T19:55:31.1480484Z</lastLogin>
+		<totalGameTime>P10DT28M15.7300365S</totalGameTime>
+		<chars>
+			<char index="0">241</char>
+		</chars>
+		<addressList count="10">
+			<ip>127.0.0.1</ip>
+			<ip>75.72.151.168</ip>
+			<ip>66.116.51.90</ip>
+			<ip>160.94.179.129</ip>
+			<ip>107.4.200.14</ip>
+			<ip>75.72.219.232</ip>
+			<ip>10.10.10.209</ip>
+			<ip>10.10.10.1</ip>
+			<ip>10.128.172.186</ip>
+			<ip>173.25.164.88</ip>
+		</addressList>
+		<totalCurrency>5.94E-05</totalCurrency>
+	</account>
+	<account>
+		<username>kairi1.0</username>
+		<newCryptPassword>80-87-70-D4-0B-0C-D0-97-63-15-21-0F-96-3B-CC-B3-05-24-16-B9</newCryptPassword>
+		<flags>2</flags>
+		<created>2017-03-24T00:35:49.1928057Z</created>
+		<lastLogin>2017-07-13T17:34:26.7869399Z</lastLogin>
+		<totalGameTime>P9DT19H39M51.6758609S</totalGameTime>
+		<chars>
+			<char index="0">242</char>
+			<char index="1">1906</char>
+			<char index="2">24928</char>
+			<char index="4">24887</char>
+			<char index="5">24580</char>
+		</chars>
+		<comments>
+			<comment addedBy="System" lastModified="2017-05-30T03:17:07.5472735Z">Character #3 0x71D3 "necro" deleted by 66.116.51.90</comment>
+			<comment addedBy="System" lastModified="2017-05-30T03:17:13.4056086Z">Character #4 0x71F0 "necro" deleted by 66.116.51.90</comment>
+		</comments>
+		<tags>
+			<tag name="numRewardsChosen">2</tag>
+		</tags>
+		<addressList count="7">
+			<ip>127.0.0.1</ip>
+			<ip>66.116.51.90</ip>
+			<ip>75.72.185.164</ip>
+			<ip>160.94.179.129</ip>
+			<ip>107.4.200.14</ip>
+			<ip>75.72.219.232</ip>
+			<ip>10.10.10.209</ip>
+		</addressList>
+		<totalCurrency>0.0001137540000000017</totalCurrency>
+	</account>
+	<account>
+		<username>kairi2.0</username>
+		<newCryptPassword>CD-A2-78-45-CD-F7-73-BB-3E-7B-81-9E-D6-51-91-58-9F-4B-76-AB</newCryptPassword>
+		<flags>2</flags>
+		<created>2017-03-24T17:46:48.8763147Z</created>
+		<lastLogin>2017-07-13T00:23:38.6403035Z</lastLogin>
+		<totalGameTime>P10DT19H5M46.4053928S</totalGameTime>
+		<chars>
+			<char index="0">244</char>
+			<char index="1">26871</char>
+			<char index="2">31630</char>
+			<char index="3">6193</char>
+		</chars>
+		<addressList count="9">
+			<ip>127.0.0.1</ip>
+			<ip>66.116.51.90</ip>
+			<ip>75.72.185.164</ip>
+			<ip>160.94.179.129</ip>
+			<ip>107.4.200.14</ip>
+			<ip>75.72.219.232</ip>
+			<ip>66.41.247.213</ip>
+			<ip>10.10.10.209</ip>
+			<ip>10.10.10.1</ip>
+		</addressList>
+		<totalCurrency>9.0465999999999943E-05</totalCurrency>
+	</account>
+	<account>
+		<username>connor</username>
+		<newCryptPassword>E7-B8-5B-09-58-04-A1-53-EB-70-D0-70-42-58-41-5E-C1-47-95-4D</newCryptPassword>
+		<flags>2</flags>
+		<created>2017-05-20T05:23:36.5620934Z</created>
+		<lastLogin>2017-06-27T04:38:00.4952478Z</lastLogin>
+		<totalGameTime>P1DT7H4M33.9879769S</totalGameTime>
+		<chars>
+			<char index="0">1694</char>
+		</chars>
+		<addressList count="4">
+			<ip>127.0.0.1</ip>
+			<ip>192.168.1.5</ip>
+			<ip>192.168.1.7</ip>
+			<ip>66.116.48.64</ip>
+		</addressList>
+		<totalCurrency>2.1742000000000003E-05</totalCurrency>
+	</account>
+	<account>
+		<username>mum</username>
+		<newCryptPassword>50-92-CF-74-F4-AC-51-2D-F2-A1-0D-FD-8B-E4-D2-28-23-F3-94-F1</newCryptPassword>
+		<created>2017-05-20T05:24:28.0901229Z</created>
+		<lastLogin>2017-05-20T05:24:28.0901229Z</lastLogin>
+		<totalGameTime>PT0S</totalGameTime>
+		<chars />
+		<totalCurrency>0</totalCurrency>
+	</account>
+	<account>
+		<username>mom</username>
+		<newCryptPassword>E4-D8-F0-37-84-9F-3D-33-62-5D-8F-B1-73-26-51-57-21-22-A6-80</newCryptPassword>
+		<flags>2</flags>
+		<created>2017-05-20T05:12:06.7046639Z</created>
+		<lastLogin>2017-07-20T12:21:05.4047623Z</lastLogin>
+		<totalGameTime>P41DT12H21M55.6665912S</totalGameTime>
+		<chars>
+			<char index="0">1707</char>
+			<char index="1">28602</char>
+			<char index="2">26737</char>
+		</chars>
+		<tags>
+			<tag name="numRewardsChosen">2</tag>
+		</tags>
+		<addressList count="15">
+			<ip>192.168.1.5</ip>
+			<ip>192.168.1.4</ip>
+			<ip>192.168.1.3</ip>
+			<ip>192.168.1.2</ip>
+			<ip>192.168.1.7</ip>
+			<ip>127.0.0.1</ip>
+			<ip>66.116.51.90</ip>
+			<ip>66.116.51.133</ip>
+			<ip>66.116.54.227</ip>
+			<ip>107.4.200.14</ip>
+			<ip>66.116.51.83</ip>
+			<ip>66.116.51.231</ip>
+			<ip>66.116.48.64</ip>
+			<ip>135.26.163.52</ip>
+			<ip>10.10.10.209</ip>
+		</addressList>
+		<totalCurrency>0.00014921500000000004</totalCurrency>
+	</account>
+	<account>
+		<username>kairi1</username>
+		<newCryptPassword>73-36-5D-13-42-C9-00-5B-CE-82-64-6A-34-0F-73-36-3E-E1-7D-DA</newCryptPassword>
+		<created>2017-05-20T15:22:57.1256765Z</created>
+		<lastLogin>2017-05-20T15:22:57.1256765Z</lastLogin>
+		<totalGameTime>PT0S</totalGameTime>
+		<chars />
+		<addressList count="1">
+			<ip>127.0.0.1</ip>
+		</addressList>
+		<totalCurrency>0</totalCurrency>
+	</account>
+	<account>
+		<username>ezekiah</username>
+		<newCryptPassword>7B-A3-53-D1-06-7B-6B-4E-47-1C-65-F1-F2-85-BC-D3-6D-92-9D-27</newCryptPassword>
+		<flags>2</flags>
+		<created>2017-05-20T23:53:55.7486774Z</created>
+		<lastLogin>2017-06-27T17:00:14.952695Z</lastLogin>
+		<totalGameTime>P15DT3H35M44.0890617S</totalGameTime>
+		<chars>
+			<char index="0">28655</char>
+			<char index="1">30168</char>
+			<char index="2">65186</char>
+			<char index="3">30509</char>
+			<char index="4">43602</char>
+			<char index="5">43604</char>
+		</chars>
+		<comments>
+			<comment addedBy="System" lastModified="2017-06-16T09:09:13.9923661Z">Character #3 0x7722 "asdfgfda" deleted by 192.168.1.2</comment>
+		</comments>
+		<tags>
+			<tag name="numRewardsChosen">2</tag>
+		</tags>
+		<addressList count="4">
+			<ip>192.168.1.4</ip>
+			<ip>192.168.1.5</ip>
+			<ip>97.83.147.229</ip>
+			<ip>192.168.1.2</ip>
+		</addressList>
+		<totalCurrency>0.00025011699999999925</totalCurrency>
+	</account>
+	<account>
+		<username>ezekiahjones</username>
+		<newCryptPassword>98-68-AC-BF-04-90-F6-11-81-33-A1-1B-AB-D7-AC-8C-08-7E-B9-E8</newCryptPassword>
+		<flags>2</flags>
+		<created>2017-05-20T23:54:21.366437Z</created>
+		<lastLogin>2017-06-27T19:59:28.468824Z</lastLogin>
+		<totalGameTime>P15DT15H32M13.6447988S</totalGameTime>
+		<chars>
+			<char index="0">43687</char>
+			<char index="1">91467</char>
+			<char index="2">26274</char>
+			<char index="3">44088</char>
+			<char index="4">30874</char>
+			<char index="5">42647</char>
+		</chars>
+		<comments>
+			<comment addedBy="System" lastModified="2017-06-01T16:07:16.8188873Z">Character #4 0x6A84 "scribe" deleted by 192.168.1.2</comment>
+			<comment addedBy="System" lastModified="2017-06-14T09:51:06.5204798Z">Character #1 0x71D9 "Cook dude" deleted by 192.168.1.2</comment>
+			<comment addedBy="System" lastModified="2017-06-14T09:51:09.4446471Z">Character #6 0x7E37 "bods" deleted by 192.168.1.2</comment>
+			<comment addedBy="System" lastModified="2017-06-18T18:05:34.8736301Z">Character #2 0x61C7 "Excision" deleted by 192.168.1.2</comment>
+			<comment addedBy="System" lastModified="2017-06-27T19:29:23.0911158Z">Character #6 0xAAC0 "Macerdude" deleted by 97.83.147.229</comment>
+		</comments>
+		<tags>
+			<tag name="numRewardsChosen">3</tag>
+		</tags>
+		<addressList count="2">
+			<ip>97.83.147.229</ip>
+			<ip>192.168.1.2</ip>
+		</addressList>
+		<totalCurrency>0.00037690099999999969</totalCurrency>
+	</account>
+	<account>
+		<username>Gary</username>
+		<newCryptPassword>CD-35-A0-47-C1-A9-88-61-79-80-DF-A3-3A-D3-C4-1F-E9-A7-63-A9</newCryptPassword>
+		<created>2017-05-21T16:50:47.9686089Z</created>
+		<lastLogin>2017-05-21T16:50:47.9686089Z</lastLogin>
+		<totalGameTime>PT0S</totalGameTime>
+		<chars />
+		<totalCurrency>0</totalCurrency>
+	</account>
+	<account>
+		<username>ezjones</username>
+		<newCryptPassword>0C-5C-87-1B-E6-D6-CA-ED-14-40-12-BC-CC-A8-65-C9-58-D6-30-17</newCryptPassword>
+		<accessLevel>GameMaster</accessLevel>
+		<flags>2</flags>
+		<created>2017-05-24T00:03:44.911474Z</created>
+		<lastLogin>2017-06-20T14:57:07.8784235Z</lastLogin>
+		<totalGameTime>P13DT1H54M46.8418681S</totalGameTime>
+		<chars>
+			<char index="0">25390</char>
+		</chars>
+		<addressList count="2">
+			<ip>97.83.147.229</ip>
+			<ip>192.168.1.2</ip>
+		</addressList>
+		<totalCurrency>0</totalCurrency>
+	</account>
+	<account>
+		<username>kairi12.0</username>
+		<newCryptPassword>8E-80-BB-82-02-A7-9C-F1-8F-E0-7A-DE-03-94-EB-26-6F-3F-1E-33</newCryptPassword>
+		<created>2017-05-25T03:12:30.8934741Z</created>
+		<lastLogin>2017-05-25T03:12:30.8934741Z</lastLogin>
+		<totalGameTime>PT0S</totalGameTime>
+		<chars />
+		<addressList count="1">
+			<ip>127.0.0.1</ip>
+		</addressList>
+		<totalCurrency>0</totalCurrency>
+	</account>
+	<account>
+		<username>mom2</username>
+		<newCryptPassword>C9-90-7F-F7-4A-92-01-A8-CE-52-80-DD-E7-2E-59-10-8E-48-E8-D4</newCryptPassword>
+		<flags>2</flags>
+		<created>2017-05-28T19:07:39.2155172Z</created>
+		<lastLogin>2017-07-20T14:27:44.9970657Z</lastLogin>
+		<totalGameTime>P29DT16H14M3.2035561S</totalGameTime>
+		<chars>
+			<char index="0">28696</char>
+			<char index="1">26602</char>
+			<char index="3">66039</char>
+		</chars>
+		<comments>
+			<comment addedBy="System" lastModified="2017-07-15T22:16:42.1013527Z">Character #3 0xB197 "kristina.l" deleted by 135.26.163.52</comment>
+		</comments>
+		<tags>
+			<tag name="numRewardsChosen">3</tag>
+		</tags>
+		<addressList count="7">
+			<ip>192.168.1.7</ip>
+			<ip>66.116.54.227</ip>
+			<ip>66.116.51.83</ip>
+			<ip>66.116.51.231</ip>
+			<ip>66.116.48.64</ip>
+			<ip>10.10.10.209</ip>
+			<ip>135.26.163.52</ip>
+		</addressList>
+		<totalCurrency>6.7659E-05</totalCurrency>
+	</account>
+	<account>
+		<username>ezekiahjones1</username>
+		<newCryptPassword>1C-5C-BB-9D-BB-62-01-86-BC-57-41-88-A3-23-AF-E7-64-A6-8A-C6</newCryptPassword>
+		<flags>2</flags>
+		<created>2017-06-10T01:44:06.4429116Z</created>
+		<lastLogin>2017-06-19T21:35:35.7141543Z</lastLogin>
+		<totalGameTime>PT17H7M22.5418377S</totalGameTime>
+		<chars>
+			<char index="0">30329</char>
+			<char index="1">39793</char>
+			<char index="2">44017</char>
+		</chars>
+		<addressList count="1">
+			<ip>192.168.1.2</ip>
+		</addressList>
+		<totalCurrency>1.151E-06</totalCurrency>
+	</account>
+	<account>
+		<username>ezekiahjones2</username>
+		<newCryptPassword>7F-9D-6D-1D-50-D6-D5-94-EE-EE-11-C6-8B-55-6E-A5-80-9C-52-BF</newCryptPassword>
+		<flags>2</flags>
+		<created>2017-06-10T01:52:39.6332644Z</created>
+		<lastLogin>2017-06-13T05:20:27.7318769Z</lastLogin>
+		<totalGameTime>PT16H49M10.2843642S</totalGameTime>
+		<chars>
+			<char index="0">30333</char>
+		</chars>
+		<addressList count="1">
+			<ip>192.168.1.2</ip>
+		</addressList>
+		<totalCurrency>0</totalCurrency>
+	</account>
+	<account>
+		<username>kairi1.3</username>
+		<newCryptPassword>EE-A8-B8-49-F4-4D-8E-FF-E6-41-0E-40-D0-53-90-87-87-8C-C2-75</newCryptPassword>
+		<created>2017-06-17T03:01:21.5016892Z</created>
+		<lastLogin>2017-06-17T03:01:21.5016892Z</lastLogin>
+		<totalGameTime>PT0S</totalGameTime>
+		<chars />
+		<addressList count="1">
+			<ip>75.72.219.232</ip>
+		</addressList>
+		<totalCurrency>0</totalCurrency>
+	</account>
+	<account>
+		<username>Kristina</username>
+		<newCryptPassword>61-B2-69-0C-B6-FC-E7-69-F7-67-7B-37-B9-88-FE-5C-33-3A-C0-80</newCryptPassword>
+		<created>2017-06-28T04:28:14.8739602Z</created>
+		<lastLogin>2017-06-28T04:43:43.5160042Z</lastLogin>
+		<totalGameTime>PT35M37.1751477S</totalGameTime>
+		<chars>
+			<char index="0">45653</char>
+		</chars>
+		<addressList count="1">
+			<ip>66.116.48.64</ip>
+		</addressList>
+		<totalCurrency>5.869E-06</totalCurrency>
+	</account>
+	<account>
+		<username>mom1</username>
+		<newCryptPassword>EA-F5-87-5A-20-02-04-E8-81-B2-5A-36-4F-3F-A6-F1-22-00-60-5B</newCryptPassword>
+		<created>2017-07-02T13:16:35.3876599Z</created>
+		<lastLogin>2017-07-02T13:16:35.3876599Z</lastLogin>
+		<totalGameTime>PT0S</totalGameTime>
+		<chars />
+		<addressList count="1">
+			<ip>66.116.48.64</ip>
+		</addressList>
+		<totalCurrency>0</totalCurrency>
+	</account>
+</accounts>

@@ -1,0 +1,19 @@
+Server Crash Report
+===================
+
+RunUO Version 2.7, Build 0.5425
+Operating System: Microsoft Windows NT 6.2.9200.0
+.NET Framework: 4.0.30319.42000
+Time: 7/20/2017 2:44:04 PM
+Mobiles: 26487
+Items: 157774
+Exception:
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Server.Misc.FoodDecayTimer.HungerDecay(Mobile m)
+   at Server.Misc.FoodDecayTimer.FoodDecay()
+   at Server.Timer.Slice() in C:\runuo\Server\Timer.cs:line 393
+   at Server.Core.Main(String[] args) in C:\runuo\Server\Main.cs:line 536
+
+Clients:
+- Count: 1
++ 135.26.163.52: (account = mom)
