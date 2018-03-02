@@ -56,6 +56,8 @@ namespace Server.Mobiles
 			VirtualArmor = 24;
 		}
 
+        public override bool ReacquireOnMovement { get { return true; } }
+
         public override void OnThink()
         {
             base.OnThink();
@@ -77,6 +79,8 @@ namespace Server.Mobiles
                     m_target.Direction = m_target.GetDirectionTo(from);
                     for (int i = 0; i<NumPulls; i++)
                         m_target.Move(m_target.Direction);
+                    if (Utility.RandomDouble() > .95)
+                        from.Combatant = m_target;
                 }
         }
 

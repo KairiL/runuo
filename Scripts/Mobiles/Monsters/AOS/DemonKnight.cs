@@ -76,7 +76,9 @@ namespace Server.Mobiles
 			return Loot.Construct( type );
 		}
 
-		public static Mobile FindRandomPlayer( BaseCreature creature )
+        public override bool ReacquireOnMovement { get { return true; } }
+
+        public static Mobile FindRandomPlayer( BaseCreature creature )
 		{
 			List<DamageStore> rights = BaseCreature.GetLootingRights( creature.DamageEntries, creature.HitsMax );
 

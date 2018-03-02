@@ -56,7 +56,9 @@ namespace Server.Mobiles
 			VirtualArmor = 49;
 		}
 
-		public override void GenerateLoot()
+        public override bool ReacquireOnMovement { get { return true; } }
+
+        public override void GenerateLoot()
 		{
 			AddLoot( LootPack.UltraRich, 2 );
 		}

@@ -63,7 +63,8 @@ namespace Server.Mobiles
 				DemonKnight.DistributeArtifact( this );
 		}
 
-		public override bool BardImmune{ get{ return !Core.SE; } }
+        public override bool ReacquireOnMovement { get { return true; } }
+        public override bool BardImmune{ get{ return !Core.SE; } }
 		public override bool Unprovokable{ get{ return Core.SE; } }
 		public override bool AreaPeaceImmune { get { return Core.SE; } }
 		public override bool BleedImmune{ get{ return true; } }
