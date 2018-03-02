@@ -1,6 +1,7 @@
 using System;
 using Server;
 using Server.Items;
+using Server.Spells;
 
 namespace Server.Mobiles
 {
@@ -9,7 +10,13 @@ namespace Server.Mobiles
 	{
 		public override WeaponAbility GetWeaponAbility()
 		{
-			return Utility.RandomBool() ? WeaponAbility.Dismount : WeaponAbility.ParalyzingBlow;
+            switch (Utility.Random(3))
+            {
+                default:
+                case 0: return WeaponAbility.Dismount;
+                case 1: return WeaponAbility.ParalyzingBlow;
+                case 2: return WeaponAbility.MortalStrike;
+            }
 		}
 
 		public override bool IgnoreYoungProtection { get { return Core.ML; } }
@@ -49,7 +56,31 @@ namespace Server.Mobiles
 			VirtualArmor = 24;
 		}
 
-		public override void GenerateLoot()
+        public override void OnThink()
+        {
+            base.OnThink();
+            if (Utility.RandomDouble() > .9)
+                DoPulls(this);
+        }
+
+        private void DoPulls(Mobile from)
+        {
+            Direction dir;
+            int NumPulls = 3;
+            int PullRange = 10;
+            foreach (Mobile m_target in GetMobilesInRange(PullRange))
+                if ((m_target != from) && (SpellHelper.ValidIndirectTarget(from, (Mobile)m_target) && from.CanBeHarmful((Mobile)m_target, false)))
+                {
+                    if (m_target.Spell != null)
+                        m_target.Spell.OnCasterHurt();
+
+                    m_target.Direction = m_target.GetDirectionTo(from);
+                    for (int i = 0; i<NumPulls; i++)
+                        m_target.Move(m_target.Direction);
+                }
+        }
+
+        public override void GenerateLoot()
 		{
 			AddLoot( LootPack.UltraRich, 2 );
 		}

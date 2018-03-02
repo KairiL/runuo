@@ -207,7 +207,7 @@ namespace Server.Engines.Doom
 		{
 			int area = m_RegionBounds.Width * m_RegionBounds.Height;
 
-			return area / 100;
+			return area / 50;
 		}
 
 		public virtual void ClearTraps()

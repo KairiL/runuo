@@ -9,7 +9,13 @@ namespace Server.Mobiles
 	{
 		public override WeaponAbility GetWeaponAbility()
 		{
-			return Utility.RandomBool() ? WeaponAbility.MortalStrike : WeaponAbility.BleedAttack;
+            switch (Utility.Random(3))
+            {
+                default:
+                case 0: return WeaponAbility.BleedAttack;
+                case 1: return WeaponAbility.WhirlwindAttack;
+                case 2: return WeaponAbility.MortalStrike;
+            }
 		}
 
 		public override bool IgnoreYoungProtection { get { return Core.ML; } }

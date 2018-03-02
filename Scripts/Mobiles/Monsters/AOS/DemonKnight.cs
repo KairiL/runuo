@@ -148,7 +148,7 @@ namespace Server.Mobiles
 			switch ( Utility.Random( 3 ) )
 			{
 				default:
-				case 0: return WeaponAbility.DoubleStrike;
+				case 0: return WeaponAbility.MortalStrike;
 				case 1: return WeaponAbility.WhirlwindAttack;
 				case 2: return WeaponAbility.ArmorIgnore;
 			}
