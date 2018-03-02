@@ -59,14 +59,14 @@ namespace Server.Mobiles
         public override void OnThink()
         {
             base.OnThink();
-            if (Utility.RandomDouble() > .9)
+            if (Utility.RandomDouble() > .95)
                 DoPulls(this);
         }
 
         private void DoPulls(Mobile from)
         {
             Direction dir;
-            int NumPulls = 3;
+            int NumPulls = 1;
             int PullRange = 10;
             foreach (Mobile m_target in GetMobilesInRange(PullRange))
                 if ((m_target != from) && (SpellHelper.ValidIndirectTarget(from, (Mobile)m_target) && from.CanBeHarmful((Mobile)m_target, false)))
