@@ -1,5 +1,6 @@
 using System;
 using Server;
+using Server.Mobiles;
 
 namespace Server.Items
 {
@@ -29,7 +30,22 @@ namespace Server.Items
             LootType = LootType.Cursed;
         }
 
-        public TwoTonTunic(Serial serial) : base(serial)
+        public override bool OnEquip(Mobile from)
+        {
+            return (from.CantWalk = base.OnEquip(from));
+        }
+
+        public override void OnRemoved(IEntity parent)
+        {
+            if (parent is PlayerMobile)
+                ((PlayerMobile)parent).CantWalk = false;
+            else if (parent is BaseCreature)
+                ((BaseCreature)parent).CantWalk = false;
+            base.OnRemoved(parent);
+
+        }
+
+            public TwoTonTunic(Serial serial) : base(serial)
         {
         }
 
