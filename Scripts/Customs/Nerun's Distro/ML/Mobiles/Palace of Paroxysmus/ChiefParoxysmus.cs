@@ -138,6 +138,24 @@ namespace Server.Mobiles
             Math.Cos( 320.0 / 180.0 * Math.PI ), Math.Sin( 320.0 / 180.0 * Math.PI ),
         };
 
+        private void RandoTarget(Mobile from)
+        {
+            double SwitchRate = .05;
+            int PullRange = 10;
+            foreach (Mobile m_target in GetMobilesInRange(PullRange))
+                if ((m_target != from) && (SpellHelper.ValidIndirectTarget(from, (Mobile)m_target) && from.CanBeHarmful((Mobile)m_target, false)))
+                {
+                    if (Utility.RandomDouble() < SwitchRate)
+                        from.Combatant = m_target;
+                }
+        }
+
+        public override void OnThink()
+        {
+            base.OnThink();
+            RandoTarget(this);
+        }
+
         public override void OnDeath( Container c )
 		{
 			base.OnDeath( c );		
@@ -152,10 +170,10 @@ namespace Server.Mobiles
 			}
 			
 			//if ( Utility.RandomDouble() < 0.6 )				
-			//	c.DropItem( new ParrotItem() );
+			//	c.DropItem( new Parrot() );
 			
-			//if ( Utility.RandomBool() )
-			//	c.DropItem( new SweatOfParoxysmus() );
+			if ( Utility.RandomBool() )
+				c.DropItem( new SweatOfParoxysmus() );
 				
 			if ( Utility.RandomDouble() < 0.05 )
 				c.DropItem( new SwampySummoner() );

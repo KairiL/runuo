@@ -74,9 +74,7 @@ namespace Server.Mobiles
 			}
 
 			return Loot.Construct( type );
-		}
-
-        public override bool ReacquireOnMovement { get { return true; } }
+        }
 
         public static Mobile FindRandomPlayer( BaseCreature creature )
 		{
@@ -216,12 +214,13 @@ namespace Server.Mobiles
 			AddLoot( LootPack.HighScrolls, Utility.RandomMinMax( 6, 60 ) );
 		}
 
-		public override bool BardImmune{ get{ return !Core.SE; } }
-		public override bool Unprovokable{ get{ return Core.SE; } }
-		public override bool AreaPeaceImmune { get { return Core.SE; } }
+		public override bool BardImmune{ get{ return false; } }
+		public override bool Unprovokable{ get{ return false; } }
+		public override bool AreaPeaceImmune { get { return false; } }
 		public override Poison PoisonImmune{ get{ return Poison.Lethal; } }
+        public override bool ReacquireOnMovement { get { return true; } }
 
-		public override int TreasureMapLevel{ get{ return 1; } }
+        public override int TreasureMapLevel{ get{ return 1; } }
 
 		private static bool m_InHere;
 

@@ -56,8 +56,6 @@ namespace Server.Mobiles
 			VirtualArmor = 24;
 		}
 
-        public override bool ReacquireOnMovement { get { return true; } }
-
         public override void OnThink()
         {
             base.OnThink();
@@ -71,7 +69,9 @@ namespace Server.Mobiles
             int NumPulls = 1;
             int PullRange = 10;
             foreach (Mobile m_target in GetMobilesInRange(PullRange))
-                if ((m_target != from) && (SpellHelper.ValidIndirectTarget(from, (Mobile)m_target) && from.CanBeHarmful((Mobile)m_target, false)))
+                if ((m_target != from) &&  from.InLOS(m_target) && 
+                    (SpellHelper.ValidIndirectTarget(from, m_target) && 
+                    from.CanBeHarmful(m_target, false)))
                 {
                     if (m_target.Spell != null)
                         m_target.Spell.OnCasterHurt();
@@ -98,12 +98,13 @@ namespace Server.Mobiles
 		}
 
 		public override bool AutoDispel{ get{ return true; } }
-		public override bool BardImmune { get { return !Core.SE; } }
-		public override bool Unprovokable { get { return Core.SE; } }
-		public override bool AreaPeaceImmune { get { return Core.SE; } }
+		public override bool BardImmune { get { return false; } }
+		public override bool Unprovokable { get { return false; } }
+		public override bool AreaPeaceImmune { get { return false; } }
 		public override Poison PoisonImmune{ get{ return Poison.Lethal; } }
+        public override bool ReacquireOnMovement { get { return true; } }
 
-		public override int TreasureMapLevel{ get{ return 1; } }
+        public override int TreasureMapLevel{ get{ return 1; } }
 
 		public override int GetAttackSound()
 		{

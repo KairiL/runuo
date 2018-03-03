@@ -63,7 +63,26 @@ namespace Server.Mobiles
 			AddLoot( LootPack.Meager );
 		}
 
-	    public override bool Unprovokable { get { return true; } }
+
+        private void RandoTarget(Mobile from)
+        {
+            double SwitchRate = .05;
+            int PullRange = 10;
+            foreach (Mobile m_target in GetMobilesInRange(PullRange))
+                if ((m_target != from) && (SpellHelper.ValidIndirectTarget(from, (Mobile)m_target) && from.CanBeHarmful((Mobile)m_target, false)))
+                {
+                    if (Utility.RandomDouble() < SwitchRate)
+                        from.Combatant = m_target;
+                }
+        }
+
+        public override void OnThink()
+        {
+            base.OnThink();
+            RandoTarget(this);
+        }
+
+        public override bool Unprovokable { get { return true; } }
 	    public override bool BardImmune { get { return true; } }
 	    //public override bool GivesMinorArtifact { get { return true; } }
 		public override bool HasBreath{ get{ return true; } } // fire breath enabled

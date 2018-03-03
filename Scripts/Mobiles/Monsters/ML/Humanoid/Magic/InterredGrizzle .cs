@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using Server;
 using Server.Items;
+using Server.Spells;
 
 namespace Server.Mobiles
 {
@@ -113,7 +114,25 @@ namespace Server.Mobiles
 			return loc;
 		}
 
-		public virtual void DropOoze()
+        private void RandoTarget(Mobile from)
+        {
+            double SwitchRate = .05;
+            int PullRange = 10;
+            foreach (Mobile m_target in GetMobilesInRange(PullRange))
+                if ((m_target != from) && (SpellHelper.ValidIndirectTarget(from, (Mobile)m_target) && from.CanBeHarmful((Mobile)m_target, false)))
+                {
+                    if (Utility.RandomDouble() < SwitchRate)
+                        from.Combatant = m_target;
+                }
+        }
+
+        public override void OnThink()
+        {
+            base.OnThink();
+            RandoTarget(this);
+        }
+
+        public virtual void DropOoze()
 		{
 			int amount = Utility.RandomMinMax( 1, 3 );
 			bool corrosive = Utility.RandomBool();
