@@ -208,7 +208,25 @@ namespace Server.Mobiles
 			VirtualArmor = 64;
 		}
 
-		public override void GenerateLoot()
+        private void RandoTarget(Mobile from)
+        {
+            double SwitchRate = .05;
+            int PullRange = 10;
+            foreach (Mobile m_target in GetMobilesInRange(PullRange))
+                if ((m_target != from) && (SpellHelper.ValidIndirectTarget(from, (Mobile)m_target) && from.CanBeHarmful((Mobile)m_target, false)))
+                {
+                    if (Utility.RandomDouble() < SwitchRate)
+                        from.Combatant = m_target;
+                }
+        }
+
+        public override void OnThink()
+        {
+            base.OnThink();
+            RandoTarget(this);
+        }
+
+        public override void GenerateLoot()
 		{
 			AddLoot( LootPack.SuperBoss, 2 );
 			AddLoot( LootPack.HighScrolls, Utility.RandomMinMax( 6, 60 ) );
