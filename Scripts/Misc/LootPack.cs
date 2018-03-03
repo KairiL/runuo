@@ -303,11 +303,8 @@ namespace Server
 			{
 				new LootPackEntry(  true, Gold,						100.00, "6d100+600" ),
 				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 25, 100 ),
-				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 25, 100 ),
-				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 25, 100 ),
-				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 25, 100 ),
-				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 25, 100 ),
-				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 33, 100 ),
+				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 3, 5, 25, 100 ),
+				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 3, 5, 33, 100 ),
 				new LootPackEntry( false, Instruments,				  2.00, 1 )
 			} );
 
@@ -315,15 +312,11 @@ namespace Server
 			{
 				new LootPackEntry(  true, Gold,						100.00, "10d100+800" ),
 				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 25, 100 ),
-				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 25, 100 ),
-				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 25, 100 ),
-				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 25, 100 ),
+				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 3, 5, 25, 100 ),
 				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 33, 100 ),
-				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 33, 100 ),
-				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 33, 100 ),
-				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 33, 100 ),
+				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 3, 5, 33, 100 ),
 				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 50, 100 ),
-				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 50, 100 ),
+				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 3, 5, 50, 100 ),
 				new LootPackEntry( false, Instruments,				  2.00, 1 )
 			} );
 		#endregion
@@ -376,11 +369,8 @@ namespace Server
 			{
 				new LootPackEntry(  true, Gold,			100.00, "5d100+500" ),
 				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 25, 100 ),
-				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 25, 100 ),
-				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 25, 100 ),
-				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 25, 100 ),
-				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 25, 100 ),
-				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 35, 100 ),
+				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 3, 5, 25, 100 ),
+				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 3, 5, 35, 100 ),
 				new LootPackEntry( false, Instruments,	  2.00, 1 )
 			} );
 
@@ -388,15 +378,10 @@ namespace Server
 			{
 				new LootPackEntry(  true, Gold,			100.00, "5d100+500" ),
 				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 25, 100 ),
-				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 25, 100 ),
-				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 25, 100 ),
-				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 25, 100 ),
+				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 3, 5, 25, 100 ),
 				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 33, 100 ),
-				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 33, 100 ),
-				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 33, 100 ),
-				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 33, 100 ),
-				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 50, 100 ),
-				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 50, 100 ),
+				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 3, 5, 33, 100 ),
+				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 3, 5, 50, 100 ),
 				new LootPackEntry( false, Instruments,	  2.00, 1 )
 			} );
 		#endregion
