@@ -122,6 +122,24 @@ namespace Server.Mobiles
             from.Delete();
         }
 
+        private void RandoTarget(Mobile from)
+        {
+            double SwitchRate = .05;
+            int PullRange = 10;
+            foreach (Mobile m_target in GetMobilesInRange(PullRange))
+                if ((m_target != from) && (SpellHelper.ValidIndirectTarget(from, (Mobile)m_target) && from.CanBeHarmful((Mobile)m_target, false)))
+                {
+                    if (Utility.RandomDouble() < SwitchRate)
+                        from.Combatant = m_target;
+                }
+        }
+
+        public override void OnThink()
+        {
+            base.OnThink();
+            RandoTarget(this);
+        }
+
         public override void GenerateLoot()
 		{
 			AddLoot( LootPack.FilthyRich, 2 );
@@ -130,13 +148,15 @@ namespace Server.Mobiles
         }
 
 		public override int Meat{ get{ return 1; } }
-		public override int TreasureMapLevel{ get{ return 5; } }
+        public override bool BardImmune { get { return false; } }
+        public override int TreasureMapLevel{ get{ return 5; } }
         public override bool BleedImmune{ get{ return true; } }
         public override bool AutoDispel{ get{ return true; } }
 		public override bool Unprovokable{ get{ return true; } }
 		public override Poison PoisonImmune{ get{ return Poison.Lethal; } }
-		
-		public override void OnDeath( Container c )
+        public override bool ReacquireOnMovement { get { return true; } }
+
+        public override void OnDeath( Container c )
 		{
 			c.DropItem( new SkullPike() );
 			c.DropItem( new GrizzledBones  () );
