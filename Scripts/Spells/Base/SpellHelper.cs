@@ -425,9 +425,9 @@ namespace Server.Spells
                     ownerfrom = ((BaseCreature)ownerfrom).SummonMaster;
             while (ownerto is BaseCreature && (((BaseCreature)ownerto).ControlMaster != null || ((BaseCreature)ownerto).SummonMaster != null))
                 if (((BaseCreature)ownerto).ControlMaster != null)
-                    ownerfrom = ((BaseCreature)ownerto).ControlMaster;
+                    ownerto = ((BaseCreature)ownerto).ControlMaster;
                 else
-                    ownerfrom = ((BaseCreature)ownerto).SummonMaster;
+                    ownerto = ((BaseCreature)ownerto).SummonMaster;
 
             if (ownerfrom == ownerto)
                 return false;
@@ -449,7 +449,7 @@ namespace Server.Spells
 			}
             if ( from is BaseCreature )
 			{
-				BaseCreature c = (BaseCreature)from;
+                BaseCreature c = (BaseCreature)from;
 
                 if (c.IsFriend(to))
                     return false;
@@ -460,13 +460,14 @@ namespace Server.Spells
 						return false;
 				}
 
-                if ( !((BaseCreature)from).Controlled && !((BaseCreature)from).InitialInnocent && to is PlayerMobile)
+                if ( !((BaseCreature)from).Controlled && !((BaseCreature)from).InitialInnocent && ownerto is PlayerMobile)
                     return true;
 
             }
-
-			if( to is BaseCreature && !((BaseCreature)to).Controlled && ((BaseCreature)to).InitialInnocent )
+            
+            if ( to is BaseCreature && !((BaseCreature)to).Controlled && ((BaseCreature)to).InitialInnocent )
 				return true;
+
 
 
 

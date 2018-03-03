@@ -59,7 +59,36 @@ namespace Server.Mobiles
 		public override void GenerateLoot()
 		{
 			AddLoot( LootPack.AosSuperBoss, 8 );
-		}
+            switch (Utility.Random(10))
+            {
+                case 0: AddItem(new MarkOfTheTravesty()); break;
+            }
+
+            switch (Utility.Random(5))
+            {
+                case 0: AddItem(new TravestysSushiPreparations()); break;
+            }
+
+            switch (Utility.Random(3))
+            {
+                case 0: AddItem(new EyeOfTheTravesty()); break;
+                case 1: AddItem(new TravestysFineTeakwoodTray()); break;
+                case 2: AddItem(new TravestysCollectionOfShells()); break;
+               
+            }
+            for (int i = 0; i<8; i++)
+            {
+                switch (Utility.Random(6))
+                {
+                    case 0: AddItem(new Corruption()); break;
+                    case 1: AddItem(new Taint()); break;
+                    case 2: AddItem(new Blight()); break;
+                    case 3: AddItem(new Putrefication()); break;
+                    case 4: AddItem(new Muculent()); break;
+                    case 5: AddItem(new Scourge()); break;
+                }
+            }
+        }
 
 		public override bool CanRummageCorpses{ get{ return true; } }
 		public override Poison PoisonImmune{ get{ return Poison.Lethal; } }
@@ -230,8 +259,7 @@ namespace Server.Mobiles
                         from.Combatant = m_target;
                 }
         }
-
-
+        
         public override void OnThink()
         {
             base.OnThink();
