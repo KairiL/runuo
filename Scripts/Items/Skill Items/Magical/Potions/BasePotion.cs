@@ -42,7 +42,7 @@ namespace Server.Items
 	{
 		private PotionEffect m_PotionEffect;
         private Mobile m_Poisoner;
-        private Poison m_Poison;
+        public Poison m_Poison;
 
         public PotionEffect PotionEffect
 		{
@@ -56,7 +56,7 @@ namespace Server.Items
 				InvalidateProperties();
 			}
 		}
-
+        
         [CommandProperty(AccessLevel.GameMaster)]
         public Mobile Poisoner
         {
@@ -70,6 +70,7 @@ namespace Server.Items
             get { return m_Poison; }
             set { m_Poison = value; }
         }
+        
         int ICommodity.DescriptionNumber { get { return LabelNumber; } }
 		bool ICommodity.IsDeedable { get { return (Core.ML); } }
 
@@ -79,7 +80,7 @@ namespace Server.Items
 		{
 			m_PotionEffect = effect;
 
-			Stackable = false;
+			Stackable = true;
 			Weight = 1.0;
 		}
 

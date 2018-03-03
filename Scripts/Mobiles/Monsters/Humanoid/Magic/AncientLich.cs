@@ -62,7 +62,7 @@ namespace Server.Mobiles
             AddItem(item);
         }
         public override TimeSpan ReacquireDelay { get { return TimeSpan.FromSeconds(1.0); } }
-        public virtual bool ReacquireOnMovement { get { return true; } }
+        public override bool ReacquireOnMovement { get { return true; } }
 
 
         public override OppositionGroup OppositionGroup

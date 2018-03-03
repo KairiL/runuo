@@ -139,7 +139,7 @@ namespace Server.Engines.Craft
 				/* TODO
 				index = AddCraft( typeof( FaerieFire ), 1044566, 1072908, 75.0, 125.0, typeof( Log ), 1044041, 20, 1044351 );
 				AddRes( index, typeof( LardOfParoxysmus ), 1032681, 1, 1053098 );
-				AddRes( index, typeof( Putrefication ), 1032678, 10, 1053098 );
+				AddRes( index, typeof( Putrefaction ), 1032678, 10, 1053098 );
 				AddRes( index, typeof( Taint ), 1032679, 10, 1053098 );
 				AddRareRecipe( index, 201 );
 				ForceNonExceptional( index );
@@ -158,7 +158,7 @@ namespace Server.Engines.Craft
 				index = AddCraft( typeof( MischiefMaker ), 1044566, 1072910, 75.0, 125.0, typeof( Log ), 1044041, 15, 1044351 );
 				AddRes( index, typeof( DreadHornMane ), 1032682, 1, 1053098 );
 				AddRes( index, typeof( Corruption ), 1032676, 10, 1053098 );
-				AddRes( index, typeof( Putrefication ), 1032678, 10, 1053098 );
+				AddRes( index, typeof( Putrefaction ), 1032678, 10, 1053098 );
 				AddRareRecipe( index, 203 );
 				ForceNonExceptional( index );
 				SetNeededExpansion( index, Expansion.ML );

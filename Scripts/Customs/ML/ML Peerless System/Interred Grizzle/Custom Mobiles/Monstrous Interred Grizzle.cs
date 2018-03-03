@@ -2,13 +2,16 @@ using System;
 using System.Collections;
 using Server;
 using Server.Items;
+using Server.Network;
+
 
 namespace Server.Mobiles
 {
 	[CorpseName( "a Monstrous Interred Grizzle corpse" )]
 	public class MonstrousInterredGrizzle : BaseCreature
 	{
-		[Constructable]
+        private static Hashtable m_Table;
+        [Constructable]
 		public MonstrousInterredGrizzle() : base( AIType.AI_Necro, FightMode.Closest, 10, 1, 0.2, 0.4 )
 		{
 			Name = "Monstrous Interred Grizzle";
@@ -98,6 +101,18 @@ namespace Server.Mobiles
 				case 30: AddItem( new DeathEssenceHelm () ); break;		
 				case 31: AddItem( new DeathEssenceLegs () ); break;		
             }
+            for (int i = 0; i < 8; i++)
+            {
+                switch (Utility.Random(6))
+                {
+                    case 0: AddItem(new Corruption()); break;
+                    case 1: AddItem(new Taint()); break;
+                    case 2: AddItem(new Blight()); break;
+                    case 3: AddItem(new Putrefaction()); break;
+                    case 4: AddItem(new Muculent()); break;
+                    case 5: AddItem(new Scourge()); break;
+                }
+            }
             Timer.DelayCall(TimeSpan.FromMinutes(10.0), new TimerStateCallback(DeletePeerless), this);
         }
 
@@ -111,13 +126,8 @@ namespace Server.Mobiles
 		{
 			AddLoot( LootPack.FilthyRich, 2 );
 			AddLoot( LootPack.MedScrolls, 2 );
-			PackItem( new Taint(2) );
-			PackItem( new Muculent (2) );
-			PackItem( new Corruption(2) );
-			PackItem( new Blight (2) );
-			PackItem( new Scourge(2) );
-			PackItem( new Putrefication  (2) );
-		}
+            
+        }
 
 		public override int Meat{ get{ return 1; } }
 		public override int TreasureMapLevel{ get{ return 5; } }
@@ -171,7 +181,10 @@ namespace Server.Mobiles
 
 			if ( 0.1 >= Utility.RandomDouble() )
 				DrainLife();
-		}
+
+            if (Utility.RandomDouble() < 0.15)
+                this.CacophonicAttack(defender);
+        }
 
 		public override void OnGotMeleeAttack( Mobile attacker )
 		{
@@ -179,9 +192,51 @@ namespace Server.Mobiles
 
 			if ( 0.1 >= Utility.RandomDouble() )
 				DrainLife();
-		}
 
-		public MonstrousInterredGrizzle( Serial serial ) : base( serial )
+            if (Utility.RandomDouble() < 0.15)
+                this.CacophonicAttack(attacker);
+        }
+
+        public static bool UnderCacophonicAttack(Mobile from)
+        {
+            if (m_Table == null)
+                m_Table = new Hashtable();
+
+            return m_Table[from] != null;
+        }
+
+        public virtual void CacophonicAttack(Mobile to)
+        {
+            if (m_Table == null)
+                m_Table = new Hashtable();
+
+            if (to.Alive && to.Player && m_Table[to] == null)
+            {
+                to.Send(SpeedControl.WalkSpeed);
+                to.SendLocalizedMessage(1072069); // A cacophonic sound lambastes you, suppressing your ability to move.
+                to.PlaySound(0x584);
+
+                m_Table[to] = Timer.DelayCall(TimeSpan.FromSeconds(30), new TimerStateCallback(EndCacophonic_Callback), to);
+            }
+        }
+
+        public virtual void CacophonicEnd(Mobile from)
+        {
+            if (m_Table == null)
+                m_Table = new Hashtable();
+
+            m_Table[from] = null;
+
+            from.Send(SpeedControl.Disable);
+        }
+
+        private void EndCacophonic_Callback(object state)
+        {
+            if (state is Mobile)
+                this.CacophonicEnd((Mobile)state);
+        }
+  
+        public MonstrousInterredGrizzle( Serial serial ) : base( serial )
 		{
 		}		
 

@@ -123,12 +123,18 @@ namespace Server.Mobiles
         {
             AddLoot(LootPack.AosUltraRich);
             AddLoot(LootPack.AosSuperBoss);
-            PackItem(new Taint(2));
-            PackItem(new Muculent(2));
-            PackItem(new Corruption(2));
-            PackItem(new Blight(2));
-            PackItem(new Scourge(2));
-            PackItem(new Putrefication(2));
+            for (int i = 0; i < 8; i++)
+            {
+                switch (Utility.Random(6))
+                {
+                    case 0: AddItem(new Corruption()); break;
+                    case 1: AddItem(new Taint()); break;
+                    case 2: AddItem(new Blight()); break;
+                    case 3: AddItem(new Putrefaction()); break;
+                    case 4: AddItem(new Muculent()); break;
+                    case 5: AddItem(new Scourge()); break;
+                }
+            }
         }
         public override bool AutoDispel { get { return true; } }
         public override bool CanRummageCorpses{ get{ return true; } }

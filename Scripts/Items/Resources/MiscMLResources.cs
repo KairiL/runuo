@@ -887,22 +887,22 @@ namespace Server.Items
 	}
 
 
-	public class Putrefication : Item
+	public class Putrefaction : Item
 	{
 		[Constructable]
-		public Putrefication()
+		public Putrefaction()
 			: this( 1 )
 		{
 		}
 
 		[Constructable]
-		public Putrefication( int amountFrom, int amountTo )
+		public Putrefaction( int amountFrom, int amountTo )
 			: this( Utility.RandomMinMax( amountFrom, amountTo ) )
 		{
 		}
 
 		[Constructable]
-		public Putrefication( int amount )
+		public Putrefaction( int amount )
 			: base( 0x3186 )
 		{
 			Stackable = true;
@@ -910,7 +910,7 @@ namespace Server.Items
 			Hue = 883;
 		}
 
-		public Putrefication( Serial serial )
+		public Putrefaction( Serial serial )
 			: base( serial )
 		{
 		}

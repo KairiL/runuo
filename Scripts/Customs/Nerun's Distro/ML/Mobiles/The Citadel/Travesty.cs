@@ -83,7 +83,7 @@ namespace Server.Mobiles
                     case 0: AddItem(new Corruption()); break;
                     case 1: AddItem(new Taint()); break;
                     case 2: AddItem(new Blight()); break;
-                    case 3: AddItem(new Putrefication()); break;
+                    case 3: AddItem(new Putrefaction()); break;
                     case 4: AddItem(new Muculent()); break;
                     case 5: AddItem(new Scourge()); break;
                 }

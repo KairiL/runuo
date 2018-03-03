@@ -314,7 +314,7 @@ namespace Server.Engines.Craft
 			{
 				index = AddCraft( typeof( PhantomStaff ), 1044566, 1072919, 90.0, 130.0, typeof( Log ), 1044041, 16, 1044351 );
 				AddRes( index, typeof( DiseasedBark ), 1032683, 1, 1053098 );
-				AddRes( index, typeof( Putrefication ), 1032678, 10, 1053098 );
+				AddRes( index, typeof( Putrefaction ), 1032678, 10, 1053098 );
 				AddRes( index, typeof( Taint ), 1032679, 10, 1053098 );
 				AddRareRecipe( index, 313 );
 				ForceNonExceptional( index );
@@ -347,7 +347,7 @@ namespace Server.Engines.Craft
 				index = AddCraft( typeof( IronwoodCrown ), 1062760, 1072924, 85.0, 120.0, typeof( Log ), 1044041, 10, 1044351 );
 				AddRes( index, typeof( DiseasedBark ), 1032683, 1, 1053098 );
 				AddRes( index, typeof( Corruption ), 1032676, 10, 1053098 );
-				AddRes( index, typeof( Putrefication ), 1032678, 10, 1053098 );
+				AddRes( index, typeof( Putrefaction ), 1032678, 10, 1053098 );
 				AddRareRecipe( index, 318 );
 				ForceNonExceptional( index );
 				SetNeededExpansion( index, Expansion.ML );
