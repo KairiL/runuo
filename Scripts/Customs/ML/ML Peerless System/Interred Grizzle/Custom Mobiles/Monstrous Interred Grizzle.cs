@@ -3,7 +3,7 @@ using System.Collections;
 using Server;
 using Server.Items;
 using Server.Network;
-
+using Server.Spells;
 
 namespace Server.Mobiles
 {
@@ -18,30 +18,30 @@ namespace Server.Mobiles
 			Body = 259;			
 			BaseSoundID = 589;
 
-			SetStr( 488, 620 );
+			SetStr( 1207, 1329 );
 			SetDex( 121, 170 );
-			SetInt( 800, 800 );
+			SetInt( 595, 707 );
 
-			SetHits( 10000, 11000 );
+			SetHits( 10000, 10000 );
 
-			SetDamage( 25, 28 );
+			SetDamage( 5, 11 );
 
 			SetDamageType( ResistanceType.Physical, 40 );
 			SetDamageType( ResistanceType.Energy, 75 );
 
-			SetResistance( ResistanceType.Physical, 80, 90 );
-			SetResistance( ResistanceType.Fire, 70, 80 );
-			SetResistance( ResistanceType.Cold, 40, 50 );
-			SetResistance( ResistanceType.Poison, 50, 60 );
-			SetResistance( ResistanceType.Energy, 50, 60 );
+			SetResistance( ResistanceType.Physical, 45, 55 );
+			SetResistance( ResistanceType.Fire, 70, 90 );
+			SetResistance( ResistanceType.Cold, 55, 65 );
+			SetResistance( ResistanceType.Poison, 30, 40 );
+			SetResistance( ResistanceType.Energy, 65, 75 );
 
-			SetSkill( SkillName.EvalInt, 105.0, 110.0 );
+			SetSkill( SkillName.EvalInt, 105.0, 120.0 );
 			SetSkill( SkillName.Magery, 120.0, 120.0 );
 			SetSkill( SkillName.SpiritSpeak, 120.0 );
 			SetSkill( SkillName.Necromancy, 120.0 );
-			SetSkill( SkillName.MagicResist, 120.0, 120.0);
+			SetSkill( SkillName.MagicResist, 100.0, 120.0);
 			SetSkill( SkillName.Tactics, 110.1, 120.0 );
-			SetSkill( SkillName.Wrestling, 120.1, 150.0 );
+			SetSkill( SkillName.Wrestling, 103.4, 115.4 );
 
 			Fame = 24000;
 			Karma = -24000;
@@ -134,24 +134,16 @@ namespace Server.Mobiles
                 }
         }
 
-        public override void OnThink()
-        {
-            base.OnThink();
-            RandoTarget(this);
-        }
-
         public override void GenerateLoot()
 		{
-			AddLoot( LootPack.FilthyRich, 2 );
-			AddLoot( LootPack.MedScrolls, 2 );
-            
+            AddLoot(LootPack.SuperBoss, 2);
+            AddLoot(LootPack.HighScrolls, Utility.RandomMinMax(6, 60));
         }
 
 		public override int Meat{ get{ return 1; } }
         public override bool BardImmune { get { return false; } }
         public override int TreasureMapLevel{ get{ return 5; } }
         public override bool BleedImmune{ get{ return true; } }
-        public override bool AutoDispel{ get{ return true; } }
 		public override bool Unprovokable{ get{ return true; } }
 		public override Poison PoisonImmune{ get{ return Poison.Lethal; } }
         public override bool ReacquireOnMovement { get { return true; } }
@@ -188,7 +180,7 @@ namespace Server.Mobiles
 
 				m.SendMessage( "Your Life is Mine to feed on!" );
 
-				int toDrain = Utility.RandomMinMax( 10, 40 );
+				int toDrain = Utility.RandomMinMax( 15, 40 );
 
 				Hits += toDrain;
 				m.Damage( toDrain, this );
@@ -255,7 +247,82 @@ namespace Server.Mobiles
             if (state is Mobile)
                 this.CacophonicEnd((Mobile)state);
         }
-  
+
+        private int RandomPoint(int mid)
+        {
+            return (mid + Utility.RandomMinMax(-2, 2));
+        }
+
+        public virtual Point3D GetSpawnPosition(int range)
+        {
+            return GetSpawnPosition(Location, Map, range);
+        }
+
+        public virtual Point3D GetSpawnPosition(Point3D from, Map map, int range)
+        {
+            if (map == null)
+                return from;
+
+            Point3D loc = new Point3D((RandomPoint(X)), (RandomPoint(Y)), Z);
+
+            loc.Z = Map.GetAverageZ(loc.X, loc.Y);
+
+            return loc;
+        }
+
+        public override void OnThink()
+        {
+            base.OnThink();
+            //if (Utility.RandomDouble() < .15)
+            //    DropOoze();
+            RandoTarget(this);
+        }
+
+        public virtual void DropOoze()
+        {
+            int amount = Utility.RandomMinMax(1, 3);
+            bool corrosive = Utility.RandomBool();
+
+            for (int i = 0; i < amount; i++)
+            {
+                Item ooze = new StainedOoze(corrosive);
+                Point3D p = new Point3D(Location);
+
+                for (int j = 0; j < 5; j++)
+                {
+                    p = GetSpawnPosition(2);
+                    bool found = false;
+
+                    foreach (Item item in Map.GetItemsInRange(p, 0))
+                        if (item is StainedOoze)
+                        {
+                            found = true;
+                            break;
+                        }
+
+                    if (!found)
+                        break;
+                }
+
+                ooze.MoveToWorld(p, Map);
+            }
+
+            if (Combatant != null)
+            {
+                if (corrosive)
+                    Combatant.SendLocalizedMessage(1072071); // A corrosive gas seeps out of your enemy's skin!
+                else
+                    Combatant.SendLocalizedMessage(1072072); // A poisonous gas seeps out of your enemy's skin!
+            }
+        }
+
+        public override bool OnBeforeDeath()
+        {
+            //DropOoze();
+
+            return base.OnBeforeDeath();
+        }
+
         public MonstrousInterredGrizzle( Serial serial ) : base( serial )
 		{
 		}		
