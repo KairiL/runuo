@@ -65,12 +65,12 @@ namespace Server.Mobiles
 		public override bool CanRummageCorpses{ get{ return true; } }
 		public override Poison PoisonImmune{ get{ return Poison.Lethal; } }
 
-		public override bool AutoDispel{ get{ return true; } }
+		public override bool AutoDispel{ get{ return false; } }
 		public override int TreasureMapLevel{ get{ return 5; } }
 
         private void RandoTarget(Mobile from)
         {
-            double SwitchRate = .05;
+            double SwitchRate = .01;
             int PullRange = 10;
             foreach (Mobile m_target in GetMobilesInRange(PullRange))
                 if ((m_target != from) && (SpellHelper.ValidIndirectTarget(from, (Mobile)m_target) && from.CanBeHarmful((Mobile)m_target, false)))
@@ -84,6 +84,69 @@ namespace Server.Mobiles
         {
             base.OnThink();
             RandoTarget(this);
+        }
+
+        public void SpawnAllies(Mobile target)
+        {
+            Map map = this.Map;
+
+            if (map == null)
+                return;
+
+            int allies = 0;
+
+            foreach (Mobile m in this.GetMobilesInRange(10))
+            {
+                if (m is CorporealBrume || m is FetidEssence || m is Effervescence)
+                    ++allies;
+            }
+
+            if (allies < 8)
+            {
+                PlaySound(0x3D);
+
+                int newAllies = Utility.RandomMinMax(3, 4);
+
+                for (int i = 0; i < newAllies; ++i)
+                {
+                    BaseCreature ally;
+
+                    switch (Utility.Random(3))
+                    {
+                        default:
+                        case 0: ally = new CorporealBrume(); break;
+                        case 1: ally = new FetidEssence(); break;
+                        case 2: ally = new Effervescence(); break;
+                    }
+
+                    ally.Team = this.Team;
+
+                    bool validLocation = false;
+                    Point3D loc = this.Location;
+
+                    for (int j = 0; !validLocation && j < 10; ++j)
+                    {
+                        int x = X + Utility.Random(3) - 1;
+                        int y = Y + Utility.Random(3) - 1;
+                        int z = map.GetAverageZ(x, y);
+
+                        if (validLocation = map.CanFit(x, y, this.Z, 16, false, false))
+                            loc = new Point3D(x, y, Z);
+                        else if (validLocation = map.CanFit(x, y, z, 16, false, false))
+                            loc = new Point3D(x, y, z);
+                    }
+
+                    ally.MoveToWorld(loc, map);
+                    ally.Combatant = target;
+                }
+            }
+        }
+
+        public override void OnDamage(int amount, Mobile from, bool willKill)
+        {
+            base.OnDamage(amount, from, willKill);
+            if (RandomDouble() > .05)
+                SpawnAllies(Combatant);
         }
 
         public ShimmeringEffusion( Serial serial ) : base( serial )
