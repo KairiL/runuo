@@ -116,7 +116,7 @@ namespace Server.Mobiles
                         default:
                         case 0: ally = new CorporealBrume(); break;
                         case 1: ally = new FetidEssence(); break;
-                        case 2: ally = new Effervescence(); break;
+                        case 2: ally = new MantraEffervescence(); break;
                     }
 
                     ally.Team = this.Team;
