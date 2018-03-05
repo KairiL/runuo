@@ -97,7 +97,7 @@ namespace Server.Mobiles
 
             foreach (Mobile m in this.GetMobilesInRange(10))
             {
-                if (m is CorporealBrume || m is FetidEssence || m is Effervescence)
+                if (m is CorporealBrume || m is FetidEssence || m is MantraEffervescence)
                     ++allies;
             }
 
@@ -145,7 +145,7 @@ namespace Server.Mobiles
         public override void OnDamage(int amount, Mobile from, bool willKill)
         {
             base.OnDamage(amount, from, willKill);
-            if (RandomDouble() > .05)
+            if (Utility.RandomDouble() > .05)
                 SpawnAllies(Combatant);
         }
 
