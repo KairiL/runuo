@@ -15,7 +15,7 @@ namespace Server.Mobiles
 			Body = 0x105;			
 
 			SetStr( 509, 538 );
-			SetDex( 354, 381 );
+			SetDex( 300, 400 );
 			SetInt( 1513, 1578 );
 
 			SetHits( 20000 );

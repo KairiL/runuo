@@ -276,8 +276,11 @@ namespace Server.Mobiles
 				}
 				case 1: // PoisonStrike them
 				{
-                    if ( c.Poisoned && (!(c is BaseCreature) || ((BaseCreature)c).PoisonImmune.Level < m_Mobile.HitPoison.Level))
-                        if (Utility.RandomDouble() > .5 )
+                    if (!c.Poisoned && (!(c is BaseCreature) ||
+                      (((BaseCreature)c).PoisonImmune != null && ((BaseCreature)m_Mobile).HitPoison != null &&
+                      ((BaseCreature)c).PoisonImmune.Level != null && ((BaseCreature)m_Mobile).HitPoison.Level != null &&
+                      ((BaseCreature)c).PoisonImmune.Level < ((BaseCreature)m_Mobile).HitPoison.Level)))
+                            if (Utility.RandomDouble() > .5 )
 						    spell = new FlameStrikeSpell( m_Mobile, null );
                         else
                             spell = new FireFieldSpell( m_Mobile, null );
@@ -322,8 +325,11 @@ namespace Server.Mobiles
 
 							m_Mobile.UseSkill( SkillName.Meditation );
 						}
-						else if ( !c.Poisoned && (!(c is BaseCreature) || ( (BaseCreature)c).PoisonImmune.Level < ((BaseCreature)m_Mobile).HitPoison.Level) )
-						{
+						else if (!c.Poisoned && (!(c is BaseCreature) ||
+                      (((BaseCreature)c).PoisonImmune != null && ((BaseCreature)m_Mobile).HitPoison != null &&
+                      ((BaseCreature)c).PoisonImmune.Level != null && ((BaseCreature)m_Mobile).HitPoison.Level != null && 
+                      ((BaseCreature)c).PoisonImmune.Level < ((BaseCreature)m_Mobile).HitPoison.Level)))
+                            {
                             m_Mobile.DebugSay("3. Casting Poison");
                             spell = new PoisonSpell( m_Mobile, null );
 						}
@@ -388,8 +394,13 @@ namespace Server.Mobiles
 			else if ( m_Combo == 2 )
 			{
                 m_Mobile.DebugSay("Casting maybe poison and moving to next spell");
-                if ( !c.Poisoned && (!(c is BaseCreature) || ((BaseCreature)c).PoisonImmune.Level < ((BaseCreature)m_Mobile).HitPoison.Level))
+                if (!c.Poisoned && (!(c is BaseCreature) ||
+                      (((BaseCreature)c).PoisonImmune != null && ((BaseCreature)m_Mobile).HitPoison != null &&
+                      ((BaseCreature)c).PoisonImmune.Level != null && ((BaseCreature)m_Mobile).HitPoison.Level != null &&
+                      ((BaseCreature)c).PoisonImmune.Level < ((BaseCreature)m_Mobile).HitPoison.Level)))
                     spell = new PoisonSpell( m_Mobile, null );
+                else
+                    spell = new HarmSpell( m_Mobile, null );
 
 				++m_Combo; // Move to next spell
 			}
@@ -427,7 +438,6 @@ namespace Server.Mobiles
                 spell = new FlameStrikeSpell( m_Mobile, null );
 				m_Combo = -1;
 			}
-
 			return spell;
 		}
 
@@ -555,8 +565,10 @@ namespace Server.Mobiles
 				{
 					spell = DoCombo( c );
 				}
-				else if ( (c.Spell is HealSpell || c.Spell is GreaterHealSpell) && !c.Poisoned && 
-                    (!(c is BaseCreature) || ((BaseCreature)c).PoisonImmune.Level < ((BaseCreature)m_Mobile).HitPoison.Level)) // They have a heal spell out
+				else if ( (c.Spell is HealSpell || c.Spell is GreaterHealSpell) && (!c.Poisoned && (!(c is BaseCreature) ||
+                      (((BaseCreature)c).PoisonImmune != null && ((BaseCreature)m_Mobile).HitPoison != null &&
+                      ((BaseCreature)c).PoisonImmune.Level != null && ((BaseCreature)m_Mobile).HitPoison.Level != null &&
+                      ((BaseCreature)c).PoisonImmune.Level < ((BaseCreature)m_Mobile).HitPoison.Level)))) // They have a heal spell out
 				{
 					spell = new PoisonSpell( m_Mobile, null );
 				}

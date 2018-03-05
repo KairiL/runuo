@@ -21,10 +21,10 @@ namespace Server.Mobiles
 			BaseSoundID = 0xA8;
 
 			SetStr( 812, 999 );
-			SetDex( 581, 683 );
+			SetDex( 260 );
 			SetInt( 1206, 1389 );
 
-			SetHits( 50000 );
+			SetHits( 15000 );
 			SetStam( 581, 683 );
             SetMana( 1206, 1389 );
 
@@ -140,7 +140,7 @@ namespace Server.Mobiles
 		public override bool AutoDispel{ get{ return true; } }
 		public override bool CanRummageCorpses{ get{ return true; } }                
 	    public override bool Unprovokable{ get{ return true; } }
-		public override bool BardImmune{ get{ return true; } }
+		public override bool BardImmune{ get{ return false; } }
 		public override Poison PoisonImmune{ get{ return Poison.Lethal; } }		
 		public override Poison HitPoison{ get{ return Poison.Lethal; } }
 		public override int TreasureMapLevel{ get{ return 5; } }
