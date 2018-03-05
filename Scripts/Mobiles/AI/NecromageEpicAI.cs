@@ -877,7 +877,7 @@ namespace Server.Mobiles
 					if ( toTarget != null )
 						RunTo( toTarget );
 				}
-				else if ( m_Mobile.InRange( toTarget, 10 ) )
+				else if (toTarget != null && m_Mobile.InRange( toTarget, 10 ) )
 				{
 					RunFrom( toTarget );
 					teleportAway = true;
