@@ -100,7 +100,7 @@ namespace Server.Mobiles
 
             m_Timer = new TeleportTimer(this);
             m_Timer.Start();
-            Timer.DelayCall(TimeSpan.FromMinutes(10.0), new TimerStateCallback(DeletePeerless), this);
+            Timer.DelayCall(TimeSpan.FromMinutes(20.0), new TimerStateCallback(DeletePeerless), this);
 
         }
 
@@ -143,7 +143,7 @@ namespace Server.Mobiles
 
         private void RandoTarget(Mobile from)
         {
-            double SwitchRate = .05;
+            double SwitchRate = .01;
             int PullRange = 10;
             foreach (Mobile m_target in GetMobilesInRange(PullRange))
                 if ((m_target != from) && (SpellHelper.ValidIndirectTarget(from, (Mobile)m_target) && from.CanBeHarmful((Mobile)m_target, false)))
