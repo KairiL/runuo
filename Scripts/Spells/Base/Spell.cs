@@ -702,7 +702,7 @@ namespace Server.Spells
 			int fc = AosAttributes.GetValue( m_Caster, AosAttribute.CastSpeed );
             int sc = AosAttributes.GetValue( m_Caster, AosAttribute.SpellChanneling );
 
-            if ( sc > 2 )
+            if ( sc > 2 && Mantra != "In Nox") //sneaky way to increase cap on FC (except poison to avoid poison spam win vs cure)
                 fcMax += sc -2;
 			if ( fc > fcMax)
 				fc = fcMax;

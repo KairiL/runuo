@@ -142,6 +142,16 @@ namespace Server
 				new LootPackItem( typeof( LesserPoisonPotion ), 1 )
 			};
 
+        public static readonly LootPackItem[] Clothing = new LootPackItem[]
+            {
+                new LootPackItem( typeof( BaseClothing ), 1 )
+            };
+        
+        public static readonly LootPackItem[] Earrings = new LootPackItem[]
+            {
+                new LootPackItem( typeof( BaseEarrings ), 300 )
+            };
+
 		#region Old Magic Items
 		public static readonly LootPackItem[] OldMagicItems = new LootPackItem[]
 			{
@@ -466,7 +476,8 @@ namespace Server
                 new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 6, 25, 100),
                 new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 6, 25, 100),
                 new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 6, 25, 100),
-                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 6, 25, 100)
+                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 6, 25, 100),
+                new LootPackEntry( true, Earrings, 1.00, 1, 2, 25, 100)
         } );
         public static readonly LootPack LowEpic2 = new LootPack(new LootPackEntry[]
         {
@@ -475,7 +486,8 @@ namespace Server
                 new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 5, 25, 120),
                 new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 5, 25, 120),
                 new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 5, 25, 120),
-                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 5, 25, 120)
+                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 5, 25, 120),
+                new LootPackEntry( true, Earrings, 1.00, 1, 2, 25, 100)
         });
 
         public static readonly LootPack Epic = new LootPack(new LootPackEntry[]
@@ -490,7 +502,8 @@ namespace Server
                 new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 7, 25, 100),
                 new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 7, 25, 100),
                 new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 7, 25, 100),
-                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 7, 25, 100)
+                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 7, 25, 100),
+                new LootPackEntry( true, Earrings, 1.00, 1, 3, 25, 100)
         });
 
         public static readonly LootPack HighEpic = new LootPack(new LootPackEntry[]
@@ -500,7 +513,8 @@ namespace Server
                 new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 7, 35, 150),
                 new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 7, 35, 150),
                 new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 7, 35, 150),
-                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 7, 35, 150)
+                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 7, 35, 150),
+                new LootPackEntry( true, Earrings, 1.00, 1, 5, 25, 100)
         });
         #endregion
         /*
@@ -707,7 +721,7 @@ namespace Server
 					return item;
 				}
 
-				if ( item is BaseWeapon || item is BaseArmor || item is BaseJewel || item is BaseHat )
+				if ( item is BaseWeapon || item is BaseArmor || item is BaseJewel || item is BaseHat || item is BaseEarrings )
 				{
 					if ( Core.AOS )
 					{
@@ -732,8 +746,10 @@ namespace Server
 							BaseRunicTool.ApplyAttributesTo( (BaseJewel)item, false, luckChance, props, m_MinIntensity, m_MaxIntensity );
 						else if ( item is BaseHat )
 							BaseRunicTool.ApplyAttributesTo( (BaseHat)item, false, luckChance, props, m_MinIntensity, m_MaxIntensity );
+                        else if (item is BaseEarrings )
+                            BaseRunicTool.ApplyAttributesTo( (BaseEarrings)item, false, luckChance, props, m_MinIntensity, m_MaxIntensity );
 
-                        if (bonusProps > 5) //Item is epic and should be cursed 95% chance
+                        if (bonusProps > 5  || item is BaseEarrings) //Item is epic and should be cursed 95% chance
                             if (Utility.RandomDouble() > .05)
                                 item.LootType = LootType.Cursed;
                     }
@@ -982,6 +998,8 @@ namespace Server
 					item = RandomScroll( 1, 4, 7 );
 				else if ( m_Type == typeof( SummonAirElementalScroll ) ) // high scroll
 					item = RandomScroll( 2, 8, 8 );
+                else if ( m_Type == typeof( BaseEarrings ) )
+                    item = Loot.RandomEarrings();
 				else
 					item = Activator.CreateInstance( m_Type ) as Item;
 

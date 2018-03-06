@@ -19,7 +19,7 @@ namespace Server.Mobiles
 			SetDex( 96, 115 );
 			SetInt( 966, 1045 );
 
-			SetHits( 750, 1200 );
+			SetHits( 1200, 1500 );
 
 			SetDamage( 20, 30 );
 
@@ -97,7 +97,6 @@ namespace Server.Mobiles
 
 		public override void GenerateLoot()
 		{
-            AddLoot(LootPack.UltraRich, 2);
             AddLoot(LootPack.LowEpic1, 1);
             AddLoot(LootPack.LowEpic2, 1);
             AddLoot(LootPack.LowScrolls, 2);

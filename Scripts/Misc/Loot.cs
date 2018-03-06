@@ -179,6 +179,13 @@ namespace Server
 
 		public static Type[] JewelryTypes{ get{ return m_JewelryTypes; } }
 
+        private static Type[] m_EarringTypes = new Type[]
+            {
+                typeof( GoldEarrings ),         typeof( SilverEarrings )
+            };
+
+        public static Type[] EarringTypes{ get{ return m_EarringTypes; } }
+
 		private static Type[] m_RegTypes = new Type[]
 			{
 				typeof( BlackPearl ),			typeof( Bloodmoss ),			typeof( Garlic ),
@@ -511,6 +518,11 @@ namespace Server
 		{
 			return Construct( m_JewelryTypes ) as BaseJewel;
 		}
+        
+        public static BaseEarrings RandomEarrings()
+        {
+            return Construct ( m_EarringTypes ) as BaseEarrings;
+        }
 
 		public static BaseArmor RandomArmor()
 		{
