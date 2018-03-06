@@ -628,6 +628,62 @@ namespace Server.Items
 				}
 			}
 		}
+
+        public static void ApplyAttributesTo(BaseEarrings jewelry, int attributeCount, int min, int max)
+        {
+            ApplyAttributesTo(jewelry, false, 0, attributeCount, min, max);
+        }
+
+        public static void ApplyAttributesTo(BaseEarrings jewelry, bool isRunicTool, int luckChance, int attributeCount, int min, int max)
+        {
+            m_IsRunicTool = isRunicTool;
+            m_LuckChance = luckChance;
+
+            AosAttributes primary = jewelry.Attributes;
+            AosElementAttributes resists = jewelry.Resistances;
+            AosSkillBonuses skills = jewelry.SkillBonuses;
+
+            m_Props.SetAll(false);
+
+            for (int i = 0; i < attributeCount; ++i)
+            {
+                int random = GetUniqueRandom(26);
+
+                if (random == -1)
+                    break;
+
+                switch (random)
+                {
+                    case 0: ApplyAttribute(resists, min, max, AosElementAttribute.Physical, 1, 15); break;
+                    case 1: ApplyAttribute(resists, min, max, AosElementAttribute.Fire, 1, 15); break;
+                    case 2: ApplyAttribute(resists, min, max, AosElementAttribute.Cold, 1, 15); break;
+                    case 3: ApplyAttribute(resists, min, max, AosElementAttribute.Poison, 1, 15); break;
+                    case 4: ApplyAttribute(resists, min, max, AosElementAttribute.Energy, 1, 15); break;
+                    case 5: ApplyAttribute(primary, min, max, AosAttribute.WeaponDamage, 1, 25); break;
+                    case 6: ApplyAttribute(primary, min, max, AosAttribute.DefendChance, 1, 15); break;
+                    case 7: ApplyAttribute(primary, min, max, AosAttribute.AttackChance, 1, 15); break;
+                    case 8: ApplyAttribute(primary, min, max, AosAttribute.BonusStr, 1, 8); break;
+                    case 9: ApplyAttribute(primary, min, max, AosAttribute.BonusDex, 1, 8); break;
+                    case 10: ApplyAttribute(primary, min, max, AosAttribute.BonusInt, 1, 8); break;
+                    case 11: ApplyAttribute(primary, min, max, AosAttribute.EnhancePotions, 5, 25, 5); break;
+                    case 12: ApplyAttribute(primary, min, max, AosAttribute.CastSpeed, 1, 1); break;
+                    case 13: ApplyAttribute(primary, min, max, AosAttribute.CastRecovery, 1, 3); break;
+                    case 14: ApplyAttribute(primary, min, max, AosAttribute.LowerManaCost, 1, 8); break;
+                    case 15: ApplyAttribute(primary, min, max, AosAttribute.LowerRegCost, 1, 20); break;
+                    case 16: ApplyAttribute(primary, min, max, AosAttribute.Luck, 1, 100); break;
+                    case 17: ApplyAttribute(primary, min, max, AosAttribute.SpellDamage, 1, 12); break;
+                    case 18: ApplyAttribute(primary, min, max, AosAttribute.NightSight, 1, 1); break;
+                    case 19: ApplySkillBonus(skills, min, max, 0, 1, 15); break;
+                    case 20: ApplySkillBonus(skills, min, max, 1, 1, 15); break;
+                    case 21: ApplySkillBonus(skills, min, max, 2, 1, 15); break;
+                    case 22: ApplySkillBonus(skills, min, max, 3, 1, 15); break;
+                    case 23: ApplySkillBonus(skills, min, max, 4, 1, 15); break;
+                    case 24: ApplyAttribute(primary, min, max, AosAttribute.SpellChanneling, 1, 1); break;
+                    case 25: ApplyAttribute(primary, min, max, AosAttribute.WeaponSpeed, 1, 30); break;
+                }
+            }
+        }
+
         public static void ApplyAttributesTo(BaseInstrument instrument, int attributeCount, int min, int max)
         {
             ApplyAttributesTo(instrument, false, 0, attributeCount, min, max);
