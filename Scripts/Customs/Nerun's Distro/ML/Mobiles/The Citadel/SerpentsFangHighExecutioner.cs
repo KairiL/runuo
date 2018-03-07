@@ -38,7 +38,7 @@ namespace Server.Mobiles
 			base.OnDeath( c );	
 			
 			if ( Utility.RandomDouble() < 0.2 )
-				c.DropItem( new RedKey() );
+				c.DropItem( new YellowKey() );
 		}
 
 		public override void Serialize( GenericWriter writer )

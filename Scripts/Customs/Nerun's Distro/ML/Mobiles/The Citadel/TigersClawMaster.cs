@@ -31,8 +31,8 @@ namespace Server.Mobiles
 		{
 			base.OnDeath( c );	
 			
-//			if ( Utility.RandomDouble() < 0.2 )
-//				c.DropItem( new TigerClawKey() );
+			if ( Utility.RandomDouble() < 0.2 )
+				c.DropItem( new BlueKey() );
 		}
 		
 		public override void Serialize( GenericWriter writer )

@@ -105,7 +105,7 @@ namespace Server.Mobiles
 		}
 		
 		
-		
+		/*
 		public override void OnDeath( Container c )
 		{
 			base.OnDeath( c );	
@@ -115,7 +115,7 @@ namespace Server.Mobiles
 						
 			
 		}
-
+        */
 		public override void OnAfterDelete()
 		{
 			if ( m_Timer != null )
