@@ -21,7 +21,7 @@ using System;using Server;namespace Server.Items
             Name = "A Yellow Key";
 
             ///////////Item hue
-            Hue = 2;
+            Hue = 50;
 
             ///////////Stackable
             Stackable = false;
