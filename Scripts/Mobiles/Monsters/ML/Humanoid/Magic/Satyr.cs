@@ -107,7 +107,11 @@ namespace Server.Mobiles
 					target.AddSkillMod( new TimedSkillMod( s.SkillName, true, s.Base * -0.28, delay ) );
 				}
 
-				int count = (int) Math.Round( delay.TotalSeconds / 1.25 );
+                target.AddStatMod(new StatMod(StatType.Str, "DiscordanceStr", (int)(target.RawStr * -0.28), delay));
+                target.AddStatMod(new StatMod(StatType.Dex, "DiscordanceDex", (int)(target.RawDex * -0.28), delay));
+                target.AddStatMod(new StatMod(StatType.Int, "DiscordanceInt", (int)(target.RawInt * -0.28), delay));
+
+                int count = (int) Math.Round( delay.TotalSeconds / 1.25 );
 				Timer timer = new AnimateTimer( target, count );
 				m_Suppressed.Add( target, timer );
 				timer.Start();

@@ -47,7 +47,7 @@ namespace Server.Mobiles
 			}
 		}
 
-		private const double HealChance = 0.05; // 5% chance to heal at gm necromancy?, uses spirit speak healing
+		private const double HealChance = 0.05; // 5% chance to heal at gm necromancy? Probably not what this does
 		private const double TeleportChance = 0.10; // 10% chance to teleport at gm necromancy
 		//private const double DispelChance = 0.75; // 75% chance to dispel at gm necromancy
         //private const double ItemChance = 0.0; //0% chance to use an offensive item
@@ -233,11 +233,11 @@ namespace Server.Mobiles
 
 			if ( !m_Mobile.Summoned && Utility.Random( 0, 4 + (m_Mobile.Hits == 0 ? m_Mobile.HitsMax : (m_Mobile.HitsMax / m_Mobile.Hits)) ) >= 3 )
 			{
-				if ( m_Mobile.Hits < (m_Mobile.HitsMax - 50) )
-					m_Mobile.UseSkill( SkillName.SpiritSpeak );
-				else if ( m_Mobile.Hits < (m_Mobile.HitsMax - 20) )
-					m_Mobile.UseSkill( SkillName.SpiritSpeak );
-			}
+                if (m_Mobile.Hits < (m_Mobile.HitsMax - 50))
+                    spell = new GreaterHealSpell(m_Mobile, null);
+                else if (m_Mobile.Hits < (m_Mobile.HitsMax - 20))
+                    spell = new HealSpell(m_Mobile, null);
+            }
 
 			if ( spell == null )
 			{
@@ -266,13 +266,13 @@ namespace Server.Mobiles
 			{
 				case 0: // Heal  myself
 				{
-                    m_Mobile.DebugSay("0. Spirit Speak");
-                    if ( m_Mobile.Hits < (m_Mobile.HitsMax - 50) )
-						m_Mobile.UseSkill( SkillName.SpiritSpeak );
-					else if ( m_Mobile.Hits < (m_Mobile.HitsMax - 10) )
-						m_Mobile.UseSkill( SkillName.SpiritSpeak );
+                        m_Mobile.DebugSay("0. Heal");
+                        if (m_Mobile.Hits < (m_Mobile.HitsMax - 50))
+                            spell = new GreaterHealSpell(m_Mobile, null);
+                        else if (m_Mobile.Hits < (m_Mobile.HitsMax - 20))
+                            spell = new HealSpell(m_Mobile, null);
 
-					break;
+                        break;
 				}
 				case 1: // PoisonStrike them
 				{

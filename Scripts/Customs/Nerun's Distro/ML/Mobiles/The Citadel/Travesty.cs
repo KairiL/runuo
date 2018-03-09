@@ -14,7 +14,7 @@ namespace Server.Mobiles
         public virtual string DefaultName { get { return "a changeling"; } }
         public virtual int DefaultHue { get { return 0; } }
         [Constructable]
-		public Travesty() : base( AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4 )
+		public Travesty() : base( AIType.AI_MageEpic, FightMode.Closest, 10, 1, 0.2, 0.4 )
 		{
 			Name = "a travesty";
 			Body = 0x108;
@@ -119,6 +119,11 @@ namespace Server.Mobiles
 
                     target.AddSkillMod(new TimedSkillMod(s.SkillName, true, s.Base * -0.28, delay));
                 }
+
+                target.AddStatMod(new StatMod(StatType.Str, "DiscordanceStr", (int)(target.RawStr * -0.28), delay));
+                target.AddStatMod(new StatMod(StatType.Dex, "DiscordanceDex", (int)(target.RawDex * -0.28), delay));
+                target.AddStatMod(new StatMod(StatType.Int, "DiscordanceInt", (int)(target.RawInt * -0.28), delay));
+                
 
                 int count = (int)Math.Round(delay.TotalSeconds / 1.25);
                 Timer timer = new AnimateTimer(target, count);

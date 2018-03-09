@@ -14,7 +14,7 @@ namespace Server.Mobiles
 	{
         private Timer m_Timer;
         [Constructable]
-		public DreadHorn() : base( AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4 )
+		public DreadHorn() : base( AIType.AI_MageEpic, FightMode.Closest, 10, 1, 0.2, 0.4 )
 		{
 			Name = "a Dread Horn";
 			Body = 257;
@@ -174,6 +174,8 @@ namespace Server.Mobiles
         {
             base.OnThink();
             RandoTarget(this);
+            if (Utility.RandomDouble() < .15)
+                Suppress(Combatant);
         }
 
         public override void OnDeath(Container c)
@@ -200,6 +202,58 @@ namespace Server.Mobiles
             base.OnAfterDelete();
         }
 
+        #region Suppress
+        private static Dictionary<Mobile, Timer> m_Suppressed = new Dictionary<Mobile, Timer>();
+        private DateTime m_NextSuppress;
+
+        public void Suppress(Mobile target)
+        {
+            if (target == null || m_Suppressed.ContainsKey(target) || Deleted || !Alive || m_NextSuppress > DateTime.UtcNow || 0.1 < Utility.RandomDouble())
+                return;
+
+            TimeSpan delay = TimeSpan.FromSeconds(Utility.RandomMinMax(20, 60));
+
+            if (!target.Hidden && CanBeHarmful(target))
+            {
+
+                target.AddStatMod(new StatMod(StatType.Str, "DreadHornStr", -20, delay));
+                target.AddStatMod(new StatMod(StatType.Dex, "DreadHornDex", -20, delay));
+                target.AddStatMod(new StatMod(StatType.Int, "DreadHornInt", -20, delay));
+
+                //int count = (int)Math.Round(delay.TotalSeconds / 1.25);
+                //Timer timer = new AnimateTimer(target, count);
+                //m_Suppressed.Add(target, timer);
+                //timer.Start();
+
+                //PlaySound(0x58C);
+            }
+
+            m_NextSuppress = DateTime.UtcNow + TimeSpan.FromSeconds(30);
+        }
+        /*
+        private class AnimateTimer : Timer
+        {
+            private Mobile m_Owner;
+            private int m_Count;
+
+            public AnimateTimer(Mobile owner, int count) : base(TimeSpan.Zero, TimeSpan.FromSeconds(1.25))
+            {
+                m_Owner = owner;
+                m_Count = count;
+            }
+
+            protected override void OnTick()
+            {
+                if (m_Owner.Deleted || !m_Owner.Alive || m_Count-- < 0)
+                {
+                    SuppressRemove(m_Owner);
+                }
+                else
+                    m_Owner.FixedParticles(0x376A, 1, 32, 0x15BD, EffectLayer.Waist);
+            }
+        }
+        */
+        #endregion
         //public override bool DisallowAllMoves{ get{ return m_TrueForm; } }
 
         public override void Serialize(GenericWriter writer)
