@@ -28,9 +28,16 @@ namespace Server.Items
 		{
 			Name = "Chief Paroxysmus Teleporter. Dont Spawn Here till you use this!";
 			LootType = LootType.Blessed;
-		}
-		
-		public ChiefParoxysmusKey( Serial serial ) : base( serial )
+            Timer.DelayCall(TimeSpan.FromHours(3.0), new TimerStateCallback(DeleteKey), this);
+        }
+
+        public void DeleteKey(object state)
+        {
+            Item from = (Item)state;
+            from.Delete();
+        }
+
+        public ChiefParoxysmusKey( Serial serial ) : base( serial )
 		{
 		}
 		
