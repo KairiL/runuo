@@ -366,9 +366,9 @@ namespace Server.Mobiles
                 }
 
                 if (0.75 >= Utility.RandomDouble() && (m_Thrown % 2) == 1) // 75% chance to quickly throw another bomb
-                    m_NextBomb = DateTime.UtcNow + TimeSpan.FromSeconds(2.1 - m_Speed/5.0);
+                    m_NextBomb = DateTime.UtcNow + TimeSpan.FromSeconds((2.1 - m_Speed/5.0)*2);
                 else
-                    m_NextBomb = DateTime.UtcNow + TimeSpan.FromSeconds(3.0 + (3.0 * Utility.RandomDouble()) - m_Speed/2); // 3-6 seconds avg 4.5 (0-1 avg .333 with +60 hammer)
+                    m_NextBomb = DateTime.UtcNow + TimeSpan.FromSeconds(6.0 + (6.0 * Utility.RandomDouble()) - m_Speed); // 6-12 seconds avg 9 (0-2 avg .666 with +60 hammer)
 
                 if (m_Thrown > 32768)
                     m_Thrown -= 32768;
@@ -402,19 +402,25 @@ namespace Server.Mobiles
                 m_loc = m_Mobile.Location;
                 map = m_Mobile.Map;
                 int alchemyBonus = 0;
+                int sdi = 0;
+                int dmgInc = 0;
 
                 if ((((BaseCreature)from).Controlled || ((BaseCreature)from).Summoned) && ((BaseCreature)from).ControlMaster != null)
                 {
                     Mobile master = (((BaseCreature)from).ControlMaster);
                     alchemyBonus = AosAttributes.GetValue(m, AosAttribute.EnhancePotions);
-                    if (alchemyBonus > 50)
-                        alchemyBonus = 50;
+                    sdi = AosAttributes.GetValue(m, AosAttribute.SpellDamage);
+                    dmgInc = AosAttributes.GetValue(m, AosAttribute.WeaponDamage);
+                    //if (alchemyBonus > 50)
+                    //    alchemyBonus = 50;
                     alchemyBonus += m.Skills.Alchemy.Fixed / 330 * 10;
 
-                    exploDamage = (int)(((master.Skills[SkillName.Alchemy].Value / 5.0)) * (1 + alchemyBonus));
+                    exploDamage = (int)(((master.Skills[SkillName.Alchemy].Value / 2.5)) * (1 + alchemyBonus + sdi));
                     minDamage = (int)master.Skills[SkillName.Carpentry].Value;
                     minDamage += (int)master.Skills[SkillName.ArmsLore].Value;
-                    minDamage /= 12;
+                    minDamage /= 6;
+                    minDamage *= (100 + dmgInc);
+                    minDamage /= 100;
                 }
                 else
                 {
@@ -430,8 +436,15 @@ namespace Server.Mobiles
                     return;
                 int ExpRange = ExplosionRange;
                 if (((BaseCreature)m_From).ControlMaster!=null)
+                {
                     ExpRange += (int)(((BaseCreature)m_From).ControlMaster.Skills[SkillName.Tinkering].Value + ((BaseCreature)m_From).ControlMaster.Skills[SkillName.Alchemy].Value )/ 50;
+                    if (Utility.RandomDouble() > AosAttributes.GetValue(m, AosAttribute.EnhancePotions))
+                        ExpRange += 1;
+                    if (Utility.RandomDouble() > AosAttributes.GetValue(m, AosAttribute.SpellDamage))
+                        ExpRange += 1;
+                }
                 m_Mobile.PlaySound(0x11D);
+
                 if ((Map)map != null)
                 {
                     IPooledEnumerable eable = (IPooledEnumerable)map.GetMobilesInRange(m_loc, ExpRange);

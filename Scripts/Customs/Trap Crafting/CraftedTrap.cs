@@ -23,7 +23,7 @@ namespace Server.Items
         private Map m_MapDest;
         private bool decays = true;
 
-        private static TimeSpan m_DDT = TimeSpan.FromHours(1.0); //Decay time? Doesn't seem to work.  Need to use DecayPeriod maybe.
+        private static TimeSpan m_DDT = TimeSpan.FromHours(3.0); //Decay time? Doesn't seem to work.  Need to use DecayPeriod maybe.
 
         public bool CheckRange(Point3D loc, Point3D oldLoc, int range)
         {
@@ -31,7 +31,7 @@ namespace Server.Items
         }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public bool Decays
+        public override bool Decays
         {
             get
             {
@@ -279,10 +279,11 @@ namespace Server.Items
 
             int ManaLoss = ScaleMana(ManaCost);
 
-            if (!(TrapOwner.InRange(Location, 25)))
+            if (!(TrapOwner.InRange(Location, 25)) || TrapOwner.Map != Map || TrapOwner.Map == Map.Internal)
+            {
+                this.UsesRemaining -= 1;
                 return;
-            if (TrapOwner.Map != Map || TrapOwner.Map == Map.Internal)
-                return;
+            }
 
             if (TrapOwner != null  && TrapOwner.Player && TrapOwner.CanBeHarmful(from, false) && 
                     from != TrapOwner && SpellHelper.ValidIndirectTarget(TrapOwner, (Mobile)from) &&
@@ -556,6 +557,7 @@ namespace Server.Items
             ManaCost = 10;
             TrapPower = 0;
             Delay = TimeSpan.FromSeconds(5);
+            Timer.DelayCall(TimeSpan.FromHours(3.0), new TimerStateCallback(DeleteTrap), this);
         }
 
         public CraftedTrap( Serial serial ) : base( serial )
@@ -570,6 +572,13 @@ namespace Server.Items
             ManaCost = 10;
             TrapPower = 0;
             Delay = TimeSpan.FromSeconds(5);
+            Timer.DelayCall(TimeSpan.FromHours(3.0), new TimerStateCallback(DeleteTrap), this);
+        }
+
+        public void DeleteTrap(object state)
+        {
+            Item from = (Item)state;
+            from.Delete();
         }
 
         public override void Serialize( GenericWriter writer )
