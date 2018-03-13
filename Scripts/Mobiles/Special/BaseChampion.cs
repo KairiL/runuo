@@ -224,13 +224,13 @@ namespace Server.Mobiles
 
 				if ( map != null )
 				{
-					for ( int x = -12; x <= 12; ++x )
+					for ( int x = -6; x <= 6; ++x )
 					{
-						for ( int y = -12; y <= 12; ++y )
+						for ( int y = -6; y <= 6; ++y )
 						{
 							double dist = Math.Sqrt(x*x+y*y);
 
-							if ( dist <= 12 )
+							if ( dist <= 6 )
 								new GoodiesTimer( map, X + x, Y + y ).Start();
 						}
 					}
