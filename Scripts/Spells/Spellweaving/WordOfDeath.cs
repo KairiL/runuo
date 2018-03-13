@@ -39,27 +39,38 @@ namespace Server.Spells.Spellweaving
 				Effects.SendMovingParticles( new Entity( Serial.Zero, loc, m.Map ), new Entity( Serial.Zero, m.Location, m.Map ), 0xF5F, 1, 0, true, false, 0x21, 0x3F, 0x251D, 0, 0, EffectLayer.Head, 0 );
 
 				double percentage = 0.05 * FocusLevel;
-
-				int damage;
+                double inscribeSkill = GetInscribeSkill(Caster);
+                int damage;
 
 				if( !m.Player && (((double)m.Hits / (double)m.HitsMax) < percentage ))
 				{
 					damage = 300;
+                    Caster.SendMessage(String.Format("under percentage {0}", percentage));
 				}
 				else
 				{
-					int minDamage = (int)Caster.Skills.Spellweaving.Value / 5;
+                    Caster.SendMessage(String.Format("over percentage {0}", percentage));
+                    int minDamage = (int)Caster.Skills.Spellweaving.Value / 5;
 					int maxDamage = (int)Caster.Skills.Spellweaving.Value / 3;
 					damage = Utility.RandomMinMax(minDamage, maxDamage);
-					int damageBonus = AosAttributes.GetValue( Caster, AosAttribute.SpellDamage );
-                    damageBonus += Spellweaving.ArcaneEmpowermentSpell.GetSpellBonus(m, m.Player);
-                    if (m.Player && damageBonus > 15)
-						damageBonus = 15;
-					damage *= damageBonus + 100;
-					damage /= 100;
 				}
 
-				int[] types = new int[4];
+                int damageBonus = 0;
+                int sdiBonus = AosAttributes.GetValue(Caster, AosAttribute.SpellDamage);
+                int intBonus = Caster.Int / 10;
+                int inscribeBonus = (int)(inscribeSkill + (100 * (int)(inscribeSkill / 100))) / 10;
+                TransformContext context = TransformationSpellHelper.GetContext(Caster);
+                if (context != null && context.Spell is ReaperFormSpell)
+                    damageBonus += ((ReaperFormSpell)context.Spell).SpellDamageBonus;
+                if (m.Player && sdiBonus > 15 + ((int)inscribeSkill) / 10)
+                    sdiBonus = 15 + ((int)inscribeSkill) / 10;
+                damageBonus += Spellweaving.ArcaneEmpowermentSpell.GetSpellBonus(m, m.Player);
+                damageBonus += inscribeBonus + intBonus;
+
+                damage *= damageBonus + 100;
+                damage /= 100;
+
+                int[] types = new int[4];
 				types[Utility.Random( types.Length )] = 100;
 
 				SpellHelper.Damage( this, m, damage, 0, types[0], types[1], types[2], types[3] );	//Chaos damage.  Random elemental damage

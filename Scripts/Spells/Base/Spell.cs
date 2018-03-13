@@ -136,7 +136,7 @@ namespace Server.Spells
             Item Scroll = m_Scroll;
 
             double inscribeSkill = GetInscribeSkill(m_Caster);
-			int inscribeBonus = (int)(inscribeSkill + (1000 * (int)(inscribeSkill / 100))) / 100;
+			int inscribeBonus = (int)(inscribeSkill + (100 * (int)(inscribeSkill / 100))) / 10;
 			damageBonus += inscribeBonus;
 
 			int intBonus = Caster.Int / 10;
@@ -148,12 +148,12 @@ namespace Server.Spells
             sdiBonus += ArcaneEmpowermentBonus;
 
             // PvP spell damage increase cap of 15% from an item’s magic property
-            if ( playerVsPlayer && sdiBonus > 15 + ((int)inscribeSkill) / 100)
-				sdiBonus = 15 + ((int)inscribeSkill) / 100;
+            if ( playerVsPlayer && sdiBonus > 15 + ((int)inscribeSkill) / 10)
+				sdiBonus = 15 + ((int)inscribeSkill) / 10;
 
             damageBonus += sdiBonus;
-            if (Scroll != null)
-                damageBonus += (int)inscribeSkill / 100;
+            if (Scroll != null) //Does not appear to work
+                damageBonus += (int)inscribeSkill / 10;
 
 			TransformContext context = TransformationSpellHelper.GetContext( Caster );
 

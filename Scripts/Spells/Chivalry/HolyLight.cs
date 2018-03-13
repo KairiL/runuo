@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Server.Network;
 using Server.Items;
 using Server.Targeting;
+using Server.Spells.Spellweaving;
 
 namespace Server.Spells.Chivalry
 {
@@ -30,7 +31,10 @@ namespace Server.Spells.Chivalry
 
 		public override void OnCast()
 		{
-			if ( CheckSequence() )
+            double inscribeSkill = GetInscribeSkill(Caster);
+            int inscribeBonus = (int)(inscribeSkill + (1000 * (int)(inscribeSkill / 100))) / 100;
+            TransformContext context = TransformationSpellHelper.GetContext(Caster);
+            if ( CheckSequence() )
 			{
 				List<Mobile> targets = new List<Mobile>();
 
@@ -51,11 +55,17 @@ namespace Server.Spells.Chivalry
 					int damage = ComputePowerValue( 10 ) + Utility.RandomMinMax( 0, 2 );
                     int sdiBonus = AosAttributes.GetValue(Caster, AosAttribute.SpellDamage);
                     // PvP spell damage increase cap of 15% from an item’s magic property in Publish 33(SE)
-                    if (Core.SE && m.Player && Caster.Player && sdiBonus > 15)
-                        sdiBonus = 15;
+                    if (Core.SE && m.Player && Caster.Player && sdiBonus > 15 + ((int)inscribeSkill)/100)
+                        sdiBonus = 15 + ((int)inscribeSkill) / 100;
+
+                    sdiBonus += inscribeBonus;
+
+
+                    if (context != null && context.Spell is ReaperFormSpell)
+                        sdiBonus += ((ReaperFormSpell)context.Spell).SpellDamageBonus;
 
                     damage *= (100 + sdiBonus);
-                    damage /= 100;
+                        damage /= 100;
 
                     // TODO: Should caps be applied?
                     /*

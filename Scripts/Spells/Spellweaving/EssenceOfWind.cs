@@ -25,8 +25,20 @@ namespace Server.Spells.Spellweaving
 
 				int range = 5 + FocusLevel;
 				int damage = 25 + FocusLevel;
+                int damageBonus = 0;
 
-				double skill = Caster.Skills[SkillName.Spellweaving].Value;
+                double inscribeSkill = GetInscribeSkill(Caster);
+                int inscribeBonus = (int)(inscribeSkill + (100 * (int)(inscribeSkill / 100))) / 10;
+                int intBonus = Caster.Int / 10;
+                int ArcaneEmpowermentBonus = 0; 
+                int sdiBonus = AosAttributes.GetValue(Caster, AosAttribute.SpellDamage);
+                TransformContext context = TransformationSpellHelper.GetContext(Caster);
+                if (context != null && context.Spell is ReaperFormSpell)
+                    damageBonus += ((ReaperFormSpell)context.Spell).SpellDamageBonus;
+
+                damageBonus += inscribeBonus + intBonus + ArcaneEmpowermentBonus;
+
+                double skill = Caster.Skills[SkillName.Spellweaving].Value;
 
 				TimeSpan duration = TimeSpan.FromSeconds( (int)(skill / 24) + FocusLevel );
 
@@ -46,8 +58,12 @@ namespace Server.Spells.Spellweaving
 					Mobile m = targets[i];
 
 					Caster.DoHarmful( m );
+                    ArcaneEmpowermentBonus += Spellweaving.ArcaneEmpowermentSpell.GetSpellBonus(Caster, m.Player && Caster.Player);
 
-					SpellHelper.Damage( this, m, damage, 0, 0, 100, 0, 0 );
+                    if (m.Player && Caster.Player && sdiBonus > 15 + ((int)inscribeSkill) / 10)
+                        sdiBonus = 15 + ((int)inscribeSkill) / 10;
+
+                    SpellHelper.Damage( this, m, damage*(100+damageBonus+sdiBonus+ArcaneEmpowermentBonus) /100, 0, 0, 100, 0, 0 );
 
 					if( !CheckResisted( m ) )	//No message on resist
 					{

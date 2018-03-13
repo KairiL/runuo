@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Server.Items;
 using Server.Mobiles;
+using Server.Spells.Spellweaving;
 
 namespace Server.Spells.Necromancy
 {
@@ -46,7 +47,21 @@ namespace Server.Spells.Necromancy
 					BaseCreature cbc = Caster as BaseCreature;
 					bool isMonster = ( cbc != null && !cbc.Controlled && !cbc.Summoned );
 
-					foreach( Mobile m in Caster.GetMobilesInRange( Core.ML ? 4 : 5 ) )
+                    int damageBonus = 0;
+
+                    double inscribeSkill = GetInscribeSkill(Caster);
+                    int inscribeBonus = (int)(inscribeSkill + (100 * (int)(inscribeSkill / 100))) / 10;
+                    int intBonus = Caster.Int / 10;
+                    int ArcaneEmpowermentBonus = 0;
+                    int sdiBonus = AosAttributes.GetValue(Caster, AosAttribute.SpellDamage);
+                    TransformContext context = TransformationSpellHelper.GetContext(Caster);
+                    if (context != null && context.Spell is ReaperFormSpell)
+                        damageBonus += ((ReaperFormSpell)context.Spell).SpellDamageBonus;
+
+                    damageBonus += inscribeBonus + intBonus + ArcaneEmpowermentBonus;
+
+
+                    foreach ( Mobile m in Caster.GetMobilesInRange( Core.ML ? 4 : 5 ) )
 					{
 						if( Caster != m && Caster.InLOS( m ) && ( SpellHelper.ValidIndirectTarget( Caster, m ) ) && Caster.CanBeHarmful( m, false ) )
 						{
@@ -85,13 +100,11 @@ namespace Server.Spells.Necromancy
 						damage *= ( 300 + ( m.Karma / 100 ) + ( GetDamageSkill( Caster ) * 10 ) );
 						damage /= 1000;
 
-						int sdiBonus = AosAttributes.GetValue( Caster, AosAttribute.SpellDamage );
-
 						// PvP spell damage increase cap of 15% from an item’s magic property in Publish 33(SE)
-						if( Core.SE && m.Player && Caster.Player && sdiBonus > 15 )
-							sdiBonus = 15;
+						if( Core.SE && m.Player && Caster.Player && sdiBonus > 15 + ((int)inscribeSkill) / 10)
+							sdiBonus = 15 + ((int)inscribeSkill) / 10;
 
-						damage *= ( 100 + sdiBonus );
+						damage *= ( 100 + sdiBonus + damageBonus);
 						damage /= 100;
 
 						// TODO: cap?

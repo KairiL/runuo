@@ -4,6 +4,7 @@ using Server.Network;
 using Server.Items;
 using Server.Targeting;
 using Server.Mobiles;
+using Server.Spells.Spellweaving;
 
 namespace Server.Spells.Necromancy
 {
@@ -50,13 +51,22 @@ namespace Server.Spells.Necromancy
 				Effects.PlaySound( m.Location, m.Map, 0x229 );
 
 				double damage = Utility.RandomMinMax( (Core.ML ? 32 : 36), 40 ) * ((300 + (GetDamageSkill( Caster ) * 9)) / 1000);
+                double sdiBonus = (double)AosAttributes.GetValue( Caster, AosAttribute.SpellDamage )/100;
+                double inscribeSkill = GetInscribeSkill(Caster);//0-100
+                double inscribeBonus = (inscribeSkill + (100 * (int)(inscribeSkill / 100))) / 1000;
+                double intBonus = Caster.Int / 1000;
+                double ArcaneEmpowermentBonus = Spellweaving.ArcaneEmpowermentSpell.GetSpellBonus(Caster, m.Player && Caster.Player)/100;
+                TransformContext context = TransformationSpellHelper.GetContext(Caster);
+
+
+                double pvmDamage = damage * (1 + sdiBonus + inscribeBonus + intBonus + ArcaneEmpowermentBonus);
 				
-				double sdiBonus = (double)AosAttributes.GetValue( Caster, AosAttribute.SpellDamage )/100;
-				double pvmDamage = damage * (1 + sdiBonus);
-				
-				if ( Core.ML && sdiBonus > 0.15 )
-					sdiBonus = 0.15;
-				double pvpDamage = damage * (1 + sdiBonus);
+				if ( Core.ML && sdiBonus > 0.15 + inscribeSkill / 1000)
+					sdiBonus = 0.15 + inscribeSkill / 1000;
+                if (context != null && context.Spell is ReaperFormSpell)
+                    sdiBonus += ((ReaperFormSpell)context.Spell).SpellDamageBonus;
+
+                double pvpDamage = damage * (1 + sdiBonus + inscribeBonus + intBonus + ArcaneEmpowermentBonus);
 
 				Map map = m.Map;
 

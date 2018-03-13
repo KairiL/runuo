@@ -3,6 +3,7 @@ using System.Collections;
 using Server.Network;
 using Server.Items;
 using Server.Targeting;
+using Server.Spells.Spellweaving;
 
 namespace Server.Spells.Necromancy
 {
@@ -50,7 +51,26 @@ namespace Server.Spells.Necromancy
 				m.PlaySound( 0x210 );
 
 				double damage = ((GetDamageSkill( Caster ) - GetResistSkill( m )) / 10) + (m.Player ? 18 : 30);
-				m.CheckSkill( SkillName.MagicResist, 0.0, 120.0 );	//Skill check for gain
+                double sdiBonus = (double)AosAttributes.GetValue(Caster, AosAttribute.SpellDamage) / 100;
+                double inscribeSkill = GetInscribeSkill(Caster);
+                int ArcaneEmpowermentBonus = Spellweaving.ArcaneEmpowermentSpell.GetSpellBonus(Caster, m.Player && Caster.Player);
+
+                sdiBonus += ArcaneEmpowermentBonus;
+                // PvP spell damage increase cap of 15% from an item’s magic property
+                if (m.Player && Caster.Player && sdiBonus > 15 + ((int)inscribeSkill) / 10)
+                    sdiBonus = 15 + ((int)inscribeSkill) / 10;
+                
+                if (Scroll != null)//doesn't appear to work
+                    sdiBonus += (int)inscribeSkill / 10;
+
+                TransformContext context = TransformationSpellHelper.GetContext(Caster);
+
+                if (context != null && context.Spell is ReaperFormSpell)
+                    sdiBonus += ((ReaperFormSpell)context.Spell).SpellDamageBonus;
+
+                damage = AOS.Scale((int)damage, (int)(100 + sdiBonus));
+
+                m.CheckSkill( SkillName.MagicResist, 0.0, 120.0 );	//Skill check for gain
 
 				if ( damage < 1 )
 					damage = 1;

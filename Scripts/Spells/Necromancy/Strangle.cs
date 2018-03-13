@@ -3,6 +3,7 @@ using System.Collections;
 using Server.Network;
 using Server.Items;
 using Server.Targeting;
+using Server.Spells.Spellweaving;
 
 namespace Server.Spells.Necromancy
 {
@@ -76,6 +77,29 @@ namespace Server.Spells.Necromancy
                 spiritlevel = 4;
             int d_MinDamage = 4;
             int d_MaxDamage = ((int)spiritlevel + 1) * 3;
+
+            int damageBonus = 0;
+
+            double inscribeSkill = GetInscribeSkill(Caster);
+            int inscribeBonus = (int)(inscribeSkill + (100 * (int)(inscribeSkill / 100))) / 10;
+            int intBonus = Caster.Int / 10;
+            int ArcaneEmpowermentBonus = 0;
+            int sdiBonus = AosAttributes.GetValue(Caster, AosAttribute.SpellDamage);
+            TransformContext context = TransformationSpellHelper.GetContext(Caster);
+            if (context != null && context.Spell is ReaperFormSpell)
+                damageBonus += ((ReaperFormSpell)context.Spell).SpellDamageBonus;
+
+            damageBonus += inscribeBonus + intBonus + ArcaneEmpowermentBonus;
+
+            if (Core.SE && m.Player && Caster.Player && sdiBonus > 15 + ((int)inscribeSkill) / 10)
+                sdiBonus = 15 + ((int)inscribeSkill) / 10;
+
+            d_MinDamage *= (100 + sdiBonus + damageBonus);
+            d_MinDamage /= 100;
+
+            d_MaxDamage *= (100 + sdiBonus + damageBonus);
+            d_MaxDamage /= 100;
+
             string args = String.Format("{0}\t{1}", d_MinDamage, d_MaxDamage);
 
             int i_Count = (int)spiritlevel;

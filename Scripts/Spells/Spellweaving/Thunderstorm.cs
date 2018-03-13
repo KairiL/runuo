@@ -31,15 +31,27 @@ namespace Server.Spells.Spellweaving
 
 				int damage = Math.Max( 11, 10 + (int)(skill / 24) ) + FocusLevel;
 
-				int sdiBonus = AosAttributes.GetValue( Caster, AosAttribute.SpellDamage );
-						
-				int pvmDamage = damage * ( 100 + sdiBonus );
+                int damageBonus = 0;
+
+                double inscribeSkill = GetInscribeSkill(Caster);
+                int inscribeBonus = (int)(inscribeSkill + (100 * (int)(inscribeSkill / 100))) / 10;
+                int intBonus = Caster.Int / 10;
+                int pvpArcaneEmpowermentBonus = Spellweaving.ArcaneEmpowermentSpell.GetSpellBonus(Caster, true);
+                int pvmArcaneEmpowermentBonus = Spellweaving.ArcaneEmpowermentSpell.GetSpellBonus(Caster, false);
+                int sdiBonus = AosAttributes.GetValue(Caster, AosAttribute.SpellDamage);
+                TransformContext context = TransformationSpellHelper.GetContext(Caster);
+                if (context != null && context.Spell is ReaperFormSpell)
+                    damageBonus += ((ReaperFormSpell)context.Spell).SpellDamageBonus;
+
+                damageBonus += inscribeBonus + intBonus;
+                
+				int pvmDamage = damage * ( 100 + sdiBonus + damageBonus + pvmArcaneEmpowermentBonus);
 				pvmDamage /= 100;
 
-				if ( sdiBonus > 15 )
-					sdiBonus = 15;
+				if ( sdiBonus > 15 + ((int)inscribeSkill) / 10)
+					sdiBonus = 15 + ((int)inscribeSkill) / 10;
 						
-				int pvpDamage = damage * ( 100 + sdiBonus );
+				int pvpDamage = damage * ( 100 + sdiBonus + damageBonus + pvpArcaneEmpowermentBonus);
 				pvpDamage /= 100;
 
 				int range = 2 + FocusLevel;

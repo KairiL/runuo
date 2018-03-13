@@ -39,7 +39,23 @@ namespace Server.Spells.Spellweaving
 
 				int tiles = 2 + level;
 				int damage = 15 + level;
-				int duration = (int) Math.Max( 1, skill / 24 ) + level; 
+
+                int damageBonus = 0;
+
+                double inscribeSkill = GetInscribeSkill(Caster);
+                int inscribeBonus = (int)(inscribeSkill + (100 * (int)(inscribeSkill / 100))) / 10;
+                int intBonus = Caster.Int / 10;
+                int ArcaneEmpowermentBonus = Spellweaving.ArcaneEmpowermentSpell.GetSpellBonus(Caster, false);
+                int sdiBonus = AosAttributes.GetValue(Caster, AosAttribute.SpellDamage);
+                TransformContext context = TransformationSpellHelper.GetContext(Caster);
+                if (context != null && context.Spell is ReaperFormSpell)
+                    damageBonus += ((ReaperFormSpell)context.Spell).SpellDamageBonus;
+
+                damageBonus += inscribeBonus + intBonus + ArcaneEmpowermentBonus;
+                int pvmDamage = damage * (100 + sdiBonus + damageBonus);
+                pvmDamage /= 100;
+
+                int duration = (int) Math.Max( 1, skill / 24 ) + level; 
 				
 				for ( int x = p.X - tiles; x <= p.X + tiles; x += tiles )
 				{
@@ -57,7 +73,7 @@ namespace Server.Spells.Spellweaving
 				
 				Effects.PlaySound( p, Caster.Map, 0x5CF );
 				
-				new InternalTimer( Caster, p, damage, tiles, duration ).Start();
+				new InternalTimer( Caster, p, pvmDamage, tiles, duration ).Start();
 			}
 
 			FinishSequence();
