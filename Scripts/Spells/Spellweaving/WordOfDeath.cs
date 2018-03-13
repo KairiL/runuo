@@ -45,11 +45,9 @@ namespace Server.Spells.Spellweaving
 				if( !m.Player && (((double)m.Hits / (double)m.HitsMax) < percentage ))
 				{
 					damage = 300;
-                    Caster.SendMessage(String.Format("under percentage {0}", percentage));
 				}
 				else
 				{
-                    Caster.SendMessage(String.Format("over percentage {0}", percentage));
                     int minDamage = (int)Caster.Skills.Spellweaving.Value / 5;
 					int maxDamage = (int)Caster.Skills.Spellweaving.Value / 3;
 					damage = Utility.RandomMinMax(minDamage, maxDamage);
