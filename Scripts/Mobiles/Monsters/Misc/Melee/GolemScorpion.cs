@@ -402,6 +402,7 @@ namespace Server.Mobiles
                 m_loc = m_Mobile.Location;
                 map = m_Mobile.Map;
                 int alchemyBonus = 0;
+                int inscribeBonus = 0;
                 int sdi = 0;
                 int dmgInc = 0;
 
@@ -413,7 +414,9 @@ namespace Server.Mobiles
                     dmgInc = AosAttributes.GetValue(m, AosAttribute.WeaponDamage);
                     //if (alchemyBonus > 50)
                     //    alchemyBonus = 50;
+                    sdi += (int)(m.Skills.Inscribe.Fixed + (1000 * (int)(m.Skills.Inscribe.Fixed / 100))) / 100;
                     alchemyBonus += m.Skills.Alchemy.Fixed / 330 * 10;
+                    //sdi += m.Int / 10;
 
                     exploDamage = (int)(((master.Skills[SkillName.Alchemy].Value / 2.5)) * (1 + alchemyBonus + sdi));
                     minDamage = (int)master.Skills[SkillName.Carpentry].Value;
@@ -438,9 +441,9 @@ namespace Server.Mobiles
                 if (((BaseCreature)m_From).ControlMaster!=null)
                 {
                     ExpRange += (int)(((BaseCreature)m_From).ControlMaster.Skills[SkillName.Tinkering].Value + ((BaseCreature)m_From).ControlMaster.Skills[SkillName.Alchemy].Value )/ 50;
-                    if (Utility.RandomDouble() > AosAttributes.GetValue(m, AosAttribute.EnhancePotions))
+                    if (Utility.RandomDouble() > AosAttributes.GetValue(((BaseCreature)m_From).ControlMaster, AosAttribute.EnhancePotions))
                         ExpRange += 1;
-                    if (Utility.RandomDouble() > AosAttributes.GetValue(m, AosAttribute.SpellDamage))
+                    if (Utility.RandomDouble() > AosAttributes.GetValue(((BaseCreature)m_From).ControlMaster, AosAttribute.SpellDamage))
                         ExpRange += 1;
                 }
                 m_Mobile.PlaySound(0x11D);

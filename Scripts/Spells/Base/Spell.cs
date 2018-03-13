@@ -136,7 +136,7 @@ namespace Server.Spells
             Item Scroll = m_Scroll;
 
             double inscribeSkill = GetInscribeSkill(m_Caster);
-			int inscribeBonus = (int)(inscribeSkill + (1000 * (int)(inscribeSkill / 100))) / 200;
+			int inscribeBonus = (int)(inscribeSkill + (1000 * (int)(inscribeSkill / 100))) / 100;
 			damageBonus += inscribeBonus;
 
 			int intBonus = Caster.Int / 10;
