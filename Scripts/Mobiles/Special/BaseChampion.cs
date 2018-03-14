@@ -235,9 +235,11 @@ namespace Server.Mobiles
 						}
 					}
 				}
-			}
+                AwardArtifact(GetArtifact());
+            }
+            
 
-			return base.OnBeforeDeath();
+            return base.OnBeforeDeath();
 		}
 
 		public override void OnDeath( Container c )
@@ -265,7 +267,94 @@ namespace Server.Mobiles
 			base.OnDeath( c );
 		}
 
-		private class GoodiesTimer : Timer
+        Dictionary<Mobile, int> m_DamageEntries;
+
+        public virtual void RegisterDamageTo(Mobile m)
+        {
+            if (m == null)
+                return;
+
+            foreach (DamageEntry de in m.DamageEntries)
+            {
+                Mobile damager = de.Damager;
+
+                Mobile master = damager.GetDamageMaster(m);
+
+                if (master != null)
+                    damager = master;
+
+                RegisterDamage(damager, de.DamageGiven);
+            }
+        }
+
+        public void RegisterDamage(Mobile from, int amount)
+        {
+            if (from == null || !from.Player)
+                return;
+
+            if (m_DamageEntries.ContainsKey(from))
+                m_DamageEntries[from] += amount;
+            else
+                m_DamageEntries.Add(from, amount);
+
+            from.SendMessage(String.Format("Total Damage: {0}", m_DamageEntries[from]));
+        }
+
+        public void AwardArtifact(Item artifact)
+        {
+            if (artifact == null)
+                return;
+
+            int totalDamage = 0;
+
+            Dictionary<Mobile, int> validEntries = new Dictionary<Mobile, int>();
+
+            foreach (KeyValuePair<Mobile, int> kvp in m_DamageEntries)
+            {
+                if (IsEligible(kvp.Key, artifact))
+                {
+                    validEntries.Add(kvp.Key, kvp.Value);
+                    totalDamage += kvp.Value;
+                }
+            }
+
+            int randomDamage = Utility.RandomMinMax(1, totalDamage);
+
+            totalDamage = 0;
+
+            foreach (KeyValuePair<Mobile, int> kvp in validEntries)
+            {
+                totalDamage += kvp.Value;
+
+                if (totalDamage >= randomDamage)
+                {
+                    GiveArtifact(kvp.Key, artifact);
+                    return;
+                }
+            }
+            RegisterDamageTo(this);
+            artifact.Delete();
+        }
+
+        public void GiveArtifact(Mobile to, Item artifact)
+        {
+            if (to == null || artifact == null)
+                return;
+
+            Container pack = to.Backpack;
+
+            if (pack == null || !pack.TryDropItem(to, artifact, false))
+                artifact.Delete();
+            else
+                to.SendLocalizedMessage(1062317); // For your valor in combating the fallen beast, a special artifact has been bestowed on you.
+        }
+
+        public bool IsEligible(Mobile m, Item Artifact)
+        {
+            return m.Player && m.Alive && m.InRange(Location, 32) && m.Backpack != null && m.Backpack.CheckHold(m, Artifact, false);
+        }
+
+        private class GoodiesTimer : Timer
 		{
 			private Map m_Map;
 			private int m_X, m_Y;

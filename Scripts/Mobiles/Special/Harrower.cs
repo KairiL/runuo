@@ -352,9 +352,9 @@ namespace Server.Mobiles
 
 					if ( map != null )
 					{
-						for ( int x = -16; x <= 16; ++x )
+						for ( int x = -8; x <= 8; ++x )
 						{
-							for ( int y = -16; y <= 16; ++y )
+							for ( int y = -8; y <= 8; ++y )
 							{
 								double dist = Math.Sqrt(x*x+y*y);
 

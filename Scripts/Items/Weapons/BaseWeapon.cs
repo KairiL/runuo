@@ -876,7 +876,7 @@ namespace Server.Items
 					bonus -= discordanceEffect;
 
 				// Defense Chance Increase = 45%
-                if (atkSkill != attacker.Skills.Wrestling)
+                if (defSkill != attacker.Skills.Wrestling)
                     if ( bonus > 45 + (int)(defender.Skills[SkillName.Wrestling].Value / 12.0))
 					    bonus = 45 + (int)(defender.Skills[SkillName.Wrestling].Value / 12.0);
 
