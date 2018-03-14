@@ -51,18 +51,26 @@ namespace Server.Mobiles
 		{
 			double random = Utility.RandomDouble();
 			if ( 0.05 >= random )
+            {
 				return CreateArtifact( UniqueList );
+            }
 			else if ( 0.15 >= random )
+            {
 				return CreateArtifact( SharedList );
+            }
 			else if ( 0.30 >= random )
+            {
 				return CreateArtifact( DecorativeList );
+            }
 			return null;
 		}
 
 		public Item CreateArtifact( Type[] list )
 		{
 			if( list.Length == 0 )
+            {
 				return null;
+            }
 
 			int random = Utility.Random( list.Length );
 			
@@ -75,7 +83,6 @@ namespace Server.Mobiles
 				((MonsterStatuette)artifact).Type = StatueTypes[Utility.Random( StatueTypes.Length )];
 				((MonsterStatuette)artifact).LootType = LootType.Regular;
 			}
-
 			return artifact;
 		}
 
@@ -235,6 +242,8 @@ namespace Server.Mobiles
 						}
 					}
 				}
+                m_DamageEntries = new Dictionary<Mobile, int>();
+                RegisterDamageTo(this);
                 AwardArtifact(GetArtifact());
             }
             
@@ -277,7 +286,7 @@ namespace Server.Mobiles
             foreach (DamageEntry de in m.DamageEntries)
             {
                 Mobile damager = de.Damager;
-
+                
                 Mobile master = damager.GetDamageMaster(m);
 
                 if (master != null)
