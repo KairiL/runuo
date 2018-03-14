@@ -82,7 +82,7 @@ namespace Server.Items
 					from.SendMessage( 0x35, "You win 1500gp!" );
 					from.AddToBackpack( new BankCheck( 1500 ) );
 				}
-				else if( roll <= 100 ) // Another chance for gold
+				else if( roll <= 80 ) // Another chance for gold
 				{
 					from.SendMessage( 0x35, "You win 1000gp!" );
 					from.AddToBackpack( new BankCheck( 1000 ) );
