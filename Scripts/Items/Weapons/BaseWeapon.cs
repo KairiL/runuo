@@ -1814,20 +1814,23 @@ namespace Server.Items
 			int damageBonus = 0;
 
 
-            int ArcaneEmpowermentBonus = Spellweaving.ArcaneEmpowermentSpell.GetSpellBonus(m_Caster, playerVsPlayer);
+            int ArcaneEmpowermentBonus = 0;
+            if (attacker.Combatant != null)
+                ArcaneEmpowermentSpell.GetSpellBonus(attacker, attacker.Player && attacker.Combatant.Player);
 
-            int sdiBonus = AosAttributes.GetValue(m_Caster, AosAttribute.SpellDamage);
-            
+            int sdiBonus = AosAttributes.GetValue(attacker, AosAttribute.SpellDamage);
 
+            int inscribeSkill = attacker.Skills[SkillName.Inscribe].Fixed;
             // PvP spell damage increase cap of 15% from an item’s magic property
-            if (playerVsPlayer && sdiBonus > 15 + ((int)inscribeSkill) / 10)
-                sdiBonus = 15 + ((int)inscribeSkill) / 10;
+            if (attacker.Combatant != null)
+                if (attacker.Player && attacker.Combatant.Player && sdiBonus > 15 + ((int)inscribeSkill) / 10)
+                    sdiBonus = 15 + ((int)inscribeSkill) / 10;
 
             sdiBonus += ArcaneEmpowermentBonus;
 
             damageBonus += sdiBonus;
             // Inscription bonus
-            int inscribeSkill = attacker.Skills[SkillName.Inscribe].Fixed;
+            
 
 			damageBonus += inscribeSkill / 20;
 
