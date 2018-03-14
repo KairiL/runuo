@@ -221,6 +221,8 @@ namespace Server.Items
                 CampfireEntry entry = Campfire.GetEntry(m_Healer);
                 if (entry != null && entry.Safe)
                     healing += 20;
+                if (this is EnhancedBandage)
+                    healing += 10;
                 double chance = ((healing - 68.0) / 50.0) - (m_Slips * 0.02);
 
 				if (( (checkSkills = (healing >= 80.0 && anatomy >= 80.0)) && chance > Utility.RandomDouble() )
@@ -313,9 +315,15 @@ namespace Server.Items
 
 				double healing = m_Healer.Skills[primarySkill].Value;
 				double anatomy = m_Healer.Skills[secondarySkill].Value;
-				double chance = ((healing - 30.0) / 50.0) - (m_Patient.Poison.Level * 0.1) - (m_Slips * 0.02);
+                CampfireEntry entry = Campfire.GetEntry(m_Healer);
+                if (entry != null && entry.Safe)
+                    healing += 20;
+                if (this is EnhancedBandage)
+                    healing += 10;
 
-				if ( (checkSkills = (healing >= 60.0 && anatomy >= 60.0)) && chance > Utility.RandomDouble() )
+                double chance = ((healing - 30.0) / 50.0) - (m_Patient.Poison.Level * 0.1) - (m_Slips * 0.02);
+
+                if ( (checkSkills = (healing >= 60.0 && anatomy >= 60.0)) && chance > Utility.RandomDouble() )
 				{
 					if ( m_Patient.CurePoison( m_Healer ) )
 					{
@@ -359,9 +367,14 @@ namespace Server.Items
 
 				double healing = m_Healer.Skills[primarySkill].Value;
 				double anatomy = m_Healer.Skills[secondarySkill].Value;
-				double chance = ((healing + 10.0) / 100.0) - (m_Slips * 0.02);
+                CampfireEntry entry = Campfire.GetEntry(m_Healer);
+                if (entry != null && entry.Safe)
+                    healing += 20;
+                if (this is EnhancedBandage)
+                    healing += 10;
 
-				if ( chance > Utility.RandomDouble() )
+                double chance = ((healing + 10.0) / 100.0) - (m_Slips * 0.02);
+                if ( chance > Utility.RandomDouble() )
 				{
 					healerNumber = 500969; // You finish applying the bandages.
 

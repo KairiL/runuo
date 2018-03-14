@@ -28,7 +28,8 @@ namespace Server.Items
 		public Halberd() : base( 0x143E )
 		{
 			Weight = 16.0;
-		}
+            MaxRange = 2;
+        }
 
 		public Halberd( Serial serial ) : base( serial )
 		{

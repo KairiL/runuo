@@ -31,7 +31,8 @@ namespace Server.Items
 		public Scythe() : base( 0x26BA )
 		{
 			Weight = 5.0;
-		}
+            MaxRange = 2;
+        }
 
 		public Scythe( Serial serial ) : base( serial )
 		{

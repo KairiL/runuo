@@ -28,6 +28,7 @@ namespace Server.Items
 		public Bardiche() : base( 0xF4D )
 		{
 			Weight = 7.0;
+            MaxRange = 2;
 		}
 
 		public Bardiche( Serial serial ) : base( serial )
