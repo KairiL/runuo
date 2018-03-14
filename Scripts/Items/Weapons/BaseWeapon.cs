@@ -1729,11 +1729,13 @@ namespace Server.Items
 
 			if ( Core.AOS )
 			{
-				int physChance = (int)(AosWeaponAttributes.GetValue( attacker, AosWeaponAttribute.HitPhysicalArea ) * propertyBonus);
-				int fireChance = (int)(AosWeaponAttributes.GetValue( attacker, AosWeaponAttribute.HitFireArea ) * propertyBonus);
-				int coldChance = (int)(AosWeaponAttributes.GetValue( attacker, AosWeaponAttribute.HitColdArea ) * propertyBonus);
-				int poisChance = (int)(AosWeaponAttributes.GetValue( attacker, AosWeaponAttribute.HitPoisonArea ) * propertyBonus);
-				int nrgyChance = (int)(AosWeaponAttributes.GetValue( attacker, AosWeaponAttribute.HitEnergyArea ) * propertyBonus);
+                double scribeBonus = attacker.Skills.Inscribe.Value / 100.0 + 1;
+
+                int physChance = (int)(AosWeaponAttributes.GetValue( attacker, AosWeaponAttribute.HitPhysicalArea ) * propertyBonus * scribeBonus);
+				int fireChance = (int)(AosWeaponAttributes.GetValue( attacker, AosWeaponAttribute.HitFireArea ) * propertyBonus * scribeBonus);
+				int coldChance = (int)(AosWeaponAttributes.GetValue( attacker, AosWeaponAttribute.HitColdArea ) * propertyBonus * scribeBonus);
+				int poisChance = (int)(AosWeaponAttributes.GetValue( attacker, AosWeaponAttribute.HitPoisonArea ) * propertyBonus * scribeBonus);
+				int nrgyChance = (int)(AosWeaponAttributes.GetValue( attacker, AosWeaponAttribute.HitEnergyArea ) * propertyBonus * scribeBonus);
 
 				if ( physChance != 0 && physChance > Utility.Random( 100 ) )
 					DoAreaAttack( attacker, defender, 0x10E,   50, 100, 0, 0, 0, 0 );
@@ -1750,11 +1752,11 @@ namespace Server.Items
 				if ( nrgyChance != 0 && nrgyChance > Utility.Random( 100 ) )
 					DoAreaAttack( attacker, defender, 0x1F1,  120, 0, 0, 0, 0, 100 );
 
-				int maChance = (int)(AosWeaponAttributes.GetValue( attacker, AosWeaponAttribute.HitMagicArrow ) * propertyBonus);
-				int harmChance = (int)(AosWeaponAttributes.GetValue( attacker, AosWeaponAttribute.HitHarm ) * propertyBonus);
-				int fireballChance = (int)(AosWeaponAttributes.GetValue( attacker, AosWeaponAttribute.HitFireball ) * propertyBonus);
-				int lightningChance = (int)(AosWeaponAttributes.GetValue( attacker, AosWeaponAttribute.HitLightning ) * propertyBonus);
-				int dispelChance = (int)(AosWeaponAttributes.GetValue( attacker, AosWeaponAttribute.HitDispel ) * propertyBonus);
+				int maChance = (int)(AosWeaponAttributes.GetValue( attacker, AosWeaponAttribute.HitMagicArrow ) * propertyBonus * scribeBonus);
+				int harmChance = (int)(AosWeaponAttributes.GetValue( attacker, AosWeaponAttribute.HitHarm ) * propertyBonus * scribeBonus);
+				int fireballChance = (int)(AosWeaponAttributes.GetValue( attacker, AosWeaponAttribute.HitFireball ) * propertyBonus * scribeBonus);
+				int lightningChance = (int)(AosWeaponAttributes.GetValue( attacker, AosWeaponAttribute.HitLightning ) * propertyBonus * scribeBonus);
+				int dispelChance = (int)(AosWeaponAttributes.GetValue( attacker, AosWeaponAttribute.HitDispel ) * propertyBonus * scribeBonus);
 
 				if ( maChance != 0 && maChance > Utility.Random( 100 ) )
 					DoMagicArrow( attacker, defender );
@@ -1771,8 +1773,8 @@ namespace Server.Items
 				if ( dispelChance != 0 && dispelChance > Utility.Random( 100 ) )
 					DoDispel( attacker, defender );
 
-				int laChance = (int)(AosWeaponAttributes.GetValue( attacker, AosWeaponAttribute.HitLowerAttack ) * propertyBonus);
-				int ldChance = (int)(AosWeaponAttributes.GetValue( attacker, AosWeaponAttribute.HitLowerDefend ) * propertyBonus);
+				int laChance = (int)(AosWeaponAttributes.GetValue( attacker, AosWeaponAttribute.HitLowerAttack ) * propertyBonus * scribeBonus);
+				int ldChance = (int)(AosWeaponAttributes.GetValue( attacker, AosWeaponAttribute.HitLowerDefend ) * propertyBonus * scribeBonus);
 
 				if ( laChance != 0 && laChance > Utility.Random( 100 ) )
 					DoLowerAttack( attacker, defender );
@@ -1811,8 +1813,21 @@ namespace Server.Items
 			int damage = Utility.Dice( dice, sides, bonus ) * 100;
 			int damageBonus = 0;
 
-			// Inscription bonus
-			int inscribeSkill = attacker.Skills[SkillName.Inscribe].Fixed;
+
+            int ArcaneEmpowermentBonus = Spellweaving.ArcaneEmpowermentSpell.GetSpellBonus(m_Caster, playerVsPlayer);
+
+            int sdiBonus = AosAttributes.GetValue(m_Caster, AosAttribute.SpellDamage);
+            
+
+            // PvP spell damage increase cap of 15% from an item’s magic property
+            if (playerVsPlayer && sdiBonus > 15 + ((int)inscribeSkill) / 10)
+                sdiBonus = 15 + ((int)inscribeSkill) / 10;
+
+            sdiBonus += ArcaneEmpowermentBonus;
+
+            damageBonus += sdiBonus;
+            // Inscription bonus
+            int inscribeSkill = attacker.Skills[SkillName.Inscribe].Fixed;
 
 			damageBonus += inscribeSkill / 20;
 
@@ -1960,12 +1975,13 @@ namespace Server.Items
 
 			List<Mobile> list = new List<Mobile>();
 
-			int range = Core.ML ? 5 : 10;
+			//int range = Core.ML ? 5 : 10;
+            int range = (int)(5 + from.Skills.Inscribe.Value/20);
 
 			IPooledEnumerable eable = from.GetMobilesInRange(range);
 			foreach ( Mobile m in eable )
 			{
-				if ( from != m && defender != m && SpellHelper.ValidIndirectTarget( from, m ) && from.CanBeHarmful( m, false ) && ( !Core.ML || from.InLOS( m ) ) )
+				if ( from != m && SpellHelper.ValidIndirectTarget( from, m ) && from.CanBeHarmful( m, false ) && ( !Core.ML || from.InLOS( m ) ) )
 					list.Add( m );
 			}
 			eable.Free();
@@ -1990,8 +2006,8 @@ namespace Server.Items
 				{
 					damage *= ( 11 - from.GetDistanceToSqrt( m ) ) / 10;
 				}
-
-				from.DoHarmful( m, true );
+                damage *= from.Skills.Inscribe.Value / 33.3;
+                from.DoHarmful( m, true );
 				m.FixedEffect( 0x3779, 1, 15, hue, 0 );
 				AOS.Damage(m, from, (int)damage, phys, fire, cold, pois, nrgy);
 			}
