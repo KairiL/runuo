@@ -251,7 +251,8 @@ namespace Server
 				new LootPackItem( typeof( BaseRanged ), 69 ),
 				new LootPackItem( typeof( BaseArmor ), 397 ),
 				new LootPackItem( typeof( BaseShield ), 52 ),
-				new LootPackItem( typeof( BaseJewel ), 207 )
+				new LootPackItem( typeof( BaseJewel ), 207 ),
+                new LootPackItem( typeof( BaseTalisman ), 100 )
 			};
 		#endregion
 
@@ -311,7 +312,7 @@ namespace Server
 
 		public static readonly LootPack SeUltraRich = new LootPack( new LootPackEntry[]
 			{
-				new LootPackEntry(  true, Gold,						100.00, "6d100+600" ),
+				new LootPackEntry(  true, Gold,						100.00, "3d100+600" ),
 				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 25, 100 ),
 				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 3, 5, 25, 100 ),
 				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 3, 5, 33, 100 ),
@@ -320,7 +321,7 @@ namespace Server
 
 		public static readonly LootPack SeSuperBoss = new LootPack( new LootPackEntry[]
 			{
-				new LootPackEntry(  true, Gold,						100.00, "10d100+800" ),
+				new LootPackEntry(  true, Gold,						100.00, "3d100+800" ),
 				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 25, 100 ),
 				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 3, 5, 25, 100 ),
 				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 33, 100 ),
@@ -377,7 +378,7 @@ namespace Server
 
 		public static readonly LootPack AosUltraRich = new LootPack( new LootPackEntry[]
 			{
-				new LootPackEntry(  true, Gold,			100.00, "5d100+500" ),
+				new LootPackEntry(  true, Gold,			100.00, "2d100+500" ),
 				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 25, 100 ),
 				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 3, 5, 25, 100 ),
 				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 3, 5, 35, 100 ),
@@ -386,7 +387,7 @@ namespace Server
 
 		public static readonly LootPack AosSuperBoss = new LootPack( new LootPackEntry[]
 			{
-				new LootPackEntry(  true, Gold,			100.00, "5d100+500" ),
+				new LootPackEntry(  true, Gold,			100.00, "2d100+500" ),
 				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 25, 100 ),
 				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 3, 5, 25, 100 ),
 				new LootPackEntry( false, AosMagicItemsUltraRich,	100.00, 1, 5, 33, 100 ),
@@ -471,7 +472,7 @@ namespace Server
         #region Epic LootPacks
         public static readonly LootPack LowEpic1 = new LootPack( new LootPackEntry[]
         {
-                new LootPackEntry( true, Gold,         100.00, "5d100+500" ),
+                new LootPackEntry( true, Gold,         100.00, "2d100+500" ),
                 new LootPackEntry( false, Instruments, 0.01, 1, 2, 100, 101 ),
                 new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 6, 25, 100),
                 new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 6, 25, 100),
@@ -481,7 +482,7 @@ namespace Server
         } );
         public static readonly LootPack LowEpic2 = new LootPack(new LootPackEntry[]
         {
-                new LootPackEntry( true, Gold,         100.00, "5d100+500" ),
+                new LootPackEntry( true, Gold,         100.00, "2d100+500" ),
                 new LootPackEntry( false, Instruments, 0.01, 1, 2, 100, 101 ),
                 new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 5, 25, 120),
                 new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 5, 25, 120),
@@ -492,7 +493,7 @@ namespace Server
 
         public static readonly LootPack Epic = new LootPack(new LootPackEntry[]
         {
-                new LootPackEntry( true, Gold,         100.00, "10d100+500" ),
+                new LootPackEntry( true, Gold,         100.00, "5d100+500" ),
                 new LootPackEntry( false, Instruments, 0.01, 1, 2, 100, 150 ),
                 new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 6, 25, 120),
                 new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 6, 25, 120),
@@ -508,7 +509,7 @@ namespace Server
 
         public static readonly LootPack HighEpic = new LootPack(new LootPackEntry[]
         {
-                new LootPackEntry( true, Gold,         100.00, "15d100+500" ),
+                new LootPackEntry( true, Gold,         100.00, "10d100+500" ),
                 new LootPackEntry( false, Instruments, 0.01, 1, 3, 100, 150 ),
                 new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 7, 35, 150),
                 new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 7, 35, 150),
@@ -1000,6 +1001,8 @@ namespace Server
 					item = RandomScroll( 2, 8, 8 );
                 else if ( m_Type == typeof( BaseEarrings ) )
                     item = Loot.RandomEarrings();
+                else if ( m_Type == typeof( BaseTalisman ) )
+                    item = Loot.RandomTalisman();
 				else
 					item = Activator.CreateInstance( m_Type ) as Item;
 
