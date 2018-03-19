@@ -664,7 +664,11 @@ namespace Server.Spells
 
 			fcr -= ThunderstormSpell.GetCastRecoveryMalus( m_Caster );
 
-			int fcrDelay = -(CastRecoveryFastScalar * fcr);
+
+            if (SpellHelper.IsBuffed(m_Caster))
+                fcr += SpellHelper.GetFCRBonus(m_Caster);
+
+            int fcrDelay = -(CastRecoveryFastScalar * fcr);
 
 			int delay = CastRecoveryBase + fcrDelay;
 
@@ -713,7 +717,11 @@ namespace Server.Spells
 			if( EssenceOfWindSpell.IsDebuffed( m_Caster ) )
 				fc -= EssenceOfWindSpell.GetFCMalus( m_Caster );
 
-			TimeSpan baseDelay = CastDelayBase;
+            if (SpellHelper.IsBuffed( m_Caster ) )
+                fc += SpellHelper.GetFCBonus ( m_Caster );
+
+
+            TimeSpan baseDelay = CastDelayBase;
 
 			TimeSpan fcDelay = TimeSpan.FromSeconds( -(CastDelayFastScalar * fc * CastDelaySecondsPerTick) );
 

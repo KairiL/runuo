@@ -2,6 +2,7 @@ using System;
 using Server;
 using Server.Items;
 using Server.Spells;
+using System.Collections.Generic;
 
 namespace Server.Mobiles
 {
@@ -157,6 +158,40 @@ namespace Server.Mobiles
         {
             base.OnThink();
             RandoTarget(this);
+        }
+
+        public override void OnGaveMeleeAttack(Mobile defender)
+        {
+            base.OnGaveMeleeAttack(defender);
+
+            List<string> EffectList = new List<string>();
+            EffectList.Add("CastSpeed"); 
+            EffectList.Add("AttackChance"); 
+            EffectList.Add("DefendChance");
+            EffectList.Add("WeaponSpeed");
+            if (Utility.RandomDouble() < .15)
+            {
+                SpellHelper.AddAosBuff(this, defender, EffectList,
+                              TimeSpan.FromSeconds(30), 3, false,
+                              false, true, -60);
+            }
+        }
+
+        public override void OnGotMeleeAttack(Mobile attacker)
+        {
+            base.OnGotMeleeAttack(attacker);
+            
+            List<string> EffectList = new List<string>();
+            EffectList.Add("CastSpeed");
+            EffectList.Add("AttackChance");
+            EffectList.Add("DefendChance");
+            EffectList.Add("WeaponSpeed");
+            if (Utility.RandomDouble() < .15)
+            {
+                SpellHelper.AddAosBuff(this, attacker, EffectList,
+                              TimeSpan.FromSeconds(30), 3, false,
+                              false, true, -60);
+            }
         }
 
         public override void OnDeath(Container c)

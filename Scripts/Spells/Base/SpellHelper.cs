@@ -271,7 +271,231 @@ namespace Server.Spells
 			return false;
 		}
 
-		public static TimeSpan GetDuration( Mobile caster, Mobile target )
+        #region AosBuff
+        public static void AddAosBuff(Mobile caster, Mobile target, List<string> AosBuffs,
+                              TimeSpan duration, int area, bool hitFromTarget,
+                              bool resistable, bool fixedEffect, int scalar)
+        {
+            
+            caster.PlaySound(0x5C6);
+            Mobile from;
+            int damage = 0;
+            int damageBonus = 0;
+            double inscribeSkill = caster.Skills[SkillName.Inscribe].Value; ;
+            int inscribeBonus = (int)(inscribeSkill + (100 * (int)(inscribeSkill / 100))) / 10;
+            int intBonus = caster.Int / 10;
+            int ArcaneEmpowermentBonus = 0;
+            int sdiBonus = AosAttributes.GetValue(caster, AosAttribute.SpellDamage);
+            TransformContext context = TransformationSpellHelper.GetContext(caster);
+            if (context != null && context.Spell is ReaperFormSpell)
+                damageBonus += ((ReaperFormSpell)context.Spell).SpellDamageBonus;
+
+            damageBonus += inscribeBonus + intBonus + ArcaneEmpowermentBonus;
+
+            double skill = caster.Skills[SkillName.Magery].Value;
+            damageBonus += (int)(100*GetOffsetScalar( caster, target, (scalar>0)));
+
+            int fcBonus = 0;
+            int fcrBonus = 0;
+            int ssiBonus = 0;
+            int dciBonus = 0;
+            int hciBonus = 0;
+
+            List<Mobile> targets = new List<Mobile>();
+            if (area == -1)
+                targets.Add(target);
+            else
+            {
+                if (hitFromTarget)
+                    from = target;
+                else
+                    from = caster;
+                foreach (Mobile m in from.GetMobilesInRange(area))
+                    if (caster != m && caster.InLOS(m) && SpellHelper.ValidIndirectTarget(caster, m) && caster.CanBeHarmful(m, false))
+                        targets.Add(m);
+            }
+            for (int i = 0; i < targets.Count; i++)
+            {
+                Mobile m = targets[i];
+
+                caster.DoHarmful(m);
+
+                ArcaneEmpowermentBonus += Spellweaving.ArcaneEmpowermentSpell.GetSpellBonus(caster, m.Player && caster.Player);
+
+                if (m.Player && caster.Player && sdiBonus > 15 + ((int)inscribeSkill) / 10)
+                    sdiBonus = 15 + ((int)inscribeSkill) / 10;
+
+                //SpellHelper.Damage(this, m, damage * (100 + damageBonus + sdiBonus + ArcaneEmpowermentBonus) / 100, 0, 0, 100, 0, 0);
+                if (fixedEffect)
+                    damage = scalar;
+                else
+                    damage = scalar * (100 + damageBonus + sdiBonus + ArcaneEmpowermentBonus) / 100;
+                foreach (string AosBuff in AosBuffs)
+                {
+                    switch (AosBuff)
+                    {
+                        case "CastSpeed":
+                            fcBonus = damage / 12;
+                            //TODO: find correct cliloc numbers and formats
+                            //BuffInfo.AddBuff(m, new BuffInfo(BuffIcon.UnknownStandingSwirl, 1062714, 1060413, duration, m, String.Format("{0}", fcBonus)));
+                            break;
+                        case "CastRecovery":
+                            fcrBonus = damage / 12;
+                            //BuffInfo.AddBuff(m, new BuffInfo(BuffIcon.UnknownStandingSwirl, 1062714, 1060412, duration, m, String.Format("{0}\t{1}", fcrBonus.ToString(), fcrBonus.ToString())));
+                            break;
+                        case "WeaponSpeed":
+                            ssiBonus = damage;
+                            //BuffInfo.AddBuff(m, new BuffInfo(BuffIcon.UnknownStandingSwirl, 1062714, 1060486, duration, m, String.Format("{0}", ssiBonus.ToString())));
+                            break;
+                        case "DefendChance":
+                            dciBonus = damage;
+                            break;
+                        case "HitChance":
+                            hciBonus = damage;
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                m_Table[m] = new AosBuffInfo(m, fcBonus, fcrBonus, ssiBonus, dciBonus, hciBonus, duration);
+                
+
+                //BuffInfo.AddBuff(m, new BuffInfo(BuffIcon.UnknownStandingSwirl, 1075802, duration, m, String.Format("{0}\t{1}", ssiBonus.ToString(), fcBonus.ToString())));
+            }
+        }
+
+
+        private static Dictionary<Mobile, AosBuffInfo> m_Table = new Dictionary<Mobile, AosBuffInfo>();
+
+        public class AosBuffInfo
+        {
+            private Mobile m_Defender;
+            private int m_FCBonus;
+            private int m_FCRBonus;
+            private int m_SSIBonus;
+            private int m_DCIBonus;
+            private int m_HCIBonus;
+            private ExpireTimer m_Timer;
+
+            public Mobile Defender { get { return m_Defender; } }
+            public int FCBonus { get { return m_FCBonus; } }
+            public int FCRBonus { get { return m_FCRBonus; } }
+            public int SSIBonus { get { return m_SSIBonus; } }
+            public int DCIBonus { get { return m_DCIBonus; } }
+            public int HCIBonus { get { return m_HCIBonus; } }
+            public ExpireTimer Timer { get { return m_Timer; } }
+
+            public AosBuffInfo(Mobile defender, int fcBonus, int fcrBonus, int ssiBonus, int dciBonus, int hciBonus, TimeSpan duration)
+            {
+                m_Defender = defender;
+                m_FCBonus = fcBonus;
+                m_FCRBonus = fcrBonus;
+                m_SSIBonus = ssiBonus;
+                m_DCIBonus = dciBonus;
+                m_HCIBonus = hciBonus;
+
+                m_Timer = new ExpireTimer(m_Defender, duration);
+                m_Timer.Start();
+            }
+        }
+
+        public static int GetFCBonus(Mobile m)
+        {
+            AosBuffInfo info;
+
+            if (m_Table.TryGetValue(m, out info))
+                return info.FCBonus;
+
+            return 0;
+        }
+
+        public static int GetFCRBonus(Mobile m)
+        {
+            AosBuffInfo info;
+
+            if (m_Table.TryGetValue(m, out info))
+                return info.FCRBonus;
+
+            return 0;
+        }
+
+        public static int GetSSIBonus(Mobile m)
+        {
+            AosBuffInfo info;
+
+            if (m_Table.TryGetValue(m, out info))
+                return info.SSIBonus;
+
+            return 0;
+        }
+
+        public static int GetDCIBonus(Mobile m)
+        {
+            AosBuffInfo info;
+
+            if (m_Table.TryGetValue(m, out info))
+                return info.DCIBonus;
+
+            return 0;
+        }
+
+        public static int GetHCIBonus(Mobile m)
+        {
+            AosBuffInfo info;
+
+            if (m_Table.TryGetValue(m, out info))
+                return info.HCIBonus;
+
+            return 0;
+        }
+
+        public static bool IsBuffed(Mobile m)
+        {
+            return m_Table.ContainsKey(m);
+        }
+
+        public static void StopBuffing(Mobile m, bool message)
+        {
+            AosBuffInfo info;
+
+            if (m_Table.TryGetValue(m, out info))
+                info.Timer.DoExpire(message);
+        }
+
+        public class ExpireTimer : Timer
+        {
+            private Mobile m_Mobile;
+
+            public ExpireTimer(Mobile m, TimeSpan delay) : base(delay)
+            {
+                m_Mobile = m;
+            }
+
+            protected override void OnTick()
+            {
+                DoExpire(true);
+            }
+
+            public void DoExpire(bool message)
+            {
+                Stop();
+                /*
+				if( message )
+				{
+				}
+				*/
+                m_Table.Remove(m_Mobile);
+
+                BuffInfo.RemoveBuff(m_Mobile, BuffIcon.UnknownStandingSwirl);
+            }
+        }
+        #endregion
+
+
+
+
+
+        public static TimeSpan GetDuration( Mobile caster, Mobile target )
 		{
 			if( Core.AOS )
 				return TimeSpan.FromSeconds( ((6 * caster.Skills.EvalInt.Fixed) / 50) + 1 );

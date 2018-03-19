@@ -847,9 +847,11 @@ namespace Server.Items
                     if ( bonus > 45 + (int)(attacker.Skills[SkillName.Wrestling].Value / 12.0))
 					    bonus = 45 + (int)(attacker.Skills[SkillName.Wrestling].Value / 12.0);
 
+                if (SpellHelper.IsBuffed( attacker ))
+                    bonus += SpellHelper.GetHCIBonus(attacker);
                 //bonus += (attacker.Hunger + attacker.Thirst - defender.Hunger - defender.Thirst)/4;
                 //removed hunger by popular request
-				ourValue = (atkValue + 20.0) * (100 + bonus);
+                ourValue = (atkValue + 20.0) * (100 + bonus);
 
 				bonus = AosAttributes.GetValue( defender, AosAttribute.DefendChance );
 
@@ -880,7 +882,10 @@ namespace Server.Items
                     if ( bonus > 45 + (int)(defender.Skills[SkillName.Wrestling].Value / 12.0))
 					    bonus = 45 + (int)(defender.Skills[SkillName.Wrestling].Value / 12.0);
 
-				theirValue = (defValue + 20.0) * (100 + bonus);
+                if (SpellHelper.IsBuffed( defender))
+                    bonus += SpellHelper.GetDCIBonus(defender);
+
+                theirValue = (defValue + 20.0) * (100 + bonus);
 
 				bonus = 0;
 			}
@@ -951,10 +956,13 @@ namespace Server.Items
 				if( EssenceOfWindSpell.IsDebuffed( m ) )
 					bonus -= EssenceOfWindSpell.GetSSIMalus( m );
 
-				if ( bonus > 60 )
-					bonus = 60;
-				
-				double ticks;
+                if (SpellHelper.IsBuffed(m))
+                    bonus += SpellHelper.GetSSIBonus(m);
+
+                //if ( bonus > 60 )
+				//	bonus = 60;
+
+                double ticks;
 
 				if ( Core.ML )
 				{

@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using Server;
 using Server.Items;
 using Server.Network;
@@ -194,8 +195,17 @@ namespace Server.Mobiles
 			if ( 0.1 >= Utility.RandomDouble() )
 				DrainLife();
 
-            if (Utility.RandomDouble() < 0.15)
+            List<string> EffectList = new List<string>();
+            EffectList.Add("CastSpeed");
+            EffectList.Add("CastRecovery");
+            EffectList.Add("WeaponSpeed");
+            if (Utility.RandomDouble() < .15)
+            {
+                SpellHelper.AddAosBuff(this, defender, EffectList,
+                              TimeSpan.FromSeconds(30), -1, false,
+                              false, true, -60);
                 this.CacophonicAttack(defender);
+            }
         }
 
 		public override void OnGotMeleeAttack( Mobile attacker )
@@ -205,8 +215,17 @@ namespace Server.Mobiles
 			if ( 0.1 >= Utility.RandomDouble() )
 				DrainLife();
 
-            if (Utility.RandomDouble() < 0.15)
+            List<string> EffectList = new List<string>();
+            EffectList.Add("CastSpeed");
+            EffectList.Add("CastRecovery");
+            EffectList.Add("WeaponSpeed");
+            if (Utility.RandomDouble() < .15)
+            {
+                SpellHelper.AddAosBuff(this, attacker, EffectList,
+                              TimeSpan.FromSeconds(30), -1, false,
+                              false, true, -60);
                 this.CacophonicAttack(attacker);
+            }
         }
 
         public static bool UnderCacophonicAttack(Mobile from)
@@ -216,6 +235,8 @@ namespace Server.Mobiles
 
             return m_Table[from] != null;
         }
+
+        #region CacophonicAttack
 
         public virtual void CacophonicAttack(Mobile to)
         {
@@ -248,10 +269,14 @@ namespace Server.Mobiles
                 this.CacophonicEnd((Mobile)state);
         }
 
+
+        #endregion
         private int RandomPoint(int mid)
         {
             return (mid + Utility.RandomMinMax(-2, 2));
         }
+
+
 
         public virtual Point3D GetSpawnPosition(int range)
         {
