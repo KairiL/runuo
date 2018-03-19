@@ -146,16 +146,31 @@ namespace Server.Mobiles
             double SwitchRate = .01;
             int PullRange = 10;
             foreach (Mobile m_target in GetMobilesInRange(PullRange))
-                if ((m_target != from) && (SpellHelper.ValidIndirectTarget(from, (Mobile)m_target) && from.CanBeHarmful((Mobile)m_target, false)))
+                if ((m_target != from) && (SpellHelper.ValidIndirectTarget(from, (Mobile)m_target) && 
+                    from.CanBeHarmful((Mobile)m_target, false)) && InLOS(m_target))
                 {
                     if (Utility.RandomDouble() < SwitchRate)
                         from.Combatant = m_target;
                 }
         }
 
+        private void PoisonAreaAttack()
+        {
+            int PoisonRange = 10;
+            double PoisonRate = .01;
+            if (Utility.RandomDouble() < PoisonRate)
+                foreach (Mobile m_target in GetMobilesInRange(PoisonRange))
+                    if ((m_target != this) && (SpellHelper.ValidIndirectTarget(this, (Mobile)m_target) &&
+                            CanBeHarmful((Mobile)m_target, false)) && InLOS(m_target))
+                    { 
+                            m_target.ApplyPoison(this, Poison.Lethal);
+                    }
+
+        }
         public override void OnThink()
         {
             base.OnThink();
+            PoisonAreaAttack();
             RandoTarget(this);
         }
 
@@ -236,7 +251,7 @@ namespace Server.Mobiles
 			}
 			
 			// teleports player near
-			if ( from is PlayerMobile && !InRange( from.Location, 1 ) )
+			if ( from is PlayerMobile && !InRange( from.Location, 5 ) )
 			{
 				Combatant = from;
                 SpellHelper.FindValidSpawnLocation(Map, ref p, true);
