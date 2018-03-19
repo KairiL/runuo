@@ -454,7 +454,8 @@ namespace Server.Mobiles
 
                     foreach (object o in eable)
                     {
-                        if ( (o is Mobile) && (o != m_From) && (m_Mobile == null || (SpellHelper.ValidIndirectTarget(m_From, (Mobile)o) && m_From.CanBeHarmful((Mobile)o, false))))
+                        if ( (o is Mobile) && (o != m_From) && (m_Mobile == null || (SpellHelper.ValidIndirectTarget(m_From, (Mobile)o) && m_From.CanBeHarmful((Mobile)o, false))) &&
+                            !o.InLOS(m_Mobile))
                         {
                             if (o is PlayerMobile)
                                 AOS.Damage((Mobile)o, m_From, Utility.RandomMinMax(0, exploDamage/4), 0, 100, 0, 0, 0);
