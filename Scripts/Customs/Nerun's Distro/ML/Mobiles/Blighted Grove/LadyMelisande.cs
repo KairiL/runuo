@@ -9,7 +9,9 @@ namespace Server.Mobiles
 	[CorpseName( "a lady's corpse" )]
 	public class LadyMelisande : BaseCreature
 	{
-		[Constructable]
+
+        private bool m_SpawnedSatyrs;
+        [Constructable]
 		public LadyMelisande() : base( AIType.AI_NecromageEpic, FightMode.Closest, 10, 1, 0.2, 0.4 )
 		{
 			Name = "Lady Melisande";
@@ -164,6 +166,11 @@ namespace Server.Mobiles
         {
             base.OnGaveMeleeAttack(defender);
 
+            if (!m_SpawnedSatyrs)
+            {
+                SpawnSatyrs();
+                m_SpawnedSatyrs = true;
+            }
             List<string> EffectList = new List<string>();
             EffectList.Add("CastSpeed"); 
             EffectList.Add("AttackChance"); 
@@ -180,7 +187,13 @@ namespace Server.Mobiles
         public override void OnGotMeleeAttack(Mobile attacker)
         {
             base.OnGotMeleeAttack(attacker);
-            
+
+            if (!m_SpawnedSatyrs)
+            {
+                SpawnSatyrs();
+                m_SpawnedSatyrs = true;
+            }
+
             List<string> EffectList = new List<string>();
             EffectList.Add("CastSpeed");
             EffectList.Add("AttackChance");
@@ -191,6 +204,41 @@ namespace Server.Mobiles
                 SpellHelper.AddAosBuff(this, attacker, EffectList,
                               TimeSpan.FromSeconds(30), 3, false,
                               false, true, -60);
+            }
+        }
+
+        public void SpawnSatyrs()
+        {
+            Map map = this.Map;
+
+            if (map == null)
+                return;
+
+            int newSatyrs = 5;
+
+            for (int i = 0; i < newSatyrs; ++i)
+            {
+                BaseCreature satyr = new EvilSatyr();
+
+                satyr.Team = this.Team;
+
+                bool validLocation = false;
+                Point3D loc = this.Location;
+
+                for (int j = 0; !validLocation && j < 10; ++j)
+                {
+                    int x = X + Utility.Random(3) - 1;
+                    int y = Y + Utility.Random(3) - 1;
+                    int z = map.GetAverageZ(x, y);
+
+                    if (validLocation = map.CanFit(x, y, this.Z, 16, false, false))
+                        loc = new Point3D(x, y, Z);
+                    else if (validLocation = map.CanFit(x, y, z, 16, false, false))
+                        loc = new Point3D(x, y, z);
+                }
+
+                satyr.MoveToWorld(loc, map);
+            
             }
         }
 
