@@ -137,8 +137,46 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
 		{
-            AddLoot(LootPack.SuperBoss, 2);
+            //AddLoot(LootPack.SuperBoss, 2);
+            AddLoot(LootPack.Epic, 2);
             AddLoot(LootPack.HighScrolls, Utility.RandomMinMax(6, 60));
+
+            for (int i = 0; i < 8; i++)
+            {
+                switch (Utility.Random(6))
+                {
+                    case 0: AddItem(new Corruption()); break;
+                    case 1: AddItem(new Taint()); break;
+                    case 2: AddItem(new Blight()); break;
+                    case 3: AddItem(new Putrefaction()); break;
+                    case 4: AddItem(new Muculent()); break;
+                    case 5: AddItem(new Scourge()); break;
+                }
+            }
+
+            switch (Utility.Random(10))//rare
+            {
+                case 0: AddItem(new GrizzleArms()); break;
+                case 1: AddItem(new GrizzleChest()); break;
+                case 2: AddItem(new GrizzleGloves()); break;
+                case 3: AddItem(new GrizzleHelm()); break;
+                case 4: AddItem(new GrizzleLegs()); break;
+                case 5: AddItem(new GrizzleArms()); break;
+                case 6: AddItem(new GrizzledMareStatuette()); break;
+
+            }
+            switch (Utility.Random(3))//common
+            {
+                case 0: AddItem(new TombstoneOfTheDamned()); break;
+                case 1: AddItem(new GlobOfMonsterousInterredGrizzle()); break;
+                case 2: AddItem(new GrizzledBones()); break;
+
+            }
+            switch (Utility.Random(5))//uncommon
+            {
+                case 0: AddItem(new MonsterousInterredGrizzleMaggots()); break;
+                case 1: AddItem(new GrizzledSkullCollection()); break;
+            }
         }
 
 		public override int Meat{ get{ return 1; } }

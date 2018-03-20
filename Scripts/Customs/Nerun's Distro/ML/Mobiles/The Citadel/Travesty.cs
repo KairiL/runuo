@@ -58,15 +58,18 @@ namespace Server.Mobiles
 
 		public override void GenerateLoot()
 		{
-			AddLoot( LootPack.AosSuperBoss, 8 );
+            //AddLoot( LootPack.AosSuperBoss, 8 );
+            AddLoot(LootPack.Epic, 2);
             switch (Utility.Random(10))
             {
                 case 0: AddItem(new MarkOfTheTravesty()); break;
+                //case 1: AddItem(new ImprisonedDog()); break;
             }
 
             switch (Utility.Random(5))
             {
                 case 0: AddItem(new TravestysSushiPreparations()); break;
+                //case 1: AddItem(new TragicRemainsOfTravesty()); break;
             }
 
             switch (Utility.Random(3))

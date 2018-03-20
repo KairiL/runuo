@@ -117,18 +117,41 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
-            AddLoot(LootPack.AosUltraRich);
-            AddLoot(LootPack.AosSuperBoss);
-            switch (Utility.Random(6))
+            //AddLoot(LootPack.AosUltraRich);
+            //AddLoot(LootPack.AosSuperBoss);
+            AddLoot(LootPack.LowEpic1, 1);
+            AddLoot(LootPack.LowEpic2, 1);
+            for (int i = 0; i < 8; i++)
             {
-                case 0: AddItem(new Corruption()); break;
-                case 1: AddItem(new Taint()); break;
-                case 2: AddItem(new Blight()); break;
-                case 3: AddItem(new Putrefaction()); break;
-                case 4: AddItem(new Muculent()); break;
-                case 5: AddItem(new Scourge()); break;
+                switch (Utility.Random(6))
+                {
+                    case 0: AddItem(new Corruption()); break;
+                    case 1: AddItem(new Taint()); break;
+                    case 2: AddItem(new Blight()); break;
+                    case 3: AddItem(new Putrefaction()); break;
+                    case 4: AddItem(new Muculent()); break;
+                    case 5: AddItem(new Scourge()); break;
+                }
             }
-
+            switch (Utility.Random(10))//rare
+            {
+                case 0: AddItem(new DreadRevenge()); break;
+                case 1: AddItem(new PristineDreadHorn()); break;
+                //case 2: AddItem(new DreadFlute()); break;
+            }
+            switch (Utility.Random(3))//common
+            {
+                case 0: AddItem(new MangledDreadHorn()); break;
+            }
+            switch (Utility.Random(5))//uncommon
+            {
+                case 0: AddItem(new DreadMushroom()); break;
+                case 1: AddItem(new DreadMushroom3()); break;
+                case 2: AddItem(new DreadMushroom4()); break;
+                case 3: AddItem(new HornOfDreadhorn()); break;
+                case 4: AddItem(new HornOfTheDreadhorn()); break;
+            }
+            AddItem(new DreadHornMane());
         }
 
         public override int Hides{ get{ return 10; } }

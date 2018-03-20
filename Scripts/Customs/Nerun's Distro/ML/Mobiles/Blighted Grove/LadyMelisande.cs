@@ -124,8 +124,10 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
-            AddLoot(LootPack.AosUltraRich);
-            AddLoot(LootPack.AosSuperBoss);
+            //AddLoot(LootPack.AosUltraRich);
+            //AddLoot(LootPack.AosSuperBoss);
+            AddLoot(LootPack.Epic, 2);
+
             for (int i = 0; i < 8; i++)
             {
                 switch (Utility.Random(6))
@@ -138,6 +140,22 @@ namespace Server.Mobiles
                     case 5: AddItem(new Scourge()); break;
                 }
             }
+            switch (Utility.Random(10))//rare
+            {
+                case 0: AddItem(new MelisandesCorrodedHatchet()); break;
+            }
+            switch (Utility.Random(3))//common
+            {
+                case 0: AddItem(new EternallyCorruptTree()); break;
+                case 1: AddItem(new DiseasedBark()); break;
+            }
+            switch (Utility.Random(5))//uncommon
+            {
+                case 0: AddItem(new MelisandesHairDye()); break;
+                //case 1: AddItem(new AlbinoSquirrel()); break;
+            }
+
+            AddItem(new MelisandesFermentedWine());
         }
         public override bool AutoDispel { get { return true; } }
         public override bool CanRummageCorpses{ get{ return true; } }

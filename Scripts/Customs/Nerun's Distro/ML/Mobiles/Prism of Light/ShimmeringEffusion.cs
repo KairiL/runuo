@@ -59,8 +59,38 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
 		{
-			AddLoot( LootPack.AosSuperBoss, 8 );
-		}
+            //AddLoot( LootPack.AosSuperBoss, 8 );
+            AddLoot(LootPack.Epic, 2);
+            for (int i = 0; i < 8; i++)
+            {
+                switch (Utility.Random(6))
+                {
+                    case 0: AddItem(new Corruption()); break;
+                    case 1: AddItem(new Taint()); break;
+                    case 2: AddItem(new Blight()); break;
+                    case 3: AddItem(new Putrefaction()); break;
+                    case 4: AddItem(new Muculent()); break;
+                    case 5: AddItem(new Scourge()); break;
+                }
+            }
+            switch (Utility.Random(10))//rare
+            {
+                case 0: AddItem(new CrystallineRing()); break;
+            }
+            switch (Utility.Random(3))//common
+            {
+                case 0: AddItem(new CapturedEssence()); break;
+            }
+            switch (Utility.Random(5))//uncommon //change to 6 once statuettes are done
+            {
+                case 0: AddItem(new ShimmeringCrystals()); break;
+                //case 1: AddItem(new CorporealBrumeStatuette()); break;
+                //case 2: AddItem(new MantraEffervescenceStatuette()); break;
+                //case 3: AddItem(new FerretCrystal()); break;
+                //case 4: AddItem(new ShimmeringEffusionStatuette()); break;
+                //case 5: AddItem(new FetidEssenceStatuette()); break;
+            }
+        }
 
 		public override bool CanRummageCorpses{ get{ return true; } }
 		public override Poison PoisonImmune{ get{ return Poison.Lethal; } }

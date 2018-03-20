@@ -112,17 +112,40 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
-            AddLoot(LootPack.AosUltraRich);
-            AddLoot(LootPack.AosSuperBoss);
-            switch (Utility.Random(6))
+            //AddLoot(LootPack.AosUltraRich);
+            //AddLoot(LootPack.AosSuperBoss);
+            AddLoot(LootPack.Epic, 2);
+
+            for (int i = 0; i < 8; i++)
             {
-                case 0: AddItem(new Corruption()); break;
-                case 1: AddItem(new Taint()); break;
-                case 2: AddItem(new Blight()); break;
-                case 3: AddItem(new Putrefaction()); break;
-                case 4: AddItem(new Muculent()); break;
-                case 5: AddItem(new Scourge()); break;
+                switch (Utility.Random(6))
+                {
+                    case 0: AddItem(new Corruption()); break;
+                    case 1: AddItem(new Taint()); break;
+                    case 2: AddItem(new Blight()); break;
+                    case 3: AddItem(new Putrefaction()); break;
+                    case 4: AddItem(new Muculent()); break;
+                    case 5: AddItem(new Scourge()); break;
+                }
             }
+
+            switch (Utility.Random(10))//rare
+            {
+                case 0: AddItem(new SceptorOfTheChief()); break;
+                //case 1: AddItem(new ParoxysmusSwampDragonStatuette()); break;
+            }
+            switch (Utility.Random(3))//common
+            {
+                case 0: AddItem(new ParoxysmusCorrodedStein()); break;
+                case 1: AddItem(new ParoxysmusDinner()); break;
+                case 2: AddItem(new SweatOfParoxysmus()); break;
+            }
+            switch (Utility.Random(5))//uncommon
+            {
+                case 0: AddItem(new StringOfPartsOfParoxysmusVictims()); break;
+            }
+
+            AddItem(new LardOfParoxysmus());
         }
 
         public override bool AutoDispel { get { return true; } }
