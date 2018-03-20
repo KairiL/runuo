@@ -28,9 +28,16 @@ namespace Server.Items
 		{
 			Name = "Dreadhorn Teleporter. Dont Spawn Here till you use this!";
 			LootType = LootType.Blessed;
-		}
-		
-		public DreadhornKey( Serial serial ) : base( serial )
+            Timer.DelayCall(TimeSpan.FromHours(3.0), new TimerStateCallback(DeleteKey), this);
+        }
+
+        public void DeleteKey(object state)
+        {
+            Item from = (Item)state;
+            from.Delete();
+        }
+
+        public DreadhornKey( Serial serial ) : base( serial )
 		{
 		}
 		
@@ -66,7 +73,8 @@ namespace Server.Items
 		{
 			base.Deserialize( reader );
 			int version = reader.ReadInt();
-		}
+            Timer.DelayCall(TimeSpan.FromHours(3.0), new TimerStateCallback(DeleteKey), this);
+        }
 	}
 
 	

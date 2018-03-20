@@ -66,16 +66,19 @@ namespace Server.Mobiles
 
         public override void OnDamage(int amount, Mobile from, bool willKill)
         {
-            if ( CanSee(from) )
-                if (Utility.RandomDouble() > .5)
+            double pullChance = .10;
+            if ( CanSee(from) && from.Location != Location)
+                if (Utility.RandomDouble() < pullChance)
                     PullIn(from);
-            if (from is BaseCreature && ((BaseCreature)from).ControlMaster != null)
+            if (from is BaseCreature && ((BaseCreature)from).ControlMaster != null &&
+                ((BaseCreature)from).ControlMaster.Location != Location)
             {
-                if (Utility.RandomDouble() > .75 && CanSee(((BaseCreature)from).ControlMaster))
+                if (Utility.RandomDouble() < pullChance && CanSee(((BaseCreature)from).ControlMaster))
                     PullIn(((BaseCreature)from).ControlMaster);
             }
-            else if (from is BaseCreature && ((BaseCreature)from).SummonMaster != null)
-                if (Utility.RandomDouble() > .75 && CanSee(((BaseCreature)from).SummonMaster))
+            else if (from is BaseCreature && ((BaseCreature)from).SummonMaster != null &&
+                ((BaseCreature)from).SummonMaster.Location != Location)
+                if (Utility.RandomDouble() < pullChance && CanSee(((BaseCreature)from).SummonMaster))
                     PullIn(((BaseCreature)from).SummonMaster);
             base.OnDamage( amount, from, willKill );
         }
@@ -95,7 +98,7 @@ namespace Server.Mobiles
             private DateTime m_End;
             private Mobile m_Caster;
             private int m_Damage;
-            private double m_StickChance = .75;
+            private double m_StickChance = .5;
             private double m_TeleChance = .75;
 
             public override bool BlocksFit { get { return true; } }
@@ -128,14 +131,14 @@ namespace Server.Mobiles
 
             public override bool OnMoveOff(Mobile m)
             {
-                return ( Utility.RandomDouble() > m_StickChance || m == m_Caster);
+                return ( Utility.RandomDouble() > m_StickChance || m == m_Caster || !m.Alive);
             }
 
             public override bool OnMoveOver(Mobile m)
             {
-                if ( Utility.RandomDouble() < m_TeleChance && m != m_Caster)
+                if ( Utility.RandomDouble() < m_TeleChance && m != m_Caster && m.Alive)
                     m.Location = m_Caster.Location;
-                return (Utility.RandomDouble() > m_StickChance || m == m_Caster);
+                return (Utility.RandomDouble() > m_StickChance || m == m_Caster || !m.Alive);
             }
             public override void OnAfterDelete()
             {

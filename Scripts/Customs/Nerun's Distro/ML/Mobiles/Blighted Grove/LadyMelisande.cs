@@ -113,7 +113,7 @@ namespace Server.Mobiles
             }
             PackItem( new GnarledStaff() );
 			PackNecroReg( 50, 80 );
-            Timer.DelayCall(TimeSpan.FromMinutes(20.0), new TimerStateCallback(DeletePeerless), this);
+            Timer.DelayCall(TimeSpan.FromMinutes(30.0), new TimerStateCallback(DeletePeerless), this);
         }
 
         public void DeletePeerless(object state)
@@ -283,6 +283,7 @@ namespace Server.Mobiles
 		{
 			base.Deserialize( reader );
 			int version = reader.ReadInt();
-		}
+            Timer.DelayCall(TimeSpan.FromMinutes(30.0), new TimerStateCallback(DeletePeerless), this);
+        }
 	}
 }
