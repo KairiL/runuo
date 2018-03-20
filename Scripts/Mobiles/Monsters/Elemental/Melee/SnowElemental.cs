@@ -1,5 +1,6 @@
 using System;
 using Server.Items;
+using Server.Spells;
 
 namespace Server.Mobiles
 {
@@ -54,7 +55,28 @@ namespace Server.Mobiles
 
 		public override int TreasureMapLevel{ get{ return Utility.RandomList( 2, 3 ); } }
 
-		public SnowElemental( Serial serial ) : base( serial )
+        public override void OnThink()
+        {
+            base.OnThink();
+            RadiateCold();
+        }
+
+        public void RadiateCold()
+        {
+            int ColdRange = 5;
+            double ColdRate = .10;//(ThinkRate/ColdRate = Avg HitRate = .2/.10 = 2 seconds)
+            int MinDamage = 1;
+            int MaxDamage = 30;
+            if (Utility.RandomDouble() < ColdRate)
+                foreach (Mobile m_target in GetMobilesInRange(ColdRange))
+                    if ((m_target != this) && (SpellHelper.ValidIndirectTarget(this, (Mobile)m_target) &&
+                            CanBeHarmful((Mobile)m_target, false)))
+                    {
+                        AOS.Damage(m_target, this, (int)(Utility.RandomMinMax(MinDamage, MaxDamage) - 2 * GetDistanceToSqrt(m_target)), 0, 0, 100, 0, 0);
+                    }
+        }
+
+        public SnowElemental( Serial serial ) : base( serial )
 		{
 		}
 

@@ -70,6 +70,7 @@ namespace Server.Items
 			base.Serialize( writer );
 
 			writer.Write( (int) 0 ); // version
+            writer.Write( (int) Level );
 		}
 
 		public override void Deserialize( GenericReader reader )
@@ -78,9 +79,11 @@ namespace Server.Items
 			LootType = LootType.Blessed;
 
 			int version = reader.ReadInt();
-		}
+            Level = reader.ReadInt();
 
-		public override bool DisplayLootType{ get{ return false; } }
+        }
+
+        public override bool DisplayLootType{ get{ return false; } }
 
 		public override void OnDoubleClick( Mobile from ) // Override double click of the deed to call our target
 		{

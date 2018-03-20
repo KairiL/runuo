@@ -233,6 +233,8 @@ namespace Server.Items
             writer.Write( (int) Level );
             writer.Write((bool) AllowArmor );
             writer.Write((bool) AllowClothing );
+            writer.Write((string)AosAttribute );
+
 
         }
 
@@ -245,9 +247,8 @@ namespace Server.Items
             Level = reader.ReadInt();
             AllowArmor = reader.ReadBool();
             AllowClothing = reader.ReadBool();
+            AosAttribute = reader.ReadString();
         }
-
-		public override bool DisplayLootType{ get{ return false; } }
 
 		public override void OnDoubleClick( Mobile from ) // Override double click of the deed to call our target
 		{

@@ -357,15 +357,6 @@ namespace Server.Items
             set { m_allowclothing = value; }
         }
 
-        private string m_aosattribute;
-        [CommandProperty(AccessLevel.GameMaster)]
-        public string AosAttribute
-        {
-            get { return m_aosattribute; }
-            set { m_aosattribute = value; }
-        }
-
-
         public override string DefaultName
 		{
 			get { return String.Format("a level {0} {1} increase deed for the following: {2}{3}{4}{5}{6}{7}", Level, BonusSkill, 

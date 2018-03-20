@@ -238,6 +238,9 @@ namespace Server.Items
                         item.AosElementDamages.Physical = 0;
                     }
                     break;
+                case "FollowersBonus":
+                    item.FollowersBonus += m_Deed.Level;
+                    break;
                 default:
                     return false;
             }
@@ -401,6 +404,7 @@ namespace Server.Items
             writer.Write( (int) Level );
             writer.Write((bool) AllowWeps );
             writer.Write((bool) AllowGlasses );
+            writer.Write((string) AosAttribute );
 
         }
 
@@ -413,6 +417,7 @@ namespace Server.Items
             Level = reader.ReadInt();
             AllowWeps = reader.ReadBool();
             AllowGlasses = reader.ReadBool();
+            AosAttribute = reader.ReadString();
         }
 
 		public override bool DisplayLootType{ get{ return false; } }
