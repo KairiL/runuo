@@ -60,8 +60,9 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
 		{
-			AddLoot( LootPack.UltraRich, 2 );
-		}
+            //AddLoot( LootPack.UltraRich, 2 );
+            AddLoot(LootPack.LowEpic2, 1);
+        }
 
 		public override void OnDeath( Container c )
 		{

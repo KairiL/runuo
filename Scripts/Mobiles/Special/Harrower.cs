@@ -118,7 +118,8 @@ namespace Server.Mobiles
 
 		public override void GenerateLoot()
 		{
-			AddLoot( LootPack.SuperBoss, 2 );
+			//AddLoot( LootPack.SuperBoss, 2 );
+            AddLoot( LootPack.Epic, 2 );
 		}
 
 		public override bool AutoDispel{ get{ return true; } }

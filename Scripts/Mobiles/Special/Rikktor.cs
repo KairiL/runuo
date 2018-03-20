@@ -60,8 +60,10 @@ namespace Server.Mobiles
 
 		public override void GenerateLoot()
 		{
-			AddLoot( LootPack.UltraRich, 4 );
-		}
+			//AddLoot( LootPack.UltraRich, 4 );
+            AddLoot(LootPack.LowEpic1, 1);
+            AddLoot(LootPack.LowEpic2, 2);
+        }
 
 		public override Poison PoisonImmune{ get{ return Poison.Lethal; } }
 		public override ScaleType ScaleType{ get{ return ScaleType.All; } }

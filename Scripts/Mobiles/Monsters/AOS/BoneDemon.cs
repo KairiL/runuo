@@ -47,8 +47,9 @@ namespace Server.Mobiles
 
 		public override void GenerateLoot()
 		{
-			AddLoot( LootPack.FilthyRich, 8 );
-		}
+            //AddLoot( LootPack.FilthyRich, 8 );
+            AddLoot(LootPack.LowEpic1, 1);
+        }
 
 		public override bool BardImmune { get { return !Core.SE; } }
 		public override bool Unprovokable { get { return Core.SE; } }

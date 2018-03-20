@@ -65,9 +65,10 @@ namespace Server.Mobiles
 
 		public override void GenerateLoot()
 		{
-			AddLoot( LootPack.UltraRich, 4 );
-			AddLoot( LootPack.FilthyRich );
-			AddLoot( LootPack.Gems, 6 );
+            //AddLoot( LootPack.UltraRich, 4 );
+            AddLoot(LootPack.LowEpic1, 2);
+            AddLoot(LootPack.LowEpic2, 1);
+            AddLoot( LootPack.Gems, 6 );
 		}
 
 		public override int TreasureMapLevel{ get{ return 5; } }

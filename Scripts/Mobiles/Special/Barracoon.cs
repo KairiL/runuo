@@ -67,8 +67,10 @@ namespace Server.Mobiles
 
 		public override void GenerateLoot()
 		{
-			AddLoot( LootPack.UltraRich, 3 );
-		}
+			//AddLoot( LootPack.UltraRich, 3 );
+            AddLoot( LootPack.LowEpic1, 1 );
+            AddLoot(LootPack.LowEpic2, 1);
+        }
 
 		public override bool AlwaysMurderer{ get{ return true; } }
 		public override bool AutoDispel{ get{ return true; } }

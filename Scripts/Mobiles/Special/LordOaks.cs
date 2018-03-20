@@ -66,8 +66,10 @@ namespace Server.Mobiles
 
 		public override void GenerateLoot()
 		{
-			AddLoot( LootPack.UltraRich, 5 );
-		}
+			//AddLoot( LootPack.UltraRich, 5 );
+            AddLoot( LootPack.LowEpic1, 2 );
+            AddLoot( LootPack.LowEpic2, 2);
+        }
 		
 		public override bool AutoDispel{ get{ return true; } }
 		public override bool CanFly { get { return true; } }
