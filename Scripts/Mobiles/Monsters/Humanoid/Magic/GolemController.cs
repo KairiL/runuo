@@ -51,7 +51,7 @@ namespace Server.Mobiles
 
 			if ( 0.7 > Utility.RandomDouble() )
 				PackItem( new ArcaneGem() );
-            if (0.8 > Utility.RandomDouble() )
+            if (0.8 < Utility.RandomDouble() )
                 PackItem(new TrapRepairKit());
         }
 

@@ -505,12 +505,16 @@ namespace Server.Mobiles
                 {
                     if ( Hue == 2413 || Hue == 2425) //Copper || Agapite
                     {
-                        m.Mana += (amount);
+                        if (m is ControlMaster)
+                            m.Mana += (amount * 3);
+                        else
+                            m.Mana += (amount);
                         m.Hits += (amount/4);
                         m.Stam += (amount/2);
                         if ( Hue == 2425 )
                             if (m.MeleeDamageAbsorb <= amount * 2)
                                 m.MeleeDamageAbsorb = amount * 2;
+                        
                     }
                     else if ( Hue == 2406 || Hue == 2219 ) //Shadow || Valorite
                     {
