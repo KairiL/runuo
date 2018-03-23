@@ -113,9 +113,9 @@ namespace Server.Mobiles
 
 		public void RunTo( Mobile m )
 		{
-			if ( m.Paralyzed || m.Frozen )
+			if ( (m.Paralyzed || m.Frozen) && m_Mobile != null )
 			{
-				if ( m_Mobile.InRange( m, 1 ) )
+				if ( m_Mobile != null && m_Mobile.InRange( m, 1 ) )
 					RunFrom( m );
 				else if ( !m_Mobile.InRange( m, m_Mobile.RangeFight > 2 ? m_Mobile.RangeFight : 2 ) && !MoveTo( m, true, 1 ) )
 					OnFailedMove();
@@ -958,7 +958,7 @@ namespace Server.Mobiles
 
 					LandTarget lt = new LandTarget( p, map );
 
-					if ( (targ.Range == -1 || m_Mobile.InRange( p, targ.Range )) && m_Mobile.InLOS( lt ) && map.CanSpawnMobile( px + x, py + y, lt.Z ) && !SpellHelper.CheckMulti( p, map ) )
+					if ( (targ.Range == -1 || ( m_Mobile.InRange(p, targ.Range))) && m_Mobile.InLOS( lt ) && map.CanSpawnMobile( px + x, py + y, lt.Z ) && !SpellHelper.CheckMulti( p, map ) )
 					{
 						targ.Invoke( m_Mobile, lt );
 						return;
