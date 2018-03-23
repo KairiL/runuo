@@ -402,20 +402,19 @@ namespace Server.Mobiles
                 m_loc = m_Mobile.Location;
                 map = m_Mobile.Map;
                 int alchemyBonus = 0;
-                int inscribeBonus = 0;
                 int sdi = 0;
                 int dmgInc = 0;
 
                 if ((((BaseCreature)from).Controlled || ((BaseCreature)from).Summoned) && ((BaseCreature)from).ControlMaster != null)
                 {
                     Mobile master = (((BaseCreature)from).ControlMaster);
-                    alchemyBonus = AosAttributes.GetValue(m, AosAttribute.EnhancePotions);
-                    sdi = AosAttributes.GetValue(m, AosAttribute.SpellDamage);
-                    dmgInc = AosAttributes.GetValue(m, AosAttribute.WeaponDamage);
+                    alchemyBonus = AosAttributes.GetValue(master, AosAttribute.EnhancePotions);
+                    sdi = AosAttributes.GetValue(master, AosAttribute.SpellDamage);
+                    dmgInc = AosAttributes.GetValue(master, AosAttribute.WeaponDamage);
                     //if (alchemyBonus > 50)
                     //    alchemyBonus = 50;
-                    sdi += (int)(m.Skills.Inscribe.Fixed + (1000 * (int)(m.Skills.Inscribe.Fixed / 100))) / 100;
-                    alchemyBonus += m.Skills.Alchemy.Fixed / 330 * 10;
+                    sdi += (int)(master.Skills.Inscribe.Fixed + (1000 * (int)(master.Skills.Inscribe.Fixed / 100))) / 100;
+                    alchemyBonus += master.Skills.Alchemy.Fixed / 330 * 10;
                     //sdi += m.Int / 10;
 
                     exploDamage = (int)(((master.Skills[SkillName.Alchemy].Value / 2.5)) * (1 + alchemyBonus + sdi));
