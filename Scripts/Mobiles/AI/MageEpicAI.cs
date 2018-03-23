@@ -49,11 +49,12 @@ namespace Server.Mobiles
 
 		private const double HealChance = 0.05; // 5% chance to heal at gm necromancy? Probably not what this does
 		private const double TeleportChance = 0.10; // 10% chance to teleport at gm necromancy
-		//private const double DispelChance = 0.75; // 75% chance to dispel at gm necromancy
+        private const double PetSwitchChance = .30; // 30% of the time Will switch from pet to pet owner
+        //private const double DispelChance = 0.75; // 75% chance to dispel at gm necromancy
         //private const double ItemChance = 0.0; //0% chance to use an offensive item
         //private const double AbilityChance = 0.0; //0% chance to use special abilities
-		
-		public virtual double ScaleByMagery( double v )
+
+        public virtual double ScaleByMagery( double v )
 		{
 			return m_Mobile.Skills[SkillName.Magery].Value * v * 0.01;
 		}
@@ -887,7 +888,7 @@ namespace Server.Mobiles
                     targ.Invoke(m_Mobile, ((BaseCreature)toTarget).ControlMaster);
                 }
 
-                if ( (targ.Range == -1 || (m_Mobile != null && m_Mobile.InRange(p, targ.Range))) && m_Mobile.CanSee( toTarget ) && m_Mobile.InLOS( toTarget ) )
+                if ( (targ.Range == -1 || m_Mobile.InRange(toTarget, targ.Range)) && m_Mobile.CanSee( toTarget ) && m_Mobile.InLOS( toTarget ) )
 				{
 					targ.Invoke( m_Mobile, toTarget );
 				}
