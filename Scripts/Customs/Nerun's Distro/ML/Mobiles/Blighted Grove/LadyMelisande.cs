@@ -199,6 +199,8 @@ namespace Server.Mobiles
                 SpellHelper.AddAosBuff(this, defender, EffectList,
                               TimeSpan.FromSeconds(30), 3, false,
                               false, true, -60);
+                string args = String.Format("{0}\t{1}", 60, 5);
+                BuffInfo.AddBuff(defender, new BuffInfo(BuffIcon.AuraOfNausea, 1153424, 1075803, TimeSpan.FromSeconds(30), defender, args.ToString()));
             }
         }
 
@@ -222,6 +224,8 @@ namespace Server.Mobiles
                 SpellHelper.AddAosBuff(this, attacker, EffectList,
                               TimeSpan.FromSeconds(30), 3, false,
                               false, true, -60);
+                string args = String.Format("{0}\t{1}", 60, 5);
+                BuffInfo.AddBuff(attacker, new BuffInfo(BuffIcon.AuraOfNausea, 1153424, 1075803, TimeSpan.FromSeconds(30), attacker, args.ToString()));
             }
         }
 
