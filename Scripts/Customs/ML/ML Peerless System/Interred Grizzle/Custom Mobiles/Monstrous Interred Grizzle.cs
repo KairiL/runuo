@@ -243,6 +243,8 @@ namespace Server.Mobiles
                               TimeSpan.FromSeconds(30), -1, false,
                               false, true, -60);
                 this.CacophonicAttack(defender);
+                string args = String.Format("{0}\t{1}\t{2}", 60, 5, 5);
+                BuffInfo.AddBuff(defender, new BuffInfo(BuffIcon.HowlOfCacophony, 1153793, 1153820, TimeSpan.FromSeconds(30), defender,  args.ToString()));
             }
         }
 
@@ -263,6 +265,8 @@ namespace Server.Mobiles
                               TimeSpan.FromSeconds(30), -1, false,
                               false, true, -60);
                 this.CacophonicAttack(attacker);
+                string args = String.Format("{0}\t{1}\t{2}", 60, 5, 5);
+                BuffInfo.AddBuff(attacker, new BuffInfo(BuffIcon.HowlOfCacophony, 1153793, 1153820, TimeSpan.FromSeconds(30), attacker, args.ToString()));
             }
         }
 

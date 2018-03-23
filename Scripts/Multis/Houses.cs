@@ -271,7 +271,48 @@ namespace Server.Multis
 		}
 	}
 
-	public class LargePatioHouse : BaseHouse
+    public class MinaxCastle : BaseHouse
+    {
+        public static Rectangle2D[] AreaArray = new Rectangle2D[] { new Rectangle2D(-25, -14, 52, 52), new Rectangle2D(-1, 14, 4, 1) };
+
+        public override int DefaultPrice { get { return 10228000; } }
+
+        public override Rectangle2D[] Area { get { return AreaArray; } }
+        public override Point3D BaseBanLocation { get { return new Point3D(5, 17, 0); } }
+
+        public MinaxCastle(Mobile owner) : base(0x1388, owner, 8152, 52)
+        {
+            uint keyValue = CreateKeys(owner);
+
+            SetSign(5, 17, 16);
+            /*
+            AddWestDoors(false, 0, 11, 6, true);
+            AddSouthDoors(false, 0, 5, 6, false);
+            AddSouthDoors(false, -1, -11, 6, false);
+            */
+        }
+
+        public MinaxCastle(Serial serial) : base(serial)
+        {
+        }
+
+        public override HouseDeed GetDeed() { return new MinaxCastleDeed(); }
+
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
+            writer.Write((int)0);//version
+        }
+
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
+            int version = reader.ReadInt();
+        }
+    }
+
+
+    public class LargePatioHouse : BaseHouse
 	{
 		public static Rectangle2D[] AreaArray = new Rectangle2D[]{ new Rectangle2D( -7, -7, 15, 14 ), new Rectangle2D( -5, 7, 4, 1 ) };
 

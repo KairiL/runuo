@@ -628,7 +628,43 @@ namespace Server.Multis.Deeds
 		}
 	}
 
-	public class LargePatioDeed : HouseDeed
+
+    public class MinaxCastleDeed : HouseDeed
+    {
+        [Constructable]
+        public MinaxCastleDeed() : base(0x7E, new Point3D(0, 16, 0))
+        {
+            Name = "Minax Castle Deed";
+        }
+
+        public MinaxCastleDeed(Serial serial) : base(serial)
+        {
+        }
+
+        public override BaseHouse GetHouse(Mobile owner)
+        {
+            return new MinaxCastle(owner);
+        }
+
+        //public override int LabelNumber { get { return 1041224; } }
+        public override Rectangle2D[] Area { get { return MinaxCastle.AreaArray; } }
+
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
+
+            writer.Write((int)0); // version
+        }
+
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
+
+            int version = reader.ReadInt();
+        }
+    }
+
+    public class LargePatioDeed : HouseDeed
 	{
 		[Constructable]
 		public LargePatioDeed() : base( 0x8C, new Point3D( -4, 7, 0 ) )

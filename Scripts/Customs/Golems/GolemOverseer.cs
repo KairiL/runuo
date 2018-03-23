@@ -505,7 +505,7 @@ namespace Server.Mobiles
                 {
                     if ( Hue == 2413 || Hue == 2425) //Copper || Agapite
                     {
-                        if (m is ControlMaster)
+                        if (m == caster)
                             m.Mana += (amount * 3);
                         else
                             m.Mana += (amount);
@@ -560,7 +560,7 @@ namespace Server.Mobiles
                 }
 
             }
-            if (Mana >= 50 && caster.Skills.Inscribe.Value >= 80 && overseerCount >= 3 && (Hue == 2425 || Hue == 0 || Hue == 2213))//Agapite or Iron or Gold
+            if (Mana >= 50 && caster.Skills.Inscribe.Value >= 80 && overseerCount >= 2 && (Hue == 2425 || Hue == 0 || Hue == 2213))//Agapite or Iron or Gold
             {
                 for (int i = 0; i < deadList.Count; ++i)
                 {
