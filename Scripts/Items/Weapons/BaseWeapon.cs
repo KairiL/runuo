@@ -665,7 +665,9 @@ namespace Server.Items
                 if (TameLorePoints >= 260)
                     TameLoreBonus += 1;
             }
-            from.FollowersMax = 5 + (int)from.Skills[SkillName.Herding].Value * FollowersBonus * TameLoreBonus/ 100;
+            from.FollowersMax = 5 + (int)from.Skills[SkillName.Herding].Value * FollowersBonus/30;
+            if (from.Skills[SkillName.Herding].Value >= 100 )
+                from.FollowersMax += FollowersBonus * TameLoreBonus;
 
             if ( UseSkillMod && m_AccuracyLevel != WeaponAccuracyLevel.Regular )
 			{
