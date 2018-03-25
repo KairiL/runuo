@@ -632,7 +632,7 @@ namespace Server.Multis.Deeds
     public class MinaxCastleDeed : HouseDeed
     {
         [Constructable]
-        public MinaxCastleDeed() : base(0x7E, new Point3D(0, 16, 0))
+        public MinaxCastleDeed() : base(0x1388, new Point3D(0, 16, 0))
         {
             Name = "Minax Castle Deed";
         }

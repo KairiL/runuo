@@ -474,48 +474,48 @@ namespace Server
         {
                 new LootPackEntry( true, Gold,         100.00, "2d100+500" ),
                 new LootPackEntry( false, Instruments, 0.01, 1, 2, 100, 101 ),
-                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 6, 25, 100),
-                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 6, 25, 100),
-                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 6, 25, 100),
-                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 6, 25, 100),
-                new LootPackEntry( true, Earrings, 1.00, 1, 2, 25, 100)
+                new LootPackEntry( false, AosMagicItemsUltraRich, 25.00, 1, 6, 25, 100),
+                new LootPackEntry( false, AosMagicItemsUltraRich, 25.00, 1, 6, 25, 100),
+                new LootPackEntry( false, AosMagicItemsUltraRich, 25.00, 1, 6, 25, 100),
+                new LootPackEntry( false, AosMagicItemsUltraRich, 25.00, 1, 6, 25, 100),
+                new LootPackEntry( false, Earrings, 1.00, 1, 2, 25, 100)
         } );
         public static readonly LootPack LowEpic2 = new LootPack(new LootPackEntry[]
         {
-                new LootPackEntry( true, Gold,         100.00, "2d100+500" ),
+                new LootPackEntry( false, Gold,         100.00, "2d100+500" ),
                 new LootPackEntry( false, Instruments, 0.01, 1, 2, 100, 101 ),
-                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 5, 25, 120),
-                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 5, 25, 120),
-                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 5, 25, 120),
-                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 5, 25, 120),
-                new LootPackEntry( true, Earrings, 1.00, 1, 2, 25, 100)
+                new LootPackEntry( false, AosMagicItemsUltraRich, 25.00, 1, 5, 25, 120),
+                new LootPackEntry( false, AosMagicItemsUltraRich, 25.00, 1, 5, 25, 120),
+                new LootPackEntry( false, AosMagicItemsUltraRich, 25.00, 1, 5, 25, 120),
+                new LootPackEntry( false, AosMagicItemsUltraRich, 25.00, 1, 5, 25, 120),
+                new LootPackEntry( false, Earrings, 1.00, 1, 2, 25, 100)
         });
 
         public static readonly LootPack Epic = new LootPack(new LootPackEntry[]
         {
                 new LootPackEntry( true, Gold,         100.00, "5d100+500" ),
                 new LootPackEntry( false, Instruments, 0.01, 1, 2, 100, 150 ),
-                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 6, 25, 120),
-                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 6, 25, 120),
-                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 6, 25, 120),
-                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 6, 25, 120),
+                new LootPackEntry( false, AosMagicItemsUltraRich, 25.00, 1, 6, 25, 120),
+                new LootPackEntry( false, AosMagicItemsUltraRich, 25.00, 1, 6, 25, 120),
+                new LootPackEntry( false, AosMagicItemsUltraRich, 25.00, 1, 6, 25, 120),
+                new LootPackEntry( false, AosMagicItemsUltraRich, 25.00, 1, 6, 25, 120),
                 new LootPackEntry( false, Instruments, 0.01, 1, 3, 100, 101 ),
-                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 7, 25, 100),
-                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 7, 25, 100),
-                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 7, 25, 100),
-                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 7, 25, 100),
-                new LootPackEntry( true, Earrings, 1.00, 1, 3, 25, 100)
+                new LootPackEntry( false, AosMagicItemsUltraRich, 25.00, 1, 7, 25, 100),
+                new LootPackEntry( false, AosMagicItemsUltraRich, 25.00, 1, 7, 25, 100),
+                new LootPackEntry( false, AosMagicItemsUltraRich, 25.00, 1, 7, 25, 100),
+                new LootPackEntry( false, AosMagicItemsUltraRich, 25.00, 1, 7, 25, 100),
+                new LootPackEntry( false, Earrings, 1.00, 1, 3, 25, 100)
         });
 
         public static readonly LootPack HighEpic = new LootPack(new LootPackEntry[]
         {
                 new LootPackEntry( true, Gold,         100.00, "10d100+500" ),
                 new LootPackEntry( false, Instruments, 0.01, 1, 3, 100, 150 ),
-                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 7, 35, 150),
-                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 7, 35, 150),
-                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 7, 35, 150),
-                new LootPackEntry( true, AosMagicItemsUltraRich, 25.00, 1, 7, 35, 150),
-                new LootPackEntry( true, Earrings, 1.00, 1, 5, 25, 100)
+                new LootPackEntry( false, AosMagicItemsUltraRich, 25.00, 1, 7, 35, 150),
+                new LootPackEntry( false, AosMagicItemsUltraRich, 25.00, 1, 7, 35, 150),
+                new LootPackEntry( false, AosMagicItemsUltraRich, 25.00, 1, 7, 35, 150),
+                new LootPackEntry( false, AosMagicItemsUltraRich, 25.00, 1, 7, 35, 150),
+                new LootPackEntry( false, Earrings, 1.00, 1, 5, 25, 100)
         });
         #endregion
         /*
@@ -750,7 +750,7 @@ namespace Server
                         else if (item is BaseEarrings )
                             BaseRunicTool.ApplyAttributesTo( (BaseEarrings)item, false, luckChance, props, m_MinIntensity, m_MaxIntensity );
 
-                        if (bonusProps > 5  || item is BaseEarrings) //Item is epic and should be cursed 95% chance
+                        if (bonusProps >= 5  || item is BaseEarrings) //Item is epic and should be cursed 95% chance
                             if (Utility.RandomDouble() > .05)
                                 item.LootType = LootType.Cursed;
                     }

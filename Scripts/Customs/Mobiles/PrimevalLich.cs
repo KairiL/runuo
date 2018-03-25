@@ -18,7 +18,7 @@ namespace Server.Mobiles
 
             SetStr( 216, 305 );
 			SetDex( 96, 115 );
-			SetInt( 466, 545 );
+			SetInt( 666, 745 );
 
 			SetHits( 10000, 15000 );
 
@@ -119,7 +119,7 @@ namespace Server.Mobiles
                 PlaySound(0x58C);
             }
 
-            m_NextSuppress = DateTime.UtcNow + TimeSpan.FromSeconds(10);
+            m_NextSuppress = DateTime.UtcNow + TimeSpan.FromSeconds(60);
         }
 
         public static void SuppressRemove(Mobile target)

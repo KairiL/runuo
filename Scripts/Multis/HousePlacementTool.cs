@@ -664,8 +664,9 @@ namespace Server.Items
 				new HousePlacementEntry( typeof( LargeMarbleHouse ),	1011316,	1370,	685,	1576,	788,	28,	160500,	   -4,	7,	0,	0x0096	),
 				new HousePlacementEntry( typeof( Tower ),				1011312,	2119,	1059,	2437,	1218,	42,	366500,		0,	7,	0,	0x007A	),
 				new HousePlacementEntry( typeof( Keep ),				1011313,	2625,	1312,	3019,	1509,	52,	572750,		0, 11,	0,	0x007C	),
-				new HousePlacementEntry( typeof( Castle ),				1011314,	4076,	2038,	4688,	2344,	78,	865250,		0, 16,	0,	0x007E	)
-			};
+				new HousePlacementEntry( typeof( Castle ),				1011314,	4076,	2038,	4688,	2344,	78,	865250,		0, 16,	0,	0x007E	),
+                new HousePlacementEntry( typeof( MinaxCastle ),         1011314,    8152,   4076,   8152,   4076,   156,8652500,    0, 16,  -4,  0x1388  )
+            };
 
 		public static HousePlacementEntry[] ClassicHouses{ get{ return m_ClassicHouses; } }
 
@@ -786,7 +787,7 @@ namespace Server.Items
 				new HousePlacementEntry( typeof( HouseFoundation ),		1060381,	2119,	1059,	2437,	1218,	42,	150500,		0,	8,	0,	0x1478	), // 18x15 3-Story Customizable House
 				new HousePlacementEntry( typeof( HouseFoundation ),		1060382,	2119,	1059,	2437,	1218,	42,	160000,		0,	9,	0,	0x1479	), // 18x16 3-Story Customizable House
 				new HousePlacementEntry( typeof( HouseFoundation ),		1060383,	2119,	1059,	2437,	1218,	42,	169500,		0,	9,	0,	0x147A	), // 18x17 3-Story Customizable House
-				new HousePlacementEntry( typeof( HouseFoundation ),		1060384,	2119,	1059,	2437,	1218,	42,	179000,		0,	10,	0,	0x147B	)  // 18x18 3-Story Customizable House
+				new HousePlacementEntry( typeof( HouseFoundation ),		1060384,	2119,	1059,	2437,	1218,	42,	179000,		0,	10,	0,	0x147B	),  // 18x18 3-Story Customizable House
 			};
 
 		public static HousePlacementEntry[] ThreeStoryFoundations{ get{ return m_ThreeStoryFoundations; } }

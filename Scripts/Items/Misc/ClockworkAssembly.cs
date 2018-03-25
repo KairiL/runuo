@@ -177,7 +177,7 @@ namespace Server.Items
 										
 					default:
 					{
-						Golem g = new Golem( 1, scalar, metal );
+                        CraftedGolem g = new CraftedGolem( 1, scalar, metal );
 
 						if ( g.SetControlMaster( from ) )
 						{

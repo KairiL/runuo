@@ -895,20 +895,20 @@ namespace Server.Mobiles
 					RunTo( toTarget );
 			}
 
-			if ( (toTarget != null && ( (targ.Flags & TargetFlags.Harmful) != 0) || (isPoisonField || isFireField ) ) )
+			if ( (toTarget != null && ( ( (targ.Flags & TargetFlags.Harmful) != 0) || (isPoisonField || isFireField ) ) ) )
 			{
+                /*
                 //check switch to target's owner
                 if (toTarget is BaseCreature &&
                     ((BaseCreature)toTarget).Controlled &&
                     ((BaseCreature)toTarget).ControlMaster != null &&
                     Utility.RandomDouble() < PetSwitchChance &&
-                    ((targ.Range == -1 || m_Mobile.InRange(((BaseCreature)toTarget).ControlMaster, targ.Range)) &&
+                    ((targ.Range == -1 || (targ != null && m_Mobile.InRange(((BaseCreature)toTarget).ControlMaster, targ.Range))) &&
                     m_Mobile.CanSee(((BaseCreature)toTarget).ControlMaster) &&
                     m_Mobile.InLOS(((BaseCreature)toTarget).ControlMaster)))
                 {
                     targ.Invoke(m_Mobile, ((BaseCreature)toTarget).ControlMaster);
-                }
-
+                }*/
                 if ( (targ.Range == -1 || m_Mobile.InRange( toTarget, targ.Range )) && m_Mobile.CanSee( toTarget ) && m_Mobile.InLOS( toTarget ) )
 				{
 					targ.Invoke( m_Mobile, toTarget );
@@ -958,7 +958,7 @@ namespace Server.Mobiles
 
 					LandTarget lt = new LandTarget( p, map );
 
-					if ( (targ.Range == -1 || ( m_Mobile.InRange(p, targ.Range))) && m_Mobile.InLOS( lt ) && map.CanSpawnMobile( px + x, py + y, lt.Z ) && !SpellHelper.CheckMulti( p, map ) )
+					if ( (targ.Range == -1 || m_Mobile.InRange( p, targ.Range )) && m_Mobile.InLOS( lt ) && map.CanSpawnMobile( px + x, py + y, lt.Z ) && !SpellHelper.CheckMulti( p, map ) )
 					{
 						targ.Invoke( m_Mobile, lt );
 						return;

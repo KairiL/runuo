@@ -6,7 +6,7 @@ using Server.Spells.Spellweaving;
 namespace Server.Mobiles
 {
 	[CorpseName( "a golem corpse" )]
-	public class Golem : BaseCreature
+	public class CraftedGolem : Golem
 	{
 		public override bool IsScaredOfScaryThings{ get{ return false; } }
 		public override bool IsScaryToPets{ get{ return true; } }
@@ -15,12 +15,12 @@ namespace Server.Mobiles
 
         public override FoodType FavoriteFood { get { return FoodType.Gold; } }
         [Constructable]
-		public Golem() : this( 0, 1.0, 0 )
+		public CraftedGolem() : this( 0, 1.0, 0 )
 		{
 		}
 
 		[Constructable]
-		public Golem( int summoned, double scalar, double met ) : base( AIType.AI_Melee, FightMode.Closest, 10, 1, 0.4, 0.8 )
+		public CraftedGolem( int summoned, double scalar, double met )
 		{
 			if ( summoned == 0 )
 				{
@@ -213,6 +213,68 @@ namespace Server.Mobiles
 			
 		}
 
+        /*
+        
+
+        public virtual void OnDamagedBySpell(Mobile from)
+        {
+            if (CanBeDistracted && ControlOrder == OrderType.Follow)
+            {
+                CheckDistracted(from);
+            }
+        }
+
+        public virtual void OnHarmfulSpell(Mobile from)
+        {
+        }
+
+        #region Alter[...]Damage From/To
+
+        public virtual void AlterDamageScalarFrom(Mobile caster, ref double scalar)
+        {
+        }
+
+        public virtual void AlterDamageScalarTo(Mobile target, ref double scalar)
+        {
+        }
+
+        public virtual void AlterSpellDamageFrom(Mobile from, ref int damage)
+        {
+        }
+
+        public virtual void AlterSpellDamageTo(Mobile to, ref int damage)
+        {
+        }
+        */
+        public virtual void AlterMeleeDamageFrom(Mobile from, ref int damage)
+        {
+            if ((Controlled || Summoned) && ControlMaster != null)
+            {
+                damage = (int)(damage / 1+ ControlMaster.Skills.Tailoring.Value/400+ ControlMaster.Skills.ArmsLore.Value/400);
+            }
+        }
+        
+        public virtual void AlterMeleeDamageTo(Mobile to, ref int damage)
+        {
+            if ((Controlled || Summoned) && ControlMaster != null)
+            {
+                damage *= (100 + AosAttributes.GetValue(ControlMaster, AosAttribute.WeaponDamage));
+                damage /= 100;
+            }
+        }
+        /*
+        public virtual void OnGotMeleeAttack( Mobile attacker )
+		{
+        }
+        #endregion
+        */
+        public override void CheckReflect(Mobile caster, ref bool reflect)
+        {
+            if ((Controlled || Summoned) && ControlMaster != null)
+            {
+                reflect = Utility.RandomDouble() < ControlMaster.Skills.Inscribe.Value/100;
+            }
+        }
         public override bool DeleteOnRelease{ get{ return true; } }
 
 		public override int GetAngerSound()
@@ -249,7 +311,7 @@ namespace Server.Mobiles
 			return base.GetHurtSound();
 		}
 
-		public override bool AutoDispel{ get{ return false; } }
+		public override bool AutoDispel{ get{ return !Controlled; } }
 
 		public override void OnGaveMeleeAttack( Mobile defender )
 		{
@@ -292,7 +354,114 @@ namespace Server.Mobiles
                         defender.ApplyPoison(master, Poison.GetPoison(level));
                     }
                 }
+                if (Utility.RandomDouble() < (master.Skills.Alchemy.Value + master.Skills.Tinkering.Value)/ 200)
+                    ExplodePunch(defender);
+                if (Utility.RandomDouble() < (master.Skills.Blacksmith.Value + master.Skills.Tinkering.Value)/280)
+                    PowerPunch(defender);
             }
+            
+
+        }
+
+        private void PowerPunch(Mobile target)
+        { 
+            int damageIncrease;
+            int minDamage = 0;
+
+            if ((Controlled || Summoned) && ControlMaster != null)
+            {
+                Mobile master = ControlMaster;
+                damageIncrease = AosAttributes.GetValue(master, AosAttribute.WeaponDamage);
+
+
+                minDamage = (int)master.Skills[SkillName.Carpentry].Value;
+                minDamage += (int)master.Skills[SkillName.ArmsLore].Value*2;
+                minDamage /= 6;
+                minDamage *= (100 + damageIncrease);
+                minDamage /= 100;
+
+            }
+            else
+                minDamage = 20;
+
+            if (target != null)
+            {
+                if (target is PlayerMobile)
+                    AOS.Damage(target, this, Utility.RandomMinMax(1, minDamage), 100, 0, 0, 0, 0);
+                else
+                    AOS.Damage(target, this, Utility.RandomMinMax(minDamage, minDamage * 3), 100, 0, 0, 0, 0);
+                target.FixedParticles(0x3728, 9, 32, 0x13AF, EffectLayer.Waist);
+                //target.PlaySound(0x665);
+                target.PlaySound(0x4D0);
+            }
+            this.DoHarmful(target);
+        }
+        private void ExplodePunch(Mobile target)
+        {
+
+            double alchemyBonus = 0;
+            double sdi = 0;
+            int dmgInc = 0;
+            int exploDamage = 20;
+            if ((Controlled || Summoned) && ControlMaster != null)
+            {
+                Mobile master = ControlMaster;
+                alchemyBonus = AosAttributes.GetValue(master, AosAttribute.EnhancePotions);
+                sdi = AosAttributes.GetValue(master, AosAttribute.SpellDamage);
+                //if (alchemyBonus > 50)
+                //    alchemyBonus = 50;
+                sdi += (int)(master.Skills.Inscribe.Fixed + (1000 * (int)(master.Skills.Inscribe.Fixed / 100))) / 100;
+                alchemyBonus += master.Skills.Alchemy.Fixed / 330 * 10;
+                sdi += master.Int / 10;
+                sdi += ArcaneEmpowermentSpell.GetSpellBonus(master, false);
+
+                TransformContext context = TransformationSpellHelper.GetContext(master);
+
+                if (context != null && context.Spell is ReaperFormSpell)
+                    sdi += ((ReaperFormSpell)context.Spell).SpellDamageBonus;
+                exploDamage = (int)(((master.Skills[SkillName.Alchemy].Value / 2.5)) * (1 + (alchemyBonus + sdi)/100));
+
+            }
+
+
+            if (target == null)
+                return;
+
+            Point3D m_loc = target.Location;
+            Map map = target.Map;
+
+            int ExpRange = 0;
+            if (ControlMaster != null)
+            {
+                ExpRange += (int)(ControlMaster.Skills[SkillName.Tinkering].Value + ControlMaster.Skills[SkillName.Alchemy].Value) / 50;
+                if (Utility.RandomDouble() > AosAttributes.GetValue(ControlMaster, AosAttribute.EnhancePotions))
+                    ExpRange += 1;
+                if (Utility.RandomDouble() > AosAttributes.GetValue(ControlMaster, AosAttribute.SpellDamage))
+                    ExpRange += 1;
+            }
+            target.PlaySound(0x11D);
+
+            if ((Map)map != null)
+            {
+                IPooledEnumerable eable = (IPooledEnumerable)map.GetMobilesInRange(m_loc, ExpRange);
+
+                foreach (object o in eable)
+                {
+                    if ((o is Mobile) && (o != this) && (target == null || (SpellHelper.ValidIndirectTarget(this, (Mobile)o) && CanBeHarmful((Mobile)o, false))) &&
+                        ((Mobile)o).InLOS(target))
+                    {
+                        if (o is PlayerMobile)
+                            AOS.Damage((Mobile)o, this, Utility.RandomMinMax(0, exploDamage / 4), 0, 100, 0, 0, 0);
+                        else if (o is BaseCreature && Controlled)
+                            if (ControlMaster != ((BaseCreature)o).ControlMaster)
+                                AOS.Damage((Mobile)o, this, Utility.RandomMinMax(0, exploDamage), 0, 100, 0, 0, 0);
+                            else if (o is BaseCreature)
+                                AOS.Damage((Mobile)o, this, Utility.RandomMinMax(0, exploDamage), 0, 100, 0, 0, 0);
+                        DoHarmful((Mobile)o);
+                    }
+                }
+            }
+
         }
 
 		public override void OnDamage( int amount, Mobile from, bool willKill )
@@ -357,7 +526,7 @@ namespace Server.Mobiles
 		public override bool BardImmune{ get{ return true; } }
 		public override Poison PoisonImmune{ get{ return Poison.Lethal; } }
 
-		public Golem( Serial serial ) : base( serial )
+		public CraftedGolem( Serial serial ) : base( serial )
 		{
 		}
 

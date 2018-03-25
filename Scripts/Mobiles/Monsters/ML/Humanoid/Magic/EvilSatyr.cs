@@ -7,7 +7,7 @@ namespace Server.Mobiles
 	public class EvilSatyr : BaseCreature
 	{
 		[Constructable]
-		public EvilSatyr() : base( AIType.AI_Melee, FightMode.Aggressor, 10, 1, 0.2, 0.4 )
+		public EvilSatyr() : base( AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4 )
 		{
 			Name = "a satyr";
 			Body = 271;

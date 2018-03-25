@@ -65,7 +65,6 @@ namespace Server.Mobiles
 
         private void DoPulls(Mobile from)
         {
-            Direction dir;
             int NumPulls = 1;
             int PullRange = 10;
             foreach (Mobile m_target in GetMobilesInRange(PullRange))

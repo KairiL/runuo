@@ -4,6 +4,7 @@ using Server.Items;
 using Server.Spells;
 using System.Collections;
 using Server.ContextMenus;
+using Server.Spells.Spellweaving;
 
 namespace Server.Mobiles
 {
@@ -269,78 +270,6 @@ namespace Server.Mobiles
         }
         #endregion
 
-        public override bool DeleteOnRelease{ get{ return true; } }
-
-		public override int GetAngerSound()
-		{
-			return 541;
-		}
-
-		public override int GetIdleSound()
-		{
-			if ( !Controlled )
-				return 542;
-
-			return base.GetIdleSound();
-		}
-
-		public override int GetDeathSound()
-		{
-			if ( !Controlled )
-				return 545;
-
-			return base.GetDeathSound();
-		}
-
-		public override int GetAttackSound()
-		{
-			return 562;
-		}
-
-		public override int GetHurtSound()
-		{
-			if ( Controlled )
-				return 320;
-
-			return base.GetHurtSound();
-		}
-
-		public override bool AutoDispel{ get{ return !Controlled; } }
-
-		public override void OnGaveMeleeAttack( Mobile defender )
-		{   
-			base.OnGaveMeleeAttack( defender );
-            Mobile master = (this.ControlMaster);
-            if (master == null)
-                master = this;
-            int total = (int)master.Skills[SkillName.Poisoning].Value;
-            int level;
-
-            if (total >= 100)
-                level = 4;
-            else if (total >= 85)
-                level = 3;
-            else if (total > 65)
-                level = 2;
-            else if (total > 50)
-                level = 1;
-            else
-                level = 0;
-
-            if (Utility.RandomDouble() < master.Skills[SkillName.Poisoning].Value / 140.0)
-            {
-                if (Utility.RandomDouble() < master.Skills[SkillName.Poisoning].Value / 140.0)
-                    ++level;
-                defender.ApplyPoison(this, Poison.GetPoison(level));
-            }
-
-        }
-
-        public override void AggressiveAction(Mobile aggressor, bool criminal)
-        {
-            base.AggressiveAction(aggressor, criminal);
-        }
-
         private DateTime m_NextBomb = DateTime.UtcNow;
         private int m_Thrown = 0;
         private double m_Speed = 6;
@@ -401,10 +330,9 @@ namespace Server.Mobiles
                 m_From = from;
                 m_loc = m_Mobile.Location;
                 map = m_Mobile.Map;
-                int alchemyBonus = 0;
-                int sdi = 0;
+                double alchemyBonus = 0;
+                double sdi = 0;
                 int dmgInc = 0;
-
                 if ((((BaseCreature)from).Controlled || ((BaseCreature)from).Summoned) && ((BaseCreature)from).ControlMaster != null)
                 {
                     Mobile master = (((BaseCreature)from).ControlMaster);
@@ -413,11 +341,18 @@ namespace Server.Mobiles
                     dmgInc = AosAttributes.GetValue(master, AosAttribute.WeaponDamage);
                     //if (alchemyBonus > 50)
                     //    alchemyBonus = 50;
+                    sdi+= ArcaneEmpowermentSpell.GetSpellBonus(master, false);
+
+                    TransformContext context = TransformationSpellHelper.GetContext(master);
+
+                    if (context != null && context.Spell is ReaperFormSpell)
+                        sdi += ((ReaperFormSpell)context.Spell).SpellDamageBonus;
+
                     sdi += (int)(master.Skills.Inscribe.Fixed + (1000 * (int)(master.Skills.Inscribe.Fixed / 100))) / 100;
                     alchemyBonus += master.Skills.Alchemy.Fixed / 330 * 10;
-                    //sdi += m.Int / 10;
+                    sdi += m.Int / 10;
 
-                    exploDamage = (int)(((master.Skills[SkillName.Alchemy].Value / 2.5)) * (1 + alchemyBonus + sdi));
+                    exploDamage = (int)(((master.Skills[SkillName.Alchemy].Value / 2.5)) * (1 + (alchemyBonus + sdi) / 100));
                     minDamage = (int)master.Skills[SkillName.Carpentry].Value;
                     minDamage += (int)master.Skills[SkillName.ArmsLore].Value;
                     minDamage /= 6;
@@ -454,7 +389,7 @@ namespace Server.Mobiles
                     foreach (object o in eable)
                     {
                         if ( (o is Mobile) && (o != m_From) && (m_Mobile == null || (SpellHelper.ValidIndirectTarget(m_From, (Mobile)o) && m_From.CanBeHarmful((Mobile)o, false))) &&
-                            !((Mobile)o).InLOS(m_Mobile))
+                            ((Mobile)o).InLOS(m_Mobile))
                         {
                             if (o is PlayerMobile)
                                 AOS.Damage((Mobile)o, m_From, Utility.RandomMinMax(0, exploDamage/4), 0, 100, 0, 0, 0);
@@ -475,13 +410,23 @@ namespace Server.Mobiles
                     m_From.DoHarmful(m_Mobile);
             }
         }
-
+        /*
         public override void OnDamage( int amount, Mobile from, bool willKill )
 		{
             base.OnDamage( amount, from, willKill );
 		}
+        */
+        public override void CheckReflect(Mobile caster, ref bool reflect)
+        {
+        }
+        public virtual void AlterMeleeDamageFrom(Mobile from, ref int damage)
+        {
+        }
+        public virtual void AlterMeleeDamageTo(Mobile to, ref int damage)
+        {
+        }
 
-		public override bool BardImmune{ get{ return true; } }
+        public override bool BardImmune{ get{ return true; } }
 		public override Poison PoisonImmune{ get{ return Poison.Lethal; } }
 
 		public GolemScorpion( Serial serial ) : base( serial )

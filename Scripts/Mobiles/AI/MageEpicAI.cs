@@ -881,14 +881,13 @@ namespace Server.Mobiles
                     ((BaseCreature)toTarget).Controlled &&
                     ((BaseCreature)toTarget).ControlMaster != null &&
                     Utility.RandomDouble() < PetSwitchChance &&
-                    ((targ.Range == -1 || m_Mobile.InRange(((BaseCreature)toTarget).ControlMaster, targ.Range)) &&
+                    ((targ.Range == -1 || (targ!= null && m_Mobile.InRange(((BaseCreature)toTarget).ControlMaster, targ.Range))) &&
                     m_Mobile.CanSee(((BaseCreature)toTarget).ControlMaster) &&
                     m_Mobile.InLOS(((BaseCreature)toTarget).ControlMaster)))
                 {
                     targ.Invoke(m_Mobile, ((BaseCreature)toTarget).ControlMaster);
                 }
-
-                if ( (targ.Range == -1 || m_Mobile.InRange(toTarget, targ.Range)) && m_Mobile.CanSee( toTarget ) && m_Mobile.InLOS( toTarget ) )
+                else if ( (targ.Range == -1 || m_Mobile.InRange(toTarget, targ.Range)) && m_Mobile.CanSee( toTarget ) && m_Mobile.InLOS( toTarget ) )
 				{
 					targ.Invoke( m_Mobile, toTarget );
 				}
