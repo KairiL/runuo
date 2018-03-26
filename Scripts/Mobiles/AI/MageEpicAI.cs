@@ -230,8 +230,8 @@ namespace Server.Mobiles
 
         public virtual Spell DoDispel( Mobile toDispel )
 		{
-			Spell spell = null;
-
+			Spell spell = new MassDispelSpell(m_Mobile, null);
+            /*
 			if ( !m_Mobile.Summoned && Utility.Random( 0, 4 + (m_Mobile.Hits == 0 ? m_Mobile.HitsMax : (m_Mobile.HitsMax / m_Mobile.Hits)) ) >= 3 )
 			{
                 if (m_Mobile.Hits < (m_Mobile.HitsMax - 50))
@@ -249,7 +249,7 @@ namespace Server.Mobiles
 				else
 					spell = new DispelSpell( m_Mobile, null );
 			}
-
+            */
 			return spell;
 		}
 
@@ -279,14 +279,16 @@ namespace Server.Mobiles
 				{
                     if (!c.Poisoned && (!(c is BaseCreature) ||
                       (((BaseCreature)c).PoisonImmune != null && ((BaseCreature)m_Mobile).HitPoison != null &&
-                      ((BaseCreature)c).PoisonImmune.Level != null && ((BaseCreature)m_Mobile).HitPoison.Level != null &&
-                      ((BaseCreature)c).PoisonImmune.Level < ((BaseCreature)m_Mobile).HitPoison.Level)))
-                            if (Utility.RandomDouble() > .5 )
+                      ((BaseCreature)c).PoisonImmune.Level < ((BaseCreature)m_Mobile).HitPoison.Level) ||
+                      ((BaseCreature)c).PoisonImmune == null))
+                        spell = new PoisonFieldSpell(m_Mobile, null);
+                    else
+                        if (Utility.RandomDouble() > .5 )
 						    spell = new FlameStrikeSpell( m_Mobile, null );
                         else
                             spell = new FireFieldSpell( m_Mobile, null );
-                    else
-                        spell = new PoisonFieldSpell( m_Mobile, null );
+                    
+                        
 
 					break;
 				}
@@ -327,9 +329,9 @@ namespace Server.Mobiles
 							m_Mobile.UseSkill( SkillName.Meditation );
 						}
 						else if (!c.Poisoned && (!(c is BaseCreature) ||
-                      (((BaseCreature)c).PoisonImmune != null && ((BaseCreature)m_Mobile).HitPoison != null &&
-                      ((BaseCreature)c).PoisonImmune.Level != null && ((BaseCreature)m_Mobile).HitPoison.Level != null && 
-                      ((BaseCreature)c).PoisonImmune.Level < ((BaseCreature)m_Mobile).HitPoison.Level)))
+                      (((BaseCreature)c).PoisonImmune != null && ((BaseCreature)m_Mobile).HitPoison != null && 
+                      ((BaseCreature)c).PoisonImmune.Level < ((BaseCreature)m_Mobile).HitPoison.Level) ||
+                      ((BaseCreature)c).PoisonImmune == null))
                             {
                             m_Mobile.DebugSay("3. Casting Poison");
                             spell = new PoisonSpell( m_Mobile, null );
@@ -397,8 +399,8 @@ namespace Server.Mobiles
                 m_Mobile.DebugSay("Casting maybe poison and moving to next spell");
                 if (!c.Poisoned && (!(c is BaseCreature) ||
                       (((BaseCreature)c).PoisonImmune != null && ((BaseCreature)m_Mobile).HitPoison != null &&
-                      ((BaseCreature)c).PoisonImmune.Level != null && ((BaseCreature)m_Mobile).HitPoison.Level != null &&
-                      ((BaseCreature)c).PoisonImmune.Level < ((BaseCreature)m_Mobile).HitPoison.Level)))
+                      ((BaseCreature)c).PoisonImmune.Level < ((BaseCreature)m_Mobile).HitPoison.Level) ||
+                      ((BaseCreature)c).PoisonImmune == null))
                     spell = new PoisonSpell( m_Mobile, null );
                 else
                     spell = new HarmSpell( m_Mobile, null );
@@ -560,7 +562,7 @@ namespace Server.Mobiles
 				}
 				else if ( toDispel != null ) // Something dispellable is attacking us
 				{
-					spell = DoDispel( toDispel );
+                    spell = DoDispel( toDispel );
 				}
 				else if ( m_Combo != -1 ) // We are doing a spell combo
 				{
@@ -568,8 +570,8 @@ namespace Server.Mobiles
 				}
 				else if ( (c.Spell is HealSpell || c.Spell is GreaterHealSpell) && (!c.Poisoned && (!(c is BaseCreature) ||
                       (((BaseCreature)c).PoisonImmune != null && ((BaseCreature)m_Mobile).HitPoison != null &&
-                      ((BaseCreature)c).PoisonImmune.Level != null && ((BaseCreature)m_Mobile).HitPoison.Level != null &&
-                      ((BaseCreature)c).PoisonImmune.Level < ((BaseCreature)m_Mobile).HitPoison.Level)))) // They have a heal spell out
+                      ((BaseCreature)c).PoisonImmune.Level < ((BaseCreature)m_Mobile).HitPoison.Level) ||
+                      ((BaseCreature)c).PoisonImmune == null))) // They have a heal spell out
 				{
 					spell = new PoisonSpell( m_Mobile, null );
 				}
@@ -593,7 +595,7 @@ namespace Server.Mobiles
 					RunTo( c );
 				}
 
-				if ( spell != null && spell.Cast() )
+                if ( spell != null && spell.Cast() )
 				{
 					TimeSpan delay;
 
@@ -696,7 +698,7 @@ namespace Server.Mobiles
 
 				if ( comb != null && !comb.Deleted && comb.Alive && !comb.IsDeadBondedPet && m_Mobile.InRange( comb, 12 ) && CanDispel( comb ) )
 				{
-					active = comb;
+                    active = comb;
 					activePrio = m_Mobile.GetDistanceToSqrt( comb );
 
 					if ( activePrio <= 2 )
@@ -827,7 +829,7 @@ namespace Server.Mobiles
 
 		private void ProcessTarget( Target targ )
 		{
-			bool isDispel = ( targ is DispelSpell.InternalTarget );
+			bool isDispel = ( targ is MassDispelSpell.InternalTarget || targ is DispelSpell.InternalTarget );
 			bool isParalyze = ( targ is ParalyzeSpell.InternalTarget );
 			bool isTeleport = ( targ is TeleportSpell.InternalTarget );
             bool isFireField = ( targ is FireFieldSpell.InternalTarget );
@@ -838,7 +840,7 @@ namespace Server.Mobiles
 
 			if ( isDispel )
 			{
-				toTarget = FindDispelTarget( false );
+				toTarget = FindDispelTarget(false);
 
 				if ( toTarget != null )
 					RunTo( toTarget );

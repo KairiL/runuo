@@ -253,7 +253,7 @@ namespace Server.Mobiles
 				else if ( Utility.Random( 3 ) == 0 && !m_Mobile.InRange( toDispel, 3 ) && !toDispel.Paralyzed && !toDispel.Frozen )
 					spell = new ParalyzeSpell( m_Mobile, null );
 				else
-					spell = new DispelSpell( m_Mobile, null );
+					spell = new MassDispelSpell( m_Mobile, null );
 			}
 
 			return spell;
@@ -286,8 +286,11 @@ namespace Server.Mobiles
 				case 1: // PoisonStrike them
 				{
                     m_Mobile.DebugSay("1. Poison Strike");
-                    if ( !c.Poisoned )
-                        if (Utility.RandomDouble() > .5)
+                    if (!c.Poisoned && (!(c is BaseCreature) ||
+                      (((BaseCreature)c).PoisonImmune != null && ((BaseCreature)m_Mobile).HitPoison != null &&
+                      ((BaseCreature)c).PoisonImmune.Level < ((BaseCreature)m_Mobile).HitPoison.Level) ||
+                      ((BaseCreature)c).PoisonImmune == null))
+                            if (Utility.RandomDouble() > .5)
 						    spell = new PoisonStrikeSpell( m_Mobile, null );
                         else
                             spell = new PoisonFieldSpell( m_Mobile, null );//need to do targeting on fields
@@ -353,8 +356,11 @@ namespace Server.Mobiles
 
 							m_Mobile.UseSkill( SkillName.Meditation );
 						}
-						else if ( !c.Poisoned )
-						{
+						else if (!c.Poisoned && (!(c is BaseCreature) ||
+                      (((BaseCreature)c).PoisonImmune != null && ((BaseCreature)m_Mobile).HitPoison != null &&
+                      ((BaseCreature)c).PoisonImmune.Level < ((BaseCreature)m_Mobile).HitPoison.Level) ||
+                      ((BaseCreature)c).PoisonImmune == null))
+                            {
                             m_Mobile.DebugSay("3. Casting Poison");
                             spell = new PoisonSpell( m_Mobile, null );
 						}
@@ -428,8 +434,11 @@ namespace Server.Mobiles
 			else if ( m_Combo == 2 )
 			{
                 m_Mobile.DebugSay("Casting maybe poison and moving to next spell");
-                if ( !c.Poisoned )
-					spell = new PoisonSpell( m_Mobile, null );
+                if (!c.Poisoned && (!(c is BaseCreature) ||
+                      (((BaseCreature)c).PoisonImmune != null && ((BaseCreature)m_Mobile).HitPoison != null &&
+                      ((BaseCreature)c).PoisonImmune.Level < ((BaseCreature)m_Mobile).HitPoison.Level) ||
+                      ((BaseCreature)c).PoisonImmune == null))
+                    spell = new PoisonSpell( m_Mobile, null );
 
 				++m_Combo; // Move to next spell
 			}
@@ -586,7 +595,10 @@ namespace Server.Mobiles
 				{
 					spell = DoCombo( c );
 				}
-				else if ( (c.Spell is HealSpell || c.Spell is GreaterHealSpell) && !c.Poisoned ) // They have a heal spell out
+				else if ( (c.Spell is HealSpell || c.Spell is GreaterHealSpell) && (!c.Poisoned && (!(c is BaseCreature) ||
+                      (((BaseCreature)c).PoisonImmune != null && ((BaseCreature)m_Mobile).HitPoison != null &&
+                      ((BaseCreature)c).PoisonImmune.Level < ((BaseCreature)m_Mobile).HitPoison.Level) ||
+                      ((BaseCreature)c).PoisonImmune == null))) // They have a heal spell out
 				{
 					spell = new PoisonSpell( m_Mobile, null );
 				}
@@ -852,8 +864,8 @@ namespace Server.Mobiles
 
         private void ProcessTarget( Target targ )
 		{
-			bool isDispel = ( targ is DispelSpell.InternalTarget );
-			bool isParalyze = ( targ is ParalyzeSpell.InternalTarget );
+            bool isDispel = (targ is MassDispelSpell.InternalTarget || targ is DispelSpell.InternalTarget);
+            bool isParalyze = ( targ is ParalyzeSpell.InternalTarget );
 			bool isTeleport = ( targ is TeleportSpell.InternalTarget );
             bool isFireField = ( targ is FireFieldSpell.InternalTarget );
             bool isPoisonField = ( targ is PoisonFieldSpell.InternalTarget );
@@ -899,7 +911,7 @@ namespace Server.Mobiles
 					RunTo( toTarget );
 			}
 
-			if ( (toTarget != null && ( (targ.Flags & TargetFlags.Harmful) != 0) || (isPoisonField || isFireField ) ) )
+			if ( (toTarget != null && (( (targ.Flags & TargetFlags.Harmful) != 0) || (isPoisonField || isFireField ) ) ))
 			{
                 //Check switch to target ally's target
                 foreach (Mobile m in m_Mobile.GetMobilesInRange(HiveRange))

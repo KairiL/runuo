@@ -188,11 +188,11 @@ namespace Server.Spells.Seventh
 			FinishSequence();
 		}
 
-		private class InternalTarget : Target
+		public class InternalTarget : Target
 		{
 			private MassDispelSpell m_Owner;
 
-			public InternalTarget( MassDispelSpell owner ) : base( Core.ML ? 10 : 12, true, TargetFlags.None )
+			public InternalTarget( MassDispelSpell owner ) : base( Core.ML ? 10 : 12, true, TargetFlags.Harmful )
 			{
 				m_Owner = owner;
 			}

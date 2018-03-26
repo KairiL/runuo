@@ -103,9 +103,16 @@ namespace Server.Mobiles
             base.OnThink();
             RandoTarget(this);
             double SummonRate = .01;
+            double MeteorRate = .01;
+            double PowerOneRate = .01;
+            if (Combatant == null)
+                return;
             if (Utility.RandomDouble() < SummonRate)
                 SummonCritters();
-            //Meteor Strike dismount poof
+            if (Utility.RandomDouble() < MeteorRate)
+                MeteorStrike();
+            if (Utility.RandomDouble() < PowerOneRate)
+                PowerOfOne(Combatant);
             //Condemnation (send to fire pits)
             //Power of one or w/e does a bunch of damage to one target
         }
@@ -121,42 +128,54 @@ namespace Server.Mobiles
 
             int CritterNum = Utility.Random(8);
             int newCritters = Utility.RandomMinMax(4, 8);
+            int critters = 0;
 
-            for (int i = 0; i < newCritters; ++i)
+            foreach (Mobile m in this.GetMobilesInRange(15))
             {
-                BaseCreature critter;
+                if (m is PredatorHellCat || m is FireSteed || m is Nightmare || 
+                    m is FireGargoyle || m is HellHound || m is Gargoyle ||
+                    m is LavaElemental || m is Efreet )
+                    ++critters;
+            }
 
-                switch (CritterNum)
+            if (critters < 16)
+            {
+                for (int i = 0; i < newCritters; ++i)
                 {
-                    default:
-                    case 0: critter = new PredatorHellCat(); break;
-                    case 1: critter = new FireSteed(); break;
-                    case 2: critter = new Nightmare(); break;
-                    case 3: critter = new FireGargoyle(); break;
-                    case 4: critter = new HellHound(); break;
-                    case 5: critter = new Gargoyle(); break;
-                    case 6: critter = new LavaElemental(); break;
-                    case 7: critter = new Efreet(); break;
+                    BaseCreature critter;
+
+                    switch (CritterNum)
+                    {
+                        default:
+                        case 0: critter = new PredatorHellCat(); break;
+                        case 1: critter = new FireSteed(); break;
+                        case 2: critter = new Nightmare(); break;
+                        case 3: critter = new FireGargoyle(); break;
+                        case 4: critter = new HellHound(); break;
+                        case 5: critter = new Gargoyle(); break;
+                        case 6: critter = new LavaElemental(); break;
+                        case 7: critter = new Efreet(); break;
+                    }
+
+                    critter.Team = this.Team;
+
+                    bool validLocation = false;
+                    Point3D loc = this.Location;
+
+                    for (int j = 0; !validLocation && j < 10; ++j)
+                    {
+                        int x = X + Utility.Random(8) - 1;
+                        int y = Y + Utility.Random(8) - 1;
+                        int z = map.GetAverageZ(x, y);
+
+                        if (validLocation = map.CanFit(x, y, Z, 16, false, false))
+                            loc = new Point3D(x, y, this.Z);
+                        else if (validLocation = map.CanFit(x, y, z, 16, false, false))
+                            loc = new Point3D(x, y, z);
+                    }
+
+                    critter.MoveToWorld(loc, map);
                 }
-
-                critter.Team = this.Team;
-
-                bool validLocation = false;
-                Point3D loc = this.Location;
-
-                for (int j = 0; !validLocation && j < 10; ++j)
-                {
-                    int x = X + Utility.Random(8) - 1;
-                    int y = Y + Utility.Random(8) - 1;
-                    int z = map.GetAverageZ(x, y);
-
-                    if (validLocation = map.CanFit(x, y, Z, 16, false, false))
-                        loc = new Point3D(x, y, this.Z);
-                    else if (validLocation = map.CanFit(x, y, z, 16, false, false))
-                        loc = new Point3D(x, y, z);
-                }
-
-                critter.MoveToWorld(loc, map);
             }
                 
         }
@@ -164,14 +183,103 @@ namespace Server.Mobiles
         public void MeteorStrike()
         {
             int MeteorRadius = 10;
-            for (int i = -1; i<2; i++)
-                for (int j = -1; j<2; j++)
-                    Effects.SendLocationEffect(new Point3D(X+i, Y+j, Z), Map, 0x3709, 13);
-            //smoke and icy poofs here
+            Effects.SendLocationEffect(new Point3D(X, Y, Z), Map, 0x3709, 13);
+            Timer.DelayCall(TimeSpan.FromSeconds(.5), new TimerStateCallback(FirstFire_callback), this);
+            Timer.DelayCall(TimeSpan.FromSeconds(1.0), new TimerStateCallback(SecondFire_callback), this);
+            Timer.DelayCall(TimeSpan.FromSeconds(1.25), new TimerStateCallback(SmokePoof_callback), this);
+            Timer.DelayCall(TimeSpan.FromSeconds(1.25), new TimerStateCallback(AreaDamage_callback), this);
+            
             Say("You will burn to a pile of ash!");
-            //foreach( Mobile m_target in inRangeGetMobilesInRange(MeteorRadius)
         }
 
+        public void FirstFire_callback(object state)
+        {
+            Mobile from = (Mobile)state;
+            Map map = from.Map;
+
+            if (map == null)
+                return;
+
+            for (int i = -1; i < 2; i++)
+                for (int j = -1; j < 2; j++)
+                {
+                    double dist = Math.Sqrt(i * i + j * j);
+                    if (dist <= 1)
+                        Effects.SendLocationEffect(new Point3D(X + i, Y + j, Z), Map, 0x3709, 13);
+                }
+        }
+
+        public void SecondFire_callback(object state)
+        {
+            Mobile from = (Mobile)state;
+            Map map = from.Map;
+
+            if (map == null)
+                return;
+
+            for (int i = -2; i < 3; i++)
+                for (int j = -2; j < 3; j++)
+                {
+                    double dist = Math.Sqrt(i * i + j * j);
+                    if (dist <= 2)
+                        Effects.SendLocationEffect(new Point3D(X + i, Y + j, Z), Map, 0x3709, 13);
+                }
+        }
+
+        public void SmokePoof_callback(object state)
+        {
+            Mobile from = (Mobile)state;
+            Map map = from.Map;
+
+            if (map == null)
+                return;
+
+            for (int x = -8; x <= 8; ++x)
+            {
+                for (int y = -8; y <= 8; ++y)
+                {
+                    double dist = Math.Sqrt(x * x + y * y);
+
+                    if (dist <= 8)
+                        Effects.SendLocationEffect(new Point3D(X + x, Y + y, Z), Map, 0x3728, 13);
+
+                }
+            }
+        }
+
+        public void AreaDamage_callback(object state)
+        {
+            Mobile from = (Mobile)state;
+            Map map = from.Map;
+
+            if (map == null)
+                return;
+
+            foreach (Mobile m_target in GetMobilesInRange(6))
+            {
+                if (m_target != this && (m_target == null || (SpellHelper.ValidIndirectTarget(this, m_target) && CanBeHarmful(m_target, false))) &&
+                            this.InLOS(m_target))
+                {
+                    DoHarmful(m_target);
+                    AOS.Damage(m_target, this, Utility.RandomMinMax(80, 110), 70, 30, 0, 0, 0);
+                    if (m_target.Mounted)
+                    {
+                        m_target.SendLocalizedMessage(1062315); // You fall off your mount!
+                        (m_target as PlayerMobile).SetMountBlock(BlockMountType.Dazed, TimeSpan.FromSeconds(10), true);
+                    }
+                }
+            }
+        }
+        public void PowerOfOne(Mobile target)
+        {
+            if (target == null)
+                return;
+            if (CanBeHarmful(target, false) && this.InLOS(target))
+            {
+                AOS.Damage(target, this, Utility.RandomMinMax(110, 220), 20, 20, 20, 20, 20);
+                Effects.SendLocationEffect(target.Location, Map, 0x3728, 13);
+            }
+        }
         public AbyssalInfernal( Serial serial ) : base( serial )
 		{
 		}
