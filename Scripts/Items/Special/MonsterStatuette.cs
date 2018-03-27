@@ -49,7 +49,8 @@ namespace Server.Items
 		Minotaur,
 		BlackCat,
 		HalloweenGhoul,
-		Santa
+		Santa,
+        Archdemon
 	}
 
 	public class MonsterStatuetteInfo
@@ -117,7 +118,8 @@ namespace Server.Items
 				/* Minotaur */			new MonsterStatuetteInfo( 1031657, 0x2D89, 0x596 ),
 				/* Black Cat */			new MonsterStatuetteInfo( 1096928, 0x4688, 0x69 ),
 				/* HalloweenGhoul */	new MonsterStatuetteInfo( 1076782, 0x2109, 0x482 ),
-				/* Santa */			new MonsterStatuetteInfo( 1097968, 0x4A98, 0x669 )
+				/* Santa */			new MonsterStatuetteInfo( 1097968, 0x4A98, 0x669 ),
+                /* Archdemon */     new MonsterStatuetteInfo( 1112411, 0x2104, 0x2B9 )
 			};
 
 		public static MonsterStatuetteInfo GetInfo( MonsterStatuetteType type )
@@ -166,7 +168,9 @@ namespace Server.Items
 					Hue = 0x21;
 				else if( m_Type == MonsterStatuetteType.HalloweenGhoul )
 					Hue = 0xF4;
-				else
+                else if (m_Type == MonsterStatuetteType.Archdemon)
+                    Hue = 0x455;
+                else
 					Hue = 0;
 
 				InvalidateProperties();
@@ -201,7 +205,10 @@ namespace Server.Items
 				Hue = 0x21;
 			else if( m_Type == MonsterStatuetteType.HalloweenGhoul )
 				Hue = 0xF4;
-		}
+            else if( m_Type == MonsterStatuetteType.Archdemon )
+                Hue = 0x455;
+
+        }
 
 		public override bool HandlesOnMovement{ get{ return m_TurnedOn && IsLockedDown; } }
 

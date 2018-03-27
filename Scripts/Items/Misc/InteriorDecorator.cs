@@ -272,7 +272,7 @@ namespace Server.Items
 			{
 				int floorZ = GetFloorZ( item );
 
-				if ( floorZ > int.MinValue && item.Z < (floorZ + 15) ) // Confirmed : no height checks here
+				if ( floorZ > int.MinValue && item.Z < (floorZ + 20) ) // Confirmed : no height checks here
 					item.Location = new Point3D( item.Location, item.Z + 1 );
 				else
 					from.SendLocalizedMessage( 1042274 ); // You cannot raise it up any higher.

@@ -3,13 +3,32 @@ using System.Collections.Generic;
 using Server;
 using Server.Items;
 using Server.Spells;
+using Server.Engines.CannedEvil;
 
 namespace Server.Mobiles
 {
 	[CorpseName( "an abyssal infernal's corpse" )]
-	public class AbyssalInfernal : BaseCreature
+	public class AbyssalInfernal : BaseCreature //BaseChampion
 	{
-		[Constructable]
+        /*
+        public override ChampionSkullType SkullType { get { return null; } }
+
+        public override Type[] UniqueList { get { return new Type[] { typeof(TongueOfTheBeast) }; } }
+        public override Type[] SharedList
+        {
+            get
+            {
+                return new Type[] {     typeof( RoyalGuardInvestigator ),
+                                        typeof( JadeArmband ),
+                                        typeof( DetectiveBoots ) };
+            }
+        }
+        public override Type[] DecorativeList { get { return new Type[] { typeof(MagicalDoor), typeof(MonsterStatuette) }; } }
+
+        public override MonsterStatuetteType[] StatueTypes { get { return new MonsterStatuetteType[] { MonsterStatuetteType.Archdemon }; } }
+        */
+
+        [Constructable]
 		public AbyssalInfernal() : base( AIType.AI_NecromageEpic, FightMode.Closest, 12, 1, 0.1, 0.2 )
 		{
 			Name = "Abyssal Infernal";

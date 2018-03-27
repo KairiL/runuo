@@ -102,7 +102,7 @@ namespace Server.Items
 
 			if( Core.AOS )
 			{
-				abyss.Super = new SlayerEntry( SlayerName.Exorcism, typeof( AbysmalHorror ), typeof( ArcaneDaemon ), typeof( Balron ), typeof( BoneDemon ), typeof( ChaosDaemon ), typeof( Daemon ), typeof( SummonedDaemon ), typeof( DemonKnight ), typeof( Devourer ), typeof( EnslavedGargoyle ), typeof( FanDancer ), typeof( FireGargoyle ), typeof( Gargoyle ), typeof( GargoyleDestroyer ), typeof( GargoyleEnforcer ), typeof( Gibberling ), typeof( HordeMinion ), typeof( IceFiend ), typeof( Imp ), typeof( Impaler ), typeof( Moloch ), typeof( Oni ), typeof( Ravager ), typeof( Semidar ), typeof( StoneGargoyle ), typeof( Succubus ), typeof( TsukiWolf ) );
+				abyss.Super = new SlayerEntry( SlayerName.Exorcism, typeof ( Archdemon ), typeof( AbysmalHorror ), typeof( ArcaneDaemon ), typeof( Balron ), typeof( BoneDemon ), typeof( ChaosDaemon ), typeof( Daemon ), typeof( SummonedDaemon ), typeof( DemonKnight ), typeof( Devourer ), typeof( EnslavedGargoyle ), typeof( FanDancer ), typeof( FireGargoyle ), typeof( Gargoyle ), typeof( GargoyleDestroyer ), typeof( GargoyleEnforcer ), typeof( Gibberling ), typeof( HordeMinion ), typeof( IceFiend ), typeof( Imp ), typeof( Impaler ), typeof( Moloch ), typeof( Oni ), typeof( Ravager ), typeof( Semidar ), typeof( StoneGargoyle ), typeof( Succubus ), typeof( TsukiWolf ) );
 	
 				abyss.Entries = new SlayerEntry[]
 					{
@@ -112,11 +112,11 @@ namespace Server.Items
 			}
 			else
 			{
-				abyss.Super = new SlayerEntry( SlayerName.Exorcism, typeof( AbysmalHorror ), typeof( Balron ), typeof( BoneDemon ), typeof( ChaosDaemon ), typeof( Daemon ), typeof( SummonedDaemon ), typeof( DemonKnight ), typeof( Devourer ), typeof( Gargoyle ), typeof( FireGargoyle ), typeof( Gibberling ), typeof( HordeMinion ), typeof( IceFiend ), typeof( Imp ), typeof( Impaler ), typeof( Ravager ), typeof( StoneGargoyle ), typeof( ArcaneDaemon ), typeof( EnslavedGargoyle ), typeof( GargoyleDestroyer ), typeof( GargoyleEnforcer ), typeof( Moloch ) );
+				abyss.Super = new SlayerEntry( SlayerName.Exorcism, typeof(Archdemon), typeof( AbysmalHorror ), typeof( Balron ), typeof( BoneDemon ), typeof( ChaosDaemon ), typeof( Daemon ), typeof( SummonedDaemon ), typeof( DemonKnight ), typeof( Devourer ), typeof( Gargoyle ), typeof( FireGargoyle ), typeof( Gibberling ), typeof( HordeMinion ), typeof( IceFiend ), typeof( Imp ), typeof( Impaler ), typeof( Ravager ), typeof( StoneGargoyle ), typeof( ArcaneDaemon ), typeof( EnslavedGargoyle ), typeof( GargoyleDestroyer ), typeof( GargoyleEnforcer ), typeof( Moloch ) );
 
 				abyss.Entries = new SlayerEntry[]
 					{
-						new SlayerEntry( SlayerName.DaemonDismissal, typeof( AbysmalHorror ), typeof( Balron ), typeof( BoneDemon ), typeof( ChaosDaemon ), typeof( Daemon ), typeof( SummonedDaemon ), typeof( DemonKnight ), typeof( Devourer ), typeof( Gibberling ), typeof( HordeMinion ), typeof( IceFiend ), typeof( Imp ), typeof( Impaler ), typeof( Ravager ), typeof( ArcaneDaemon ), typeof( Moloch ) ),
+						new SlayerEntry( SlayerName.DaemonDismissal, typeof ( Archdemon ), typeof( AbysmalHorror ), typeof( Balron ), typeof( BoneDemon ), typeof( ChaosDaemon ), typeof( Daemon ), typeof( SummonedDaemon ), typeof( DemonKnight ), typeof( Devourer ), typeof( Gibberling ), typeof( HordeMinion ), typeof( IceFiend ), typeof( Imp ), typeof( Impaler ), typeof( Ravager ), typeof( ArcaneDaemon ), typeof( Moloch ) ),
 						new SlayerEntry( SlayerName.GargoylesFoe, typeof( FireGargoyle ), typeof( Gargoyle ), typeof( StoneGargoyle ), typeof( EnslavedGargoyle ), typeof( GargoyleDestroyer ), typeof( GargoyleEnforcer ) ),
 						new SlayerEntry( SlayerName.BalronDamnation, typeof( Balron ) )
 					};
