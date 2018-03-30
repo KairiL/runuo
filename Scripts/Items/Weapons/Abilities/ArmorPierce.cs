@@ -1,5 +1,6 @@
 using System;
 using Server;
+using Server.Mobiles;
 
 namespace Server.Items
 {
@@ -23,7 +24,14 @@ namespace Server.Items
 			return base.CheckSkills( from );
 		}
 
-		public override int BaseMana{ get{ return 30; } }
+        public override bool OnBeforeSwing(Mobile attacker, Mobile defender)
+        {
+            if (defender is Phantom)
+                return false;
+            return true;
+        }
+
+        public override int BaseMana{ get{ return 30; } }
 		public override double DamageScalar{ get{ return 1.5; } }
 
 		public override bool RequiresSE { get { return true; } }

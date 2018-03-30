@@ -1,4 +1,5 @@
 using System;
+using Server.Mobiles;
 
 namespace Server.Items
 {
@@ -16,7 +17,14 @@ namespace Server.Items
 		public override int BaseMana{ get{ return 30; } }
 		public override double DamageScalar{ get{ return 0.8; } }
 
-		public override void OnHit( Mobile attacker, Mobile defender, int damage )
+        public override bool OnBeforeSwing(Mobile attacker, Mobile defender)
+        {
+            if (defender is Phantom)
+                return false;
+            return true;
+        }
+
+        public override void OnHit( Mobile attacker, Mobile defender, int damage )
 		{
 			if ( !Validate( attacker ) || !CheckMana( attacker, true ) )
 				return;

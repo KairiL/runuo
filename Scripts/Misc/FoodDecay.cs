@@ -33,42 +33,20 @@ namespace Server.Misc
 
 		public static void HungerDecay( Mobile m )
 		{
-            /*
+            if ( m == null )
+                return;
             if ( m is PlayerMobile || (m is BaseCreature && (((BaseCreature)m).ControlMaster != null && !(m is Golem))))
 			    if ( m != null && m.Hunger >= 1 )
-                {
 				    m.Hunger -= 1;
-                    if (m.Hunger <= 5)
-                        m.SendMessage("You are starving!");
-                    else if (m.Hunger <= 10)
-                        m.SendMessage("You are starting to feel hungry.");
-                }
-                else
-                    m.SendMessage("You are starving!");
-            else
-            */
-            if (m != null)
-                m.Hunger = 20;
 		}
 
 		public static void ThirstDecay( Mobile m )
 		{
-            /*
+            if (m == null)
+                return;
             if (m is PlayerMobile || (m is BaseCreature && (((BaseCreature)m).ControlMaster != null && !(m is Golem))))
                 if ( m != null && m.Thirst >= 1 )
-                {
 				    m.Thirst -= 1;
-                    if (m.Thirst <= 5)
-                        m.SendMessage("You are dehydrated!");
-                    else if (m.Thirst <= 10)
-                        m.SendMessage("You are starting to feel parched.");
-                }
-                else
-                    m.SendMessage("You are parched!");
-            else
-            */
-            if (m != null)
-                m.Thirst = 20;
 		}
 	}
 }

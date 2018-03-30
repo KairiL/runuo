@@ -50,7 +50,7 @@ namespace Server.Mobiles
 		private const double HealChance = 0.05; // 5% chance to heal at gm necromancy? Probably not what this does
 		private const double TeleportChance = 0.10; // 10% chance to teleport at gm necromancy
         private const double PetSwitchChance = .30; // 30% of the time Will switch from pet to pet owner
-        //private const double DispelChance = 0.75; // 75% chance to dispel at gm necromancy
+        private const double DispelChance = 0.30; // 30% chance to dispel
         //private const double ItemChance = 0.0; //0% chance to use an offensive item
         //private const double AbilityChance = 0.0; //0% chance to use special abilities
 
@@ -560,7 +560,7 @@ namespace Server.Mobiles
                     }
                     spell = new CureSpell( m_Mobile, null );
 				}
-				else if ( toDispel != null ) // Something dispellable is attacking us
+				else if ( toDispel != null && Utility.RandomDouble() < DispelChance ) // Something dispellable is attacking us
 				{
                     spell = DoDispel( toDispel );
 				}
@@ -585,9 +585,11 @@ namespace Server.Mobiles
 
 				if ( toDispel != null )
 				{
+                    /*
 					if ( m_Mobile.InRange( toDispel, 10 ) )
 						RunFrom( toDispel );
 					else if ( !m_Mobile.InRange( toDispel, 12 ) )
+                    */
 						RunTo( toDispel );
 				}
 				else
@@ -844,8 +846,10 @@ namespace Server.Mobiles
 
 				if ( toTarget != null )
 					RunTo( toTarget );
-				else if ( toTarget != null && m_Mobile.InRange( toTarget, 10 ) )
+                /*
+				else if ( m_Mobile.InRange( toTarget, 10 ) )
 					RunFrom( toTarget );
+                */
 			}
 			else if (isParalyze || isTeleport)
 			{

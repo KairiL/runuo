@@ -15,8 +15,8 @@ namespace Server.Engines.CannedEvil
 		SleepingDragon,
 		Glade,
 		Pestilence,
-        PrimevalLich/*,
-        AbyssalInfernal*/
+        PrimevalLich,
+        AbyssalInfernal
 	}
 
 	public class ChampionSpawnInfo
@@ -111,11 +111,19 @@ namespace Server.Engines.CannedEvil
 				} ),
                 new ChampionSpawnInfo( "Primeval Lich", typeof( PrimevalLich ), new string[]{ "Opposer", "Eliminator", "Purifier" }, new Type[][]
                 {
-                    new Type[]{ typeof( BoneMagi ), typeof( SkeletalMage ) },
-                    new Type[]{ typeof( Lich ), typeof( BoneMagi ) },
-                    new Type[]{ typeof( Lich ), typeof( LichLord) },
-                    new Type[]{ typeof( LichLord ), typeof(BloodElemental ) },
+                    new Type[]{ typeof( GoreFiend ), typeof( VampireBat ) },
+                    new Type[]{ typeof( FleshGolem ), typeof( DarkWisp ) },
+                    new Type[]{ typeof( UndeadGargoyle ), typeof( Wight) },
+                    new Type[]{ typeof( SkeletalDrake ), typeof( DreamWraith ) }
+                } ),
+                new ChampionSpawnInfo( "Abyssal Infernal", typeof( AbyssalInfernal ), new string[]{ "Wrecker", "Decimator", "Obliterator" }, new Type[][]
+                { 
+                    new Type[]{ typeof( HordeFamiliar ), typeof( ChaosDaemon ) },
+                    new Type[]{ typeof( StoneHarpy ), typeof( ArcaneDaemon ) },
+                    new Type[]{ typeof( PitFiend ), typeof( Moloch ) },
+                    new Type[]{ typeof( Archdemon ), typeof( AbyssalAbomination ) }
                 } )
+
 			};
 
 		public static ChampionSpawnInfo GetInfo( ChampionSpawnType type )

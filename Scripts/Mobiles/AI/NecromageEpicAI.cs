@@ -51,7 +51,7 @@ namespace Server.Mobiles
 		private const double HealChance = 0.20; // 5% chance to heal at gm necromancy?, uses spirit speak healing
 		private const double TeleportChance = 0.10; // 10% chance to teleport at gm necromancy
         private const double PetSwitchChance = .30; // 30% of the time Will switch from pet to pet owner
-        //private const double DispelChance = 0.75; // 75% chance to dispel at gm necromancy
+        private const double DispelChance = 0.30; // 30% chance to dispel at gm necromancy
         //private const double ItemChance = 0.0; //0% chance to use an offensive item
         //private const double AbilityChance = 0.0; //0% chance to use special abilities
 
@@ -585,7 +585,7 @@ namespace Server.Mobiles
                     }
                         spell = new ArchCureSpell( m_Mobile, null );
 				}
-				else if ( toDispel != null ) // Something dispellable is attacking us
+				else if ( toDispel != null && Utility.RandomDouble() < DispelChance ) // Something dispellable is attacking us
 				{
 					spell = DoDispel( toDispel );
 				}
@@ -608,7 +608,7 @@ namespace Server.Mobiles
 
 				// Now we have a spell picked
 				// Move first before casting
-
+                /*
 				if ( toDispel != null )
 				{
 					if ( m_Mobile.InRange( toDispel, 10 ) )
@@ -617,6 +617,7 @@ namespace Server.Mobiles
 						RunTo( toDispel );
 				}
 				else
+                */
 				{
 					RunTo( c );
 				}
@@ -870,8 +871,10 @@ namespace Server.Mobiles
 
 				if ( toTarget != null )
 					RunTo( toTarget );
+                /*
 				else if ( toTarget != null && m_Mobile.InRange( toTarget, 10 ) )
 					RunFrom( toTarget );
+                */
 			}
 			else if (isParalyze || isTeleport)
 			{

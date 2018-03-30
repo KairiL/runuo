@@ -221,8 +221,6 @@ namespace Server.Items
                 CampfireEntry entry = Campfire.GetEntry(m_Healer);
                 if (entry != null && entry.Safe)
                     healing += 20;
-                if (this is EnhancedBandage)
-                    healing += 10;
                 double chance = ((healing - 68.0) / 50.0) - (m_Slips * 0.02);
 
 				if (( (checkSkills = (healing >= 80.0 && anatomy >= 80.0)) && chance > Utility.RandomDouble() )
@@ -318,8 +316,6 @@ namespace Server.Items
                 CampfireEntry entry = Campfire.GetEntry(m_Healer);
                 if (entry != null && entry.Safe)
                     healing += 20;
-                if (this is EnhancedBandage)
-                    healing += 10;
 
                 double chance = ((healing - 30.0) / 50.0) - (m_Patient.Poison.Level * 0.1) - (m_Slips * 0.02);
 
@@ -370,8 +366,6 @@ namespace Server.Items
                 CampfireEntry entry = Campfire.GetEntry(m_Healer);
                 if (entry != null && entry.Safe)
                     healing += 20;
-                if (this is EnhancedBandage)
-                    healing += 10;
 
                 double chance = ((healing + 10.0) / 100.0) - (m_Slips * 0.02);
                 if ( chance > Utility.RandomDouble() )

@@ -69,7 +69,11 @@ namespace Server.Mobiles
         public override void OnThink()
         {
             base.OnThink();
-            Suppress(Combatant);
+            Suppress(Combatant);//Unholy touch
+            //Howl of the lich: Cold area explosion
+            //Creeping Death: up to 6 lightning bolts within 15 tiles and
+            //Shadow Dweller near each lightning bolt - no melee effect
+            //Teleport pull - no melee effect
         }
 
         public override OppositionGroup OppositionGroup
@@ -85,7 +89,7 @@ namespace Server.Mobiles
             AddLoot(LootPack.MedScrolls, 2);
             AddLoot(LootPack.HighScrolls, 3);
         }
-
+        
 		public override bool Unprovokable{ get{ return true; } }
 		public override bool BleedImmune{ get{ return true; } }
 		public override Poison PoisonImmune{ get{ return Poison.Lethal; } }
@@ -108,8 +112,11 @@ namespace Server.Mobiles
                 {
                     Skill s = target.Skills[i];
 
-                    target.AddSkillMod(new TimedSkillMod(s.SkillName, true, s.Base * -0.28, delay));
+                    target.AddSkillMod(new TimedSkillMod(s.SkillName, true, -9, delay));
                 }
+                target.AddStatMod(new StatMod(StatType.Str, "PlichStr", (int)(-9), delay));
+                target.AddStatMod(new StatMod(StatType.Dex, "PlichDex", (int)(-9), delay));
+                target.AddStatMod(new StatMod(StatType.Int, "PlichInt", (int)(-9), delay));
 
                 int count = (int)Math.Round(delay.TotalSeconds / 1.25);
                 Timer timer = new AnimateTimer(target, count);

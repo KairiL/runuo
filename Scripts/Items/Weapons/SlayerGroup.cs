@@ -76,7 +76,7 @@ namespace Server.Items
 				};
 
 			undead.Opposition = new SlayerGroup[]{ humanoid };
-			undead.Super = new SlayerEntry( SlayerName.Silver, typeof( AncientLich ), typeof( Bogle ), typeof( BoneKnight ), typeof( BoneMagi ),/* typeof( DarkGuardian ), */typeof( DarknightCreeper ), typeof( FleshGolem ), typeof( Ghoul ), typeof( GoreFiend ), typeof( HellSteed ), typeof( LadyOfTheSnow ), typeof( Lich ), typeof( LichLord ), typeof( Mummy ), typeof( PestilentBandage ), typeof( Revenant ), typeof( RevenantLion ), typeof( RottingCorpse ), typeof( Shade ), typeof( ShadowKnight ), typeof( SkeletalKnight ), typeof( SkeletalMage ), typeof( SkeletalMount ), typeof( Skeleton ), typeof( Spectre ), typeof( Wraith ), typeof( Zombie ) );
+			undead.Super = new SlayerEntry( SlayerName.Silver, typeof( AncientLich ), typeof( Bogle ), typeof( BoneKnight ), typeof( BoneMagi ),/* typeof( DarkGuardian ), */typeof( DarknightCreeper ), typeof( DreamWraith ), typeof( FleshGolem ), typeof( Ghoul ), typeof( GoreFiend ), typeof( HellSteed ), typeof( LadyOfTheSnow ), typeof( Lich ), typeof( LichLord ), typeof( Mummy ), typeof( PestilentBandage ), typeof( Revenant ), typeof( RevenantLion ), typeof( RottingCorpse ), typeof( Shade ), typeof( ShadowKnight ), typeof( SkeletalDrake), typeof( SkeletalKnight ), typeof( SkeletalMage ), typeof( SkeletalMount ), typeof( Skeleton ), typeof( Spectre ), typeof( UndeadGargoyle ), typeof( Wight ), typeof( Wraith ), typeof( Zombie ) );
 			undead.Entries = new SlayerEntry[0];
 
 			fey.Opposition = new SlayerGroup[]{ abyss };
@@ -85,7 +85,7 @@ namespace Server.Items
 
 			elemental.Opposition = new SlayerGroup[]{ abyss };
 			elemental.FoundOn = new Type[]{ typeof( Balron ), typeof( Daemon ) };
-			elemental.Super = new SlayerEntry( SlayerName.ElementalBan, typeof( AcidElemental ), typeof( AgapiteElemental ), typeof( AirElemental ), typeof( SummonedAirElemental ), typeof( BloodElemental ), typeof( BronzeElemental ), typeof( CopperElemental ), typeof( CrystalElemental ), typeof( DullCopperElemental ), typeof( EarthElemental ), typeof( SummonedEarthElemental ), typeof( Efreet ), typeof( FireElemental ), typeof( SummonedFireElemental ), typeof( GoldenElemental ), typeof( IceElemental ), typeof( KazeKemono ), typeof( PoisonElemental ), typeof( RaiJu ), typeof( SandVortex ), typeof( ShadowIronElemental ), typeof( SnowElemental ), typeof( ValoriteElemental ), typeof( VeriteElemental ), typeof( WaterElemental ), typeof( SummonedWaterElemental ) );
+			elemental.Super = new SlayerEntry( SlayerName.ElementalBan, typeof(AbyssalAbomination), typeof( AbyssalInfernal), typeof( AcidElemental ), typeof( AgapiteElemental ), typeof( AirElemental ), typeof( SummonedAirElemental ), typeof( BloodElemental ), typeof( BronzeElemental ), typeof( CopperElemental ), typeof( CrystalElemental ), typeof( DullCopperElemental ), typeof( EarthElemental ), typeof( SummonedEarthElemental ), typeof( Efreet ), typeof( FireElemental ), typeof( SummonedFireElemental ), typeof( GoldenElemental ), typeof( HordeFamiliar), typeof( IceElemental ), typeof( KazeKemono ), typeof( PoisonElemental ), typeof( RaiJu ), typeof( SandVortex ), typeof( ShadowIronElemental ), typeof( SnowElemental ), typeof( ValoriteElemental ), typeof( VeriteElemental ), typeof( WaterElemental ), typeof( SummonedWaterElemental ) );
 			elemental.Entries = new SlayerEntry[]
 				{
 					new SlayerEntry( SlayerName.BloodDrinking, typeof( BloodElemental ) ),
