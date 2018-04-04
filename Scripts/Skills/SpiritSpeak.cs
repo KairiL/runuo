@@ -188,8 +188,8 @@ namespace Server.SkillHandlers
 
 						if ( min > max )
 							min = max;
-                        min += (int)Caster.Skills[SkillName.Healing].Value / 15; ;
-                        max += (int)Caster.Skills[SkillName.Healing].Value / 15; ;
+                        min += (int)Caster.Skills[SkillName.Healing].Value / 15;
+                        max += (int)Caster.Skills[SkillName.Healing].Value / 15;
                         ArcaneEmpowermentSpell.AddHealBonus(Caster, ref min);
                         ArcaneEmpowermentSpell.AddHealBonus(Caster, ref max);
                         Caster.Hits += Utility.RandomMinMax( min, max );

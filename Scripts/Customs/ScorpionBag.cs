@@ -7,21 +7,13 @@ namespace Server.Items
 	public class ScorpionBag : Bag
 	{
 		[Constructable]
-		public ScorpionBag() : this( 50 )
-		{
-		}
-
-		[Constructable]
-		public ScorpionBag( int amount )
+		public ScorpionBag()
 		{
 			DropItem( new Gears   ( 50 ) );
 			DropItem( new Leather    ( 50 ) );
 			DropItem( new Board       ( 50 ) );
 			DropItem( new Bolt      ( 200 ) );
-            for (int i=0; i<50; i++)
-            { 
-                DropItem(new GreaterExplosionPotion(1)); 
-            }
+            DropItem(new GreaterExplosionPotion( 50 ) ); 
 			DropItem( new PowerCrystal   ( 1 ) );
 			DropItem( new ScorpionAssembly ( 1 ) );
 		}

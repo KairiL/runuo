@@ -2,6 +2,7 @@ using System;
 using Server;
 using Server.Mobiles;
 using Server.Factions;
+using Server.Items;
 
 namespace Server.Misc
 {
@@ -90,7 +91,7 @@ namespace Server.Misc
 
 			double value = skill.Value;// - 20 + (from.Hunger + from.Thirst) / 2; //removed hunger by popular request
 
-			if ( value < minSkill )
+            if ( value < minSkill )
 				return false; // Too difficult
 			else if ( value >= maxSkill )
 				return true; // No challenge
@@ -114,8 +115,12 @@ namespace Server.Misc
 				return true; // No challenge
 
 			Point2D loc = new Point2D( from.Location.X / LocationSize, from.Location.Y / LocationSize );
-			return CheckSkill( from, skill, loc, chance );
-		}
+            CampfireEntry casterEntry = Campfire.GetEntry(from);
+            if (casterEntry != null && casterEntry.Safe)
+                return CheckSkill( from, skill, loc, chance + 10 );
+            else
+                return CheckSkill(from, skill, loc, chance + 10);
+        }
 
 		public static bool CheckSkill( Mobile from, Skill skill, object amObj, double chance )
 		{
@@ -148,10 +153,14 @@ namespace Server.Misc
 		{
 			Skill skill = from.Skills[skillName];
 
-			if ( skill == null )
+            if ( skill == null )
 				return false;
 
 			double value = skill.Value;// - 20 + (from.Hunger + from.Thirst) / 2; //removed hunger by popular request
+
+            CampfireEntry casterEntry = Campfire.GetEntry(from);
+            if (casterEntry != null && casterEntry.Safe)
+                value += 10;
 
             if ( value < minSkill )
 				return false; // Too difficult
@@ -165,6 +174,7 @@ namespace Server.Misc
 
 		public static bool Mobile_SkillCheckDirectTarget( Mobile from, SkillName skillName, object target, double chance )
 		{
+
 			Skill skill = from.Skills[skillName];
 
 			if ( skill == null )
@@ -174,9 +184,12 @@ namespace Server.Misc
 				return false; // Too difficult
 			else if ( chance >= 1.0 )
 				return true; // No challenge
-
-			return CheckSkill( from, skill, target, chance );
-		}
+            CampfireEntry casterEntry = Campfire.GetEntry(from);
+            if (casterEntry != null && casterEntry.Safe)
+                return CheckSkill( from, skill, target, chance+10 );
+            else
+                return CheckSkill(from, skill, target, chance);
+        }
 
 		private static bool AllowGain( Mobile from, Skill skill, object obj )
 		{

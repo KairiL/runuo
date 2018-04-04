@@ -60,13 +60,13 @@ namespace Server.Mobiles
             item.Hue = 0;
             item.LootType = LootType.Blessed;
             item.Name = "A Phantom Robe";
-            item.Resistances.Direct = 200;
+            item.Resistances.Direct = 200;//Doesn't seem to work
             AddItem(item);
         }
 
 		public override void GenerateLoot()
 		{
-            AddLoot(LootPack.Epic, 1);
+            AddLoot(LootPack.Epic, 2);
         }
 
         public override void OnThink()

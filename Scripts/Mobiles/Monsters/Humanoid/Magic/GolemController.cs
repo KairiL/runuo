@@ -23,26 +23,26 @@ namespace Server.Mobiles
             
             SetStr( 126, 150 );
 			SetDex( 96, 120 );
-			SetInt( 151, 175 );
+			SetInt( 211, 275 );
 
-			SetHits( 76, 90 );
+			SetHits( 100, 140 );
 
 			SetDamage( 6, 12 );
 
 			SetDamageType( ResistanceType.Physical, 100 );
 
-			SetResistance( ResistanceType.Physical, 30, 40 );
-			SetResistance( ResistanceType.Fire, 25, 35 );
-			SetResistance( ResistanceType.Cold, 35, 45 );
-			SetResistance( ResistanceType.Poison, 5, 15 );
-			SetResistance( ResistanceType.Energy, 15, 25 );
+			SetResistance( ResistanceType.Physical, 40, 50 );
+			SetResistance( ResistanceType.Fire, 35, 45 );
+			SetResistance( ResistanceType.Cold, 45, 55 );
+			SetResistance( ResistanceType.Poison, 15, 25 );
+			SetResistance( ResistanceType.Energy, 25, 35 );
 
-			SetSkill( SkillName.EvalInt, 95.1, 100.0 );
-			SetSkill( SkillName.Magery, 95.1, 100.0 );
-			SetSkill( SkillName.Meditation, 95.1, 100.0 );
+			SetSkill( SkillName.EvalInt, 105.1, 120.0 );
+			SetSkill( SkillName.Magery, 105.1, 120.0 );
+			SetSkill( SkillName.Meditation, 95.1, 120.0 );
 			SetSkill( SkillName.MagicResist, 102.5, 125.0 );
 			SetSkill( SkillName.Tactics, 65.0, 87.5 );
-			SetSkill( SkillName.Wrestling, 65.0, 87.5 );
+			SetSkill( SkillName.Wrestling, 95.0, 107.5 );
 
 			Fame = 4000;
 			Karma = -4000;
@@ -57,7 +57,7 @@ namespace Server.Mobiles
 
 		public override void GenerateLoot()
 		{
-			AddLoot( LootPack.Rich );
+			AddLoot( LootPack.UltraRich );
 		}
 
 		public void AddArcane( Item item )

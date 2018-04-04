@@ -5064,7 +5064,7 @@ namespace Server.Mobiles
 
 		public long NextReacquireTime { get { return m_NextReacquireTime; } set { m_NextReacquireTime = value; } }
 
-		public virtual TimeSpan ReacquireDelay{ get{ return TimeSpan.FromSeconds( 10.0 ); } }
+		public virtual TimeSpan ReacquireDelay{ get{ return TimeSpan.FromSeconds( 5.0 ); } }
 		public virtual bool ReacquireOnMovement{ get{ return false; } }
 		public virtual bool AcquireOnApproach{ get { return m_Paragon; } }
 		public virtual int AcquireOnApproachRange { get { return 10; } }

@@ -103,7 +103,7 @@ namespace Server.Engines.CannedEvil
 					new Type[]{ typeof( FerelTreefellow ), typeof( RagingGrizzlyBear ) }
 				} ),
 				new ChampionSpawnInfo( "The Corrupt", typeof( Ilhenir ), new string[]{ "Cleanser", "Expunger", "Depurator" } , new Type[][]
-				{																											// The Corrupt
+				{																											// Pestilence
 					new Type[]{ typeof( PlagueSpawn ), typeof( Bogling ) },
 					new Type[]{ typeof( PlagueBeast ), typeof( BogThing ) },
 					new Type[]{ typeof( PlagueBeastLord ), typeof( InterredGrizzle ) },

@@ -11,7 +11,7 @@ namespace Server.Mobiles
 	public class AbyssalInfernal : BaseCreature //BaseChampion
 	{
         /*
-        public override ChampionSkullType SkullType { get { return null; } }
+        public override ChampionSkullType SkullType { get { return ??; } }
 
         public override Type[] UniqueList { get { return new Type[] { typeof(TongueOfTheBeast) }; } }
         public override Type[] SharedList

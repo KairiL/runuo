@@ -65,7 +65,7 @@ namespace Server.Spells.Fourth
 			}
 			else if ( CheckBSequence( m ) )
 			{
-                CampfireEntry casterEntry = Campfire.GetEntry(Caster);
+                
                 SpellHelper.Turn( Caster, m );
 
 				// Algorithm: (40% of magery) + (1-10)
@@ -73,6 +73,7 @@ namespace Server.Spells.Fourth
 				int toHeal = (int)(Caster.Skills[SkillName.Magery].Value * 0.4);
 				toHeal += Utility.Random( 1, 10 );
                 toHeal += (int)Caster.Skills[SkillName.Healing].Value / 15;
+                CampfireEntry casterEntry = Campfire.GetEntry(Caster);
                 if (casterEntry != null && casterEntry.Safe)
                     toHeal += 3;
 

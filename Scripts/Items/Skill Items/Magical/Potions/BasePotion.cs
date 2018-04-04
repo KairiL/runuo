@@ -180,9 +180,6 @@ namespace Server.Items
                     break;
 				}
 			}
-
-			if( version ==  0 )
-				Stackable = false;
 		}
 
 		public abstract void Drink( Mobile from );

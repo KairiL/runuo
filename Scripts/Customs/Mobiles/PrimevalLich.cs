@@ -6,9 +6,28 @@ using Server.Items;
 namespace Server.Mobiles
 {
 	[CorpseName( "a primeval liche's corpse" )]
-	public class PrimevalLich : BaseCreature
+	public class PrimevalLich : BaseCreature //BaseChampion
 	{
-		[Constructable]
+        /*
+        public override ChampionSkullType SkullType { get { return ??; } }
+
+        public override Type[] UniqueList { get { return new Type[] { typeof(LightsRampart) }; } }
+        public override Type[] SharedList
+        {
+            get
+            {
+                return new Type[] {     typeof( TheMostKnowledgePerson ),
+                                        typeof( ProtectorOfTheBattleMage ),
+                                        typeof( ChannelersDefender ),
+                                        typeof( LieutenantOfTheBritannianRoyalGuard )};
+            }
+        }
+        public override Type[] DecorativeList { get { return new Type[] { typeof(MummifiedCorpse) }; } }
+
+        //public override MonsterStatuetteType[] StatueTypes{ get; }
+        */
+
+        [Constructable]
 		public PrimevalLich() : base( AIType.AI_NecromageEpic, FightMode.Closest, 12, 1, 0.1, 0.2 )
 		{
 			Name = "Primeval Lich";
