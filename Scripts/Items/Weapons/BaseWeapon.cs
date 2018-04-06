@@ -1841,7 +1841,6 @@ namespace Server.Items
             damageBonus += sdiBonus;
             // Inscription bonus
             
-
 			damageBonus += inscribeSkill / 20;
 
 			if ( inscribeSkill >= 1000 )
@@ -2019,7 +2018,8 @@ namespace Server.Items
 				{
 					damage *= ( 11 - from.GetDistanceToSqrt( m ) ) / 10;
 				}
-                damage *= from.Skills.Inscribe.Value / 33.3;
+                if (from.Skills.Inscribe.Value > 33.3)
+                    damage *= from.Skills.Inscribe.Value / 33.3;
                 from.DoHarmful( m, true );
 				m.FixedEffect( 0x3779, 1, 15, hue, 0 );
 				AOS.Damage(m, from, (int)damage, phys, fire, cold, pois, nrgy);

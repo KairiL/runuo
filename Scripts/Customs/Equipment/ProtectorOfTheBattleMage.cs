@@ -28,7 +28,7 @@ namespace Server.Items
             Attributes.LowerManaCost = 8;	
             Attributes.RegenMana = 2;
             Attributes.LowerRegCost = 10;
-            Attributes.SpellDamage = 5;
+            Attributes.SpellDamage = 10; //originally 5.
             //AbsorptionAttributes.CastingFocus = 3;
         }
 
