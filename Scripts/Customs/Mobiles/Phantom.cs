@@ -1,5 +1,3 @@
-using System;
-using Server;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -7,7 +5,9 @@ namespace Server.Mobiles
 	[CorpseName( "a phantom corpse" )]
 	public class Phantom : BaseCreature
 	{
-		[Constructable]
+        protected double ColorChangeChance = .05;
+
+        [Constructable]
 		public Phantom() : base( AIType.AI_NecromageEpic, FightMode.Closest, 10, 1, 0.2, 0.4 )
 		{
 			Name = "a phantom";
@@ -71,13 +71,13 @@ namespace Server.Mobiles
 
         public override void OnThink()
         { 
-            double ColorChangeChance = .05;
+            
             base.OnThink();
             if (Hue == 1 && Utility.RandomDouble() < ColorChangeChance)
                 ChangeColor();
         }
 
-        public void ChangeColor()
+        public virtual void ChangeColor()
         {
             GoDark();
             switch( Utility.Random(6) )
@@ -102,7 +102,7 @@ namespace Server.Mobiles
                     SetResistance(ResistanceType.Energy, 0);
                     Hue = 34691;
                     break;
-                default:
+                default://stay dark
                     break;
 
             }
@@ -122,13 +122,13 @@ namespace Server.Mobiles
         public override void OnDamage(int amount, Mobile from, bool willKill)
         {
             int reflectAmount = 50;
+            /*
             if (Hue == 1)
                 return;
-
-            DamageMin = 30;
-            if (amount < DamageMin)
+            */
+            int MinDamage = 30;
+            if (amount < MinDamage)
             {
-                amount = 0;
                 Hits += reflectAmount;
                 switch (Hue)
                 {
@@ -145,7 +145,7 @@ namespace Server.Mobiles
                         AOS.Damage(from, reflectAmount, 0, 0, 0, 100, 0);
                         break;
                     case 34691:
-                        AOS.Damage(from, reflectAmount, 100, 0, 0, 0, 100);
+                        AOS.Damage(from, reflectAmount, 0, 0, 0, 0, 100);
                         break;
                     case 1:
                         AOS.Damage(from, reflectAmount, 20, 20, 20, 20, 20);
@@ -155,12 +155,11 @@ namespace Server.Mobiles
                 }
             }
             else
+            {
                 base.OnDamage(amount, from, willKill);
-
-            double ChangeChance = .05;
-            
-            if (amount > DamageMin && Utility.RandomDouble() < ChangeChance)
-                ChangeColor();
+                if (Utility.RandomDouble() < ColorChangeChance)
+                    ChangeColor();
+            }
         }
 
         public override void CheckReflect(Mobile caster, ref bool reflect)

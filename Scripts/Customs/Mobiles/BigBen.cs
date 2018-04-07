@@ -1,5 +1,4 @@
 using System;
-using Server;
 using Server.Items;
 using System.Collections.Generic;
 using Server.Spells;
@@ -7,11 +6,11 @@ using Server.Network;
 
 namespace Server.Mobiles
 {
-	[CorpseName( "a bone demon corpse" )]
+	[CorpseName( "the corpse of Big Ben" )]
 	public class BigBen : BaseCreature
 	{
 		[Constructable]
-		public BigBen() : base( AIType.AI_NecromageEpic, FightMode.Closest, 10, 1, 0.2, 0.4 )
+		public BigBen() : base( AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4 )
 		{
 			Name = "Big Ben";
 			Body = 576;
@@ -52,7 +51,7 @@ namespace Server.Mobiles
             item.Hue = 0;
             item.LootType = LootType.Blessed;
             item.Name = "A Phantom Robe";
-            item.Resistances.Direct = 200;
+            item.Resistances.Direct = 200;//Doesn't seem to work
             AddItem(item);
         }
 
@@ -112,7 +111,6 @@ namespace Server.Mobiles
         }
         public void Tick()
         { 
-            List<int> KilledVictimcs;
             int len = Victims.Count;
             if (len == 0)
                 return;

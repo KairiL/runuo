@@ -1,13 +1,11 @@
-using System;
-using Server;
-using Server.Items;
-
 namespace Server.Mobiles
 {
 	[CorpseName( "a phantom corpse" )]
 	public class LesserPhantom : Phantom
 	{
-		[Constructable]
+        new protected double ColorChangeChance = .20;
+
+        [Constructable]
 		public LesserPhantom()
 		{
 			Name = "a lesser phantom";
@@ -57,14 +55,6 @@ namespace Server.Mobiles
 		public override void GenerateLoot()
 		{
             AddLoot(LootPack.LowEpic1, 1);
-        }
-
-        public override void OnThink()
-        { 
-            double ColorChangeChance = .25;
-            base.OnThink();
-            if (Hue == 1 && Utility.RandomDouble() < ColorChangeChance)
-                ChangeColor();
         }
         
 		public override Poison PoisonImmune{ get{ return Poison.Lethal; } }

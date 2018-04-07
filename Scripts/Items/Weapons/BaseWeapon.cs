@@ -1841,6 +1841,7 @@ namespace Server.Items
             damageBonus += sdiBonus;
             // Inscription bonus
             
+
 			damageBonus += inscribeSkill / 20;
 
 			if ( inscribeSkill >= 1000 )
