@@ -155,6 +155,7 @@
 				</Runebook>
 				<Runebook Name="??">
 					<Rune Name="Library/Prison?" TargetMap="Felucca" X="6754" Y="78" Z="0" />
+					<Rune Name="Abysal Infernal Entrance" TargetMap="Felucca" X="6066" Y="1290" Z="37" />
 				</Runebook>
 			</Runebook>
 			<Runebook Name="Internal">
@@ -792,6 +793,9 @@
 				<Runebook Name="Yomotsu Mines">
 					<Rune Name="Entrance" TargetMap="Tokuno" X="259" Y="785" Z="64" />
 				</Runebook>
+				<Runebook Name="The Citadel">
+					<Rune Name="Entrance" TargetMap="Tokuno" X="1351" Y="762" Z="20" />
+				</Runebook>
 			</Runebook>
 			<Runebook Name="Sites">
 				<Runebook Name="Makoto-Jima">
@@ -824,6 +828,7 @@
 				</Runebook>
 				<Runebook Name="Holy City">
 					<Rune Name="Holy City Moongate" TargetMap="TerMur" X="928" Y="3989" Z="-40" />
+					<Rune Name="Entrance to Tomb" TargetMap="TerMur" X="998" Y="3841" Z="-41" />
 				</Runebook>
 			</Runebook>
 			<Runebook Name="Dungeons">
@@ -875,6 +880,10 @@
 					<Rune Name="Cave near lava" TargetMap="TerMur" X="877" Y="2101" Z="40" />
 					<Rune Name="Abyssal Infernal" TargetMap="Felucca" X="7150" Y="753" Z="26" />
 					<Rune Name="Primeval Lich" TargetMap="Felucca" X="6999" Y="1020" Z="-15" />
+					<Rune Name="Blue Entrance" TargetMap="TerMur" X="493" Y="1613" Z="40" />
+					<Rune Name="Banana Entrance?" TargetMap="TerMur" X="727" Y="1594" Z="35" />
+					<Rune Name="Goblin Exit" TargetMap="TerMur" X="1244" Y="1006" Z="-37" />
+					<Rune Name="Tribal Town" TargetMap="TerMur" X="553" Y="1468" Z="40" />
 				</Runebook>
 			</Runebook>
 			<Runebook Name="Sites">
@@ -908,6 +917,7 @@
 			</Runebook>
 		</Runebook>
 		<Runebook Name="Dev">
+			<Runebook Name="Lava Island Blob" />
 			<Rune Name="Minax Champ" TargetMap="Felucca" X="6995" Y="733" Z="51" />
 			<Rune Name="Tiny Island" TargetMap="Felucca" X="6998" Y="1558" Z="0" />
 			<Rune Name="T2A rectangle" TargetMap="Felucca" X="7017" Y="1893" Z="40" />
@@ -923,6 +933,24 @@
 			<Rune Name="Hidden Hole Stygian Abyss" TargetMap="TerMur" X="1008" Y="443" Z="-11" />
 			<Rune Name="Abyssal Infernal Entrance" TargetMap="TerMur" X="975" Y="419" Z="-21" />
 			<Rune Name="Primeval Lich Entrance" TargetMap="TerMur" X="513" Y="584" Z="11" />
+			<Rune Name="Arenas" TargetMap="Trammel" X="6786" Y="708" Z="0" />
+			<Rune Name="Shadow stone Ter Mur Rectangle" TargetMap="Felucca" X="7156" Y="1893" Z="40" />
+			<Rune Name="Solen Hole to Tram" TargetMap="Felucca" X="5706" Y="1844" Z="-12" />
+		</Runebook>
+		<Runebook Name="New Lands">
+			<Rune Name="Blue Entrance" TargetMap="TerMur" X="493" Y="1614" Z="40" />
+			<Rune Name="Silverback Village" TargetMap="TerMur" X="652" Y="1708" Z="100" />
+			<Rune Name="Sun Temple" TargetMap="TerMur" X="487" Y="1857" Z="95" />
+			<Rune Name="Lava Entrance" TargetMap="TerMur" X="878" Y="2102" Z="40" />
+			<Rune Name="Sand Champ Exit" TargetMap="TerMur" X="965" Y="1716" Z="0" />
+			<Rune Name="Mine Exit" TargetMap="TerMur" X="853" Y="1777" Z="0" />
+			<Rune Name="Mine Pulley Exit" TargetMap="TerMur" X="985" Y="1887" Z="0" />
+			<Rune Name="Cave Entrance" TargetMap="TerMur" X="878" Y="2101" Z="40" />
+			<Rune Name="Shadowguard Entrance" TargetMap="TerMur" X="919" Y="2016" Z="52" />
+			<Rune Name="Small Village" TargetMap="TerMur" X="412" Y="1595" Z="40" />
+			<Rune Name="Sand Eye Exit" TargetMap="TerMur" X="711" Y="2304" Z="0" />
+			<Rune Name="4x4 Arena" TargetMap="TerMur" X="895" Y="2304" Z="45" />
+			<Rune Name="`Big Villalge" TargetMap="TerMur" X="552" Y="1470" Z="40" />
 		</Runebook>
 	</RuneAccount>
 	<RuneAccount Username="ezjones">
