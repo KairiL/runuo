@@ -630,6 +630,8 @@ namespace Server.Engines.Craft
 		{
 			Container ourPack = from.Backpack;
 
+			if (from.AccessLevel >= AccessLevel.GameMaster)
+				return true;
 			if ( ourPack == null )
 				return false;
 
