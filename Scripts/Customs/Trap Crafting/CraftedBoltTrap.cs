@@ -21,6 +21,7 @@ namespace Server.Items
             TriggerRange = 3;
             DamageRange = 0;
             ManaCost = 5;
+            ParalyzeTime = 0;
             DamageScalar = .5;
             BonusSkill = SkillName.Fletching;
             Delay = TimeSpan.FromSeconds(3);

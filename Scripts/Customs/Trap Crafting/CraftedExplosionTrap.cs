@@ -23,24 +23,13 @@ namespace Server.Items
             TriggerRange = 3;
             DamageRange = 5;
             ManaCost = 20;
+            ParalyzeTime = 0;
             BonusSkill = SkillName.Alchemy;
             Delay = TimeSpan.FromSeconds(5);
         }
     
 		public CraftedExplosionTrap( Serial serial ) : base( serial )
 		{
-            DamageType = "Fire";
-            Visible = false;
-            Hue = 254;
-            UsesRemaining = 1;
-            Name = "An explosion trap";
-            TrapPower = 100;
-            DamageScalar = .2;
-            TriggerRange = 3;
-            DamageRange = 4;
-            ManaCost = 20;
-            BonusSkill = SkillName.Alchemy;
-            Delay = TimeSpan.FromSeconds(5);
         }
 
         public override void Serialize(GenericWriter writer)
