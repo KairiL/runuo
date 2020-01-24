@@ -8,36 +8,20 @@ using Server.Gumps;
 namespace Server.Items
 {
 	
-	public class CraftedFireColumnComponents : Item
+	public class CraftedFireColumnComponents : CraftedTrapComponents
 	{
-
-		private bool m_Armed;
-
-		[CommandProperty( AccessLevel.GameMaster )]
-		public bool Armed
-		{
-			get
-			{
-				return m_Armed;
-			}
-			set
-			{
-				m_Armed = value;
-			}
-		}
-
 
 		[Constructable]
 		public CraftedFireColumnComponents() : base( 0xB7D )
 		{
-			Name = "Components for a Fire Column";
+			Name = "Components for a Fire Column Trap";
 			ItemID = 7867;
 			Weight = 5;
 			Hue = 45;
 			Armed = false;
 		}
 
-        protected void CreateTrap(Map map, int x, int y, int z, Mobile from, int trapmod, double poisonskill, int trapskill, int trapuses,
+        public override void CreateTrap(Map map, int x, int y, int z, Mobile from, int trapmod, double poisonskill, int trapskill, int trapuses,
    int rangeBonus, int radiusBonus, double delayBonus)
         {
             CraftedFireColumnTrap trap = new CraftedFireColumnTrap();
@@ -57,22 +41,6 @@ namespace Server.Items
             from.SendMessage("You have configured the trap and concealed it at your location.");
         }
 
-        public static ArrayList CheckTrap( Point3D pnt, Map map, int range )
-		{
-			ArrayList traps = new ArrayList();
-
-			IPooledEnumerable eable = map.GetItemsInRange( pnt, range );
-			foreach ( Item trap in eable ) 
-			{ 
-				if ( ( trap != null ) && ( trap is BaseTrap ) )
-					traps.Add( (BaseTrap)trap ); 
-			} 
-			eable.Free();
-
-			return traps;
-		}
-
-
 		public CraftedFireColumnComponents( Serial serial ) : base( serial )
 		{
 		}
@@ -82,7 +50,6 @@ namespace Server.Items
 			base.Serialize( writer );
 
 			writer.Write( (int)0 );
-			writer.Write( m_Armed );
 		}
 
 		public override void Deserialize( GenericReader reader )
@@ -95,9 +62,6 @@ namespace Server.Items
 			{
 				case 0:
 				{
-
-					m_Armed = reader.ReadBool();
-
 					break;
 				}
 			}

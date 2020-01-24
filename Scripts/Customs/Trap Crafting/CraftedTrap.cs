@@ -23,19 +23,19 @@ namespace Server.Items
         private Map m_MapDest;
         private bool decays = true;
 
-        private static TimeSpan m_DDT = TimeSpan.FromHours(3.0); //Decay time? Doesn't seem to work.  Need to use DecayPeriod maybe.
 
-        public bool CheckRange(Point3D loc, Point3D oldLoc, int range)
-        {
-            return CheckRange(loc, range);
-        }
+        private static TimeSpan m_DDT = TimeSpan.FromHours(3.0); //Decay time? Doesn't seem to work.  Need to use DecayPeriod maybe.
 
         [CommandProperty(AccessLevel.GameMaster)]
         public override bool Decays
         {
             get
             {
-                return m_TrapOwner.AccessLevel <= AccessLevel.GameMaster && decays;
+                if (m_TrapOwner == null)
+                {
+                    return true;
+                }
+                return (m_TrapOwner.AccessLevel <= AccessLevel.GameMaster) && decays;
             }
         }
 
@@ -43,6 +43,7 @@ namespace Server.Items
         {
             get
             {
+                
                     return TimeSpan.FromHours(1.0);
             }
         }
@@ -270,7 +271,7 @@ namespace Server.Items
         }
         public override void OnTrigger(Mobile from)
         {
-            int sdiBonus;
+            int sdiBonus = 0;
             int damage = 0;
             ArrayList targets = new ArrayList();
             //uncomment this if you want staff to be immune to traps
@@ -278,6 +279,11 @@ namespace Server.Items
             //    return;
 
             int ManaLoss = ScaleMana(ManaCost);
+            if (TrapOwner == null)
+            {
+                this.Delete();
+                return;
+            }
 
             if (!(TrapOwner.InRange(Location, 25)) || TrapOwner.Map != Map || TrapOwner.Map == Map.Internal)
             {
@@ -556,22 +562,13 @@ namespace Server.Items
             DamageRange = 0;
             ManaCost = 10;
             TrapPower = 0;
+            ParalyzeTime = 0;
             Delay = TimeSpan.FromSeconds(5);
             Timer.DelayCall(TimeSpan.FromHours(3.0), new TimerStateCallback(DeleteTrap), this);
         }
 
         public CraftedTrap( Serial serial ) : base( serial )
 		{
-            DamageType = "Physical";
-            Visible = true;
-            UsesRemaining = 100;
-            Name = "A Trap";
-            DamageScalar = 1;
-            TriggerRange = 1;
-            DamageRange = 0;
-            ManaCost = 10;
-            TrapPower = 0;
-            Delay = TimeSpan.FromSeconds(5);
             Timer.DelayCall(TimeSpan.FromHours(3.0), new TimerStateCallback(DeleteTrap), this);
         }
 
@@ -585,7 +582,8 @@ namespace Server.Items
 		{
 			base.Serialize( writer );
 
-			writer.Write( (int) 2 ); // version
+			writer.Write( (int) 3 ); // version
+            writer.Write( (int) m_BonusSkill );
             writer.Write( delay );
             writer.Write( m_DamageType );
 			writer.Write( m_TrapOwner );
@@ -609,6 +607,9 @@ namespace Server.Items
 
 			switch ( version )
 			{
+                case 3:
+                    m_BonusSkill = (SkillName) reader.ReadInt();
+                    goto case 2;
                 case 2:
                     delay =  reader.ReadTimeSpan();
                     goto case 1;
