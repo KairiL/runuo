@@ -140,14 +140,19 @@ namespace Server.Spells.Ninjitsu
 				if ( scalar > 1 )
 					scalar = 1;
 
-				// New formula doesn't apply DamageBonus anymore, caps must be, directly, 60/30.
+				// New formula doesn't apply DamageBonus anymore, caps must be, directly, 90/50.
 				if ( info.m_Steps >= 5 )
-					damage = (int)Math.Floor( Math.Min( 60, ( ninjitsu / 3 ) * ( 0.3 + 0.7 * scalar ) + stalkingBonus ) );
+					damage = (int)Math.Floor( Math.Min( 90, ( ninjitsu / 2 ) * ( 0.3 + 0.7 * scalar ) + stalkingBonus*2 ) );
 				else
-					damage = (int)Math.Floor( Math.Min( 30, ( ninjitsu / 9 ) * ( 0.3 + 0.7 * scalar ) + stalkingBonus ) );
+					damage = (int)Math.Floor( Math.Min( 50, ( ninjitsu / 4 ) * ( 0.3 + 0.7 * scalar ) + stalkingBonus ) );
 
 				if ( info.m_isRanged )
 					damage /= 2;
+				
+				if (!info.m_Target.Player)
+				{
+					damage *= 5;
+				}
 			}
 			else
 			{

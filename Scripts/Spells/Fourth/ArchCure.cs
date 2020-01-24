@@ -164,7 +164,7 @@ namespace Server.Spells.Fourth
 			return ( Notoriety.Compute( from, (Mobile)to ) == Notoriety.Ally );
 		}
 
-		private class InternalTarget : Target
+		public class InternalTarget : Target
 		{
 			private ArchCureSpell m_Owner;
 

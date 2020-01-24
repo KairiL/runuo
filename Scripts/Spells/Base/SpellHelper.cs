@@ -1230,6 +1230,33 @@ namespace Server.Spells
 					target = temp;
 				}
 			}
+
+			if ( MirrorImage.HasClone( target ) && (target.Skills.Ninjitsu.Value / 150.0) > Utility.RandomDouble() )
+			{
+				Clone bc;
+
+				IPooledEnumerable eable = target.GetMobilesInRange( 4 );
+				foreach ( Mobile m in eable)
+				{
+					bc = m as Clone;
+
+					if ( bc != null && bc.Summoned && bc.SummonMaster == target )
+					{
+						caster.SendLocalizedMessage( 1063141 ); // Your attack has been diverted to a nearby mirror image of your target!
+						target.SendLocalizedMessage( 1063140 ); // You manage to divert the attack onto one of your nearby mirror images.
+
+						/*
+						 * TODO: What happens if the Clone parries a blow?
+						 * And what about if the attacker is using Honorable Execution
+						 * and kills it?
+						 */
+
+						target = m;
+						break;
+					}
+				}
+				eable.Free();
+			}
 		}
 
 		public static void Damage( Spell spell, Mobile target, double damage )

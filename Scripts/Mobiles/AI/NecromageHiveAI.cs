@@ -81,6 +81,19 @@ namespace Server.Mobiles
 			return m_Mobile.Skills[SkillName.Magery].Value * v * 0.01;
 		}
 
+		public virtual double HealAllyRate( Mobile from )
+		{
+			double Rate = 0;
+			foreach (Mobile m in m_Mobile.GetMobilesInRange(HiveRange))
+			{
+				if ((m.Hits/m.HitsMax) < .80)
+				{
+					Rate =  Rate + (1 - (m.Hits/m.HitsMax));
+				}
+			}
+			return Rate;
+
+		}
 		public override bool DoActionWander()
 		{
 			if ( AcquireFocusMob( m_Mobile.RangePerception, m_Mobile.FightMode, false, false, true ) )
@@ -110,7 +123,7 @@ namespace Server.Mobiles
 				{
                     new ArchCureSpell( m_Mobile, null ).Cast();
 				}
-				else if (ScaleByMagery( HealChance ) > Utility.RandomDouble())
+				else if (ScaleByMagery( HealChance ) > Utility.RandomDouble() || HealAllyRate( m_Mobile ) > Utility.RandomDouble())
 				{
 					if ( m_Mobile.Hits < (m_Mobile.HitsMax - 50) )
 					{
@@ -290,7 +303,7 @@ namespace Server.Mobiles
                       (((BaseCreature)c).PoisonImmune != null && ((BaseCreature)m_Mobile).HitPoison != null &&
                       ((BaseCreature)c).PoisonImmune.Level < ((BaseCreature)m_Mobile).HitPoison.Level) ||
                       ((BaseCreature)c).PoisonImmune == null))
-                            if (Utility.RandomDouble() > .5)
+						if (Utility.RandomDouble() > .5)
 						    spell = new PoisonStrikeSpell( m_Mobile, null );
                         else
                             spell = new PoisonFieldSpell( m_Mobile, null );//need to do targeting on fields
@@ -859,9 +872,17 @@ namespace Server.Mobiles
             return (m_Mobile != m && m_Mobile.InLOS(m) &&
                     (!(SpellHelper.ValidIndirectTarget(m_Mobile, m))) &&
                     ((double)m.Hits / (double)m.HitsMax) < HealPercent &&
-                    (!(m is BaseCreature) || ((BaseCreature)m_Mobile).Team == ((BaseCreature)m).Team));
+                    (!(m is BaseCreature) || ((BaseCreature)m_Mobile).Team == ((BaseCreature)m).Team) &&
+					m.Poison == null);
         }
 
+		private bool WillCure(Mobile m)
+		{
+			return (m_Mobile != m && m_Mobile.InLOS(m) &&
+				(!(SpellHelper.ValidIndirectTarget(m_Mobile, m))) &&
+				(!(m is BaseCreature) || ((BaseCreature)m_Mobile).Team == ((BaseCreature)m).Team) &&
+				m.Poison != null);
+		}
         private void ProcessTarget( Target targ )
 		{
             bool isDispel = (targ is MassDispelSpell.InternalTarget || targ is DispelSpell.InternalTarget);
@@ -869,6 +890,8 @@ namespace Server.Mobiles
 			bool isTeleport = ( targ is TeleportSpell.InternalTarget );
             bool isFireField = ( targ is FireFieldSpell.InternalTarget );
             bool isPoisonField = ( targ is PoisonFieldSpell.InternalTarget );
+			bool isCure = ( targ is ArchCureSpell.InternalTarget || targ is CureSpell.InternalTarget );
+			bool isHeal = (targ is HealSpell.InternalTarget || targ is GreaterHealSpell.InternalTarget );
 			bool teleportAway = false;
 
 			Mobile toTarget;
@@ -951,26 +974,48 @@ namespace Server.Mobiles
 			}
 			else if ( (targ.Flags & TargetFlags.Beneficial) != 0 )
 			{
-                if (m_Mobile.Hits < HealPercent)
-                {
-                    targ.Invoke(m_Mobile, m_Mobile);
-                }
-                else
-                {
+				if (isCure)
+				{
+					if ( m_Mobile.Poison != null )
+					{
+						targ.Invoke(m_Mobile, m_Mobile);
+					}
+					bool Invoked = false;
+					foreach (Mobile m in m_Mobile.GetMobilesInRange(HiveRange))
+					{
+						if (WillCure(m))
+						{
+							targ.Invoke(m_Mobile, m);
+							Invoked = true;
+							break;
+						}
+					}
+					if (!Invoked)
+						targ.Invoke(m_Mobile, m_Mobile);
+				}
+				else if (isHeal)
+				{
+ 					if (m_Mobile.Hits < HealPercent)
+                	{
+                    	targ.Invoke(m_Mobile, m_Mobile);
+                	}
+                	else
+                	{
 
-                    bool Invoked = false;
-                    foreach (Mobile m in m_Mobile.GetMobilesInRange(HiveRange))
-                    {
-                        if (WillHeal(m))
-                        {
-                            targ.Invoke(m_Mobile, m);
-                            Invoked = true;
-                            break;
-                        }
-                    }
-                    if (!Invoked)
-                        targ.Invoke(m_Mobile, m_Mobile);
-                }
+						bool Invoked = false;
+						foreach (Mobile m in m_Mobile.GetMobilesInRange(HiveRange))
+						{
+							if (WillHeal(m))
+							{
+								targ.Invoke(m_Mobile, m);
+								Invoked = true;
+								break;
+							}
+						}
+						if (!Invoked)
+							targ.Invoke(m_Mobile, m_Mobile);
+                	}
+				}
 			}
 			else if ( isTeleport && toTarget != null )
 			{
