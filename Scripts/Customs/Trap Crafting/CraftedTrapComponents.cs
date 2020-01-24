@@ -7,11 +7,11 @@ using Server.Gumps;
 
 namespace Server.Items
 {
-	
 	public class CraftedTrapComponents : Item
 	{
 
 		private bool m_Armed;
+
 
 		[CommandProperty( AccessLevel.GameMaster )]
 		public bool Armed
@@ -26,15 +26,29 @@ namespace Server.Items
 			}
 		}
 
+		private int m_TrapItemID;
+
+		public int TrapItemID
+		{
+			get
+			{
+				return m_TrapItemID;
+			}
+			set
+			{
+				m_TrapItemID = value;
+			}
+		}
 
 		[Constructable]
 		public CraftedTrapComponents() : base( 0xB7D )
 		{
-			Name = "Components for a Poison trap";
+			Name = "Components for a trap";
 			ItemID = 7867;
 			Weight = 5;
 			Hue = 272;
 			Armed = false;
+			TrapItemID = 0x1BC3;
 		}
 
 
@@ -44,7 +58,7 @@ namespace Server.Items
 			{
 				this.Armed = true;
 				from.SendMessage("This trap is now ARMED. Double-clicking these components again will place the trap.");
-				this.Name = "Components for a Poison trap [ARMED]";
+				this.Name = this.Name + " [ARMED]";
 			}
 
 			else if ( this.Armed == true )
@@ -83,7 +97,7 @@ namespace Server.Items
                 if (from.Skills.Blacksmith.Value >= 180)
                     radiusBonus += 1;
 
-                CreateTrap(map, x, y, z, from, trapmod, poisonskill, trapskill, trapuses, rangeBonus, radiusBonus, delayBonus);
+                this.CreateTrap(map, x, y, z, from, trapmod, poisonskill, trapskill, trapuses, rangeBonus, radiusBonus, delayBonus);
 		
 				this.Delete();
 			}
@@ -91,7 +105,7 @@ namespace Server.Items
 		}
 
 
-        protected void CreateTrap(Map map, int x, int y, int z, Mobile from, int trapmod, double poisonskill, int trapskill, int trapuses, 
+        public virtual void CreateTrap(Map map, int x, int y, int z, Mobile from, int trapmod, double poisonskill, int trapskill, int trapuses, 
             int rangeBonus, int radiusBonus, double delayBonus)
         {
             CraftedTrap trap = new CraftedTrap();
@@ -142,7 +156,7 @@ namespace Server.Items
             from.SendMessage("You have configured the trap and concealed it at your location.");
         }
 
-
+		
         public static ArrayList CheckTrap( Point3D pnt, Map map, int range )
 		{
 			ArrayList traps = new ArrayList();

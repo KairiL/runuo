@@ -8,27 +8,10 @@ using Server.Gumps;
 namespace Server.Items
 {
 	
-	public class CraftedBoltComponents : Item
+	public class CraftedBoltComponents : CraftedTrapComponents
 	{
-
-		private bool m_Armed;
-
-		[CommandProperty( AccessLevel.GameMaster )]
-		public bool Armed
-		{
-			get
-			{
-				return m_Armed;
-			}
-			set
-			{
-				m_Armed = value;
-			}
-		}
-
-
 		[Constructable]
-		public CraftedBoltComponents() : base( 0xB7D )
+		public CraftedBoltComponents() : base()
 		{
 			Name = "Components for a Bolt shooter";
 			ItemID = 7867;
@@ -37,8 +20,8 @@ namespace Server.Items
 			Armed = false;
 		}
 
-        protected void CreateTrap(Map map, int x, int y, int z, Mobile from, int trapmod, double poisonskill, int trapskill, int trapuses,
-   int rangeBonus, int radiusBonus, double delayBonus)
+        public override void CreateTrap(Map map, int x, int y, int z, Mobile from, int trapmod, double poisonskill, int trapskill, int trapuses, 
+            int rangeBonus, int radiusBonus, double delayBonus)
         {
             CraftedBoltTrap trap = new CraftedBoltTrap();
 
@@ -55,23 +38,8 @@ namespace Server.Items
             trap.MoveToWorld(new Point3D(x, y, z), map);
 
             from.SendMessage("You have configured the trap and concealed it at your location.");
+
         }
-
-        public static ArrayList CheckTrap( Point3D pnt, Map map, int range )
-		{
-			ArrayList traps = new ArrayList();
-
-			IPooledEnumerable eable = map.GetItemsInRange( pnt, range );
-			foreach ( Item trap in eable ) 
-			{ 
-				if ( ( trap != null ) && ( trap is BaseTrap ) )
-					traps.Add( (BaseTrap)trap ); 
-			} 
-			eable.Free();
-
-			return traps;
-		}
-
 
 		public CraftedBoltComponents( Serial serial ) : base( serial )
 		{
@@ -82,7 +50,6 @@ namespace Server.Items
 			base.Serialize( writer );
 
 			writer.Write( (int)0 );
-			writer.Write( m_Armed );
 		}
 
 		public override void Deserialize( GenericReader reader )
@@ -95,9 +62,6 @@ namespace Server.Items
 			{
 				case 0:
 				{
-
-					m_Armed = reader.ReadBool();
-
 					break;
 				}
 			}
