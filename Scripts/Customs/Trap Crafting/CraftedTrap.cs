@@ -23,12 +23,8 @@ namespace Server.Items
         private Map m_MapDest;
         private bool decays = true;
 
-        private static TimeSpan m_DDT = TimeSpan.FromHours(3.0); //Decay time? Doesn't seem to work.  Need to use DecayPeriod maybe.
 
-        public bool CheckRange(Point3D loc, Point3D oldLoc, int range)
-        {
-            return CheckRange(loc, range);
-        }
+        private static TimeSpan m_DDT = TimeSpan.FromHours(3.0); //Decay time? Doesn't seem to work.  Need to use DecayPeriod maybe.
 
         [CommandProperty(AccessLevel.GameMaster)]
         public override bool Decays
@@ -43,6 +39,7 @@ namespace Server.Items
         {
             get
             {
+                
                     return TimeSpan.FromHours(1.0);
             }
         }

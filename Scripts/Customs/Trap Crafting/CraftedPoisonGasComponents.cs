@@ -11,22 +11,6 @@ namespace Server.Items
 	public class CraftedPoisonGasComponents : CraftedTrapComponents
 	{
 
-		private bool m_Armed;
-
-		[CommandProperty( AccessLevel.GameMaster )]
-		public bool Armed
-		{
-			get
-			{
-				return m_Armed;
-			}
-			set
-			{
-				m_Armed = value;
-			}
-		}
-
-
 		[Constructable]
 		public CraftedPoisonGasComponents() : base( 0xB7D )
 		{
@@ -88,22 +72,6 @@ namespace Server.Items
             from.SendMessage("You have configured the trap and concealed it at your location.");
         }
 
-        public static ArrayList CheckTrap( Point3D pnt, Map map, int range )
-		{
-			ArrayList traps = new ArrayList();
-
-			IPooledEnumerable eable = map.GetItemsInRange( pnt, range );
-			foreach ( Item trap in eable ) 
-			{ 
-				if ( ( trap != null ) && ( trap is BaseTrap ) )
-					traps.Add( (BaseTrap)trap ); 
-			} 
-			eable.Free();
-
-			return traps;
-		}
-
-
 		public CraftedPoisonGasComponents( Serial serial ) : base( serial )
 		{
 		}
@@ -113,7 +81,6 @@ namespace Server.Items
 			base.Serialize( writer );
 
 			writer.Write( (int)0 );
-			writer.Write( m_Armed );
 		}
 
 		public override void Deserialize( GenericReader reader )
@@ -126,9 +93,6 @@ namespace Server.Items
 			{
 				case 0:
 				{
-
-					m_Armed = reader.ReadBool();
-
 					break;
 				}
 			}

@@ -632,6 +632,7 @@ namespace Server.Engines.Craft
 
 			if (from.AccessLevel >= AccessLevel.GameMaster)
 				return true;
+				
 			if ( ourPack == null )
 				return false;
 
