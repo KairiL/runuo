@@ -285,16 +285,15 @@ namespace Server.Items
                 return;
             }
 
-            if (!(TrapOwner.InRange(Location, 25)) || TrapOwner.Map != Map || TrapOwner.Map == Map.Internal)
-            {
-                this.UsesRemaining -= 1;
-                return;
-            }
-
             if (TrapOwner != null  && TrapOwner.Player && TrapOwner.CanBeHarmful(from, false) && 
                     from != TrapOwner && SpellHelper.ValidIndirectTarget(TrapOwner, (Mobile)from) &&
                     (!(from is BaseCreature) || ((BaseCreature)from).ControlMaster != TrapOwner))
                 {
+                    if (!(TrapOwner.InRange(Location, 25)) || TrapOwner.Map != Map || TrapOwner.Map == Map.Internal)
+                    {
+                        this.UsesRemaining -= 1;
+                        return;
+                    }
                     if (TrapOwner.Mana >= ManaLoss)
                         TrapOwner.Mana -= ManaLoss;
                     else

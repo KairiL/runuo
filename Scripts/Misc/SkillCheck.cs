@@ -99,7 +99,11 @@ namespace Server.Misc
 			double chance = (value - minSkill) / (maxSkill - minSkill);
 
 			Point2D loc = new Point2D( from.Location.X / LocationSize, from.Location.Y / LocationSize );
-			return CheckSkill( from, skill, loc, chance );
+			CampfireEntry casterEntry = Campfire.GetEntry(from);
+			if (casterEntry != null && casterEntry.Safe)
+                return CheckSkill( from, skill, loc, chance + .10 );
+            else
+                return CheckSkill(from, skill, loc, chance);
 		}
 
 		public static bool Mobile_SkillCheckDirectLocation( Mobile from, SkillName skillName, double chance )
@@ -117,9 +121,9 @@ namespace Server.Misc
 			Point2D loc = new Point2D( from.Location.X / LocationSize, from.Location.Y / LocationSize );
             CampfireEntry casterEntry = Campfire.GetEntry(from);
             if (casterEntry != null && casterEntry.Safe)
-                return CheckSkill( from, skill, loc, chance + 10 );
+                return CheckSkill( from, skill, loc, chance + .10 );
             else
-                return CheckSkill(from, skill, loc, chance + 10);
+                return CheckSkill(from, skill, loc, chance);
         }
 
 		public static bool CheckSkill( Mobile from, Skill skill, object amObj, double chance )

@@ -4,6 +4,7 @@ using Server;
 using Server.Network;
 using Server.Targeting;
 using Server.Spells;
+using Server.Mobiles;
 
 namespace Server.Items
 {
@@ -18,7 +19,7 @@ namespace Server.Items
 			UsesRemaining = 1;
             Name = "A static-jolt trap";
 			TrapPower = 100;
-            DamageScalar = .1;
+            DamageScalar = 1;
             TriggerRange = 1;
             DamageRange = 1;
             ManaCost = 20;
@@ -42,6 +43,16 @@ namespace Server.Items
             Delay = TimeSpan.FromSeconds(5);
         }
 
+		public override void OnTrigger( Mobile from )
+		{
+             if (TrapOwner != null  && TrapOwner.Player && TrapOwner.CanBeHarmful(from, false) && 
+                    from != TrapOwner && SpellHelper.ValidIndirectTarget(TrapOwner, (Mobile)from) &&
+                    (!(from is BaseCreature) || ((BaseCreature)from).ControlMaster != TrapOwner))
+            {
+                from.BoltEffect( 0 );
+                base.OnTrigger(from);
+            }
+		}
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

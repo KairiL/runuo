@@ -12,7 +12,7 @@ namespace Server.Items
 	{
 
 		[Constructable]
-		public CraftedPoisonGasComponents() : base( 0xB7D )
+		public CraftedPoisonGasComponents() : base()
 		{
 			Name = "Components for a Poison trap";
 			ItemID = 7867;

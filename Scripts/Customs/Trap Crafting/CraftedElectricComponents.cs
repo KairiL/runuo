@@ -12,7 +12,7 @@ namespace Server.Items
 	{
 
 		[Constructable]
-		public CraftedElectricComponents() : base( 0xB7D )
+		public CraftedElectricComponents() : base()
 		{
 			Name = "Components for an electrical trap";
 			ItemID = 7867;

@@ -1152,15 +1152,20 @@ namespace Server.Items
 			BaseShield shield = defender.FindItemOnLayer( Layer.TwoHanded ) as BaseShield;
 
 			double parry = defender.Skills[SkillName.Parry].Value;
-			double bushidoNonRacial = defender.Skills[SkillName.Bushido].NonRacialValue;
 			double bushido = defender.Skills[SkillName.Bushido].Value;
+			double ninjitsu = defender.Skills[SkillName.Ninjitsu].Value;
 
 			if ( shield != null )
 			{
 				double chance = parry / 400.0;	// As per OSI, no negitive effect from the Racial stuffs, ie, 120 parry and '0' bushido with humans
 
 				if ( chance < 0 ) // chance shouldn't go below 0
-					chance = 0;				
+					chance = 0;		
+
+				if (!(defender.Weapon is Fists))
+					chance += bushido/1200;
+
+				chance += ninjitsu/1200;
 
 				// Parry/Bushido over 100 grants a 5% bonus.
 				if ( parry >= 100.0 || bushido >= 100.0)
@@ -1186,6 +1191,8 @@ namespace Server.Items
 
 				double aosChance = parry / 800.0;
 
+				chance += ninjitsu/1200;
+				
 				// Parry or Bushido over 100 grant a 5% bonus.
 				if( parry >= 100.0 )
 				{

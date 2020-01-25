@@ -12,7 +12,7 @@ namespace Server.Items
 	{
 
 		[Constructable]
-		public CraftedFireColumnComponents() : base( 0xB7D )
+		public CraftedFireColumnComponents() : base()
 		{
 			Name = "Components for a Fire Column Trap";
 			ItemID = 7867;

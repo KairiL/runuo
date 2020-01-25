@@ -1,4 +1,6 @@
 using System;
+using Server.Mobiles;
+using Server.Spells;
 
 namespace Server.Items
 {
@@ -17,7 +19,7 @@ namespace Server.Items
             DamageScalar = 1.5;
             TriggerRange = 0;
             DamageRange = 0;
-            ManaCost = 10;
+            ManaCost = 20;
             BonusSkill = SkillName.Inscribe;
             Delay = TimeSpan.FromSeconds(5);
         }
@@ -33,10 +35,22 @@ namespace Server.Items
             DamageScalar = 1.5;
             TriggerRange = 0;
             DamageRange = 0;
-            ManaCost = 10;
+            ManaCost = 20;
             BonusSkill = SkillName.Inscribe;
             Delay = TimeSpan.FromSeconds(5);
         }
+
+		public override void OnTrigger( Mobile from )
+		{
+             if (TrapOwner != null  && TrapOwner.Player && TrapOwner.CanBeHarmful(from, false) && 
+                    from != TrapOwner && SpellHelper.ValidIndirectTarget(TrapOwner, (Mobile)from) &&
+                    (!(from is BaseCreature) || ((BaseCreature)from).ControlMaster != TrapOwner))
+            {
+                from.FixedParticles( 0x3709, 10, 30, 5052, EffectLayer.LeftFoot );
+				from.PlaySound( 0x208 );
+                base.OnTrigger(from);
+            }
+		}
 
         public override void Serialize(GenericWriter writer)
         {

@@ -12,7 +12,7 @@ namespace Server.Items
 	{
 
 		[Constructable]
-		public CraftedTeleporterComponents() : base( 0x1EBB)
+		public CraftedTeleporterComponents() : base()
 		{
 			Name = "Components for a teleporter trap";
 			ItemID = 7867;

@@ -4,6 +4,7 @@ using Server;
 using Server.Network;
 using Server.Targeting;
 using Server.Spells;
+using Server.Mobiles;
 
 namespace Server.Items
 {
@@ -32,6 +33,17 @@ namespace Server.Items
 		{
         }
 
+		public override void OnTrigger( Mobile from )
+		{
+             if (TrapOwner != null  && TrapOwner.Player && TrapOwner.CanBeHarmful(from, false) && 
+                    from != TrapOwner && SpellHelper.ValidIndirectTarget(TrapOwner, (Mobile)from) &&
+                    (!(from is BaseCreature) || ((BaseCreature)from).ControlMaster != TrapOwner))
+            {
+                from.FixedParticles( 0x36BD, 20, 10, 5044, EffectLayer.Head );
+                from.PlaySound( 0x307 );
+                base.OnTrigger(from);
+            }
+		}
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

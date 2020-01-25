@@ -177,7 +177,8 @@ namespace Server.Spells.Bushido
 
 			if( m.Skills.Anatomy.Value >= 100 && m.Skills.Tactics.Value >= 100 && m.Skills.Bushido.Value > 100 ) //Bushido being HIGHER than 100 for bonus is intended
 				bonus += 0.10;
-
+				
+			bonus *= 2;
 			return 1.0 + bonus;
 		}
 

@@ -4,6 +4,8 @@ using Server.Targeting;
 using System.Collections;
 using System.Collections.Generic;
 using Server.ContextMenus;
+using Server.Spells;
+using Server.Mobiles;
 
 namespace Server.Items
 {
@@ -29,9 +31,14 @@ namespace Server.Items
         
 		public override void OnTrigger( Mobile from )
 		{
-            Effects.SendMovingEffect(this, from, 7166, 5, 0, false, false);
-            Effects.PlaySound(Location, Map, 564);
-            base.OnTrigger(from);
+             if (TrapOwner != null  && TrapOwner.Player && TrapOwner.CanBeHarmful(from, false) && 
+                    from != TrapOwner && SpellHelper.ValidIndirectTarget(TrapOwner, (Mobile)from) &&
+                    (!(from is BaseCreature) || ((BaseCreature)from).ControlMaster != TrapOwner))
+            {
+                Effects.SendMovingEffect(this, from, 7166, 5, 0, false, false);
+                Effects.PlaySound(Location, Map, 564);
+                base.OnTrigger(from);
+            }
 		}
         
 		public CraftedBoltTrap( Serial serial ) : base( serial )
